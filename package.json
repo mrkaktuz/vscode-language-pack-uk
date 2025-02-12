@@ -383,6 +383,13 @@
 		]
 	},
 	"scripts": {
-		"update": "cd ../vscode && npm run update-localization-extension uk"
+		"update": "rm -rf backup/* && cp -r translations/ backup/ && cp -r old_ru/ backup/ && cp package.json backup/ && rm -rf new_ru/* && cd new_ru && git clone https://github.com/microsoft/vscode-loc.git && mv vscode-loc/i18n/vscode-language-pack-ru/* . && rm -rf vscode-loc/ && cd .. && node update.js && rm -rf old_ru/* && cp -r new_ru/* old_ru/",
+		"restore": "rm -rf translations/* && cp -r backup/translations/* translations/ && rm -rf old_ru/* && cp -r backup/old_ru/* old_ru/ && rm package.json && cp backup/package.json .",
+		"build": "vsce package && mkdir -p releases && mv *.vsix releases/"
+	},
+	"devDependencies": {
+		"dotenv": "^16.4.7",
+		"openai": "^4.83.0",
+		"vsce": "^2.15.0"
 	}
 }
