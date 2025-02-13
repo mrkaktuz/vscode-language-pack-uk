@@ -72,12 +72,21 @@
 			"Update Markdown links for the following {0} files?": "Оновити посилання Markdown для наступних {0} файлів?",
 			"Yes": "Так",
 			"[Preview] {0}": "[Попередній перегляд] {0}",
-			"{0} cannot be found": "{0} не знайдено"
+			"{0} cannot be found": "{0} не знайдено",
+			"Disable validation of Markdown links": "Вимкнути перевірку посилань Markdown",
+			"Enable": "Включити",
+			"Enable validation of Markdown links": "Включити перевірку посилань Markdown",
+			"Insert Markdown Audio": "Вставити звук Markdown",
+			"Insert Markdown Media and Images": "Вставити мультимедіа та зображення Markdown",
+			"Insert Markdown Video": "Вставити відео Markdown",
+			"Markdown link validation disabled": "Перевірка посилання Markdown вимкнена",
+			"Markdown link validation enabled": "Перевірка посилання Markdown увімкнена",
+			"Paste and update pasted links": "Insert and update inserted links"
 		},
 		"package": {
 			"configuration.copyIntoWorkspace.mediaFiles": "Спробувати скопіювати зовнішні зображення та відеофайли до робочої області.",
 			"configuration.copyIntoWorkspace.never": "Не копіювати зовнішні файли до робочої області.",
-			"configuration.markdown.copyFiles.destination": "Визначає, де мають бути створені файли, скопійовані шляхом перетягування або вставки. Це карта об'єктів GLOB, які відповідають документу Markdown з призначеннями.\r\n\r\nПризначення можуть використовувати наступні змінні:\r\n\r\n- \"${documentDirName}\" — абсолютний шлях до батьківського каталогу документа Markdown, наприклад \"/Users/me/myProject/docs\".\r\n- \"${documentRelativeDirName}\" — абсолютний шлях до батьківського каталогу документа Markdown, наприклад \"docs\". Це те саме, що й \"${documentDirName}\", якщо файл не є частиною робочої області.\r\n- \"${documentFileName}\" — повне ім'я файлу документа Markdown, наприклад \"README.md\".\r\n- \"${documentBaseName}\" — базове ім'я документа Markdown, наприклад README.\r\n- \"${documentExtName}\" — розширення документа Markdown, наприклад \"md\".\r\n- \"${documentFilePath}\" — абсолютний шлях до документа Markdown, наприклад \"/Users/me/myProject/docs/README.md\".\r\n- \"${documentRelativeFilePath}\" — відносний шлях до документа Markdown, наприклад \"docs/README.md\". Це те саме, що й \"${documentFilePath}\", якщо файл не є частиною робочої області.\r\n- \"${documentWorkspaceFolder}\" — папка робочої області для документа Markdown, наприклад \"/Users/me/myProject\". Це те саме, що й \"${documentDirName}\", якщо файл не є частиною робочої області.\r\n- \"${fileName}\" — ім'я файлу, відкинутого файлом, наприклад \"image.png\".\r\n- \"${fileExtName}\" — розширення відкинутого файлу, наприклад \"png\".",
+			"configuration.markdown.copyFiles.destination": "Налаштовує шлях та ім'я файлів, створених під час копіювання, вставки або перетягування. Це карта великих двійкових об'єктів, що відповідають шляху документа Markdown до кінцевого шляху, за яким має бути створений новий файл.\n\nКінцевий шлях може використовувати такі змінні:\n\n- \"${documentDirName}\" — абсолютний шлях до батьківського каталогу документа Markdown, наприклад \"/Users/me/myProject/docs\".\n- \"${documentRelativeDirName}\" — відносний шлях батьківського каталогу до документа Markdown, наприклад \"docs\". Те саме, що \"${documentDirName}\", якщо файл не є частиною робочої області.\n- \"${documentFileName}\" — повне ім'я файлу документа Markdown, наприклад \"README.md\".\n- \"${documentBaseName}\" — базове ім'я документа Markdown, наприклад \"README\".\n- \"${documentExtName}\" — розширення документа Markdown, наприклад \"md\".\n- \"${documentFilePath}\" — абсолютний шлях до документа Markdown, наприклад \"/Users/me/myProject/docs/README.md\".\n- \"${documentRelativeFilePath}\" — відносний шлях до документа Markdown, наприклад \"docs/README.md\". Те саме, що \"${documentFilePath}\", якщо файл не є частиною робочої області.\n- \"${documentWorkspaceFolder}\" — папка робочої області для документа Markdown, наприклад \"/Users/me/myProject\". Те саме, що \"${documentDirName}\", якщо файл не є частиною робочої області.\n- '${fileName}' — ім'я файлу, який був видалений, наприклад 'image.png'.\n- \"${fileExtName}\" — розширення обраного файлу, наприклад \"png\".\n- '${unixTime}' — поточна мітка часу Unix в мілісекундах.",
 			"configuration.markdown.copyFiles.overwriteBehavior": "Визначає, чи мають файли, створені шляхом перетягування або вставки, перезаписувати існуючі файли.",
 			"configuration.markdown.copyFiles.overwriteBehavior.nameIncrementally": "Якщо файл з таким ім'ям вже існує, додати номер до імені файлу, наприклад \"image.png\" стає \"image-1.png\".",
 			"configuration.markdown.copyFiles.overwriteBehavior.overwrite": "Якщо файл з таким ім'ям вже існує, перезаписати його.",
@@ -150,7 +159,15 @@
 			"markdown.styles.dec": "Список URL-адрес або локальних шляхів до таблиць стилів CSS, які використовуються у попередньому перегляді Markdown. Відносні шляхи інтерпретуються відносно відкритої папки в провіднику. Якщо папка не відкрита, вони інтерпретуються відносно розташування файлу Markdown. Всі символи \\ мають бути записані як \\\\.",
 			"markdown.trace.extension.desc": "Увімкнути ведення журналу відладки для розширення Markdown.",
 			"markdown.trace.server.desc": "Відстежувати зв'язок між VS Code та мовним сервером Markdown.",
-			"workspaceTrust": "Необхідно для завантаження стилів, налаштованих у робочій області."
+			"workspaceTrust": "Необхідно для завантаження стилів, налаштованих у робочій області.",
+			"configuration.markdown.editor.drop.enabled.always": "Always insert Markdown links.",
+			"configuration.markdown.editor.drop.enabled.never": "Не створювати посилання Markdown.",
+			"configuration.markdown.editor.drop.enabled.smart": "Інтелектуально створюйте посилання Markdown за замовчуванням, не перетягуючи їх у блок коду або інший спеціальний елемент. Використовуйте міні-програми перетягування для перемикання між вставкою звичайного тексту та вставкою посилань Markdown.",
+			"configuration.markdown.editor.filePaste.enabled.always": "Always insert Markdown links.",
+			"configuration.markdown.editor.filePaste.enabled.never": "Не створювати посилання Markdown.",
+			"configuration.markdown.editor.filePaste.enabled.smart": "Інтелектуально створюйте посилання Markdown за замовчуванням, не вставляючи їх у блок коду або інший спеціальний елемент. Використовуйте міні-додаток вставки для перемикання між вставкою звичайного тексту та вставкою посилань Markdown.",
+			"configuration.markdown.editor.updateLinksOnPaste.enabled": "Включити/вимкнути функцію вставки, яка оновлює посилання та згадки в тексті, скопійованому та вставленому між редакторами Markdown.\n\nЩоб скористатися цією функцією, після вставки тексту, що містить оновлювані посилання, просто натисніть на міні-додаток \"Вставка\" і виберіть \"Вставити та оновити вставлені посилання\".",
+			"markdown.openImage.title": "Відкрити зображення"
 		}
 	}
 }
