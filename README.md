@@ -11,12 +11,22 @@
 
 ## Встановлення
 
+- У вікні VSCode натисніть <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> (або для Mac <kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>X</kbd>), щоб відкрити **Панель розширень** і встановіть одним із методів, описаних нижче.
+
+### Рекомендований метод
+
+- В полі пошуку напишіть `Ukrainian` та виберіть **Ukrainian Language for VS Code**
+- У вікні з описом розширення натисніть кнопку `Install`
+
+Більш детально про встановлення розширень з Маркетплейсу в [офіційній документації](https://code.visualstudio.com/docs/editor/extension-marketplace#_install-an-extension).
+
+### Альтернативний метод
+
 - Завантажте останню версію мовного пакета з розділу [Releases](https://github.com/mrkaktuz/vscode-language-pack-uk/releases)
-- У вікні VSCode натисніть <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> (або для Mac <kbd>Command ⌘</kbd> + <kbd>Shift ⇧</kbd> + <kbd>X</kbd>), щоб відкрити **Панель розширень**
-- В меню Панелі розширень (*іконка у вигляді <kbd>...</kbd> справа зверху Панелі розширень*) оберіть пункт `Установка з VSIX...`
+- В меню **Панелі розширень** (*іконка у вигляді <kbd>...</kbd> справа зверху Панелі розширень*) оберіть пункт `Установка з VSIX...`
 - Виберіть раніше завантажений файл мовного пакету
 
-Додаткові відомості: [Документація](https://code.visualstudio.com/docs/editor/extension-marketplace#_install-from-a-vsix).
+Додаткові відомості про ручну установку розширень [тут](https://code.visualstudio.com/docs/editor/extension-marketplace#_install-from-a-vsix).
 
 
 ## Використання
