@@ -345,7 +345,9 @@
 			"editor.experimental.preferTreeSitter": "Визначає, чи слід включити синтаксичний аналіз tree sitter для певних мов. Цей параметр має пріоритет над параметром \"editor.experimental.treeSitterTelemetry\" для зазначених мов.",
 			"editor.experimental.treeSitterTelemetry": "Визначає, чи слід включити синтаксичний аналіз tree sitter і збирати дані телеметрії. Параметр \"editor.experimental.preferTreeSitter\" для певних мов має пріоритет.",
 			"renderGutterMenu": "Якщо цей параметр увімкнено, у редакторі невідповідностей буде відображатися спеціальна панель для дій скасування змін та підготовки.",
-			"useTrueInlineView": "Якщо цей параметр увімкнено і редактор використовує вбудоване представлення, зміни слів відображаються вбудовано."
+			"useTrueInlineView": "Якщо цей параметр увімкнено і редактор використовує вбудоване представлення, зміни слів відображаються вбудовано.",
+			"editor.experimental.preferTreeSitter.ini": "Контролює, чи має бути ввімкнено парсинг tree sitter для ini. Це матиме пріоритет над `editor.experimental.treeSitterTelemetry` для ini.",
+			"editor.experimental.preferTreeSitter.typescript": "Контролює, чи має бути увімкнене парсингове дерево для TypeScript. Це матиме пріоритет над `editor.experimental.treeSitterTelemetry` для TypeScript."
 		},
 		"vs/editor/common/config/editorOptions": {
 			"acceptSuggestionOnCommitCharacter": "Визначає, чи приймаються пропозиції при введенні символів фіксації. Наприклад, в JavaScript символ крапки з комою (\";\") може бути символом фіксації, при введенні якого пропозиція приймається.",
@@ -932,7 +934,7 @@
 			"tabFocusModeOnMsg": "При натисканні клавіші TAB у поточному редакторі фокус введення переміститься на наступний елемент, здатний його прийняти. Перемкнути цю поведінку{0}.",
 			"tabFocusModeOnMsgNoKb": "При натисканні клавіші TAB у поточному редакторі фокус вводу переміститься на наступний елемент, здатний його прийняти. Команду {0} зараз неможливо виконати за допомогою налаштованого поєднання клавіш.",
 			"toggleHighContrast": "Переключити висококонтрастну тему",
-			"chatEditing.navigation": "Перехід між редагуваннями в редакторі з переходом до попереднього{0} і наступного{1} прийняти{3} та відкинути поточну зміну{4}.",
+			"chatEditing.navigation": "Переміщуйтеся між редагуваннями в редакторі за допомогою navigate previous{0} та next{1} і приймайте{2}, відхиляйте{3} або переглядайте різницю{4} для поточної зміни.",
 			"chatEditorModification": "Редактор містить очікувані зміни, внесені чатом.",
 			"chatEditorRequestInProgress": "Редактор зараз очікує в чаті внесені зміни.",
 			"codeFolding": "Використовуйте згортання коду, щоб згорнути блоки коду та зосередитися на цікавому вам коді за допомогою команди перемикання згортання {0}.",
@@ -942,7 +944,11 @@
 			"debugConsole.setBreakpoint": "Команда \"Debug: Inline Breakpoint\"{0} встановить або скасує точку зупинки в поточному положенні курсора в активному редакторі.",
 			"goToSymbol": "Перейдіть до параметра \"Символ\"{0}, щоб швидко переходити між символами в поточному файлі.",
 			"intellisense": "Використовуйте IntelliSense для підвищення ефективності написання коду та зменшення кількості помилок. Активувати пропозиції {0}.",
-			"showOrFocusHover": "Відображення або фокусування при наведенні курсора{0} для читання відомостей про поточний символ."
+			"showOrFocusHover": "Відображення або фокусування при наведенні курсора{0} для читання відомостей про поточний символ.",
+			"acceptSuggestAction": "Прийняти пропозицію {0}, щоб прийняти наразі вибрану пропозицію.",
+			"activeEditorState": "Отримайте інформацію про активний редактор, таку як Змінено, Проблеми та інше, встановивши activeEditorState як частину налаштування window.title.",
+			"suggestActionsKb": "Викличте віджет пропозицій {0} для відображення можливих автозавершень коду.",
+			"toggleSuggestionFocus": "Перемикайте фокус між віджетом пропозицій та редактором{0}, а також перемикайте фокус деталей за допомогою{1}, щоб дізнатися більше про пропозицію."
 		},
 		"vs/editor/common/viewLayout/viewLineRenderer": {
 			"overflow.chars": "Символи: {0}",
@@ -1101,7 +1107,7 @@
 			"postPasteWidgetTitle": "Показати параметри вставки...",
 			"noPreferences": "пусто",
 			"pasteAsDefault": "Настроїти дію вставки за замовчуванням",
-			"resolveProcess": "Дозвіл вбудованого редагування. Натисніть, щоб скасувати"
+			"resolveProcess": "Вирішення редагування вставки для '{0}'. Натисніть, щоб скасувати"
 		},
 		"vs/editor/contrib/dropOrPasteInto/browser/defaultProviders": {
 			"builtIn": "Вбудовано",
@@ -1845,7 +1851,9 @@
 			"accessibilitySignals.progress": "Progress Status",
 			"accessibilitySignals.terminalCommandSucceeded": "Команда терміналу виконана",
 			"accessibilitySignals.voiceRecordingStarted": "Запис голосу розпочато",
-			"accessibilitySignals.voiceRecordingStopped": "Запис голосу зупинено"
+			"accessibilitySignals.voiceRecordingStopped": "Запис голосу зупинено",
+			"accessibility.signals.chatEditModifiedFile": "Файл змінено у редагуваннях чату",
+			"accessibilitySignals.chatEditModifiedFile": "Чат Редагувати Змінений Файл"
 		},
 		"vs/platform/action/common/actionCommonCategories": {
 			"developer": "Розробник",
@@ -3578,7 +3586,9 @@
 			"hide second side bar": "Приховати додаткову бічну панель",
 			"move second side bar left": "Переміщення додаткової бічної панелі вліво",
 			"move second side bar right": "Переміщення додаткової бічної панелі вправо",
-			"activity bar position": "Положення панелі дій"
+			"activity bar position": "Положення панелі дій",
+			"showIcons": "Показати значки",
+			"showLabels": "Показати мітки"
 		},
 		"vs/workbench/browser/parts/banner/bannerPart": {
 			"focusBanner": "Фокус на банері"
@@ -4339,7 +4349,7 @@
 			"command-error": "Помилка при виконанні команди {1}: {0}. Ймовірно, це спричинено розширенням, яке додає {1}.",
 			"no-dataprovider": "Відсутній зареєстрований постачальник даних, який може надати інформацію про перегляди.",
 			"refresh": "Оновити",
-			"treeView.enableCollapseAll": "Чи дозволено операцію \"Згорнути все\" в перегляді у вигляді дерева з ідентифікатором {0}.",
+			"treeView.enableCollapseAll": "Чи дозволяє дерево з ідентифікатором {0} згортати все?",
 			"treeView.enableRefresh": "Чи дозволено оновлення в перегляді у вигляді дерева з ідентифікатором {0}.",
 			"treeView.toggleCollapseAll": "Чи включена операція \"Згорнути все\" в перегляді у вигляді дерева з ідентифікатором {0}."
 		},
@@ -4614,7 +4624,9 @@
 			"workbench.editor.label.patterns": "Управляє відображенням мітки редактора. Кожен __елемент__ є шаблоном, який відповідає шляху до файлу. Підтримуються як відносні, так і абсолютні шляхи до файлів. Відносний шлях повинен містити папку WORKSPACE_FOLDER (наприклад, \"WORKSPACE_FOLDER/src/**.tsx\" або \"*/src/**.tsx\"). Абсолютні шаблони повинні починатися з \"/\". При збігу кількох шаблонів буде обрано шлях з найдовшим збігом. Кожне __значення__ є шаблоном для відображеного редактора, якщо __елемент__ збігається. Змінні замінюються на основі контексту:",
 			"workbench.editor.label.template": "Шаблон, який має відображатись при збігу закономірностей. Може включати змінні ${dirname}, ${filename} та ${extname}.",
 			"workbench.panel.output": "Представлення вихідних даних",
-			"workbench.view.showQuietly": "Якщо яке-небудь розширення запитує відображення прихованого представлення, замість нього буде відображатися індикатор рядка стану, який потужно клацнути."
+			"workbench.view.showQuietly": "Якщо яке-небудь розширення запитує відображення прихованого представлення, замість нього буде відображатися індикатор рядка стану, який потужно клацнути.",
+			"activeEditorState": "`${activeEditorState}`: надає інформацію про стан активного редактора (наприклад, змінений).",
+			"secondarySideBarShowLabels": "Контролює, чи елементи активності в заголовку вторинного бічного меню відображаються як мітка або значок."
 		},
 		"vs/workbench/common/configuration": {
 			"applicationConfigurationTitle": "Додаток",
@@ -4887,7 +4899,8 @@
 			"openUserDataFolder": "Відкрити папку користувача",
 			"reloadWindowWithExtensionsDisabled": "Перезавантажити з вимкненими розширеннями",
 			"toggleDevTools": "Переключити інструменти розробника",
-			"showGPUInfo": "Показати відомості про GPU"
+			"showGPUInfo": "Показати відомості про GPU",
+			"revealUserDataFolder": "Відкрити папку даних користувача"
 		},
 		"vs/workbench/electron-sandbox/actions/installActions": {
 			"install": "Встановити шлях до команди \"{0}\" в PATH",
@@ -5223,7 +5236,9 @@
 			"verbosity.replEditor.description": "Щоб отримати доступ до меню довідки по спеціальним можливостям редактора REPL, коли редактор REPL знаходиться в фокусі, натисніть клавіші F1 або скористайтеся комбінацією клавіш, яка визначена в налаштуваннях вашого додатку.",
 			"verbosity.scm": "Будь ласка, надайте інформацію про те, як отримати доступ до меню довідки з спеціальних можливостей системи управління версіями, коли вхідні дані знаходяться в фокусі.",
 			"verbosity.walkthrough": "Вкажіть відомості про те, як відкрити покрокове керівництво в представленні з підтримкою спеціальних можливостей.",
-			"voice.ignoreCodeBlocks": "Чи слід ігнорувати фрагменти коду в синтезі перетворення тексту в мову?"
+			"voice.ignoreCodeBlocks": "Чи слід ігнорувати фрагменти коду в синтезі перетворення тексту в мову?",
+			"accessibility.signals.chatEditModifiedFile": "Відтворює звуковий / аудіосигнал при відкритті файлу з змінами з редагувань чату",
+			"accessibility.signals.chatEditModifiedFile.sound": "Відтворює звук при розкритті файлу з змінами з редагувань чату"
 		},
 		"vs/workbench/contrib/accessibility/browser/accessibilityContributions": {
 			"clearNotification": "Очистити сповіщення",
@@ -5500,7 +5515,7 @@
 			"chat.differenceQuick": "Представлення швидкого чату — це тимчасовий інтерфейс для створення та перегляду запитів, а представлення чату на панелі — це постійний інтерфейс, який також підтримує навігацію по запропонованим питанням подальших дій.",
 			"chatEditing.acceptAllFiles": "- Прийняти всі зміни{0}.",
 			"chatEditing.acceptFile": "- Приймати{0} та видаляти файли{1}.",
-			"chatEditing.acceptHunk": "В редакторі \"Прийняти{0} і відхилити поточну зміну{1}.",
+			"chatEditing.acceptHunk": "У редакторі прийміть{0}, відхильте{1} або переключіть різницю{2} для поточної зміни.",
 			"chatEditing.addFileToWorkingSet": "- Додати файл до робочого набору {0}.",
 			"chatEditing.discardAllFiles": "- Скасувати всі зміни{0}.",
 			"chatEditing.expectation": "При виконанні запиту індикатор ходу виконання буде відтворюватися під час застосування змін.",
@@ -5545,7 +5560,8 @@
 			"title4": "Чат",
 			"toggle.chatControl": "Елементи керування Copilot",
 			"toggle.chatControlsDescription": "Переключити видимість елементів керування Copilot у рядку заголовка",
-			"triggerChatSetup": "Використання функцій штучного інтелекту з Copilot безкоштовне..."
+			"triggerChatSetup": "Використання функцій штучного інтелекту з Copilot безкоштовне...",
+			"configureCompletions": "Налаштувати автоматичне завершення коду..."
 		},
 		"vs/workbench/contrib/chat/browser/actions/chatClearActions": {
 			"chat.newChat.label": "Новий чат",
@@ -5691,7 +5707,7 @@
 			"chat.fileAttachmentWithRange": "Вкладений файл, {0}, рядок {1} до рядка {2}",
 			"chat.imageAttachment": "Прикреплене зображення, {0}",
 			"chat.imageAttachmentHover": "{0} не підтримує зображення.",
-			"chat.moreModels": "Включити інші моделі...",
+			"chat.moreModels": "Додати більше моделей...",
 			"chat.normalMode": "Змінити",
 			"chat.submitToSecondaryAgent": "Відправити в @{0}",
 			"chatAddFiles": "{0} Додати файли...",
@@ -5706,7 +5722,8 @@
 			"chatEditingSession.removeSuggestion": "Видалити {0}",
 			"chatEditingSession.workingSet": "Робочий набір",
 			"notebook.moreExecuteActionsLabel": "Додатково...",
-			"suggeste.title": "{0} — {1}"
+			"suggeste.title": "{0} — {1}",
+			"chat.fileAttachmentHover": "{0} не підтримує цей тип {1}."
 		},
 		"vs/workbench/contrib/chat/browser/chatListRenderer": {
 			"chat": "Чат",
@@ -5739,7 +5756,8 @@
 			"poorlyWrittenOrFormatted": "Погано написано або відформатовано",
 			"refusedAValidRequest": "Запит було відхилено.",
 			"reportIssue": "Повідомити про проблему",
-			"usedAgentSlashCommand": "використовується {0} [[(перезапуск без)]]"
+			"usedAgentSlashCommand": "використовується {0} [[(перезапуск без)]]",
+			"paused": "Призупинено"
 		},
 		"vs/workbench/contrib/chat/browser/chatSlashCommandContentWidget": {
 			"exited slash command mode": "Вийшли з режиму {0}"
@@ -5758,7 +5776,8 @@
 			"interactive.compare.apply.confirm": "Вихідний файл змінено.",
 			"interactive.compare.apply.confirm.detail": "Ви все одно хочете застосувати зміни?",
 			"modified": "Змінено",
-			"original": "Вихідний"
+			"original": "Вихідний",
+			"chat.codeBlockToolbarLabel": "Панель інструментів для блоку коду {0}"
 		},
 		"vs/workbench/contrib/chat/browser/contrib/chatInputEditorContrib": {
 			"pickFileLabel": "Виберіть файл"
@@ -6184,17 +6203,21 @@
 		"vs/workbench/contrib/comments/browser/commentsView": {
 			"comments.filter.ariaLabel": "Фільтрувати коментарі",
 			"comments.filter.placeholder": "Фільтр (наприклад: текст, автор)",
-			"resourceWithCommentLabel": "{0} рядку {1} стовпця {2} в {3} {4}  \nКоментар: {5}{6}",
+			"resourceWithCommentLabel": "{0}: {1}  \n{2}  \n{3}  \n{4}",
 			"resourceWithCommentLabelFile": "{0} в {1} {2}\nКоментар: {3}{4}",
 			"resourceWithCommentThreadsLabel": "Коментарі у {0}, повний шлях {1}",
 			"rootCommentsLabel": "Коментарі для поточної робочої області",
 			"showing filtered results": "Показано {0} з {1}",
 			"acessibleViewHint": "Провірте цей аспект у представленні з підтримкою спеціальних можливостей ({0}).",
-			"acessibleViewHintNoKbOpen": "Перевірте цей аспект у представленні з підтримкою спеціальних можливостей за допомогою команди \"Відкрити представлення з підтримкою спеціальних можливостей\", яку наразі не можна активувати за допомогою настроюваної комбінації клавіш.",
+			"acessibleViewHintNoKbOpen": "Перегляньте це в доступному режимі через команду Відкрити доступний режим, яка наразі не може бути викликана за допомогою комбінації клавіш.",
 			"replyCount": "Відповідей: {0},",
 			"resourceWithCommentLabelFileOutdated": "Устаріло з {0} в {1} {2}  \nКоментар: {3}{4}{5}",
-			"resourceWithCommentLabelOutdated": "Устаріло з {0} в рядку {1} стовпця {2} в {3}{4}  \nКоментар: {5}{6}",
-			"resourceWithRepliesLabel": "{0} {1}"
+			"resourceWithCommentLabelOutdated": "Застарілий з {0}: {1}  \n{2}  \n{3}  \n{4}",
+			"resourceWithRepliesLabel": "{0} {1}",
+			"accessibleViewHint": "Перегляньте це в доступному вигляді ({0}).",
+			"fileCommentLabel": "в {0}",
+			"multiLineCommentLabel": "з рядка {0} до рядка {1} у {2}",
+			"oneLineCommentLabel": "на рядку {0} стовпці {1} у {2}"
 		},
 		"vs/workbench/contrib/comments/browser/commentsViewActions": {
 			"comments": "Коментарі",
@@ -6384,7 +6407,7 @@
 			"hitCount": "Кількість звернень",
 			"logMessage": "Повідомлення журналу",
 			"noTriggerByBreakpoint": "Немає",
-			"ok": "OK",
+			"ok": "Гаразд",
 			"selectBreakpoint": "Виберіть точку зупинки",
 			"triggerByLoading": "Завантаження...",
 			"triggeredBy": "Очікування точки зупинки",
@@ -7436,11 +7459,11 @@
 			"install": "Установити",
 			"install installAndDonotSync": "Установити (не синхронізувати)",
 			"installPrereleaseAndDonotSync": "Установити попередній випуск (не синхронізувати)",
-			"trustedPublishers": "Управління видавцями довірених розширень",
+			"trustedPublishers": "Управління надійними видавцями розширень",
 			"trustedPublishersPlaceholder": "Виберіть видавців, яким слід довіряти",
 			"workbench.extensions.action.changeAccountPreference": "Параметри облікового запису",
 			"workbench.extensions.action.copyLink": "Скопіювати посилання",
-			"workbench.extensions.action.manageTrustedPublishers": "Управління видавцями надійних розширень",
+			"workbench.extensions.action.manageTrustedPublishers": "Керувати довіреними видавцями розширень",
 			"workbench.extensions.installExtension.option.enable": "Якщо увімкнути цей параметр, розширення буде активоване, якщо воно встановлене, але вимкнене. Не діє, якщо розширення вже увімкнене.",
 			"workbench.extensions.installExtension.option.justification": "Обґрунтування для встановлення розширення. Рядок або об'єкт, за допомогою якого можна передавати будь-які відомості в обробники встановлення. Наприклад, якщо задати \"{reason: 'This extension wants to open a URI', action: 'Open URI'}\", то після встановлення з'явиться вікно повідомлення з вказівкою причини та дії."
 		},
@@ -7908,7 +7931,10 @@
 			"terminal.sourceControlRepositoriesKind.both": "Використовуйте обидва разом.",
 			"terminal.sourceControlRepositoriesKind.external": "Використовуйте налаштований зовнішній термінал.",
 			"terminal.sourceControlRepositoriesKind.integrated": "Використовуйте вбудований термінал VS Code.",
-			"terminalConfigurationTitle": "Зовнішній термінал"
+			"terminalConfigurationTitle": "Зовнішній термінал",
+			"terminal.kind.both": "Показати дії інтегрованого та зовнішнього терміналів.",
+			"terminal.kind.external": "Показати зовнішню дію терміналу.",
+			"terminal.kind.integrated": "Показати дію інтегрованого терміналу."
 		},
 		"vs/workbench/contrib/externalUriOpener/common/configuration": {
 			"externalUriOpeners": "Налаштуйте засіб відкриття для зовнішніх URI (наприклад, HTTP, HTTPS).",
@@ -8445,7 +8471,8 @@
 			"undo.newfile": "Скасувати для нового файлу",
 			"unstash": "Відновити останній відхилений вбудований чат",
 			"viewInChat": "Переглянути в чаті",
-			"chat.rerun.label": "Повторно виконати запит"
+			"chat.rerun.label": "Повторно виконати запит",
+			"reveal": "Перемкнути інлайн-чат"
 		},
 		"vs/workbench/contrib/inlineChat/browser/inlineChatController": {
 			"create.fail": "Не вдалося запустити чат редактора",
@@ -9194,7 +9221,9 @@
 		},
 		"vs/workbench/contrib/multiDiffEditor/browser/multiDiffEditorInput": {
 			"files": " (файли: {0})",
-			"name": "Редактор багатократних несумісностей"
+			"name": "Редактор багатократних несумісностей",
+			"nameWithFiles": "{0} ({1} файлів)",
+			"nameWithOneFile": "{0} (1 файл)"
 		},
 		"vs/workbench/contrib/multiDiffEditor/browser/scmMultiDiffSourceResolver": {
 			"scmDiffLabel": "{0}: {1}",
@@ -9533,7 +9562,9 @@
 			"notebook.diff.cell.toggleCollapseUnchangedRegions": "Toggle for collapsing unchanged regions",
 			"notebook.diff.openFile": "Відкрити файл",
 			"notebook.diff.revertMetadata": "Откат метаданих записної книжки",
-			"showUnchangedCells": "Показати незмінені ячейки"
+			"showUnchangedCells": "Показати незмінені ячейки",
+			"notebook.diff.inline.toggle.title": "Перемкнути вбудований режим",
+			"notebook.diff.toggleInline": "Увімкніть команду для переключення експериментального редактора вбудованих відмінностей блокнота."
 		},
 		"vs/workbench/contrib/notebook/browser/diff/notebookDiffEditor": {
 			"notebookTreeAriaLabel": "Відмінності тексту в записній книжці"
@@ -9609,12 +9640,15 @@
 			"notebook.cellFailureDiagnostics": "Відображення доступної діагностики для збоїв осередків.",
 			"notebook.cellGenerate": "Увімкніть експериментальну дію створення, щоб створити комірку коду з увімкненим вбудованим чатом.",
 			"notebook.findFilters": "Налаштуйте поведінку міні-додатка пошуку в клітинках записної книжки. Якщо увімкнені і джерело розмітки, і попередній перегляд розмітки, міні-додаток пошуку буде виконувати пошук у вихідному коді або в режимі попереднього перегляду залежно від поточного стану клітинки.",
-			"notebook.inlineValues.description": "Включення відображення вбудованих значень у комірках коду записної книжки після виконання комірок. Значення залишаться до тих пір, поки комірка не буде змінена, повторно виконана або явно очищена за допомогою кнопки панелі інструментів \"Очисити всі вихідні дані\" або команди \"Записна книжка: очистити вбудовані значення\".",
+			"notebook.inlineValues.description": "Контролюйте, чи відображати значення в рядку в клітинках коду нотаток після виконання клітинки. Значення залишаться до тих пір, поки клітинка не буде відредагована, повторно виконана або явно очищена за допомогою кнопки на панелі інструментів Очистити всі виходи або команди `Notebook: Clear Inline Values`.",
 			"notebook.markdown.lineHeight": "Управляє висотою рядка в пікселях для ячеїв Markdown у зошитах. Якщо встановлено значення {0}, буде використовуватися {1}",
 			"notebook.markup.fontFamily": "Управляє сімейством шрифтів відображення розмітки в записних книжках. Якщо залишити поле порожнім, буде використовуватися сімейство шрифтів Workbench за замовчуванням.",
 			"notebook.minimalErrorRendering": "Укажіть, чи слід відображати вивід помилок у мінімалістичному стилі.",
 			"notebook.multiCursor.enabled": "Експериментальна функція. Включає обмежений набір елементів управління кількома курсорами в кількох клітинках редактора блокнота. В даний час підтримуються основні дії редактора (введення тексту/вирізання/копіювання/вставка/композиція) та обмежене підмножина команд редактора.",
-			"notebookFormatter.default": "Визначає форматувальник записної книжки за замовчуванням, який має пріоритет над усіма іншими форматувальниками. Повинен бути ідентифікатором розширення, що надає форматувальник."
+			"notebookFormatter.default": "Визначає форматувальник записної книжки за замовчуванням, який має пріоритет над усіма іншими форматувальниками. Повинен бути ідентифікатором розширення, що надає форматувальник.",
+			"notebook.inlineValues.auto": "Показувати значення в рядку лише тоді, коли зареєстровано постачальника значень в рядку.",
+			"notebook.inlineValues.off": "Ніколи не показувати вбудовані значення.",
+			"notebook.inlineValues.on": "Завжди відображати вбудовані значення, з резервним варіантом regex, якщо жоден постачальник вбудованих значень не зареєстровано. Примітка: Можливий вплив на продуктивність в більших клітинках, якщо використовується резервний варіант."
 		},
 		"vs/workbench/contrib/notebook/browser/notebookAccessibility": {
 			"notebook.cell.edit": "Команда \"Редагувати комірку\" ({0}) переводить фокус на вхідні дані комірки.",
@@ -10720,7 +10754,12 @@
 			"scm.workingSets.default.current": "Використання поточного робочого набору при перемиканні в групу елементів журналу системи управління версіями без робочого набору.",
 			"scm.workingSets.default.empty": "Використовувати пустий робочий набір при перемиканні на групу елементів у журналі управління версіями, у якої немає робочого набору.",
 			"scm.workingSets.enabled": "Визначає, чи слід зберігати робочі набори редактора при перемиканні між групами елементів журналу в системі керування версіями.",
-			"source control history": "Граф системи управління версіями"
+			"source control history": "Граф системи управління версіями",
+			"scmChanges": "Зміни",
+			"scmGraph": "Графік",
+			"scmRepositories": "Репозиторії",
+			"source control graph": "Граф джерельного контролю",
+			"source control view": "Контроль версій"
 		},
 		"vs/workbench/contrib/scm/browser/scmRepositoriesViewPane": {
 			"scm": "Репозиторії системи керування версіями"
@@ -11403,7 +11442,9 @@
 			"userTasks": "Завдання користувача",
 			"workbench.action.tasks.openUserTasks": "Відкриті завдання користувача",
 			"workbench.action.tasks.openWorkspaceFileTasks": "Відкрити завдання робочої області",
-			"tasks": "Завдання"
+			"tasks": "Завдання",
+			"rerunTaskIcon": "Переглянути іконку повторного запуску задачі.",
+			"workbench.action.tasks.rerunForActiveTerminal": "Перезапустити завдання"
 		},
 		"vs/workbench/contrib/tasks/browser/taskQuickPick": {
 			"TaskQuickPick.changeSettingDetails": "Виявлення завдань для задачі {0} призводить до того, що файли в будь-якій відкритій робочій області запускаються як код. Увімкнення виявлення завдань {0} є користувацьким налаштуванням і буде застосовуватися до будь-якої відкритої робочої області. \r\n\r\nВи хочете увімкнути виявлення завдань {0} для всіх робочих областей?",
@@ -11455,7 +11496,8 @@
 			"task.executing.shell-integration": "Виконання задачі: {0}",
 			"task.executing.shellIntegration": "Виконання задачі: {0}",
 			"task.executingInFolder": "Виконання задачі у папці {0}: {1}",
-			"unknownProblemMatcher": "Не вдалося вирішити збірник проблем {0}. Збірник буде проігноровано"
+			"unknownProblemMatcher": "Не вдалося вирішити збірник проблем {0}. Збірник буде проігноровано",
+			"rerunTask": "Перезапустити задачу"
 		},
 		"vs/workbench/contrib/tasks/common/jsonSchema_v1": {
 			"JsonSchema._runner": "Засіб виконання переведено на нову версію. Використовуйте властивість офіційного засобу виконання.",
@@ -11676,7 +11718,8 @@
 		"vs/workbench/contrib/tasks/common/tasks": {
 			"TaskDefinition.missingRequiredProperty": "Помилка: в ідентифікаторі завдання '{0}' відсутня обов'язкова властивість '{1}'. Ідентифікатор завдання буде проігнорований.",
 			"tasks.taskRunningContext": "Виконується чи ні завдання в даний момент.",
-			"tasksCategory": "Завдання"
+			"tasksCategory": "Завдання",
+			"taskTerminalActive": "Чи є активний термінал терміналом завдань."
 		},
 		"vs/workbench/contrib/tasks/common/taskService": {
 			"tasks.customExecutionSupported": "Чи підтримуються задачі CustomExecution. Рекомендується використовувати у вкладці \"when\" в \"taskDefinition\".",
@@ -12040,7 +12083,7 @@
 			"terminal.integrated.autoReplies.reply": "Відповідь для відправки в процес.",
 			"terminal.integrated.bellDuration": "Кількість мілісекунд, протягом яких на вкладці терміналу відображається дзвінок при її запуску.",
 			"terminal.integrated.commandsToSkipShell": "Набір ідентифікаторів команд, налаштовані поєднання клавіш яких не будуть передаватися в оболонку, а замість цього будуть завжди оброблятися VS Code. Це дозволяє використовувати налаштовані поєднання клавіш, які за звичайних умов були б використані оболонкою і працювали б так само, як і коли термінал не має фокусу, наприклад, поєднання клавіш \"CTRL+P\" запускали б Quick Open.\r\n\r\n&nbsp;\r\n\r\nБагато команд за замовчуванням пропускаються. Щоб перевизначити значення за замовчуванням і передати налаштоване поєднання клавіш цієї команди в оболонку, додайте команду з префіксом \"-\". Наприклад, додайте \"-workbench.action.quickOpen\", щоб поєднання клавіш \"CTRL+P\" було спрямовано в оболонку.\r\n\r\n&nbsp;\r\n\r\nНаступний список команд, пропускається за замовчуванням, обрізається при перегляді в Редакторі параметрів. Щоб переглянути повний список, {1} і виконайте пошук першої команди зі списку нижче.\r\n\r\n&nbsp;\r\n\r\nКоманди, пропускаються за замовчуванням:\r\n\r\n{0}\",каемые по умолчанию:\r\n\r\n{0}",
-			"terminal.integrated.confirmOnExit": "Визначає, чи слід підтверджувати закриття вікна, якщо є активні сеанси терміналу.",
+			"terminal.integrated.confirmOnExit": "Контролює, чи потрібно підтверджувати закриття вікна, якщо є активні сесії терміналу. Фонові термінали, такі як ті, які запускаються деякими розширеннями, не викликатимуть підтвердження.",
 			"terminal.integrated.confirmOnExit.always": "Завжди перевіряти наявність терміналів.",
 			"terminal.integrated.confirmOnExit.hasChildProcesses": "Перевірити, чи є наявні термінали з дочірніми процесами.",
 			"terminal.integrated.confirmOnExit.never": "Ніколи не підтверджувати.",
@@ -12190,7 +12233,8 @@
 			"terminal.integrated.middleClickBehavior.default": "Значення платформи за замовчуванням для наведення фокуса терміналу. У Linux при цьому також буде вставлено виділений фрагмент.",
 			"terminal.integrated.middleClickBehavior.paste": "Insert on middle mouse button click.",
 			"terminal.integrated.rescaleOverlappingGlyphs": "Чи слід змінювати горизонтальний масштаб гліфів шириною в одну клітинку, якщо є гліфи, які при цьому перекриють наступні клітинки. Це зазвичай відбувається для символів з неоднозначною шириною (наприклад, для символів римських цифр U+2160+), відсутніх у моноширинних шрифтах. Масштаб гліфів емодзі ніколи не змінюється.",
-			"workspaceFolderName": "\"ім'я\" робочої області, в якій був запущений термінал"
+			"workspaceFolderName": "\"ім'я\" робочої області, в якій був запущений термінал",
+			"terminal.integrated.shellIntegration.environmentReporting": "Контролює, чи слід повідомляти про середовище оболонки, що дозволяє його використання в таких функціях, як {0}. Це може спричинити уповільнення при виведенні запрошення оболонки."
 		},
 		"vs/workbench/contrib/terminal/common/terminalContextKey": {
 			"inTerminalRunCommandPickerContextKey": "Визначає, чи відкритий у даний момент вікно вибору команд терміналу.",
@@ -12275,7 +12319,10 @@
 			"runRecentCommand": "Виконати недавню команду<keybinding:{0}>",
 			"runRecentCommandNoKb": "Виконати недавню команду за допомогою гарячих клавіш зараз неможливо.",
 			"shellIntegration": "Термінал містить функцію інтеграції оболонки, яка забезпечує поліпшений інтерфейс та надає корисні команди для засобів для читання з екрана, наприклад:",
-			"noShellIntegration": "Інтеграція оболонки не включена. Деякі спеціальні можливості можуть бути недоступні."
+			"noShellIntegration": "Інтеграція оболонки не включена. Деякі спеціальні можливості можуть бути недоступні.",
+			"suggestCommands": "Коли віджет пропозицій терміналу зосереджений, прийміть пропозицію<keybinding:{0}> і налаштуйте параметри пропозицій<keybinding:{1}>.",
+			"suggestCommandsMore": "Також, коли маленький віджет підказки активовано, перемикайтеся між віджетом і терміналом<keybinding:{0}> і перемикайте фокус деталей<keybinding:{1}>, щоб дізнатися більше про підказку.",
+			"suggestTrigger": "Команду завершення запиту термінала можна викликати вручну <keybinding:{0}>, але вона також з'являється під час введення."
 		},
 		"vs/workbench/contrib/terminalContrib/developer/browser/terminal.developer.contribution": {
 			"workbench.action.terminal.restartPtyHost": "Перезапустити хост-процес pty",
@@ -13612,7 +13659,7 @@
 			"untrustedDebugging": "Відладка вимкнена",
 			"untrustedDescription": "{0} - обмежений режим, призначений для безпечного перегляду коду.",
 			"untrustedExtensions": "[Розширення {0}]({1}) вимкнені або мають обмежену функціональність",
-			"untrustedFolderReason": "Ця папка є довіреною в виділених жирним шрифтом записах у довірених папках нижче.",
+			"untrustedFolderReason": "Ця папка є надійною завдяки виділеним жирним шрифтом записам у надійних папках нижче.",
 			"untrustedFolderSubtitle": "Ви не довіряєте авторам файлів у поточній папці. Вимкнені наступні функції:",
 			"untrustedHeader": "Ви перебуваєте в обмеженому режимі",
 			"untrustedSettings": "[Параметри робочої області {0}]({1}) не застосовані",
@@ -13765,7 +13812,8 @@
 			"testing.item.result.title": "Меню для елемента в перегляді або представленні результатів тесту.",
 			"testing.profiles.context.title": "Меню для налаштування профілів тестування.",
 			"view.containerTitle": "Меню заголовка для представлення учасників",
-			"viewContainerTitle.when": "Вклад меню {0} повинен перевіряти {1} у пункті {2}."
+			"viewContainerTitle.when": "Вклад меню {0} повинен перевіряти {1} у пункті {2}.",
+			"searchPanel.aiResultsCommands": "Команди, які будуть сприяти меню, відображеному як кнопки поряд із заголовком пошуку AI"
 		},
 		"vs/workbench/services/assignment/common/assignmentService": {
 			"workbench.enableExperiments": "Отримує експерименти для запуску від веб-служби Microsoft."
@@ -13956,7 +14004,9 @@
 			"remoteFileDialog.validateNonexistentDir": "Введіть існуючий шлях.",
 			"remoteFileDialog.validateReadonlyFolder": "Цю папку неможливо використовувати як цільове розташування для збереження. Виберіть іншу папку",
 			"remoteFileDialog.windowsDriveLetter": "Введіть шлях, що починається з літери диска.",
-			"saveLocalFile": "Зберегти локальний файл..."
+			"saveLocalFile": "Зберегти локальний файл...",
+			"remoteFileDialog.hideDotFiles": "Сховати файли з крапкою",
+			"remoteFileDialog.showDotFiles": "Показати файли з крапкою"
 		},
 		"vs/workbench/services/editor/browser/editorResolverService": {
 			"editorResolver.configureDefault": "Налаштувати за замовчуванням",
@@ -14067,7 +14117,7 @@
 			"trust publishers and install": "Довіряти видавцям і &&встановити",
 			"unverifiedPublisherWithName": "{0} [**не** перевірено]({1}).",
 			"unverifiedPublishers": "{0} і {1} [**не** перевірені]({2}).",
-			"verifiedPublisherWithName": "{0} перевірено право власності \"{1}\"."
+			"verifiedPublisherWithName": "{0} підтвердив право власності на {1}."
 		},
 		"vs/workbench/services/extensionManagement/electron-sandbox/extensionManagementServerService": {
 			"local": "ЛОКАЛЬНИЙ",
@@ -15737,7 +15787,8 @@
 			"chat.omittedFileAttachmentWithRange": "Пропущено: {0}, рядок {1} до рядка {2}.",
 			"chat.partialFileAttachment": "Partially connected: {0}.",
 			"chat.partialFileAttachmentWithRange": "Partially connected: {0}, line {1} to line {2}.",
-			"resource": "Повне значення ресурсу вкладення чату, включаючи схему та шлях"
+			"resource": "Повне значення ресурсу вкладення чату, включаючи схему та шлях",
+			"chat.fileAttachmentHover": "Вибрана модель не підтримує цей тип {0}."
 		},
 		"vs/workbench/contrib/chat/browser/chatContentParts/chatCodeCitationContentPart": {
 			"viewMatches": "Переглянути збіги"
@@ -15793,12 +15844,14 @@
 			"files": "Files",
 			"folder": "Folder",
 			"image": "Зображення",
-			"symbol": "Символ"
+			"symbol": "Символ",
+			"imageTooLarge": "Зображення занадто велике",
+			"imageTooLargeMessage": "Зображення {0} занадто велике, щоб його можна було прикріпити."
 		},
 		"vs/workbench/contrib/chat/browser/chatEditing/chatEditingActions": {
-			"accept": "Прийняти",
-			"accept.file": "Прийняти",
-			"acceptAllEdits": "Прийняти всі зміни",
+			"accept": "Зберегти",
+			"accept.file": "Зберегти",
+			"acceptAllEdits": "Зберегти всі зміни",
 			"addFileToWorkingSet": "Додати файл",
 			"addFilesFromReferences": "Додати файли з посилань",
 			"chat.editing.discardAll.confirmation.manyFiles": "Це скасує зміни, внесені {0} у файлах ({1}). Ви хочете продовжити?",
@@ -15832,7 +15885,9 @@
 		},
 		"vs/workbench/contrib/chat/browser/chatEditing/chatEditingModifiedFileEntry": {
 			"chatEditing1": "Зміна чату: \"{0}\"",
-			"chatEditing2": "Зміна чату"
+			"chatEditing2": "Зміна чату",
+			"editorSelectionBackground": "Колір областей очікування редагування на мінікарті",
+			"saveBlock": "Зберегти чекає на редагування чату перезапису {0}..."
 		},
 		"vs/workbench/contrib/chat/browser/chatEditing/chatEditingService": {
 			"chat": "Виконується зміна чату",
@@ -15946,7 +16001,7 @@
 			"upgradeToPro": "Виконайте оновлення Copilot Pro (перші 30 днів безкоштовно) для:\r\n- Необмеженої кількості завершень коду\r\n– Необмежених повідомлень чату\r\n- Доступу до додаткових моделей"
 		},
 		"vs/workbench/contrib/chat/browser/chatSetup": {
-			"chat.agent.maxRequests": "Максимальне число запитів, які можна Copilot Edits в режимі агента.",
+			"chat.agent.maxRequests": "Максимальна кількість запитів, яку дозволяється використовувати Copilot Edits за один хід в режимі агента. Коли ліміт буде досягнуто, Copilot попросить користувача підтвердити, чи повинен він продовжувати працювати.\n\n> **Примітка**: Для користувачів на безкоштовному плані Copilot майте на увазі, що кожен запит в режимі агента наразі використовує один запит чату.",
 			"chat.category": "Chat",
 			"copilotWorkspaceTrust": "Copilot наразі підтримується лише в надійних робочих областях.",
 			"enterpriseInstance": "Який у вас екземпляр {0}?",
@@ -16281,7 +16336,8 @@
 			"undefinedPlaceholder": "Введіть заголовок.",
 			"unknown": "I don't know",
 			"vscode": "Visual Studio Code",
-			"vscodePlaceholder": "Наприклад, у Workbench відсутня панель проблем."
+			"vscodePlaceholder": "Наприклад, у Workbench відсутня панель проблем.",
+			"saveExtensionData": "Зберегти дані розширення"
 		},
 		"vs/workbench/contrib/issue/browser/issueFormService": {
 			"cancel": "Cancel",
@@ -16320,7 +16376,8 @@
 			"sendWorkspaceInfo": "Включити метадані робочої області",
 			"show": "показати",
 			"titleEmptyValidation": "Требуется вказати заголовок.",
-			"titleLengthValidation": "Занадто довгий заголовок."
+			"titleLengthValidation": "Занадто довгий заголовок.",
+			"downloadExtensionData": "Завантажити дані розширення"
 		},
 		"vs/workbench/contrib/issue/browser/issueReporterService": {
 			"undefinedPlaceholder": "Введіть заголовок."
@@ -16350,7 +16407,8 @@
 		"vs/workbench/contrib/issue/electron-sandbox/issueReporterService": {
 			"noCurrentExperiments": "Немає поточних експериментів.",
 			"pasteData": "Ми скопіювали необхідні дані в буфер обміну, оскільки їхній розмір був занадто великим для відправки. Вставте ці дані.",
-			"undefinedPlaceholder": "Введіть заголовок."
+			"undefinedPlaceholder": "Введіть заголовок.",
+			"saveExtensionData": "Зберегти дані розширення"
 		},
 		"vs/workbench/contrib/issue/electron-sandbox/process.contribution": {
 			"miOpenProcessExplorerer": "Відкрити &&Оглядник процесів",
@@ -16405,7 +16463,9 @@
 			"clearAllInlineValues": "Очистити всі вбудовані значення"
 		},
 		"vs/workbench/contrib/notebook/browser/controller/chat/notebook.chat.contribution": {
-			"pickKernelVariableLabel": "Виберіть змінну з ядра"
+			"pickKernelVariableLabel": "Виберіть змінну з ядра",
+			"cellOutputDisplayname": "Вихідне зображення осередку блокнота",
+			"notebookActions.addOutputToChat": "Додати вихід осередку до чату"
 		},
 		"vs/workbench/contrib/notebook/browser/controller/sectionActions": {
 			"expandSection": "Розгорнути розділ",
@@ -16736,13 +16796,21 @@
 			"suggest.builtinCompletions": "Визначає, які вбудовані завершення активовані. Цей параметр призводить до виникнення конфліктів, якщо в профілі оболонки налаштовані користувацькі завершення оболонки.",
 			"suggest.builtinCompletions.pwshCode": "Користувацькі заповнювачі аргументів PowerShell будуть зареєстровані для CLI \"code\" та \"code-insiders\" у VS Code. Наразі ця функція є базовою і завжди пропонує флаги та підкоманди без перевірки контексту.",
 			"suggest.builtinCompletions.pwshGit": "Користувацькі заповнювачі аргументів PowerShell будуть зареєстровані для CLI \"git\".",
-			"suggest.enabled": "Включає експериментальні пропозиції закінчень Intellisense для підтримуваних оболонок ({0}), якщо для {1} встановлено значення {2}.\n\nЯкщо інтеграцію оболонки встановлено вручну, необхідно встановити для {3} значення {4}, перш ніж викликати скрипт інтеграції оболонки.",
+			"suggest.enabled": "Увімкнення запропонованих інтелектуальних підказок терміналу (перегляд) для підтримуваних оболонок ({0}), коли {1} встановлено на {2}.\r\n\r\nЯкщо інтеграцію оболонки встановлено вручну, {3} потрібно встановити на {4} перед викликом скрипту інтеграції оболонки.",
 			"suggest.providers": "Постачальники включені за замовчуванням. Залиште їх пропусками, заданим для ідентифікатора постачальника значення false.",
 			"suggest.quickSuggestions": "Визначає, чи повинні пропозиції автоматично відображатися під час введення. Також потрібно пам'ятати про параметр {0}, який керує активацією пропозицій спеціальними символами.",
 			"suggest.runOnEnter": "Визначає, чи потрібно запускати пропозиції негайно, коли для прийняття результату використовується клавіша ВВОД (не TAB).",
 			"suggest.showStatusBar": "Визначає, чи слід відображати рядок стану пропозицій термінала.",
 			"suggest.suggestOnTriggerCharacters": "Визначає, чи повинні при введенні тригерних символів автоматично відображатися пропозиції.",
-			"terminalWindowsExecutableSuggestionSetting": "Набір виконуваних розширень команд Windows, які будуть включені як пропозиції в термінал.\n\nЗа замовчуванням включено багато виконуваних файлів, перерахованих нижче:\n\n{0}.\n\nЩоб виключити розширення, задайте для нього значення \"false\".\n\nЩоб включити його в список, додайте його і задайте для нього значення \"true\"."
+			"terminalWindowsExecutableSuggestionSetting": "Набір виконуваних розширень команд Windows, які будуть включені як пропозиції в термінал.\n\nЗа замовчуванням включено багато виконуваних файлів, перерахованих нижче:\n\n{0}.\n\nЩоб виключити розширення, задайте для нього значення \"false\".\n\nЩоб включити його в список, додайте його і задайте для нього значення \"true\".",
+			"suggest.cdPath": "Керує, чи має бути увімкнено підтримку $CDPATH, яка відкриває дочірні папки в змінній $CDPATH незалежно від поточної робочої директорії. Очікується, що $CDPATH буде розділений крапкою з комою у Windows та двокрапкою на інших платформах.",
+			"suggest.cdPath.absolute": "Увімкніть цю функцію та використовуйте абсолютні шляхи. Це корисно, коли оболонка не підтримує `$CDPATH` на рівні системи.",
+			"suggest.cdPath.off": "Вимкнути цю функцію.",
+			"suggest.cdPath.relative": "Увімкніть функцію та використовуйте відносні шляхи.",
+			"suggest.inlineSuggestion": "Контролює, чи має бути виявлено інтерактивну пропозицію оболонки та як вона оцінюється.",
+			"suggest.inlineSuggestion.alwaysOnTop": "Увімкніть функцію та завжди розміщуйте вбудовану пропозицію зверху.",
+			"suggest.inlineSuggestion.alwaysOnTopExceptExactMatch": "Увімкніть цю функцію та сортуйте вбудовані пропозиції без примусу їх розміщувати на верху. Це означає, що точні збіги будуть вище вбудованої пропозиції.",
+			"suggest.inlineSuggestion.off": "Вимкнути цю функцію."
 		},
 		"vs/workbench/contrib/terminalContrib/typeAhead/common/terminalTypeAheadConfiguration": {
 			"terminal.integrated.localEchoEnabled": "Якщо має бути увімкнено локальне ехо. Це переопреділяє {0}",
@@ -16965,6 +17033,131 @@
 			"Test View 3": "Представлення тесту 3",
 			"Test View 4": "Представлення тесту 4",
 			"test": "тест"
+		},
+		"vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/components/gutterIndicatorMenu": {
+			"accept": "Прийняти",
+			"goto": "Перейти до",
+			"reject": "Відхилити",
+			"settings": "Налаштування"
+		},
+		"vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/components/gutterIndicatorView": {
+			"inlineEdit": "Інлайн редагування"
+		},
+		"vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/components/indicatorView": {
+			"inlineEdit.indicator.background": "Колір фону для індикатора редагування на місці.",
+			"inlineEdit.indicator.border": "Колір обводки для індикатора редагування вбудованого типу.",
+			"inlineEdit.indicator.foreground": "Колір переднього плану для індикатора редагування вбудованого тексту."
+		},
+		"vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/theme": {
+			"inlineEdit.gutterIndicator.background": "Колір фону для індикатора лінії редагування.",
+			"inlineEdit.gutterIndicator.primaryBackground": "Колір фону для індикатора основного інлайн редагування бордюру.",
+			"inlineEdit.gutterIndicator.primaryForeground": "Колір переднього плану для основного індикатора редагування в рядку.",
+			"inlineEdit.gutterIndicator.secondaryBackground": "Фоновий колір для індикатора бокової панелі редагування вторинного рівня.",
+			"inlineEdit.gutterIndicator.secondaryForeground": "Колір переднього плану для вторинного індикатора редагування у рядку.",
+			"inlineEdit.gutterIndicator.successfulBackground": "Колір фону для індикатора успішного редагування вбудованого вікна.",
+			"inlineEdit.gutterIndicator.successfulForeground": "Передній план кольору для індикатора успішного вбудованого редагування.",
+			"inlineEdit.modifiedBackground": "Колір фону для модифікованого тексту в інтерактивних редагуваннях.",
+			"inlineEdit.modifiedBorder": "Колір рамки для зміненого тексту в інтерактивному редагуванні.",
+			"inlineEdit.modifiedChangedLineBackground": "Колір фону для змінених рядків у зміненому тексті імпортованих редагувань.",
+			"inlineEdit.modifiedChangedTextBackground": "Колір накладання для зміненого тексту в модифікованому тексті вбудованих редагувань.",
+			"inlineEdit.originalBackground": "Колір фону для оригінального тексту в інтерактивних редагуваннях.",
+			"inlineEdit.originalBorder": "Колір межі для оригінального тексту в інтегрованих редагуваннях.",
+			"inlineEdit.originalChangedLineBackground": "Колір фону для змінених рядків в оригінальному тексті вбудованих змін.",
+			"inlineEdit.originalChangedTextBackground": "Колір накладення для зміненого тексту в оригінальному тексті вбудованих редагувань.",
+			"inlineEdit.tabWillAcceptBorder": "Колір рамки для віджета вбудованих редагувань, коли табуляція його прийме.",
+			"inlineEdit.tabWillAcceptOriginalBorder": "Колір межі для віджета інлайн-редагувань над оригінальним текстом, коли вкладка прийме його.",
+			"inlineEdit.wordReplacementView.background": "Фоновий колір для перегляду заміни слів в інтерактивному редагуванні."
+		},
+		"vs/platform/actions/browser/dropdownActionViewItemWithKeybinding": {
+			"titleAndKb": "{0} ({1})"
+		},
+		"vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction": {
+			"workbench.action.chat.attach.prompt.label": "Використовуйте підказку"
+		},
+		"vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/showPromptSelectionDialog": {
+			"noPromptFilesFoundLabel": "Не знайдено жодних запитів.",
+			"noPromptFilesFoundTooltipLabel": "Дізнайтеся, як створювати багаторазові запити.",
+			"selectPromptPlaceholder": "Виберіть підказку для використання",
+			"selectPromptPlaceholder.holdAltOption": "(утримуйте `{0}`, щоб використовувати в редагуваннях)"
+		},
+		"vs/workbench/contrib/chat/browser/chatEditing/chatEditingEditorActions": {
+			"accept": "Зберегти редагування чату",
+			"accept2": "Зберегти",
+			"accept3": "Зберігайте редагування чату в цьому файлі",
+			"accept4": "Зберегти всі зміни",
+			"acceptHunk": "Зберегти це змінення",
+			"accessibleDiff": "Показати доступний диференційний вигляд",
+			"diff": "Перемкнути редактор порівняння",
+			"discard": "Скасувати редагування чату",
+			"discard2": "Скасувати",
+			"discard3": "Скасувати редагування чату в цьому файлі",
+			"discard4": "Скасувати всі зміни",
+			"label": "Статус навігації",
+			"next": "Перейти до наступного чату Редагувати",
+			"prev": "Перейти до попереднього чату Редагувати",
+			"review": "Огляд",
+			"undo": "Скасувати цю зміну"
+		},
+		"vs/workbench/contrib/chat/browser/chatEditing/chatEditingEditorContextKeys": {
+			"chat.ctxEditSessionIsGlobal": "Поточний редактор є частиною глобальної сесії редагування.",
+			"chat.ctxHasRequestInProgress": "Поточний редактор показує файл з сесії редагування, яка ще триває.",
+			"chat.ctxReviewModeEnabled": "Режим перегляду змін чату увімкнено",
+			"chat.hasEditorModifications": "Поточний редактор містить зміни чату",
+			"chatEdits.requestCount": "Кількість ходів сеансу редагування в цьому редакторі має"
+		},
+		"vs/workbench/contrib/chat/browser/chatEditing/chatEditingEditorController": {
+			"diff.agent": "{0} (зміни з {1})",
+			"diff.generic": "{0} (зміни з чату)"
+		},
+		"vs/workbench/contrib/chat/browser/chatEditing/chatEditingEditorOverlay": {
+			"applyingPercentage": "{0}% Застосування змін",
+			"generating": "Генерування змін",
+			"nOfM": "{0} з {1}",
+			"paused": "Редагування призупинено",
+			"tooltip_11": "1 зміна в 1 файлі",
+			"tooltip_1n": "1 зміна в {0} файлах",
+			"tooltip_n1": "{0} зміни в 1 файлі",
+			"tooltip_nm": "{0} зміни у {1} файлах"
+		},
+		"vs/workbench/contrib/chat/browser/chatEditing/chatEditingServiceImpl": {
+			"chat": "Редагування чату",
+			"chatEditing.modified": "Зміни, що очікують від {0}",
+			"chatEditing.modified2": "Очікуючі зміни з чату",
+			"join.chatEditingSession": "Збереження історії редагування чату"
+		},
+		"vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/createPromptCommand": {
+			"commands.prompts.create.title.global": "Створити запит (глобальний)",
+			"commands.prompts.create.title.local": "Створити запит",
+			"workbench.command.prompts.create.initial-content": "Додати вміст підказки..."
+		},
+		"vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/dialogs/askForPromptName": {
+			"commands.prompts.create.ask-name.placeholder": "Надайте назву запиту"
+		},
+		"vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/dialogs/askForPromptSourceFolder": {
+			"commands.prompts.create.ask-folder.no-folders-found.learn-more": "Дізнайтеся, як налаштувати багаторазові підказки.",
+			"commands.prompts.create.ask-folder.no-folders-found.placeholder": "Не знайдено жодної папки джерел запиту.",
+			"commands.prompts.create.ask-folder.placeholder": "Виберіть папку з джерелом запиту",
+			"commands.prompts.create.source-folder.current-workspace": "Поточне робоче місце"
+		},
+		"vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/errors": {
+			"workbench.command.prompts.create.error.folder-exists": "Т папка вже існує за адресою '{0}'.",
+			"workbench.command.prompts.create.error.invalid-prompt-name": "Недійсна назва файлу запиту '{0}'.",
+			"workbench.command.prompts.create.error.prompt-exists": "Файл підказки '{0}' вже існує."
+		},
+		"vs/workbench/contrib/chat/browser/promptSyntax/contributions/usePromptCommand": {
+			"commands.prompts.use-prompt": "Використовуйте Підказку"
+		},
+		"vs/workbench/contrib/chat/common/promptSyntax/config": {
+			"chat.promptFiles.config.description": "Вкажіть розташування повторно використовуваних файлів запитів (`*{0}`), які можна прикріпити в сеансах Чату, Редагувань та Імміного Чату. [Дізнатись більше]({1}).\r\n\r\nВідносні шляхи вирішуються від кореневих папок вашого робочого простору.",
+			"chat.promptFiles.config.title": "Файли запитів"
+		},
+		"vs/workbench/contrib/codeEditor/browser/toggleOvertype": {
+			"mitoggleOvertypeInsertMode": "&&Перемкнути режим надписування/вставки",
+			"toggleOvertypeInsertMode": "Перемкнути режим перевищення/вставки",
+			"toggleOvertypeMode.description": "Переключитися між режимом заміщення та режимом вставки"
+		},
+		"vs/workbench/contrib/telemetry/browser/telemetry.contribution": {
+			"showTelemetry": "Показати телеметрію"
 		}
 	}
 }
