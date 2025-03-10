@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="extensions/ms-vscode.js-debug/package" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="node.launch.useWSL.deprecation">
+        <source xml:lang="en">'useWSL' is deprecated and support for it will be dropped. Use the 'Remote - WSL' extension instead.</source>
+        <target>'useWSL' застарілий, і підтримка його буде припинена. Замість цього використовуйте розширення 'Remote - WSL'.</target>
+      </trans-unit>
+      <trans-unit id="base.cascadeTerminateToConfigurations.label">
+        <source xml:lang="en">A list of debug sessions which, when this debug session is terminated, will also be stopped.</source>
+        <target>Список сеансів налагодження, які, коли цей сеанс налагодження буде завершено, також будуть зупинені.</target>
+      </trans-unit>
+      <trans-unit id="browser.vueComponentPaths">
+        <source xml:lang="en">A list of file glob patterns to find `*.vue` components. By default, searches the entire workspace. This needs to be specified due to extra lookups that Vue's sourcemaps require in Vue CLI 4. You can disable this special handling by setting this to an empty array.</source>
+        <target>Список шаблонів глобусів файлів для знаходження `*.vue` компонентів. За замовчуванням, здійснює пошук по всьому робочому простору. Це потрібно вказати через додаткові запити, які потребують мапи джерел Vue в Vue CLI 4. Ви можете вимкнути це спеціальне оброблення, встановивши це в порожній масив.</target>
+      </trans-unit>
+      <trans-unit id="node.resolveSourceMapLocations.description">
+        <source xml:lang="en">A list of minimatch patterns for locations (folders and URLs) in which source maps can be used to resolve local files. This can be used to avoid incorrectly breaking in external source mapped code. Patterns can be prefixed with "!" to exclude them. May be set to an empty array or null to avoid restriction.</source>
+        <target>Список патернів minimatch для місць (папок та URL), в яких карти джерел можуть бути використані для вирішення локальних файлів. Це можна використовувати, щоб уникнути неправильного розриву в зовнішньому коді з картами джерел. Патерни можуть бути префіксовані знаком "!", щоб виключити їх. Може бути встановлено на порожній масив або null, щоб уникнути обмежень.</target>
+      </trans-unit>
+      <trans-unit id="node.launch.runtimeSourcemapPausePatterns">
+        <source xml:lang="en">A list of patterns at which to manually insert entrypoint breakpoints. This can be useful to give the debugger an opportunity to set breakpoints when using sourcemaps that don't exist or can't be detected before launch, such as [with the Serverless framework](https://github.com/microsoft/vscode-js-debug/issues/492).</source>
+        <target>Список шаблонів, за якими можна вручну вставити точки зупинки вхідної точки. Це може бути корисно, щоб надати відладчику можливість встановити точки зупинки при використанні sourcemaps, які не існують або не можуть бути виявлені до запуску, наприклад, [з фреймворком Serverless](https://github.com/microsoft/vscode-js-debug/issues/492).</target>
+      </trans-unit>
+      <trans-unit id="browser.file.description">
+        <source xml:lang="en">A local html file to open in the browser</source>
+        <target>Локальний html файл для відкриття в браузері</target>
+      </trans-unit>
+      <trans-unit id="browser.pathMapping.description">
+        <source xml:lang="en">A mapping of URLs/paths to local folders, to resolve scripts in the Browser to scripts on disk</source>
+        <target>Відображення URL/шляхів на локальні папки, щоб вирішити скрипти в браузері на скрипти на диску</target>
+      </trans-unit>
+      <trans-unit id="node.sourceMapPathOverrides.description">
+        <source xml:lang="en">A set of mappings for rewriting the locations of source files from what the sourcemap says, to their locations on disk.</source>
+        <target>Набір відображень для переписування місць розташування вихідних файлів з того, що вказує sourcemap, на їхні місця на диску.</target>
+      </trans-unit>
+      <trans-unit id="browser.sourceMapPathOverrides.description">
+        <source xml:lang="en">A set of mappings for rewriting the locations of source files from what the sourcemap says, to their locations on disk. See README for details.</source>
+        <target>Набір відображень для переписування місць розташування вихідних файлів з того, що вказує sourcemap, на їхні місця на диску. Дивіться README для деталей.</target>
+      </trans-unit>
+      <trans-unit id="extensionHost.launch.testConfigurationLabel">
+        <source xml:lang="en">A single configuration to run from the file. If not specified, you may be asked to pick.</source>
+        <target>Одна конфігурація для запуску з файлу. Якщо не вказано, вас можуть попросити вибрати.</target>
+      </trans-unit>
+      <trans-unit id="extensionHost.launch.runtimeExecutable.description">
+        <source xml:lang="en">Absolute path to VS Code.</source>
+        <target>Абсолютний шлях до VS Code.</target>
+      </trans-unit>
+      <trans-unit id="node.launch.envFile.description">
+        <source xml:lang="en">Absolute path to a file containing environment variable definitions.</source>
+        <target>Абсолютний шлях до файлу, що містить визначення змінних середовища.</target>
+      </trans-unit>
+      <trans-unit id="node.launch.program.description">
+        <source xml:lang="en">Absolute path to the program. Generated value is guessed by looking at package.json and opened files. Edit this attribute.</source>
+        <target>Абсолютний шлях до програми. Згенероване значення визначається шляхом аналізу package.json та відкритих файлів. Відредагуйте цей атрибут.</target>
+      </trans-unit>
+      <trans-unit id="node.remoteRoot.description">
+        <source xml:lang="en">Absolute path to the remote directory containing the program.</source>
+        <target>Абсолютний шлях до віддаленого каталогу, що містить програму.</target>
+      </trans-unit>
+      <trans-unit id="node.launch.cwd.description">
+        <source xml:lang="en">Absolute path to the working directory of the program being debugged. If you've set localRoot then cwd will match that value otherwise it falls back to your workspaceFolder</source>
+        <target>Абсолютний шлях до робочого каталогу програми, що налагоджується. Якщо ви встановили localRoot, тоді cwd відповідатиме цьому значенню, інакше він повернеться до вашого workspaceFolder.</target>
+      </trans-unit>
+      <trans-unit id="add.xhr.breakpoint">
+        <source xml:lang="en">Add XHR/fetch Breakpoint</source>
+        <target>Додати точку зупинки XHR/fetch</target>
+      </trans-unit>
+      <trans-unit id="browser.includeLaunchArgs.description">
+        <source xml:lang="en">Advanced: whether any default launch/debugging arguments are set on the browser. The debugger will assume the browser will use pipe debugging such as that which is provided with `--remote-debugging-pipe`.</source>
+        <target>Розширені: чи встановлені будь-які аргументи за замовчуванням для запуску/налагодження в браузері. Налагоджувач припустить, що браузер використовуватиме налагодження через канал, таке як те, що надається з `--remote-debugging-pipe`.</target>
+      </trans-unit>
+      <trans-unit id="node.versionHint.description">
+        <source xml:lang="en">Allows you to explicitly specify the Node version that's running, which can be used to disable or enable certain behaviors in cases where the automatic version detection does not work.</source>
+        <target>Дозволяє вам явно вказати версію Node, яка працює, що може бути використано для вимкнення або ввімкнення певних поведінок у випадках, коли автоматичне визначення версії не працює.</target>
+      </trans-unit>
+      <trans-unit id="browser.skipFiles.description">
+        <source xml:lang="en">An array of file or folder names, or path globs, to skip when debugging. Star patterns and negations are allowed, for example, `["**/node_modules/**", "!**/node_modules/my-module/**"]`</source>
+        <target>Масив імен файлів або папок, або шаблонів шляхів, які слід пропустити під час налагодження. Дозволені зіркові шаблони та заперечення, наприклад, `["**/node_modules/**", "!**/node_modules/my-module/**"]`</target>
+      </trans-unit>
+      <trans-unit id="skipFiles.description">
+        <source xml:lang="en">An array of glob patterns for files to skip when debugging. The pattern `&lt;node_internals&gt;/**` matches all internal Node.js modules.</source>
+        <target>Масив шаблонів glob для файлів, які потрібно пропустити під час налагодження. Шаблон `&lt;node_internals&gt;/**` відповідає всім внутрішнім модулям Node.js.</target>
+      </trans-unit>
+      <trans-unit id="extension.description">
+        <source xml:lang="en">An extension for debugging Node.js programs and Chrome.</source>
+        <target>Розширення для налагодження програм Node.js та Chrome.</target>
+      </trans-unit>
+      <trans-unit id="edge.useWebView.attach.description">
+        <source xml:lang="en">An object containing the `pipeName` of a debug pipe for a UWP hosted Webview2. This is the "MyTestSharedMemory" when creating the pipe "\\.\pipe\LOCAL\MyTestSharedMemory"</source>
+        <target>Об'єкт, що містить `pipeName` налагоджувальної труби для Webview2, розміщеного в UWP. Це "MyTestSharedMemory" під час створення труби "\\.\pipe\LOCAL\MyTestSharedMemory".</target>
+      </trans-unit>
+      <trans-unit id="breakpoint.xhr.any">
+        <source xml:lang="en">Any XHR/fetch</source>
+        <target>Будь-який XHR/fetch</target>
+      </trans-unit>
+      <trans-unit id="node.attach.config.name">
+        <source xml:lang="en">Attach</source>
+        <target>Прикріпити</target>
+      </trans-unit>
+      <trans-unit id="node.launch.autoAttachChildProcesses.description">
+        <source xml:lang="en">Attach debugger to new child processes automatically.</source>
+        <target>Автоматично підключати налагоджувач до нових дочірніх процесів.</target>
+      </trans-unit>
+      <trans-unit id="attach.node.process">
+        <source xml:lang="en">Attach to Node Process</source>
+        <target>Прикріпити до процесу вузла</target>
+      </trans-unit>
+      <trans-unit id="debug.terminal.attach">
+        <source xml:lang="en">Attach to Node.js Terminal Process</source>
+        <target>Приєднати до процесу терміналу Node.js</target>
+      </trans-unit>
+      <trans-unit id="node.processattach.config.name">
+        <source xml:lang="en">Attach to Process</source>
+        <target>Прикріпити до процесу</target>
+      </trans-unit>
+      <trans-unit id="node.snippet.attach.description">
+        <source xml:lang="en">Attach to a running node program</source>
+        <target>Приєднатися до запущеної програми вузла</target>
+      </trans-unit>
+      <trans-unit id="chrome.attach.description">
+        <source xml:lang="en">Attach to an instance of Chrome already in debug mode</source>
+        <target>Приєднатися до екземпляра Chrome, вже в режимі налагодження</target>
+      </trans-unit>
+      <trans-unit id="edge.attach.description">
+        <source xml:lang="en">Attach to an instance of Edge already in debug mode</source>
+        <target>Приєднатися до екземпляра Edge, вже в режимі налагодження</target>
+      </trans-unit>
+      <trans-unit id="node.snippet.remoteattach.description">
+        <source xml:lang="en">Attach to the debug port of a remote node program</source>
+        <target>Приєднайтеся до порту налагодження віддаленої програми вузла</target>
+      </trans-unit>
+      <trans-unit id="configuration.autoAttachMode.disabled">
+        <source xml:lang="en">Auto attach is disabled and not shown in status bar.</source>
+        <target>Авто прикріплення вимкнено і не відображається в панелі стану.</target>
+      </trans-unit>
+      <trans-unit id="configuration.autoAttachMode.always">
+        <source xml:lang="en">Auto attach to every Node.js process launched in the terminal.</source>
+        <target>Автоматичне приєднання до кожного процесу Node.js, запущеного в терміналі.</target>
+      </trans-unit>
+      <trans-unit id="configuration.autoAttachMode.smart">
+        <source xml:lang="en">Auto attach when running scripts that aren't in a node_modules folder.</source>
+        <target>Автоматичне приєднання під час виконання скриптів, які не знаходяться в папці node_modules.</target>
+      </trans-unit>
+      <trans-unit id="smartStep.description">
+        <source xml:lang="en">Automatically step through generated code that cannot be mapped back to the original source.</source>
+        <target>Автоматично проходьте через згенерований код, який не може бути відображений назад до оригінального джерела.</target>
+      </trans-unit>
+      <trans-unit id="browser.smartStep.description">
+        <source xml:lang="en">Automatically step through unmapped lines in sourcemapped files. For example, code that TypeScript produces automatically when downcompiling async/await or other features.</source>
+        <target>Автоматично проходити через не відображені рядки у файлах з відображенням джерела. Наприклад, код, який TypeScript генерує автоматично при зворотному компілюванні async/await або інших функцій.</target>
+      </trans-unit>
+      <trans-unit id="node.stopOnEntry.description">
+        <source xml:lang="en">Automatically stop program after launch.</source>
+        <target>Автоматично зупинити програму після запуску.</target>
+      </trans-unit>
+      <trans-unit id="extensionHost.launch.stopOnEntry.description">
+        <source xml:lang="en">Automatically stop the extension host after launch.</source>
+        <target>Автоматично зупинити хост розширення після запуску.</target>
+      </trans-unit>
+      <trans-unit id="browser.baseUrl.description">
+        <source xml:lang="en">Base URL to resolve paths baseUrl. baseURL is trimmed when mapping URLs to the files on disk. Defaults to the launch URL domain.</source>
+        <target>Базовий URL для вирішення шляхів baseUrl. baseURL обрізається при відображенні URL-адрес на файли на диску. За замовчуванням використовується домен URL-адреси запуску.</target>
+      </trans-unit>
+      <trans-unit id="breakpoint.xhr.contains">
+        <source xml:lang="en">Break when URL contains:</source>
+        <target>Перервати, коли URL містить:</target>
+      </trans-unit>
+      <trans-unit id="browser.userDataDir.description">
+        <source xml:lang="en">By default, the browser is launched with a separate user profile in a temp folder. Use this option to override it. Set to false to launch with your default user profile. A new browser can't be launched if an instance is already running from `userDataDir`.</source>
+        <target>За замовчуванням браузер запускається з окремим профілем користувача в тимчасовій папці. Використовуйте цю опцію, щоб переоприділити це. Встановіть значення false, щоб запустити з вашим профілем користувача за замовчуванням. Новий браузер не може бути запущений, якщо екземпляр вже працює з `userDataDir`.</target>
+      </trans-unit>
+      <trans-unit id="extensionHost.launch.rendererDebugOptions">
+        <source xml:lang="en">Chrome launch options used when attaching to the renderer process, with `debugWebviews` or `debugWebWorkerHost`.</source>
+        <target>Опції запуску Chrome, що використовуються при підключенні до процесу рендерингу, з `debugWebviews` або `debugWebWorkerHost`.</target>
+      </trans-unit>
+      <trans-unit id="chrome.attach.label">
+        <source xml:lang="en">Chrome: Attach</source>
+        <target>Chrome: Прикріпити</target>
+      </trans-unit>
+      <trans-unit id="chrome.launch.label">
+        <source xml:lang="en">Chrome: Launch</source>
+        <target>Chrome: Запустити</target>
+      </trans-unit>
+      <trans-unit id="commands.networkClear.label">
+        <source xml:lang="en">Clear Network Log</source>
+        <target>Очистити мережевий журнал</target>
+      </trans-unit>
+      <trans-unit id="node.launch.args.description">
+        <source xml:lang="en">Command line arguments passed to the program.
+
+Can be an array of strings or a single string. When the program is launched in a terminal, setting this property to a single string will result in the arguments not being escaped for the shell.</source>
+        <target>Аргументи командного рядка, передані програмі.
+
+Можуть бути масивом рядків або єдиним рядком. Коли програма запускається в терміналі, встановлення цієї властивості в єдиний рядок призведе до того, що аргументи не будуть екрановані для оболонки.</target>
+      </trans-unit>
+      <trans-unit id="debug.terminal.program.description">
+        <source xml:lang="en">Command to run in the launched terminal. If not provided, the terminal will open without launching a program.</source>
+        <target>Команда для виконання в запущеному терміналі. Якщо не вказано, термінал відкриється без запуску програми.</target>
+      </trans-unit>
+      <trans-unit id="browser.server.description">
+        <source xml:lang="en">Configures a web server to start up. Takes the same configuration as the 'node' launch task.</source>
+        <target>Налаштовує веб-сервер для запуску. Використовує таку ж конфігурацію, як і завдання запуску 'node'.</target>
+      </trans-unit>
+      <trans-unit id="configuration.autoAttachSmartPatterns">
+        <source xml:lang="en">Configures glob patterns for determining when to attach in "smart" `#debug.javascript.autoAttachFilter#` mode. `$KNOWN_TOOLS$` is replaced with a list of names of common test and code runners. [Read more on the VS Code docs](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_auto-attach-smart-patterns).</source>
+        <target>Налаштовує глобальні шаблони для визначення, коли приєднуватися в "розумному" `#debug.javascript.autoAttachFilter#` режимі. `$KNOWN_TOOLS$` замінюється списком назв загальних тестових та кодових запусків. [Читати більше в документації VS Code](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_auto-attach-smart-patterns).</target>
+      </trans-unit>
+      <trans-unit id="node.killBehavior.description">
+        <source xml:lang="en">Configures how debug processes are killed when stopping the session. Can be:
+
+- forceful (default): forcefully tears down the process tree. Sends SIGKILL on posix, or `taskkill.exe /F` on Windows.
+- polite: gracefully tears down the process tree. It's possible that misbehaving processes continue to run after shutdown in this way. Sends SIGTERM on posix, or `taskkill.exe` with no `/F` (force) flag on Windows.
+- none: no termination will happen.</source>
+        <target>Налаштовує, як процеси налагодження зупиняються при завершенні сеансу. Може бути:
+
+- примусовим (за замовчуванням): примусово знищує дерево процесів. Надсилає SIGKILL на posix або `taskkill.exe /F` на Windows.
+- ввічливим: м’яко знищує дерево процесів. Можливо, що некоректно працюючі процеси продовжать виконуватись після завершення таким чином. Надсилає SIGTERM на posix або `taskkill.exe` без прапора `/F` (примус) на Windows.
+- жодного: жодного завершення не відбудеться.</target>
+      </trans-unit>
+      <trans-unit id="trace.description">
+        <source xml:lang="en">Configures what diagnostic output is produced.</source>
+        <target>Налаштовує, який діагностичний вивід буде створено.</target>
+      </trans-unit>
+      <trans-unit id="trace.logFile.description">
+        <source xml:lang="en">Configures where on disk logs are written.</source>
+        <target>Налаштовує, де на диску записуються журнали.</target>
+      </trans-unit>
+      <trans-unit id="configuration.unmapMissingSources">
+        <source xml:lang="en">Configures whether sourcemapped file where the original file can't be read will automatically be unmapped. If this is false (default), a prompt is shown.</source>
+        <target>Налаштовує, чи буде автоматично знято мапування з файлу з мапуванням джерела, якщо оригінальний файл не може бути прочитаний. Якщо це значення false (за замовчуванням), відображається запит.</target>
+      </trans-unit>
+      <trans-unit id="node.enableTurboSourcemaps.description">
+        <source xml:lang="en">Configures whether to use a new, faster mechanism for sourcemap discovery</source>
+        <target>Налаштовує, чи використовувати новий, швидший механізм для виявлення sourcemap</target>
+      </trans-unit>
+      <trans-unit id="extensionHost.launch.debugWebWorkerHost">
+        <source xml:lang="en">Configures whether we should try to attach to the web worker extension host.</source>
+        <target>Налаштовує, чи слід намагатися підключитися до хоста розширення веб-робітника.</target>
+      </trans-unit>
+      <trans-unit id="extensionHost.launch.debugWebviews">
+        <source xml:lang="en">Configures whether we should try to attach to webviews in the launched VS Code instance. This will only work in desktop VS Code.</source>
+        <target>Налаштовує, чи слід намагатися підключитися до веб-переглядів у запущеному екземплярі VS Code. Це буде працювати лише в настільному VS Code.</target>
+      </trans-unit>
+      <trans-unit id="configuration.autoAttachMode">
+        <source xml:lang="en">Configures which processes to automatically attach and debug when `#debug.node.autoAttach#` is on. A Node process launched with the `--inspect` flag will always be attached to, regardless of this setting.</source>
+        <target>Налаштовує, які процеси автоматично підключати та налагоджувати, коли `#debug.node.autoAttach#` увімкнено. Процес Node, запущений з прапором `--inspect`, завжди буде підключений, незалежно від цього налаштування.</target>
+      </trans-unit>
+      <trans-unit id="browser.disableNetworkCache.description">
+        <source xml:lang="en">Controls whether to skip the network cache for each request</source>
+        <target>Контролює, чи пропускати мережевий кеш для кожного запиту</target>
+      </trans-unit>
+      <trans-unit id="commands.networkCopyURI.label">
+        <source xml:lang="en">Copy Request URL</source>
+        <target>Скопіювати URL запиту</target>
+      </trans-unit>
+      <trans-unit id="debug.npm.parseError">
+        <source xml:lang="en">Could not read {0}: {1}</source>
+        <target>Не вдалося прочитати {0}: {1}</target>
+      </trans-unit>
+      <trans-unit id="customPropertiesGenerator.description">
+        <source xml:lang="en">Customize the properties shown for an object in the debugger (local variables, etc...). Samples:
+    1. { ...this, extraProperty: '12345' } // Add an extraProperty 12345 to all objects
+    2. this.customProperties ? this.customProperties() : this // Use customProperties method if available, if not use the properties in this (the default properties)
+    3. function () { return this.customProperties ? this.customProperties() : this } // Use customDescription method if available, if not return the default properties
+
+    Deprecated: This is a temporary implementation of this feature until we have time to implement it in the way described here: https://github.com/microsoft/vscode/issues/102181</source>
+        <target>Налаштуйте властивості, які відображаються для об'єкта в налагоджувачі (локальні змінні тощо...). Приклади:
+    1. { ...this, extraProperty: '12345' } // Додати extraProperty 12345 до всіх об'єктів
+    2. this.customProperties ? this.customProperties() : this // Використовуйте метод customProperties, якщо він доступний, якщо ні - використовуйте властивості в this (за замовчуванням)
+    3. function () { return this.customProperties ? this.customProperties() : this } // Використовуйте метод customDescription, якщо він доступний, якщо ні - поверніть властивості за замовчуванням
+
+    Застаріло: Це тимчасова реалізація цієї функції, поки ми не матимемо часу реалізувати її в спосіб, описаний тут: https://github.com/microsoft/vscode/issues/102181</target>
+      </trans-unit>
+      <trans-unit id="customDescriptionGenerator.description">
+        <source xml:lang="en">Customize the textual description the debugger shows for objects (local variables, etc...). Samples:
+      1. this.toString() // will call toString to print all objects
+      2. this.customDescription ? this.customDescription() : defaultValue // Use customDescription method if available, if not return defaultValue
+      3. function (def) { return this.customDescription ? this.customDescription() : def } // Use customDescription method if available, if not return defaultValue
+      </source>
+        <target>Налаштуйте текстовий опис, який відображає відладчик для об'єктів (локальних змінних тощо...). Приклади:
+      1. this.toString() // викликає toString для виведення всіх об'єктів
+      2. this.customDescription ? this.customDescription() : defaultValue // Використовуйте метод customDescription, якщо він доступний, якщо ні - поверніть defaultValue
+      3. function (def) { return this.customDescription ? this.customDescription() : def } // Використовуйте метод customDescription, якщо він доступний, якщо ні - поверніть defaultValue
+      </target>
+      </trans-unit>
+      <trans-unit id="node.snippet.gulp.description">
+        <source xml:lang="en">Debug gulp task (make sure to have a local gulp installed in your project)</source>
+        <target>Налагодження задачі gulp (переконайтеся, що у вашому проєкті встановлено локальний gulp)</target>
+      </trans-unit>
+      <trans-unit id="node.snippet.mocha.description">
+        <source xml:lang="en">Debug mocha tests</source>
+        <target>Відлагодження тестів mocha</target>
+      </trans-unit>
+      <trans-unit id="debug.npm.script">
+        <source xml:lang="en">Debug npm Script</source>
+        <target>Налагодження npm скрипту</target>
+      </trans-unit>
+      <trans-unit id="node.port.description">
+        <source xml:lang="en">Debug port to attach to. Default is 9229.</source>
+        <target>Порт налагодження для підключення. За замовчуванням 9229.</target>
+      </trans-unit>
+      <trans-unit id="node.snippet.electron.description">
+        <source xml:lang="en">Debug the Electron main process</source>
+        <target>Відлагоджуйте основний процес Electron</target>
+      </trans-unit>
+      <trans-unit id="node.snippet.yo.description">
+        <source xml:lang="en">Debug yeoman generator (install by running `npm link` in project folder)</source>
+        <target>Відлагодьте генератор yeoman (встановіть, запустивши `npm link` у папці проекту)</target>
+      </trans-unit>
+      <trans-unit id="configuration.terminalOptions">
+        <source xml:lang="en">Default launch options for the JavaScript debug terminal and npm scripts.</source>
+        <target>Параметри запуску за замовчуванням для терміналу налагодження JavaScript та скриптів npm.</target>
+      </trans-unit>
+      <trans-unit id="configuration.pickAndAttachOptions">
+        <source xml:lang="en">Default options used when debugging a process through the `Debug: Attach to Node.js Process` command</source>
+        <target>Параметри за замовчуванням, що використовуються під час налагодження процесу через команду `Debug: Attach to Node.js Process`</target>
+      </trans-unit>
+      <trans-unit id="createDiagnostics.label">
+        <source xml:lang="en">Diagnose Breakpoint Problems</source>
+        <target>Діагностика проблем з точками зупинки</target>
+      </trans-unit>
+      <trans-unit id="commands.disableSourceMapStepping.label">
+        <source xml:lang="en">Disable Source Mapped Stepping</source>
+        <target>Вимкнути крокування з відображенням джерела</target>
+      </trans-unit>
+      <trans-unit id="node.disableOptimisticBPs.description">
+        <source xml:lang="en">Don't set breakpoints in any file until a sourcemap has been loaded for that file.</source>
+        <target>Не встановлюйте точки зупинки в жодному файлі, поки для цього файлу не буде завантажено sourcemap.</target>
+      </trans-unit>
+      <trans-unit id="longPredictionWarning.disable">
+        <source xml:lang="en">Don't show again</source>
+        <target>Не показувати знову</target>
+      </trans-unit>
+      <trans-unit id="edge.attach.label">
+        <source xml:lang="en">Edge: Attach</source>
+        <target>Edge: Прикріпити</target>
+      </trans-unit>
+      <trans-unit id="edge.launch.label">
+        <source xml:lang="en">Edge: Launch</source>
+        <target>Edge: Запустити</target>
+      </trans-unit>
+      <trans-unit id="edit.xhr.breakpoint">
+        <source xml:lang="en">Edit XHR/fetch Breakpoint</source>
+        <target>Редагувати точку зупинки XHR/fetch</target>
+      </trans-unit>
+      <trans-unit id="debug.npm.edit">
+        <source xml:lang="en">Edit package.json</source>
+        <target>Редагувати package.json</target>
+      </trans-unit>
+      <trans-unit id="browser.runtimeExecutable.description">
+        <source xml:lang="en">Either 'canary', 'stable', 'custom' or path to the browser executable. Custom means a custom wrapper, custom build or CHROME_PATH environment variable.</source>
+        <target>Може бути 'canary', 'stable', 'custom' або шлях до виконуваного файлу браузера. Custom означає кастомний обгортку, кастомну збірку або змінну середовища CHROME_PATH.</target>
+      </trans-unit>
+      <trans-unit id="browser.runtimeExecutable.edge.description">
+        <source xml:lang="en">Either 'canary', 'stable', 'dev', 'custom' or path to the browser executable. Custom means a custom wrapper, custom build or EDGE_PATH environment variable.</source>
+        <target>Може бути 'canary', 'stable', 'dev', 'custom' або шлях до виконуваного файлу браузера. Custom означає кастомний обгортку, кастомну збірку або змінну середовища EDGE_PATH.</target>
+      </trans-unit>
+      <trans-unit id="commands.enableSourceMapStepping.label">
+        <source xml:lang="en">Enable Source Mapped Stepping</source>
+        <target>Увімкнути крокування з відображенням джерела</target>
+      </trans-unit>
+      <trans-unit id="node.experimentalNetworking.description">
+        <source xml:lang="en">Enable experimental inspection in Node.js. When set to `auto` this is enabled for versions of Node.js that support it. It can be set to `on` or `off` to enable or disable it explicitly.</source>
+        <target>Увімкніть експериментальну перевірку в Node.js. Коли встановлено `auto`, це увімкнено для версій Node.js, які це підтримують. Його можна встановити на `on` або `off`, щоб увімкнути або вимкнути його явно.</target>
+      </trans-unit>
+      <trans-unit id="configuration.enableNetworkView">
+        <source xml:lang="en">Enables the experimental network view for targets that support it.</source>
+        <target>Увімкнення експериментального мережевого вигляду для цілей, які його підтримують.</target>
+      </trans-unit>
+      <trans-unit id="extensionHost.launch.env.description">
+        <source xml:lang="en">Environment variables passed to the extension host.</source>
+        <target>Змінні середовища, передані хосту розширення.</target>
+      </trans-unit>
+      <trans-unit id="node.launch.env.description">
+        <source xml:lang="en">Environment variables passed to the program. The value `null` removes the variable from the environment.</source>
+        <target>Змінні середовища, передані програмі. Значення `null` видаляє змінну з середовища.</target>
+      </trans-unit>
+      <trans-unit id="node.websocket.address.description">
+        <source xml:lang="en">Exact websocket address to attach to. If unspecified, it will be discovered from the address and port.</source>
+        <target>Точна адреса вебсокета для підключення. Якщо не вказано, вона буде виявлена з адреси та порту.</target>
+      </trans-unit>
+      <trans-unit id="commands.callersAdd.label">
+        <source xml:lang="en">Exclude Caller</source>
+        <target>Виключити викликач</target>
+      </trans-unit>
+      <trans-unit id="commands.callersAdd.paletteLabel">
+        <source xml:lang="en">Exclude caller from pausing in the current location</source>
+        <target>Виключити абонента з паузи в поточному місці</target>
+      </trans-unit>
+      <trans-unit id="node.remote.host.header.description">
+        <source xml:lang="en">Explicit Host header to use when connecting to the websocket of inspector. If unspecified, the host header will be set to 'localhost'. This is useful when the inspector is running behind a proxy that only accept particular Host header.</source>
+        <target>Явний заголовок Host, який слід використовувати при підключенні до вебсокета інспектора. Якщо не вказано, заголовок host буде встановлено на 'localhost'. Це корисно, коли інспектор працює за проксі, який приймає лише певний заголовок Host.</target>
+      </trans-unit>
+      <trans-unit id="node.launch.console.externalTerminal.description">
+        <source xml:lang="en">External terminal that can be configured via user settings</source>
+        <target>Зовнішній термінал, який можна налаштувати через налаштування користувача</target>
+      </trans-unit>
+      <trans-unit id="timeouts.sourceMaps.sourceMapCumulativePause.description">
+        <source xml:lang="en">Extra time in milliseconds allowed per session to be spent waiting for source-maps to be processed, after the minimum time (sourceMapMinPause) has been exhausted</source>
+        <target>Додатковий час у мілісекундах, дозволений за сесію для очікування обробки source-map, після того як мінімальний час (sourceMapMinPause) буде вичерпано</target>
+      </trans-unit>
+      <trans-unit id="browser.revealPage">
+        <source xml:lang="en">Focus Tab</source>
+        <target>Вкладка Фокус</target>
+      </trans-unit>
+      <trans-unit id="browser.browserAttachLocation.description">
+        <source xml:lang="en">Forces the browser to attach in one location. In a remote workspace (through ssh or WSL, for example) this can be used to attach to a browser on the remote machine rather than locally.</source>
+        <target>Примушує браузер підключатися в одному місці. У віддаленому робочому просторі (через ssh або WSL, наприклад) це можна використовувати для підключення до браузера на віддаленій машині, а не локально.</target>
+      </trans-unit>
+      <trans-unit id="browser.browserLaunchLocation.description">
+        <source xml:lang="en">Forces the browser to be launched in one location. In a remote workspace (through ssh or WSL, for example) this can be used to open the browser on the remote machine rather than locally.</source>
+        <target>Примушує браузер запускатися в одному місці. У віддаленому робочому просторі (наприклад, через ssh або WSL) це можна використовувати для відкриття браузера на віддаленій машині, а не локально.</target>
+      </trans-unit>
+      <trans-unit id="browser.inspectUri.description">
+        <source xml:lang="en">Format to use to rewrite the inspectUri: It's a template string that interpolates keys in `{curlyBraces}`. Available keys are:
+ - `url.*` is the parsed address of the running application. For instance, `{url.port}`, `{url.hostname}`
+ - `port` is the debug port that Chrome is listening on.
+ - `browserInspectUri` is the inspector URI on the launched browser
+ - `browserInspectUriPath` is the path part of the inspector URI on the launched browser (e.g.: "/devtools/browser/e9ec0098-306e-472a-8133-5e42488929c2").
+ - `wsProtocol` is the hinted websocket protocol. This is set to `wss` if the original URL is `https`, or `ws` otherwise.
+</source>
+        <target>Формат, який потрібно використовувати для переписування inspectUri: Це шаблонний рядок, який інтерполює ключі в `{curlyBraces}`. Доступні ключі:
+ - `url.*` - це розпарсена адреса запущеного застосунку. Наприклад, `{url.port}`, `{url.hostname}`
+ - `port` - це порт налагодження, на якому слухає Chrome.
+ - `browserInspectUri` - це URI інспектора на запущеному браузері.
+ - `browserInspectUriPath` - це частина шляху URI інспектора на запущеному браузері (наприклад: "/devtools/browser/e9ec0098-306e-472a-8133-5e42488929c2").
+ - `wsProtocol` - це вказаний протокол вебсокетів. Це встановлюється на `wss`, якщо оригінальна URL-адреса є `https`, або `ws` в іншому випадку.</target>
+      </trans-unit>
+      <trans-unit id="node.launch.outputCapture.description">
+        <source xml:lang="en">From where to capture output messages: the default debug API if set to `console`, or stdout/stderr streams if set to `std`.</source>
+        <target>Звідки захоплювати вихідні повідомлення: за замовчуванням API налагодження, якщо встановлено `console`, або потоки stdout/stderr, якщо встановлено `std`.</target>
+      </trans-unit>
+      <trans-unit id="commands.callersGoToCaller.label">
+        <source xml:lang="en">Go to caller location</source>
+        <target>Перейти до місця виклику</target>
+      </trans-unit>
+      <trans-unit id="commands.callersGoToTarget.label">
+        <source xml:lang="en">Go to target location</source>
+        <target>Перейти до цільового місця</target>
+      </trans-unit>
+      <trans-unit id="node.attach.processId.description">
+        <source xml:lang="en">ID of process to attach to.</source>
+        <target>ID процесу, до якого потрібно приєднатися.</target>
+      </trans-unit>
+      <trans-unit id="browser.address.description">
+        <source xml:lang="en">IP address or hostname the debugged browser is listening on.</source>
+        <target>IP-адреса або ім'я хоста, на якому слухає налагоджений браузер.</target>
+      </trans-unit>
+      <trans-unit id="node.attachSimplePort.description">
+        <source xml:lang="en">If set, attaches to the process via the given port. This is generally no longer necessary for Node.js programs and loses the ability to debug child processes, but can be useful in more esoteric scenarios such as with Deno and Docker launches. If set to 0, a random port will be chosen and --inspect-brk added to the launch arguments automatically.</source>
+        <target>Якщо встановлено, приєднується до процесу через вказаний порт. Це зазвичай більше не є необхідним для програм Node.js і втрачає можливість налагодження дочірніх процесів, але може бути корисним у більш екзотичних сценаріях, таких як запуск з Deno та Docker. Якщо встановлено на 0, буде вибрано випадковий порт, і --inspect-brk буде автоматично додано до аргументів запуску.</target>
+      </trans-unit>
+      <trans-unit id="outFiles.description">
+        <source xml:lang="en">If source maps are enabled, these glob patterns specify the generated JavaScript files. If a pattern starts with `!` the files are excluded. If not specified, the generated code is expected in the same directory as its source.</source>
+        <target>Якщо карти джерел увімкнені, ці шаблони glob вказують на згенеровані файли JavaScript. Якщо шаблон починається з `!`, файли виключаються. Якщо не вказано, згенерований код очікується в тому ж каталозі, що й його джерело.</target>
+      </trans-unit>
+      <trans-unit id="node.attach.continueOnAttach">
+        <source xml:lang="en">If true, we'll automatically resume programs launched and waiting on `--inspect-brk`</source>
+        <target>Якщо це правда, ми автоматично відновимо програми, які були запущені та чекають на `--inspect-brk`</target>
+      </trans-unit>
+      <trans-unit id="node.profileStartup.description">
+        <source xml:lang="en">If true, will start profiling as soon as the process launches</source>
+        <target>Якщо це правда, почне профілювання, як тільки процес запуститься</target>
+      </trans-unit>
+      <trans-unit id="browser.profileStartup.description">
+        <source xml:lang="en">If true, will start profiling soon as the process launches</source>
+        <target>Якщо це правда, почнемо профілювання, як тільки процес запуститься</target>
+      </trans-unit>
+      <trans-unit id="longPredictionWarning.message">
+        <source xml:lang="en">It's taking a while to configure your breakpoints. You can speed this up by updating the 'outFiles' in your launch.json.</source>
+        <target>Налаштування ваших точок зупинки займає деякий час. Ви можете прискорити цей процес, оновивши 'outFiles' у вашому launch.json.</target>
+      </trans-unit>
+      <trans-unit id="debug.terminal.label">
+        <source xml:lang="en">JavaScript Debug Terminal</source>
+        <target>Термінал налагодження JavaScript</target>
+      </trans-unit>
+      <trans-unit id="node.launch.config.name">
+        <source xml:lang="en">Launch</source>
+        <target>Запустити</target>
+      </trans-unit>
+      <trans-unit id="chrome.launch.description">
+        <source xml:lang="en">Launch Chrome to debug a URL</source>
+        <target>Запустіть Chrome для налагодження URL</target>
+      </trans-unit>
+      <trans-unit id="edge.launch.description">
+        <source xml:lang="en">Launch Edge to debug a URL</source>
+        <target>Запустіть Edge для налагодження URL</target>
+      </trans-unit>
+      <trans-unit id="extensionHost.launch.config.name">
+        <source xml:lang="en">Launch Extension</source>
+        <target>Запустити розширення</target>
+      </trans-unit>
+      <trans-unit id="extensionHost.snippet.launch.description">
+        <source xml:lang="en">Launch a VS Code extension in debug mode</source>
+        <target>Запустіть розширення VS Code в режимі налагодження</target>
+      </trans-unit>
+      <trans-unit id="node.snippet.launch.description">
+        <source xml:lang="en">Launch a node program in debug mode</source>
+        <target>Запустіть програму вузла в режимі налагодження</target>
+      </trans-unit>
+      <trans-unit id="node.snippet.npm.description">
+        <source xml:lang="en">Launch a node program through an npm `debug` script</source>
+        <target>Запустіть програму вузла через скрипт `debug` npm</target>
+      </trans-unit>
+      <trans-unit id="node.launch.logging">
+        <source xml:lang="en">Logging configuration</source>
+        <target>Конфігурація журналювання</target>
+      </trans-unit>
+      <trans-unit id="timeouts.sourceMaps.sourceMapMinPause.description">
+        <source xml:lang="en">Minimum time in milliseconds spent waiting for each source-map to be processed when a script is being parsed</source>
+        <target>Мінімальний час у мілісекундах, витрачений на очікування обробки кожної source-map під час парсингу скрипта</target>
+      </trans-unit>
+      <trans-unit id="debug.npm.noScripts">
+        <source xml:lang="en">No npm scripts found in your package.json</source>
+        <target>Не знайдено npm-скриптів у вашому package.json</target>
+      </trans-unit>
+      <trans-unit id="longPredictionWarning.noFolder">
+        <source xml:lang="en">No workspace folder open.</source>
+        <target>Немає відкритої папки робочого простору.</target>
+      </trans-unit>
+      <trans-unit id="node.console.title">
+        <source xml:lang="en">Node Debug Console</source>
+        <target>Консоль налагодження Node</target>
+      </trans-unit>
+      <trans-unit id="node.label">
+        <source xml:lang="en">Node.js</source>
+        <target>Node.js</target>
+      </trans-unit>
+      <trans-unit id="node.snippet.attach.label">
+        <source xml:lang="en">Node.js: Attach</source>
+        <target>Node.js: Прикріпити</target>
+      </trans-unit>
+      <trans-unit id="node.snippet.attachProcess.label">
+        <source xml:lang="en">Node.js: Attach to Process</source>
+        <target>Node.js: Приєднатися до процесу</target>
+      </trans-unit>
+      <trans-unit id="node.snippet.remoteattach.label">
+        <source xml:lang="en">Node.js: Attach to Remote Program</source>
+        <target>Node.js: Підключитися до віддаленої програми</target>
+      </trans-unit>
+      <trans-unit id="node.snippet.electron.label">
+        <source xml:lang="en">Node.js: Electron Main</source>
+        <target>Node.js: Головний процес Electron</target>
+      </trans-unit>
+      <trans-unit id="node.snippet.gulp.label">
+        <source xml:lang="en">Node.js: Gulp task</source>
+        <target>Node.js: Завдання Gulp</target>
+      </trans-unit>
+      <trans-unit id="node.snippet.launch.label">
+        <source xml:lang="en">Node.js: Launch Program</source>
+        <target>Node.js: Запустити програму</target>
+      </trans-unit>
+      <trans-unit id="node.snippet.npm.label">
+        <source xml:lang="en">Node.js: Launch via npm</source>
+        <target>Node.js: Запуск через npm</target>
+      </trans-unit>
+      <trans-unit id="node.snippet.mocha.label">
+        <source xml:lang="en">Node.js: Mocha Tests</source>
+        <target>Node.js: Тести Mocha</target>
+      </trans-unit>
+      <trans-unit id="node.snippet.nodemon.label">
+        <source xml:lang="en">Node.js: Nodemon Setup</source>
+        <target>Node.js: Налаштування Nodemon</target>
+      </trans-unit>
+      <trans-unit id="node.snippet.yo.label">
+        <source xml:lang="en">Node.js: Yeoman generator</source>
+        <target>Node.js: генератор Yeoman</target>
+      </trans-unit>
+      <trans-unit id="configuration.autoAttachMode.explicit">
+        <source xml:lang="en">Only auto attach when the `--inspect` is given.</source>
+        <target>Автоматичне приєднання лише тоді, коли вказано `--inspect`.</target>
+      </trans-unit>
+      <trans-unit id="openEdgeDevTools.label">
+        <source xml:lang="en">Open Browser Devtools</source>
+        <target>Відкрити інструменти розробника браузера</target>
+      </trans-unit>
+      <trans-unit id="debugLink.label">
+        <source xml:lang="en">Open Link</source>
+        <target>Відкрити посилання</target>
+      </trans-unit>
+      <trans-unit id="commands.networkOpenBody.label">
+        <source xml:lang="en">Open Response Body</source>
+        <target>Відкрити тіло відповіді</target>
+      </trans-unit>
+      <trans-unit id="commands.networkOpenBodyInHexEditor.label">
+        <source xml:lang="en">Open Response Body in Hex Editor</source>
+        <target>Відкрити тіло відповіді в Hex редакторі</target>
+      </trans-unit>
+      <trans-unit id="longPredictionWarning.open">
+        <source xml:lang="en">Open launch.json</source>
+        <target>Відкрити launch.json</target>
+      </trans-unit>
+      <trans-unit id="node.snippet.attachProcess.description">
+        <source xml:lang="en">Open process picker to select node process to attach to</source>
+        <target>Відкрийте вибір процесу, щоб вибрати процес вузла для підключення</target>
+      </trans-unit>
+      <trans-unit id="node.launch.runtimeArgs.description">
+        <source xml:lang="en">Optional arguments passed to the runtime executable.</source>
+        <target>Необов'язкові аргументи, передані виконуваному файлу часу виконання.</target>
+      </trans-unit>
+      <trans-unit id="browser.runtimeArgs.description">
+        <source xml:lang="en">Optional arguments passed to the runtime executable.</source>
+        <target>Необов'язкові аргументи, передані виконуваному файлу часу виконання.</target>
+      </trans-unit>
+      <trans-unit id="browser.env.description">
+        <source xml:lang="en">Optional dictionary of environment key/value pairs for the browser.</source>
+        <target>Необов'язковий словник пар ключ/значення для середовища браузера.</target>
+      </trans-unit>
+      <trans-unit id="browser.cwd.description">
+        <source xml:lang="en">Optional working directory for the runtime executable.</source>
+        <target>Необов'язкова робоча директорія для виконуваного файлу під час виконання.</target>
+      </trans-unit>
+      <trans-unit id="configuration.debugByLinkOptions">
+        <source xml:lang="en">Options used when debugging open links clicked from inside the JavaScript Debug Terminal. Can be set to "off" to disable this behavior, or "always" to enable debugging in all terminals.</source>
+        <target>Опції, що використовуються під час налагодження відкритих посилань, на які натискають зсередини терміналу налагодження JavaScript. Можна встановити на "вимкнено", щоб вимкнути цю поведінку, або "завжди", щоб увімкнути налагодження в усіх терміналах.</target>
+      </trans-unit>
+      <trans-unit id="extensionHost.launch.testConfiguration">
+        <source xml:lang="en">Path to a test configuration file for the [test CLI](https://code.visualstudio.com/api/working-with-extensions/testing-extension#quick-setup-the-test-cli).</source>
+        <target>Шлях до файлу конфігурації тесту для [test CLI](https://code.visualstudio.com/api/working-with-extensions/testing-extension#quick-setup-the-test-cli).</target>
+      </trans-unit>
+      <trans-unit id="node.localRoot.description">
+        <source xml:lang="en">Path to the local directory containing the program.</source>
+        <target>Шлях до локального каталогу, що містить програму.</target>
+      </trans-unit>
+      <trans-unit id="node.launch.logging.cdp">
+        <source xml:lang="en">Path to the log file for Chrome DevTools Protocol messages</source>
+        <target>Шлях до файлу журналу для повідомлень протоколу Chrome DevTools</target>
+      </trans-unit>
+      <trans-unit id="node.launch.logging.dap">
+        <source xml:lang="en">Path to the log file for Debug Adapter Protocol messages</source>
+        <target>Шлях до файлу журналу для повідомлень протоколу адаптера налагодження</target>
+      </trans-unit>
+      <trans-unit id="browser.launch.port.description">
+        <source xml:lang="en">Port for the browser to listen on. Defaults to "0", which will cause the browser to be debugged via pipes, which is generally more secure and should be chosen unless you need to attach to the browser from another tool.</source>
+        <target>Порт, на якому браузер буде слухати. За замовчуванням - "0", що призведе до налагодження браузера через канали, що зазвичай є більш безпечним і має бути обрано, якщо вам не потрібно підключатися до браузера з іншого інструменту.</target>
+      </trans-unit>
+      <trans-unit id="browser.attach.port.description">
+        <source xml:lang="en">Port to use to remote debugging the browser, given as `--remote-debugging-port` when launching the browser.</source>
+        <target>Порт, який використовувати для віддаленого налагодження браузера, вказується як `--remote-debugging-port` під час запуску браузера.</target>
+      </trans-unit>
+      <trans-unit id="pretty.print.script">
+        <source xml:lang="en">Pretty print for debugging</source>
+        <target>Красива друкована версія для налагодження</target>
+      </trans-unit>
+      <trans-unit id="remove.eventListener.breakpoint.all">
+        <source xml:lang="en">Remove All Event Listener Breakpoints</source>
+        <target>Видалити всі точки зупинки слухача подій</target>
+      </trans-unit>
+      <trans-unit id="remove.xhr.breakpoint.all">
+        <source xml:lang="en">Remove All XHR/fetch Breakpoints</source>
+        <target>Видалити всі точки зупинки XHR/fetch</target>
+      </trans-unit>
+      <trans-unit id="remove.xhr.breakpoint">
+        <source xml:lang="en">Remove XHR/fetch Breakpoint</source>
+        <target>Видалити XHR/fetch Точка зупинки</target>
+      </trans-unit>
+      <trans-unit id="commands.callersRemoveAll.label">
+        <source xml:lang="en">Remove all excluded callers</source>
+        <target>Видалити всіх виключених абонентів</target>
+      </trans-unit>
+      <trans-unit id="commands.callersRemove.label">
+        <source xml:lang="en">Remove excluded caller</source>
+        <target>Видалити виключеного абонента</target>
+      </trans-unit>
+      <trans-unit id="commands.networkReplayXHR.label">
+        <source xml:lang="en">Replay Request</source>
+        <target>Запит на повтор</target>
+      </trans-unit>
+      <trans-unit id="requestCDPProxy.label">
+        <source xml:lang="en">Request CDP Proxy for Debug Session</source>
+        <target>Запитати CDP Proxy для сесії налагодження</target>
+      </trans-unit>
+      <trans-unit id="configuration.resourceRequestOptions">
+        <source xml:lang="en">Request options to use when loading resources, such as source maps, in the debugger. You may need to configure this if your sourcemaps require authentication or use a self-signed certificate, for instance. Options are used to create a request using the [`got`](https://github.com/sindresorhus/got) library.
+
+A common case to disable certificate verification can be done by passing `{ "https": { "rejectUnauthorized": false } }`.</source>
+        <target>Запитати параметри для використання при завантаженні ресурсів, таких як карти джерел, у налагоджувачі. Можливо, вам потрібно буде налаштувати це, якщо ваші карти джерел вимагають автентифікації або використовують самопідписаний сертифікат, наприклад. Параметри використовуються для створення запиту за допомогою бібліотеки [`got`](https://github.com/sindresorhus/got).
+
+Звичайний випадок для вимкнення перевірки сертифіката можна реалізувати, передавши `{ "https": { "rejectUnauthorized": false } }`.</target>
+      </trans-unit>
+      <trans-unit id="node.timeout.description">
+        <source xml:lang="en">Retry for this number of milliseconds to connect to Node.js. Default is 10000 ms.</source>
+        <target>Спробуйте знову протягом цього числа мілісекунд для підключення до Node.js. За замовчуванням 10000 мс.</target>
+      </trans-unit>
+      <trans-unit id="browser.timeout.description">
+        <source xml:lang="en">Retry for this number of milliseconds to connect to the browser. Default is 10000 ms.</source>
+        <target>Спробуйте знову протягом цього часу в мілісекундах, щоб підключитися до браузера. За замовчуванням 10000 мс.</target>
+      </trans-unit>
+      <trans-unit id="debug.terminal.snippet.label">
+        <source xml:lang="en">Run "npm start" in a debug terminal</source>
+        <target>Запустіть "npm start" у терміналі налагодження</target>
+      </trans-unit>
+      <trans-unit id="node.launch.runtimeExecutable.description">
+        <source xml:lang="en">Runtime to use. Either an absolute path or the name of a runtime available on the PATH. If omitted `node` is assumed.</source>
+        <target>Час виконання для використання. Або абсолютний шлях, або ім'я часу виконання, доступного в PATH. Якщо пропущено, вважається, що використовується `node`.</target>
+      </trans-unit>
+      <trans-unit id="getDiagnosticLogs.label">
+        <source xml:lang="en">Save Diagnostic JS Debug Logs</source>
+        <target>Зберегти журнали налагодження JS діагностики</target>
+      </trans-unit>
+      <trans-unit id="node.showAsyncStacks.description">
+        <source xml:lang="en">Show the async calls that led to the current call stack.</source>
+        <target>Показати асинхронні виклики, які призвели до поточного стеку викликів.</target>
+      </trans-unit>
+      <trans-unit id="debug.unverifiedBreakpoints">
+        <source xml:lang="en">Some of your breakpoints could not be set. If you're having an issue, you can [troubleshoot your launch configuration](command:extension.js-debug.createDiagnostics).</source>
+        <note>{Locked='](command:extension.js-debug.createDiagnostics)'}</note>
+        <target>Деякі з ваших точок зупинки не можуть бути встановлені. Якщо у вас виникає проблема, ви можете [усунути неполадки у вашій конфігурації запуску](command:extension.js-debug.createDiagnostics).</target>
+      </trans-unit>
+      <trans-unit id="startWithStopOnEntry.label">
+        <source xml:lang="en">Start Debugging and Stop on Entry</source>
+        <target>Почати налагодження та зупинитися на вході</target>
+      </trans-unit>
+      <trans-unit id="start.with.stop.on.entry">
+        <source xml:lang="en">Start Debugging and Stop on Entry</source>
+        <target>Почати налагодження та зупинитися на вході</target>
+      </trans-unit>
+      <trans-unit id="profile.stop">
+        <source xml:lang="en">Stop Performance Profile</source>
+        <target>Зупинити профіль продуктивності</target>
+      </trans-unit>
+      <trans-unit id="node.address.description">
+        <source xml:lang="en">TCP/IP address of process to be debugged. Default is 'localhost'.</source>
+        <target>TCP/IP адреса процесу, який потрібно налагодити. За замовчуванням 'localhost'.</target>
+      </trans-unit>
+      <trans-unit id="profile.start">
+        <source xml:lang="en">Take Performance Profile</source>
+        <target>Взяти профіль продуктивності</target>
+      </trans-unit>
+      <trans-unit id="configuration.defaultRuntimeExecutables">
+        <source xml:lang="en">The default `runtimeExecutable` used for launch configurations, if unspecified. This can be used to config custom paths to Node.js or browser installations.</source>
+        <target>За замовчуванням `runtimeExecutable`, що використовується для конфігурацій запуску, якщо не вказано. Це можна використовувати для налаштування користувацьких шляхів до установок Node.js або браузера.</target>
+      </trans-unit>
+      <trans-unit id="browser.webRoot.description">
+        <source xml:lang="en">This specifies the workspace absolute path to the webserver root. Used to resolve paths like `/app.js` to files on disk. Shorthand for a pathMapping for "/"</source>
+        <target>Це вказує абсолютний шлях до кореня веб-сервера в робочому просторі. Використовується для вирішення шляхів, таких як `/app.js`, до файлів на диску. Скорочення для pathMapping для "/"</target>
+      </trans-unit>
+      <trans-unit id="timeouts.hoverEvaluation.description">
+        <source xml:lang="en">Time until value evaluation for hovered symbols is aborted. If set to 0, hover evaluation does never time out.</source>
+        <target>Час до оцінки значення для символів, на які наведено курсор, скасовується. Якщо встановлено 0, оцінка при наведенні ніколи не закінчується.</target>
+      </trans-unit>
+      <trans-unit id="timeouts.generalDescription">
+        <source xml:lang="en">Timeouts for several debugger operations.</source>
+        <target>Тайм-аути для кількох операцій налагодження.</target>
+      </trans-unit>
+      <trans-unit id="timeouts.generalDescription.markdown">
+        <source xml:lang="en">Timeouts for several debugger operations.</source>
+        <target>Таймаути для кількох операцій налагоджувача.</target>
+      </trans-unit>
+      <trans-unit id="timeouts.sourceMaps.description">
+        <source xml:lang="en">Timeouts related to source maps operations.</source>
+        <target>Таймаути, пов'язані з операціями карт джерел.</target>
+      </trans-unit>
+      <trans-unit id="add.eventListener.breakpoint">
+        <source xml:lang="en">Toggle Event Listener Breakpoints</source>
+        <target>Перемикання точок зупинки слухача подій</target>
+      </trans-unit>
+      <trans-unit id="toggle.skipping.this.file">
+        <source xml:lang="en">Toggle Skipping this File</source>
+        <target>Переключити пропуск цього файлу</target>
+      </trans-unit>
+      <trans-unit id="debug.terminal.toggleAuto">
+        <source xml:lang="en">Toggle Terminal Node.js Auto Attach</source>
+        <target>Перемикання автоматичного підключення до терміналу Node.js</target>
+      </trans-unit>
+      <trans-unit id="base.enableDWARF.label">
+        <source xml:lang="en">Toggles whether the debugger will try to read DWARF debug symbols from WebAssembly, which can be resource intensive. Requires the `ms-vscode.wasm-dwarf-debugging` extension to function.</source>
+        <target>Перемикає, чи буде відладчик намагатися зчитувати символи налагодження DWARF з WebAssembly, що може вимагати багато ресурсів. Для роботи потрібен розширення `ms-vscode.wasm-dwarf-debugging`.</target>
+      </trans-unit>
+      <trans-unit id="enableContentValidation.description">
+        <source xml:lang="en">Toggles whether we verify the contents of files on disk match the ones loaded in the runtime. This is useful in a variety of scenarios and required in some, but can cause issues if you have server-side transformation of scripts, for example.</source>
+        <target>Перемикає, чи перевіряємо ми, що вміст файлів на диску відповідає завантаженим у час виконання. Це корисно в різних сценаріях і є обов'язковим у деяких, але може викликати проблеми, якщо у вас є серверна трансформація скриптів, наприклад.</target>
+      </trans-unit>
+      <trans-unit id="trace.boolean.description">
+        <source xml:lang="en">Trace may be set to 'true' to write diagnostic logs to the disk.</source>
+        <target>Trace може бути встановлено на 'true', щоб записувати діагностичні журнали на диск.</target>
+      </trans-unit>
+      <trans-unit id="workspaceTrust.description">
+        <source xml:lang="en">Trust is required to debug code in this workspace.</source>
+        <target>Для налагодження коду в цьому робочому просторі потрібна довіра.</target>
+      </trans-unit>
+      <trans-unit id="node.attach.restart.description">
+        <source xml:lang="en">Try to reconnect to the program if we lose connection. If set to `true`, we'll try once a second, forever. You can customize the interval and maximum number of attempts by specifying the `delay` and `maxAttempts` in an object instead.</source>
+        <target>Спробуйте перепідключитися до програми, якщо ми втратимо з'єднання. Якщо встановлено `true`, ми будемо намагатися раз на секунду, вічно. Ви можете налаштувати інтервал і максимальну кількість спроб, вказавши `delay` та `maxAttempts` в об'єкті замість цього.</target>
+      </trans-unit>
+      <trans-unit id="node.launch.restart.description">
+        <source xml:lang="en">Try to restart the program if it exits with a non-zero exit code.</source>
+        <target>Спробуйте перезапустити програму, якщо вона завершується з ненульовим кодом виходу.</target>
+      </trans-unit>
+      <trans-unit id="node.sourceMaps.description">
+        <source xml:lang="en">Use JavaScript source maps (if they exist).</source>
+        <target>Використовуйте карти джерел JavaScript (якщо вони існують).</target>
+      </trans-unit>
+      <trans-unit id="browser.sourceMaps.description">
+        <source xml:lang="en">Use JavaScript source maps (if they exist).</source>
+        <target>Використовуйте карти джерел JavaScript (якщо вони існують).</target>
+      </trans-unit>
+      <trans-unit id="node.launch.useWSL.description">
+        <source xml:lang="en">Use Windows Subsystem for Linux.</source>
+        <target>Використовуйте підсистему Windows для Linux.</target>
+      </trans-unit>
+      <trans-unit id="node.snippet.nodemon.description">
+        <source xml:lang="en">Use nodemon to relaunch a debug session on source changes</source>
+        <target>Використовуйте nodemon для перезапуску сеансу налагодження при змінах у вихідному коді</target>
+      </trans-unit>
+      <trans-unit id="node.launch.console.internalConsole.description">
+        <source xml:lang="en">VS Code Debug Console (which doesn't support to read input from a program)</source>
+        <target>Консоль налагодження VS Code (яка не підтримує читання введення з програми)</target>
+      </trans-unit>
+      <trans-unit id="extensionHost.snippet.launch.label">
+        <source xml:lang="en">VS Code Extension Development</source>
+        <target>Розробка розширень для VS Code</target>
+      </trans-unit>
+      <trans-unit id="extensionHost.label">
+        <source xml:lang="en">VS Code Extension Development</source>
+        <target>Розробка розширень для VS Code</target>
+      </trans-unit>
+      <trans-unit id="node.launch.console.integratedTerminal.description">
+        <source xml:lang="en">VS Code's integrated terminal</source>
+        <target>інтегрований термінал VS Code</target>
+      </trans-unit>
+      <trans-unit id="node.launch.runtimeVersion.description">
+        <source xml:lang="en">Version of `node` runtime to use. Requires `nvm`.</source>
+        <target>Версія середовища виконання `node`, яку слід використовувати. Потрібен `nvm`.</target>
+      </trans-unit>
+      <trans-unit id="commands.networkViewRequest.label">
+        <source xml:lang="en">View Request as cURL</source>
+        <target>Переглянути запит як cURL</target>
+      </trans-unit>
+      <trans-unit id="chrome.label">
+        <source xml:lang="en">Web App (Chrome)</source>
+        <target>Веб-додаток (Chrome)</target>
+      </trans-unit>
+      <trans-unit id="edge.label">
+        <source xml:lang="en">Web App (Edge)</source>
+        <target>Веб-додаток (Edge)</target>
+      </trans-unit>
+      <trans-unit id="browser.cleanUp.description">
+        <source xml:lang="en">What clean-up to do after the debugging session finishes. Close only the tab being debug, vs. close the whole browser.</source>
+        <target>Яке очищення потрібно зробити після завершення сеансу налагодження. Закрити лише вкладку, що налагоджується, проти закриття всього браузера.</target>
+      </trans-unit>
+      <trans-unit id="edge.useWebView.launch.description">
+        <source xml:lang="en">When 'true', the debugger will treat the runtime executable as a host application that contains a WebView allowing you to debug the WebView script content.</source>
+        <target>Коли 'true', налагоджувач буде розглядати виконуваний файл під час виконання як хост-додаток, що містить WebView, що дозволяє вам налагоджувати вміст скрипта WebView.</target>
+      </trans-unit>
+      <trans-unit id="configuration.automaticallyTunnelRemoteServer">
+        <source xml:lang="en">When debugging a remote web app, configures whether to automatically tunnel the remote server to your local machine.</source>
+        <target>Під час налагодження віддаленого веб-додатку налаштовується, чи потрібно автоматично тунелювати віддалений сервер на вашу локальну машину.</target>
+      </trans-unit>
+      <trans-unit id="edge.address.description">
+        <source xml:lang="en">When debugging webviews, the IP address or hostname the webview is listening on. Will be automatically discovered if not set.</source>
+        <target>При налагодженні веб-переглядів IP-адреса або ім'я хоста, на якому слухає веб-перегляд. Буде автоматично виявлено, якщо не встановлено.</target>
+      </trans-unit>
+      <trans-unit id="edge.port.description">
+        <source xml:lang="en">When debugging webviews, the port the webview debugger is listening on. Will be automatically discovered if not set.</source>
+        <target>Під час налагодження веб-переглядів порт, на якому слухає налагоджувач веб-переглядів. Буде автоматично виявлений, якщо не встановлено.</target>
+      </trans-unit>
+      <trans-unit id="configuration.npmScriptLensLocation">
+        <source xml:lang="en">Where a "Run" and "Debug" code lens should be shown in your npm scripts. It may be on "all", scripts, on "top" of the script section, or "never".</source>
+        <target>Де слід відображати кодові лінзи "Запустити" та "Відлагодити" у ваших npm-скриптах. Це може бути на "всіх" скриптах, "вгорі" секції скриптів або "ніколи".</target>
+      </trans-unit>
+      <trans-unit id="node.launch.console.description">
+        <source xml:lang="en">Where to launch the debug target.</source>
+        <target>Де запустити ціль налагодження.</target>
+      </trans-unit>
+      <trans-unit id="browser.includeDefaultArgs.description">
+        <source xml:lang="en">Whether default browser launch arguments (to disable features that may make debugging harder) will be included in the launch.</source>
+        <target>Чи будуть включені аргументи запуску браузера за замовчуванням (для відключення функцій, які можуть ускладнити налагодження) у запуск.</target>
+      </trans-unit>
+      <trans-unit id="browser.perScriptSourcemaps.description">
+        <source xml:lang="en">Whether scripts are loaded individually with unique sourcemaps containing the basename of the source file. This can be set to optimize sourcemap handling when dealing with lots of small scripts. If set to "auto", we'll detect known cases where this is appropriate.</source>
+        <target>Чи завантажуються скрипти окремо з унікальними sourcemaps, що містять базову назву вихідного файлу. Це можна налаштувати для оптимізації обробки sourcemap при роботі з великою кількістю малих скриптів. Якщо встановлено "auto", ми виявимо відомі випадки, коли це доречно.</target>
+      </trans-unit>
+      <trans-unit id="browser.targetSelection">
+        <source xml:lang="en">Whether to attach to all targets that match the URL filter ("automatic") or ask to pick one ("pick").</source>
+        <target>Чи прикріпити до всіх цілей, які відповідають фільтру URL ("автоматично"), чи запитати вибрати одну ("вибрати").</target>
+      </trans-unit>
+      <trans-unit id="node.attach.attachExistingChildren.description">
+        <source xml:lang="en">Whether to attempt to attach to already-spawned child processes.</source>
+        <target>Чи намагатися приєднатися до вже створених дочірніх процесів.</target>
+      </trans-unit>
+      <trans-unit id="browser.restart">
+        <source xml:lang="en">Whether to reconnect if the browser connection is closed</source>
+        <target>Чи підключитися знову, якщо з'єднання браузера закрито</target>
+      </trans-unit>
+      <trans-unit id="trace.stdio.description">
+        <source xml:lang="en">Whether to return trace data from the launched application or browser.</source>
+        <target>Чи повертати дані трасування з запущеного додатку або браузера.</target>
+      </trans-unit>
+      <trans-unit id="node.attach.attachSpawnedProcesses.description">
+        <source xml:lang="en">Whether to set environment variables in the attached process to track spawned children.</source>
+        <target>Чи встановлювати змінні середовища в прикріпленому процесі для відстеження створених дочірніх процесів.</target>
+      </trans-unit>
+      <trans-unit id="configuration.breakOnConditionalError">
+        <source xml:lang="en">Whether to stop when conditional breakpoints throw an error.</source>
+        <target>Чи зупинятися, коли умовні точки зупинки викликають помилку.</target>
+      </trans-unit>
+      <trans-unit id="browser.sourceMapRenames.description">
+        <source xml:lang="en">Whether to use the "names" mapping in sourcemaps. This requires requesting source content, which can be slow with certain debuggers.</source>
+        <target>Чи використовувати відображення "names" у sourcemaps. Це вимагає запиту на отримання вихідного контенту, що може бути повільним з певними налагоджувачами.</target>
+      </trans-unit>
+      <trans-unit id="node.pauseForSourceMap.description">
+        <source xml:lang="en">Whether to wait for source maps to load for each incoming script. This has a performance overhead, and might be safely disabled when running off of disk, so long as `rootPath` is not disabled.</source>
+        <target>Чи чекати на завантаження карт джерел для кожного вхідного скрипта. Це має накладні витрати на продуктивність і може бути безпечно вимкнено при виконанні з диска, якщо `rootPath` не вимкнено.</target>
+      </trans-unit>
+      <trans-unit id="browser.urlFilter.description">
+        <source xml:lang="en">Will search for a page with this url and attach to it, if found. Can have * wildcards.</source>
+        <target>Шукатиме сторінку з цим URL і прикріпить до неї, якщо знайде. Можуть бути * підстановочні знаки.</target>
+      </trans-unit>
+      <trans-unit id="browser.url.description">
+        <source xml:lang="en">Will search for a tab with this exact url and attach to it, if found</source>
+        <target>Шукатиме вкладку з цим точним URL і приєднається до неї, якщо буде знайдена</target>
+      </trans-unit>
+      <trans-unit id="debug.npm.noWorkspaceFolder">
+        <source xml:lang="en">You need to open a workspace folder to debug npm scripts.</source>
+        <target>Вам потрібно відкрити папку робочого простору, щоб налагодити npm скрипти.</target>
+      </trans-unit>
+      <trans-unit id="debug.terminal.welcome">
+        <source xml:lang="en">[JavaScript Debug Terminal](command:extension.js-debug.createDebuggerTerminal)
+
+You can use the JavaScript Debug Terminal to debug Node.js processes run on the command line.</source>
+        <note>{Locked='](command:extension.js-debug.createDebuggerTerminal)'}</note>
+        <target>[Термінал налагодження JavaScript](command:extension.js-debug.createDebuggerTerminal)
+
+Ви можете використовувати Термінал налагодження JavaScript для налагодження процесів Node.js, що виконуються в командному рядку.</target>
+      </trans-unit>
+      <trans-unit id="debug.terminal.welcomeWithLink">
+        <source xml:lang="en">[JavaScript Debug Terminal](command:extension.js-debug.createDebuggerTerminal)
+
+You can use the JavaScript Debug Terminal to debug Node.js processes run on the command line.
+
+[Debug URL](command:extension.js-debug.debugLink)</source>
+        <note>{Locked='](command:extension.js-debug.createDebuggerTerminal)'}&#xD;
+{Locked='](command:extension.js-debug.debugLink)'}</note>
+        <target>[Термінал налагодження JavaScript](command:extension.js-debug.createDebuggerTerminal)
+
+Ви можете використовувати Термінал налагодження JavaScript для налагодження процесів Node.js, які виконуються в командному рядку.
+
+[Налагодити URL](command:extension.js-debug.debugLink)</target>
+      </trans-unit>
+      <trans-unit id="errors.timeout">
+        <source xml:lang="en">{0}: timeout after {1}ms</source>
+        <target>{0}: тайм-аут після {1}мс</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,1803 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/tasks/browser/abstractTaskService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="ConfigureTaskRunnerAction.label">
+        <source xml:lang="en">Configure Task</source>
+        <target>Налаштувати завдання</target>
+      </trans-unit>
+      <trans-unit id="TaskServer.folderIgnored">
+        <source xml:lang="en">The folder {0} is ignored since it uses task version 0.1.0</source>
+        <target>Папка {0} ігнорується, оскільки вона використовує версію задачі 0.1.0</target>
+      </trans-unit>
+      <trans-unit id="TaskServer.noTask">
+        <source xml:lang="en">Task to execute is undefined</source>
+        <target>Завдання для виконання не визначено</target>
+      </trans-unit>
+      <trans-unit id="TaskService.associate">
+        <source xml:lang="en">associate</source>
+        <target>асоційований</target>
+      </trans-unit>
+      <trans-unit id="TaskService.attachProblemMatcher.continueWithout">
+        <source xml:lang="en">Continue without scanning the task output</source>
+        <target>Продовжити без сканування виходу завдання</target>
+      </trans-unit>
+      <trans-unit id="TaskService.attachProblemMatcher.learnMoreAbout">
+        <source xml:lang="en">Learn more about scanning the task output</source>
+        <target>Дізнайтеся більше про сканування виходу завдання</target>
+      </trans-unit>
+      <trans-unit id="TaskService.attachProblemMatcher.never">
+        <source xml:lang="en">Never scan the task output for this task</source>
+        <target>Ніколи не скануйте вихідні дані завдання для цього завдання</target>
+      </trans-unit>
+      <trans-unit id="TaskService.attachProblemMatcher.neverType">
+        <source xml:lang="en">Never scan the task output for {0} tasks</source>
+        <target>Ніколи не скануйте вихідні дані завдання для {0} завдань</target>
+      </trans-unit>
+      <trans-unit id="TaskService.createJsonFile">
+        <source xml:lang="en">Create tasks.json file from template</source>
+        <target>Створити файл tasks.json з шаблону</target>
+      </trans-unit>
+      <trans-unit id="TaskService.defaultBuildTaskExists">
+        <source xml:lang="en">{0} is already marked as the default build task</source>
+        <target>{0} вже позначено як завдання збірки за замовчуванням</target>
+      </trans-unit>
+      <trans-unit id="TaskService.defaultTestTaskExists">
+        <source xml:lang="en">{0} is already marked as the default test task.</source>
+        <target>{0} вже позначено як завдання за замовчуванням.</target>
+      </trans-unit>
+      <trans-unit id="TaskService.fetchingBuildTasks">
+        <source xml:lang="en">Fetching build tasks...</source>
+        <target>Отримання завдань збірки...</target>
+      </trans-unit>
+      <trans-unit id="TaskService.fetchingTestTasks">
+        <source xml:lang="en">Fetching test tasks...</source>
+        <target>Отримання тестових завдань...</target>
+      </trans-unit>
+      <trans-unit id="TaskService.ignoredFolder">
+        <source xml:lang="en">The following workspace folders are ignored since they use task version 0.1.0: {0}</source>
+        <target>Наступні папки робочого простору ігноруються, оскільки вони використовують версію завдання 0.1.0: {0}</target>
+      </trans-unit>
+      <trans-unit id="TaskService.noBuildTask">
+        <source xml:lang="en">No build task to run found. Configure Build Task...</source>
+        <target>Не знайдено жодного завдання для виконання. Налаштуйте завдання збірки...</target>
+      </trans-unit>
+      <trans-unit id="TaskService.noBuildTask1">
+        <source xml:lang="en">No build task defined. Mark a task with 'isBuildCommand' in the tasks.json file.</source>
+        <target>Не визначено жодного завдання збірки. Позначте завдання як 'isBuildCommand' у файлі tasks.json.</target>
+      </trans-unit>
+      <trans-unit id="TaskService.noBuildTask2">
+        <source xml:lang="en">No build task defined. Mark a task with as a 'build' group in the tasks.json file.</source>
+        <target>Не визначено жодного завдання для збірки. Позначте завдання як групу 'build' у файлі tasks.json.</target>
+      </trans-unit>
+      <trans-unit id="TaskService.noConfiguration">
+        <source xml:lang="en">Error: The {0} task detection didn't contribute a task for the following configuration:
+{1}
+The task will be ignored.</source>
+        <target>Помилка: Виявлення завдання {0} не внесло завдання для наступної конфігурації:
+{1}
+Завдання буде проігноровано.</target>
+      </trans-unit>
+      <trans-unit id="TaskService.noEntryToRun">
+        <source xml:lang="en">Configure a Task</source>
+        <target>Налаштувати задачу</target>
+      </trans-unit>
+      <trans-unit id="TaskService.noTaskIsRunning">
+        <source xml:lang="en">No task is running</source>
+        <target>Жодне завдання не виконується</target>
+      </trans-unit>
+      <trans-unit id="TaskService.noTaskRunning">
+        <source xml:lang="en">No task is currently running</source>
+        <target>Жодне завдання в даний час не виконується</target>
+      </trans-unit>
+      <trans-unit id="TaskService.noTaskToRestart">
+        <source xml:lang="en">No task to restart</source>
+        <target>Немає завдання для перезапуску</target>
+      </trans-unit>
+      <trans-unit id="TaskService.noTasks">
+        <source xml:lang="en">No persistent tasks to reconnect.</source>
+        <target>Немає постійних завдань для повторного підключення.</target>
+      </trans-unit>
+      <trans-unit id="TaskService.noTestTask1">
+        <source xml:lang="en">No test task defined. Mark a task with 'isTestCommand' in the tasks.json file.</source>
+        <target>Не визначено тестове завдання. Позначте завдання як 'isTestCommand' у файлі tasks.json.</target>
+      </trans-unit>
+      <trans-unit id="TaskService.noTestTask2">
+        <source xml:lang="en">No test task defined. Mark a task with as a 'test' group in the tasks.json file.</source>
+        <target>Не визначено тестове завдання. Позначте завдання як групу 'тест' у файлі tasks.json.</target>
+      </trans-unit>
+      <trans-unit id="TaskService.noTestTaskTerminal">
+        <source xml:lang="en">No test task to run found. Configure Tasks...</source>
+        <target>Не знайдено жодного тестового завдання для виконання. Налаштуйте Завдання...</target>
+      </trans-unit>
+      <trans-unit id="TaskService.notAgain">
+        <source xml:lang="en">Don't Show Again</source>
+        <target>Не показувати знову</target>
+      </trans-unit>
+      <trans-unit id="TaskService.notConnecting">
+        <source xml:lang="en">Setting tasks connected configured value {0}, tasks were already reconnected {1}</source>
+        <target>Встановлення завдань, пов'язаних з налаштованим значенням {0}, завдання вже були повторно підключені {1}</target>
+      </trans-unit>
+      <trans-unit id="TaskService.openJsonFile">
+        <source xml:lang="en">Open tasks.json file</source>
+        <target>Відкрийте файл tasks.json</target>
+      </trans-unit>
+      <trans-unit id="TaskService.pickBuildTask">
+        <source xml:lang="en">Select the build task to run</source>
+        <target>Виберіть завдання збірки для виконання</target>
+      </trans-unit>
+      <trans-unit id="TaskService.pickBuildTaskForLabel">
+        <source xml:lang="en">Select the build task (there is no default build task defined)</source>
+        <target>Виберіть задачу збірки (задача збірки за замовчуванням не визначена)</target>
+      </trans-unit>
+      <trans-unit id="TaskService.pickDefaultBuildTask">
+        <source xml:lang="en">Select the task to be used as the default build task</source>
+        <target>Виберіть задачу, яка буде використовуватися як задача за замовчуванням для збірки</target>
+      </trans-unit>
+      <trans-unit id="TaskService.pickDefaultTestTask">
+        <source xml:lang="en">Select the task to be used as the default test task</source>
+        <target>Виберіть задачу, яка буде використовуватися як задача тестування за замовчуванням</target>
+      </trans-unit>
+      <trans-unit id="TaskService.pickRunTask">
+        <source xml:lang="en">Select the task to run</source>
+        <target>Виберіть задачу для виконання</target>
+      </trans-unit>
+      <trans-unit id="TaskService.pickShowTask">
+        <source xml:lang="en">Select the task to show its output</source>
+        <target>Виберіть задачу, щоб показати її вихідні дані</target>
+      </trans-unit>
+      <trans-unit id="TaskService.pickTask">
+        <source xml:lang="en">Select a task to configure</source>
+        <target>Виберіть завдання для налаштування</target>
+      </trans-unit>
+      <trans-unit id="TaskService.pickTestTask">
+        <source xml:lang="en">Select the test task to run</source>
+        <target>Виберіть тестове завдання для виконання</target>
+      </trans-unit>
+      <trans-unit id="TaskService.providerUnavailable">
+        <source xml:lang="en">Warning: {0} tasks are unavailable in the current environment.</source>
+        <target>Попередження: {0} завдань недоступні в поточному середовищі.</target>
+      </trans-unit>
+      <trans-unit id="TaskService.reconnected">
+        <source xml:lang="en">Reconnected to running tasks.</source>
+        <target>Відновлено підключення до виконання завдань.</target>
+      </trans-unit>
+      <trans-unit id="TaskService.reconnecting">
+        <source xml:lang="en">Reconnecting to running tasks...</source>
+        <target>Відновлення з'єднання з виконуваними завданнями...</target>
+      </trans-unit>
+      <trans-unit id="TaskService.reconnectingTasks">
+        <source xml:lang="en">Reconnecting to {0} tasks...</source>
+        <target>Відновлення з'єднання з {0} завданнями...</target>
+      </trans-unit>
+      <trans-unit id="TaskService.requestTrust">
+        <source xml:lang="en">Listing and running tasks requires that some of the files in this workspace be executed as code.</source>
+        <target>Перелік і виконання завдань вимагає, щоб деякі файли в цьому робочому просторі виконувалися як код.</target>
+      </trans-unit>
+      <trans-unit id="TaskService.skippingReconnection">
+        <source xml:lang="en">Startup kind not window reload, setting connected and removing persistent tasks</source>
+        <target>Тип запуску не перезавантаження вікна, налаштування підключено та видалення постійних завдань</target>
+      </trans-unit>
+      <trans-unit id="TaskService.taskToRestart">
+        <source xml:lang="en">Select the task to restart</source>
+        <target>Виберіть завдання для перезапуску</target>
+      </trans-unit>
+      <trans-unit id="TaskService.taskToTerminate">
+        <source xml:lang="en">Select a task to terminate</source>
+        <target>Виберіть завдання для завершення</target>
+      </trans-unit>
+      <trans-unit id="TaskService.template">
+        <source xml:lang="en">Select a Task Template</source>
+        <target>Виберіть шаблон завдання</target>
+      </trans-unit>
+      <trans-unit id="TaskService.terminateAllRunningTasks">
+        <source xml:lang="en">All Running Tasks</source>
+        <target>Усі запущені завдання</target>
+      </trans-unit>
+      <trans-unit id="TaskSystem.active">
+        <source xml:lang="en">There is already a task running. Terminate it first before executing another task.</source>
+        <target>Вже виконується завдання. Спочатку заверште його, перш ніж виконувати інше завдання.</target>
+      </trans-unit>
+      <trans-unit id="TaskSystem.activeSame.noBackground">
+        <source xml:lang="en">The task '{0}' is already active.</source>
+        <target>Завдання '{0}' вже активне.</target>
+      </trans-unit>
+      <trans-unit id="TaskSystem.configurationErrors">
+        <source xml:lang="en">Error: the provided task configuration has validation errors and can't not be used. Please correct the errors first.</source>
+        <target>Помилка: надана конфігурація завдання має помилки валідації і не може бути використана. Будь ласка, спочатку виправте помилки.</target>
+      </trans-unit>
+      <trans-unit id="TaskSystem.invalidTaskJson">
+        <source xml:lang="en">Error: The content of the tasks.json file has syntax errors. Please correct them before executing a task.</source>
+        <target>Помилка: Вміст файлу tasks.json має синтаксичні помилки. Будь ласка, виправте їх перед виконанням завдання.</target>
+      </trans-unit>
+      <trans-unit id="TaskSystem.invalidTaskJsonOther">
+        <source xml:lang="en">Error: The content of the tasks json in {0} has syntax errors. Please correct them before executing a task.</source>
+        <note>Message notifies of an error in one of several places there is tasks related json, not necessarily in a file named tasks.json</note>
+        <target>Помилка: Зміст json завдань у {0} має синтаксичні помилки. Будь ласка, виправте їх перед виконанням завдання.</target>
+      </trans-unit>
+      <trans-unit id="TaskSystem.restartFailed">
+        <source xml:lang="en">Failed to terminate and restart task {0}</source>
+        <target>Не вдалося завершити та перезапустити задачу {0}</target>
+      </trans-unit>
+      <trans-unit id="TaskSystem.saveBeforeRun.prompt.title">
+        <source xml:lang="en">Save all editors?</source>
+        <target>Зберегти всіх редакторів?</target>
+      </trans-unit>
+      <trans-unit id="TaskSystem.unknownError">
+        <source xml:lang="en">An error has occurred while running a task. See task log for details.</source>
+        <target>Виникла помилка під час виконання завдання. Дивіться журнал завдань для деталей.</target>
+      </trans-unit>
+      <trans-unit id="TaskSystem.versionSettings">
+        <source xml:lang="en">Only tasks version 2.0.0 permitted in user settings.</source>
+        <target>Тільки завдання версії 2.0.0 дозволені в налаштуваннях користувача.</target>
+      </trans-unit>
+      <trans-unit id="TaskSystem.versionWorkspaceFile">
+        <source xml:lang="en">Only tasks version 2.0.0 permitted in workspace configuration files.</source>
+        <target>Тільки завдання версії 2.0.0 дозволені в конфігураційних файлах робочого простору.</target>
+      </trans-unit>
+      <trans-unit id="TasksSystem.locationUserConfig">
+        <source xml:lang="en">user settings</source>
+        <target>налаштування користувача</target>
+      </trans-unit>
+      <trans-unit id="TasksSystem.locationWorkspaceConfig">
+        <source xml:lang="en">workspace file</source>
+        <target>файл робочого простору</target>
+      </trans-unit>
+      <trans-unit id="TerminateAction.failed">
+        <source xml:lang="en">Failed to terminate running task</source>
+        <target>Не вдалося завершити виконання завдання</target>
+      </trans-unit>
+      <trans-unit id="TerminateAction.label">
+        <source xml:lang="en">Terminate Task</source>
+        <target>Припинити завдання</target>
+      </trans-unit>
+      <trans-unit id="TerminateAction.noProcess">
+        <source xml:lang="en">The launched process doesn't exist anymore. If the task spawned background tasks exiting VS Code might result in orphaned processes.</source>
+        <target>Запущений процес більше не існує. Якщо завдання створило фонові завдання, вихід з VS Code може призвести до сирітських процесів.</target>
+      </trans-unit>
+      <trans-unit id="configureTask">
+        <source xml:lang="en">Configure Task</source>
+        <target>Налаштувати завдання</target>
+      </trans-unit>
+      <trans-unit id="configured">
+        <source xml:lang="en">configured tasks</source>
+        <target>налаштовані завдання</target>
+      </trans-unit>
+      <trans-unit id="customizeParseErrors">
+        <source xml:lang="en">The current task configuration has errors. Please fix the errors first before customizing a task.</source>
+        <target>Поточна конфігурація завдання має помилки. Будь ласка, спочатку виправте помилки, перш ніж налаштовувати завдання.</target>
+      </trans-unit>
+      <trans-unit id="detail">
+        <source xml:lang="en">Do you want to save all editors before running the task?</source>
+        <target>Ви хочете зберегти всіх редакторів перед виконанням завдання?</target>
+      </trans-unit>
+      <trans-unit id="detected">
+        <source xml:lang="en">detected tasks</source>
+        <target>виявлені завдання</target>
+      </trans-unit>
+      <trans-unit id="moreThanOneBuildTask">
+        <source xml:lang="en">There are many build tasks defined in the tasks.json. Executing the first one.</source>
+        <target>У tasks.json визначено багато завдань для збірки. Виконуємо перше.</target>
+      </trans-unit>
+      <trans-unit id="recentlyUsed">
+        <source xml:lang="en">recently used tasks</source>
+        <target>нещодавно використані завдання</target>
+      </trans-unit>
+      <trans-unit id="restartTask">
+        <source xml:lang="en">Restart Task</source>
+        <target>Перезапустити завдання</target>
+      </trans-unit>
+      <trans-unit id="runTask.arg">
+        <source xml:lang="en">Filters the tasks shown in the quickpick</source>
+        <target>Фільтрує завдання, що відображаються в quickpick</target>
+      </trans-unit>
+      <trans-unit id="runTask.label">
+        <source xml:lang="en">The task's label or a term to filter by</source>
+        <target>Мітка завдання або термін для фільтрації</target>
+      </trans-unit>
+      <trans-unit id="runTask.task">
+        <source xml:lang="en">The task's label or a term to filter by</source>
+        <target>Мітка завдання або термін для фільтрації</target>
+      </trans-unit>
+      <trans-unit id="runTask.type">
+        <source xml:lang="en">The contributed task type</source>
+        <target>Тип завдання, що вноситься</target>
+      </trans-unit>
+      <trans-unit id="saveBeforeRun.dontSave">
+        <source xml:lang="en">Do&amp;&amp;n't Save</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>Не&amp;&amp; зберігати</target>
+      </trans-unit>
+      <trans-unit id="saveBeforeRun.save">
+        <source xml:lang="en">&amp;&amp;Save</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Зберегти</target>
+      </trans-unit>
+      <trans-unit id="savePersistentTask">
+        <source xml:lang="en">Saving persistent tasks: {0}</source>
+        <target>Збереження постійних завдань: {0}</target>
+      </trans-unit>
+      <trans-unit id="selectProblemMatcher">
+        <source xml:lang="en">Select for which kind of errors and warnings to scan the task output</source>
+        <target>Виберіть, для яких видів помилок і попереджень сканувати вихідні дані завдання</target>
+      </trans-unit>
+      <trans-unit id="showOutput">
+        <source xml:lang="en">Show output</source>
+        <target>Показати вихід</target>
+      </trans-unit>
+      <trans-unit id="taskEvent">
+        <source xml:lang="en">Task Event kind: {0}</source>
+        <target>Тип події завдання: {0}</target>
+      </trans-unit>
+      <trans-unit id="taskQuickPick.userSettings">
+        <source xml:lang="en">User</source>
+        <target>Користувач</target>
+      </trans-unit>
+      <trans-unit id="taskService.getSavedTasks">
+        <source xml:lang="en">Fetching tasks from task storage.</source>
+        <target>Отримання завдань з сховища завдань.</target>
+      </trans-unit>
+      <trans-unit id="taskService.getSavedTasks.error">
+        <source xml:lang="en">Fetching a task from task storage failed: {0}.</source>
+        <target>Не вдалося отримати завдання з сховища завдань: {0}.</target>
+      </trans-unit>
+      <trans-unit id="taskService.getSavedTasks.reading">
+        <source xml:lang="en">Reading tasks from task storage, {0}, {1}, {2}</source>
+        <target>Читання завдань з сховища завдань, {0}, {1}, {2}</target>
+      </trans-unit>
+      <trans-unit id="taskService.getSavedTasks.resolved">
+        <source xml:lang="en">Resolved task {0}</source>
+        <target>Вирішене завдання {0}</target>
+      </trans-unit>
+      <trans-unit id="taskService.getSavedTasks.unresolved">
+        <source xml:lang="en">Unable to resolve task {0} </source>
+        <target>Неможливо вирішити задачу {0}</target>
+      </trans-unit>
+      <trans-unit id="taskService.gettingCachedTasks">
+        <source xml:lang="en">Returning cached tasks {0}</source>
+        <target>Повернення кешованих завдань {0}</target>
+      </trans-unit>
+      <trans-unit id="taskService.ignoringFolder">
+        <source xml:lang="en">Ignoring task configurations for workspace folder {0}. Multi folder workspace task support requires that all folders use task version 2.0.0</source>
+        <target>Ігнорування конфігурацій завдань для папки робочого простору {0}. Підтримка завдань у багатопапковому робочому просторі вимагає, щоб усі папки використовували версію завдання 2.0.0.</target>
+      </trans-unit>
+      <trans-unit id="taskService.openDiff">
+        <source xml:lang="en">Open diff</source>
+        <target>Відкрити різницю</target>
+      </trans-unit>
+      <trans-unit id="taskService.openDiffs">
+        <source xml:lang="en">Open diffs</source>
+        <target>Відкрити різниці</target>
+      </trans-unit>
+      <trans-unit id="taskService.removePersistentTask">
+        <source xml:lang="en">Removing persistent task {0}</source>
+        <target>Видалення постійного завдання {0}</target>
+      </trans-unit>
+      <trans-unit id="taskService.setPersistentTask">
+        <source xml:lang="en">Setting persistent task {0}</source>
+        <target>Встановлення постійного завдання {0}</target>
+      </trans-unit>
+      <trans-unit id="taskService.upgradeVersion">
+        <source xml:lang="en">The deprecated tasks version 0.1.0 has been removed. Your tasks have been upgraded to version 2.0.0. Open the diff to review the upgrade.</source>
+        <target>Застаріла версія завдань 0.1.0 була видалена. Ваші завдання були оновлені до версії 2.0.0. Відкрийте порівняння, щоб переглянути оновлення.</target>
+      </trans-unit>
+      <trans-unit id="taskService.upgradeVersionPlural">
+        <source xml:lang="en">The deprecated tasks version 0.1.0 has been removed. Your tasks have been upgraded to version 2.0.0. Open the diffs to review the upgrade.</source>
+        <target>Застаріла версія завдань 0.1.0 була видалена. Ваші завдання були оновлені до версії 2.0.0. Відкрийте різниці, щоб переглянути оновлення.</target>
+      </trans-unit>
+      <trans-unit id="taskServiceOutputPrompt">
+        <source xml:lang="en">There are task errors. See the output for details.</source>
+        <target>Є помилки завдань. Дивіться вихідні дані для деталей.</target>
+      </trans-unit>
+      <trans-unit id="tasks">
+        <source xml:lang="en">Tasks</source>
+        <target>Завдання</target>
+      </trans-unit>
+      <trans-unit id="tasksJsonComment">
+        <source xml:lang="en">	// See https://go.microsoft.com/fwlink/?LinkId=733558 
+	// for the documentation about the tasks.json format</source>
+        <target>// Дивіться https://go.microsoft.com/fwlink/?LinkId=733558  
+// для документації про формат tasks.json</target>
+      </trans-unit>
+      <trans-unit id="terminateTask">
+        <source xml:lang="en">Terminate Task</source>
+        <target>Припинити завдання</target>
+      </trans-unit>
+      <trans-unit id="unexpectedTaskType">
+        <source xml:lang="en">The task provider for "{0}" tasks unexpectedly provided a task of type "{1}".
+</source>
+        <target>Постачальник завдань для "{0}" завдань несподівано надав завдання типу "{1}".</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/tasks/browser/runAutomaticTasks" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="workbench.action.tasks.allowAutomaticTasks">
+        <source xml:lang="en">Allow Automatic Tasks</source>
+        <target>Дозволити автоматичні завдання</target>
+      </trans-unit>
+      <trans-unit id="workbench.action.tasks.disallowAutomaticTasks">
+        <source xml:lang="en">Disallow Automatic Tasks</source>
+        <target>Заборонити автоматичні завдання</target>
+      </trans-unit>
+      <trans-unit id="workbench.action.tasks.manageAutomaticRunning">
+        <source xml:lang="en">Manage Automatic Tasks</source>
+        <target>Керувати автоматичними завданнями</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/tasks/browser/task.contribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="BuildAction.label">
+        <source xml:lang="en">Run Build Task</source>
+        <target>Запустити задачу збірки</target>
+      </trans-unit>
+      <trans-unit id="ConfigureDefaultBuildTask.label">
+        <source xml:lang="en">Configure Default Build Task</source>
+        <target>Налаштувати завдання збірки за замовчуванням</target>
+      </trans-unit>
+      <trans-unit id="ConfigureDefaultTestTask.label">
+        <source xml:lang="en">Configure Default Test Task</source>
+        <target>Налаштувати завдання тестування за замовчуванням</target>
+      </trans-unit>
+      <trans-unit id="ReRunTaskAction.label">
+        <source xml:lang="en">Rerun Last Task</source>
+        <target>Повторити останнє завдання</target>
+      </trans-unit>
+      <trans-unit id="RestartTaskAction.label">
+        <source xml:lang="en">Restart Running Task</source>
+        <target>Перезапустити виконуване завдання</target>
+      </trans-unit>
+      <trans-unit id="RunTaskAction.label">
+        <source xml:lang="en">Run Task</source>
+        <target>Запустити задачу</target>
+      </trans-unit>
+      <trans-unit id="ShowLogAction.label">
+        <source xml:lang="en">Show Task Log</source>
+        <target>Показати журнал завдань</target>
+      </trans-unit>
+      <trans-unit id="ShowTasksAction.label">
+        <source xml:lang="en">Show Running Tasks</source>
+        <target>Показати запущені завдання</target>
+      </trans-unit>
+      <trans-unit id="TerminateAction.label">
+        <source xml:lang="en">Terminate Task</source>
+        <target>Припинити завдання</target>
+      </trans-unit>
+      <trans-unit id="TestAction.label">
+        <source xml:lang="en">Run Test Task</source>
+        <target>Запустити тестове завдання</target>
+      </trans-unit>
+      <trans-unit id="building">
+        <source xml:lang="en">Building...</source>
+        <target>Будується...</target>
+      </trans-unit>
+      <trans-unit id="miBuildTask">
+        <source xml:lang="en">Run &amp;&amp;Build Task...</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>Запустити &amp;&amp;Збірка завдання...</target>
+      </trans-unit>
+      <trans-unit id="miConfigureBuildTask">
+        <source xml:lang="en">Configure De&amp;&amp;fault Build Task...</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>Налаштувати За&amp;&amp;мовчуванням Завдання Будування...</target>
+      </trans-unit>
+      <trans-unit id="miConfigureTask">
+        <source xml:lang="en">&amp;&amp;Configure Tasks...</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Налаштувати завдання...</target>
+      </trans-unit>
+      <trans-unit id="miRestartTask">
+        <source xml:lang="en">R&amp;&amp;estart Running Task...</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>R&amp;&amp;естарт виконання завдання...</target>
+      </trans-unit>
+      <trans-unit id="miRunTask">
+        <source xml:lang="en">&amp;&amp;Run Task...</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Запустити завдання...</target>
+      </trans-unit>
+      <trans-unit id="miRunningTask">
+        <source xml:lang="en">Show Runnin&amp;&amp;g Tasks...</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>Показати Розпочаті&amp;&amp; Завдання...</target>
+      </trans-unit>
+      <trans-unit id="miTerminateTask">
+        <source xml:lang="en">&amp;&amp;Terminate Task...</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Завершити завдання...</target>
+      </trans-unit>
+      <trans-unit id="numberOfRunningTasks">
+        <source xml:lang="en">{0} running tasks</source>
+        <target>{0} запущених завдань</target>
+      </trans-unit>
+      <trans-unit id="rerunTaskIcon">
+        <source xml:lang="en">View icon of the rerun task.</source>
+        <target>Переглянути значок повторного запуску завдання.</target>
+      </trans-unit>
+      <trans-unit id="runningTasks">
+        <source xml:lang="en">Show Running Tasks</source>
+        <target>Показати запущені завдання</target>
+      </trans-unit>
+      <trans-unit id="status.runningTasks">
+        <source xml:lang="en">Running Tasks</source>
+        <target>Виконання завдань</target>
+      </trans-unit>
+      <trans-unit id="task.SaveBeforeRun.prompt">
+        <source xml:lang="en">Prompts whether to save editors before running.</source>
+        <target>Запитує, чи зберегти редактори перед виконанням.</target>
+      </trans-unit>
+      <trans-unit id="task.allowAutomaticTasks">
+        <source xml:lang="en">Enable automatic tasks - note that tasks won't run in an untrusted workspace.</source>
+        <target>Увімкнути автоматичні завдання - зверніть увагу, що завдання не виконуватимуться в ненадійному робочому просторі.</target>
+      </trans-unit>
+      <trans-unit id="task.allowAutomaticTasks.off">
+        <source xml:lang="en">Never</source>
+        <target>Ніколи</target>
+      </trans-unit>
+      <trans-unit id="task.allowAutomaticTasks.on">
+        <source xml:lang="en">Always</source>
+        <target>Завжди</target>
+      </trans-unit>
+      <trans-unit id="task.autoDetect">
+        <source xml:lang="en">Controls enablement of `provideTasks` for all task provider extension. If the Tasks: Run Task command is slow, disabling auto detect for task providers may help. Individual extensions may also provide settings that disable auto detection.</source>
+        <target>Контролює увімкнення `provideTasks` для всіх розширень постачальників завдань. Якщо команда Завдання: Запустити завдання працює повільно, вимкнення автоматичного виявлення для постачальників завдань може допомогти. Окремі розширення також можуть надавати налаштування, які вимикають автоматичне виявлення.</target>
+      </trans-unit>
+      <trans-unit id="task.problemMatchers.neverPrompt">
+        <source xml:lang="en">Configures whether to show the problem matcher prompt when running a task. Set to `true` to never prompt, or use a dictionary of task types to turn off prompting only for specific task types.</source>
+        <target>Налаштовує, чи показувати запит на відповідність проблеми під час виконання завдання. Встановіть на `true`, щоб ніколи не запитувати, або використовуйте словник типів завдань, щоб вимкнути запит лише для конкретних типів завдань.</target>
+      </trans-unit>
+      <trans-unit id="task.problemMatchers.neverPrompt.array">
+        <source xml:lang="en">An object containing task type-boolean pairs to never prompt for problem matchers on.</source>
+        <target>Об'єкт, що містить пари типу завдання-логічне значення, щоб ніколи не запитувати про відповідність проблемам.</target>
+      </trans-unit>
+      <trans-unit id="task.problemMatchers.neverPrompt.boolean">
+        <source xml:lang="en">Sets problem matcher prompting behavior for all tasks.</source>
+        <target>Встановлює поведінку запиту для всіх завдань.</target>
+      </trans-unit>
+      <trans-unit id="task.quickOpen.detail">
+        <source xml:lang="en">Controls whether to show the task detail for tasks that have a detail in task quick picks, such as Run Task.</source>
+        <target>Контролює, чи показувати деталі завдання для завдань, які мають деталі в швидкому виборі завдань, такі як Виконати завдання.</target>
+      </trans-unit>
+      <trans-unit id="task.quickOpen.history">
+        <source xml:lang="en">Controls the number of recent items tracked in task quick open dialog.</source>
+        <target>Контролює кількість нещодавніх елементів, відстежуваних у діалоговому вікні швидкого відкриття завдань.</target>
+      </trans-unit>
+      <trans-unit id="task.quickOpen.showAll">
+        <source xml:lang="en">Causes the Tasks: Run Task command to use the slower "show all" behavior instead of the faster two level picker where tasks are grouped by provider.</source>
+        <target>Викликає Завдання: Використовуйте команду Запустити Завдання, щоб застосувати повільнішу поведінку "показати всі" замість швидшого двохрівневого вибору, де завдання згруповані за постачальником.</target>
+      </trans-unit>
+      <trans-unit id="task.quickOpen.skip">
+        <source xml:lang="en">Controls whether the task quick pick is skipped when there is only one task to pick from.</source>
+        <target>Контролює, чи пропускається швидкий вибір завдання, коли є лише одне завдання для вибору.</target>
+      </trans-unit>
+      <trans-unit id="task.reconnection">
+        <source xml:lang="en">On window reload, reconnect to tasks that have problem matchers.</source>
+        <target>При перезавантаженні вікна повторно підключитися до завдань, які мають матчери проблем.</target>
+      </trans-unit>
+      <trans-unit id="task.saveBeforeRun">
+        <source xml:lang="en">Save all dirty editors before running a task.</source>
+        <target>Збережіть усі брудні редактори перед виконанням завдання.</target>
+      </trans-unit>
+      <trans-unit id="task.saveBeforeRun.always">
+        <source xml:lang="en">Always saves all editors before running.</source>
+        <target>Завжди зберігає всіх редакторів перед виконанням.</target>
+      </trans-unit>
+      <trans-unit id="task.saveBeforeRun.never">
+        <source xml:lang="en">Never saves editors before running.</source>
+        <target>Ніколи не зберігає редактори перед виконанням.</target>
+      </trans-unit>
+      <trans-unit id="task.slowProviderWarning">
+        <source xml:lang="en">Configures whether a warning is shown when a provider is slow</source>
+        <target>Налаштовує, чи показувати попередження, коли постачальник працює повільно</target>
+      </trans-unit>
+      <trans-unit id="task.slowProviderWarning.array">
+        <source xml:lang="en">An array of task types to never show the slow provider warning.</source>
+        <target>Масив типів завдань, щоб ніколи не показувати попередження про повільного постачальника.</target>
+      </trans-unit>
+      <trans-unit id="task.slowProviderWarning.boolean">
+        <source xml:lang="en">Sets the slow provider warning for all tasks.</source>
+        <target>Встановлює попередження про повільного постачальника для всіх завдань.</target>
+      </trans-unit>
+      <trans-unit id="task.verboseLogging">
+        <source xml:lang="en">Enable verbose logging for tasks.</source>
+        <target>Увімкніть детальне ведення журналу для завдань.</target>
+      </trans-unit>
+      <trans-unit id="tasks">
+        <source xml:lang="en">Tasks</source>
+        <target>Завдання</target>
+      </trans-unit>
+      <trans-unit id="tasksConfigurationTitle">
+        <source xml:lang="en">Tasks</source>
+        <target>Завдання</target>
+      </trans-unit>
+      <trans-unit id="tasksQuickAccessHelp">
+        <source xml:lang="en">Run Task</source>
+        <target>Запустити завдання</target>
+      </trans-unit>
+      <trans-unit id="tasksQuickAccessPlaceholder">
+        <source xml:lang="en">Type the name of a task to run.</source>
+        <target>Введіть назву завдання для виконання.</target>
+      </trans-unit>
+      <trans-unit id="workbench.action.tasks.openUserTasks">
+        <source xml:lang="en">Open User Tasks</source>
+        <target>Відкрити завдання користувача</target>
+      </trans-unit>
+      <trans-unit id="workbench.action.tasks.openWorkspaceFileTasks">
+        <source xml:lang="en">Open Workspace Tasks</source>
+        <target>Відкрити завдання робочого простору</target>
+      </trans-unit>
+      <trans-unit id="workbench.action.tasks.rerunForActiveTerminal">
+        <source xml:lang="en">Rerun Task</source>
+        <target>Повторити завдання</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/tasks/browser/taskQuickPick" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="TaskQuickPick.changeSettingDetails">
+        <source xml:lang="en">Task detection for {0} tasks causes files in any workspace you open to be run as code. Enabling {0} task detection is a user setting and will apply to any workspace you open. 
+
+ Do you want to enable {0} task detection for all workspaces?</source>
+        <target>Виявлення завдань для {0} завдань призводить до того, що файли в будь-якому робочому просторі, який ви відкриваєте, виконуються як код. Увімкнення виявлення {0} завдань є налаштуванням користувача і буде застосовуватися до будь-якого робочого простору, який ви відкриваєте.
+
+Чи хочете ви увімкнути виявлення {0} завдань для всіх робочих просторів?</target>
+      </trans-unit>
+      <trans-unit id="TaskQuickPick.changeSettingNo">
+        <source xml:lang="en">No</source>
+        <target>Ні</target>
+      </trans-unit>
+      <trans-unit id="TaskQuickPick.changeSettingsOptions">
+        <source xml:lang="en">$(gear) {0} task detection is turned off. Enable {1} task detection...</source>
+        <target>$(gear) Виявлення завдань {0} вимкнено. Увімкніть виявлення завдань {1}...</target>
+      </trans-unit>
+      <trans-unit id="TaskQuickPick.goBack">
+        <source xml:lang="en">Go back ↩</source>
+        <target>Повернутися назад ↩</target>
+      </trans-unit>
+      <trans-unit id="TaskQuickPick.noTasksForType">
+        <source xml:lang="en">No {0} tasks found. Go back ↩</source>
+        <target>Не знайдено жодних {0} завдань. Повернутися ↩</target>
+      </trans-unit>
+      <trans-unit id="TaskService.pickRunTask">
+        <source xml:lang="en">Select the task to run</source>
+        <target>Виберіть задачу для виконання</target>
+      </trans-unit>
+      <trans-unit id="configureTask">
+        <source xml:lang="en">Configure Task</source>
+        <target>Налаштувати завдання</target>
+      </trans-unit>
+      <trans-unit id="configureTaskIcon">
+        <source xml:lang="en">Configuration icon in the tasks selection list.</source>
+        <target>Іконка конфігурації в списку вибору завдань.</target>
+      </trans-unit>
+      <trans-unit id="configured">
+        <source xml:lang="en">configured</source>
+        <target>налаштовані завдання</target>
+      </trans-unit>
+      <trans-unit id="contributedTasks">
+        <source xml:lang="en">contributed</source>
+        <target>вніс вклад</target>
+      </trans-unit>
+      <trans-unit id="noProviderForTask">
+        <source xml:lang="en">There is no task provider registered for tasks of type "{0}".</source>
+        <target>Не зареєстровано постачальника завдань для завдань типу "{0}".</target>
+      </trans-unit>
+      <trans-unit id="recentlyUsed">
+        <source xml:lang="en">recently used</source>
+        <target>нещодавно використані завдання</target>
+      </trans-unit>
+      <trans-unit id="removeRecent">
+        <source xml:lang="en">Remove Recently Used Task</source>
+        <target>Видалити нещодавно використане завдання</target>
+      </trans-unit>
+      <trans-unit id="removeTaskIcon">
+        <source xml:lang="en">Icon for remove in the tasks selection list.</source>
+        <target>Іконка для видалення в списку вибору завдань.</target>
+      </trans-unit>
+      <trans-unit id="taskQuickPick.showAll">
+        <source xml:lang="en">Show All Tasks...</source>
+        <target>Показати всі завдання...</target>
+      </trans-unit>
+      <trans-unit id="taskType">
+        <source xml:lang="en">All {0} tasks</source>
+        <target>Усі {0} завдання</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/tasks/browser/taskService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="taskService.processTaskSystem">
+        <source xml:lang="en">Process task system is not support in the web.</source>
+        <target>Система обробки завдань не підтримується в вебі.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/tasks/browser/taskTerminalStatus" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="task.watchFirstError">
+        <source xml:lang="en">Beginning of detected errors for this run</source>
+        <target>Початок виявлених помилок для цього запуску</target>
+      </trans-unit>
+      <trans-unit id="taskTerminalStatus.active">
+        <source xml:lang="en">Task is running</source>
+        <target>Завдання виконується</target>
+      </trans-unit>
+      <trans-unit id="taskTerminalStatus.errors">
+        <source xml:lang="en">Task has errors</source>
+        <target>Завдання має помилки</target>
+      </trans-unit>
+      <trans-unit id="taskTerminalStatus.errorsInactive">
+        <source xml:lang="en">Task has errors and is waiting...</source>
+        <target>Завдання має помилки і чекає...</target>
+      </trans-unit>
+      <trans-unit id="taskTerminalStatus.infos">
+        <source xml:lang="en">Task has infos</source>
+        <target>Завдання має інформацію</target>
+      </trans-unit>
+      <trans-unit id="taskTerminalStatus.infosInactive">
+        <source xml:lang="en">Task has infos and is waiting...</source>
+        <target>Завдання має інформацію і чекає...</target>
+      </trans-unit>
+      <trans-unit id="taskTerminalStatus.succeeded">
+        <source xml:lang="en">Task succeeded</source>
+        <target>Завдання виконано</target>
+      </trans-unit>
+      <trans-unit id="taskTerminalStatus.succeededInactive">
+        <source xml:lang="en">Task succeeded and waiting...</source>
+        <target>Завдання виконано і чекає...</target>
+      </trans-unit>
+      <trans-unit id="taskTerminalStatus.warnings">
+        <source xml:lang="en">Task has warnings</source>
+        <target>Завдання має попередження</target>
+      </trans-unit>
+      <trans-unit id="taskTerminalStatus.warningsInactive">
+        <source xml:lang="en">Task has warnings and is waiting...</source>
+        <target>Завдання має попередження і чекає...</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/tasks/browser/tasksQuickAccess" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="TaskService.pickRunTask">
+        <source xml:lang="en">Select the task to run</source>
+        <target>Виберіть задачу для виконання</target>
+      </trans-unit>
+      <trans-unit id="noTaskResults">
+        <source xml:lang="en">No matching tasks</source>
+        <target>Немає відповідних завдань</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/tasks/browser/terminalTaskSystem" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="TerminalTaskSystem">
+        <source xml:lang="en">Can't execute a shell command on an UNC drive using cmd.exe.</source>
+        <target>Не вдається виконати команду оболонки на UNC-диску за допомогою cmd.exe.</target>
+      </trans-unit>
+      <trans-unit id="TerminalTaskSystem.nonWatchingMatcher">
+        <source xml:lang="en">Task {0} is a background task but uses a problem matcher without a background pattern</source>
+        <target>Завдання {0} є фоновим завданням, але використовує матчер проблем без фонової схеми</target>
+      </trans-unit>
+      <trans-unit id="TerminalTaskSystem.taskLoadReporting">
+        <source xml:lang="en">There are issues with task "{0}". See the output for more details.</source>
+        <target>Є проблеми з завданням "{0}". Дивіться вихідні дані для отримання додаткової інформації.</target>
+      </trans-unit>
+      <trans-unit id="TerminalTaskSystem.unknownError">
+        <source xml:lang="en">A unknown error has occurred while executing a task. See task output log for details.</source>
+        <target>Виникла невідома помилка під час виконання завдання. Дивіться журнал виводу завдання для деталей.</target>
+      </trans-unit>
+      <trans-unit id="closeTerminal">
+        <source xml:lang="en">Press any key to close the terminal.</source>
+        <target>Натисніть будь-яку клавішу, щоб закрити термінал.</target>
+      </trans-unit>
+      <trans-unit id="dependencyCycle">
+        <source xml:lang="en">There is a dependency cycle. See task "{0}".</source>
+        <target>Існує цикл залежностей. Дивіться завдання "{0}".</target>
+      </trans-unit>
+      <trans-unit id="dependencyFailed">
+        <source xml:lang="en">Couldn't resolve dependent task '{0}' in workspace folder '{1}'</source>
+        <target>Не вдалося вирішити залежне завдання '{0}' у папці робочого простору '{1}'</target>
+      </trans-unit>
+      <trans-unit id="rerunTask">
+        <source xml:lang="en">Rerun Task</source>
+        <target>Повторити завдання</target>
+      </trans-unit>
+      <trans-unit id="reuseTerminal">
+        <source xml:lang="en">Terminal will be reused by tasks, press any key to close it.</source>
+        <target>Термінал буде повторно використаний завданнями, натисніть будь-яку клавішу, щоб закрити його.</target>
+      </trans-unit>
+      <trans-unit id="task.executing">
+        <source xml:lang="en">Executing task: {0}</source>
+        <note>The task command line or label</note>
+        <target>Виконання завдання: {0}</target>
+      </trans-unit>
+      <trans-unit id="task.executing.shell-integration">
+        <source xml:lang="en">Executing task: {0}</source>
+        <note>The task command line or label</note>
+        <target>Виконання завдання: {0}</target>
+      </trans-unit>
+      <trans-unit id="task.executing.shellIntegration">
+        <source xml:lang="en">Executing task: {0}</source>
+        <note>The task command line or label</note>
+        <target>Виконання завдання: {0}</target>
+      </trans-unit>
+      <trans-unit id="task.executingInFolder">
+        <source xml:lang="en">Executing task in folder {0}: {1}</source>
+        <note>The workspace folder the task is running in&#xD;
+The task command line or label</note>
+        <target>Виконання завдання в папці {0}: {1}</target>
+      </trans-unit>
+      <trans-unit id="unknownProblemMatcher">
+        <source xml:lang="en">Problem matcher {0} can't be resolved. The matcher will be ignored</source>
+        <target>Неможливо вирішити матчер проблеми {0}. Матчер буде проігноровано.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/tasks/common/jsonSchemaCommon" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="JsonSchema.args">
+        <source xml:lang="en">Additional arguments passed to the command.</source>
+        <target>Додаткові аргументи, передані команді.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.background">
+        <source xml:lang="en">Whether the executed task is kept alive and is running in the background.</source>
+        <target>Чи виконане завдання залишається активним і працює у фоновому режимі.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.command">
+        <source xml:lang="en">The command to be executed. Can be an external program or a shell command.</source>
+        <target>Команда, яка буде виконана. Може бути зовнішньою програмою або командою оболонки.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.echoCommand">
+        <source xml:lang="en">Controls whether the executed command is echoed to the output. Default is false.</source>
+        <target>Контролює, чи виконана команда відображається в виході. За замовчуванням - false.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.matchers">
+        <source xml:lang="en">The problem matcher(s) to use. Can either be a string or a problem matcher definition or an array of strings and problem matchers.</source>
+        <target>Проблемний матчер(и), які потрібно використовувати. Може бути або рядком, або визначенням проблемного матчера, або масивом рядків та проблемних матчерів.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.options">
+        <source xml:lang="en">Additional command options</source>
+        <target>Додаткові параметри команди</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.options.cwd">
+        <source xml:lang="en">The current working directory of the executed program or script. If omitted Code's current workspace root is used.</source>
+        <target>Поточний робочий каталог виконуваної програми або скрипта. Якщо пропущено, використовується корінь поточного робочого простору Code.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.options.env">
+        <source xml:lang="en">The environment of the executed program or shell. If omitted the parent process' environment is used.</source>
+        <target>Середовище виконаної програми або оболонки. Якщо пропущено, використовується середовище батьківського процесу.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.promptOnClose">
+        <source xml:lang="en">Whether the user is prompted when VS Code closes with a running background task.</source>
+        <target>Чи запитується користувач, коли VS Code закривається з активним фоновим завданням.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.shell.args">
+        <source xml:lang="en">The shell arguments.</source>
+        <target>Аргументи оболонки.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.shell.executable">
+        <source xml:lang="en">The shell to be used.</source>
+        <target>Оболонка, яка буде використовуватися.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.shellConfiguration">
+        <source xml:lang="en">Configures the shell to be used.</source>
+        <target>Налаштовує оболонку, яка буде використовуватися.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.showOutput">
+        <source xml:lang="en">Controls whether the output of the running task is shown or not. If omitted 'always' is used.</source>
+        <target>Контролює, чи показується вихід виконуваного завдання. Якщо пропущено, використовується 'завжди'.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.suppressTaskName">
+        <source xml:lang="en">Controls whether the task name is added as an argument to the command. Default is false.</source>
+        <target>Контролює, чи ім'я завдання додається як аргумент до команди. За замовчуванням - false.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.taskSelector">
+        <source xml:lang="en">Prefix to indicate that an argument is task.</source>
+        <target>Префікс для вказівки, що аргумент є завданням.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks">
+        <source xml:lang="en">The task configurations. Usually these are enrichments of task already defined in the external task runner.</source>
+        <target>Конфігурації завдань. Зазвичай це є розширеннями завдань, вже визначених у зовнішньому виконавці завдань.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.args">
+        <source xml:lang="en">Arguments passed to the command when this task is invoked.</source>
+        <target>Аргументи, передані команді, коли це завдання викликається.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.background">
+        <source xml:lang="en">Whether the executed task is kept alive and is running in the background.</source>
+        <target>Чи виконане завдання залишається активним і працює у фоновому режимі.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.build">
+        <source xml:lang="en">Maps this task to Code's default build command.</source>
+        <target>Відображає це завдання на стандартну команду збірки Code.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.linux">
+        <source xml:lang="en">Linux specific command configuration</source>
+        <target>Конфігурація команд, специфічних для Linux</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.mac">
+        <source xml:lang="en">Mac specific command configuration</source>
+        <target>Конфігурація команд для Mac</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.matcherError">
+        <source xml:lang="en">Unrecognized problem matcher. Is the extension that contributes this problem matcher installed?</source>
+        <target>Невизнаний матчер проблем. Чи встановлено розширення, яке додає цей матчер проблем?</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.matchers">
+        <source xml:lang="en">The problem matcher(s) to use. Can either be a string or a problem matcher definition or an array of strings and problem matchers.</source>
+        <target>Проблемний матчер(и), які потрібно використовувати. Може бути або рядком, або визначенням проблемного матчера, або масивом рядків і проблемних матчерів.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.promptOnClose">
+        <source xml:lang="en">Whether the user is prompted when VS Code closes with a running task.</source>
+        <target>Чи з'являється запит до користувача, коли VS Code закривається з активним завданням.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.showOutput">
+        <source xml:lang="en">Controls whether the output of the running task is shown or not. If omitted the globally defined value is used.</source>
+        <target>Контролює, чи показується вихід виконуваного завдання. Якщо пропущено, використовується глобально визначене значення.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.suppressTaskName">
+        <source xml:lang="en">Controls whether the task name is added as an argument to the command. If omitted the globally defined value is used.</source>
+        <target>Контролює, чи ім'я завдання додається як аргумент до команди. Якщо пропущено, використовується глобально визначене значення.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.taskName">
+        <source xml:lang="en">The task's name</source>
+        <target>Назва завдання</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.test">
+        <source xml:lang="en">Maps this task to Code's default test command.</source>
+        <target>Прив'язує це завдання до стандартної команди тестування Code.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.watching">
+        <source xml:lang="en">Whether the executed task is kept alive and is watching the file system.</source>
+        <target>Чи виконане завдання залишається активним і спостерігає за файловою системою.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.watching.deprecation">
+        <source xml:lang="en">Deprecated. Use isBackground instead.</source>
+        <target>Застаріло. Використовуйте isBackground замість.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.windows">
+        <source xml:lang="en">Windows specific command configuration</source>
+        <target>Конфігурація команд, специфічних для Windows</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.watching">
+        <source xml:lang="en">Whether the executed task is kept alive and is watching the file system.</source>
+        <target>Чи виконав завдання залишається активним і спостерігає за файловою системою.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.watching.deprecation">
+        <source xml:lang="en">Deprecated. Use isBackground instead.</source>
+        <target>Застаріло. Використовуйте isBackground замість.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/tasks/common/jsonSchema_v1" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="JsonSchema._runner">
+        <source xml:lang="en">The runner has graduated. Use the official runner property</source>
+        <target>Бігун закінчив навчання. Використовуйте офіційну властивість бігуна</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.linux">
+        <source xml:lang="en">Linux specific command configuration</source>
+        <target>Конфігурація команд, специфічних для Linux</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.mac">
+        <source xml:lang="en">Mac specific command configuration</source>
+        <target>Конфігурація команд для Mac</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.runner">
+        <source xml:lang="en">Defines whether the task is executed as a process and the output is shown in the output window or inside the terminal.</source>
+        <target>Визначає, чи виконується завдання як процес, а вихідні дані відображаються у вікні виводу або всередині терміналу.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.shell">
+        <source xml:lang="en">Specifies whether the command is a shell command or an external program. Defaults to false if omitted.</source>
+        <target>Вказує, чи є команда командою оболонки, чи зовнішньою програмою. За замовчуванням - false, якщо пропущено.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.version">
+        <source xml:lang="en">The config's version number</source>
+        <target>Номер версії конфігурації</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.version.deprecated">
+        <source xml:lang="en">Task version 0.1.0 is deprecated. Please use 2.0.0</source>
+        <target>Версія завдання 0.1.0 застаріла. Будь ласка, використовуйте 2.0.0</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.windows">
+        <source xml:lang="en">Windows specific command configuration</source>
+        <target>Конфігурація команд, специфічних для Windows</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/tasks/common/jsonSchema_v2" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="JsonSchema.args.quotedString.value">
+        <source xml:lang="en">The actual argument value</source>
+        <target>Фактичне значення аргументу</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.args.quotesString.quote">
+        <source xml:lang="en">How the argument value should be quoted.</source>
+        <target>Як значення аргументу повинно бути оформлено в лапках.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.command">
+        <source xml:lang="en">The command to be executed. Can be an external program or a shell command.</source>
+        <target>Команда, яка буде виконана. Може бути зовнішньою програмою або командою оболонки.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.command.quotedString.value">
+        <source xml:lang="en">The actual command value</source>
+        <target>Фактичне значення команди</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.command.quotesString.quote">
+        <source xml:lang="en">How the command value should be quoted.</source>
+        <target>Як значення команди повинно бути оформлене в лапках.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.commandArray">
+        <source xml:lang="en">The shell command to be executed. Array items will be joined using a space character</source>
+        <target>Команда оболонки, яка буде виконана. Елементи масиву будуть об'єднані за допомогою символу пробілу</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.customizations.customizes.type">
+        <source xml:lang="en">The task type to customize</source>
+        <target>Тип завдання для налаштування</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.hide">
+        <source xml:lang="en">Hide this task from the run task quick pick</source>
+        <target>Сховати це завдання з швидкого вибору завдань виконання</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.linux">
+        <source xml:lang="en">Linux specific command configuration</source>
+        <target>Конфігурація команд, специфічних для Linux</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.mac">
+        <source xml:lang="en">Mac specific command configuration</source>
+        <target>Конфігурація команд для Mac</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.shell">
+        <source xml:lang="en">Specifies whether the command is a shell command or an external program. Defaults to false if omitted.</source>
+        <target>Вказує, чи є команда командою оболонки, чи зовнішньою програмою. За замовчуванням - false, якщо пропущено.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.args">
+        <source xml:lang="en">Arguments passed to the command when this task is invoked.</source>
+        <target>Аргументи, передані команді, коли це завдання викликається.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.background">
+        <source xml:lang="en">Whether the executed task is kept alive and is running in the background.</source>
+        <target>Чи виконане завдання залишається активним і працює у фоновому режимі.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.customize.deprecated">
+        <source xml:lang="en">The customize property is deprecated. See the 1.14 release notes on how to migrate to the new task customization approach</source>
+        <target>Властивість customize застаріла. Дивіться примітки до релізу 1.14 про те, як перейти на новий підхід до налаштування завдань.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.dependsOn">
+        <source xml:lang="en">Either a string representing another task or an array of other tasks that this task depends on.</source>
+        <target>Або рядок, що представляє інше завдання, або масив інших завдань, від яких залежить це завдання.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.dependsOn.array">
+        <source xml:lang="en">The other tasks this task depends on.</source>
+        <target>Інші завдання, від яких залежить це завдання.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.dependsOn.identifier">
+        <source xml:lang="en">The task identifier.</source>
+        <target>Ідентифікатор завдання.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.dependsOn.string">
+        <source xml:lang="en">Another task this task depends on.</source>
+        <target>Інше завдання, від якого залежить це завдання.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.dependsOrder">
+        <source xml:lang="en">Determines the order of the dependsOn tasks for this task. Note that this property is not recursive.</source>
+        <target>Визначає порядок завдань dependsOn для цього завдання. Зверніть увагу, що ця властивість не є рекурсивною.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.dependsOrder.parallel">
+        <source xml:lang="en">Run all dependsOn tasks in parallel.</source>
+        <target>Запустіть всі завдання, що залежать, паралельно.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.dependsOrder.sequence">
+        <source xml:lang="en">Run all dependsOn tasks in sequence.</source>
+        <target>Запустіть всі завдання, що залежать, послідовно.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.detail">
+        <source xml:lang="en">An optional description of a task that shows in the Run Task quick pick as a detail.</source>
+        <target>Необов'язковий опис завдання, який відображається в швидкому виборі Запустити завдання як деталь.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.echoCommand.deprecated">
+        <source xml:lang="en">The property echoCommand is deprecated. Use the echo property inside the presentation property instead. See also the 1.14 release notes.</source>
+        <target>Властивість echoCommand застаріла. Замість цього використовуйте властивість echo всередині властивості presentation. Дивіться також примітки до випуску 1.14.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.group">
+        <source xml:lang="en">Defines to which execution group this task belongs to. It supports "build" to add it to the build group and "test" to add it to the test group.</source>
+        <target>Визначає, до якої групи виконання належить це завдання. Підтримує "build", щоб додати його до групи збірки, та "test", щоб додати його до групи тестування.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.group.build">
+        <source xml:lang="en">Marks the task as a build task accessible through the 'Run Build Task' command.</source>
+        <target>Позначає задачу як задачу збірки, доступну через команду 'Запустити задачу збірки'.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.group.defaultBuild">
+        <source xml:lang="en">Marks the task as the default build task.</source>
+        <target>Позначає задачу як задачу за замовчуванням для збірки.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.group.defaultTest">
+        <source xml:lang="en">Marks the task as the default test task.</source>
+        <target>Позначає задачу як задачу тестування за замовчуванням.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.group.isDefault">
+        <source xml:lang="en">Defines if this task is the default task in the group, or a glob to match the file which should trigger this task.</source>
+        <target>Визначає, чи є це завдання стандартним завданням у групі, або шаблоном для відповідності файлу, який має викликати це завдання.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.group.kind">
+        <source xml:lang="en">The task's execution group.</source>
+        <target>Група виконання завдання.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.group.none">
+        <source xml:lang="en">Assigns the task to no group</source>
+        <target>Призначає завдання жодній групі</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.group.test">
+        <source xml:lang="en">Marks the task as a test task accessible through the 'Run Test Task' command.</source>
+        <target>Позначає задачу як тестову задачу, доступну через команду 'Запустити тестову задачу'.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.icon">
+        <source xml:lang="en">An optional icon for the task</source>
+        <target>Додаткова іконка для завдання</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.icon.color">
+        <source xml:lang="en">An optional color of the icon</source>
+        <target>Додатковий колір іконки</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.icon.id">
+        <source xml:lang="en">An optional codicon ID to use</source>
+        <target>Необов'язковий ідентифікатор codicon для використання</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.identifier">
+        <source xml:lang="en">A user defined identifier to reference the task in launch.json or a dependsOn clause.</source>
+        <target>Визначений користувачем ідентифікатор для посилання на задачу в launch.json або в клаузі dependsOn.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.identifier.deprecated">
+        <source xml:lang="en">User defined identifiers are deprecated. For custom task use the name as a reference and for tasks provided by extensions use their defined task identifier.</source>
+        <target>Визначені користувачем ідентифікатори застаріли. Для користувацьких завдань використовуйте ім'я як посилання, а для завдань, наданих розширеннями, використовуйте їх визначений ідентифікатор завдання.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.instanceLimit">
+        <source xml:lang="en">The number of instances of the task that are allowed to run simultaneously.</source>
+        <target>Кількість екземплярів завдання, які можуть виконуватись одночасно.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.isBuildCommand.deprecated">
+        <source xml:lang="en">The property isBuildCommand is deprecated. Use the group property instead. See also the 1.14 release notes.</source>
+        <target>Властивість isBuildCommand застаріла. Використовуйте замість цього властивість group. Дивіться також примітки до випуску 1.14.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.isShellCommand.deprecated">
+        <source xml:lang="en">The property isShellCommand is deprecated. Use the type property of the task and the shell property in the options instead. See also the 1.14 release notes.</source>
+        <target>Властивість isShellCommand застаріла. Замість цього використовуйте властивість type завдання та властивість shell в параметрах. Дивіться також примітки до випуску 1.14.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.isTestCommand.deprecated">
+        <source xml:lang="en">The property isTestCommand is deprecated. Use the group property instead. See also the 1.14 release notes.</source>
+        <target>Властивість isTestCommand застаріла. Використовуйте замість цього властивість group. Дивіться також примітки до випуску 1.14.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.label">
+        <source xml:lang="en">The task's user interface label</source>
+        <target>Мітка інтерфейсу користувача завдання</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.matchers">
+        <source xml:lang="en">The problem matcher(s) to use. Can either be a string or a problem matcher definition or an array of strings and problem matchers.</source>
+        <target>Проблемний матчер(и), які потрібно використовувати. Може бути або рядком, або визначенням проблемного матчера, або масивом рядків і проблемних матчерів.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.presentation">
+        <source xml:lang="en">Configures the panel that is used to present the task's output and reads its input.</source>
+        <target>Налаштовує панель, яка використовується для представлення виходу завдання та зчитує його вхід.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.presentation.clear">
+        <source xml:lang="en">Controls whether the terminal is cleared before executing the task.</source>
+        <target>Контролює, чи очищується термінал перед виконанням завдання.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.presentation.close">
+        <source xml:lang="en">Controls whether the terminal the task runs in is closed when the task exits.</source>
+        <target>Контролює, чи закривається термінал, у якому виконується завдання, коли завдання завершується.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.presentation.echo">
+        <source xml:lang="en">Controls whether the executed command is echoed to the panel. Default is true.</source>
+        <target>Контролює, чи виконана команда відображається на панелі. За замовчуванням - true.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.presentation.focus">
+        <source xml:lang="en">Controls whether the panel takes focus. Default is false. If set to true the panel is revealed as well.</source>
+        <target>Контролює, чи панель отримує фокус. За замовчуванням - false. Якщо встановлено true, панель також буде показана.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.presentation.group">
+        <source xml:lang="en">Controls whether the task is executed in a specific terminal group using split panes.</source>
+        <target>Контролює, чи виконується завдання в конкретній групі терміналів, використовуючи розділені панелі.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.presentation.instance">
+        <source xml:lang="en">Controls if the panel is shared between tasks, dedicated to this task or a new one is created on every run.</source>
+        <target>Контролює, чи панель спільна між завданнями, присвячена цьому завданню, чи нова створюється при кожному запуску.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.presentation.reveal">
+        <source xml:lang="en">Controls whether the terminal running the task is revealed or not. May be overridden by option "revealProblems". Default is "always".</source>
+        <target>Контролює, чи термінал, що виконує завдання, буде показаний чи ні. Може бути переважений опцією "revealProblems". За замовчуванням - "завжди".</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.presentation.reveal.always">
+        <source xml:lang="en">Always reveals the terminal when this task is executed.</source>
+        <target>Завжди відкриває термінал, коли це завдання виконується.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.presentation.reveal.never">
+        <source xml:lang="en">Never reveals the terminal when this task is executed.</source>
+        <target>Ніколи не розкриває термінал, коли це завдання виконується.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.presentation.reveal.silent">
+        <source xml:lang="en">Only reveals the terminal if the task exits with an error or the problem matcher finds an error.</source>
+        <target>Відображає термінал лише якщо задача завершилася з помилкою або матчер проблем знайшов помилку.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.presentation.revealProblems">
+        <source xml:lang="en">Controls whether the problems panel is revealed when running this task or not. Takes precedence over option "reveal". Default is "never".</source>
+        <target>Контролює, чи панель проблем відображається під час виконання цього завдання, чи ні. Має пріоритет над опцією "reveal". За замовчуванням - "never".</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.presentation.revealProblems.always">
+        <source xml:lang="en">Always reveals the problems panel when this task is executed.</source>
+        <target>Завжди відкриває панель проблем, коли це завдання виконується.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.presentation.revealProblems.never">
+        <source xml:lang="en">Never reveals the problems panel when this task is executed.</source>
+        <target>Ніколи не показує панель проблем, коли це завдання виконується.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.presentation.revealProblems.onProblem">
+        <source xml:lang="en">Only reveals the problems panel if a problem is found.</source>
+        <target>Відображає панель проблем лише у разі виявлення проблеми.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.presentation.showReuseMessage">
+        <source xml:lang="en">Controls whether to show the `Terminal will be reused by tasks, press any key to close it` message.</source>
+        <target>Контролює, чи показувати повідомлення `Термінал буде повторно використано завданнями, натисніть будь-яку клавішу, щоб закрити його`.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.promptOnClose">
+        <source xml:lang="en">Whether the user is prompted when VS Code closes with a running task.</source>
+        <target>Чи з'являється запит до користувача, коли VS Code закривається з активним завданням.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.quoting.escape">
+        <source xml:lang="en">Escapes characters using the shell's escape character (e.g. ` under PowerShell and \ under bash).</source>
+        <target>Екранує символи, використовуючи символ екранування оболонки (наприклад, ` під PowerShell та \ під bash).</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.quoting.strong">
+        <source xml:lang="en">Quotes the argument using the shell's strong quote character (e.g. ' under PowerShell and bash).</source>
+        <target>Цитує аргумент, використовуючи символ сильного цитування оболонки (наприклад, ' під PowerShell та bash).</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.quoting.weak">
+        <source xml:lang="en">Quotes the argument using the shell's weak quote character (e.g. " under PowerShell and bash).</source>
+        <target>Цитує аргумент, використовуючи слабкий символ цитування оболонки (наприклад, " під PowerShell та bash).</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.reevaluateOnRerun">
+        <source xml:lang="en">Whether to reevaluate task variables on rerun.</source>
+        <target>Чи потрібно переоцінювати змінні завдання при повторному запуску.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.runOn">
+        <source xml:lang="en">Configures when the task should be run. If set to folderOpen, then the task will be run automatically when the folder is opened.</source>
+        <target>Налаштовує, коли завдання має бути виконано. Якщо встановлено на folderOpen, то завдання буде виконано автоматично, коли папка буде відкрита.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.runOptions">
+        <source xml:lang="en">The task's run related options</source>
+        <target>Параметри виконання завдання</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.showOutput.deprecated">
+        <source xml:lang="en">The property showOutput is deprecated. Use the reveal property inside the presentation property instead. See also the 1.14 release notes.</source>
+        <target>Властивість showOutput застаріла. Замість цього використовуйте властивість reveal всередині властивості presentation. Дивіться також примітки до випуску 1.14.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.suppressTaskName.deprecated">
+        <source xml:lang="en">The property suppressTaskName is deprecated. Inline the command with its arguments into the task instead. See also the 1.14 release notes.</source>
+        <target>Властивість suppressTaskName застаріла. Включіть команду з її аргументами безпосередньо в завдання. Дивіться також примітки до випуску 1.14.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.taskLabel">
+        <source xml:lang="en">The task's label</source>
+        <target>Мітка завдання</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.taskName">
+        <source xml:lang="en">The task's name</source>
+        <target>Назва завдання</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.taskName.deprecated">
+        <source xml:lang="en">The task's name property is deprecated. Use the label property instead.</source>
+        <target>Властивість name завдання застаріла. Використовуйте замість неї властивість label.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.taskSelector.deprecated">
+        <source xml:lang="en">The property taskSelector is deprecated. Inline the command with its arguments into the task instead. See also the 1.14 release notes.</source>
+        <target>Властивість taskSelector застаріла. Включіть команду з її аргументами безпосередньо в задачу. Дивіться також примітки до випуску 1.14.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.terminal">
+        <source xml:lang="en">The terminal property is deprecated. Use presentation instead</source>
+        <target>Властивість terminal застаріла. Використовуйте замість цього presentation.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.type">
+        <source xml:lang="en">Defines whether the task is run as a process or as a command inside a shell.</source>
+        <target>Визначає, чи виконується завдання як процес або як команда всередині оболонки.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.version">
+        <source xml:lang="en">The config's version number.</source>
+        <target>Номер версії конфігурації</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.windows">
+        <source xml:lang="en">Windows specific command configuration</source>
+        <target>Конфігурація команд, специфічних для Windows</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/tasks/common/problemMatcher" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="LegacyProblemMatcherSchema.watchedBegin">
+        <source xml:lang="en">A regular expression signaling that a watched tasks begins executing triggered through file watching.</source>
+        <target>Регулярний вираз, що сигналізує про початок виконання спостережуваного завдання, яке було ініційовано через моніторинг файлів.</target>
+      </trans-unit>
+      <trans-unit id="LegacyProblemMatcherSchema.watchedBegin.deprecated">
+        <source xml:lang="en">This property is deprecated. Use the watching property instead.</source>
+        <target>Ця властивість застаріла. Замість цього використовуйте властивість watching.</target>
+      </trans-unit>
+      <trans-unit id="LegacyProblemMatcherSchema.watchedEnd">
+        <source xml:lang="en">A regular expression signaling that a watched tasks ends executing.</source>
+        <target>Регулярний вираз, що сигналізує про завершення виконання спостережуваного завдання.</target>
+      </trans-unit>
+      <trans-unit id="LegacyProblemMatcherSchema.watchedEnd.deprecated">
+        <source xml:lang="en">This property is deprecated. Use the watching property instead.</source>
+        <target>Ця властивість застаріла. Замість цього використовуйте властивість watching.</target>
+      </trans-unit>
+      <trans-unit id="NamedMultiLineProblemPatternSchema.name">
+        <source xml:lang="en">The name of the problem multi line problem pattern.</source>
+        <target>Назва проблеми - шаблон багаторядкової проблеми.</target>
+      </trans-unit>
+      <trans-unit id="NamedMultiLineProblemPatternSchema.patterns">
+        <source xml:lang="en">The actual patterns.</source>
+        <target>Фактичні шаблони.</target>
+      </trans-unit>
+      <trans-unit id="NamedProblemMatcherSchema.label">
+        <source xml:lang="en">A human readable label of the problem matcher.</source>
+        <target>Людсько зрозуміла мітка для матчера проблем.</target>
+      </trans-unit>
+      <trans-unit id="NamedProblemMatcherSchema.name">
+        <source xml:lang="en">The name of the problem matcher used to refer to it.</source>
+        <target>Назва засобу для співставлення проблем, що використовується для його позначення.</target>
+      </trans-unit>
+      <trans-unit id="NamedProblemPatternSchema.name">
+        <source xml:lang="en">The name of the problem pattern.</source>
+        <target>Назва шаблону проблеми.</target>
+      </trans-unit>
+      <trans-unit id="PatternTypeSchema.description">
+        <source xml:lang="en">A problem pattern or the name of a contributed or predefined problem pattern. Can be omitted if base is specified.</source>
+        <target>Шаблон проблеми або назва внесеного чи заздалегідь визначеного шаблону проблеми. Може бути пропущено, якщо вказано базу.</target>
+      </trans-unit>
+      <trans-unit id="PatternTypeSchema.name">
+        <source xml:lang="en">The name of a contributed or predefined pattern</source>
+        <target>Назва внесеного або попередньо визначеного шаблону</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherExtPoint">
+        <source xml:lang="en">Contributes problem matchers</source>
+        <target>Сприяє відповідникам проблем</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherParser.invalidRegexp">
+        <source xml:lang="en">Error: The string {0} is not a valid regular expression.
+</source>
+        <target>Помилка: Рядок {0} не є дійсним регулярним виразом.</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherParser.noDefinedPatter">
+        <source xml:lang="en">Error: the pattern with the identifier {0} doesn't exist.</source>
+        <target>Помилка: шаблон з ідентифікатором {0} не існує.</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherParser.noFileLocation">
+        <source xml:lang="en">Error: the description doesn't define a file location:
+{0}
+</source>
+        <target>Помилка: опис не визначає місцезнаходження файлу:
+{0}
+</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherParser.noIdentifier">
+        <source xml:lang="en">Error: the pattern property refers to an empty identifier.</source>
+        <target>Помилка: властивість шаблону посилається на порожній ідентифікатор.</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherParser.noOwner">
+        <source xml:lang="en">Error: the description doesn't define an owner:
+{0}
+</source>
+        <target>Помилка: опис не визначає власника: {0}</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherParser.noProblemMatcher">
+        <source xml:lang="en">Error: the description can't be converted into a problem matcher:
+{0}
+</source>
+        <target>Помилка: опис не може бути перетворений на відповідник проблеми: {0}</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherParser.noProblemPattern">
+        <source xml:lang="en">Error: the description doesn't define a valid problem pattern:
+{0}
+</source>
+        <target>Помилка: опис не визначає дійсний шаблон проблеми: {0}</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherParser.noValidIdentifier">
+        <source xml:lang="en">Error: the pattern property {0} is not a valid pattern variable name.</source>
+        <target>Помилка: властивість шаблону {0} не є дійсною назвою змінної шаблону.</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherParser.problemPattern.watchingMatcher">
+        <source xml:lang="en">A problem matcher must define both a begin pattern and an end pattern for watching.</source>
+        <target>Модуль визначення проблеми повинен визначити як початковий шаблон, так і кінцевий шаблон для спостереження.</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherParser.unknownSeverity">
+        <source xml:lang="en">Info: unknown severity {0}. Valid values are error, warning and info.
+</source>
+        <target>Інформація: невідома серйозність {0}. Дійсні значення: помилка, попередження та інформація.</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherSchema.applyTo">
+        <source xml:lang="en">Controls if a problem reported on a text document is applied only to open, closed or all documents.</source>
+        <target>Контролює, чи проблема, що повідомляється в текстовому документі, стосується лише відкритих, закритих чи всіх документів.</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherSchema.background">
+        <source xml:lang="en">Patterns to track the begin and end of a matcher active on a background task.</source>
+        <target>Шаблони для відстеження початку та закінчення роботи матчера, активного на фоні.</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherSchema.background.activeOnStart">
+        <source xml:lang="en">If set to true the background monitor starts in active mode. This is the same as outputting a line that matches beginsPattern when the task starts.</source>
+        <target>Якщо встановлено значення true, монітор фону починає працювати в активному режимі. Це те саме, що й виведення рядка, який відповідає beginsPattern, коли завдання починається.</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherSchema.background.beginsPattern">
+        <source xml:lang="en">If matched in the output the start of a background task is signaled.</source>
+        <target>Якщо вивід збігається, сигналізується про початок фонової задачі.</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherSchema.background.endsPattern">
+        <source xml:lang="en">If matched in the output the end of a background task is signaled.</source>
+        <target>Якщо вивід збігається, сигналізується про завершення фонової задачі.</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherSchema.base">
+        <source xml:lang="en">The name of a base problem matcher to use.</source>
+        <target>Назва базового матчера проблем, який потрібно використовувати.</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherSchema.fileLocation">
+        <source xml:lang="en">Defines how file names reported in a problem pattern should be interpreted. A relative fileLocation may be an array, where the second element of the array is the path of the relative file location. The search fileLocation mode, performs a deep (and, possibly, heavy) file system search within the directories specified by the include/exclude properties of the second element (or the current workspace directory if not specified).</source>
+        <target>Визначає, як імена файлів, що повідомляються в шаблоні проблеми, повинні інтерпретуватися. Відносний fileLocation може бути масивом, де другим елементом масиву є шлях відносного розташування файлу. Режим пошуку fileLocation виконує глибокий (і, можливо, важкий) пошук у файловій системі в межах каталогів, зазначених властивостями include/exclude другого елемента (або поточного робочого каталогу, якщо не вказано).</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherSchema.owner">
+        <source xml:lang="en">The owner of the problem inside Code. Can be omitted if base is specified. Defaults to 'external' if omitted and base is not specified.</source>
+        <target>Власник проблеми всередині коду. Може бути пропущено, якщо вказано базу. За замовчуванням 'external', якщо пропущено і база не вказана.</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherSchema.severity">
+        <source xml:lang="en">The default severity for captures problems. Is used if the pattern doesn't define a match group for severity.</source>
+        <target>За замовчуванням, серйозність для захоплень проблем. Використовується, якщо шаблон не визначає групу збігу для серйозності.</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherSchema.source">
+        <source xml:lang="en">A human-readable string describing the source of this diagnostic, e.g. 'typescript' or 'super lint'.</source>
+        <target>Людсько зрозумілий рядок, що описує джерело цього діагностичного повідомлення, наприклад, 'typescript' або 'super lint'.</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherSchema.watching">
+        <source xml:lang="en">Patterns to track the begin and end of a watching matcher.</source>
+        <target>Шаблони для відстеження початку та закінчення спостерігача.</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherSchema.watching.activeOnStart">
+        <source xml:lang="en">If set to true the watcher starts in active mode. This is the same as outputting a line that matches beginsPattern when the task starts.</source>
+        <target>Якщо встановлено в true, спостерігач починає в активному режимі. Це те саме, що виводити рядок, який відповідає beginsPattern, коли завдання починається.</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherSchema.watching.beginsPattern">
+        <source xml:lang="en">If matched in the output the start of a watching task is signaled.</source>
+        <target>Якщо вивід збігається, початок завдання спостереження сигналізується.</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherSchema.watching.deprecated">
+        <source xml:lang="en">The watching property is deprecated. Use background instead.</source>
+        <target>Властивість watching застаріла. Використовуйте замість цього background.</target>
+      </trans-unit>
+      <trans-unit id="ProblemMatcherSchema.watching.endsPattern">
+        <source xml:lang="en">If matched in the output the end of a watching task is signaled.</source>
+        <target>Якщо виведення збігається, сигналізується про завершення завдання спостереження.</target>
+      </trans-unit>
+      <trans-unit id="ProblemPatternExtPoint">
+        <source xml:lang="en">Contributes problem patterns</source>
+        <target>Сприяє проблемним патернам</target>
+      </trans-unit>
+      <trans-unit id="ProblemPatternParser.invalidRegexp">
+        <source xml:lang="en">Error: The string {0} is not a valid regular expression.
+</source>
+        <target>Помилка: Рядок {0} не є дійсним регулярним виразом.</target>
+      </trans-unit>
+      <trans-unit id="ProblemPatternParser.loopProperty.notLast">
+        <source xml:lang="en">The loop property is only supported on the last line matcher.</source>
+        <target>Властивість циклу підтримується лише на останньому рядковому матчері.</target>
+      </trans-unit>
+      <trans-unit id="ProblemPatternParser.problemPattern.kindProperty.notFirst">
+        <source xml:lang="en">The problem pattern is invalid. The kind property must be provided only in the first element</source>
+        <target>Шаблон проблеми недійсний. Властивість kind повинна бути надана лише в першому елементі.</target>
+      </trans-unit>
+      <trans-unit id="ProblemPatternParser.problemPattern.missingLocation">
+        <source xml:lang="en">The problem pattern is invalid. It must either have kind: "file" or have a line or location match group.</source>
+        <target>Шаблон проблеми недійсний. Він повинен мати або kind: "file", або мати групу збігу рядка чи місця.</target>
+      </trans-unit>
+      <trans-unit id="ProblemPatternParser.problemPattern.missingProperty">
+        <source xml:lang="en">The problem pattern is invalid. It must have at least have a file and a message.</source>
+        <target>Шаблон проблеми недійсний. Він повинен мати принаймні файл і повідомлення.</target>
+      </trans-unit>
+      <trans-unit id="ProblemPatternParser.problemPattern.missingRegExp">
+        <source xml:lang="en">The problem pattern is missing a regular expression.</source>
+        <target>Шаблон проблеми не містить регулярного виразу.</target>
+      </trans-unit>
+      <trans-unit id="ProblemPatternRegistry.error">
+        <source xml:lang="en">Invalid problem pattern. The pattern will be ignored.</source>
+        <target>Недійсний шаблон проблеми. Шаблон буде проігноровано.</target>
+      </trans-unit>
+      <trans-unit id="ProblemPatternSchema.code">
+        <source xml:lang="en">The match group index of the problem's code. Defaults to undefined</source>
+        <target>Індекс групи збігів коду проблеми. За замовчуванням невизначений</target>
+      </trans-unit>
+      <trans-unit id="ProblemPatternSchema.column">
+        <source xml:lang="en">The match group index of the problem's line character. Defaults to 3</source>
+        <target>Індекс групи збігів символу рядка проблеми. За замовчуванням 3</target>
+      </trans-unit>
+      <trans-unit id="ProblemPatternSchema.endColumn">
+        <source xml:lang="en">The match group index of the problem's end line character. Defaults to undefined</source>
+        <target>Індекс групи збігів символу кінцевого рядка проблеми. За замовчуванням невизначено</target>
+      </trans-unit>
+      <trans-unit id="ProblemPatternSchema.endLine">
+        <source xml:lang="en">The match group index of the problem's end line. Defaults to undefined</source>
+        <target>Індекс групи збігів кінцевого рядка проблеми. За замовчуванням - невизначено</target>
+      </trans-unit>
+      <trans-unit id="ProblemPatternSchema.file">
+        <source xml:lang="en">The match group index of the filename. If omitted 1 is used.</source>
+        <target>Індекс групи збігів імені файлу. Якщо пропущено, використовується 1.</target>
+      </trans-unit>
+      <trans-unit id="ProblemPatternSchema.kind">
+        <source xml:lang="en">whether the pattern matches a location (file and line) or only a file.</source>
+        <target>чи шаблон відповідає місцезнаходженню (файл та рядок) або лише файлу.</target>
+      </trans-unit>
+      <trans-unit id="ProblemPatternSchema.line">
+        <source xml:lang="en">The match group index of the problem's line. Defaults to 2</source>
+        <target>Індекс групи збігів рядка проблеми. За замовчуванням 2</target>
+      </trans-unit>
+      <trans-unit id="ProblemPatternSchema.location">
+        <source xml:lang="en">The match group index of the problem's location. Valid location patterns are: (line), (line,column) and (startLine,startColumn,endLine,endColumn). If omitted (line,column) is assumed.</source>
+        <target>Індекс групи збігів місця розташування проблеми. Дійсні шаблони місця розташування: (рядок), (рядок,стовпець) та (початковийРядок,початковийСтовпець,кінцевийРядок,кінцевийСтовпець). Якщо пропущено, вважається (рядок,стовпець).</target>
+      </trans-unit>
+      <trans-unit id="ProblemPatternSchema.loop">
+        <source xml:lang="en">In a multi line matcher loop indicated whether this pattern is executed in a loop as long as it matches. Can only specified on a last pattern in a multi line pattern.</source>
+        <target>У циклі відповідності з кількома рядками вказується, чи виконується цей шаблон у циклі, поки він відповідає. Може бути вказано лише для останнього шаблону в багаторядковому шаблоні.</target>
+      </trans-unit>
+      <trans-unit id="ProblemPatternSchema.message">
+        <source xml:lang="en">The match group index of the message. If omitted it defaults to 4 if location is specified. Otherwise it defaults to 5.</source>
+        <target>Індекс групи збігів повідомлення. Якщо пропущено, за замовчуванням він дорівнює 4, якщо вказано місцезнаходження. В іншому випадку за замовчуванням він дорівнює 5.</target>
+      </trans-unit>
+      <trans-unit id="ProblemPatternSchema.regexp">
+        <source xml:lang="en">The regular expression to find an error, warning or info in the output.</source>
+        <target>Регулярний вираз для знаходження помилки, попередження або інформації в виході.</target>
+      </trans-unit>
+      <trans-unit id="ProblemPatternSchema.severity">
+        <source xml:lang="en">The match group index of the problem's severity. Defaults to undefined</source>
+        <target>Індекс групи збігів тяжкості проблеми. За замовчуванням невизначено</target>
+      </trans-unit>
+      <trans-unit id="WatchingPatternSchema.file">
+        <source xml:lang="en">The match group index of the filename. Can be omitted.</source>
+        <target>Індекс групи збігів імені файлу. Може бути пропущено.</target>
+      </trans-unit>
+      <trans-unit id="WatchingPatternSchema.regexp">
+        <source xml:lang="en">The regular expression to detect the begin or end of a background task.</source>
+        <target>Регулярний вираз для виявлення початку або завершення фонової задачі.</target>
+      </trans-unit>
+      <trans-unit id="eslint-compact">
+        <source xml:lang="en">ESLint compact problems</source>
+        <target>Проблеми ESLint компактно</target>
+      </trans-unit>
+      <trans-unit id="eslint-stylish">
+        <source xml:lang="en">ESLint stylish problems</source>
+        <target>Проблеми ESLint stylish</target>
+      </trans-unit>
+      <trans-unit id="go">
+        <source xml:lang="en">Go problems</source>
+        <target>Проблеми з Go</target>
+      </trans-unit>
+      <trans-unit id="gulp-tsc">
+        <source xml:lang="en">Gulp TSC Problems</source>
+        <target>Gulp TSC Проблеми</target>
+      </trans-unit>
+      <trans-unit id="jshint">
+        <source xml:lang="en">JSHint problems</source>
+        <target>Проблеми JSHint</target>
+      </trans-unit>
+      <trans-unit id="jshint-stylish">
+        <source xml:lang="en">JSHint stylish problems</source>
+        <target>Проблеми JSHint stylish</target>
+      </trans-unit>
+      <trans-unit id="lessCompile">
+        <source xml:lang="en">Less problems</source>
+        <target>Менше проблем</target>
+      </trans-unit>
+      <trans-unit id="msCompile">
+        <source xml:lang="en">Microsoft compiler problems</source>
+        <target>Проблеми компілятора Microsoft</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/tasks/common/taskConfiguration" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="ConfigurationParser.inValidArg">
+        <source xml:lang="en">Error: command argument must either be a string or a quoted string. Provided value is:
+{0}</source>
+        <target>Помилка: аргумент команди має бути або рядком, або рядком у лапках. Надане значення: {0}</target>
+      </trans-unit>
+      <trans-unit id="ConfigurationParser.incorrectType">
+        <source xml:lang="en">Error: the task configuration '{0}' is using an unknown type. The task configuration will be ignored.</source>
+        <target>Помилка: конфігурація завдання '{0}' використовує невідомий тип. Конфігурацію завдання буде проігноровано.</target>
+      </trans-unit>
+      <trans-unit id="ConfigurationParser.invalidCWD">
+        <source xml:lang="en">Warning: options.cwd must be of type string. Ignoring value {0}
+</source>
+        <target>Попередження: options.cwd має бути типу рядок. Ігноруємо значення {0}</target>
+      </trans-unit>
+      <trans-unit id="ConfigurationParser.invalidVariableReference">
+        <source xml:lang="en">Error: Invalid problemMatcher reference: {0}
+</source>
+        <target>Помилка: Неправильне посилання на problemMatcher: {0}</target>
+      </trans-unit>
+      <trans-unit id="ConfigurationParser.missingType">
+        <source xml:lang="en">Error: the task configuration '{0}' is missing the required property 'type'. The task configuration will be ignored.</source>
+        <target>Помилка: конфігурація завдання '{0}' не містить обов'язкову властивість 'type'. Конфігурація завдання буде проігнорована.</target>
+      </trans-unit>
+      <trans-unit id="ConfigurationParser.noName">
+        <source xml:lang="en">Error: Problem Matcher in declare scope must have a name:
+{0}
+</source>
+        <target>Помилка: Проблемний матчер у декларативному контексті повинен мати ім'я: 
+{0}
+</target>
+      </trans-unit>
+      <trans-unit id="ConfigurationParser.noShell">
+        <source xml:lang="en">Warning: shell configuration is only supported when executing tasks in the terminal.</source>
+        <target>Увага: конфігурація оболонки підтримується лише під час виконання завдань у терміналі.</target>
+      </trans-unit>
+      <trans-unit id="ConfigurationParser.noTaskName">
+        <source xml:lang="en">Error: a task must provide a label property. The task will be ignored.
+{0}
+</source>
+        <target>Помилка: завдання повинно надавати властивість мітки. Завдання буде проігноровано.  
+{0}</target>
+      </trans-unit>
+      <trans-unit id="ConfigurationParser.noTaskType">
+        <source xml:lang="en">Error: tasks configuration must have a type property. The configuration will be ignored.
+{0}
+</source>
+        <target>Помилка: конфігурація завдань повинна мати властивість типу. Конфігурація буде ігноруватися.  
+{0}</target>
+      </trans-unit>
+      <trans-unit id="ConfigurationParser.noTypeDefinition">
+        <source xml:lang="en">Error: there is no registered task type '{0}'. Did you miss installing an extension that provides a corresponding task provider?</source>
+        <target>Помилка: не зареєстровано тип завдання '{0}'. Ви пропустили встановлення розширення, яке надає відповідного постачальника завдань?</target>
+      </trans-unit>
+      <trans-unit id="ConfigurationParser.notCustom">
+        <source xml:lang="en">Error: tasks is not declared as a custom task. The configuration will be ignored.
+{0}
+</source>
+        <target>Помилка: tasks не оголошено як користувацьке завдання. Конфігурація буде проігнорована.  
+{0}</target>
+      </trans-unit>
+      <trans-unit id="ConfigurationParser.unknownMatcherKind">
+        <source xml:lang="en">Warning: the defined problem matcher is unknown. Supported types are string | ProblemMatcher | Array&lt;string | ProblemMatcher&gt;.
+{0}
+</source>
+        <target>Попередження: визначений матчер проблеми невідомий. Підтримувані типи: рядок | ProblemMatcher | Масив&lt;рядок | ProblemMatcher&gt;.
+{0}</target>
+      </trans-unit>
+      <trans-unit id="TaskParse.noOsSpecificGlobalTasks">
+        <source xml:lang="en">Task version 2.0.0 doesn't support global OS specific tasks. Convert them to a task with a OS specific command. Affected tasks are:
+{0}</source>
+        <note>"Task version 2.0.0" refers to the 2.0.0 version of the task system. The "version 2.0.0" is not localizable as it is a json key and value.</note>
+        <target>Версія завдання 2.0.0 не підтримує глобальні завдання, специфічні для ОС. Перетворіть їх на завдання з командою, специфічною для ОС. Підлягають змінам завдання:
+{0}</target>
+      </trans-unit>
+      <trans-unit id="taskConfiguration.noCommand">
+        <source xml:lang="en">Error: the task '{0}' doesn't define a command. The task will be ignored. Its definition is:
+{1}</source>
+        <target>Помилка: завдання '{0}' не визначає команду. Завдання буде проігноровано. Його визначення таке:
+{1}</target>
+      </trans-unit>
+      <trans-unit id="taskConfiguration.noCommandOrDependsOn">
+        <source xml:lang="en">Error: the task '{0}' neither specifies a command nor a dependsOn property. The task will be ignored. Its definition is:
+{1}</source>
+        <target>Помилка: завдання '{0}' не вказує ні команду, ні властивість dependsOn. Завдання буде проігноровано. Його визначення:
+{1}</target>
+      </trans-unit>
+      <trans-unit id="taskConfiguration.providerUnavailable">
+        <source xml:lang="en">Warning: {0} tasks are unavailable in the current environment.
+</source>
+        <target>Попередження: {0} завдань недоступні в поточному середовищі.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/tasks/common/taskDefinitionRegistry" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="TaskDefinition.description">
+        <source xml:lang="en">The actual task type. Please note that types starting with a '$' are reserved for internal usage.</source>
+        <target>Фактичний тип завдання. Зверніть увагу, що типи, які починаються з '$', зарезервовані для внутрішнього використання.</target>
+      </trans-unit>
+      <trans-unit id="TaskDefinition.properties">
+        <source xml:lang="en">Additional properties of the task type</source>
+        <target>Додаткові властивості типу завдання</target>
+      </trans-unit>
+      <trans-unit id="TaskDefinition.when">
+        <source xml:lang="en">Condition which must be true to enable this type of task. Consider using `shellExecutionSupported`, `processExecutionSupported`, and `customExecutionSupported` as appropriate for this task definition. See the [API documentation](https://code.visualstudio.com/api/extension-guides/task-provider#when-clause) for more information.</source>
+        <target>Умова, яка повинна бути істинною, щоб активувати цей тип завдання. Розгляньте можливість використання `shellExecutionSupported`, `processExecutionSupported` та `customExecutionSupported` відповідно до визначення цього завдання. Дивіться [документацію API](https://code.visualstudio.com/api/extension-guides/task-provider#when-clause) для отримання додаткової інформації.</target>
+      </trans-unit>
+      <trans-unit id="TaskDefinitionExtPoint">
+        <source xml:lang="en">Contributes task kinds</source>
+        <target>Сприяє видам завдань</target>
+      </trans-unit>
+      <trans-unit id="TaskTypeConfiguration.noType">
+        <source xml:lang="en">The task type configuration is missing the required 'taskType' property</source>
+        <target>Конфігурація типу завдання не містить обов'язкову властивість 'taskType'</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/tasks/common/taskService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="tasks.customExecutionSupported">
+        <source xml:lang="en">Whether CustomExecution tasks are supported. Consider using in the when clause of a 'taskDefinition' contribution.</source>
+        <target>Чи підтримуються завдання CustomExecution. Розгляньте можливість використання в умові when внесення 'taskDefinition'.</target>
+      </trans-unit>
+      <trans-unit id="tasks.processExecutionSupported">
+        <source xml:lang="en">Whether ProcessExecution tasks are supported. Consider using in the when clause of a 'taskDefinition' contribution.</source>
+        <target>Чи підтримуються завдання ProcessExecution. Розгляньте можливість використання в умовному виразі 'taskDefinition' внеску.</target>
+      </trans-unit>
+      <trans-unit id="tasks.serverlessWebContext">
+        <source xml:lang="en">True when in the web with no remote authority.</source>
+        <target>Істинно, коли в мережі без віддаленої авторитетності.</target>
+      </trans-unit>
+      <trans-unit id="tasks.shellExecutionSupported">
+        <source xml:lang="en">Whether ShellExecution tasks are supported. Consider using in the when clause of a 'taskDefinition' contribution.</source>
+        <target>Чи підтримуються завдання ShellExecution. Розгляньте можливість використання в умові when внесення 'taskDefinition'.</target>
+      </trans-unit>
+      <trans-unit id="tasks.taskCommandsRegistered">
+        <source xml:lang="en">Whether the task commands have been registered yet</source>
+        <target>Чи були вже зареєстровані команди завдання</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/tasks/common/taskTemplates" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="Maven">
+        <source xml:lang="en">Executes common maven commands</source>
+        <target>Виконує загальні команди maven</target>
+      </trans-unit>
+      <trans-unit id="dotnetCore">
+        <source xml:lang="en">Executes .NET Core build command</source>
+        <target>Виконує команду збірки .NET Core</target>
+      </trans-unit>
+      <trans-unit id="externalCommand">
+        <source xml:lang="en">Example to run an arbitrary external command</source>
+        <target>Приклад виконання довільної зовнішньої команди</target>
+      </trans-unit>
+      <trans-unit id="msbuild">
+        <source xml:lang="en">Executes the build target</source>
+        <target>Виконує ціль збірки</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/tasks/common/tasks" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="TaskDefinition.missingRequiredProperty">
+        <source xml:lang="en">Error: the task identifier '{0}' is missing the required property '{1}'. The task identifier will be ignored.</source>
+        <target>Помилка: ідентифікатор задачі '{0}' не має обов'язкової властивості '{1}'. Ідентифікатор задачі буде проігноровано.</target>
+      </trans-unit>
+      <trans-unit id="taskTerminalActive">
+        <source xml:lang="en">Whether the active terminal is a task terminal.</source>
+        <target>Чи є активний термінал терміналом завдань.</target>
+      </trans-unit>
+      <trans-unit id="tasks.taskRunningContext">
+        <source xml:lang="en">Whether a task is currently running.</source>
+        <target>Чи виконується завдання в даний момент.</target>
+      </trans-unit>
+      <trans-unit id="tasksCategory">
+        <source xml:lang="en">Tasks</source>
+        <target>Завдання</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/tasks/electron-sandbox/taskService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="TaskSystem.exitAnyways">
+        <source xml:lang="en">&amp;&amp;Exit Anyways</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Вихід у будь-якому випадку</target>
+      </trans-unit>
+      <trans-unit id="TaskSystem.noProcess">
+        <source xml:lang="en">The launched task doesn't exist anymore. If the task spawned background processes exiting VS Code might result in orphaned processes. To avoid this start the last background process with a wait flag.</source>
+        <target>Запущене завдання більше не існує. Якщо завдання створило фонові процеси, вихід з VS Code може призвести до залишкових процесів. Щоб уникнути цього, запустіть останній фоновий процес з прапором очікування.</target>
+      </trans-unit>
+      <trans-unit id="TaskSystem.runningTask">
+        <source xml:lang="en">There is a task running. Do you want to terminate it?</source>
+        <target>Є задача, що виконується. Ви хочете її завершити?</target>
+      </trans-unit>
+      <trans-unit id="TaskSystem.terminateTask">
+        <source xml:lang="en">&amp;&amp;Terminate Task</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Завершити завдання</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

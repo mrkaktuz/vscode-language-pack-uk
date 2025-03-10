@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/services/extensions/browser/extensionUrlHandler" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="confirmUrl">
+        <source xml:lang="en">Allow '{0}' extension to open this URI?</source>
+        <target>Дозволити розширенню '{0}' відкрити цей URI?</target>
+      </trans-unit>
+      <trans-unit id="extensions">
+        <source xml:lang="en">Extensions</source>
+        <target>Розширення</target>
+      </trans-unit>
+      <trans-unit id="installDetail">
+        <source xml:lang="en">This extension wants to open a URI:</source>
+        <target>Ця розширення хоче відкрити URI:</target>
+      </trans-unit>
+      <trans-unit id="manage">
+        <source xml:lang="en">Manage Authorized Extension URIs...</source>
+        <target>Керувати авторизованими URI розширень...</target>
+      </trans-unit>
+      <trans-unit id="no">
+        <source xml:lang="en">There are currently no authorized extension URIs.</source>
+        <target>Наразі немає авторизованих URI розширень.</target>
+      </trans-unit>
+      <trans-unit id="open">
+        <source xml:lang="en">&amp;&amp;Open</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Відкрити</target>
+      </trans-unit>
+      <trans-unit id="openUri">
+        <source xml:lang="en">Open URI</source>
+        <target>Відкрити URI</target>
+      </trans-unit>
+      <trans-unit id="reloadAndHandle">
+        <source xml:lang="en">Extension '{0}' is not loaded. Would you like to reload the window to load the extension and open the URL?</source>
+        <target>Розширення '{0}' не завантажене. Бажаєте перезавантажити вікно, щоб завантажити розширення та відкрити URL?</target>
+      </trans-unit>
+      <trans-unit id="reloadAndOpen">
+        <source xml:lang="en">&amp;&amp;Reload Window and Open</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Перезавантажити вікно та відкрити</target>
+      </trans-unit>
+      <trans-unit id="rememberConfirmUrl">
+        <source xml:lang="en">Do not ask me again for this extension</source>
+        <target>Не запитуй мене знову про це розширення</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/services/extensions/common/abstractExtensionService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="activation">
+        <source xml:lang="en">Activation Events</source>
+        <target>Події активації</target>
+      </trans-unit>
+      <trans-unit id="disconnectRemote">
+        <source xml:lang="en">Disconnect Remote Agent</source>
+        <target>Відключити віддалений агент</target>
+      </trans-unit>
+      <trans-unit id="extensionService.autoRestart">
+        <source xml:lang="en">The remote extension host terminated unexpectedly. Restarting...</source>
+        <target>Віддалений хост розширення несподівано завершив роботу. Перезапуск...</target>
+      </trans-unit>
+      <trans-unit id="extensionService.crash">
+        <source xml:lang="en">Remote Extension host terminated unexpectedly 3 times within the last 5 minutes.</source>
+        <target>Віддалений хост розширення несподівано завершив роботу 3 рази за останні 5 хвилин.</target>
+      </trans-unit>
+      <trans-unit id="extensionStopVetoError">
+        <source xml:lang="en">{0} (Error: {1})</source>
+        <target>{0} (Помилка: {1})</target>
+      </trans-unit>
+      <trans-unit id="extensionStopVetoMessage">
+        <source xml:lang="en">Please confirm restart of extensions.</source>
+        <target>Будь ласка, підтвердіть перезапуск розширень.</target>
+      </trans-unit>
+      <trans-unit id="extensionTestError">
+        <source xml:lang="en">No extension host found that can launch the test runner at {0}.</source>
+        <target>Не знайдено хосту розширення, який може запустити тестовий запускатор за адресою {0}.</target>
+      </trans-unit>
+      <trans-unit id="looping">
+        <source xml:lang="en">The following extensions contain dependency loops and have been disabled: {0}</source>
+        <target>Наступні розширення містять цикли залежностей і були вимкнені: {0}</target>
+      </trans-unit>
+      <trans-unit id="proceedAnyways">
+        <source xml:lang="en">Restart Anyway</source>
+        <target>Перезапустити все одно</target>
+      </trans-unit>
+      <trans-unit id="restart">
+        <source xml:lang="en">Restart Remote Extension Host</source>
+        <target>Перезапустити віддалений хост розширення</target>
+      </trans-unit>
+      <trans-unit id="stopExtensionHosts">
+        <source xml:lang="en">Stopping Extension Hosts</source>
+        <target>Зупинка хостів розширення</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/services/extensions/common/extensionHostManager" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="measureExtHostLatency">
+        <source xml:lang="en">Measure Extension Host Latency</source>
+        <target>Виміряти затримку хоста розширення</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/services/extensions/common/extensionsProposedApi" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="enabledProposedAPIs">
+        <source xml:lang="en">API Proposals</source>
+        <target>Пропозиції API</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/services/extensions/common/extensionsRegistry" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="extensionKind">
+        <source xml:lang="en">Define the kind of an extension. `ui` extensions are installed and run on the local machine while `workspace` extensions run on the remote.</source>
+        <target>Визначте тип розширення. Розширення `ui` встановлюються та виконуються на локальному комп'ютері, тоді як розширення `workspace` виконуються на віддаленому.</target>
+      </trans-unit>
+      <trans-unit id="extensionKind.empty">
+        <source xml:lang="en">Define an extension which cannot run in a remote context, neither on the local, nor on the remote machine.</source>
+        <target>Визначте розширення, яке не може виконуватись у віддаленому контексті, ні на локальному, ні на віддаленому комп'ютері.</target>
+      </trans-unit>
+      <trans-unit id="extensionKind.ui">
+        <source xml:lang="en">Define an extension which can run only on the local machine when connected to remote window.</source>
+        <target>Визначте розширення, яке може працювати лише на локальному комп'ютері, коли підключено до віддаленого вікна.</target>
+      </trans-unit>
+      <trans-unit id="extensionKind.ui-workspace">
+        <source xml:lang="en">Define an extension which can run on either side, with a preference towards running on the local machine.</source>
+        <target>Визначте розширення, яке може працювати з обох сторін, з перевагою до роботи на локальному комп'ютері.</target>
+      </trans-unit>
+      <trans-unit id="extensionKind.workspace">
+        <source xml:lang="en">Define an extension which can run only on the remote machine when connected remote window.</source>
+        <target>Визначте розширення, яке може працювати тільки на віддаленій машині під час підключення до віддаленого вікна.</target>
+      </trans-unit>
+      <trans-unit id="extensionKind.workspace-ui">
+        <source xml:lang="en">Define an extension which can run on either side, with a preference towards running on the remote machine.</source>
+        <target>Визначте розширення, яке може працювати з обох сторін, з перевагою на виконання на віддаленій машині.</target>
+      </trans-unit>
+      <trans-unit id="product.extensionEnabledApiProposals">
+        <source xml:lang="en">API proposals that the respective extensions can freely use.</source>
+        <target>Пропозиції API, які відповідні розширення можуть вільно використовувати.</target>
+      </trans-unit>
+      <trans-unit id="ui">
+        <source xml:lang="en">UI extension kind. In a remote window, such extensions are enabled only when available on the local machine.</source>
+        <target>Тип розширення UI. У віддаленому вікні такі розширення активуються лише тоді, коли вони доступні на локальному комп'ютері.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents">
+        <source xml:lang="en">Activation events for the VS Code extension.</source>
+        <target>Події активації для розширення VS Code.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onAuthenticationRequest">
+        <source xml:lang="en">An activation event emitted whenever sessions are requested from the specified authentication provider.</source>
+        <target>Подія активації, що виводиться щоразу, коли запитуються сесії від вказаного постачальника аутентифікації.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onChatParticipant">
+        <source xml:lang="en">An activation event emitted when the specified chat participant is invoked.</source>
+        <target>Подія активації, що генерується, коли викликається вказаний учасник чату.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onCommand">
+        <source xml:lang="en">An activation event emitted whenever the specified command gets invoked.</source>
+        <target>Подія активації, що генерується щоразу, коли викликається вказана команда.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onCustomEditor">
+        <source xml:lang="en">An activation event emitted whenever the specified custom editor becomes visible.</source>
+        <target>Подія активації, що генерується щоразу, коли вказаний користувацький редактор стає видимим.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onDebug">
+        <source xml:lang="en">An activation event emitted whenever a user is about to start debugging or about to setup debug configurations.</source>
+        <target>Подія активації, що генерується щоразу, коли користувач збирається розпочати налагодження або налаштувати конфігурації налагодження.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onDebugAdapterProtocolTracker">
+        <source xml:lang="en">An activation event emitted whenever a debug session with the specific type is about to be launched and a debug protocol tracker might be needed.</source>
+        <target>Подія активації, що генерується щоразу, коли сесія налагодження з конкретним типом збирається бути запущеною, і може знадобитися трекер протоколу налагодження.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onDebugDynamicConfigurations">
+        <source xml:lang="en">An activation event emitted whenever a list of all debug configurations needs to be created (and all provideDebugConfigurations methods for the "dynamic" scope need to be called).</source>
+        <target>Подія активації, що генерується щоразу, коли потрібно створити список усіх конфігурацій налагодження (і потрібно викликати всі методи provideDebugConfigurations для "динамічного" контексту).</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onDebugInitialConfigurations">
+        <source xml:lang="en">An activation event emitted whenever a "launch.json" needs to be created (and all provideDebugConfigurations methods need to be called).</source>
+        <target>Подія активації, що генерується щоразу, коли потрібно створити "launch.json" (і всі методи provideDebugConfigurations потрібно викликати).</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onDebugResolve">
+        <source xml:lang="en">An activation event emitted whenever a debug session with the specific type is about to be launched (and a corresponding resolveDebugConfiguration method needs to be called).</source>
+        <target>Подія активації, що виникає щоразу, коли сесія налагодження з конкретним типом має бути запущена (і потрібно викликати відповідний метод resolveDebugConfiguration).</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onEditSession">
+        <source xml:lang="en">An activation event emitted whenever an edit session is accessed with the given scheme.</source>
+        <target>Подія активації, що виникає щоразу, коли сесія редагування відкривається з використанням заданої схеми.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onFileSystem">
+        <source xml:lang="en">An activation event emitted whenever a file or folder is accessed with the given scheme.</source>
+        <target>Подія активації, що генерується щоразу, коли файл або папка відкривається з використанням заданої схеми.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onIssueReporterOpened">
+        <source xml:lang="en">An activation event emitted when the issue reporter is opened.</source>
+        <target>Подія активації, що генерується, коли відкривається репортер проблем.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onLanguage">
+        <source xml:lang="en">An activation event emitted whenever a file that resolves to the specified language gets opened.</source>
+        <target>Подія активації, що виникає щоразу, коли відкривається файл, який відповідає вказаній мові.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onLanguageModelTool">
+        <source xml:lang="en">An activation event emitted when the specified language model tool is invoked.</source>
+        <target>Подія активації, що генерується, коли викликається вказаний інструмент мовної моделі.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onNotebook">
+        <source xml:lang="en">An activation event emitted whenever the specified notebook document is opened.</source>
+        <target>Подія активації, що генерується щоразу, коли відкривається вказаний документ нотаток.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onOpenExternalUri">
+        <source xml:lang="en">An activation event emitted whenever a external uri (such as an http or https link) is being opened.</source>
+        <target>Подія активації, що генерується щоразу, коли відкривається зовнішній uri (такий як http або https посилання).</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onRenderer">
+        <source xml:lang="en">An activation event emitted whenever a notebook output renderer is used.</source>
+        <target>Подія активації, що генерується щоразу, коли використовується рендерер виходу нотатки.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onSearch">
+        <source xml:lang="en">An activation event emitted whenever a search is started in the folder with the given scheme.</source>
+        <target>Подія активації, яка генерується щоразу, коли пошук розпочинається в папці з вказаною схемою.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onStartupFinished">
+        <source xml:lang="en">An activation event emitted after the start-up finished (after all `*` activated extensions have finished activating).</source>
+        <target>Подія активації, що виникає після завершення запуску (після того, як всі активовані розширення `*` завершили активацію).</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onTaskType">
+        <source xml:lang="en">An activation event emitted whenever tasks of a certain type need to be listed or resolved.</source>
+        <target>Подія активації, що генерується щоразу, коли потрібно перерахувати або вирішити завдання певного типу.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onTerminalCompletionsRequested">
+        <source xml:lang="en">An activation event emitted when terminal completions are requested.</source>
+        <target>Подія активації, що виникає, коли запитуються завершення терміналу.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onTerminalProfile">
+        <source xml:lang="en">An activation event emitted when a specific terminal profile is launched.</source>
+        <target>Подія активації, що генерується при запуску конкретного профілю терміналу.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onTerminalQuickFixRequest">
+        <source xml:lang="en">An activation event emitted when a command matches the selector associated with this ID</source>
+        <target>Подія активації, що генерується, коли команда відповідає селектору, пов'язаному з цим ID</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onUri">
+        <source xml:lang="en">An activation event emitted whenever a system-wide Uri directed towards this extension is open.</source>
+        <target>Подія активації, що генерується щоразу, коли відкривається системний Uri, спрямований на це розширення.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onView">
+        <source xml:lang="en">An activation event emitted whenever the specified view is expanded.</source>
+        <target>Подія активації, що випускається щоразу, коли вказане подання розгортається.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onWalkthrough">
+        <source xml:lang="en">An activation event emitted when a specified walkthrough is opened.</source>
+        <target>Подія активації, що генерується, коли відкривається вказаний посібник.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onWebviewPanel">
+        <source xml:lang="en">An activation event emmited when a webview is loaded of a certain viewType</source>
+        <target>Подія активації, що виникає, коли веб-переглядач завантажується з певним viewType</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.star">
+        <source xml:lang="en">An activation event emitted on VS Code startup. To ensure a great end user experience, please use this activation event in your extension only when no other activation events combination works in your use-case.</source>
+        <target>Подія активації, що генерується під час запуску VS Code. Щоб забезпечити відмінний досвід для кінцевого користувача, будь ласка, використовуйте цю подію активації у вашій розширенні лише тоді, коли жодна інша комбінація подій активації не працює у вашому випадку.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.workspaceContains">
+        <source xml:lang="en">An activation event emitted whenever a folder is opened that contains at least a file matching the specified glob pattern.</source>
+        <target>Подія активації, що виникає щоразу, коли відкривається папка, яка містить принаймні один файл, що відповідає вказаному шаблону glob.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.api">
+        <source xml:lang="en">Describe the API provided by this extension. For more details visit: https://code.visualstudio.com/api/advanced-topics/remote-extensions#handling-dependencies-with-remote-extensions</source>
+        <target>Опишіть API, наданий цим розширенням. Для отримання додаткової інформації відвідайте: https://code.visualstudio.com/api/advanced-topics/remote-extensions#handling-dependencies-with-remote-extensions</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.api.none">
+        <source xml:lang="en">Give up entirely the ability to export any APIs. This allows other extensions that depend on this extension to run in a separate extension host process or in a remote machine.</source>
+        <target>Цілком відмовитися від можливості експортувати будь-які API. Це дозволяє іншим розширенням, які залежать від цього розширення, працювати в окремому процесі хоста розширення або на віддаленій машині.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.badges">
+        <source xml:lang="en">Array of badges to display in the sidebar of the Marketplace's extension page.</source>
+        <target>Масив значків для відображення в боковій панелі сторінки розширення Маркетплейсу.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.badges.description">
+        <source xml:lang="en">Badge description.</source>
+        <target>Опис значка.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.badges.href">
+        <source xml:lang="en">Badge link.</source>
+        <target>Посилання на значок.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.badges.url">
+        <source xml:lang="en">Badge image URL.</source>
+        <target>URL зображення значка.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.capabilities">
+        <source xml:lang="en">Declare the set of supported capabilities by the extension.</source>
+        <target>Оголосіть набір підтримуваних можливостей розширення.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.capabilities.untrustedWorkspaces">
+        <source xml:lang="en">Declares how the extension should be handled in untrusted workspaces.</source>
+        <target>Оголошує, як розширення має оброблятися в ненадійних робочих просторах.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.capabilities.untrustedWorkspaces.description">
+        <source xml:lang="en">A description of how workspace trust affects the extensions behavior and why it is needed. This only applies when `supported` is not `true`.</source>
+        <target>Опис того, як довіра до робочого простору впливає на поведінку розширень і чому це необхідно. Це стосується лише випадків, коли `supported` не є `true`.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.capabilities.untrustedWorkspaces.restrictedConfigurations">
+        <source xml:lang="en">A list of configuration keys contributed by the extension that should not use workspace values in untrusted workspaces.</source>
+        <target>Список ключів конфігурації, наданих розширенням, які не повинні використовувати значення робочого простору в ненадійних робочих просторах.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.capabilities.untrustedWorkspaces.supported">
+        <source xml:lang="en">Declares the level of support for untrusted workspaces by the extension.</source>
+        <target>Оголошує рівень підтримки ненадійних робочих просторів розширенням.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.capabilities.untrustedWorkspaces.supported.false">
+        <source xml:lang="en">The extension will not be enabled in untrusted workspaces.</source>
+        <target>Розширення не буде активовано в ненадійних робочих просторах.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.capabilities.untrustedWorkspaces.supported.limited">
+        <source xml:lang="en">The extension will be enabled in untrusted workspaces with some functionality disabled.</source>
+        <target>Розширення буде активовано в ненадійних робочих просторах з деякими відключеними функціями.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.capabilities.untrustedWorkspaces.supported.true">
+        <source xml:lang="en">The extension will be enabled in untrusted workspaces with all functionality enabled.</source>
+        <target>Розширення буде активовано в ненадійних робочих просторах з увімкненою всією функціональністю.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.capabilities.virtualWorkspaces">
+        <source xml:lang="en">Declares whether the extension should be enabled in virtual workspaces. A virtual workspace is a workspace which is not backed by any on-disk resources. When false, this extension will be automatically disabled in virtual workspaces. Default is true.</source>
+        <target>Оголошує, чи повинна бути увімкнена розширення у віртуальних робочих просторах. Віртуальний робочий простір - це робочий простір, який не підтримується жодними ресурсами на диску. Коли false, це розширення буде автоматично вимкнене у віртуальних робочих просторах. За замовчуванням true.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.capabilities.virtualWorkspaces.description">
+        <source xml:lang="en">A description of how virtual workspaces affects the extensions behavior and why it is needed. This only applies when `supported` is not `true`.</source>
+        <target>Опис того, як віртуальні робочі простори впливають на поведінку розширень і чому це необхідно. Це стосується лише випадків, коли `supported` не є `true`.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.capabilities.virtualWorkspaces.supported">
+        <source xml:lang="en">Declares the level of support for virtual workspaces by the extension.</source>
+        <target>Оголошує рівень підтримки віртуальних робочих просторів розширенням.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.capabilities.virtualWorkspaces.supported.false">
+        <source xml:lang="en">The extension will not be enabled in virtual workspaces.</source>
+        <target>Розширення не буде активовано у віртуальних робочих просторах.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.capabilities.virtualWorkspaces.supported.limited">
+        <source xml:lang="en">The extension will be enabled in virtual workspaces with some functionality disabled.</source>
+        <target>Розширення буде активовано у віртуальних робочих просторах з деякою відключеною функціональністю.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.capabilities.virtualWorkspaces.supported.true">
+        <source xml:lang="en">The extension will be enabled in virtual workspaces with all functionality enabled.</source>
+        <target>Розширення буде активовано у віртуальних робочих просторах з увімкненою всією функціональністю.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.categories">
+        <source xml:lang="en">The categories used by the VS Code gallery to categorize the extension.</source>
+        <target>Категорії, які використовуються галереєю VS Code для категоризації розширення.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.category.languages.deprecated">
+        <source xml:lang="en">Use 'Programming  Languages' instead</source>
+        <target>Використовуйте 'Мови програмування' замість цього.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.contributes">
+        <source xml:lang="en">All contributions of the VS Code extension represented by this package.</source>
+        <target>Усі внески розширення VS Code, представлені цим пакетом.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.contributes.extensionPack">
+        <source xml:lang="en">A set of extensions that can be installed together. The identifier of an extension is always ${publisher}.${name}. For example: vscode.csharp.</source>
+        <target>Набір розширень, які можна встановити разом. Ідентифікатор розширення завжди ${publisher}.${name}. Наприклад: vscode.csharp.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.contributes.sponsor">
+        <source xml:lang="en">Specify the location from where users can sponsor your extension.</source>
+        <target>Вкажіть місце, звідки користувачі можуть спонсорувати ваше розширення.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.contributes.sponsor.url">
+        <source xml:lang="en">URL from where users can sponsor your extension. It must be a valid URL with a HTTP or HTTPS protocol. Example value: https://github.com/sponsors/nvaccess</source>
+        <target>URL, з якого користувачі можуть спонсорувати ваше розширення. Це має бути дійсний URL з протоколом HTTP або HTTPS. Приклад значення: https://github.com/sponsors/nvaccess</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.displayName">
+        <source xml:lang="en">The display name for the extension used in the VS Code gallery.</source>
+        <target>Відображуване ім'я для розширення, що використовується в галереї VS Code.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.enableProposedApi.deprecated">
+        <source xml:lang="en">Use `enabledApiProposals` instead.</source>
+        <target>Використовуйте `enabledApiProposals` замість цього.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.enabledApiProposals">
+        <source xml:lang="en">Enable API proposals to try them out. Only valid **during development**. Extensions **cannot be published** with this property. For more details visit: https://code.visualstudio.com/api/advanced-topics/using-proposed-api</source>
+        <target>Увімкніть пропозиції API, щоб спробувати їх. Дійсно лише **під час розробки**. Розширення **не можуть бути опубліковані** з цією властивістю. Для отримання додаткової інформації відвідайте: https://code.visualstudio.com/api/advanced-topics/using-proposed-api</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.engines">
+        <source xml:lang="en">Engine compatibility.</source>
+        <target>Сумісність двигуна.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.engines.vscode">
+        <source xml:lang="en">For VS Code extensions, specifies the VS Code version that the extension is compatible with. Cannot be *. For example: ^0.10.5 indicates compatibility with a minimum VS Code version of 0.10.5.</source>
+        <target>Для розширень VS Code вказує версію VS Code, з якою розширення є сумісним. Не може бути *. Наприклад: ^0.10.5 вказує на сумісність з мінімальною версією VS Code 0.10.5.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.extensionDependencies">
+        <source xml:lang="en">Dependencies to other extensions. The identifier of an extension is always ${publisher}.${name}. For example: vscode.csharp.</source>
+        <target>Залежності від інших розширень. Ідентифікатор розширення завжди має формат ${publisher}.${name}. Наприклад: vscode.csharp.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.galleryBanner">
+        <source xml:lang="en">Banner used in the VS Code marketplace.</source>
+        <target>Банер, що використовується на ринку VS Code.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.galleryBanner.color">
+        <source xml:lang="en">The banner color on the VS Code marketplace page header.</source>
+        <target>Колір банера на заголовку сторінки маркетплейсу VS Code.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.galleryBanner.theme">
+        <source xml:lang="en">The color theme for the font used in the banner.</source>
+        <target>Колірна тема для шрифту, використаного в банері.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.icon">
+        <source xml:lang="en">The path to a 128x128 pixel icon.</source>
+        <target>Шлях до іконки розміром 128x128 пікселів.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.l10n">
+        <source xml:lang="en">The relative path to a folder containing localization (bundle.l10n.*.json) files. Must be specified if you are using the vscode.l10n API.</source>
+        <note>{Locked="bundle.l10n._locale_.json"}&#xD;
+{Locked="vscode.l10n API"}</note>
+        <target>Відносний шлях до папки, що містить файли локалізації (bundle.l10n.*.json). Має бути вказаний, якщо ви використовуєте API vscode.l10n.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.markdown">
+        <source xml:lang="en">Controls the Markdown rendering engine used in the Marketplace. Either github (default) or standard.</source>
+        <target>Контролює движок рендерингу Markdown, що використовується в Marketplace. Може бути github (за замовчуванням) або стандартний.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.preview">
+        <source xml:lang="en">Sets the extension to be flagged as a Preview in the Marketplace.</source>
+        <target>Встановлює розширення, щоб воно позначалося як Попередній перегляд у Маркетплейсі.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.pricing">
+        <source xml:lang="en">The pricing information for the extension. Can be Free (default) or Trial. For more details visit: https://code.visualstudio.com/api/working-with-extensions/publishing-extension#extension-pricing-label</source>
+        <target>Інформація про ціни для розширення. Може бути Безкоштовно (за замовчуванням) або Пробна версія. Для отримання додаткової інформації відвідайте: https://code.visualstudio.com/api/working-with-extensions/publishing-extension#extension-pricing-label</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.publisher">
+        <source xml:lang="en">The publisher of the VS Code extension.</source>
+        <target>Видавець розширення VS Code.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.qna">
+        <source xml:lang="en">Controls the Q&amp;A link in the Marketplace. Set to marketplace to enable the default Marketplace Q &amp; A site. Set to a string to provide the URL of a custom Q &amp; A site. Set to false to disable Q &amp; A altogether.</source>
+        <target>Контролює посилання на Q&amp;A в Marketplace. Встановіть на marketplace, щоб активувати стандартний сайт Q &amp; A для Marketplace. Встановіть на рядок, щоб надати URL-адресу власного сайту Q &amp; A. Встановіть на false, щоб зовсім вимкнути Q &amp; A.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.scripts.prepublish">
+        <source xml:lang="en">Script executed before the package is published as a VS Code extension.</source>
+        <target>Скрипт виконується перед публікацією пакета як розширення VS Code.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.scripts.uninstall">
+        <source xml:lang="en">Uninstall hook for VS Code extension. Script that gets executed when the extension is completely uninstalled from VS Code which is when VS Code is restarted (shutdown and start) after the extension is uninstalled. Only Node scripts are supported.</source>
+        <target>Хук видалення для розширення VS Code. Скрипт, який виконується, коли розширення повністю видаляється з VS Code, що відбувається, коли VS Code перезапускається (вимкнення та запуск) після видалення розширення. Підтримуються лише скрипти Node.</target>
+      </trans-unit>
+      <trans-unit id="workspace">
+        <source xml:lang="en">Workspace extension kind. In a remote window, such extensions are enabled only when available on the remote.</source>
+        <target>Тип розширення робочого простору. У віддаленому вікні такі розширення активуються лише тоді, коли вони доступні на віддаленому.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/services/extensions/common/extensionsUtil" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="extensionUnderDevelopment">
+        <source xml:lang="en">Loading development extension at {0}</source>
+        <target>Завантаження розширення для розробки за адресою {0}</target>
+      </trans-unit>
+      <trans-unit id="overwritingExtension">
+        <source xml:lang="en">Overwriting extension {0} with {1}.</source>
+        <target>Перезаписування розширення {0} на {1}.</target>
+      </trans-unit>
+      <trans-unit id="overwritingWithWorkspaceExtension">
+        <source xml:lang="en">Overwriting {0} with Workspace Extension {1}.</source>
+        <target>Перезаписування {0} з Розширенням Робочого Простору {1}.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/services/extensions/electron-sandbox/cachedExtensionScanner" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="extensionCache.invalid">
+        <source xml:lang="en">Extensions have been modified on disk. Please reload the window.</source>
+        <target>Розширення були змінені на диску. Будь ласка, перезавантажте вікно.</target>
+      </trans-unit>
+      <trans-unit id="reloadWindow">
+        <source xml:lang="en">Reload Window</source>
+        <target>Перезавантажити вікно</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/services/extensions/electron-sandbox/localProcessExtensionHost" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="extensionHost.startupFail">
+        <source xml:lang="en">Extension host did not start in 10 seconds, that might be a problem.</source>
+        <target>Хост розширення не запустився за 10 секунд, це може бути проблемою.</target>
+      </trans-unit>
+      <trans-unit id="extensionHost.startupFailDebug">
+        <source xml:lang="en">Extension host did not start in 10 seconds, it might be stopped on the first line and needs a debugger to continue.</source>
+        <target>Хост розширення не запустився за 10 секунд, можливо, він зупинився на першому рядку і потребує налагоджувача для продовження.</target>
+      </trans-unit>
+      <trans-unit id="join.extensionDevelopment">
+        <source xml:lang="en">Terminating extension debug session</source>
+        <target>Завершення сеансу налагодження розширення</target>
+      </trans-unit>
+      <trans-unit id="reloadWindow">
+        <source xml:lang="en">Reload Window</source>
+        <target>Перезавантажити вікно</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/services/extensions/electron-sandbox/nativeExtensionService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="devTools">
+        <source xml:lang="en">Open Developer Tools</source>
+        <target>Відкрити інструменти розробника</target>
+      </trans-unit>
+      <trans-unit id="enable">
+        <source xml:lang="en">Enable and Reload</source>
+        <target>Увімкнути та перезавантажити</target>
+      </trans-unit>
+      <trans-unit id="enableResolver">
+        <source xml:lang="en">Extension '{0}' is required to open the remote window.
+OK to enable?</source>
+        <target>Розширення '{0}' необхідне для відкриття віддаленого вікна. 
+Добре, щоб увімкнути?</target>
+      </trans-unit>
+      <trans-unit id="extensionService.autoRestart">
+        <source xml:lang="en">The extension host terminated unexpectedly. Restarting...</source>
+        <target>Віддалений хост розширення несподівано завершив роботу. Перезапуск...</target>
+      </trans-unit>
+      <trans-unit id="extensionService.crash">
+        <source xml:lang="en">Extension host terminated unexpectedly 3 times within the last 5 minutes.</source>
+        <target>Віддалений хост розширення несподівано завершив роботу 3 рази за останні 5 хвилин.</target>
+      </trans-unit>
+      <trans-unit id="extensionService.versionMismatchCrash">
+        <source xml:lang="en">Extension host cannot start: version mismatch.</source>
+        <target>Хост розширення не може запуститися: невідповідність версій.</target>
+      </trans-unit>
+      <trans-unit id="getEnvironmentFailure">
+        <source xml:lang="en">Could not fetch remote environment</source>
+        <target>Не вдалося отримати віддалене середовище</target>
+      </trans-unit>
+      <trans-unit id="install">
+        <source xml:lang="en">Install and Reload</source>
+        <target>Встановити та перезавантажити</target>
+      </trans-unit>
+      <trans-unit id="installResolver">
+        <source xml:lang="en">Extension '{0}' is required to open the remote window.
+Do you want to install the extension?</source>
+        <target>Розширення '{0}' необхідне для відкриття віддаленого вікна. 
+Ви хочете встановити розширення?</target>
+      </trans-unit>
+      <trans-unit id="learnMore">
+        <source xml:lang="en">Learn More</source>
+        <target>Дізнатися більше</target>
+      </trans-unit>
+      <trans-unit id="relaunch">
+        <source xml:lang="en">Relaunch VS Code</source>
+        <target>Перезапустити VS Code</target>
+      </trans-unit>
+      <trans-unit id="resolverExtensionNotFound">
+        <source xml:lang="en">`{0}` not found on marketplace</source>
+        <target>`{0}` не знайдено на ринку</target>
+      </trans-unit>
+      <trans-unit id="restart">
+        <source xml:lang="en">Restart Extension Host</source>
+        <target>Перезапустити віддалений хост розширення</target>
+      </trans-unit>
+      <trans-unit id="restartExtensionHost">
+        <source xml:lang="en">Restart Extension Host</source>
+        <target>Перезапустити хост розширення</target>
+      </trans-unit>
+      <trans-unit id="restartExtensionHost.reason">
+        <source xml:lang="en">An explicit request</source>
+        <target>Явний запит</target>
+      </trans-unit>
+      <trans-unit id="startBisect">
+        <source xml:lang="en">Start Extension Bisect</source>
+        <target>Почати розширення бісект</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

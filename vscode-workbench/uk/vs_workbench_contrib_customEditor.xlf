@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/customEditor/browser/customEditorInput" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="editorCannotMove">
+        <source xml:lang="en">Unable to move '{0}': The editor contains changes that can only be saved in its current window.</source>
+        <target>Неможливо перемістити '{0}': Редактор містить зміни, які можна зберегти лише у його поточному вікні.</target>
+      </trans-unit>
+      <trans-unit id="editorUnsupportedInWindow">
+        <source xml:lang="en">Unable to open the editor in this window, it contains modifications that can only be saved in the original window.</source>
+        <target>Неможливо відкрити редактор у цьому вікні, воно містить зміни, які можна зберегти лише в оригінальному вікні.</target>
+      </trans-unit>
+      <trans-unit id="reopenInOriginalWindow">
+        <source xml:lang="en">Open in Original Window</source>
+        <target>Відкрити в оригінальному вікні</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/customEditor/common/contributedCustomEditors" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="builtinProviderDisplayName">
+        <source xml:lang="en">Built-in</source>
+        <target>Вбудований</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/customEditor/common/customEditor" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="context.customEditor">
+        <source xml:lang="en">The viewType of the currently active custom editor.</source>
+        <target>Тип перегляду активного користувацького редактора.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/customEditor/common/customTextEditorModel" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="vetoExtHostRestart">
+        <source xml:lang="en">An extension provided text editor for '{0}' is still open that would close otherwise.</source>
+        <target>Відкрито редактор тексту, наданий розширенням для '{0}', який інакше закрився б.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/customEditor/common/extensionPoint" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="contributes.customEditors">
+        <source xml:lang="en">Contributed custom editors.</source>
+        <target>Внесені користувацькі редактори.</target>
+      </trans-unit>
+      <trans-unit id="contributes.displayName">
+        <source xml:lang="en">Human readable name of the custom editor. This is displayed to users when selecting which editor to use.</source>
+        <target>Людсько зрозуміла назва користувацького редактора. Вона відображається користувачам під час вибору, який редактор використовувати.</target>
+      </trans-unit>
+      <trans-unit id="contributes.priority">
+        <source xml:lang="en">Controls if the custom editor is enabled automatically when the user opens a file. This may be overridden by users using the `workbench.editorAssociations` setting.</source>
+        <target>Контролює, чи увімкнено користувацький редактор автоматично, коли користувач відкриває файл. Це може бути переоприділено користувачами за допомогою налаштування `workbench.editorAssociations`.</target>
+      </trans-unit>
+      <trans-unit id="contributes.priority.default">
+        <source xml:lang="en">The editor is automatically used when the user opens a resource, provided that no other default custom editors are registered for that resource.</source>
+        <target>Редактор автоматично використовується, коли користувач відкриває ресурс, за умови, що для цього ресурсу не зареєстровано жодних інших стандартних користувацьких редакторів.</target>
+      </trans-unit>
+      <trans-unit id="contributes.priority.option">
+        <source xml:lang="en">The editor is not automatically used when the user opens a resource, but a user can switch to the editor using the `Reopen With` command.</source>
+        <target>Редактор не використовується автоматично, коли користувач відкриває ресурс, але користувач може перемкнутися на редактор, використовуючи команду `Перезапустити з`.</target>
+      </trans-unit>
+      <trans-unit id="contributes.selector">
+        <source xml:lang="en">Set of globs that the custom editor is enabled for.</source>
+        <target>Набір глобусів, для яких увімкнено користувацький редактор.</target>
+      </trans-unit>
+      <trans-unit id="contributes.selector.filenamePattern">
+        <source xml:lang="en">Glob that the custom editor is enabled for.</source>
+        <target>Глоб, для якого увімкнено користувацький редактор.</target>
+      </trans-unit>
+      <trans-unit id="contributes.viewType">
+        <source xml:lang="en">Identifier for the custom editor. This must be unique across all custom editors, so we recommend including your extension id as part of `viewType`. The `viewType` is used when registering custom editors with `vscode.registerCustomEditorProvider` and in the `onCustomEditor:${id}` [activation event](https://code.visualstudio.com/api/references/activation-events).</source>
+        <target>Ідентифікатор для користувацького редактора. Він повинен бути унікальним серед усіх користувацьких редакторів, тому ми рекомендуємо включити ідентифікатор вашого розширення як частину `viewType`. `viewType` використовується під час реєстрації користувацьких редакторів за допомогою `vscode.registerCustomEditorProvider` та в події активації `onCustomEditor:${id}` [активаційна подія](https://code.visualstudio.com/api/references/activation-events).</target>
+      </trans-unit>
+      <trans-unit id="customEditors">
+        <source xml:lang="en">Custom Editors</source>
+        <target>Користувацькі редактори</target>
+      </trans-unit>
+      <trans-unit id="customEditors filenamePattern">
+        <source xml:lang="en">Filename Pattern</source>
+        <target>Шаблон імені файлу</target>
+      </trans-unit>
+      <trans-unit id="customEditors priority">
+        <source xml:lang="en">Priority</source>
+        <target>Пріоритет</target>
+      </trans-unit>
+      <trans-unit id="customEditors view type">
+        <source xml:lang="en">View Type</source>
+        <target>Тип перегляду</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

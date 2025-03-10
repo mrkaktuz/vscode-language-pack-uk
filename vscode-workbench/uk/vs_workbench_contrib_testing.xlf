@@ -1,0 +1,1479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/testing/browser/codeCoverageDecorations" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="coverage.branchCovered">
+        <source xml:lang="en">Branch {0} in {1} was executed {2} time(s).</source>
+        <target>Гілка {0} у {1} була виконана {2} раз(и).</target>
+      </trans-unit>
+      <trans-unit id="coverage.branchCoveredYes">
+        <source xml:lang="en">Branch {0} in {1} was executed.</source>
+        <target>Гілка {0} у {1} була виконана.</target>
+      </trans-unit>
+      <trans-unit id="coverage.branchNotCovered">
+        <source xml:lang="en">Branch {0} in {1} was not covered.</source>
+        <target>Філія {0} у {1} не була покрита.</target>
+      </trans-unit>
+      <trans-unit id="coverage.branches">
+        <source xml:lang="en">{0} of {1} of branches in {2} were covered.</source>
+        <target>{0} з {1} гілок у {2} були охоплені.</target>
+      </trans-unit>
+      <trans-unit id="coverage.declExecutedCount">
+        <source xml:lang="en">`{0}` was executed {1} time(s).</source>
+        <target>`{0}` було виконано {1} раз(и).</target>
+      </trans-unit>
+      <trans-unit id="coverage.declExecutedNo">
+        <source xml:lang="en">`{0}` was not executed.</source>
+        <target>`{0}` не було виконано.</target>
+      </trans-unit>
+      <trans-unit id="coverage.declExecutedYes">
+        <source xml:lang="en">`{0}` was executed.</source>
+        <target>`{0}` було виконано.</target>
+      </trans-unit>
+      <trans-unit id="coverage.hideInline">
+        <source xml:lang="en">Hide Inline Coverage</source>
+        <target>Сховати вбудоване покриття</target>
+      </trans-unit>
+      <trans-unit id="coverage.toggleInline">
+        <source xml:lang="en">Toggle Inline Coverage</source>
+        <target>Перемкнути вбудоване покриття</target>
+      </trans-unit>
+      <trans-unit id="testing.coverageForTestAvailable">
+        <source xml:lang="en">{0} test(s) ran code in this file</source>
+        <target>{0} тест(ів) виконано коду в цьому файлі</target>
+      </trans-unit>
+      <trans-unit id="testing.filterActionLabel">
+        <source xml:lang="en">Filter Coverage to Test</source>
+        <target>Фільтрувати охоплення для тесту</target>
+      </trans-unit>
+      <trans-unit id="testing.hideInlineCoverage">
+        <source xml:lang="en">Hide Inline Coverage</source>
+        <target>Сховати вбудоване покриття</target>
+      </trans-unit>
+      <trans-unit id="testing.rerun">
+        <source xml:lang="en">Rerun</source>
+        <target>Повторити</target>
+      </trans-unit>
+      <trans-unit id="testing.showInlineCoverage">
+        <source xml:lang="en">Show Inline Coverage</source>
+        <target>Показати вбудоване покриття</target>
+      </trans-unit>
+      <trans-unit id="testing.toggleInlineCoverage">
+        <source xml:lang="en">Toggle Inline</source>
+        <target>Перемикання в рядку</target>
+      </trans-unit>
+      <trans-unit id="testing.toggleToolbarDesc">
+        <source xml:lang="en">Toggle the sticky coverage bar in the editor.</source>
+        <target>Увімкніть або вимкніть липку панель покриття в редакторі.</target>
+      </trans-unit>
+      <trans-unit id="testing.toggleToolbarTitle">
+        <source xml:lang="en">Test Coverage Toolbar</source>
+        <target>Панель покриття тестування</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/browser/codeCoverageDisplayUtils" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="changePerTestFilter">
+        <source xml:lang="en">Click to view coverage for a single test</source>
+        <target>Натисніть, щоб переглянути покриття для одного тесту</target>
+      </trans-unit>
+      <trans-unit id="testing.allTests">
+        <source xml:lang="en">All tests</source>
+        <target>Усі тести</target>
+      </trans-unit>
+      <trans-unit id="testing.coverageForTest">
+        <source xml:lang="en">Showing "{0}"</source>
+        <target>Показуючи "{0}"</target>
+      </trans-unit>
+      <trans-unit id="testing.percentCoverage">
+        <source xml:lang="en">{0} Coverage</source>
+        <target>{0} Покриття</target>
+      </trans-unit>
+      <trans-unit id="testing.pickTest">
+        <source xml:lang="en">Pick a test to show coverage for</source>
+        <target>Виберіть тест, щоб показати покриття для</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/browser/icons" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="filterIcon">
+        <source xml:lang="en">Icon for the 'Filter' action in the testing view.</source>
+        <target>Іконка для дії 'Фільтр' у режимі тестування.</target>
+      </trans-unit>
+      <trans-unit id="hiddenIcon">
+        <source xml:lang="en">Icon shown beside hidden tests, when they've been shown.</source>
+        <target>Іконка, що відображається поруч із прихованими тестами, коли вони були показані.</target>
+      </trans-unit>
+      <trans-unit id="testViewIcon">
+        <source xml:lang="en">View icon of the test view.</source>
+        <target>Переглянути іконку тестового перегляду.</target>
+      </trans-unit>
+      <trans-unit id="testingCancelIcon">
+        <source xml:lang="en">Icon to cancel ongoing test runs.</source>
+        <target>Іконка для скасування поточних тестових запусків.</target>
+      </trans-unit>
+      <trans-unit id="testingCancelRefreshTests">
+        <source xml:lang="en">Icon on the button to cancel refreshing tests.</source>
+        <target>Іконка на кнопці для скасування оновлення тестів.</target>
+      </trans-unit>
+      <trans-unit id="testingCoverage">
+        <source xml:lang="en">Icon representing test coverage</source>
+        <target>Іконка, що представляє покриття тестами</target>
+      </trans-unit>
+      <trans-unit id="testingCoverageIcon">
+        <source xml:lang="en">Icon of the "run test with coverage" action.</source>
+        <target>Іконка дії «запустити тест з покриттям».</target>
+      </trans-unit>
+      <trans-unit id="testingDebugAllIcon">
+        <source xml:lang="en">Icon of the "debug all tests" action.</source>
+        <target>Іконка дії «відлагодити всі тести».</target>
+      </trans-unit>
+      <trans-unit id="testingDebugIcon">
+        <source xml:lang="en">Icon of the "debug test" action.</source>
+        <target>Іконка дії "debug test".</target>
+      </trans-unit>
+      <trans-unit id="testingErrorIcon">
+        <source xml:lang="en">Icon shown for tests that have an error.</source>
+        <target>Іконка, що відображається для тестів, які мають помилку.</target>
+      </trans-unit>
+      <trans-unit id="testingFailedIcon">
+        <source xml:lang="en">Icon shown for tests that failed.</source>
+        <target>Іконка, що відображається для тестів, які не пройшли.</target>
+      </trans-unit>
+      <trans-unit id="testingMissingBranch">
+        <source xml:lang="en">Icon representing a uncovered block without a range</source>
+        <target>Іконка, що представляє відкритий блок без діапазону</target>
+      </trans-unit>
+      <trans-unit id="testingPassedIcon">
+        <source xml:lang="en">Icon shown for tests that passed.</source>
+        <target>Іконка, що відображається для тестів, які пройшли.</target>
+      </trans-unit>
+      <trans-unit id="testingQueuedIcon">
+        <source xml:lang="en">Icon shown for tests that are queued.</source>
+        <target>Іконка, що показується для тестів, які знаходяться в черзі.</target>
+      </trans-unit>
+      <trans-unit id="testingRefreshTests">
+        <source xml:lang="en">Icon on the button to refresh tests.</source>
+        <target>Іконка на кнопці для оновлення тестів.</target>
+      </trans-unit>
+      <trans-unit id="testingRerunIcon">
+        <source xml:lang="en">Icon of the "rerun tests" action.</source>
+        <target>Іконка дії "повторити тести".</target>
+      </trans-unit>
+      <trans-unit id="testingResultsIcon">
+        <source xml:lang="en">Icons for test results.</source>
+        <target>Іконки для результатів тестування.</target>
+      </trans-unit>
+      <trans-unit id="testingRunAllIcon">
+        <source xml:lang="en">Icon of the "run all tests" action.</source>
+        <target>Іконка дії «запустити всі тести».</target>
+      </trans-unit>
+      <trans-unit id="testingRunAllWithCoverageIcon">
+        <source xml:lang="en">Icon of the "run all tests with coverage" action.</source>
+        <target>Іконка дії «запустити всі тести з покриттям».</target>
+      </trans-unit>
+      <trans-unit id="testingRunIcon">
+        <source xml:lang="en">Icon of the "run test" action.</source>
+        <target>Іконка дії "запустити тест".</target>
+      </trans-unit>
+      <trans-unit id="testingShowAsList">
+        <source xml:lang="en">Icon shown when the test explorer is disabled as a tree.</source>
+        <target>Іконка, що відображається, коли дослідник тестів вимкнено у вигляді дерева.</target>
+      </trans-unit>
+      <trans-unit id="testingShowAsTree">
+        <source xml:lang="en">Icon shown when the test explorer is disabled as a list.</source>
+        <target>Іконка, що відображається, коли тестовий експлорер вимкнено у вигляді списку.</target>
+      </trans-unit>
+      <trans-unit id="testingSkippedIcon">
+        <source xml:lang="en">Icon shown for tests that are skipped.</source>
+        <target>Іконка, що показується для тестів, які пропущені.</target>
+      </trans-unit>
+      <trans-unit id="testingTurnContinuousRunIsOn">
+        <source xml:lang="en">Icon when continuous run is on for a test ite,.</source>
+        <target>Іконка, коли безперервний запуск увімкнено для тестового елемента.</target>
+      </trans-unit>
+      <trans-unit id="testingTurnContinuousRunOff">
+        <source xml:lang="en">Icon to turn continuous test runs off.</source>
+        <target>Іконка для вимкнення безперервного виконання тестів.</target>
+      </trans-unit>
+      <trans-unit id="testingTurnContinuousRunOn">
+        <source xml:lang="en">Icon to turn continuous test runs on.</source>
+        <target>Іконка для увімкнення безперервних тестових запусків.</target>
+      </trans-unit>
+      <trans-unit id="testingUnsetIcon">
+        <source xml:lang="en">Icon shown for tests that are in an unset state.</source>
+        <target>Іконка, що показується для тестів, які знаходяться в не встановленому стані.</target>
+      </trans-unit>
+      <trans-unit id="testingUpdateProfiles">
+        <source xml:lang="en">Icon shown to update test profiles.</source>
+        <target>Іконка, що показує оновлення тестових профілів.</target>
+      </trans-unit>
+      <trans-unit id="testingWasCovered">
+        <source xml:lang="en">Icon representing that an element was covered</source>
+        <target>Іконка, що представляє, що елемент був закритий</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/browser/testCoverageBars" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="branchCoverage">
+        <source xml:lang="en">{0}/{1} branches covered ({2})</source>
+        <target>{0}/{1} філій покрито ({2})</target>
+      </trans-unit>
+      <trans-unit id="functionCoverage">
+        <source xml:lang="en">{0}/{1} functions covered ({2})</source>
+        <target>{0}/{1} функцій охоплено ({2})</target>
+      </trans-unit>
+      <trans-unit id="statementCoverage">
+        <source xml:lang="en">{0}/{1} statements covered ({2})</source>
+        <target>{0}/{1} звітів охоплено ({2})</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/browser/testCoverageView" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="filteredToTest">
+        <source xml:lang="en">Showing coverage for "{0}"</source>
+        <target>Показує покриття для "{0}"</target>
+      </trans-unit>
+      <trans-unit id="functionsWithoutCoverage">
+        <source xml:lang="en">{0} declarations without coverage...</source>
+        <target>{0} декларацій без покриття...</target>
+      </trans-unit>
+      <trans-unit id="loadingCoverageDetails">
+        <source xml:lang="en">Loading Coverage Details...</source>
+        <target>Завантаження деталей покриття...</target>
+      </trans-unit>
+      <trans-unit id="testCoverageItemLabel">
+        <source xml:lang="en">{0} coverage: {0}%</source>
+        <target>{0} покриття: {0}%</target>
+      </trans-unit>
+      <trans-unit id="testCoverageTreeLabel">
+        <source xml:lang="en">Test Coverage Explorer</source>
+        <target>Дослідник покриття тестів</target>
+      </trans-unit>
+      <trans-unit id="testing.changeCoverageFilter">
+        <source xml:lang="en">Filter Coverage by Test</source>
+        <target>Фільтрувати покриття за тестом</target>
+      </trans-unit>
+      <trans-unit id="testing.changeCoverageSort">
+        <source xml:lang="en">Change Sort Order</source>
+        <target>Змінити порядок сортування</target>
+      </trans-unit>
+      <trans-unit id="testing.coverageSortByCoverage">
+        <source xml:lang="en">Sort by Coverage</source>
+        <target>Сортувати за покриттям</target>
+      </trans-unit>
+      <trans-unit id="testing.coverageSortByCoverageDescription">
+        <source xml:lang="en">Files and declarations are sorted by total coverage</source>
+        <target>Файли та декларації відсортовані за загальним покриттям</target>
+      </trans-unit>
+      <trans-unit id="testing.coverageSortByLocation">
+        <source xml:lang="en">Sort by Location</source>
+        <target>Сортувати за місцем розташування</target>
+      </trans-unit>
+      <trans-unit id="testing.coverageSortByLocationDescription">
+        <source xml:lang="en">Files are sorted alphabetically, declarations are sorted by position</source>
+        <target>Файли відсортовані в алфавітному порядку, декларації відсортовані за позицією</target>
+      </trans-unit>
+      <trans-unit id="testing.coverageSortByName">
+        <source xml:lang="en">Sort by Name</source>
+        <target>Сортувати за іменем</target>
+      </trans-unit>
+      <trans-unit id="testing.coverageSortByNameDescription">
+        <source xml:lang="en">Files and declarations are sorted alphabetically</source>
+        <target>Файли та декларації відсортовані в алфавітному порядку</target>
+      </trans-unit>
+      <trans-unit id="testing.coverageSortPlaceholder">
+        <source xml:lang="en">Sort the Test Coverage view...</source>
+        <target>Сортувати вигляд покриття тестів...</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/browser/testExplorerActions" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="configureProfile">
+        <source xml:lang="en">Select a profile to update</source>
+        <target>Виберіть профіль для оновлення</target>
+      </trans-unit>
+      <trans-unit id="coverageSelectedTests">
+        <source xml:lang="en">Run Tests with Coverage</source>
+        <target>Запустити тести з покриттям</target>
+      </trans-unit>
+      <trans-unit id="debug test">
+        <source xml:lang="en">Debug Test</source>
+        <target>Тест на налагодження</target>
+      </trans-unit>
+      <trans-unit id="debugAllTests">
+        <source xml:lang="en">Debug All Tests</source>
+        <target>Виправити всі тести</target>
+      </trans-unit>
+      <trans-unit id="debugSelectedTests">
+        <source xml:lang="en">Debug Tests</source>
+        <target>Налагодження тестів</target>
+      </trans-unit>
+      <trans-unit id="discoveringTests">
+        <source xml:lang="en">Discovering Tests</source>
+        <target>Відкриття тестів</target>
+      </trans-unit>
+      <trans-unit id="getExplorerSelection">
+        <source xml:lang="en">Get Explorer Selection</source>
+        <target>Отримати вибір експлорера</target>
+      </trans-unit>
+      <trans-unit id="getSelectedProfiles">
+        <source xml:lang="en">Get Selected Profiles</source>
+        <target>Отримати вибрані профілі</target>
+      </trans-unit>
+      <trans-unit id="hideTest">
+        <source xml:lang="en">Hide Test</source>
+        <target>Сховати тест</target>
+      </trans-unit>
+      <trans-unit id="noCoverageTestProvider">
+        <source xml:lang="en">No tests with coverage runners found in this workspace. You may need to install a test provider extension</source>
+        <target>У цьому робочому просторі не знайдено тестів з покриттям. Можливо, вам потрібно встановити розширення постачальника тестів.</target>
+      </trans-unit>
+      <trans-unit id="noDebugTestProvider">
+        <source xml:lang="en">No debuggable tests found in this workspace. You may need to install a test provider extension</source>
+        <target>У цьому робочому просторі не знайдено тестів для налагодження. Можливо, вам потрібно встановити розширення постачальника тестів.</target>
+      </trans-unit>
+      <trans-unit id="noRelatedCode">
+        <source xml:lang="en">No related code found.</source>
+        <target>Не знайдено пов'язаного коду.</target>
+      </trans-unit>
+      <trans-unit id="noTestFound">
+        <source xml:lang="en">No related tests found.</source>
+        <target>Не знайдено пов'язаних тестів.</target>
+      </trans-unit>
+      <trans-unit id="noTestProvider">
+        <source xml:lang="en">No tests found in this workspace. You may need to install a test provider extension</source>
+        <target>У цьому робочому просторі не знайдено тестів. Можливо, вам потрібно встановити розширення постачальника тестів.</target>
+      </trans-unit>
+      <trans-unit id="noTests">
+        <source xml:lang="en">No tests found in the selected file or folder</source>
+        <target>Не знайдено тестів у вибраному файлі або папці</target>
+      </trans-unit>
+      <trans-unit id="noTestsAtCursor">
+        <source xml:lang="en">No tests found here</source>
+        <target>Тестів тут не знайдено</target>
+      </trans-unit>
+      <trans-unit id="noTestsInFile">
+        <source xml:lang="en">No tests found in this file</source>
+        <target>Тести не знайдено в цьому файлі</target>
+      </trans-unit>
+      <trans-unit id="relatedCode">
+        <source xml:lang="en">Related Code</source>
+        <target>Пов'язаний код</target>
+      </trans-unit>
+      <trans-unit id="relatedTests">
+        <source xml:lang="en">Related Tests</source>
+        <target>Пов'язані тести</target>
+      </trans-unit>
+      <trans-unit id="run test">
+        <source xml:lang="en">Run Test</source>
+        <target>Запустити тест</target>
+      </trans-unit>
+      <trans-unit id="run with cover test">
+        <source xml:lang="en">Run Test with Coverage</source>
+        <target>Запустити тест з покриттям</target>
+      </trans-unit>
+      <trans-unit id="runAllTests">
+        <source xml:lang="en">Run All Tests</source>
+        <target>Запустити всі тести</target>
+      </trans-unit>
+      <trans-unit id="runAllWithCoverage">
+        <source xml:lang="en">Run All Tests with Coverage</source>
+        <target>Запустити всі тести з покриттям</target>
+      </trans-unit>
+      <trans-unit id="runSelectedTests">
+        <source xml:lang="en">Run Tests</source>
+        <target>Запустити тести</target>
+      </trans-unit>
+      <trans-unit id="testing.cancelRun">
+        <source xml:lang="en">Cancel Test Run</source>
+        <target>Скасувати тестовий запуск</target>
+      </trans-unit>
+      <trans-unit id="testing.cancelTestRefresh">
+        <source xml:lang="en">Cancel Test Refresh</source>
+        <target>Скасувати оновлення тесту</target>
+      </trans-unit>
+      <trans-unit id="testing.clearCoverage">
+        <source xml:lang="en">Clear Coverage</source>
+        <target>Чітке покриття</target>
+      </trans-unit>
+      <trans-unit id="testing.clearResults">
+        <source xml:lang="en">Clear All Results</source>
+        <target>Очистити всі результати</target>
+      </trans-unit>
+      <trans-unit id="testing.collapseAll">
+        <source xml:lang="en">Collapse All Tests</source>
+        <target>Згорнути всі тести</target>
+      </trans-unit>
+      <trans-unit id="testing.configureProfile">
+        <source xml:lang="en">Configure Test Profiles</source>
+        <target>Налаштувати профілі тестування</target>
+      </trans-unit>
+      <trans-unit id="testing.coverageAtCursor">
+        <source xml:lang="en">Run Test at Cursor with Coverage</source>
+        <target>Запустити тест на курсорі з покриттям</target>
+      </trans-unit>
+      <trans-unit id="testing.coverageCurrentFile">
+        <source xml:lang="en">Run Tests with Coverage in Current File</source>
+        <target>Запустити тести з покриттям у поточному файлі</target>
+      </trans-unit>
+      <trans-unit id="testing.coverageLastRun">
+        <source xml:lang="en">Rerun Last Run with Coverage</source>
+        <target>Повторити останній запуск з покриттям</target>
+      </trans-unit>
+      <trans-unit id="testing.debugAtCursor">
+        <source xml:lang="en">Debug Test at Cursor</source>
+        <target>Налагодження тесту на курсорі</target>
+      </trans-unit>
+      <trans-unit id="testing.debugCurrentFile">
+        <source xml:lang="en">Debug Tests in Current File</source>
+        <target>Налагодження тестів у поточному файлі</target>
+      </trans-unit>
+      <trans-unit id="testing.debugFailTests">
+        <source xml:lang="en">Debug Failed Tests</source>
+        <target>Виправити невдалі тести</target>
+      </trans-unit>
+      <trans-unit id="testing.debugLastRun">
+        <source xml:lang="en">Debug Last Run</source>
+        <target>Виправити останній запуск</target>
+      </trans-unit>
+      <trans-unit id="testing.editFocusedTest">
+        <source xml:lang="en">Go to Test</source>
+        <target>Перейти до тесту</target>
+      </trans-unit>
+      <trans-unit id="testing.goToRelatedCode">
+        <source xml:lang="en">Go to Related Code</source>
+        <target>Перейти до пов'язаного коду</target>
+      </trans-unit>
+      <trans-unit id="testing.goToRelatedTest">
+        <source xml:lang="en">Go to Related Test</source>
+        <target>Перейти до пов'язаного тесту</target>
+      </trans-unit>
+      <trans-unit id="testing.noCoverage">
+        <source xml:lang="en">No coverage information available on the last test run.</source>
+        <target>Немає інформації про покриття для останнього тестового запуску.</target>
+      </trans-unit>
+      <trans-unit id="testing.noProfiles">
+        <source xml:lang="en">No test continuous run-enabled profiles were found</source>
+        <target>Не було знайдено профілів з увімкненим безперервним виконанням тестів</target>
+      </trans-unit>
+      <trans-unit id="testing.openCoverage">
+        <source xml:lang="en">Open Coverage</source>
+        <target>Відкрите покриття</target>
+      </trans-unit>
+      <trans-unit id="testing.openOutputPeek">
+        <source xml:lang="en">Peek Output</source>
+        <target>Перегляд виходу</target>
+      </trans-unit>
+      <trans-unit id="testing.peekToRelatedCode">
+        <source xml:lang="en">Peek Related Code</source>
+        <target>Переглянути пов'язаний код</target>
+      </trans-unit>
+      <trans-unit id="testing.peekToRelatedTest">
+        <source xml:lang="en">Peek Related Test</source>
+        <target>Переглянути пов'язаний тест</target>
+      </trans-unit>
+      <trans-unit id="testing.reRunFailTests">
+        <source xml:lang="en">Rerun Failed Tests</source>
+        <target>Повторити невдалі тести</target>
+      </trans-unit>
+      <trans-unit id="testing.reRunLastRun">
+        <source xml:lang="en">Rerun Last Run</source>
+        <target>Повторити останній запуск</target>
+      </trans-unit>
+      <trans-unit id="testing.refreshTests">
+        <source xml:lang="en">Refresh Tests</source>
+        <target>Оновити тести</target>
+      </trans-unit>
+      <trans-unit id="testing.runAtCursor">
+        <source xml:lang="en">Run Test at Cursor</source>
+        <target>Запустити тест на курсорі</target>
+      </trans-unit>
+      <trans-unit id="testing.runCurrentFile">
+        <source xml:lang="en">Run Tests in Current File</source>
+        <target>Запустити тести в поточному файлі</target>
+      </trans-unit>
+      <trans-unit id="testing.runUsing">
+        <source xml:lang="en">Execute Using Profile...</source>
+        <target>Виконати за допомогою профілю...</target>
+      </trans-unit>
+      <trans-unit id="testing.searchForTestExtension">
+        <source xml:lang="en">Search for Test Extension</source>
+        <target>Шукати тестове розширення</target>
+      </trans-unit>
+      <trans-unit id="testing.selectContinuousProfiles">
+        <source xml:lang="en">Select profiles to run when files change:</source>
+        <target>Виберіть профілі для запуску, коли файли змінюються:</target>
+      </trans-unit>
+      <trans-unit id="testing.selectDefaultTestProfiles">
+        <source xml:lang="en">Select Default Profile</source>
+        <target>Вибрати профіль за замовчуванням</target>
+      </trans-unit>
+      <trans-unit id="testing.showMostRecentOutput">
+        <source xml:lang="en">Show Output</source>
+        <target>Показати вихід</target>
+      </trans-unit>
+      <trans-unit id="testing.sortByDuration">
+        <source xml:lang="en">Sort by Duration</source>
+        <target>Сортувати за тривалістю</target>
+      </trans-unit>
+      <trans-unit id="testing.sortByLocation">
+        <source xml:lang="en">Sort by Location</source>
+        <target>Сортувати за місцем розташування</target>
+      </trans-unit>
+      <trans-unit id="testing.sortByStatus">
+        <source xml:lang="en">Sort by Status</source>
+        <target>Сортувати за статусом</target>
+      </trans-unit>
+      <trans-unit id="testing.startContinuous">
+        <source xml:lang="en">Start Continuous Run</source>
+        <target>Почати безперервний запуск</target>
+      </trans-unit>
+      <trans-unit id="testing.startContinuousRunUsing">
+        <source xml:lang="en">Start Continous Run Using...</source>
+        <target>Почати безперервний запуск за допомогою...</target>
+      </trans-unit>
+      <trans-unit id="testing.stopContinuous">
+        <source xml:lang="en">Stop Continuous Run</source>
+        <target>Зупинити безперервний запуск</target>
+      </trans-unit>
+      <trans-unit id="testing.toggleContinuousRunOff">
+        <source xml:lang="en">Turn off Continuous Run</source>
+        <target>Вимкнути безперервний режим</target>
+      </trans-unit>
+      <trans-unit id="testing.toggleContinuousRunOn">
+        <source xml:lang="en">Turn on Continuous Run</source>
+        <target>Увімкнути безперервний режим</target>
+      </trans-unit>
+      <trans-unit id="testing.toggleInlineTestOutput">
+        <source xml:lang="en">Toggle Inline Test Output</source>
+        <target>Перемикати вивід тесту в рядку</target>
+      </trans-unit>
+      <trans-unit id="testing.viewAsList">
+        <source xml:lang="en">View as List</source>
+        <target>Переглянути як список</target>
+      </trans-unit>
+      <trans-unit id="testing.viewAsTree">
+        <source xml:lang="en">View as Tree</source>
+        <target>Перегляд як Дерево</target>
+      </trans-unit>
+      <trans-unit id="unhideAllTests">
+        <source xml:lang="en">Unhide All Tests</source>
+        <target>Показати всі тести</target>
+      </trans-unit>
+      <trans-unit id="unhideTest">
+        <source xml:lang="en">Unhide Test</source>
+        <target>Показати тест</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/browser/testResultsView/testResultsOutput" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="caseNoOutput">
+        <source xml:lang="en">The test case did not report any output.</source>
+        <target>Тестовий випадок не повідомив жодного виходу.</target>
+      </trans-unit>
+      <trans-unit id="runNoOutput">
+        <source xml:lang="en">The test run did not record any output.</source>
+        <target>Тестовий запуск не зафіксував жодного виходу.</target>
+      </trans-unit>
+      <trans-unit id="runNoOutputForPast">
+        <source xml:lang="en">Test output is only available for new test runs.</source>
+        <target>Вихідні дані тесту доступні лише для нових запусків тестів.</target>
+      </trans-unit>
+      <trans-unit id="testingOutputActual">
+        <source xml:lang="en">Actual result</source>
+        <target>Фактичний результат</target>
+      </trans-unit>
+      <trans-unit id="testingOutputExpected">
+        <source xml:lang="en">Expected result</source>
+        <target>Очікуваний результат</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/browser/testResultsView/testResultsTree" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="closeTestCoverage">
+        <source xml:lang="en">Close Test Coverage</source>
+        <target>Закрити покриття тестування</target>
+      </trans-unit>
+      <trans-unit id="debug test">
+        <source xml:lang="en">Debug Test</source>
+        <target>Тест на налагодження</target>
+      </trans-unit>
+      <trans-unit id="messageMoreLines1">
+        <source xml:lang="en">+ 1 more line</source>
+        <target>+ 1 ще рядок</target>
+      </trans-unit>
+      <trans-unit id="messageMoreLinesN">
+        <source xml:lang="en">+ {0} more lines</source>
+        <target>+ {0} додаткових рядків</target>
+      </trans-unit>
+      <trans-unit id="nOlderResults">
+        <source xml:lang="en">{0} older results</source>
+        <target>{0} старіші результати</target>
+      </trans-unit>
+      <trans-unit id="openTestCoverage">
+        <source xml:lang="en">View Test Coverage</source>
+        <target>Переглянути покриття тестування</target>
+      </trans-unit>
+      <trans-unit id="run test">
+        <source xml:lang="en">Run Test</source>
+        <target>Запустити тест</target>
+      </trans-unit>
+      <trans-unit id="testing.cancelRun">
+        <source xml:lang="en">Cancel Test Run</source>
+        <target>Скасувати тестовий запуск</target>
+      </trans-unit>
+      <trans-unit id="testing.debugLastRun">
+        <source xml:lang="en">Debug Last Run</source>
+        <target>Виправити останній запуск</target>
+      </trans-unit>
+      <trans-unit id="testing.debugTest">
+        <source xml:lang="en">Debug Test</source>
+        <target>Тест на відладку</target>
+      </trans-unit>
+      <trans-unit id="testing.goToError">
+        <source xml:lang="en">Go to Error</source>
+        <target>Перейти до помилки</target>
+      </trans-unit>
+      <trans-unit id="testing.goToTest">
+        <source xml:lang="en">Go to Test</source>
+        <target>Перейти до тесту</target>
+      </trans-unit>
+      <trans-unit id="testing.reRunLastRun">
+        <source xml:lang="en">Rerun Last Run</source>
+        <target>Повторити останній запуск</target>
+      </trans-unit>
+      <trans-unit id="testing.reRunTest">
+        <source xml:lang="en">Rerun Test</source>
+        <target>Перезапустити тест</target>
+      </trans-unit>
+      <trans-unit id="testing.revealInExplorer">
+        <source xml:lang="en">Reveal in Test Explorer</source>
+        <target>Показати в Test Explorer</target>
+      </trans-unit>
+      <trans-unit id="testing.showResultOutput">
+        <source xml:lang="en">Show Result Output</source>
+        <target>Показати результат</target>
+      </trans-unit>
+      <trans-unit id="testingPeekLabel">
+        <source xml:lang="en">Test Result Messages</source>
+        <target>Повідомлення про результати тестування</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/browser/testResultsView/testResultsViewContent" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="testFollowup.more">
+        <source xml:lang="en">+{0} More...</source>
+        <target>+{0} Більше...</target>
+      </trans-unit>
+      <trans-unit id="testing.callStack.debug">
+        <source xml:lang="en">Debug Test</source>
+        <target>Тест на налагодження</target>
+      </trans-unit>
+      <trans-unit id="testing.callStack.run">
+        <source xml:lang="en">Rerun Test</source>
+        <target>Перезапустити тест</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/browser/testing.contribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="miViewTesting">
+        <source xml:lang="en">T&amp;&amp;esting</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>T&amp;&amp;естування</target>
+      </trans-unit>
+      <trans-unit id="noTestProvidersRegistered">
+        <source xml:lang="en">No tests have been found in this workspace yet.</source>
+        <target>У цьому робочому просторі ще не знайдено жодних тестів.</target>
+      </trans-unit>
+      <trans-unit id="searchForAdditionalTestExtensions">
+        <source xml:lang="en">Install Additional Test Extensions...</source>
+        <target>Встановити додаткові розширення для тестування...</target>
+      </trans-unit>
+      <trans-unit id="test">
+        <source xml:lang="en">Testing</source>
+        <target>Тестування</target>
+      </trans-unit>
+      <trans-unit id="testCoverage">
+        <source xml:lang="en">Test Coverage</source>
+        <target>Покриття тестування</target>
+      </trans-unit>
+      <trans-unit id="testExplorer">
+        <source xml:lang="en">Test Explorer</source>
+        <target>Дослідник тестів</target>
+      </trans-unit>
+      <trans-unit id="testResultsPanelName">
+        <source xml:lang="en">Test Results</source>
+        <target>Результати тестування</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/browser/testingConfigurationUi" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="testConfigurationUi.pick">
+        <source xml:lang="en">Pick a test profile to use</source>
+        <target>Виберіть профіль тесту для використання</target>
+      </trans-unit>
+      <trans-unit id="updateTestConfiguration">
+        <source xml:lang="en">Update Test Configuration</source>
+        <target>Оновити конфігурацію тесту</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/browser/testingDecorations" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="actual.title">
+        <source xml:lang="en">Actual</source>
+        <target>Фактичний</target>
+      </trans-unit>
+      <trans-unit id="coverage test">
+        <source xml:lang="en">Run with Coverage</source>
+        <target>Запустити з покриттям</target>
+      </trans-unit>
+      <trans-unit id="debug all test">
+        <source xml:lang="en">Debug All Tests</source>
+        <target>Виправити всі тести</target>
+      </trans-unit>
+      <trans-unit id="debug test">
+        <source xml:lang="en">Debug Test</source>
+        <target>Тест на налагодження</target>
+      </trans-unit>
+      <trans-unit id="expected.title">
+        <source xml:lang="en">Expected</source>
+        <target>Очікується</target>
+      </trans-unit>
+      <trans-unit id="peek failure">
+        <source xml:lang="en">Peek Error</source>
+        <target>Помилка перегляду</target>
+      </trans-unit>
+      <trans-unit id="peekTestOutout">
+        <source xml:lang="en">Peek Test Output</source>
+        <target>Вихід тесту Peek</target>
+      </trans-unit>
+      <trans-unit id="reveal test">
+        <source xml:lang="en">Reveal in Test Explorer</source>
+        <target>Показати в Test Explorer</target>
+      </trans-unit>
+      <trans-unit id="run all test">
+        <source xml:lang="en">Run All Tests</source>
+        <target>Запустити всі тести</target>
+      </trans-unit>
+      <trans-unit id="run all test with coverage">
+        <source xml:lang="en">Run All Tests with Coverage</source>
+        <target>Запустити всі тести з покриттям</target>
+      </trans-unit>
+      <trans-unit id="run test">
+        <source xml:lang="en">Run Test</source>
+        <target>Запустити тест</target>
+      </trans-unit>
+      <trans-unit id="selectTestToRun">
+        <source xml:lang="en">Select a test to run</source>
+        <target>Виберіть тест для запуску</target>
+      </trans-unit>
+      <trans-unit id="testOverflowItems">
+        <source xml:lang="en">{0} more tests...</source>
+        <target>{0} додаткових тестів...</target>
+      </trans-unit>
+      <trans-unit id="testing.gutterMsg.contextMenu">
+        <source xml:lang="en">Click for test options</source>
+        <target>Натисніть для варіантів тесту</target>
+      </trans-unit>
+      <trans-unit id="testing.gutterMsg.coverage">
+        <source xml:lang="en">Click to run tests with coverage, right click for more options</source>
+        <target>Натисніть, щоб запустити тести з покриттям, клацніть правою кнопкою для додаткових опцій</target>
+      </trans-unit>
+      <trans-unit id="testing.gutterMsg.debug">
+        <source xml:lang="en">Click to debug tests, right click for more options</source>
+        <target>Натисніть, щоб налагодити тести, клацніть правою кнопкою миші для додаткових опцій</target>
+      </trans-unit>
+      <trans-unit id="testing.gutterMsg.run">
+        <source xml:lang="en">Click to run tests, right click for more options</source>
+        <target>Натисніть, щоб запустити тести, клацніть правою кнопкою для додаткових опцій</target>
+      </trans-unit>
+      <trans-unit id="testing.runUsing">
+        <source xml:lang="en">Execute Using Profile...</source>
+        <target>Виконати за допомогою профілю...</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/browser/testingExplorerFilter" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="testExplorerFilter">
+        <source xml:lang="en">Filter (e.g. text, !exclude, @tag)</source>
+        <target>Фільтр (наприклад, текст, !виключити, @мітка)</target>
+      </trans-unit>
+      <trans-unit id="testExplorerFilterLabel">
+        <source xml:lang="en">Filter text for tests in the explorer</source>
+        <target>Фільтрувати текст для тестів у провіднику</target>
+      </trans-unit>
+      <trans-unit id="testing.filters.currentFile">
+        <source xml:lang="en">Show in Active File Only</source>
+        <target>Показати лише в активному файлі</target>
+      </trans-unit>
+      <trans-unit id="testing.filters.fuzzyMatch">
+        <source xml:lang="en">Fuzzy Match</source>
+        <target>Нечітке співпадіння</target>
+      </trans-unit>
+      <trans-unit id="testing.filters.menu">
+        <source xml:lang="en">More Filters...</source>
+        <target>Більше фільтрів...</target>
+      </trans-unit>
+      <trans-unit id="testing.filters.openedFiles">
+        <source xml:lang="en">Show in Opened Files Only</source>
+        <target>Показати лише в відкритих файлах</target>
+      </trans-unit>
+      <trans-unit id="testing.filters.removeTestExclusions">
+        <source xml:lang="en">Unhide All Tests</source>
+        <target>Показати всі тести</target>
+      </trans-unit>
+      <trans-unit id="testing.filters.showExcludedTests">
+        <source xml:lang="en">Show Hidden Tests</source>
+        <target>Показати приховані тести</target>
+      </trans-unit>
+      <trans-unit id="testing.filters.showOnlyExecuted">
+        <source xml:lang="en">Show Only Executed Tests</source>
+        <target>Показати тільки виконані тести</target>
+      </trans-unit>
+      <trans-unit id="testing.filters.showOnlyFailed">
+        <source xml:lang="en">Show Only Failed Tests</source>
+        <target>Показати тільки невдалі тести</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/browser/testingExplorerView" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="configureTestProfiles">
+        <source xml:lang="en">Configure Test Profiles</source>
+        <target>Налаштувати профілі тестування</target>
+      </trans-unit>
+      <trans-unit id="defaultTestProfile">
+        <source xml:lang="en">{0} (Default)</source>
+        <target>{0} (За замовчуванням)</target>
+      </trans-unit>
+      <trans-unit id="noResults">
+        <source xml:lang="en">No test results yet.</source>
+        <target>Ще немає результатів тестування.</target>
+      </trans-unit>
+      <trans-unit id="selectDefaultConfigs">
+        <source xml:lang="en">Select Default Profile</source>
+        <target>Вибрати профіль за замовчуванням</target>
+      </trans-unit>
+      <trans-unit id="testExplorer">
+        <source xml:lang="en">Test Explorer</source>
+        <target>Дослідник тестів</target>
+      </trans-unit>
+      <trans-unit id="testing.treeElementLabelDuration">
+        <source xml:lang="en">{0}, in {1}</source>
+        <note>{0} is the original label in testing.treeElementLabel, {1} is a duration</note>
+        <target>{0}, за {1}</target>
+      </trans-unit>
+      <trans-unit id="testing.treeElementLabelOutdated">
+        <source xml:lang="en">{0}, outdated result</source>
+        <note>{0} is the original label in testing.treeElementLabel</note>
+        <target>{0}, застарілий результат</target>
+      </trans-unit>
+      <trans-unit id="testingContinuousBadge">
+        <source xml:lang="en">Tests are being watched for changes</source>
+        <target>Тести спостерігаються на предмет змін</target>
+      </trans-unit>
+      <trans-unit id="testingCountBadgeFailed">
+        <source xml:lang="en">{0} failed tests</source>
+        <target>{0} не пройдених тестів</target>
+      </trans-unit>
+      <trans-unit id="testingCountBadgePassed">
+        <source xml:lang="en">{0} passed tests</source>
+        <target>{0} пройшов тести</target>
+      </trans-unit>
+      <trans-unit id="testingCountBadgeSkipped">
+        <source xml:lang="en">{0} skipped tests</source>
+        <target>{0} пропущених тестів</target>
+      </trans-unit>
+      <trans-unit id="testingFindExtension">
+        <source xml:lang="en">Show Workspace Tests</source>
+        <target>Показати тести робочого простору</target>
+      </trans-unit>
+      <trans-unit id="testingNoTest">
+        <source xml:lang="en">No tests were found in this file.</source>
+        <target>У цьому файлі не знайдено жодних тестів.</target>
+      </trans-unit>
+      <trans-unit id="testingSelectConfig">
+        <source xml:lang="en">Select Configuration...</source>
+        <target>Виберіть конфігурацію...</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/browser/testingOutputPeek" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="close">
+        <source xml:lang="en">Close</source>
+        <target>Закрити</target>
+      </trans-unit>
+      <trans-unit id="testOutputTitle">
+        <source xml:lang="en">Test Output</source>
+        <target>Вихід тесту</target>
+      </trans-unit>
+      <trans-unit id="testing.collapsePeekStack">
+        <source xml:lang="en">Collapse Stack Frames</source>
+        <target>Згорнути стекові фрейми</target>
+      </trans-unit>
+      <trans-unit id="testing.goToNextMessage">
+        <source xml:lang="en">Go to Next Test Failure</source>
+        <target>Перейти до наступного збою тесту</target>
+      </trans-unit>
+      <trans-unit id="testing.goToNextMessage.description">
+        <source xml:lang="en">Shows the next failure message in your file</source>
+        <target>Показує наступне повідомлення про помилку у вашому файлі</target>
+      </trans-unit>
+      <trans-unit id="testing.goToPreviousMessage">
+        <source xml:lang="en">Go to Previous Test Failure</source>
+        <target>Перейти до попередньої помилки тесту</target>
+      </trans-unit>
+      <trans-unit id="testing.goToPreviousMessage.description">
+        <source xml:lang="en">Shows the previous failure message in your file</source>
+        <target>Показує попереднє повідомлення про помилку у вашому файлі</target>
+      </trans-unit>
+      <trans-unit id="testing.markdownPeekError">
+        <source xml:lang="en">Could not open markdown preview: {0}.
+
+Please make sure the markdown extension is enabled.</source>
+        <target>Не вдалося відкрити попередній перегляд markdown: {0}.
+
+Будь ласка, переконайтеся, що розширення markdown увімкнене.</target>
+      </trans-unit>
+      <trans-unit id="testing.openMessageInEditor">
+        <source xml:lang="en">Open in Editor</source>
+        <target>Відкрити в редакторі</target>
+      </trans-unit>
+      <trans-unit id="testing.toggleTestingPeekHistory">
+        <source xml:lang="en">Toggle Test History in Peek</source>
+        <target>Перемикання історії тестів у Peek</target>
+      </trans-unit>
+      <trans-unit id="testing.toggleTestingPeekHistory.description">
+        <source xml:lang="en">Shows or hides the history of test runs in the peek view</source>
+        <target>Показує або приховує історію виконання тестів у попередньому перегляді</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/browser/testingProgressUiService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="testProgress.completed">
+        <source xml:lang="en">{0}/{1} tests passed ({2}%)</source>
+        <target>{0}/{1} тести пройдено ({2}%)</target>
+      </trans-unit>
+      <trans-unit id="testProgress.running">
+        <source xml:lang="en">Running tests, {0}/{1} passed ({2}%)</source>
+        <target>Виконання тестів, {0}/{1} пройдено ({2}%)</target>
+      </trans-unit>
+      <trans-unit id="testProgress.runningInitial">
+        <source xml:lang="en">Running tests...</source>
+        <target>Виконання тестів...</target>
+      </trans-unit>
+      <trans-unit id="testProgressWithSkip.completed">
+        <source xml:lang="en">{0}/{1} tests passed ({2}%, {3} skipped)</source>
+        <target>{0}/{1} тестів пройдено ({2}%, {3} пропущено)</target>
+      </trans-unit>
+      <trans-unit id="testProgressWithSkip.running">
+        <source xml:lang="en">Running tests, {0}/{1} tests passed ({2}%, {3} skipped)</source>
+        <target>Виконання тестів, {0}/{1} тестів пройшли ({2}%, {3} пропущено)</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/browser/testingViewPaneContainer" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="testing">
+        <source xml:lang="en">Testing</source>
+        <target>Тестування</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/browser/theme" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="testing.coverCountBadgeBackground">
+        <source xml:lang="en">Background for the badge indicating execution count</source>
+        <target>Фон для значка, що вказує на кількість виконань</target>
+      </trans-unit>
+      <trans-unit id="testing.coverCountBadgeForeground">
+        <source xml:lang="en">Foreground for the badge indicating execution count</source>
+        <target>Передній план для значка, що вказує кількість виконань</target>
+      </trans-unit>
+      <trans-unit id="testing.coveredBackground">
+        <source xml:lang="en">Background color of text that was covered.</source>
+        <target>Колір фону тексту, який був закритий.</target>
+      </trans-unit>
+      <trans-unit id="testing.coveredBorder">
+        <source xml:lang="en">Border color of text that was covered.</source>
+        <target>Колір рамки тексту, який був закритий.</target>
+      </trans-unit>
+      <trans-unit id="testing.coveredGutterBackground">
+        <source xml:lang="en">Gutter color of regions where code was covered.</source>
+        <target>Колір жолоба регіонів, де код був покритий.</target>
+      </trans-unit>
+      <trans-unit id="testing.iconErrored">
+        <source xml:lang="en">Color for the 'Errored' icon in the test explorer.</source>
+        <target>Колір для іконки 'Помилка' у тестовому досліднику.</target>
+      </trans-unit>
+      <trans-unit id="testing.iconErrored.retired">
+        <source xml:lang="en">Retired color for the 'Errored' icon in the test explorer.</source>
+        <target>Відкликаний колір для іконки 'Errored' у тестовому провіднику.</target>
+      </trans-unit>
+      <trans-unit id="testing.iconFailed">
+        <source xml:lang="en">Color for the 'failed' icon in the test explorer.</source>
+        <target>Колір для іконки 'невдалий' у тестовому експлорері.</target>
+      </trans-unit>
+      <trans-unit id="testing.iconFailed.retired">
+        <source xml:lang="en">Retired color for the 'failed' icon in the test explorer.</source>
+        <target>Відкликаний колір для іконки 'не вдалося' в оглядачі тестів.</target>
+      </trans-unit>
+      <trans-unit id="testing.iconPassed">
+        <source xml:lang="en">Color for the 'passed' icon in the test explorer.</source>
+        <target>Колір для іконки 'пройдено' у тестовому провіднику.</target>
+      </trans-unit>
+      <trans-unit id="testing.iconPassed.retired">
+        <source xml:lang="en">Retired color for the 'passed' icon in the test explorer.</source>
+        <target>Відпрацьований колір для іконки 'пройдено' в тестовому експлорері.</target>
+      </trans-unit>
+      <trans-unit id="testing.iconQueued">
+        <source xml:lang="en">Color for the 'Queued' icon in the test explorer.</source>
+        <target>Колір для іконки 'У черзі' в тестовому досліднику.</target>
+      </trans-unit>
+      <trans-unit id="testing.iconQueued.retired">
+        <source xml:lang="en">Retired color for the 'Queued' icon in the test explorer.</source>
+        <target>Відкликаний колір для іконки 'В черзі' в тестовому досліднику.</target>
+      </trans-unit>
+      <trans-unit id="testing.iconSkipped">
+        <source xml:lang="en">Color for the 'Skipped' icon in the test explorer.</source>
+        <target>Колір для іконки 'Пропущено' в тестовому провіднику.</target>
+      </trans-unit>
+      <trans-unit id="testing.iconSkipped.retired">
+        <source xml:lang="en">Retired color for the 'Skipped' icon in the test explorer.</source>
+        <target>Відкликаний колір для іконки 'Пропущено' в тестовому провіднику.</target>
+      </trans-unit>
+      <trans-unit id="testing.iconUnset">
+        <source xml:lang="en">Color for the 'Unset' icon in the test explorer.</source>
+        <target>Колір для іконки 'Unset' у тестовому провіднику.</target>
+      </trans-unit>
+      <trans-unit id="testing.iconUnset.retired">
+        <source xml:lang="en">Retired color for the 'Unset' icon in the test explorer.</source>
+        <target>Відкликаний колір для іконки 'Unset' у тестовому досліднику.</target>
+      </trans-unit>
+      <trans-unit id="testing.message.error.badgeBackground">
+        <source xml:lang="en">Background color of test error messages shown inline in the editor.</source>
+        <target>Колір фону повідомлень про помилки тестування, що відображаються в редакторі.</target>
+      </trans-unit>
+      <trans-unit id="testing.message.error.badgeBorder">
+        <source xml:lang="en">Border color of test error messages shown inline in the editor.</source>
+        <target>Колір рамки повідомлень про помилки тестування, що відображаються в редакторі.</target>
+      </trans-unit>
+      <trans-unit id="testing.message.error.badgeForeground">
+        <source xml:lang="en">Text color of test error messages shown inline in the editor.</source>
+        <target>Колір тексту повідомлень про помилки тестування, що відображаються в редакторі.</target>
+      </trans-unit>
+      <trans-unit id="testing.message.error.marginBackground">
+        <source xml:lang="en">Margin color beside error messages shown inline in the editor.</source>
+        <target>Колір поля поряд з повідомленнями про помилки, які відображаються в редакторі.</target>
+      </trans-unit>
+      <trans-unit id="testing.message.info.decorationForeground">
+        <source xml:lang="en">Text color of test info messages shown inline in the editor.</source>
+        <target>Колір тексту інформаційних повідомлень тесту, що відображаються в редакторі.</target>
+      </trans-unit>
+      <trans-unit id="testing.message.info.marginBackground">
+        <source xml:lang="en">Margin color beside info messages shown inline in the editor.</source>
+        <target>Колір поля поряд з інформаційними повідомленнями, що відображаються в редакторі.</target>
+      </trans-unit>
+      <trans-unit id="testing.messagePeekBorder">
+        <source xml:lang="en">Color of the peek view borders and arrow when peeking a logged message.</source>
+        <target>Колір меж перегляду та стрілки під час перегляду зафіксованого повідомлення.</target>
+      </trans-unit>
+      <trans-unit id="testing.messagePeekHeaderBackground">
+        <source xml:lang="en">Color of the peek view borders and arrow when peeking a logged message.</source>
+        <target>Колір меж перегляду та стрілки під час перегляду зафіксованого повідомлення.</target>
+      </trans-unit>
+      <trans-unit id="testing.peekBorder">
+        <source xml:lang="en">Color of the peek view borders and arrow.</source>
+        <target>Колір меж попереднього перегляду та стрілки.</target>
+      </trans-unit>
+      <trans-unit id="testing.runAction">
+        <source xml:lang="en">Color for 'run' icons in the editor.</source>
+        <target>Колір для іконок 'run' в редакторі.</target>
+      </trans-unit>
+      <trans-unit id="testing.uncoveredBackground">
+        <source xml:lang="en">Background color of text that was not covered.</source>
+        <target>Колір фону тексту, який не був закритий.</target>
+      </trans-unit>
+      <trans-unit id="testing.uncoveredBorder">
+        <source xml:lang="en">Border color of text that was not covered.</source>
+        <target>Колір рамки тексту, який не був закритий.</target>
+      </trans-unit>
+      <trans-unit id="testing.uncoveredBranchBackground">
+        <source xml:lang="en">Background of the widget shown for an uncovered branch.</source>
+        <target>Фон віджета, що показується для непокритої гілки.</target>
+      </trans-unit>
+      <trans-unit id="testing.uncoveredGutterBackground">
+        <source xml:lang="en">Gutter color of regions where code not covered.</source>
+        <target>Колір жолоба регіонів, де код не покритий.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/common/configuration" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="testConfigurationTitle">
+        <source xml:lang="en">Testing</source>
+        <target>Тестування</target>
+      </trans-unit>
+      <trans-unit id="testing.ShowCoverageInExplorer">
+        <source xml:lang="en">Whether test coverage should be down in the File Explorer view.</source>
+        <target>Чи повинна бути знижена покриття тестів у вигляді Провідника файлів.</target>
+      </trans-unit>
+      <trans-unit id="testing.alwaysRevealTestOnStateChange">
+        <source xml:lang="en">Always reveal the executed test when {0} is on. If this setting is turned off, only failed tests will be revealed.</source>
+        <target>Завжди показуйте виконаний тест, коли {0} увімкнено. Якщо ця настройка вимкнена, будуть показані лише невдалі тести.</target>
+      </trans-unit>
+      <trans-unit id="testing.automaticallyOpenPeekView">
+        <source xml:lang="en">Configures when the error Peek view is automatically opened.</source>
+        <target>Налаштовує, коли перегляд помилки Peek автоматично відкривається.</target>
+      </trans-unit>
+      <trans-unit id="testing.automaticallyOpenPeekView.failureAnywhere">
+        <source xml:lang="en">Open automatically no matter where the failure is.</source>
+        <target>Відкривати автоматично, незалежно від того, де сталася помилка.</target>
+      </trans-unit>
+      <trans-unit id="testing.automaticallyOpenPeekView.failureInVisibleDocument">
+        <source xml:lang="en">Open automatically when a test fails in a visible document.</source>
+        <target>Відкрити автоматично, коли тест не проходить у видимому документі.</target>
+      </trans-unit>
+      <trans-unit id="testing.automaticallyOpenPeekView.never">
+        <source xml:lang="en">Never automatically open.</source>
+        <target>Ніколи не відкривати автоматично.</target>
+      </trans-unit>
+      <trans-unit id="testing.automaticallyOpenPeekViewDuringContinuousRun">
+        <source xml:lang="en">Controls whether to automatically open the Peek view during continuous run mode.</source>
+        <target>Контролює, чи слід автоматично відкривати перегляд Peek під час безперервного режиму виконання.</target>
+      </trans-unit>
+      <trans-unit id="testing.countBadge">
+        <source xml:lang="en">Controls the count badge on the Testing icon on the Activity Bar.</source>
+        <target>Контролює значок лічильника на іконці Тестування на панелі активності.</target>
+      </trans-unit>
+      <trans-unit id="testing.countBadge.failed">
+        <source xml:lang="en">Show the number of failed tests</source>
+        <target>Показати кількість невдалих тестів</target>
+      </trans-unit>
+      <trans-unit id="testing.countBadge.off">
+        <source xml:lang="en">Disable the testing count badge</source>
+        <target>Вимкнути значок лічильника тестування</target>
+      </trans-unit>
+      <trans-unit id="testing.countBadge.passed">
+        <source xml:lang="en">Show the number of passed tests</source>
+        <target>Показати кількість пройдених тестів</target>
+      </trans-unit>
+      <trans-unit id="testing.countBadge.skipped">
+        <source xml:lang="en">Show the number of skipped tests</source>
+        <target>Показати кількість пропущених тестів</target>
+      </trans-unit>
+      <trans-unit id="testing.coverageBarThresholds">
+        <source xml:lang="en">Configures the colors used for percentages in test coverage bars.</source>
+        <target>Налаштовує кольори, що використовуються для відсотків у стовпцях покриття тестами.</target>
+      </trans-unit>
+      <trans-unit id="testing.coverageToolbarEnabled">
+        <source xml:lang="en">Controls whether the coverage toolbar is shown in the editor.</source>
+        <target>Контролює, чи відображається панель інструментів покриття в редакторі.</target>
+      </trans-unit>
+      <trans-unit id="testing.defaultGutterClickAction">
+        <source xml:lang="en">Controls the action to take when left-clicking on a test decoration in the gutter.</source>
+        <target>Контролює дію, яку потрібно виконати при лівому клацанні на тестовій декорації в полі.</target>
+      </trans-unit>
+      <trans-unit id="testing.defaultGutterClickAction.contextMenu">
+        <source xml:lang="en">Open the context menu for more options.</source>
+        <target>Відкрийте контекстне меню для отримання додаткових опцій.</target>
+      </trans-unit>
+      <trans-unit id="testing.defaultGutterClickAction.coverage">
+        <source xml:lang="en">Run the test with coverage.</source>
+        <target>Запустіть тест з покриттям.</target>
+      </trans-unit>
+      <trans-unit id="testing.defaultGutterClickAction.debug">
+        <source xml:lang="en">Debug the test.</source>
+        <target>Виправте тест.</target>
+      </trans-unit>
+      <trans-unit id="testing.defaultGutterClickAction.run">
+        <source xml:lang="en">Run the test.</source>
+        <target>Запустіть тест.</target>
+      </trans-unit>
+      <trans-unit id="testing.displayedCoveragePercent">
+        <source xml:lang="en">Configures what percentage is displayed by default for test coverage.</source>
+        <target>Налаштовує, який відсоток відображається за замовчуванням для покриття тестами.</target>
+      </trans-unit>
+      <trans-unit id="testing.displayedCoveragePercent.minimum">
+        <source xml:lang="en">The minimum of statement, function, and branch coverage.</source>
+        <target>Мінімум покриття операторів, функцій та гілок.</target>
+      </trans-unit>
+      <trans-unit id="testing.displayedCoveragePercent.statement">
+        <source xml:lang="en">The statement coverage.</source>
+        <target>Покриття операторів.</target>
+      </trans-unit>
+      <trans-unit id="testing.displayedCoveragePercent.totalCoverage">
+        <source xml:lang="en">A calculation of the combined statement, function, and branch coverage.</source>
+        <target>Розрахунок комбінованої звітності, функціонального та гілкового покриття.</target>
+      </trans-unit>
+      <trans-unit id="testing.followRunningTest">
+        <source xml:lang="en">Controls whether the running test should be followed in the Test Explorer view.</source>
+        <target>Контролює, чи слід відстежувати виконуваний тест у вигляді Test Explorer.</target>
+      </trans-unit>
+      <trans-unit id="testing.gutterEnabled">
+        <source xml:lang="en">Controls whether test decorations are shown in the editor gutter.</source>
+        <target>Контролює, чи відображаються тестові декорації в бічній панелі редактора.</target>
+      </trans-unit>
+      <trans-unit id="testing.openTesting">
+        <source xml:lang="en">Controls when the testing view should open.</source>
+        <target>Контролює, коли має відкритися вікно тестування.</target>
+      </trans-unit>
+      <trans-unit id="testing.openTesting.neverOpen">
+        <source xml:lang="en">Never automatically open the testing views</source>
+        <target>Ніколи автоматично не відкривати перегляди тестування</target>
+      </trans-unit>
+      <trans-unit id="testing.openTesting.openExplorerOnTestStart">
+        <source xml:lang="en">Open the test explorer when tests start</source>
+        <target>Відкрити дослідник тестів, коли починаються тести</target>
+      </trans-unit>
+      <trans-unit id="testing.openTesting.openOnTestFailure">
+        <source xml:lang="en">Open the test result view on any test failure</source>
+        <target>Відкрийте перегляд результатів тесту при будь-якому збою тесту</target>
+      </trans-unit>
+      <trans-unit id="testing.openTesting.openOnTestStart">
+        <source xml:lang="en">Open the test results view when tests start</source>
+        <target>Відкрити перегляд результатів тестування, коли тести починаються</target>
+      </trans-unit>
+      <trans-unit id="testing.saveBeforeTest">
+        <source xml:lang="en">Control whether save all dirty editors before running a test.</source>
+        <target>Контролюйте, чи зберігати всі незбережені редактори перед виконанням тесту.</target>
+      </trans-unit>
+      <trans-unit id="testing.showAllMessages">
+        <source xml:lang="en">Controls whether to show messages from all test runs.</source>
+        <target>Контролює, чи показувати повідомлення з усіх тестових запусків.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/common/constants" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="testGroup.coverage">
+        <source xml:lang="en">Coverage</source>
+        <target>Покриття</target>
+      </trans-unit>
+      <trans-unit id="testGroup.debug">
+        <source xml:lang="en">Debug</source>
+        <target>Налагодження</target>
+      </trans-unit>
+      <trans-unit id="testGroup.run">
+        <source xml:lang="en">Run</source>
+        <target>Запустити</target>
+      </trans-unit>
+      <trans-unit id="testState.errored">
+        <source xml:lang="en">Errored</source>
+        <target>Помилка</target>
+      </trans-unit>
+      <trans-unit id="testState.failed">
+        <source xml:lang="en">Failed</source>
+        <target>Не вдалося</target>
+      </trans-unit>
+      <trans-unit id="testState.passed">
+        <source xml:lang="en">Passed</source>
+        <target>Пройдено</target>
+      </trans-unit>
+      <trans-unit id="testState.queued">
+        <source xml:lang="en">Queued</source>
+        <target>У черзі</target>
+      </trans-unit>
+      <trans-unit id="testState.running">
+        <source xml:lang="en">Running</source>
+        <target>Запуск</target>
+      </trans-unit>
+      <trans-unit id="testState.skipped">
+        <source xml:lang="en">Skipped</source>
+        <target>Пропущено</target>
+      </trans-unit>
+      <trans-unit id="testState.unset">
+        <source xml:lang="en">Not yet run</source>
+        <target>Ще не запущено</target>
+      </trans-unit>
+      <trans-unit id="testing.treeElementLabel">
+        <source xml:lang="en">{0} ({1})</source>
+        <note>label then the unit tests state, for example "Addition Tests (Running)"</note>
+        <target>{0} ({1})</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/common/testResult" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="runFinished">
+        <source xml:lang="en">Test run at {0}</source>
+        <target>Тестовий запуск на {0}</target>
+      </trans-unit>
+      <trans-unit id="testUnnamedTask">
+        <source xml:lang="en">Unnamed Task</source>
+        <target>Неназвана задача</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/common/testServiceImpl" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="testError">
+        <source xml:lang="en">An error occurred attempting to run tests: {0}</source>
+        <target>Виникла помилка під час спроби запустити тести: {0}</target>
+      </trans-unit>
+      <trans-unit id="testTrust">
+        <source xml:lang="en">Running tests may execute code in your workspace.</source>
+        <target>Запуск тестів може виконувати код у вашому робочому просторі.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/common/testTypes" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="testing.runProfileBitset.coverage">
+        <source xml:lang="en">Coverage</source>
+        <target>Покриття</target>
+      </trans-unit>
+      <trans-unit id="testing.runProfileBitset.debug">
+        <source xml:lang="en">Debug</source>
+        <target>Виправлення помилок</target>
+      </trans-unit>
+      <trans-unit id="testing.runProfileBitset.run">
+        <source xml:lang="en">Run</source>
+        <target>Запустити</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/common/testingContentProvider" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="runNoOutout">
+        <source xml:lang="en">The test run did not record any output.</source>
+        <target>Тестовий запуск не зафіксував жодного виходу.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/common/testingContextKeys" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="testing.activeEditorHasTests">
+        <source xml:lang="en">Indicates whether any tests are present in the current editor</source>
+        <target>Вказує, чи присутні будь-які тести в поточному редакторі</target>
+      </trans-unit>
+      <trans-unit id="testing.canGoToRelatedCode">
+        <source xml:lang="en">Whether a controller implements a capability to find code related to a test</source>
+        <target>Чи реалізує контролер можливість знаходити код, пов'язаний з тестом</target>
+      </trans-unit>
+      <trans-unit id="testing.canGoToRelatedTest">
+        <source xml:lang="en">Whether a controller implements a capability to find tests related to code</source>
+        <target>Чи реалізує контролер можливість знаходити тести, пов'язані з кодом</target>
+      </trans-unit>
+      <trans-unit id="testing.canRefresh">
+        <source xml:lang="en">Indicates whether any test controller has an attached refresh handler.</source>
+        <target>Вказує, чи має будь-який контролер тестування прикріплений обробник оновлення.</target>
+      </trans-unit>
+      <trans-unit id="testing.controllerId">
+        <source xml:lang="en">Controller ID of the current test item</source>
+        <target>Ідентифікатор контролера поточного тестового елемента</target>
+      </trans-unit>
+      <trans-unit id="testing.coverageToolbarEnabled">
+        <source xml:lang="en">Indicates whether the coverage toolbar is enabled</source>
+        <target>Контролює, чи відображається панель інструментів покриття в редакторі.</target>
+      </trans-unit>
+      <trans-unit id="testing.cursorInsideTestRange">
+        <source xml:lang="en">Whether the cursor is currently inside a test range</source>
+        <target>Чи курсор наразі знаходиться всередині тестового діапазону</target>
+      </trans-unit>
+      <trans-unit id="testing.hasConfigurableConfig">
+        <source xml:lang="en">Indicates whether any test configuration can be configured</source>
+        <target>Вказує, чи можна налаштувати будь-яку конфігурацію тесту</target>
+      </trans-unit>
+      <trans-unit id="testing.hasCoverableTests">
+        <source xml:lang="en">Indicates whether any test controller has registered a coverage configuration</source>
+        <target>Вказує, чи зареєстрував будь-який контролер тестування конфігурацію покриття</target>
+      </trans-unit>
+      <trans-unit id="testing.hasDebuggableTests">
+        <source xml:lang="en">Indicates whether any test controller has registered a debug configuration</source>
+        <target>Вказує, чи зареєстрував будь-який контролер тестування конфігурацію налагодження</target>
+      </trans-unit>
+      <trans-unit id="testing.hasNonDefaultConfig">
+        <source xml:lang="en">Indicates whether any test controller has registered a non-default configuration</source>
+        <target>Вказує, чи зареєстрував будь-який контролер тестів конфігурацію, що відрізняється від значення за замовчуванням</target>
+      </trans-unit>
+      <trans-unit id="testing.hasPerTestCoverage">
+        <source xml:lang="en">Indicates whether per-test coverage is available</source>
+        <target>Вказує, чи доступне покриття для кожного тесту</target>
+      </trans-unit>
+      <trans-unit id="testing.hasRunnableTests">
+        <source xml:lang="en">Indicates whether any test controller has registered a run configuration</source>
+        <target>Вказує, чи зареєстрував будь-який контролер тестування конфігурацію запуску</target>
+      </trans-unit>
+      <trans-unit id="testing.inlineCoverageEnabled">
+        <source xml:lang="en">Indicates whether inline coverage is shown</source>
+        <target>Вказує, чи відображається внутрішнє покриття</target>
+      </trans-unit>
+      <trans-unit id="testing.isContinuousModeOn">
+        <source xml:lang="en">Indicates whether continuous test mode is on.</source>
+        <target>Вказує, чи увімкнено безперервний тестовий режим.</target>
+      </trans-unit>
+      <trans-unit id="testing.isCoverageFilteredToTest">
+        <source xml:lang="en">Indicates whether coverage has been filterd to a single test</source>
+        <target>Вказує, чи було покриття відфільтровано до одного тесту</target>
+      </trans-unit>
+      <trans-unit id="testing.isParentRunningContinuously">
+        <source xml:lang="en">Indicates whether the parent of a test is continuously running, set in the menu context of test items</source>
+        <target>Вказує, чи батьківський тест виконується безперервно, встановлено в контексті меню тестових елементів</target>
+      </trans-unit>
+      <trans-unit id="testing.isRefreshing">
+        <source xml:lang="en">Indicates whether any test controller is currently refreshing tests.</source>
+        <target>Вказує, чи будь-який контролер тестів наразі оновлює тести.</target>
+      </trans-unit>
+      <trans-unit id="testing.isTestCoverageOpen">
+        <source xml:lang="en">Indicates whether a test coverage report is open</source>
+        <target>Вказує, чи відкритий звіт про покриття тестування</target>
+      </trans-unit>
+      <trans-unit id="testing.peekHasStack">
+        <source xml:lang="en">Whether the message shown in a peek view has a stack trace</source>
+        <target>Чи має повідомлення, що відображається в попередньому перегляді, трасування стеку</target>
+      </trans-unit>
+      <trans-unit id="testing.peekItemType">
+        <source xml:lang="en">Type of the item in the output peek view. Either a "test", "message", "task", or "result".</source>
+        <target>Тип елемента у вихідному попередньому перегляді. Або "тест", "повідомлення", "задача" або "результат".</target>
+      </trans-unit>
+      <trans-unit id="testing.profile.context.group">
+        <source xml:lang="en">Type of menu where the configure testing profile submenu exists. Either "run", "debug", or "coverage"</source>
+        <target>Тип меню, де існує підменю налаштування профілю тестування. Або "виконати", "налагодити" або "покриття"</target>
+      </trans-unit>
+      <trans-unit id="testing.supportsContinuousRun">
+        <source xml:lang="en">Indicates whether continous test running is supported</source>
+        <target>Вказує, чи підтримується безперервне виконання тестів</target>
+      </trans-unit>
+      <trans-unit id="testing.testId">
+        <source xml:lang="en">ID of the current test item, set when creating or opening menus on test items</source>
+        <target>Ідентифікатор поточного тестового елемента, встановлюється під час створення або відкриття меню тестових елементів</target>
+      </trans-unit>
+      <trans-unit id="testing.testItemHasUri">
+        <source xml:lang="en">Boolean indicating whether the test item has a URI defined</source>
+        <target>Булеве значення, що вказує, чи має тестовий елемент визначений URI</target>
+      </trans-unit>
+      <trans-unit id="testing.testItemIsHidden">
+        <source xml:lang="en">Boolean indicating whether the test item is hidden</source>
+        <target>Булеве значення, що вказує, чи є тестовий елемент прихованим</target>
+      </trans-unit>
+      <trans-unit id="testing.testMessage">
+        <source xml:lang="en">Value set in `testMessage.contextValue`, available in editor/content and testing/message/context</source>
+        <target>Значення, встановлене в `testMessage.contextValue`, доступне в editor/content та testing/message/context.</target>
+      </trans-unit>
+      <trans-unit id="testing.testResultOutdated">
+        <source xml:lang="en">Value available in editor/content and testing/message/context when the result is outdated</source>
+        <target>Значення доступне в editor/content та testing/message/context, коли результат застарілий</target>
+      </trans-unit>
+      <trans-unit id="testing.testResultState">
+        <source xml:lang="en">Value available testing/item/result indicating the state of the item.</source>
+        <target>Значення доступного тестування/предмета/результату, що вказує на стан предмета.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
