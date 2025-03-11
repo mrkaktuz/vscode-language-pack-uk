@@ -12,11 +12,11 @@
     <body>
       <trans-unit id="bad_name1">
         <source xml:lang="en">Invalid file name</source>
-        <target>Недійсне ім'я файлу</target>
+        <target>Неправильне ім'я файлу</target>
       </trans-unit>
       <trans-unit id="bad_name2">
         <source xml:lang="en">'{0}' is not a valid file name</source>
-        <target>'{0}' не є дійсним ім'ям файлу</target>
+        <target>'{0}' не є дійсною назвою файлу</target>
       </trans-unit>
       <trans-unit id="bad_name3">
         <source xml:lang="en">'{0}' already exists</source>
@@ -121,7 +121,7 @@
       </trans-unit>
       <trans-unit id="overflow.start.title">
         <source xml:lang="en">Start with Snippet</source>
-        <target>Почати з фрагмента</target>
+        <target>Почніть з фрагмента</target>
       </trans-unit>
       <trans-unit id="title">
         <source xml:lang="en">Start with: {0}</source>
@@ -165,7 +165,7 @@
       </trans-unit>
       <trans-unit id="sep.userSnippet">
         <source xml:lang="en">User Snippets</source>
-        <target>Фрагменти користувача</target>
+        <target>Користувацькі фрагменти</target>
       </trans-unit>
       <trans-unit id="sep.workspaceSnippet">
         <source xml:lang="en">Workspace Snippets</source>
@@ -177,7 +177,7 @@
     <body>
       <trans-unit id="editor.snippets.codeActions.enabled">
         <source xml:lang="en">Controls if surround-with-snippets or file template snippets show as Code Actions.</source>
-        <target>Контролює, чи показують фрагменти оточення або фрагменти шаблонів файлів як дії коду.</target>
+        <target>Контролює, чи показуються фрагменти оточення або фрагменти шаблону файлу як дії коду.</target>
       </trans-unit>
       <trans-unit id="snippetSchema.json">
         <source xml:lang="en">User snippet configuration</source>
@@ -185,7 +185,7 @@
       </trans-unit>
       <trans-unit id="snippetSchema.json.body">
         <source xml:lang="en">The snippet content. Use `$1`, `${1:defaultText}` to define cursor positions, use `$0` for the final cursor position. Insert variable values with `${varName}` and `${varName:defaultText}`, e.g. `This is file: $TM_FILENAME`.</source>
-        <target>Вміст фрагмента. Використовуйте `$1`, `${1:defaultText}` для визначення позицій курсора, використовуйте `$0` для фінальної позиції курсора. Вставте значення змінних за допомогою `${varName}` та `${varName:defaultText}`, наприклад, `Це файл: $TM_FILENAME`.</target>
+        <target>Зміст фрагмента. Використовуйте `$1`, `${1:defaultText}` для визначення позицій курсора, використовуйте `$0` для фінальної позиції курсора. Вставляйте значення змінних за допомогою `${varName}` та `${varName:defaultText}`, наприклад, `Це файл: $TM_FILENAME`.</target>
       </trans-unit>
       <trans-unit id="snippetSchema.json.default">
         <source xml:lang="en">Empty snippet</source>
@@ -197,11 +197,11 @@
       </trans-unit>
       <trans-unit id="snippetSchema.json.isFileTemplate">
         <source xml:lang="en">The snippet is meant to populate or replace a whole file</source>
-        <target>Цей фрагмент призначений для заповнення або заміни цілого файлу</target>
+        <target>Фрагмент призначений для заповнення або заміни цілого файлу.</target>
       </trans-unit>
       <trans-unit id="snippetSchema.json.prefix">
         <source xml:lang="en">The prefix to use when selecting the snippet in intellisense</source>
-        <target>Префікс, який слід використовувати при виборі фрагмента в інтелісенсі</target>
+        <target>Префікс, який слід використовувати при виборі фрагмента в intellisense</target>
       </trans-unit>
       <trans-unit id="snippetSchema.json.scope">
         <source xml:lang="en">A list of language names to which this snippet applies, e.g. 'typescript,javascript'.</source>
@@ -213,7 +213,7 @@
     <body>
       <trans-unit id="source.userSnippet">
         <source xml:lang="en">User Snippet</source>
-        <target>Фрагмент користувача</target>
+        <target>Користувацький фрагмент</target>
       </trans-unit>
       <trans-unit id="source.userSnippetGlobal">
         <source xml:lang="en">Global User Snippet</source>
@@ -233,7 +233,7 @@
       </trans-unit>
       <trans-unit id="badVariableUse">
         <source xml:lang="en">One or more snippets from the extension '{0}' very likely confuse snippet-variables and snippet-placeholders (see https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax for more details)</source>
-        <target>Один або кілька фрагментів з розширення '{0}' дуже ймовірно плутають змінні-фрагменти та плейсхолдери-фрагменти (див. https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax для отримання додаткової інформації)</target>
+        <target>Одна або кілька фрагментів з розширення '{0}', ймовірно, плутають змінні фрагментів і плейсхолдери фрагментів (див. https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax для отримання додаткової інформації)</target>
       </trans-unit>
       <trans-unit id="invalid.language">
         <source xml:lang="en">Unknown language in `contributes.{0}.language`. Provided value: {1}</source>
@@ -241,19 +241,19 @@
       </trans-unit>
       <trans-unit id="invalid.language.0">
         <source xml:lang="en">When omitting the language, the value of `contributes.{0}.path` must be a `.code-snippets`-file. Provided value: {1}</source>
-        <target>При пропуску мови, значення `contributes.{0}.path` повинно бути файлом з розширенням `.code-snippets`. Надане значення: {1}</target>
+        <target>Коли мова пропускається, значення `contributes.{0}.path` повинно бути файлом `.code-snippets`. Надане значення: {1}</target>
       </trans-unit>
       <trans-unit id="invalid.path.0">
         <source xml:lang="en">Expected string in `contributes.{0}.path`. Provided value: {1}</source>
-        <target>Очікуваний рядок у `contributes.{0}.path`. Надане значення: {1}</target>
+        <target>Очікується рядок у `contributes.{0}.path`. Надане значення: {1}</target>
       </trans-unit>
       <trans-unit id="invalid.path.1">
         <source xml:lang="en">Expected `contributes.{0}.path` ({1}) to be included inside extension's folder ({2}). This might make the extension non-portable.</source>
-        <target>Очікувалося, що `contributes.{0}.path` ({1}) буде включено до папки розширення ({2}). Це може зробити розширення непортативним.</target>
+        <target>Очікувалося, що `contributes.{0}.path` ({1}) буде включено в папку розширення ({2}). Це може зробити розширення непортативним.</target>
       </trans-unit>
       <trans-unit id="vscode.extension.contributes.snippets">
         <source xml:lang="en">Contributes snippets.</source>
-        <target>Вносить фрагменти.</target>
+        <target>Сприяє фрагментам.</target>
       </trans-unit>
       <trans-unit id="vscode.extension.contributes.snippets-language">
         <source xml:lang="en">Language identifier for which this snippet is contributed to.</source>
