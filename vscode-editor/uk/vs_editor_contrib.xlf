@@ -84,7 +84,7 @@
         <target>Копіювати</target>
       </trans-unit>
       <trans-unit id="actions.clipboard.copyWithSyntaxHighlightingLabel">
-        <source xml:lang="en">Copy With Syntax Highlighting</source>
+        <source xml:lang="en">Copy with Syntax Highlighting</source>
         <target>Копіювати з підсвічуванням синтаксису</target>
       </trans-unit>
       <trans-unit id="actions.clipboard.cutLabel">
@@ -363,8 +363,8 @@
         <target>Виберіть команду</target>
       </trans-unit>
       <trans-unit id="showLensOnLine">
-        <source xml:lang="en">Show CodeLens Commands For Current Line</source>
-        <target>Показати команди CodeLens для поточної строки</target>
+        <source xml:lang="en">Show CodeLens Commands for Current Line</source>
+        <target>Показати команди CodeLens для поточного рядка</target>
       </trans-unit>
     </body>
   </file>
@@ -700,12 +700,12 @@ The first edit matching the preferences will be applied.</source>
         <target>Знайти</target>
       </trans-unit>
       <trans-unit id="startFindWithArgsAction">
-        <source xml:lang="en">Find With Arguments</source>
+        <source xml:lang="en">Find with Arguments</source>
         <target>Знайти з аргументами</target>
       </trans-unit>
       <trans-unit id="startFindWithSelectionAction">
-        <source xml:lang="en">Find With Selection</source>
-        <target>Знайти за вибором</target>
+        <source xml:lang="en">Find with Selection</source>
+        <target>Знайти з вибором</target>
       </trans-unit>
       <trans-unit id="startReplace">
         <source xml:lang="en">Replace</source>
@@ -1724,10 +1724,6 @@ This allows for users to show the hover without using the mouse.</note>
         <source xml:lang="en">Accept Inline Suggestion</source>
         <target>Прийняти вбудовану пропозицію</target>
       </trans-unit>
-      <trans-unit id="action.inlineSuggest.acceptNextInlineEditPart">
-        <source xml:lang="en">Accept Next Inline Edit Part</source>
-        <target>Прийняти наступну частину редагування в рядку</target>
-      </trans-unit>
       <trans-unit id="action.inlineSuggest.acceptNextLine">
         <source xml:lang="en">Accept Next Line Of Inline Suggestion</source>
         <target>Прийняти наступний рядок вбудованої пропозиції</target>
@@ -1880,6 +1876,14 @@ A keybinding</note>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/editor/contrib/inlineCompletions/browser/inlineCompletionsAccessibleView" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="inlineEditAvailable">
+        <source xml:lang="en">There is an inline edit available:</source>
+        <target>Доступне вбудоване редагування:</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/components/gutterIndicatorMenu" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="accept">
@@ -1942,6 +1946,10 @@ A keybinding</note>
         <source xml:lang="en">Background color for the primary inline edit gutter indicator.</source>
         <target>Колір фону для основного індикатора редагування в рядку.</target>
       </trans-unit>
+      <trans-unit id="inlineEdit.gutterIndicator.primaryBorder">
+        <source xml:lang="en">Border color for the primary inline edit gutter indicator.</source>
+        <target>Колір рамки для основного індикатора редагування в рядку.</target>
+      </trans-unit>
       <trans-unit id="inlineEdit.gutterIndicator.primaryForeground">
         <source xml:lang="en">Foreground color for the primary inline edit gutter indicator.</source>
         <target>Колір переднього плану для основного індикатора редагування в рядку.</target>
@@ -1950,6 +1958,10 @@ A keybinding</note>
         <source xml:lang="en">Background color for the secondary inline edit gutter indicator.</source>
         <target>Колір фону для індикатора вторинного інлайн редагування.</target>
       </trans-unit>
+      <trans-unit id="inlineEdit.gutterIndicator.secondaryBorder">
+        <source xml:lang="en">Border color for the secondary inline edit gutter indicator.</source>
+        <target>Колір рамки для індикатора вторинного інлайн редагування.</target>
+      </trans-unit>
       <trans-unit id="inlineEdit.gutterIndicator.secondaryForeground">
         <source xml:lang="en">Foreground color for the secondary inline edit gutter indicator.</source>
         <target>Колір переднього плану для індикатора вторинного вбудованого редагування.</target>
@@ -1957,6 +1969,10 @@ A keybinding</note>
       <trans-unit id="inlineEdit.gutterIndicator.successfulBackground">
         <source xml:lang="en">Background color for the successful inline edit gutter indicator.</source>
         <target>Колір фону для індикатора успішного вбудованого редагування.</target>
+      </trans-unit>
+      <trans-unit id="inlineEdit.gutterIndicator.successfulBorder">
+        <source xml:lang="en">Border color for the successful inline edit gutter indicator.</source>
+        <target>Колір рамки для індикатора успішного вбудованого редагування.</target>
       </trans-unit>
       <trans-unit id="inlineEdit.gutterIndicator.successfulForeground">
         <source xml:lang="en">Foreground color for the successful inline edit gutter indicator.</source>
@@ -1994,17 +2010,13 @@ A keybinding</note>
         <source xml:lang="en">Overlay color for the changed text in the original text of inline edits.</source>
         <target>Колір накладки для зміненого тексту в оригінальному тексті вбудованих редагувань.</target>
       </trans-unit>
-      <trans-unit id="inlineEdit.tabWillAcceptBorder">
-        <source xml:lang="en">Border color for the inline edits widget when tab will accept it.</source>
-        <target>Колір рамки для віджету вбудованих редагувань, коли вкладка його прийме.</target>
+      <trans-unit id="inlineEdit.tabWillAcceptModifiedBorder">
+        <source xml:lang="en">Modified border color for the inline edits widget when tab will accept it.</source>
+        <target>Змінено колір рамки для віджета вбудованих редагувань, коли вкладка його прийме.</target>
       </trans-unit>
       <trans-unit id="inlineEdit.tabWillAcceptOriginalBorder">
-        <source xml:lang="en">Border color for the inline edits widget over the original text when tab will accept it.</source>
-        <target>Колір рамки для віджета вбудованих редагувань над оригінальним текстом, коли вкладка його прийме.</target>
-      </trans-unit>
-      <trans-unit id="inlineEdit.wordReplacementView.background">
-        <source xml:lang="en">Background color for the inline edit word replacement view.</source>
-        <target>Колір фону для перегляду заміни слів в режимі вбудованого редагування.</target>
+        <source xml:lang="en">Original border color for the inline edits widget over the original text when tab will accept it.</source>
+        <target>Оригінальний колір рамки для віджета вбудованих редагувань над оригінальним текстом, коли вкладка його прийме.</target>
       </trans-unit>
     </body>
   </file>
@@ -2220,12 +2232,12 @@ A keybinding</note>
   <file original="src/vs/editor/contrib/multicursor/browser/multicursor" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="addSelectionToNextFindMatch">
-        <source xml:lang="en">Add Selection To Next Find Match</source>
+        <source xml:lang="en">Add Selection to Next Find Match</source>
         <target>Додати вибір до наступного збігу</target>
       </trans-unit>
       <trans-unit id="addSelectionToPreviousFindMatch">
-        <source xml:lang="en">Add Selection To Previous Find Match</source>
-        <target>Додати вибір до попереднього збігу</target>
+        <source xml:lang="en">Add Selection to Previous Find Match</source>
+        <target>Додати вибір до попереднього збігу пошуку</target>
       </trans-unit>
       <trans-unit id="changeAll.label">
         <source xml:lang="en">Change All Occurrences</source>
@@ -2270,19 +2282,19 @@ A keybinding</note>
         <target>Вибрати всі &amp;&amp;випадки</target>
       </trans-unit>
       <trans-unit id="moveSelectionToNextFindMatch">
-        <source xml:lang="en">Move Last Selection To Next Find Match</source>
-        <target>Перемістити останній вибір до наступного збігу</target>
+        <source xml:lang="en">Move Last Selection to Next Find Match</source>
+        <target>Перемістити останній вибір до наступного збігу знайдення</target>
       </trans-unit>
       <trans-unit id="moveSelectionToPreviousFindMatch">
-        <source xml:lang="en">Move Last Selection To Previous Find Match</source>
-        <target>Перемістити останній вибір до попереднього знайденого збігу</target>
+        <source xml:lang="en">Move Last Selection to Previous Find Match</source>
+        <target>Перемістити останній вибір до попереднього збігу пошуку</target>
       </trans-unit>
       <trans-unit id="mutlicursor.addCursorsToBottom">
-        <source xml:lang="en">Add Cursors To Bottom</source>
-        <target>Додати курсори внизу</target>
+        <source xml:lang="en">Add Cursors to Bottom</source>
+        <target>Додати курсори до низу</target>
       </trans-unit>
       <trans-unit id="mutlicursor.addCursorsToTop">
-        <source xml:lang="en">Add Cursors To Top</source>
+        <source xml:lang="en">Add Cursors to Top</source>
         <target>Додати курсори до верху</target>
       </trans-unit>
       <trans-unit id="mutlicursor.focusNextCursor">
@@ -3035,17 +3047,21 @@ A keybinding</note>
         <source xml:lang="en">Foreground color of the suggest widget status.</source>
         <target>Колір переднього плану статусу віджета пропозицій.</target>
       </trans-unit>
-      <trans-unit id="label.desc">
+      <trans-unit id="label">
         <source xml:lang="en">{0}, {1}</source>
-        <target>{0}, {1}</target>
+        <target>Відкрити посилання</target>
+      </trans-unit>
+      <trans-unit id="label.desc">
+        <source xml:lang="en">{0}, {1}, {2}</source>
+        <target>{0}, {1}, {2}</target>
       </trans-unit>
       <trans-unit id="label.detail">
-        <source xml:lang="en">{0} {1}</source>
-        <target>{0} {1}</target>
-      </trans-unit>
-      <trans-unit id="label.full">
         <source xml:lang="en">{0} {1}, {2}</source>
         <target>{0} {1}, {2}</target>
+      </trans-unit>
+      <trans-unit id="label.full">
+        <source xml:lang="en">{0} {1}, {2}, {3}</source>
+        <target>{0} {1}, {2}, {3}</target>
       </trans-unit>
       <trans-unit id="suggest">
         <source xml:lang="en">Suggest</source>

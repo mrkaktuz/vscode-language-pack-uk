@@ -440,9 +440,17 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
         <source xml:lang="en">Controls whether async tokenization should be verified against legacy background tokenization. Might slow down tokenization. For debugging only.</source>
         <target>Контролює, чи слід перевіряти асинхронну токенізацію на відповідність застарілій фоновій токенізації. Може сповільнити токенізацію. Тільки для налагодження.</target>
       </trans-unit>
+      <trans-unit id="editor.experimental.preferTreeSitter.css">
+        <source xml:lang="en">Controls whether tree sitter parsing should be turned on for css. This will take precedence over `editor.experimental.treeSitterTelemetry` for css.</source>
+        <target>Контролює, чи має бути увімкнено парсинг tree sitter для css. Це матиме пріоритет над `editor.experimental.treeSitterTelemetry` для css.</target>
+      </trans-unit>
       <trans-unit id="editor.experimental.preferTreeSitter.ini">
         <source xml:lang="en">Controls whether tree sitter parsing should be turned on for ini. This will take precedence over `editor.experimental.treeSitterTelemetry` for ini.</source>
         <target>Контролює, чи має бути увімкнене парсинг деревом для ini. Це матиме пріоритет над `editor.experimental.treeSitterTelemetry` для ini.</target>
+      </trans-unit>
+      <trans-unit id="editor.experimental.preferTreeSitter.regex">
+        <source xml:lang="en">Controls whether tree sitter parsing should be turned on for regex. This will take precedence over `editor.experimental.treeSitterTelemetry` for regex.</source>
+        <target>Контролює, чи має бути увімкнено парсинг tree sitter для regex. Це матиме пріоритет над `editor.experimental.treeSitterTelemetry` для regex.</target>
       </trans-unit>
       <trans-unit id="editor.experimental.preferTreeSitter.typescript">
         <source xml:lang="en">Controls whether tree sitter parsing should be turned on for typescript. This will take precedence over `editor.experimental.treeSitterTelemetry` for typescript.</source>
@@ -2750,6 +2758,118 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <trans-unit id="Variable">
         <source xml:lang="en">variable</source>
         <target>змінна</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.class">
+        <source xml:lang="en">Class</source>
+        <target>Клас</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.color">
+        <source xml:lang="en">Color</source>
+        <target>Колір</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.constant">
+        <source xml:lang="en">Constant</source>
+        <target>Константа</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.constructor">
+        <source xml:lang="en">Constructor</source>
+        <target>Конструктор</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.customcolor">
+        <source xml:lang="en">Custom Color</source>
+        <target>Користувацький колір</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.enum">
+        <source xml:lang="en">Enum</source>
+        <target>Перерахування</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.enumMember">
+        <source xml:lang="en">Enum Member</source>
+        <target>Член переліку</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.event">
+        <source xml:lang="en">Event</source>
+        <target>Подія</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.field">
+        <source xml:lang="en">Field</source>
+        <target>Поле</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.file">
+        <source xml:lang="en">File</source>
+        <target>Файл</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.folder">
+        <source xml:lang="en">Folder</source>
+        <target>Папка</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.function">
+        <source xml:lang="en">Function</source>
+        <target>Функція</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.interface">
+        <source xml:lang="en">Interface</source>
+        <target>Інтерфейс</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.issue">
+        <source xml:lang="en">Issue</source>
+        <target>Проблема</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.keyword">
+        <source xml:lang="en">Keyword</source>
+        <target>Ключове слово</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.method">
+        <source xml:lang="en">Method</source>
+        <target>Метод</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.module">
+        <source xml:lang="en">Module</source>
+        <target>Модуль</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.operator">
+        <source xml:lang="en">Operator</source>
+        <target>Оператор</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.property">
+        <source xml:lang="en">Property</source>
+        <target>Власність</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.reference">
+        <source xml:lang="en">Reference</source>
+        <target>Посилання</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.snippet">
+        <source xml:lang="en">Snippet</source>
+        <target>Фрагмент</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.struct">
+        <source xml:lang="en">Struct</source>
+        <target>Структура</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.text">
+        <source xml:lang="en">Text</source>
+        <target>Текст</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.typeParameter">
+        <source xml:lang="en">Type Parameter</source>
+        <target>Тип параметра</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.unit">
+        <source xml:lang="en">Unit</source>
+        <target>Одиниця</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.user">
+        <source xml:lang="en">User</source>
+        <target>Користувач</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.value">
+        <source xml:lang="en">Value</source>
+        <target>Значення</target>
+      </trans-unit>
+      <trans-unit id="suggestWidget.kind.variable">
+        <source xml:lang="en">Variable</source>
+        <target>Змінна</target>
       </trans-unit>
       <trans-unit id="symbolAriaLabel">
         <source xml:lang="en">{0} ({1})</source>

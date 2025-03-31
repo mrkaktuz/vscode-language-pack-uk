@@ -208,10 +208,6 @@
         <source xml:lang="en">Identifier</source>
         <target>Ідентифікатор</target>
       </trans-unit>
-      <trans-unit id="install count">
-        <source xml:lang="en">Install count</source>
-        <target>Кількість установок</target>
-      </trans-unit>
       <trans-unit id="issues">
         <source xml:lang="en">Issues</source>
         <target>Проблеми</target>
@@ -227,10 +223,6 @@
       <trans-unit id="license">
         <source xml:lang="en">License</source>
         <target>Ліцензія</target>
-      </trans-unit>
-      <trans-unit id="local extension">
-        <source xml:lang="en">Local Extension</source>
-        <target>Локальне розширення</target>
       </trans-unit>
       <trans-unit id="name">
         <source xml:lang="en">Extension name</source>
@@ -260,14 +252,6 @@
         <source xml:lang="en">Published</source>
         <target>Опубліковано</target>
       </trans-unit>
-      <trans-unit id="publisher">
-        <source xml:lang="en">Publisher ({0})</source>
-        <target>Видавець ({0})</target>
-      </trans-unit>
-      <trans-unit id="rating">
-        <source xml:lang="en">Rating</source>
-        <target>Рейтинг</target>
-      </trans-unit>
       <trans-unit id="repository">
         <source xml:lang="en">Repository</source>
         <target>Репозиторій</target>
@@ -291,10 +275,6 @@
       <trans-unit id="vsix">
         <source xml:lang="en">VSIX</source>
         <target>VSIX</target>
-      </trans-unit>
-      <trans-unit id="workspace extension">
-        <source xml:lang="en">Workspace Extension</source>
-        <target>Розширення робочого простору</target>
       </trans-unit>
     </body>
   </file>
@@ -650,6 +630,10 @@
         <source xml:lang="en">No extensions are allowed.</source>
         <target>Не дозволяються розширення.</target>
       </trans-unit>
+      <trans-unit id="extensions.allowed.policy">
+        <source xml:lang="en">Specify a list of extensions that are allowed to use. This helps maintain a secure and consistent development environment by restricting the use of unauthorized extensions. More information: https://code.visualstudio.com/docs/setup/enterprise#_configure-allowed-extensions</source>
+        <target>Вкажіть список розширень, які дозволено використовувати. Це допомагає підтримувати безпечне та послідовне середовище розробки, обмежуючи використання несанкціонованих розширень. Більше інформації: https://code.visualstudio.com/docs/setup/enterprise#_configure-allowed-extensions</target>
+      </trans-unit>
       <trans-unit id="extensions.autoUpdate">
         <source xml:lang="en">Controls the automatic update behavior of extensions. The updates are fetched from a Microsoft online service.</source>
         <target>Контролює автоматичну поведінку оновлень розширень. Оновлення отримуються з онлайн-сервісу Microsoft.</target>
@@ -665,6 +649,10 @@
       <trans-unit id="extensions.autoUpdate.true">
         <source xml:lang="en">Download and install updates automatically for all extensions.</source>
         <target>Завантажувати та встановлювати оновлення автоматично для всіх розширень.</target>
+      </trans-unit>
+      <trans-unit id="extensions.gallery.serviceUrl">
+        <source xml:lang="en">Configure the Marketplace service URL to connect to</source>
+        <target>Налаштуйте URL-адресу служби Marketplace для підключення до</target>
       </trans-unit>
       <trans-unit id="extensions.gallery.useUnpkgResourceApi">
         <source xml:lang="en">When enabled, extensions to update are fetched from Unpkg service.</source>
@@ -1797,6 +1785,10 @@ Would you like to update the extension?</source>
         <source xml:lang="en">Icon for the 'Install Workspace Recommended Extensions' action in the extensions view.</source>
         <target>Іконка для дії 'Встановити рекомендовані розширення робочого простору' у перегляді розширень.</target>
       </trans-unit>
+      <trans-unit id="lockIcon">
+        <source xml:lang="en">Icon shown for private extensions in the extensions view and editor.</source>
+        <target>Іконка, що відображається для приватних розширень у перегляді розширень та редакторі.</target>
+      </trans-unit>
       <trans-unit id="manageExtensionIcon">
         <source xml:lang="en">Icon for the 'Manage' action in the extensions view.</source>
         <target>Іконка для дії 'Керувати' у вигляді розширень.</target>
@@ -2122,6 +2114,10 @@ Would you like to update the extension?</source>
         <source xml:lang="en">Activation time</source>
         <target>Активація</target>
       </trans-unit>
+      <trans-unit id="extensionIcon.private">
+        <source xml:lang="en">The icon color for private extensions.</source>
+        <target>Колір значка для приватних розширень.</target>
+      </trans-unit>
       <trans-unit id="extensionIcon.sponsorForeground">
         <source xml:lang="en">The icon color for extension sponsor.</source>
         <target>Колір іконки для спонсора розширення.</target>
@@ -2146,6 +2142,10 @@ Would you like to update the extension?</source>
         <source xml:lang="en">This extension has a {0} available</source>
         <target>Ця розширення має {0} доступне</target>
       </trans-unit>
+      <trans-unit id="install count">
+        <source xml:lang="en">Install count</source>
+        <target>Кількість установок</target>
+      </trans-unit>
       <trans-unit id="local extension">
         <source xml:lang="en">Local Extension</source>
         <target>Локальне розширення</target>
@@ -2157,6 +2157,14 @@ Would you like to update the extension?</source>
       <trans-unit id="messages">
         <source xml:lang="en">{0} messages</source>
         <target>{0} повідомлень</target>
+      </trans-unit>
+      <trans-unit id="privateExtension">
+        <source xml:lang="en">Private Extension</source>
+        <target>Приватне розширення</target>
+      </trans-unit>
+      <trans-unit id="publisher">
+        <source xml:lang="en">Publisher ({0})</source>
+        <target>Видавець ({0})</target>
       </trans-unit>
       <trans-unit id="publisher verified tooltip">
         <source xml:lang="en">This publisher has verified ownership of {0}</source>
@@ -2201,6 +2209,10 @@ Would you like to update the extension?</source>
       <trans-unit id="updateRequired">
         <source xml:lang="en">Latest version:</source>
         <target>Остання версія:</target>
+      </trans-unit>
+      <trans-unit id="verified publisher">
+        <source xml:lang="en">This publisher has verified ownership of {0}</source>
+        <target>Цей видавець підтвердив право власності на {0}</target>
       </trans-unit>
       <trans-unit id="workspace extension">
         <source xml:lang="en">Workspace Extension</source>
@@ -2375,12 +2387,12 @@ Would you like to update the extension?</source>
         <target>Наданий об'єкт не є розширенням.</target>
       </trans-unit>
       <trans-unit id="not found">
-        <source xml:lang="en">Unable to install extension '{0}' because it is not found.</source>
-        <target>Неможливо встановити розширення '{0}', оскільки воно не знайдено.</target>
+        <source xml:lang="en">The extension '{0}' cannot be installed because it was not found.</source>
+        <target>Розширення '{0}' не може бути встановлено, оскільки не було знайдено.</target>
       </trans-unit>
       <trans-unit id="not found version">
-        <source xml:lang="en">Unable to install extension '{0}' because the requested version '{1}' is not found.</source>
-        <target>Неможливо встановити розширення '{0}', оскільки запитувана версія '{1}' не знайдена.</target>
+        <source xml:lang="en">The extension '{0}' cannot be installed because the requested version '{1}' was not found.</source>
+        <target>Розширення '{0}' не може бути встановлено, оскільки запитувана версія '{1}' не була знайдена.</target>
       </trans-unit>
       <trans-unit id="not signed">
         <source xml:lang="en">This extension is not signed.</source>
@@ -2425,6 +2437,10 @@ Would you like to update the extension?</source>
       <trans-unit id="reload">
         <source xml:lang="en">reload window</source>
         <target>Перезавантажити вікно</target>
+      </trans-unit>
+      <trans-unit id="report issue">
+        <source xml:lang="en">If this issue persists, please report it at {0}</source>
+        <target>Якщо ця проблема зберігається, будь ласка, повідомте про це за адресою {0}</target>
       </trans-unit>
       <trans-unit id="restart">
         <source xml:lang="en">Changing extension enablement</source>
