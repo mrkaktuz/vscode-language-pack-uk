@@ -26,6 +26,10 @@
         <source xml:lang="en">Restart Server</source>
         <target>Перезапустити сервер</target>
       </trans-unit>
+      <trans-unit id="mcp.command.showConfiguration">
+        <source xml:lang="en">Show Configuration</source>
+        <target>Показати конфігурацію</target>
+      </trans-unit>
       <trans-unit id="mcp.command.showOutput">
         <source xml:lang="en">Show Output</source>
         <target>Показати вихідні дані</target>
@@ -211,8 +215,8 @@
         <target>Встановити з Docker-образу</target>
       </trans-unit>
       <trans-unit id="mcp.serverType.http">
-        <source xml:lang="en">HTTP (server-sent events)</source>
-        <target>HTTP (події, надіслані сервером)</target>
+        <source xml:lang="en">HTTP (HTTP or Server-Sent Events)</source>
+        <target>HTTP (HTTP або події, надіслані сервером)</target>
       </trans-unit>
       <trans-unit id="mcp.serverType.http.description">
         <source xml:lang="en">Connect to a remote HTTP server that implements the MCP protocol</source>
@@ -399,8 +403,8 @@
         <target>Тип сервера.</target>
       </trans-unit>
       <trans-unit id="app.mcp.json.url">
-        <source xml:lang="en">The URL of the server-sent-event (SSE) server.</source>
-        <target>URL сервера подій, надісланих сервером (SSE).</target>
+        <source xml:lang="en">The URL of the Streamable HTTP or SSE endpoint.</source>
+        <target>URL потоку HTTP або SSE.</target>
       </trans-unit>
       <trans-unit id="mcp.discovery.source.claude-desktop">
         <source xml:lang="en">Claude Desktop</source>
@@ -486,6 +490,10 @@ Do you want to allow running MCP servers from {3}?</source>
   </file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpServer" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="mcp.command.showOutput">
+        <source xml:lang="en">Show Output</source>
+        <target>Показати вихідні дані</target>
+      </trans-unit>
       <trans-unit id="mcpBadSchema">
         <source xml:lang="en">MCP server `{0}` has tools with invalid parameters which will be omitted.</source>
         <target>Сервер MCP `{0}` має інструменти з недійсними параметрами, які будуть пропущені.</target>
@@ -497,6 +505,18 @@ Do you want to allow running MCP servers from {3}?</source>
       <trans-unit id="mcpBadSchema.tool">
         <source xml:lang="en">Tool `{0}` has invalid JSON parameters:</source>
         <target>Інструмент `{0}` має недійсні параметри JSON:</target>
+      </trans-unit>
+      <trans-unit id="mcpServerError">
+        <source xml:lang="en">The MCP server {0} could not be started: {1}</source>
+        <target>Сервер MCP {0} не вдалося запустити: {1}</target>
+      </trans-unit>
+      <trans-unit id="mcpServerInstall">
+        <source xml:lang="en">Install {0}</source>
+        <target>Встановити {0}</target>
+      </trans-unit>
+      <trans-unit id="mcpServerNotFound">
+        <source xml:lang="en">The command "{0}" needed to run {1} was not found.</source>
+        <target>Команда "{0}", необхідна для виконання {1}, не була знайдена.</target>
       </trans-unit>
     </body>
   </file>
@@ -519,8 +539,8 @@ Do you want to allow running MCP servers from {3}?</source>
   <file original="src/vs/workbench/contrib/mcp/common/mcpService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="mcp.tool.warning">
-        <source xml:lang="en">{0} This tool is from '{1}' (MCP Server). Note that MCP servers or malicious conversation content may attempt to misuse '{2}' through tools. Please carefully review any requested actions.</source>
-        <target>{0} Цей інструмент з '{1}' (MCP сервер). Зверніть увагу, що MCP сервери або шкідливий вміст розмов можуть намагатися зловживати '{2}' через інструменти. Будь ласка, уважно перегляньте будь-які запитані дії.</target>
+        <source xml:lang="en">{0} Note that MCP servers or malicious conversation content may attempt to misuse '{1}' through tools.</source>
+        <target>{0} Зверніть увагу, що сервери MCP або шкідливий вміст розмов можуть намагатися зловживати '{1}' за допомогою інструментів.</target>
       </trans-unit>
       <trans-unit id="msg.msg">
         <source xml:lang="en">{0}
@@ -531,16 +551,20 @@ Do you want to allow running MCP servers from {3}?</source>
  {1}</target>
       </trans-unit>
       <trans-unit id="msg.ran">
-        <source xml:lang="en">Ran `{0}` </source>
-        <target>Запущено `{0}`</target>
+        <source xml:lang="en">Ran {0} </source>
+        <target>Запущено {0}</target>
       </trans-unit>
       <trans-unit id="msg.run">
-        <source xml:lang="en">Running `{0}`</source>
-        <target>Виконання `{0}`</target>
+        <source xml:lang="en">Running {0}</source>
+        <target>Запуск {0}</target>
+      </trans-unit>
+      <trans-unit id="msg.subtitle">
+        <source xml:lang="en">{0} (MCP Server)</source>
+        <target>{0} (MCP Сервер)</target>
       </trans-unit>
       <trans-unit id="msg.title">
-        <source xml:lang="en">Run `{0}`</source>
-        <target>Запустіть `{0}`</target>
+        <source xml:lang="en">Run {0}</source>
+        <target>Запустити {0}</target>
       </trans-unit>
     </body>
   </file>

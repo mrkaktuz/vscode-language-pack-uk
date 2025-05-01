@@ -22,6 +22,14 @@
   </file>
   <file original="src/vs/workbench/contrib/inlineChat/browser/inlineChatActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="Keep">
+        <source xml:lang="en">Keep</source>
+        <target>Зберігати</target>
+      </trans-unit>
+      <trans-unit id="Undo">
+        <source xml:lang="en">Undo</source>
+        <target>Скасувати</target>
+      </trans-unit>
       <trans-unit id="apply1">
         <source xml:lang="en">Accept Changes</source>
         <target>Прийняти зміни</target>
@@ -38,6 +46,10 @@
         <source xml:lang="en">Cursor Up</source>
         <target>Курсор вгору</target>
       </trans-unit>
+      <trans-unit id="cancel">
+        <source xml:lang="en">Cancel Request</source>
+        <target>Скасувати запит</target>
+      </trans-unit>
       <trans-unit id="cat">
         <source xml:lang="en">Inline Chat</source>
         <target>Вбудований чат</target>
@@ -47,6 +59,10 @@
         <target>Запит на повторне виконання</target>
       </trans-unit>
       <trans-unit id="close">
+        <source xml:lang="en">Close</source>
+        <target>Закрити</target>
+      </trans-unit>
+      <trans-unit id="close2">
         <source xml:lang="en">Close</source>
         <target>Закрити</target>
       </trans-unit>
@@ -89,10 +105,6 @@
       <trans-unit id="startInlineChat">
         <source xml:lang="en">Icon which spawns the inline chat from the editor toolbar.</source>
         <target>Іконка, яка відкриває вбудований чат з панелі інструментів редактора.</target>
-      </trans-unit>
-      <trans-unit id="stop">
-        <source xml:lang="en">Undo &amp; Close</source>
-        <target>Скасувати та закрити</target>
       </trans-unit>
       <trans-unit id="unstash">
         <source xml:lang="en">Resume Last Dismissed Inline Chat</source>
@@ -222,9 +234,17 @@
         <source xml:lang="en">Whether empty lines show a hint to generate code with inline chat.</source>
         <target>Чи показують порожні рядки підказку для генерації коду з інтерактивним чатом.</target>
       </trans-unit>
+      <trans-unit id="enableV2">
+        <source xml:lang="en">Whether to use the next version of inline chat.</source>
+        <target>Чи використовувати наступну версію інтерактивного чату.</target>
+      </trans-unit>
       <trans-unit id="finishOnType">
         <source xml:lang="en">Whether to finish an inline chat session when typing outside of changed regions.</source>
         <target>Чи завершити сесію інтерактивного чату, коли вводите текст поза зміненими регіонами.</target>
+      </trans-unit>
+      <trans-unit id="hideOnRequest">
+        <source xml:lang="en">Whether to hide the inline chat widget after making a request. When enabled, the widget hides after a request has been made and instead the chat overlay shows. When hidden, the widget can always be shown again with the inline chat keybinding or from the chat overlay widget. *Note* that this setting requires `#inlineChat.enableV2#` to be enabled.</source>
+        <target>Чи приховувати віджет інтерактивного чату після подання запиту. Коли ця функція увімкнена, віджет приховується після того, як запит було зроблено, і замість цього відображається накладка чату. Коли приховано, віджет завжди можна знову показати за допомогою комбінації клавіш інтерактивного чату або з віджета накладки чату. *Примітка*: ця налаштування вимагає, щоб `#inlineChat.enableV2#` було увімкнено.</target>
       </trans-unit>
       <trans-unit id="holdToSpeech">
         <source xml:lang="en">Whether holding the inline chat keybinding will automatically enable speech recognition.</source>

@@ -78,9 +78,13 @@
   </file>
   <file original="src/vs/workbench/contrib/codeEditor/browser/emptyTextEditorHint/emptyTextEditorHint" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="defaultHintAriaLabel">
+      <trans-unit id="defaultHintAriaLabelWithInlineChat">
+        <source xml:lang="en">Execute {0} to ask a question, execute {1} to select a language, or execute {2} to fill with template and get started. Start typing to dismiss.</source>
+        <target>Виконайте {0}, щоб задати питання, виконайте {1}, щоб вибрати мову, або виконайте {2}, щоб заповнити шаблон і почати. Почніть вводити, щоб закрити.</target>
+      </trans-unit>
+      <trans-unit id="defaultHintAriaLabelWithoutInlineChat">
         <source xml:lang="en">Execute {0} to select a language, execute {1} to fill with template, or execute {2} to open a different editor and get started. Start typing to dismiss.</source>
-        <target>Виконайте {0}, щоб вибрати мову, виконайте {1}, щоб заповнити шаблоном, або виконайте {2}, щоб відкрити інший редактор і почати. Почніть вводити, щоб закрити.</target>
+        <target>Виконайте {0}, щоб вибрати мову, виконайте {1}, щоб заповнити шаблоном, або виконайте {2}, щоб відкрити інший редактор і почати. Почніть набирати, щоб закрити.</target>
       </trans-unit>
       <trans-unit id="disableEditorEmptyHint">
         <source xml:lang="en">Disable Empty Editor Hint</source>
@@ -90,25 +94,20 @@
         <source xml:lang="en"> Toggle {0} in settings to disable this hint.</source>
         <target>Увімкніть {0} у налаштуваннях, щоб вимкнути це підказку.</target>
       </trans-unit>
-      <trans-unit id="emptyHintText">
-        <source xml:lang="en">Press {0} to ask {1} to do something. </source>
-        <target>Натисніть {0}, щоб попросити {1} зробити щось.</target>
-      </trans-unit>
-      <trans-unit id="emptyHintTextDismiss">
-        <source xml:lang="en">Start typing to dismiss.</source>
-        <target>Почніть вводити, щоб закрити.</target>
-      </trans-unit>
-      <trans-unit id="inlineChatHint">
-        <source xml:lang="en">[[Ask {0} to do something]] or start typing to dismiss.</source>
-        <note>Preserve double-square brackets and their order</note>
-        <target>[[Запитайте {0}, щоб зробити щось]] або почніть вводити, щоб скасувати.</target>
-      </trans-unit>
-      <trans-unit id="message">
-        <source xml:lang="en">[[Select a language]], or [[fill with template]], or [[open a different editor]] to get started.
+      <trans-unit id="emptyTextEditorHintWithInlineChat">
+        <source xml:lang="en">[[Open chat]] ({0}), or [[select a language]] ({1}), or [[fill with template]] ({2}) to get started.
 Start typing to dismiss or [[don't show]] this again.</source>
         <note>Preserve double-square brackets and their order&#xD;
 language refers to a programming language</note>
-        <target>[[Виберіть мову]], або [[заповніть шаблоном]], або [[відкрийте інший редактор]], щоб почати. 
+        <target>[[Відкрити чат]] ({0}), або [[вибрати мову]] ({1}), або [[заповнити шаблоном]] ({2}), щоб почати.  
+Почніть вводити, щоб закрити, або [[не показувати]] це знову.</target>
+      </trans-unit>
+      <trans-unit id="emptyTextEditorHintWithoutInlineChat">
+        <source xml:lang="en">[[Select a language]] ({0}), or [[fill with template]] ({1}), or [[open a different editor]] ({2}) to get started.
+Start typing to dismiss or [[don't show]] this again.</source>
+        <note>Preserve double-square brackets and their order&#xD;
+language refers to a programming language</note>
+        <target>[[Виберіть мову]] ({0}), або [[заповніть шаблоном]] ({1}), або [[відкрийте інший редактор]] ({2}), щоб почати.  
 Почніть вводити, щоб закрити, або [[не показувати]] це знову.</target>
       </trans-unit>
     </body>

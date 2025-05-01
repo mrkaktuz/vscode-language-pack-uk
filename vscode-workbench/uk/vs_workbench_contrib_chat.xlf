@@ -207,40 +207,32 @@
         <target>Почати новий чат?</target>
       </trans-unit>
       <trans-unit id="chatAndCompletionsQuotaExceeded">
-        <source xml:lang="en">You've reached the limit of the Copilot Free plan. These limits will reset on {0}.</source>
-        <target>Ви досягли межі безкоштовного плану Copilot. Ці межі скинуться {0}.</target>
-      </trans-unit>
-      <trans-unit id="chatAndCompletionsQuotaExceededButton">
-        <source xml:lang="en">Copilot Free plan limit reached. Click for details.</source>
-        <target>Досягнуто межі безкоштовного плану Copilot. Натисніть для деталей.</target>
+        <source xml:lang="en">You've reached your monthly chat messages and code completions quota.</source>
+        <target>Ви досягли свого місячного ліміту на чат-повідомлення та завершення коду.</target>
       </trans-unit>
       <trans-unit id="chatQuotaExceeded">
-        <source xml:lang="en">You've run out of free chat messages. You still have free code completions available in the Copilot Free plan. These limits will reset on {0}.</source>
-        <target>Ви вичерпали безкоштовні повідомлення чату. У вас все ще є безкоштовні завершення коду в плані Copilot Free. Ці обмеження скинуться {0}.</target>
+        <source xml:lang="en">You've reached your monthly chat messages quota. You still have free code completions available.</source>
+        <target>Ви досягли свого місячного ліміту на повідомлення в чаті. У вас ще є безкоштовні завершення коду.</target>
       </trans-unit>
       <trans-unit id="chatQuotaExceededButton">
-        <source xml:lang="en">Monthly chat messages limit reached. Click for details.</source>
-        <target>Досягнуто ліміту щомісячних повідомлень чату. Натисніть для деталей.</target>
+        <source xml:lang="en">Copilot Free plan chat messages quota reached. Click for details.</source>
+        <target>Досягнуто квоти повідомлень чату безкоштовного плану Copilot. Натисніть для деталей.</target>
       </trans-unit>
       <trans-unit id="chatWith">
         <source xml:lang="en">Chat with Extension</source>
         <target>Чат з Розширенням</target>
       </trans-unit>
       <trans-unit id="completionsQuotaExceeded">
-        <source xml:lang="en">You've run out of free code completions. You still have free chat messages available in the Copilot Free plan. These limits will reset on {0}.</source>
-        <target>Ви вичерпали безкоштовні завершення коду. У вас все ще є безкоштовні повідомлення чату в плані Copilot Free. Ці обмеження скинуться {0}.</target>
-      </trans-unit>
-      <trans-unit id="completionsQuotaExceededButton">
-        <source xml:lang="en">Monthly code completions limit reached. Click for details.</source>
-        <target>Досягнуто місячного ліміту завершень коду. Натисніть для деталей.</target>
+        <source xml:lang="en">You've reached your monthly code completions quota. You still have free chat messages available.</source>
+        <target>Ви досягли своєї місячної квоти завершень коду. У вас ще є безкоштовні повідомлення для чату.</target>
       </trans-unit>
       <trans-unit id="configureCompletions">
         <source xml:lang="en">Configure Code Completions...</source>
         <target>Налаштувати завершення коду...</target>
       </trans-unit>
-      <trans-unit id="copilotFree">
-        <source xml:lang="en">Copilot Limit Reached</source>
-        <target>Досягнуто межі Copilot</target>
+      <trans-unit id="copilotQuotaReached">
+        <source xml:lang="en">Copilot Quota Reached</source>
+        <target>Досягнуто квоти Copilot</target>
       </trans-unit>
       <trans-unit id="currentChatLabel">
         <source xml:lang="en">current</source>
@@ -271,8 +263,8 @@
         <target>Перейти до чату</target>
       </trans-unit>
       <trans-unit id="interactiveSession.open">
-        <source xml:lang="en">Open Editor</source>
-        <target>Відкрити редактор</target>
+        <source xml:lang="en">New Chat Editor</source>
+        <target>Новий редактор чату</target>
       </trans-unit>
       <trans-unit id="manageCopilot">
         <source xml:lang="en">Manage Copilot</source>
@@ -289,6 +281,14 @@
       <trans-unit id="openChat">
         <source xml:lang="en">Open Chat</source>
         <target>Відкрити чат</target>
+      </trans-unit>
+      <trans-unit id="openChatMode">
+        <source xml:lang="en">Open Chat ({0})</source>
+        <target>Відкрити чат ({0})</target>
+      </trans-unit>
+      <trans-unit id="quotaResetDate">
+        <source xml:lang="en">The allowance will reset on {0}.</source>
+        <target>Допомога буде скинута на {0}.</target>
       </trans-unit>
       <trans-unit id="resetTrustedTools">
         <source xml:lang="en">Reset Tool Confirmations</source>
@@ -326,13 +326,13 @@
         <source xml:lang="en">Toggle Chat</source>
         <target>Переключити чат</target>
       </trans-unit>
-      <trans-unit id="triggerChatSetup">
-        <source xml:lang="en">Use AI Features with Copilot for free...</source>
-        <target>Використовуйте функції ШІ з Copilot безкоштовно...</target>
-      </trans-unit>
       <trans-unit id="upgradeChat">
-        <source xml:lang="en">Upgrade to Copilot Pro</source>
-        <target>Оновити до Copilot Pro</target>
+        <source xml:lang="en">Upgrade Copilot Plan</source>
+        <target>Оновити план Copilot</target>
+      </trans-unit>
+      <trans-unit id="upgradePlan">
+        <source xml:lang="en">Upgrade Copilot Plan</source>
+        <target>Оновити план Copilot</target>
       </trans-unit>
       <trans-unit id="upgradePro">
         <source xml:lang="en">Upgrade to Copilot Pro</source>
@@ -342,80 +342,16 @@
         <source xml:lang="en">Upgrade to Copilot Pro (your first 30 days are free) for:
 - Unlimited code completions
 - Unlimited chat messages
-- Access to additional models</source>
+- Access to premium models</source>
         <target>Оновіть до Copilot Pro (перші 30 днів безкоштовно) для:
 - Безмежних завершень коду
 - Безмежних повідомлень у чаті
-- Доступу до додаткових моделей</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/chatAttachPromptAction" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="workbench.action.chat.attach.prompt.label">
-        <source xml:lang="en">Use Prompt</source>
-        <target>Використати запит</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/dialogs/askToSelectPrompt/constants" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="commands.prompts.use.select-dialog.docs-label">
-        <source xml:lang="en">Learn how to create reusable prompts</source>
-        <target>Дізнайтеся, як створювати багаторазові запити</target>
-      </trans-unit>
-      <trans-unit id="commands.prompts.use.select-dialog.open-button.tooltip">
-        <source xml:lang="en">edit ({0}-key + enter)</source>
-        <target>редагувати ({0}-клавіша + enter)</target>
-      </trans-unit>
-      <trans-unit id="delete">
-        <source xml:lang="en">delete</source>
-        <target>видалити</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/dialogs/askToSelectPrompt/utils/createPlaceholderText" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="commands.prompts.use.select-dialog.alt-modifier-note">
-        <source xml:lang="en"> or {0}-key to use in Copilot Edits</source>
-        <target>або {0}-ключ для використання в Copilot Edits</target>
-      </trans-unit>
-      <trans-unit id="commands.prompts.use.select-dialog.modifier-notes">
-        <source xml:lang="en"> (hold {0}{1})</source>
-        <target>(утримувати {0}{1})</target>
-      </trans-unit>
-      <trans-unit id="commands.prompts.use.select-dialog.placeholder">
-        <source xml:lang="en">Select a prompt to use</source>
-        <target>Виберіть підказку для використання</target>
-      </trans-unit>
-      <trans-unit id="commands.prompts.use.select-dialog.super-modifier-note">
-        <source xml:lang="en">{0}-key to use in new chat</source>
-        <target>{0}-ключ для використання в новому чаті</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/dialogs/askToSelectPrompt/utils/createPromptPickItem" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="user-prompt.capitalized">
-        <source xml:lang="en">User prompt</source>
-        <target>Запит користувача</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/workbench/contrib/chat/browser/actions/chatAttachPromptAction/dialogs/askToSelectPrompt/utils/handleButtonClick" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="commands.prompts.use.select-dialog.delete-prompt.confirm.message">
-        <source xml:lang="en">Are you sure you want to delete '{0}'?</source>
-        <target>Ви впевнені, що хочете видалити '{0}'?</target>
+- Доступу до преміум моделей</target>
       </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatClearActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="chat.done.label">
-        <source xml:lang="en">Done</source>
-        <target>Готово</target>
-      </trans-unit>
       <trans-unit id="chat.newChat.label">
         <source xml:lang="en">New Chat</source>
         <target>Новий чат</target>
@@ -423,10 +359,6 @@
       <trans-unit id="chat.newEdits.label">
         <source xml:lang="en">New Chat</source>
         <target>Новий чат</target>
-      </trans-unit>
-      <trans-unit id="chat.openEdits.label">
-        <source xml:lang="en">Open {0}</source>
-        <target>Відкрити {0}</target>
       </trans-unit>
       <trans-unit id="chat.redoEdit.label">
         <source xml:lang="en">Redo Last Request</source>
@@ -488,13 +420,13 @@
         <source xml:lang="en">Add Search Results to Chat</source>
         <target>Додати результати пошуку до чату</target>
       </trans-unit>
+      <trans-unit id="chatContext.attach.instructions.label">
+        <source xml:lang="en">Instructions...</source>
+        <target>Інструкції...</target>
+      </trans-unit>
       <trans-unit id="chatContext.attach.placeholder">
         <source xml:lang="en">Search attachments</source>
         <target>Шукати вкладення</target>
-      </trans-unit>
-      <trans-unit id="chatContext.attach.prompt.label">
-        <source xml:lang="en">Prompt...</source>
-        <target>Запит...</target>
       </trans-unit>
       <trans-unit id="chatContext.attachScreenshot.labelElectron.Window">
         <source xml:lang="en">Screenshot Window</source>
@@ -505,16 +437,16 @@
         <target>Скріншот</target>
       </trans-unit>
       <trans-unit id="chatContext.diagnstic">
-        <source xml:lang="en">Problem...</source>
-        <target>Проблема...</target>
+        <source xml:lang="en">Problems...</source>
+        <target>Проблеми...</target>
       </trans-unit>
       <trans-unit id="chatContext.editors">
         <source xml:lang="en">Open Editors</source>
         <target>Відкриті редактори</target>
       </trans-unit>
       <trans-unit id="chatContext.folder">
-        <source xml:lang="en">Folder...</source>
-        <target>Папка...</target>
+        <source xml:lang="en">Files &amp; Folders...</source>
+        <target>Файли та папки...</target>
       </trans-unit>
       <trans-unit id="chatContext.notebook.kernelVariable">
         <source xml:lang="en">Kernel Variable...</source>
@@ -533,24 +465,56 @@
         <target>Результати пошуку</target>
       </trans-unit>
       <trans-unit id="chatContext.symbol">
-        <source xml:lang="en">Symbol...</source>
-        <target>Символ...</target>
+        <source xml:lang="en">Symbols...</source>
+        <target>Символи...</target>
+      </trans-unit>
+      <trans-unit id="chatContext.tools">
+        <source xml:lang="en">Tools...</source>
+        <target>Інструменти...</target>
+      </trans-unit>
+      <trans-unit id="chatContext.tools.extension">
+        <source xml:lang="en">Extensions</source>
+        <target>Розширення</target>
+      </trans-unit>
+      <trans-unit id="chatContext.tools.internal">
+        <source xml:lang="en">Built-In</source>
+        <target>Вбудований</target>
+      </trans-unit>
+      <trans-unit id="chatContext.tools.mcp">
+        <source xml:lang="en">MCP Servers</source>
+        <target>MCP Сервера</target>
+      </trans-unit>
+      <trans-unit id="chatContext.tools.placeholder">
+        <source xml:lang="en">Select a tool</source>
+        <target>Виберіть інструмент</target>
       </trans-unit>
       <trans-unit id="imageFromClipboard">
         <source xml:lang="en">Image from Clipboard</source>
         <target>Зображення з буфера обміну</target>
       </trans-unit>
+      <trans-unit id="markers.panel.allErrors">
+        <source xml:lang="en">All Problems</source>
+        <target>Усі проблеми</target>
+      </trans-unit>
+      <trans-unit id="markers.panel.at.ln.col.number">
+        <source xml:lang="en">[Ln {0}, Col {1}]</source>
+        <target>[Ln {0}, Col {1}]</target>
+      </trans-unit>
       <trans-unit id="pastedImage">
         <source xml:lang="en">Pasted Image</source>
         <target>Вставлене зображення</target>
+      </trans-unit>
+      <trans-unit id="pickAProblem">
+        <source xml:lang="en">Select a problem to attach</source>
+        <target>Виберіть проблему для прикріплення</target>
       </trans-unit>
       <trans-unit id="relatedFiles">
         <source xml:lang="en">Add related files to your working set</source>
         <target>Додайте пов'язані файли до вашого робочого набору</target>
       </trans-unit>
       <trans-unit id="workbench.action.chat.attachContext.label.2">
-        <source xml:lang="en">Add Context</source>
-        <target>Додати контекст</target>
+        <source xml:lang="en">Add Context...</source>
+        <target>Додати контекст...</target>
       </trans-unit>
       <trans-unit id="workbench.action.chat.attachFile.label">
         <source xml:lang="en">Add File to Chat</source>
@@ -563,26 +527,6 @@
       <trans-unit id="workbench.action.chat.attachSelection.label">
         <source xml:lang="en">Add Selection to Chat</source>
         <target>Додати вибір до чату</target>
-      </trans-unit>
-      <trans-unit id="workbench.action.chat.editing.attachContext.label">
-        <source xml:lang="en">Add Context to Copilot Edits</source>
-        <target>Додати контекст до редагувань Copilot</target>
-      </trans-unit>
-      <trans-unit id="workbench.action.chat.editing.attachContext.shortLabel">
-        <source xml:lang="en">Add Context...</source>
-        <target>Додати контекст...</target>
-      </trans-unit>
-      <trans-unit id="workbench.action.edits.attachFile.label">
-        <source xml:lang="en">Add File to {0}</source>
-        <target>Додати файл до {0}</target>
-      </trans-unit>
-      <trans-unit id="workbench.action.edits.attachFolder.label">
-        <source xml:lang="en">Add Folder to {0}</source>
-        <target>Додати папку до {0}</target>
-      </trans-unit>
-      <trans-unit id="workbench.action.edits.attachSelection.label">
-        <source xml:lang="en">Add Selection to {0}</source>
-        <target>Додати вибір до {0}</target>
       </trans-unit>
     </body>
   </file>
@@ -625,32 +569,12 @@
         <target>Так</target>
       </trans-unit>
       <trans-unit id="agent.newSessionMessage">
-        <source xml:lang="en">Changing the chat mode will end your current edit session. Would you like to continue?</source>
-        <target>Зміна режиму чату завершить вашу поточну сесію редагування. Ви хочете продовжити?</target>
+        <source xml:lang="en">Changing the chat mode will end your current edit session. Would you like to change the chat mode?</source>
+        <target>Зміна режиму чату завершить вашу поточну сесію редагування. Ви хочете змінити режим чату?</target>
       </trans-unit>
       <trans-unit id="chat.newChat.label">
         <source xml:lang="en">Send to New Chat</source>
         <target>Новий чат</target>
-      </trans-unit>
-      <trans-unit id="chat.sendToChatEditing.label">
-        <source xml:lang="en">Send to Copilot Edits</source>
-        <target>Відправити редагування до Copilot</target>
-      </trans-unit>
-      <trans-unit id="chat.startEditing.confirmation.message.many">
-        <source xml:lang="en">Starting a new editing session will end your current editing session containing {0} files. Do you wish to proceed?</source>
-        <target>Початок нової сесії редагування завершить вашу поточну сесію редагування, що містить {0} файлів. Ви бажаєте продовжити?</target>
-      </trans-unit>
-      <trans-unit id="chat.startEditing.confirmation.message.one">
-        <source xml:lang="en">Starting a new editing session will end your current editing session containing {0} file. Do you wish to proceed?</source>
-        <target>Початок нової сесії редагування завершить вашу поточну сесію редагування, що містить {0} файл. Ви бажаєте продовжити?</target>
-      </trans-unit>
-      <trans-unit id="chat.startEditing.confirmation.primaryButton">
-        <source xml:lang="en">Yes</source>
-        <target>Так</target>
-      </trans-unit>
-      <trans-unit id="chat.startEditing.confirmation.title">
-        <source xml:lang="en">Start new editing session?</source>
-        <target>Почати новий чат?</target>
       </trans-unit>
       <trans-unit id="edits.submit.label">
         <source xml:lang="en">Send</source>
@@ -659,6 +583,14 @@
       <trans-unit id="interactive.cancel.label">
         <source xml:lang="en">Cancel</source>
         <target>Скасувати</target>
+      </trans-unit>
+      <trans-unit id="interactive.changeModel.label">
+        <source xml:lang="en">Change Model</source>
+        <target>Змінити модель</target>
+      </trans-unit>
+      <trans-unit id="interactive.openModelPicker.label">
+        <source xml:lang="en">Open Model Picker</source>
+        <target>Відкрити вибір моделі</target>
       </trans-unit>
       <trans-unit id="interactive.submit.label">
         <source xml:lang="en">Send and Dispatch</source>
@@ -754,7 +686,7 @@
       </trans-unit>
       <trans-unit id="interactiveSession.open">
         <source xml:lang="en">Open Quick Chat</source>
-        <target>Відкрити редактор</target>
+        <target>Новий редактор чату</target>
       </trans-unit>
       <trans-unit id="quickChat">
         <source xml:lang="en">Quick Chat</source>
@@ -776,10 +708,6 @@
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatTitleActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="chat.removeRequest.label">
-        <source xml:lang="en">Remove Request</source>
-        <target>Видалити запит</target>
-      </trans-unit>
       <trans-unit id="chat.retry.confirmation.checkbox">
         <source xml:lang="en">Don't ask again</source>
         <target>Не питай знову</target>
@@ -803,26 +731,6 @@
       <trans-unit id="chat.retryLast.confirmation.title2">
         <source xml:lang="en">Do you want to retry your last request?</source>
         <target>Ви хочете повторити свій останній запит?</target>
-      </trans-unit>
-      <trans-unit id="chat.startEditing.label2">
-        <source xml:lang="en">Edit with Copilot</source>
-        <target>Редагувати з Copilot</target>
-      </trans-unit>
-      <trans-unit id="chat.startEditing.last">
-        <source xml:lang="en">The last {0} requests</source>
-        <target>Останні {0} запити</target>
-      </trans-unit>
-      <trans-unit id="chat.startEditing.pickAll">
-        <source xml:lang="en">All requests from the conversation</source>
-        <target>Усі запити з розмови</target>
-      </trans-unit>
-      <trans-unit id="chat.startEditing.pickCustom">
-        <source xml:lang="en">Manually select requests...</source>
-        <target>Виберіть запити вручну...</target>
-      </trans-unit>
-      <trans-unit id="chat.startEditing.pickRequest">
-        <source xml:lang="en">Select requests that you want to use for editing</source>
-        <target>Виберіть запити, які ви хочете використовувати для редагування</target>
       </trans-unit>
       <trans-unit id="interactive.helpful.label">
         <source xml:lang="en">Helpful</source>
@@ -860,6 +768,10 @@
         <source xml:lang="en">Accept</source>
         <target>Прийняти</target>
       </trans-unit>
+      <trans-unit id="configMcpCol">
+        <source xml:lang="en">Configure {0}</source>
+        <target>Налаштувати {0}</target>
+      </trans-unit>
       <trans-unit id="defaultBucketLabel">
         <source xml:lang="en">Other Tools</source>
         <target>Інші інструменти</target>
@@ -868,13 +780,17 @@
         <source xml:lang="en">Select Tools...</source>
         <target>Виберіть Інструменти...</target>
       </trans-unit>
+      <trans-unit id="mcpShowOutput">
+        <source xml:lang="en">Show Output</source>
+        <target>Показати вихідні дані</target>
+      </trans-unit>
       <trans-unit id="mcplabel">
         <source xml:lang="en">MCP Server: {0}</source>
         <target>MCP сервер: {0}</target>
       </trans-unit>
       <trans-unit id="mcpstatus">
-        <source xml:lang="en">From {0} ({1})</source>
-        <target>З {0} ({1})</target>
+        <source xml:lang="en">from {0}</source>
+        <target>з {0}</target>
       </trans-unit>
       <trans-unit id="noTools">
         <source xml:lang="en">Add tools to chat</source>
@@ -950,43 +866,135 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/promptActions/chatAttachInstructionsAction" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="attach-instructions.capitalized.ellipses">
+        <source xml:lang="en">Attach Instructions...</source>
+        <target>Прикріпити інструкції...</target>
+      </trans-unit>
+      <trans-unit id="commands.instructions.select-dialog.placeholder">
+        <source xml:lang="en">Select instructions files to attach</source>
+        <target>Виберіть файли інструкцій для прикріплення</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/promptActions/chatRunPromptAction" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="commands.prompt.select-dialog.placeholder">
+        <source xml:lang="en">Select the prompt file to run (hold {0}-key to use in new chat)</source>
+        <target>Виберіть файл запиту для запуску (утримуйте клавішу {0}, щоб використовувати в новому чаті)</target>
+      </trans-unit>
+      <trans-unit id="run-prompt-in-new-chat.capitalized">
+        <source xml:lang="en">Run Prompt In New Chat</source>
+        <target>Запустити запит у новому чаті</target>
+      </trans-unit>
+      <trans-unit id="run-prompt.capitalized">
+        <source xml:lang="en">Run Prompt in Current Chat</source>
+        <target>Запустити запит у поточному чаті</target>
+      </trans-unit>
+      <trans-unit id="run-prompt.capitalized.ellipses">
+        <source xml:lang="en">Run Prompt...</source>
+        <target>Запустити запит...</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/promptActions/chatSaveToPromptAction" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="workbench.actions.save-to-prompt.label">
+        <source xml:lang="en">Save chat session to a prompt file</source>
+        <target>Зберегти сесію чату у файл запиту</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/promptActions/dialogs/askToSelectPrompt/promptFilePickers" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="commands.new-instructionsfile.select-dialog.label">
+        <source xml:lang="en">Create new instruction file...</source>
+        <target>Створити новий файл інструкцій...</target>
+      </trans-unit>
+      <trans-unit id="commands.new-promptfile.select-dialog.label">
+        <source xml:lang="en">New prompt file...</source>
+        <target>Новий файл запиту...</target>
+      </trans-unit>
+      <trans-unit id="commands.prompts.use.select-dialog.delete-prompt.confirm.message">
+        <source xml:lang="en">Are you sure you want to delete '{0}'?</source>
+        <target>Ви впевнені, що хочете видалити '{0}'?</target>
+      </trans-unit>
+      <trans-unit id="commands.prompts.use.select-dialog.open-button.tooltip">
+        <source xml:lang="en">edit ({0}-key + enter)</source>
+        <target>редагувати ({0}-клавіша + enter)</target>
+      </trans-unit>
+      <trans-unit id="delete">
+        <source xml:lang="en">delete</source>
+        <target>видалити</target>
+      </trans-unit>
+      <trans-unit id="help">
+        <source xml:lang="en">help</source>
+        <target>допомога</target>
+      </trans-unit>
+      <trans-unit id="user-data-dir.capitalized">
+        <source xml:lang="en">User data folder</source>
+        <target>Тека даних користувача</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/chat/browser/attachments/implicitContextAttachment" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="chat.fileAttachment">
-        <source xml:lang="en">Attached file, {0}</source>
-        <target>Прикріплений файл, {0}</target>
+        <source xml:lang="en">Attached {0}, {1}</source>
+        <target>Прикріплено {0}, {1}</target>
       </trans-unit>
       <trans-unit id="chat.fileAttachmentWithRange">
-        <source xml:lang="en">Attached file, {0}, line {1} to line {2}</source>
-        <target>Прикріплений файл, {0}, рядок {1} до рядка {2}</target>
+        <source xml:lang="en">Attached {0}, {1}, line {2} to line {3}</source>
+        <target>Прикріплено {0}, {1}, рядок {2} до рядка {3}</target>
       </trans-unit>
       <trans-unit id="disable">
-        <source xml:lang="en">Disable current file context</source>
-        <target>Вимкнути контекст поточного файлу</target>
+        <source xml:lang="en">Disable current {0} context</source>
+        <target>Вимкнути поточний {0} контекст</target>
       </trans-unit>
       <trans-unit id="enable">
-        <source xml:lang="en">Enable current file context</source>
-        <target>Увімкнути контекст поточного файлу</target>
+        <source xml:lang="en">Enable current {0} context</source>
+        <target>Увімкнути поточний {0} контекст</target>
       </trans-unit>
       <trans-unit id="enableHint">
         <source xml:lang="en">disabled</source>
         <target>вимкнено</target>
       </trans-unit>
+      <trans-unit id="file.lowercase">
+        <source xml:lang="en">file</source>
+        <target>файл</target>
+      </trans-unit>
+      <trans-unit id="hint.label.current">
+        <source xml:lang="en">Current {0}</source>
+        <target>Поточний {0}</target>
+      </trans-unit>
       <trans-unit id="openEditor">
-        <source xml:lang="en">Current file context</source>
-        <target>Поточний контекст файлу</target>
+        <source xml:lang="en">Current {0} context</source>
+        <target>Поточний {0} контекст</target>
+      </trans-unit>
+      <trans-unit id="prompt.lowercase">
+        <source xml:lang="en">prompt</source>
+        <target>підказка</target>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/chat/browser/attachments/promptAttachments/promptAttachmentWidget" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/contrib/chat/browser/attachments/promptInstructions/promptInstructionsWidget" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="chat.instructionsAttachment">
+        <source xml:lang="en">Instructions attachment, {0}</source>
+        <target>Інструкції в додатку, {0}</target>
+      </trans-unit>
       <trans-unit id="chat.promptAttachment">
-        <source xml:lang="en">Prompt attachment, {0}</source>
-        <target>Швидке прикріплення, {0}</target>
+        <source xml:lang="en">Prompt file, {0}</source>
+        <target>Файл запиту, {0}</target>
       </trans-unit>
       <trans-unit id="error">
         <source xml:lang="en">Error</source>
         <target>Помилка</target>
+      </trans-unit>
+      <trans-unit id="instructions">
+        <source xml:lang="en">Instructions</source>
+        <target>Інструкції</target>
       </trans-unit>
       <trans-unit id="prompt">
         <source xml:lang="en">Prompt</source>
@@ -1009,8 +1017,8 @@
         <target>Чат</target>
       </trans-unit>
       <trans-unit id="chat.agent.enabled.description">
-        <source xml:lang="en">Enable agent mode for {0}. When this is enabled, a dropdown appears in the view to toggle agent mode.</source>
-        <target>Увімкніть режим агента для {0}. Коли це увімкнено, у вигляді з'являється випадаючий список для перемикання режиму агента.</target>
+        <source xml:lang="en">Enable agent mode for {0}. When this is enabled, agent mode can be activated via the dropdown in the view.</source>
+        <target>Увімкніть режим агента для {0}. Коли це увімкнено, режим агента можна активувати через випадаюче меню у вигляді.</target>
       </trans-unit>
       <trans-unit id="chat.agent.maxRequests">
         <source xml:lang="en">The maximum number of requests to allow Copilot Edits to use per-turn in agent mode. When the limit is reached, Copilot will ask the user to confirm that it should keep working. 
@@ -1053,12 +1061,12 @@
         <target>Це налаштування застаріло. Будь ласка, використовуйте `chat.detectParticipant.enabled` замість цього.</target>
       </trans-unit>
       <trans-unit id="chat.extensionToolsEnabled">
-        <source xml:lang="en">Enable using tools contributed by third-party extensions in Copilot Chat agent mode.</source>
-        <target>Увімкніть використання інструментів, наданих сторонніми розширеннями, у режимі агента Copilot Chat.</target>
+        <source xml:lang="en">Enable using tools contributed by third-party extensions.</source>
+        <target>Увімкніть використання інструментів, наданих сторонніми розширеннями.</target>
       </trans-unit>
       <trans-unit id="chat.extensionToolsPolicy">
-        <source xml:lang="en">Enable using tools contributed by third-party extensions in Copilot Chat agent mode.</source>
-        <target>Увімкніть використання інструментів, наданих сторонніми розширеннями, у режимі агента Copilot Chat.</target>
+        <source xml:lang="en">Enable using tools contributed by third-party extensions.</source>
+        <target>Увімкніть використання інструментів, наданих сторонніми розширеннями.</target>
       </trans-unit>
       <trans-unit id="chat.focusWindowOnConfirmation">
         <source xml:lang="en">Controls whether the Copilot window should be focused when a confirmation is needed.</source>
@@ -1084,49 +1092,65 @@
         <source xml:lang="en">Implicit context is never enabled.</source>
         <target>Неявний контекст ніколи не ввімкнено.</target>
       </trans-unit>
+      <trans-unit id="chat.instructions.config.locations.description">
+        <source xml:lang="en">Specify location(s) of instructions files (`*{0}`) that can be attached in Chat, Edits, and Inline Chat sessions. [Learn More]({1}).
+
+Relative paths are resolved from the root folder(s) of your workspace.</source>
+        <target>Вкажіть місце розташування файлів інструкцій (`*{0}`), які можна прикріпити в чатах, редагуваннях та сеансах інлайн-чату. [Дізнатися більше]({1}).
+
+Відносні шляхи визначаються від кореневих папок вашого робочого простору.</target>
+      </trans-unit>
+      <trans-unit id="chat.instructions.config.locations.title">
+        <source xml:lang="en">Instructions File Locations</source>
+        <target>Інструкції Розташування файлів</target>
+      </trans-unit>
       <trans-unit id="chat.mcp.enabled">
         <source xml:lang="en">Enables integration with Model Context Protocol servers to provide additional tools and functionality.</source>
         <target>Дозволяє інтеграцію з серверами Model Context Protocol для надання додаткових інструментів та функціональності.</target>
       </trans-unit>
       <trans-unit id="chat.promptFiles.policy">
-        <source xml:lang="en">Enables reusable prompt files in Chat, Edits, and Inline Chat sessions.</source>
-        <target>Дозволяє використовувати повторно файли запитів у чатах, редагуваннях та сеансах інтерактивного чату.</target>
+        <source xml:lang="en">Enables reusable prompt and instruction files in Chat, Edits, and Inline Chat sessions.</source>
+        <target>Дозволяє використовувати повторно файли запитів та інструкцій у чатах, редагуваннях та сесіях інтерактивного чату.</target>
       </trans-unit>
       <trans-unit id="chat.renderRelatedFiles">
         <source xml:lang="en">Controls whether related files should be rendered in the chat input.</source>
         <target>Контролює, чи пов'язані файли повинні відображатися в полі вводу чату.</target>
       </trans-unit>
       <trans-unit id="chat.reusablePrompts.config.enabled.description">
-        <source xml:lang="en">Enable reusable prompt files (`*{0}`) in Chat, Edits, and Inline Chat sessions. [Learn More]({1}).</source>
-        <target>Увімкніть повторно використовувані файли запитів (`*{0}`) у сеансах Чату, Редагувань та Інлайн Чату. [Дізнатися більше]({1}).</target>
+        <source xml:lang="en">Enable reusable prompt (`*{0}`) and instruction files in Chat, Edits, and Inline Chat sessions. [Learn More]({1}).</source>
+        <target>Увімкніть повторно використовувані підказки (`*{0}`) та файли інструкцій у чатах, редагуваннях та сесіях інлайн-чату. [Дізнатися більше]({1}).</target>
       </trans-unit>
       <trans-unit id="chat.reusablePrompts.config.enabled.title">
         <source xml:lang="en">Prompt Files</source>
         <target>Файли запитів</target>
       </trans-unit>
       <trans-unit id="chat.reusablePrompts.config.locations.description">
-        <source xml:lang="en">Specify location(s) of reusable prompt files (`*{0}`) that can be attached in Chat, Edits, and Inline Chat sessions. [Learn More]({1}).
+        <source xml:lang="en">Specify location(s) of reusable prompt files (`*{0}`) that can be run in Chat, Edits, and Inline Chat sessions. [Learn More]({1}).
 
 Relative paths are resolved from the root folder(s) of your workspace.</source>
-        <target>Вкажіть місцезнаходження повторно використовуваних файлів запитів (`*{0}`), які можна прикріпити в чатах, редагуваннях та сеансах інтерактивного чату. [Дізнатися більше]({1}).
+        <target>Вкажіть місце розташування повторно використовуваних файлів запитів (`*{0}`), які можна запускати в сесіях Чату, Редагувань та Інлайн Чату. [Дізнатися більше]({1}).
 
-Відносні шляхи розв'язуються з кореневих папок вашого робочого простору.</target>
+Відносні шляхи вирішуються від кореневих папок вашого робочого простору.</target>
       </trans-unit>
       <trans-unit id="chat.reusablePrompts.config.locations.title">
         <source xml:lang="en">Prompt File Locations</source>
         <target>Розташування файлів запитів</target>
       </trans-unit>
-      <trans-unit id="chat.setupFromChat">
-        <source xml:lang="en">Controls whether Copilot setup starts from a dialog or from the welcome view.</source>
-        <target>Контролює, чи налаштування Copilot починається з діалогу, чи з вітального вигляду.</target>
+      <trans-unit id="chat.sendElementsToChat.attachCSS">
+        <source xml:lang="en">Controls whether CSS of the selected element will be added to the chat. {0} must be enabled.</source>
+        <target>Контролює, чи буде CSS вибраного елемента додано до чату. {0} має бути увімкнено.</target>
+      </trans-unit>
+      <trans-unit id="chat.sendElementsToChat.attachImages">
+        <source xml:lang="en">Controls whether a screenshot of the selected element will be added to the chat. {0} must be enabled.</source>
+        <target>Контролює, чи буде скріншот вибраного елемента додано до чату. {0} повинен бути увімкнений.</target>
+      </trans-unit>
+      <trans-unit id="chat.sendElementsToChat.enabled">
+        <source xml:lang="en">Controls whether elements can be sent to chat from the Simple Browser.</source>
+        <target>Контролює, чи можуть елементи бути надіслані в чат з Простого браузера.</target>
       </trans-unit>
       <trans-unit id="chat.tools.autoApprove">
-        <source xml:lang="en">Controls whether tool use should be automatically approved ('YOLO mode').</source>
-        <target>Контролює, чи використання інструментів має бути автоматично затверджено ('YOLO режим').</target>
-      </trans-unit>
-      <trans-unit id="chat.unifiedChatView">
-        <source xml:lang="en">Enables the unified view with Ask, Edit, and Agent modes in one view.</source>
-        <target>Увімкнення єдиного вигляду з режимами Запит, Редагування та Агент в одному вигляді.</target>
+        <source xml:lang="en">Controls whether tool use should be automatically approved.</source>
+        <target>Контролює, чи слід автоматично затверджувати використання інструментів.</target>
       </trans-unit>
       <trans-unit id="chat.useFileStorage">
         <source xml:lang="en">Enables storing chat sessions on disk instead of in the storage service. Enabling this does a one-time per-workspace migration of existing sessions to the new format.</source>
@@ -1171,6 +1195,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <trans-unit id="mpc.discovery.enabled">
         <source xml:lang="en">Configures discovery of Model Context Protocol servers on the machine. It may be set to `true` or `false` to disable or enable all sources, and an mapping sources you wish to enable.</source>
         <target>Налаштовує виявлення серверів протоколу контексту моделі на машині. Його можна встановити на `true` або `false`, щоб вимкнути або увімкнути всі джерела, а також джерела відображення, які ви бажаєте увімкнути.</target>
+      </trans-unit>
+      <trans-unit id="save-chat-to-prompt-file">
+        <source xml:lang="en">Save chat to a prompt file</source>
+        <target>Зберегти чат у файл запиту</target>
       </trans-unit>
       <trans-unit id="workspaceConfig.mcp.description">
         <source xml:lang="en">Model Context Protocol server configurations</source>
@@ -1224,9 +1252,17 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">1 table </source>
         <target>1 таблиця</target>
       </trans-unit>
+      <trans-unit id="toolCompletedHint">
+        <source xml:lang="en">Tool {0} completed.</source>
+        <target>Інструмент {0} завершено.</target>
+      </trans-unit>
       <trans-unit id="toolInvocationsHint">
-        <source xml:lang="en">Action required: {0} </source>
-        <target>Необхідна дія: {0}</target>
+        <source xml:lang="en">Action required to confirm tool action: {0}</source>
+        <target>Дія необхідна для підтвердження дії інструменту: {0}</target>
+      </trans-unit>
+      <trans-unit id="toolInvocationsHintKb">
+        <source xml:lang="en">Action required to confirm tool action: {0}. Press {1} to accept or {2} to cancel.</source>
+        <target>Дію потрібно підтвердити для інструменту: {0}. Натисніть {1}, щоб прийняти, або {2}, щоб скасувати.</target>
       </trans-unit>
     </body>
   </file>
@@ -1239,18 +1275,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <trans-unit id="viewExtensionLabel">
         <source xml:lang="en">View Extension</source>
         <target>Перегляд розширення</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatAttachmentModel" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="imageTooLarge">
-        <source xml:lang="en">Image is too large</source>
-        <target>Зображення занадто велике</target>
-      </trans-unit>
-      <trans-unit id="imageTooLargeMessage">
-        <source xml:lang="en">The image {0} is too large to be attached.</source>
-        <target>Зображення {0} занадто велике, щоб його прикріпити.</target>
       </trans-unit>
     </body>
   </file>
@@ -1268,6 +1292,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/chatAttachmentWidgets" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="chat.NotebookImageAttachment">
+        <source xml:lang="en">Attached Notebook output, {0}</source>
+        <target>Прикріплений вихідний файл блокнота, {0}</target>
+      </trans-unit>
       <trans-unit id="chat.attachment">
         <source xml:lang="en">Attached context, {0}</source>
         <target>Прикріплений контекст, {0}</target>
@@ -1276,9 +1304,17 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">Remove from context</source>
         <target>Видалити з контексту</target>
       </trans-unit>
+      <trans-unit id="chat.clickToViewContents">
+        <source xml:lang="en">Click to view the contents of: {0}</source>
+        <target>Натисніть, щоб переглянути вміст: {0}</target>
+      </trans-unit>
+      <trans-unit id="chat.elementAttachment">
+        <source xml:lang="en">Attached element, {0}</source>
+        <target>Прикріплений елемент, {0}</target>
+      </trans-unit>
       <trans-unit id="chat.fileAttachment">
         <source xml:lang="en">Attached file, {0}</source>
-        <target>Прикріплений файл, {0}</target>
+        <target>Прикріплено {0}, {1}</target>
       </trans-unit>
       <trans-unit id="chat.fileAttachmentHover">
         <source xml:lang="en">{0} does not support this {1} type.</source>
@@ -1286,11 +1322,35 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.fileAttachmentWithRange">
         <source xml:lang="en">Attached file, {0}, line {1} to line {2}</source>
-        <target>Прикріплений файл, {0}, рядок {1} до рядка {2}</target>
+        <target>Прикріплено {0}, {1}, рядок {2} до рядка {3}</target>
       </trans-unit>
       <trans-unit id="chat.imageAttachment">
         <source xml:lang="en">Attached image, {0}</source>
         <target>Прикріплене зображення, {0}</target>
+      </trans-unit>
+      <trans-unit id="chat.imageAttachmentWarning">
+        <source xml:lang="en">This GIF was partially omitted - current frame will be sent.</source>
+        <target>Цей GIF був частково пропущений - поточний кадр буде надіслано.</target>
+      </trans-unit>
+      <trans-unit id="chat.omittedFileAttachment">
+        <source xml:lang="en">Omitted this file: {0}</source>
+        <target>Пропущено цей файл: {0}</target>
+      </trans-unit>
+      <trans-unit id="chat.omittedImageAttachment">
+        <source xml:lang="en">Omitted this image: {0}</source>
+        <target>Пропущено це зображення: {0}</target>
+      </trans-unit>
+      <trans-unit id="chat.omittedNotebookImageAttachment">
+        <source xml:lang="en">Omitted this Notebook ouput: {0}</source>
+        <target>Пропущено цей вихід записника: {0}</target>
+      </trans-unit>
+      <trans-unit id="chat.partiallyOmittedImageAttachment">
+        <source xml:lang="en">Partially omitted this image: {0}</source>
+        <target>Частково пропущено це зображення: {0}</target>
+      </trans-unit>
+      <trans-unit id="chat.partiallyOmittedNotebookImageAttachment">
+        <source xml:lang="en">Partially omitted this Notebook output: {0}</source>
+        <target>Частково пропущено вихідні дані цього блокнота: {0}</target>
       </trans-unit>
     </body>
   </file>
@@ -1312,6 +1372,14 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">Attached context: {0}.</source>
         <target>Прикріплений контекст: {0}.</target>
       </trans-unit>
+      <trans-unit id="chat.clickToViewContents">
+        <source xml:lang="en">Click to view the contents of: {0}</source>
+        <target>Натисніть, щоб переглянути вміст: {0}</target>
+      </trans-unit>
+      <trans-unit id="chat.elementAttachment">
+        <source xml:lang="en">Attached element, {0}</source>
+        <target>Прикріплений елемент, {0}</target>
+      </trans-unit>
       <trans-unit id="chat.fileAttachment3">
         <source xml:lang="en">Attached: {0}.</source>
         <target>Додано: {0}.</target>
@@ -1332,13 +1400,45 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">{0}</source>
         <target>{0}</target>
       </trans-unit>
-      <trans-unit id="chat.omittedFileAttachment">
+      <trans-unit id="chat.imageAttachmentWarning">
+        <source xml:lang="en">This GIF was partially omitted - current frame was be sent.</source>
+        <target>Цей GIF був частково пропущений - поточний кадр буде надіслано.</target>
+      </trans-unit>
+      <trans-unit id="chat.notebookOutputFileAttachment3">
+        <source xml:lang="en">Attached: {0}.</source>
+        <target>Прикріплено: {0}.</target>
+      </trans-unit>
+      <trans-unit id="chat.notebookOutputImageAttachment">
+        <source xml:lang="en">Attached: {0}</source>
+        <target>Прикріплено: {0}</target>
+      </trans-unit>
+      <trans-unit id="chat.notebookOutputOmittedFileAttachment">
         <source xml:lang="en">Omitted: {0}.</source>
         <target>Пропущено: {0}.</target>
+      </trans-unit>
+      <trans-unit id="chat.notebookOutputOmittedImageAttachment">
+        <source xml:lang="en">Omitted: {0}</source>
+        <target>Пропущено: {0}</target>
+      </trans-unit>
+      <trans-unit id="chat.notebookOutputPartialFileAttachment">
+        <source xml:lang="en">Partially attached: {0}.</source>
+        <target>Частково прикріплено: {0}.</target>
+      </trans-unit>
+      <trans-unit id="chat.notebookOutputPartiallyOmittedImageAttachment">
+        <source xml:lang="en">Partially omitted: {0}</source>
+        <target>Частково опущено: {0}</target>
+      </trans-unit>
+      <trans-unit id="chat.omittedFileAttachment">
+        <source xml:lang="en">Omitted: {0}.</source>
+        <target>Пропущено цей файл: {0}</target>
       </trans-unit>
       <trans-unit id="chat.omittedFileAttachmentWithRange">
         <source xml:lang="en">Omitted: {0}, line {1} to line {2}.</source>
         <target>Пропущено: {0}, рядок {1} до рядка {2}.</target>
+      </trans-unit>
+      <trans-unit id="chat.omittedImageAttachment">
+        <source xml:lang="en">Omitted this image: {0}</source>
+        <target>Пропущено це зображення: {0}</target>
       </trans-unit>
       <trans-unit id="chat.partialFileAttachment">
         <source xml:lang="en">Partially attached: {0}.</source>
@@ -1347,6 +1447,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <trans-unit id="chat.partialFileAttachmentWithRange">
         <source xml:lang="en">Partially attached: {0}, line {1} to line {2}.</source>
         <target>Частково прикріплено: {0}, рядок {1} до рядка {2}.</target>
+      </trans-unit>
+      <trans-unit id="chat.partiallyOmittedImageAttachment">
+        <source xml:lang="en">Partially omitted this image: {0}</source>
+        <target>Частково пропущено це зображення: {0}</target>
       </trans-unit>
       <trans-unit id="resource">
         <source xml:lang="en">The full value of the chat attachment resource, including scheme and path</source>
@@ -1394,6 +1498,14 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatExtensionsContentPart" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="chat.extensions.loading">
+        <source xml:lang="en">Loading extensions...</source>
+        <target>Завантаження розширень...</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatMarkdownContentPart" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="chat.codeblock.applyingPercentage">
@@ -1431,6 +1543,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <trans-unit id="pausedMessage">
         <source xml:lang="en">Paused</source>
         <target>Призупинено</target>
+      </trans-unit>
+      <trans-unit id="resume">
+        <source xml:lang="en">Click to resume</source>
+        <target>Натисніть, щоб продовжити</target>
       </trans-unit>
       <trans-unit id="workingMessage">
         <source xml:lang="en">Working...</source>
@@ -1494,6 +1610,18 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatToolInputOutputContentPart" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="chat.input">
+        <source xml:lang="en">Input</source>
+        <target>Вхід</target>
+      </trans-unit>
+      <trans-unit id="chat.output">
+        <source xml:lang="en">Output</source>
+        <target>Вихід</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatToolInvocationPart" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="allowGloballTooltip">
@@ -1528,6 +1656,14 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">Continue</source>
         <target>Продовжити</target>
       </trans-unit>
+      <trans-unit id="seeMore">
+        <source xml:lang="en">See more</source>
+        <target>Дивитися більше</target>
+      </trans-unit>
+      <trans-unit id="toolResultData">
+        <source xml:lang="en">Data of type {0} ({1} bytes)</source>
+        <target>Дані типу {0} ({1} байт)</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/chatContentParts/chatTreeContentPart" source-language="en" datatype="plaintext" target-language="uk">
@@ -1559,6 +1695,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <trans-unit id="image">
         <source xml:lang="en">Image</source>
         <target>Зображення</target>
+      </trans-unit>
+      <trans-unit id="notebookOutput">
+        <source xml:lang="en">Output</source>
+        <target>Вихід</target>
       </trans-unit>
       <trans-unit id="problem">
         <source xml:lang="en">Problem</source>
@@ -1676,6 +1816,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">View All Edits</source>
         <target>- Переглянути зміни{0}.</target>
       </trans-unit>
+      <trans-unit id="chatEditing.viewPreviousEdits">
+        <source xml:lang="en">View Previous Edits</source>
+        <target>Переглянути попередні редагування</target>
+      </trans-unit>
       <trans-unit id="clearWorkingSet">
         <source xml:lang="en">Clear Working Set</source>
         <target>Очистити робочий набір</target>
@@ -1699,10 +1843,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <trans-unit id="removeFileFromWorkingSet">
         <source xml:lang="en">Remove File</source>
         <target>Видалити файл</target>
-      </trans-unit>
-      <trans-unit id="workbench.action.chat.addSelectedFilesToWorkingSet.label">
-        <source xml:lang="en">Add Selected Files to Working Set</source>
-        <target>Додати вибрані файли до робочого набору</target>
       </trans-unit>
     </body>
   </file>
@@ -1741,12 +1881,12 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <target>Залиште цю решту</target>
       </trans-unit>
       <trans-unit id="accessibleDiff">
-        <source xml:lang="en">Show Accessible Diff View</source>
-        <target>Показати доступний диференційний перегляд</target>
+        <source xml:lang="en">Show Accessible Diff View for Chat Edits</source>
+        <target>Показати доступний перегляд змін для редагувань чату</target>
       </trans-unit>
       <trans-unit id="diff">
-        <source xml:lang="en">Toggle Diff Editor</source>
-        <target>Перемикати редактор відмінностей</target>
+        <source xml:lang="en">Toggle Diff Editor for Chat Edits</source>
+        <target>Переключити редактор відмінностей для редагувань чату</target>
       </trans-unit>
       <trans-unit id="discard">
         <source xml:lang="en">Undo Chat Edits</source>
@@ -1813,24 +1953,16 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
   <file original="src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingEditorOverlay" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="0Of0">
-        <source xml:lang="en">0 of 0</source>
-        <target>0 з 0</target>
-      </trans-unit>
-      <trans-unit id="applyingPercentage">
-        <source xml:lang="en">{0}% Applying edits</source>
-        <target>{0}% Застосування змін</target>
-      </trans-unit>
-      <trans-unit id="generating">
-        <source xml:lang="en">Generating edits</source>
-        <target>Генерація редагувань</target>
+        <source xml:lang="en">—</source>
+        <target>—</target>
       </trans-unit>
       <trans-unit id="nOfM">
         <source xml:lang="en">{0} of {1}</source>
         <target>{0} з {1}</target>
       </trans-unit>
       <trans-unit id="paused">
-        <source xml:lang="en">Edits Paused</source>
-        <target>Редагування призупинено</target>
+        <source xml:lang="en">Paused</source>
+        <target>Призупинено</target>
       </trans-unit>
       <trans-unit id="tooltip_11">
         <source xml:lang="en">1 change in 1 file</source>
@@ -1840,6 +1972,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">1 change in {0} files</source>
         <target>1 зміна в {0} файлах</target>
       </trans-unit>
+      <trans-unit id="tooltip_busy">
+        <source xml:lang="en">{0} - Working...</source>
+        <target>{0} - Працює...</target>
+      </trans-unit>
       <trans-unit id="tooltip_n1">
         <source xml:lang="en">{0} changes in 1 file</source>
         <target>{0} зміни в 1 файлі</target>
@@ -1847,6 +1983,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <trans-unit id="tooltip_nm">
         <source xml:lang="en">{0} changes in {1} files</source>
         <target>{0} зміни в {1} файлах</target>
+      </trans-unit>
+      <trans-unit id="working">
+        <source xml:lang="en">Working...</source>
+        <target>Працює...</target>
       </trans-unit>
     </body>
   </file>
@@ -1923,6 +2063,58 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <trans-unit id="diff.generic">
         <source xml:lang="en">{0} (changes from chat)</source>
         <target>{0} (зміни з чату)</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatEditing/simpleBrowserEditorOverlay" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="cancel">
+        <source xml:lang="en">Cancel</source>
+        <target>Скасувати</target>
+      </trans-unit>
+      <trans-unit id="cancelSelection">
+        <source xml:lang="en">Click to cancel selection.</source>
+        <target>Натисніть, щоб скасувати вибір.</target>
+      </trans-unit>
+      <trans-unit id="chat.configureElements">
+        <source xml:lang="en">Configure Attachments Sent</source>
+        <target>Налаштувати надіслані вкладення</target>
+      </trans-unit>
+      <trans-unit id="chat.expandOverlay">
+        <source xml:lang="en">Expand Overlay</source>
+        <target>Розширити накладку</target>
+      </trans-unit>
+      <trans-unit id="chat.hideOverlay">
+        <source xml:lang="en">Collapse Overlay</source>
+        <target>Сховати накладку</target>
+      </trans-unit>
+      <trans-unit id="chat.nextSelection">
+        <source xml:lang="en">Select Again</source>
+        <target>Вибрати знову</target>
+      </trans-unit>
+      <trans-unit id="elementCancelMessage">
+        <source xml:lang="en">Selection canceled</source>
+        <target>Вибір скасовано</target>
+      </trans-unit>
+      <trans-unit id="elementSelectionComplete">
+        <source xml:lang="en">Element added to chat</source>
+        <target>Елемент додано до чату</target>
+      </trans-unit>
+      <trans-unit id="elementSelectionInProgress">
+        <source xml:lang="en">Selecting element...</source>
+        <target>Вибір елемента...</target>
+      </trans-unit>
+      <trans-unit id="elementSelectionMessage">
+        <source xml:lang="en">Add element to chat</source>
+        <target>Додати елемент до чату</target>
+      </trans-unit>
+      <trans-unit id="selectAnElement">
+        <source xml:lang="en">Click to select an element.</source>
+        <target>Натисніть, щоб вибрати елемент.</target>
+      </trans-unit>
+      <trans-unit id="startSelection">
+        <source xml:lang="en">Start</source>
+        <target>Почати</target>
       </trans-unit>
     </body>
   </file>
@@ -2012,26 +2204,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">Chat Input,  Type to ask questions or type / for topics, press enter to send out the request. Use {0} for Chat Accessibility Help.</source>
         <target>Введення чату, введіть запитання або наберіть / для тем, натисніть enter, щоб надіслати запит. Використовуйте {0} для допомоги з доступністю чату.</target>
       </trans-unit>
-      <trans-unit id="chat.agentMode">
-        <source xml:lang="en">Agent</source>
-        <target>Агент</target>
-      </trans-unit>
-      <trans-unit id="chat.askMode">
-        <source xml:lang="en">Ask</source>
-        <target>Запитати</target>
-      </trans-unit>
-      <trans-unit id="chat.modelPicker.label">
-        <source xml:lang="en">Pick Model</source>
-        <target>Виберіть модель</target>
-      </trans-unit>
-      <trans-unit id="chat.moreModels">
-        <source xml:lang="en">Add more Models</source>
-        <target>Додати більше моделей</target>
-      </trans-unit>
-      <trans-unit id="chat.normalMode">
-        <source xml:lang="en">Edit</source>
-        <target>Редагувати</target>
-      </trans-unit>
       <trans-unit id="chatAttachFiles">
         <source xml:lang="en">Search for files and context to add to your request</source>
         <target>Шукайте файли та контекст, щоб додати до вашого запиту</target>
@@ -2102,7 +2274,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="paused">
         <source xml:lang="en">Paused</source>
-        <target>Редагування призупинено</target>
+        <target>Призупинено</target>
       </trans-unit>
       <trans-unit id="poorlyWrittenOrFormatted">
         <source xml:lang="en">Poorly written or formatted</source>
@@ -2126,7 +2298,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="working">
         <source xml:lang="en">Working</source>
-        <target>Працює</target>
+        <target>Працює...</target>
       </trans-unit>
     </body>
   </file>
@@ -2176,10 +2348,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">Commands available for this chat participant, which the user can invoke with a `/`.</source>
         <target>Команди, доступні для цього учасника чату, які користувач може викликати за допомогою `/`.</target>
       </trans-unit>
-      <trans-unit id="chatEditing.viewContainer.label">
-        <source xml:lang="en">Copilot Edits</source>
-        <target>Редагування Copilot</target>
-      </trans-unit>
       <trans-unit id="chatFailErrorMessage">
         <source xml:lang="en">Chat failed to load because the installed version of the Copilot Chat extension is not compatible with this version of {0}. Please ensure that the Copilot Chat extension is up to date.</source>
         <target>Чат не вдалося завантажити, оскільки встановлена версія розширення Copilot Chat не сумісна з цією версією {0}. Будь ласка, переконайтеся, що розширення Copilot Chat оновлене.</target>
@@ -2228,31 +2396,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">When the user clicks this participant in `/help`, this text will be submitted to the participant.</source>
         <target>Коли користувач натискає на цього учасника в `/help`, цей текст буде надіслано учаснику.</target>
       </trans-unit>
-      <trans-unit id="editsMovedFooterMessage">
-        <source xml:lang="en">[Learn more](command:_movedEditsView.learnMore) about the Chat view.</source>
-        <target>[Дізнайтеся більше](command:_movedEditsView.learnMore) про вигляд чату.</target>
-      </trans-unit>
-      <trans-unit id="editsMovedMainMessage">
-        <source xml:lang="en">Copilot Edits has been moved to the [main Chat view](command:workbench.action.chat.open). You can switch between modes by using the dropdown in the Chat input box.</source>
-        <target>Copilot Edits було переміщено до [основного вигляду чату](command:workbench.action.chat.open). Ви можете перемикатися між режимами, використовуючи випадаюче меню в полі вводу чату.</target>
-      </trans-unit>
-      <trans-unit id="hideMovedChatEditsView">
-        <source xml:lang="en">True when the moved chat edits view should be hidden.</source>
-        <target>Істина, коли перегляд редагувань переміщеного чату має бути прихованим.</target>
-      </trans-unit>
       <trans-unit id="miToggleChat">
         <source xml:lang="en">&amp;&amp;Chat</source>
         <note>&amp;&amp; denotes a mnemonic</note>
         <target>&amp;&amp;Чат</target>
-      </trans-unit>
-      <trans-unit id="miToggleEdits">
-        <source xml:lang="en">Copilot Ed&amp;&amp;its</source>
-        <note>&amp;&amp; denotes a mnemonic</note>
-        <target>Ре&amp;&amp;дагування від Copilot</target>
-      </trans-unit>
-      <trans-unit id="ok">
-        <source xml:lang="en">Got it</source>
-        <target>Зрозумів.</target>
       </trans-unit>
       <trans-unit id="participantCommands">
         <source xml:lang="en">Commands</source>
@@ -2322,10 +2469,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">Edit files in your workspace in agent mode</source>
         <target>Редагуйте файли у вашому робочому просторі в режимі агента</target>
       </trans-unit>
-      <trans-unit id="agentMessage">
-        <source xml:lang="en">Ask Copilot to edit your files in [agent mode]({0}). Copilot will automatically use multiple requests to pick files to edit, run terminal commands, and iterate on errors.</source>
-        <target>Запитайте у Copilot редагувати ваші файли в [агентському режимі]({0}). Copilot автоматично використовуватиме кілька запитів для вибору файлів для редагування, виконання команд терміналу та ітерації на помилках.</target>
-      </trans-unit>
       <trans-unit id="chat.category">
         <source xml:lang="en">Chat</source>
         <target>Чат</target>
@@ -2334,9 +2477,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">Ask Copilot</source>
         <target>Запитайте у Copilot</target>
       </trans-unit>
-      <trans-unit id="chatMessage">
-        <source xml:lang="en">Copilot is powered by AI, so mistakes are possible. Review output carefully before use.</source>
-        <target>Copilot працює на основі ШІ, тому можливі помилки. Уважно перевіряйте результати перед використанням.</target>
+      <trans-unit id="copilotFailedWarning">
+        <source xml:lang="en">Copilot failed to get ready. Please review the guidance in the Chat view.</source>
+        <target>Copilot не зміг підготуватися. Будь ласка, перегляньте вказівки у вигляді чату.</target>
       </trans-unit>
       <trans-unit id="copilotFreeTitle">
         <source xml:lang="en">Start using Copilot for free</source>
@@ -2350,13 +2493,21 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">Copilot setup failed.</source>
         <target>Налаштування Copilot не вдалося.</target>
       </trans-unit>
+      <trans-unit id="copilotSetupSuccess">
+        <source xml:lang="en">Copilot setup finished successfully.</source>
+        <target>Налаштування Copilot завершено успішно.</target>
+      </trans-unit>
       <trans-unit id="copilotTitle">
         <source xml:lang="en">Start using Copilot</source>
         <target>Почніть використовувати Copilot</target>
       </trans-unit>
       <trans-unit id="copilotTookLongWarning">
-        <source xml:lang="en">Copilot took too long to get ready. Please try again.</source>
-        <target>Copilot зайняв занадто багато часу для підготовки. Будь ласка, спробуйте ще раз.</target>
+        <source xml:lang="en">Copilot took too long to get ready. Please review the guidance in the Chat view.</source>
+        <target>Copilot зайняв занадто багато часу для підготовки. Будь ласка, перегляньте вказівки у вікні чату.</target>
+      </trans-unit>
+      <trans-unit id="copilotUnavailableWarning">
+        <source xml:lang="en">Copilot failed to get a response. Please try again.</source>
+        <target>Copilot не зміг отримати відповідь. Будь ласка, спробуйте ще раз.</target>
       </trans-unit>
       <trans-unit id="copilotWorkspaceTrust">
         <source xml:lang="en">Copilot is currently only supported in trusted workspaces.</source>
@@ -2365,14 +2516,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <trans-unit id="editsDescription">
         <source xml:lang="en">Edit files in your workspace</source>
         <target>Редагуйте файли у вашому робочому просторі</target>
-      </trans-unit>
-      <trans-unit id="editsMessage">
-        <source xml:lang="en">Start your editing session by defining a set of files that you want to work with. Then ask Copilot for the changes you want to make.</source>
-        <target>Почніть свою сесію редагування, визначивши набір файлів, з якими ви хочете працювати. Потім запитайте у Copilot про зміни, які ви хочете внести.</target>
-      </trans-unit>
-      <trans-unit id="editsTitle">
-        <source xml:lang="en">Edit with Copilot</source>
-        <target>Редагувати з Copilot</target>
       </trans-unit>
       <trans-unit id="enterpriseInstance">
         <source xml:lang="en">What is your {0} instance?</source>
@@ -2385,28 +2528,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <trans-unit id="enterpriseSetupError">
         <source xml:lang="en">The provided {0} instance is invalid. Would you like to enter it again?</source>
         <target>Наданий екземпляр {0} є недійсним. Чи бажаєте ви ввести його знову?</target>
-      </trans-unit>
-      <trans-unit id="featureChat">
-        <source xml:lang="en">Code faster with Completions</source>
-        <target>Кодуйте швидше з Доповненнями</target>
-      </trans-unit>
-      <trans-unit id="featureEdits">
-        <source xml:lang="en">Build features with Copilot Edits</source>
-        <target>Створюйте функції за допомогою Copilot Edits</target>
-      </trans-unit>
-      <trans-unit id="featureExplore">
-        <source xml:lang="en">Explore your codebase with Chat</source>
-        <target>Досліджуйте свою кодову базу з Chat</target>
-      </trans-unit>
-      <trans-unit id="free">
-        <source xml:lang="en">$(sparkle-filled) We now offer [Copilot for free]({0}).</source>
-        <note>{Locked="[]({0})"}</note>
-        <target>$(sparkle-filled) Тепер ми пропонуємо [Copilot безкоштовно]({0}).</target>
-      </trans-unit>
-      <trans-unit id="header">
-        <source xml:lang="en">[Copilot]({0}) is your AI pair programmer.</source>
-        <note>{Locked="[Copilot]({0})"}</note>
-        <target>[Copilot]({0}) є вашим AI парним програмістом.</target>
       </trans-unit>
       <trans-unit id="headerDialog">
         <source xml:lang="en">[Copilot]({0}) is your AI pair programmer. Write code faster with completions, fix bugs and build new features across multiple files, and learn about your codebase through chat.</source>
@@ -2464,25 +2585,29 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
 
 "Copilot Free та Pro можуть показувати [публічний код]({0}) пропозиції, і ми можемо використовувати ваші дані для покращення продукту. Ви можете змінити ці [налаштування]({1}) в будь-який час."</target>
       </trans-unit>
-      <trans-unit id="setupChatInstalling">
-        <source xml:lang="en">$(loading~spin) Getting Copilot Ready...</source>
-        <target>$(loading~spin) Підготовка Copilot...</target>
-      </trans-unit>
       <trans-unit id="setupChatProgress">
         <source xml:lang="en">Getting Copilot ready...</source>
         <target>Підготовка Copilot...</target>
-      </trans-unit>
-      <trans-unit id="setupChatSignIn">
-        <source xml:lang="en">$(loading~spin) Signing in to {0}...</source>
-        <target>$(loading~spin) Увійти в {0}...</target>
       </trans-unit>
       <trans-unit id="setupChatSignIn2">
         <source xml:lang="en">Signing in to {0}.</source>
         <target>Увійти в {0}.</target>
       </trans-unit>
+      <trans-unit id="setupCopilot">
+        <source xml:lang="en">Set up Copilot.</source>
+        <target>Налаштуйте Copilot.</target>
+      </trans-unit>
       <trans-unit id="setupErrorDialog">
         <source xml:lang="en">Copilot setup failed. Would you like to try again?</source>
         <target>Налаштування Copilot не вдалося. Хотіли б ви спробувати ще раз?</target>
+      </trans-unit>
+      <trans-unit id="setupToolDisplayName">
+        <source xml:lang="en">New Workspace</source>
+        <target>Новий робочий простір</target>
+      </trans-unit>
+      <trans-unit id="setupToolsDescription">
+        <source xml:lang="en">Scaffold a new workspace in VS Code</source>
+        <target>Сконструюйте нове робоче середовище у VS Code</target>
       </trans-unit>
       <trans-unit id="setupWithEnterpriseProvider">
         <source xml:lang="en">Sign in with a {0} Account</source>
@@ -2504,14 +2629,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">Sign in to use Copilot for free</source>
         <target>Увійдіть, щоб безкоштовно використовувати Copilot</target>
       </trans-unit>
-      <trans-unit id="startUp">
-        <source xml:lang="en">Use Copilot</source>
-        <target>Використовуйте Copilot</target>
-      </trans-unit>
-      <trans-unit id="startUpLimited">
-        <source xml:lang="en">Use Copilot for free</source>
-        <target>Використовуйте Copilot безкоштовно</target>
-      </trans-unit>
       <trans-unit id="terms">
         <source xml:lang="en">By continuing, you agree to the [Terms]({0}) and [Privacy Policy]({1}).</source>
         <note>{Locked="["}&#xD;
@@ -2522,6 +2639,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <trans-unit id="triggerChatSetup">
         <source xml:lang="en">Use AI Features with Copilot for free...</source>
         <target>Використовуйте функції ШІ з Copilot безкоштовно...</target>
+      </trans-unit>
+      <trans-unit id="triggerChatSetupFromAccounts">
+        <source xml:lang="en">Sign in to use Copilot...</source>
+        <target>Увійдіть, щоб використовувати Copilot...</target>
       </trans-unit>
       <trans-unit id="unknownSetupError">
         <source xml:lang="en">An error occurred while setting up Copilot. Would you like to try again?</source>
@@ -2539,6 +2660,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">Use Copilot</source>
         <target>Використовуйте Copilot</target>
       </trans-unit>
+      <trans-unit id="vscodeAgentDescription">
+        <source xml:lang="en">Ask questions about VS Code</source>
+        <target>Запитуйте питання про VS Code</target>
+      </trans-unit>
       <trans-unit id="waitingCopilot">
         <source xml:lang="en">Getting Copilot ready.</source>
         <target>Підготовка Copilot.</target>
@@ -2546,10 +2671,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <trans-unit id="waitingCopilot2">
         <source xml:lang="en">Copilot is almost ready.</source>
         <target>Copilot майже готовий.</target>
-      </trans-unit>
-      <trans-unit id="welcomeChat">
-        <source xml:lang="en">Welcome to Copilot</source>
-        <target>Ласкаво просимо до Copilot</target>
       </trans-unit>
       <trans-unit id="willResolveTo">
         <source xml:lang="en">Will resolve to {0}</source>
@@ -2567,13 +2688,21 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">Set up Copilot to use AI features.</source>
         <target>Налаштуйте Copilot для використання функцій ШІ.</target>
       </trans-unit>
+      <trans-unit id="additionalUsageDisabled">
+        <source xml:lang="en">Additional paid premium requests disabled.</source>
+        <target>Додаткові запити на платні премії вимкнено.</target>
+      </trans-unit>
+      <trans-unit id="additionalUsageEnabled">
+        <source xml:lang="en">Additional paid premium requests enabled.</source>
+        <target>Увімкнено додаткові запити на платні премії.</target>
+      </trans-unit>
       <trans-unit id="chatAndCompletionsQuotaExceededStatus">
-        <source xml:lang="en">Limit reached</source>
-        <target>Досягнуто межі</target>
+        <source xml:lang="en">Quota reached</source>
+        <target>Квота досягнута</target>
       </trans-unit>
       <trans-unit id="chatQuotaExceededStatus">
-        <source xml:lang="en">Chat limit reached</source>
-        <target>Досягнуто ліміту чату</target>
+        <source xml:lang="en">Chat quota reached</source>
+        <target>Досягнуто квоти чату</target>
       </trans-unit>
       <trans-unit id="chatStatus">
         <source xml:lang="en">Copilot Status</source>
@@ -2582,14 +2711,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <trans-unit id="chatsLabel">
         <source xml:lang="en">Chat messages</source>
         <target>Чат повідомлення</target>
-      </trans-unit>
-      <trans-unit id="codeCompletionsStatus">
-        <source xml:lang="en">Copilot Code Completions</source>
-        <target>Copilot Завершення Коду</target>
-      </trans-unit>
-      <trans-unit id="codeCompletionsStatusText">
-        <source xml:lang="en">$(copilot) Completions</source>
-        <target>$(copilot) Завершення</target>
       </trans-unit>
       <trans-unit id="completionsDisabledStatus">
         <source xml:lang="en">Code Completions Disabled</source>
@@ -2600,8 +2721,12 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <target>Завершення коду</target>
       </trans-unit>
       <trans-unit id="completionsQuotaExceededStatus">
-        <source xml:lang="en">Completions limit reached</source>
-        <target>Досягнуто межі завершень</target>
+        <source xml:lang="en">Completions quota reached</source>
+        <target>Квота завершень досягнута</target>
+      </trans-unit>
+      <trans-unit id="enableAdditionalUsage">
+        <source xml:lang="en">Manage paid premium requests</source>
+        <target>Керуйте платними преміум-запитами</target>
       </trans-unit>
       <trans-unit id="gaugeBackground">
         <source xml:lang="en">Gauge background color.</source>
@@ -2631,17 +2756,41 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">Gauge warning foreground color.</source>
         <target>Колір переднього плану попередження датчика.</target>
       </trans-unit>
+      <trans-unit id="learnMore">
+        <source xml:lang="en">Learn More</source>
+        <target>Дізнатися більше</target>
+      </trans-unit>
       <trans-unit id="limitQuota">
-        <source xml:lang="en">Limits will reset on {0}.</source>
-        <target>Ліміти скинуться {0}.</target>
+        <source xml:lang="en">Allowance resets {0}.</source>
+        <target>Виплати скидаються {0}.</target>
       </trans-unit>
       <trans-unit id="notSignedIntoCopilot">
         <source xml:lang="en">Signed out</source>
         <target>Вийшли</target>
       </trans-unit>
+      <trans-unit id="premiumChatsLabel">
+        <source xml:lang="en">Premium requests</source>
+        <target>Преміум запити</target>
+      </trans-unit>
       <trans-unit id="quotaDisplay">
         <source xml:lang="en">{0}%</source>
         <target>{0}%</target>
+      </trans-unit>
+      <trans-unit id="quotaDisplayWithOverage">
+        <source xml:lang="en">+{0} requests</source>
+        <target>+{0} запитів</target>
+      </trans-unit>
+      <trans-unit id="quotaLabel">
+        <source xml:lang="en">Manage Copilot</source>
+        <target>Керувати Copilot</target>
+      </trans-unit>
+      <trans-unit id="quotaTooltip">
+        <source xml:lang="en">Manage Copilot</source>
+        <target>Керувати Copilot</target>
+      </trans-unit>
+      <trans-unit id="quotaUnlimited">
+        <source xml:lang="en">Included</source>
+        <target>Включено</target>
       </trans-unit>
       <trans-unit id="settings.codeCompletions">
         <source xml:lang="en">Code Completions (all files)</source>
@@ -2655,9 +2804,17 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">Next Edit Suggestions</source>
         <target>Наступні пропозиції редагування</target>
       </trans-unit>
+      <trans-unit id="settingsLabel">
+        <source xml:lang="en">Settings</source>
+        <target>Налаштування</target>
+      </trans-unit>
       <trans-unit id="settingsTitle">
         <source xml:lang="en">Settings</source>
         <target>Налаштування</target>
+      </trans-unit>
+      <trans-unit id="settingsTooltip">
+        <source xml:lang="en">Open Settings</source>
+        <target>Відкрити Налаштування</target>
       </trans-unit>
       <trans-unit id="signInDescription">
         <source xml:lang="en">Sign in to use Copilot AI features.</source>
@@ -2672,13 +2829,25 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <target>Оновити до Copilot Pro</target>
       </trans-unit>
       <trans-unit id="usageTitle">
-        <source xml:lang="en">Copilot Free Plan Usage</source>
-        <target>Використання безкоштовного плану Copilot</target>
+        <source xml:lang="en">Copilot Usage</source>
+        <target>Використання Copilot</target>
       </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/chatWidget" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="agentMessage">
+        <source xml:lang="en">Ask Copilot to edit your files in [agent mode]({0}). Copilot will automatically use multiple requests to pick files to edit, run terminal commands, and iterate on errors.</source>
+        <target>Попросіть Copilot редагувати ваші файли в [режимі агента]({0}). Copilot автоматично використовуватиме кілька запитів для вибору файлів для редагування, виконання команд терміналу та ітерації на помилках.</target>
+      </trans-unit>
+      <trans-unit id="chatDescription">
+        <source xml:lang="en">Ask Copilot</source>
+        <target>Запитайте у Copilot</target>
+      </trans-unit>
+      <trans-unit id="chatMessage">
+        <source xml:lang="en">Copilot is powered by AI, so mistakes are possible. Review output carefully before use.</source>
+        <target>Copilot працює на базі ШІ, тому можливі помилки. Уважно перевіряйте результати перед використанням.</target>
+      </trans-unit>
       <trans-unit id="chatWidget.tips">
         <source xml:lang="en">{0} or type {1} to attach context
 
@@ -2694,6 +2863,14 @@ Type {3} to use commands</source>
       <trans-unit id="chatWidget.tips.withoutParticipants">
         <source xml:lang="en">{0} or type {1} to attach context</source>
         <target>{0} або введіть {1}, щоб додати контекст</target>
+      </trans-unit>
+      <trans-unit id="editsMessage">
+        <source xml:lang="en">Start your editing session by defining a set of files that you want to work with. Then ask Copilot for the changes you want to make.</source>
+        <target>Розпочніть свою сесію редагування, визначивши набір файлів, з якими ви хочете працювати. Потім запитайте у Copilot про зміни, які ви хочете внести.</target>
+      </trans-unit>
+      <trans-unit id="editsTitle">
+        <source xml:lang="en">Edit with Copilot</source>
+        <target>Редагувати з Copilot</target>
       </trans-unit>
       <trans-unit id="scrollDownButtonLabel">
         <source xml:lang="en">Scroll down</source>
@@ -2765,45 +2942,13 @@ Type {3} to use commands</source>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/chat/browser/contrib/chatDynamicVariables" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="allFiles">
-        <source xml:lang="en">All Files</source>
-        <target>Усі файли</target>
-      </trans-unit>
-      <trans-unit id="allFilesDescription">
-        <source xml:lang="en">Search for relevant files in the workspace and provide context from them</source>
-        <target>Шукайте відповідні файли в робочій області та надайте контекст з них</target>
-      </trans-unit>
-      <trans-unit id="markers.panel.allErrors">
-        <source xml:lang="en">All Problems</source>
-        <target>Усі проблеми</target>
-      </trans-unit>
-      <trans-unit id="markers.panel.at.ln.col.number">
-        <source xml:lang="en">[Ln {0}, Col {1}]</source>
-        <target>[Ln {0}, Col {1}]</target>
-      </trans-unit>
-      <trans-unit id="markers.panel.files">
-        <source xml:lang="en">Files</source>
-        <target>Файли</target>
-      </trans-unit>
-      <trans-unit id="pickAProblem">
-        <source xml:lang="en">Pick a problem to attach...</source>
-        <target>Виберіть проблему для прикріплення...</target>
-      </trans-unit>
-      <trans-unit id="problemsMore">
-        <source xml:lang="en">+ {0} more</source>
-        <target>+ {0} ще</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/workbench/contrib/chat/browser/contrib/chatInputCompletions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="fileEntryDescription">
-        <source xml:lang="en">{0} ({1})</source>
-        <target>{0} ({1})</target>
+      <trans-unit id="desc">
+        <source xml:lang="en">MCP Server: {0}</source>
+        <target>MCP Сервер: {0}</target>
       </trans-unit>
-      <trans-unit id="folderEntryDescription">
+      <trans-unit id="fileEntryDescription">
         <source xml:lang="en">{0} ({1})</source>
         <target>{0} ({1})</target>
       </trans-unit>
@@ -2811,21 +2956,13 @@ Type {3} to use commands</source>
         <source xml:lang="en">Install Chat Extensions...</source>
         <target>Встановити розширення чату...</target>
       </trans-unit>
-      <trans-unit id="pickFileLabel">
-        <source xml:lang="en">Pick a file</source>
-        <target>Виберіть файл</target>
+      <trans-unit id="promptFileDescription">
+        <source xml:lang="en">User Prompt File</source>
+        <target>Файл запиту користувача</target>
       </trans-unit>
-      <trans-unit id="pickFolderLabel">
-        <source xml:lang="en">Pick a folder</source>
-        <target>Виберіть папку</target>
-      </trans-unit>
-      <trans-unit id="pickProblemsLabel">
-        <source xml:lang="en">Problems in your workspace</source>
-        <target>Проблеми у вашому робочому просторі</target>
-      </trans-unit>
-      <trans-unit id="pickSymbolLabel">
-        <source xml:lang="en">Pick a symbol</source>
-        <target>Виберіть символ</target>
+      <trans-unit id="promptFileDescriptionWorkspace">
+        <source xml:lang="en">Workspace Prompt File</source>
+        <target>Файл запиту робочого простору</target>
       </trans-unit>
     </body>
   </file>
@@ -2853,51 +2990,83 @@ Type {3} to use commands</source>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/chat/browser/languageModelToolsService" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/contrib/chat/browser/modelPicker/modelPickerActionItem" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="msg.title">
-        <source xml:lang="en">Run {0}</source>
-        <target>Запустити {0}</target>
+      <trans-unit id="chat.modelPicker.label">
+        <source xml:lang="en">Pick Model</source>
+        <target>Виберіть модель</target>
       </trans-unit>
-      <trans-unit id="tool.warning">
-        <source xml:lang="en">{0} This tool is from the extension `{1}`. Please carefully review any requested actions.</source>
-        <target>{0} Цей інструмент з розширення `{1}`. Будь ласка, уважно перегляньте будь-які запитувані дії.</target>
+      <trans-unit id="chat.moreModels">
+        <source xml:lang="en">Add Premium Models</source>
+        <target>Додати преміум моделі</target>
       </trans-unit>
-      <trans-unit id="toolConfirmationMessage">
-        <source xml:lang="en">Action required: {0}</source>
-        <target>Вимагається дія: {0}</target>
+      <trans-unit id="chat.moreModels.tooltip">
+        <source xml:lang="en">Add premium models</source>
+        <target>Додати преміум моделі</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/attachInstructionsCommand" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="attach-instructions.capitalized.ellipses">
+        <source xml:lang="en">Attach Instructions...</source>
+        <target>Прикріпити інструкції...</target>
       </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/createPromptCommand" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="commands.prompts.create.title.local">
-        <source xml:lang="en">Create Prompt</source>
-        <target>Створити запит</target>
+      <trans-unit id="commands.new.instructions.local.title">
+        <source xml:lang="en">New Instructions File...</source>
+        <target>Новий файл інструкцій...</target>
       </trans-unit>
-      <trans-unit id="commands.prompts.create.title.user">
-        <source xml:lang="en">Create User Prompt</source>
-        <target>Створити запит користувача</target>
+      <trans-unit id="commands.new.prompt.local.title">
+        <source xml:lang="en">New Prompt File...</source>
+        <target>Новий файл запиту...</target>
       </trans-unit>
       <trans-unit id="enable.capitalized">
         <source xml:lang="en">Enable</source>
         <target>Увімкнути</target>
       </trans-unit>
-      <trans-unit id="workbench.command.prompts.create.initial-content">
-        <source xml:lang="en">Add prompt contents...</source>
-        <target>Додати вміст запиту...</target>
+      <trans-unit id="learnMore.capitalized">
+        <source xml:lang="en">Learn More</source>
+        <target>Дізнатися більше</target>
+      </trans-unit>
+      <trans-unit id="workbench.command.instructions.create.location.placeholder">
+        <source xml:lang="en">Select a location to create the instructions file in...</source>
+        <target>Виберіть місце для створення файлу інструкцій...</target>
+      </trans-unit>
+      <trans-unit id="workbench.command.prompt.create.location.placeholder">
+        <source xml:lang="en">Select a location to create the prompt file in...</source>
+        <target>Виберіть місце для створення файлу запиту...</target>
       </trans-unit>
       <trans-unit id="workbench.command.prompts.create.user.enable-sync-notification">
-        <source xml:lang="en">User prompts are not currently synchronized. Do you want to enable synchronization of the user prompts?</source>
-        <target>Підказки користувача наразі не синхронізовані. Ви хочете увімкнути синхронізацію підказок користувача?</target>
+        <source xml:lang="en">Do you want to backup and sync your user prompt and instruction files with Setting Sync?'</source>
+        <target>Ви хочете створити резервну копію та синхронізувати файли запитів і інструкцій користувача з Синхронізацією налаштувань?</target>
       </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/createPromptCommand/dialogs/askForPromptName" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="commands.prompts.create.ask-name.placeholder">
-        <source xml:lang="en">Provide a prompt name</source>
-        <target>Введіть назву запиту</target>
+      <trans-unit id="askForInstructionsFileName.placeholder">
+        <source xml:lang="en">Enter the name of the instructions file</source>
+        <target>Введіть назву файлу інструкцій</target>
+      </trans-unit>
+      <trans-unit id="askForPromptFileName.error.empty">
+        <source xml:lang="en">Please enter a name.</source>
+        <target>Будь ласка, введіть ім'я.</target>
+      </trans-unit>
+      <trans-unit id="askForPromptFileName.error.exists">
+        <source xml:lang="en">A file for the given name already exists.</source>
+        <target>Файл з вказаним ім'ям вже існує.</target>
+      </trans-unit>
+      <trans-unit id="askForPromptFileName.error.invalid">
+        <source xml:lang="en">The name contains invalid characters.</source>
+        <target>Ім'я містить недопустимі символи.</target>
+      </trans-unit>
+      <trans-unit id="askForPromptFileName.placeholder">
+        <source xml:lang="en">Enter the name of the prompt file</source>
+        <target>Введіть назву файлу запиту</target>
       </trans-unit>
     </body>
   </file>
@@ -2911,13 +3080,13 @@ Type {3} to use commands</source>
         <source xml:lang="en">No prompt source folders found.</source>
         <target>Не знайдено папок джерел запитів.</target>
       </trans-unit>
-      <trans-unit id="commands.prompts.create.ask-folder.placeholder">
-        <source xml:lang="en">Select a prompt source folder</source>
-        <target>Виберіть папку джерела запиту</target>
-      </trans-unit>
       <trans-unit id="commands.prompts.create.source-folder.current-workspace">
         <source xml:lang="en">Current Workspace</source>
         <target>Поточне робоче середовище</target>
+      </trans-unit>
+      <trans-unit id="commands.prompts.create.source-folder.user">
+        <source xml:lang="en">User Data Folder</source>
+        <target>Картка даних користувача</target>
       </trans-unit>
     </body>
   </file>
@@ -2930,14 +3099,6 @@ Type {3} to use commands</source>
       <trans-unit id="workbench.command.prompts.create.error.invalid-prompt-name">
         <source xml:lang="en">Invalid prompt file name '{0}'.</source>
         <target>Неправильна назва файлу запиту '{0}'.</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/workbench/contrib/chat/browser/promptSyntax/contributions/usePromptCommand" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="commands.prompts.use.title">
-        <source xml:lang="en">Use Prompt</source>
-        <target>Використати запит</target>
       </trans-unit>
     </body>
   </file>
@@ -3031,10 +3192,6 @@ Type {3} to use commands</source>
         <source xml:lang="en">True when a tool confirmation is present.</source>
         <target>Істина, коли присутнє підтвердження інструмента.</target>
       </trans-unit>
-      <trans-unit id="chatEditingHasToolsAgent">
-        <source xml:lang="en">True when a tools agent is registered.</source>
-        <target>Істина, коли агент інструментів зареєстрований.</target>
-      </trans-unit>
       <trans-unit id="chatEditingParticipantRegistered">
         <source xml:lang="en">True when a default chat participant is registered for editing.</source>
         <target>Істина, коли учасник чату за замовчуванням зареєстрований для редагування.</target>
@@ -3046,10 +3203,6 @@ Type {3} to use commands</source>
       <trans-unit id="chatHasFileAttachments">
         <source xml:lang="en">True when the chat has file attachments.</source>
         <target>Істина, коли в чаті є вкладення файлів.</target>
-      </trans-unit>
-      <trans-unit id="chatInstructionsAttachedContextDescription">
-        <source xml:lang="en">True when the chat has a prompt instructions attached.</source>
-        <target>Істинно, коли до чату прикріплено інструкції для запиту.</target>
       </trans-unit>
       <trans-unit id="chatIsEnabled">
         <source xml:lang="en">True when chat is enabled because a default chat participant is activated with an implementation.</source>
@@ -3071,9 +3224,17 @@ Type {3} to use commands</source>
         <source xml:lang="en">True when the chat model can be selected manually by the user.</source>
         <target>Істинно, коли модель чату може бути вибрана вручну користувачем.</target>
       </trans-unit>
+      <trans-unit id="chatPanelExtensionParticipantRegistered">
+        <source xml:lang="en">True when a default chat participant is registered for the panel from an extension.</source>
+        <target>Істинно, коли стандартний учасник чату зареєстрований для панелі з розширення.</target>
+      </trans-unit>
       <trans-unit id="chatParticipantRegistered">
         <source xml:lang="en">True when a default chat participant is registered for the panel.</source>
         <target>Істинно, коли учасник чату за замовчуванням зареєстрований для панелі.</target>
+      </trans-unit>
+      <trans-unit id="chatPromptFileAttachedContextDescription">
+        <source xml:lang="en">True when the chat has a prompt file attached.</source>
+        <target>Істинно, коли до чату прикріплено файл з підказкою.</target>
       </trans-unit>
       <trans-unit id="chatRequest">
         <source xml:lang="en">The chat item is a request</source>
@@ -3114,10 +3275,6 @@ Type {3} to use commands</source>
       <trans-unit id="inQuickChat">
         <source xml:lang="en">True when the quick chat UI has focus, false otherwise.</source>
         <target>Істина, коли інтерфейс швидкого чату має фокус, хибно в іншому випадку.</target>
-      </trans-unit>
-      <trans-unit id="inUnifiedChat">
-        <source xml:lang="en">True when focus is in the unified chat widget, false otherwise.</source>
-        <target>Істинно, коли фокус знаходиться в об'єднаному віджеті чату, хибно в іншому випадку.</target>
       </trans-unit>
       <trans-unit id="interactiveInputHasFocus">
         <source xml:lang="en">True when the chat input has focus.</source>
@@ -3293,6 +3450,98 @@ Type {3} to use commands</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/chat/common/modelPicker/modelPickerWidget" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="chat.modelPicker.other">
+        <source xml:lang="en">Other Models</source>
+        <target>Інші моделі</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/contributions/languageFeatures/providers/decorationsProvider/decorations/frontMatterDecoration" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="chat.prompt.frontMatter.background.description">
+        <source xml:lang="en">Background color of a Front Matter header block.</source>
+        <target>Колір фону блоку заголовка Front Matter.</target>
+      </trans-unit>
+      <trans-unit id="chat.prompt.frontMatter.inactiveBackground.description">
+        <source xml:lang="en">Background color of an inactive Front Matter header block.</source>
+        <target>Колір фону неактивного блоку заголовка Front Matter.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/header" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="prompt.header.diagnostics.parsing-error">
+        <source xml:lang="en">Failed to parse prompt header: {0}</source>
+        <target>Не вдалося розібрати заголовок запиту: {0}</target>
+      </trans-unit>
+      <trans-unit id="prompt.header.diagnostics.unexpected-token">
+        <source xml:lang="en">Unexpected token '{0}'.</source>
+        <target>Несподіваний токен '{0}'.</target>
+      </trans-unit>
+      <trans-unit id="prompt.header.metadata.diagnostics.duplicate-record">
+        <source xml:lang="en">Duplicate metadata record '{0}' will be ignored.</source>
+        <target>Дубльований запис метаданих '{0}' буде проігноровано.</target>
+      </trans-unit>
+      <trans-unit id="prompt.header.metadata.diagnostics.unknown-record">
+        <source xml:lang="en">Unknown metadata record '{0}' will be ignored.</source>
+        <target>Невідомий запис метаданих '{0}' буде проігноровано.</target>
+      </trans-unit>
+      <trans-unit id="prompt.header.metadata.mode.diagnostics.incompatible-with-tools">
+        <source xml:lang="en">Record '{0}' is implied to have the '{1}' value if '{2}' record is present so the specified value will be ignored.</source>
+        <target>Запис '{0}' вважається таким, що має значення '{1}', якщо присутній запис '{2}', тому вказане значення буде проігноровано.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/applyTo" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="prompt.header.metadata.applyTo.diagnostics.non-valid-glob">
+        <source xml:lang="en">Invalid glob pattern '{0}'.</source>
+        <target>Недійсний шаблон глобуса '{0}'.</target>
+      </trans-unit>
+      <trans-unit id="prompt.header.metadata.string.diagnostics.invalid-language">
+        <source xml:lang="en">The '{0}' metadata record is only valid in instruction files.</source>
+        <target>Запис метаданих '{0}' дійсний лише у файлах інструкцій.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/mode" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="prompt.header.metadata.mode.diagnostics.invalid-value">
+        <source xml:lang="en">Value of the '{0}' metadata must be one of ({1}), got '{2}'.</source>
+        <target>Значення метаданих '{0}' повинно бути одним із ({1}), отримано '{2}'.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/record" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="prompt.header.metadata.string.diagnostics.invalid-value-type">
+        <source xml:lang="en">Value of the '{0}' metadata must be '{1}', got '{2}'.</source>
+        <target>Значення метаданих '{0}' повинно бути '{1}', отримано '{2}'.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/promptHeader/metadata/tools" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="prompt.header.metadata.tools.diagnostics.duplicate-tool-name">
+        <source xml:lang="en">Duplicate tool name '{0}'.</source>
+        <target>Дублювати назву інструмента '{0}'.</target>
+      </trans-unit>
+      <trans-unit id="prompt.header.metadata.tools.diagnostics.empty-tool-name">
+        <source xml:lang="en">Tool name cannot be empty.</source>
+        <target>Назва інструмента не може бути порожньою.</target>
+      </trans-unit>
+      <trans-unit id="prompt.header.metadata.tools.diagnostics.invalid-tool-name-type">
+        <source xml:lang="en">Expected a tool name ({0}), got '{1}'.</source>
+        <target>Очікував назву інструмента ({0}), отримав '{1}'.</target>
+      </trans-unit>
+      <trans-unit id="prompt.header.metadata.tools.diagnostics.invalid-value-type">
+        <source xml:lang="en">Value of the '{0}' metadata must be '{1}', got '{2}'.</source>
+        <target>Значення метаданих '{0}' повинно бути '{1}', отримано '{2}'.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/parsers/topError" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="broken">
@@ -3334,19 +3583,11 @@ Type {3} to use commands</source>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/chat/common/tools/editFileTool" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/contrib/chat/common/promptSyntax/service/promptsService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="chat.tools.editFile">
-        <source xml:lang="en">Edit File</source>
-        <target>Редагувати файл</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/workbench/contrib/chat/common/tools/insertNotebookCellsTool" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="chat.tools.editFile">
-        <source xml:lang="en">Edit File</source>
-        <target>Редагувати файл</target>
+      <trans-unit id="prompt.file.detail">
+        <source xml:lang="en">Prompt file: {0}</source>
+        <target>Файл запиту: {0}</target>
       </trans-unit>
     </body>
   </file>

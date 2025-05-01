@@ -140,6 +140,10 @@ Your current working set will be FOREVER LOST if you proceed.</source>
         <source xml:lang="en">Ask Me Later</source>
         <target>Запитай мене пізніше</target>
       </trans-unit>
+      <trans-unit id="++CODE++46d553cc97a3c34f098f8feeaa9258b97f79a5a830661f12acd913889a433742">
+        <source xml:lang="en">Branch "{0}" already exists</source>
+        <target>Гілка "{0}" вже існує</target>
+      </trans-unit>
       <trans-unit id="++CODE++06f6bb7108ffdb5caf844b4538b5ec8f44cc1b3bc6b577624d32fc57eff9fe3f">
         <source xml:lang="en">Branch name</source>
         <target>Назва гілки</target>
@@ -191,6 +195,10 @@ Your current working set will be FOREVER LOST if you proceed.</source>
       <trans-unit id="++CODE++f0b79e95174d85877c16dd82f0c4d4d6f36a31c31c4b47419039da94dbd22ddd">
         <source xml:lang="en">Choose which repository to clone</source>
         <target>Виберіть, який репозиторій клонувати</target>
+      </trans-unit>
+      <trans-unit id="++CODE++19257bbbf4ce0ea499ef551c63f635175ba0b9a30b698ecd9f6a4dffe2257747">
+        <source xml:lang="en">Choose which repository to publish</source>
+        <target>Виберіть, який репозиторій публікувати</target>
       </trans-unit>
       <trans-unit id="++CODE++c7603b4751690aeae72662e14277aa1e80e68cfcb1376cd39cbb7fdc5c135e63">
         <source xml:lang="en">Clear whitespace characters</source>
@@ -448,17 +456,17 @@ What would you like to do?</source>
         <source xml:lang="en">Git History</source>
         <target>Історія Git</target>
       </trans-unit>
+      <trans-unit id="++CODE++a3dedbe13cb407e7426e687f01f6a29d95d01ae0ad4e0b7c3549bf9d2b80977e">
+        <source xml:lang="en">Git Local Changes (Index)</source>
+        <target>Git Локальні Зміни (Індекс)</target>
+      </trans-unit>
+      <trans-unit id="++CODE++94d39a1a91d8e86c8cbf975448036a71cb3b6e5a2a902742939dd17b5e51c17b">
+        <source xml:lang="en">Git Local Changes (Working Tree)</source>
+        <target>Git Локальні Зміни (Робоче Дерево)</target>
+      </trans-unit>
       <trans-unit id="++CODE++6030c83165fb700fcca51c74a9940aeefaf8084c612f5b57eea3723737c5f57d">
         <source xml:lang="en">Git error</source>
         <target>Помилка Git</target>
-      </trans-unit>
-      <trans-unit id="++CODE++d464cbf6599bbe85f6d7f76f6471655a2a1d8a0aecab6e529565a22b566bf620">
-        <source xml:lang="en">Git local changes (working tree + index)</source>
-        <target>Локальні зміни Git (робоче дерево + індекс)</target>
-      </trans-unit>
-      <trans-unit id="++CODE++78f2a2886f2cb480b80ef972b1c7237e83e9288f032cdf76ebf8c4174dfa5f7e">
-        <source xml:lang="en">Git local changes (working tree)</source>
-        <target>Локальні зміни Git (робоче дерево)</target>
       </trans-unit>
       <trans-unit id="++CODE++8982820c48292bced4accf28e84fa2f563665a822d10d9800697d5274e15e4d2">
         <source xml:lang="en">Git not found. Install it or configure it using the "git.path" setting.</source>
@@ -1211,6 +1219,10 @@ Would you like to save them before stashing?</source>
       <trans-unit id="++CODE++01cedefc7a6bda340489ba5bce02d9cf13cf3344b44ff23845566a379edf01a5">
         <source xml:lang="en">Would you like to open the initialized repository?</source>
         <target>Ви хочете відкрити ініціалізований репозиторій?</target>
+      </trans-unit>
+      <trans-unit id="++CODE++e585609fff7e6032c9d99ad0b808dbd1af85f8f16f5eb77bc8ed45bf7bb6f170">
+        <source xml:lang="en">Would you like to publish this repository to continue working on it elsewhere?</source>
+        <target>Ви хочете опублікувати цей репозиторій, щоб продовжити працювати над ним в іншому місці?</target>
       </trans-unit>
       <trans-unit id="++CODE++0d956bc1273b2c3663c075e95965229e067e6aa8baf635905a73feec866b0ce6">
         <source xml:lang="en">Would you like {0} to [periodically run "git fetch"]({1})?</source>
@@ -2081,9 +2093,9 @@ Please make sure there is no space between the right bracket and left parenthesi
         <source xml:lang="en">Controls the limit of Git submodules detected.</source>
         <target>Контролює межу виявлених підмодулів Git.</target>
       </trans-unit>
-      <trans-unit id="config.diagnosticsCommitHook.Sources">
+      <trans-unit id="config.diagnosticsCommitHook.sources">
         <source xml:lang="en">Controls the list of sources (**Item**) and the minimum severity (**Value**) to be considered before committing. **Note:** To ignore diagnostics from a particular source, add the source to the list and set the minimum severity to `none`.</source>
-        <target>Контролює список джерел (**Item**) та мінімальну серйозність (**Value**), які потрібно врахувати перед комітом. **Примітка:** Щоб ігнорувати діагностику з певного джерела, додайте джерело до списку та встановіть мінімальну серйозність на `none`.</target>
+        <target>Контролює список джерел (**Item**) та мінімальну серйозність (**Value**), які слід враховувати перед комітом. **Примітка:** Щоб ігнорувати діагностику з певного джерела, додайте джерело до списку та встановіть мінімальну серйозність на `none`.</target>
       </trans-unit>
       <trans-unit id="config.alwaysSignOff">
         <source xml:lang="en">Controls the signoff flag for all commits.</source>
@@ -2193,7 +2205,7 @@ Please make sure there is no space between the right bracket and left parenthesi
         <source xml:lang="en">Controls whether to automatically detect Git submodules.</source>
         <target>Контролює, чи автоматично виявляти підмодулі Git.</target>
       </trans-unit>
-      <trans-unit id="config.diagnosticsCommitHook.Enabled">
+      <trans-unit id="config.diagnosticsCommitHook.enabled">
         <source xml:lang="en">Controls whether to check for unresolved diagnostics before committing.</source>
         <target>Контролює, чи перевіряти наявність невирішених діагностик перед комітом.</target>
       </trans-unit>
@@ -3058,6 +3070,10 @@ Please make sure there is no space between the right bracket and left parenthesi
       <trans-unit id="command.unstageAll">
         <source xml:lang="en">Unstage All Changes</source>
         <target>Скасувати всі зміни</target>
+      </trans-unit>
+      <trans-unit id="command.unstageChange">
+        <source xml:lang="en">Unstage Change</source>
+        <target>Скасувати зміни</target>
       </trans-unit>
       <trans-unit id="command.unstage">
         <source xml:lang="en">Unstage Changes</source>

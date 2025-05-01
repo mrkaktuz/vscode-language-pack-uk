@@ -46,6 +46,10 @@
         <source xml:lang="en">Warning on Line</source>
         <target>Попередження на лінії</target>
       </trans-unit>
+      <trans-unit id="accessibility.signals.nextEditSuggestion">
+        <source xml:lang="en">Next Edit Suggestion</source>
+        <target>Наступна пропозиція редагування</target>
+      </trans-unit>
       <trans-unit id="accessibility.signals.noInlayHints">
         <source xml:lang="en">No Inlay Hints</source>
         <target>Без вставок підказок</target>
@@ -169,6 +173,10 @@
       <trans-unit id="accessibilitySignals.lineHasWarning.name">
         <source xml:lang="en">Warning on Line</source>
         <target>Попередження в рядку</target>
+      </trans-unit>
+      <trans-unit id="accessibilitySignals.nextEditSuggestion.name">
+        <source xml:lang="en">Next Edit Suggestion on Line</source>
+        <target>Наступна пропозиція редагування на рядку</target>
       </trans-unit>
       <trans-unit id="accessibilitySignals.noInlayHints">
         <source xml:lang="en">No Inlay Hints on Line</source>
@@ -622,8 +630,8 @@ Received: '{1}'.</source>
         <target>Додати папку(и) до останнього активного вікна.</target>
       </trans-unit>
       <trans-unit id="addMcp">
-        <source xml:lang="en">Adds a Model Context Protocol server definition to the user profile, or workspace or folder when used with --mcp-workspace. Accepts JSON input in the form '{"name":"server-name","command":...}'</source>
-        <target>Додає визначення сервера протоколу контексту моделі до профілю користувача, або робочого простору, або папки, коли використовується з --mcp-workspace. Приймає вхідні дані JSON у формі '{"name":"server-name","command":...}'</target>
+        <source xml:lang="en">Adds a Model Context Protocol server definition to the user profile. Accepts JSON input in the form '{"name":"server-name","command":...}'</source>
+        <target>Додає визначення сервера протоколу контексту моделі до профілю користувача. Приймає JSON-вхід у формі '{"name":"server-name","command":...}'</target>
       </trans-unit>
       <trans-unit id="category">
         <source xml:lang="en">Filters installed extensions by provided category, when using --list-extensions.</source>
@@ -937,7 +945,75 @@ Received: '{1}'.</source>
   </file>
   <file original="src/vs/platform/extensionManagement/common/extensionManagement" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="extension.publisher.allow.description">
+        <source xml:lang="en">Allow or disallow all extensions from the publisher.</source>
+        <target>Дозволити або заборонити всі розширення від видавця.</target>
+      </trans-unit>
       <trans-unit id="extensions">
+        <source xml:lang="en">Extensions</source>
+        <target>Розширення</target>
+      </trans-unit>
+      <trans-unit id="extensions.allow.all.description">
+        <source xml:lang="en">Allow or disallow all extensions.</source>
+        <target>Дозволити або заборонити всі розширення.</target>
+      </trans-unit>
+      <trans-unit id="extensions.allow.all.disable">
+        <source xml:lang="en">Disallow all extensions.</source>
+        <target>Заборонити всі розширення.</target>
+      </trans-unit>
+      <trans-unit id="extensions.allow.all.enable">
+        <source xml:lang="en">Allow all extensions.</source>
+        <target>Дозволити всі розширення.</target>
+      </trans-unit>
+      <trans-unit id="extensions.allow.description">
+        <source xml:lang="en">Allow or disallow the extension.</source>
+        <target>Дозволити або заборонити розширення.</target>
+      </trans-unit>
+      <trans-unit id="extensions.allow.version.description">
+        <source xml:lang="en">Allow or disallow specific versions of the extension. To specifcy a platform specific version, use the format `platform@1.2.3`, e.g. `win32-x64@1.2.3`. Supported platforms are `win32-x64`, `win32-arm64`, `linux-x64`, `linux-arm64`, `linux-armhf`, `alpine-x64`, `alpine-arm64`, `darwin-x64`, `darwin-arm64`</source>
+        <target>Дозволити або заборонити конкретні версії розширення. Щоб вказати платформо-специфічну версію, використовуйте формат `platform@1.2.3`, наприклад, `win32-x64@1.2.3`. Підтримувані платформи: `win32-x64`, `win32-arm64`, `linux-x64`, `linux-arm64`, `linux-armhf`, `alpine-x64`, `alpine-arm64`, `darwin-x64`, `darwin-arm64`.</target>
+      </trans-unit>
+      <trans-unit id="extensions.allowed">
+        <source xml:lang="en">Specify a list of extensions that are allowed to use. This helps maintain a secure and consistent development environment by restricting the use of unauthorized extensions. For more information on how to configure this setting, please visit the [Configure Allowed Extensions](https://code.visualstudio.com/docs/setup/enterprise#_configure-allowed-extensions) section.</source>
+        <target>Вкажіть список розширень, які дозволено використовувати. Це допомагає підтримувати безпечне та послідовне середовище розробки, обмежуючи використання несанкціонованих розширень. Для отримання додаткової інформації про налаштування цього параметра, будь ласка, відвідайте розділ [Налаштування дозволених розширень](https://code.visualstudio.com/docs/setup/enterprise#_configure-allowed-extensions).</target>
+      </trans-unit>
+      <trans-unit id="extensions.allowed.all">
+        <source xml:lang="en">All extensions are allowed.</source>
+        <target>Усі розширення дозволені.</target>
+      </trans-unit>
+      <trans-unit id="extensions.allowed.disable.desc">
+        <source xml:lang="en">Extension is not allowed.</source>
+        <target>Розширення не дозволено.</target>
+      </trans-unit>
+      <trans-unit id="extensions.allowed.disable.stable.desc">
+        <source xml:lang="en">Allow only stable versions of the extension.</source>
+        <target>Дозволити лише стабільні версії розширення.</target>
+      </trans-unit>
+      <trans-unit id="extensions.allowed.enable.desc">
+        <source xml:lang="en">Extension is allowed.</source>
+        <target>Розширення дозволено.</target>
+      </trans-unit>
+      <trans-unit id="extensions.allowed.none">
+        <source xml:lang="en">No extensions are allowed.</source>
+        <target>Розширення не дозволяються.</target>
+      </trans-unit>
+      <trans-unit id="extensions.allowed.policy">
+        <source xml:lang="en">Specify a list of extensions that are allowed to use. This helps maintain a secure and consistent development environment by restricting the use of unauthorized extensions. More information: https://code.visualstudio.com/docs/setup/enterprise#_configure-allowed-extensions</source>
+        <target>Вкажіть список розширень, які дозволено використовувати. Це допомагає підтримувати безпечне та послідовне середовище розробки, обмежуючи використання несанкціонованих розширень. Більше інформації: https://code.visualstudio.com/docs/setup/enterprise#_configure-allowed-extensions</target>
+      </trans-unit>
+      <trans-unit id="extensions.publisher.allowed.disable.desc">
+        <source xml:lang="en">All extensions from the publisher are not allowed.</source>
+        <target>Усі розширення від видавця не дозволені.</target>
+      </trans-unit>
+      <trans-unit id="extensions.publisher.allowed.disable.stable.desc">
+        <source xml:lang="en">Allow only stable versions of the extensions from the publisher.</source>
+        <target>Дозволити лише стабільні версії розширень від видавця.</target>
+      </trans-unit>
+      <trans-unit id="extensions.publisher.allowed.enable.desc">
+        <source xml:lang="en">All extensions from the publisher are allowed.</source>
+        <target>Усі розширення від видавця дозволені.</target>
+      </trans-unit>
+      <trans-unit id="extensionsConfigurationTitle">
         <source xml:lang="en">Extensions</source>
         <target>Розширення</target>
       </trans-unit>
@@ -3060,6 +3136,14 @@ To override an existing profile use its profile name as the key, for example:
       <trans-unit id="checkbox.border">
         <source xml:lang="en">Border color of checkbox widget.</source>
         <target>Колір рамки віджета прапорця.</target>
+      </trans-unit>
+      <trans-unit id="checkbox.disabled.background">
+        <source xml:lang="en">Background of a disabled checkbox.</source>
+        <target>Фон вимкненого чекбокса.</target>
+      </trans-unit>
+      <trans-unit id="checkbox.disabled.foreground">
+        <source xml:lang="en">Foreground of a disabled checkbox.</source>
+        <target>Передній план вимкненого чекбокса.</target>
       </trans-unit>
       <trans-unit id="checkbox.foreground">
         <source xml:lang="en">Foreground color of checkbox widget.</source>

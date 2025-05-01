@@ -1135,13 +1135,13 @@ This action is irreversible and may result in data loss!</source>
   </file>
   <file original="src/vs/workbench/browser/actions/helpActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="askVScode">
+        <source xml:lang="en">Ask @vscode</source>
+        <target>Запитайте @vscode</target>
+      </trans-unit>
       <trans-unit id="getStartedWithAccessibilityFeatures">
         <source xml:lang="en">Get Started with Accessibility Features</source>
         <target>Розпочніть роботу з функціями доступності</target>
-      </trans-unit>
-      <trans-unit id="getStartedWithCopilot">
-        <source xml:lang="en">Get Started with Copilot</source>
-        <target>Почніть працювати з Copilot</target>
       </trans-unit>
       <trans-unit id="keybindingsReference">
         <source xml:lang="en">Keyboard Shortcuts Reference</source>
@@ -2277,6 +2277,10 @@ This action is irreversible and may result in data loss!</source>
   </file>
   <file original="src/vs/workbench/browser/parts/banner/bannerPart" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="closeBanner">
+        <source xml:lang="en">Close Banner</source>
+        <target>Закрити банер</target>
+      </trans-unit>
       <trans-unit id="focusBanner">
         <source xml:lang="en">Focus Banner</source>
         <target>Банер фокусу</target>
@@ -2367,6 +2371,22 @@ Browser: {3}</source>
       <trans-unit id="ok">
         <source xml:lang="en">OK</source>
         <target>&amp;&amp;Гаразд</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/browser/parts/editor/auxiliaryEditorPart" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="disableCompactAuxiliaryWindow">
+        <source xml:lang="en">Unset Compact Mode</source>
+        <target>Вимкнути компактний режим</target>
+      </trans-unit>
+      <trans-unit id="enableCompactAuxiliaryWindow">
+        <source xml:lang="en">Set Compact Mode</source>
+        <target>Увімкнути компактний режим</target>
+      </trans-unit>
+      <trans-unit id="toggleCompactAuxiliaryWindow">
+        <source xml:lang="en">Toggle Window Compact Mode</source>
+        <target>Переключити компактний режим вікна</target>
       </trans-unit>
     </body>
   </file>
@@ -5694,16 +5714,20 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <note>{0}, {1} will be a setting name rendered as a link</note>
         <target>Контролює, чи відкриватимуться вкладки при прокручуванні, чи ні. За замовчуванням вкладки лише з'являтимуться при прокручуванні, але не відкриватимуться. Ви можете натиснути і утримувати клавішу Shift під час прокручування, щоб змінити цю поведінку на цей час. Це значення ігнорується, коли {0} не встановлено на {1}.</target>
       </trans-unit>
+      <trans-unit id="secondarySideBarDefaultVisibility">
+        <source xml:lang="en">Controls the default visibility of the secondary side bar in workspaces or empty windows opened for the first time.</source>
+        <target>Контролює стандартну видимість вторинної бічної панелі в робочих просторах або порожніх вікнах, відкритих вперше.</target>
+      </trans-unit>
       <trans-unit id="secondarySideBarShowLabels">
-        <source xml:lang="en">Controls whether activity items in the secondary sidebar title are shown as label or icon. This setting only has an effect when {0} is not set to {1}.</source>
-        <target>Контролює, чи елементи активності в заголовку вторинної бічної панелі відображаються як мітка чи значок. Цей параметр має ефект лише тоді, коли {0} не встановлено на {1}.</target>
+        <source xml:lang="en">Controls whether activity items in the secondary side bar title are shown as label or icon. This setting only has an effect when {0} is not set to {1}.</source>
+        <target>Контролює, чи елементи активності в заголовку вторинної бічної панелі відображаються як мітка чи значок. Ця настройка має ефект лише тоді, коли {0} не встановлено на {1}.</target>
       </trans-unit>
       <trans-unit id="separator">
         <source xml:lang="en">`${separator}`: a conditional separator (" - ") that only shows when surrounded by variables with values or static text.</source>
         <target>`${separator}`: умовний роздільник (" - "), який відображається лише тоді, коли оточений змінними з значеннями або статичним текстом.</target>
       </trans-unit>
       <trans-unit id="settings.editor.desc">
-        <source xml:lang="en">Determines which settings editor to use by default.</source>
+        <source xml:lang="en">Determines which Settings editor to use by default.</source>
         <target>Визначає, який редактор налаштувань використовувати за замовчуванням.</target>
       </trans-unit>
       <trans-unit id="settings.editor.json">
@@ -5713,6 +5737,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="settings.editor.ui">
         <source xml:lang="en">Use the settings UI editor.</source>
         <target>Використовуйте редактор налаштувань UI.</target>
+      </trans-unit>
+      <trans-unit id="settings.showSuggestions">
+        <source xml:lang="en">Controls whether setting suggestions are shown below the search bar in the Settings editor.</source>
+        <target>Контролює, чи відображаються пропозиції налаштувань під рядком пошуку в редакторі налаштувань.</target>
       </trans-unit>
       <trans-unit id="sharedViewState">
         <source xml:lang="en">Preserves the most recent editor view state (such as scroll position) across all editor groups and restores that if no specific editor view state is found for the editor group.</source>
@@ -6200,6 +6228,18 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Always render with reduced motion.</source>
         <target>Завжди відображати з зменшеною анімацією.</target>
       </trans-unit>
+      <trans-unit id="workbench.secondarySideBar.defaultVisibility.hidden">
+        <source xml:lang="en">The secondary side bar is hidden by default.</source>
+        <target>Бічна панель вторинного рівня за замовчуванням прихована.</target>
+      </trans-unit>
+      <trans-unit id="workbench.secondarySideBar.defaultVisibility.visible">
+        <source xml:lang="en">The secondary side bar is visible by default.</source>
+        <target>Бічна панель вторинного рівня видима за замовчуванням.</target>
+      </trans-unit>
+      <trans-unit id="workbench.secondarySideBar.defaultVisibility.visibleInWorkspace">
+        <source xml:lang="en">The secondary side bar is visible by default if a workspace is opened.</source>
+        <target>Бічна панель вторинного рівня видима за замовчуванням, якщо відкрито робочий простір.</target>
+      </trans-unit>
       <trans-unit id="workbench.view.showQuietly">
         <source xml:lang="en">If an extension requests a hidden view to be shown, display a clickable status bar indicator instead.</source>
         <target>Якщо розширення запитує показати прихований вигляд, замість цього відобразіть клікабельний індикатор статусу.</target>
@@ -6433,9 +6473,17 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Editor Part is in an auxiliary window</source>
         <target>Частина редактора знаходиться в допоміжному вікні</target>
       </trans-unit>
+      <trans-unit id="isAuxiliaryTitleBar">
+        <source xml:lang="en">Title bar is in an auxiliary window</source>
+        <target>Заголовок вікна знаходиться в допоміжному вікні.</target>
+      </trans-unit>
       <trans-unit id="isAuxiliaryWindowFocusedContext">
         <source xml:lang="en">Whether an auxiliary window is focused</source>
         <target>Чи зосереджено вікно допоміжного елемента</target>
+      </trans-unit>
+      <trans-unit id="isCompactTitleBar">
+        <source xml:lang="en">Title bar is in compact mode</source>
+        <target>Заголовок у компактному режимі</target>
       </trans-unit>
       <trans-unit id="isFileSystemResource">
         <source xml:lang="en">Whether the resource is backed by a file system provider</source>
@@ -6448,6 +6496,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="isMainEditorCenteredLayout">
         <source xml:lang="en">Whether centered layout is enabled for the main editor</source>
         <target>Чи увімкнено центровану розкладку для основного редактора</target>
+      </trans-unit>
+      <trans-unit id="isWindowAlwaysOnTop">
+        <source xml:lang="en">Whether the window is always on top</source>
+        <target>Чи вікно завжди поверх інших</target>
       </trans-unit>
       <trans-unit id="mainEditorAreaVisible">
         <source xml:lang="en">Whether the editor area in the main window is visible</source>
@@ -7357,6 +7409,14 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Current Window</source>
         <target>Поточне вікно</target>
       </trans-unit>
+      <trans-unit id="disableWindowAlwaysOnTop">
+        <source xml:lang="en">Unset Always on Top</source>
+        <target>Скинути завжди зверху</target>
+      </trans-unit>
+      <trans-unit id="enableWindowAlwaysOnTop">
+        <source xml:lang="en">Set Always on Top</source>
+        <target>Встановити завжди поверх інших</target>
+      </trans-unit>
       <trans-unit id="miCloseWindow">
         <source xml:lang="en">Clos&amp;&amp;e Window</source>
         <note>&amp;&amp; denotes a mnemonic</note>
@@ -7388,6 +7448,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="switchWindowPlaceHolder">
         <source xml:lang="en">Select a window to switch to</source>
         <target>Виберіть вікно, до якого потрібно перемкнутися</target>
+      </trans-unit>
+      <trans-unit id="toggleWindowAlwaysOnTop">
+        <source xml:lang="en">Toggle Window Always on Top</source>
+        <target>Перемикати вікно завжди поверх інших</target>
       </trans-unit>
       <trans-unit id="windowDirtyAriaLabel">
         <source xml:lang="en">{0}, window with unsaved changes</source>
@@ -7727,10 +7791,6 @@ OS: {8}</source>
         <source xml:lang="en">&amp;&amp;Log In</source>
         <note>&amp;&amp; denotes a mnemonic</note>
         <target>&amp;&amp;Увійти</target>
-      </trans-unit>
-      <trans-unit id="macoseolmessage">
-        <source xml:lang="en">{0} on {1} will soon stop receiving updates. Consider upgrading your macOS version.</source>
-        <target>{0} на {1} незабаром перестане отримувати оновлення. Розгляньте можливість оновлення версії macOS.</target>
       </trans-unit>
       <trans-unit id="password">
         <source xml:lang="en">Password</source>

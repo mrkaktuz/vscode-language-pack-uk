@@ -289,6 +289,10 @@
         <source xml:lang="en">Open Config File</source>
         <target>Відкрити файл конфігурації</target>
       </trans-unit>
+      <trans-unit id="++CODE++03f69885814b5b7aa5e4758e46733da443a237e2ec63488bddd230f501ff166a">
+        <source xml:lang="en">Open on GitHub</source>
+        <target>Відкрити на GitHub</target>
+      </trans-unit>
       <trans-unit id="++CODE++5d40b1f86b7c14ffbe79c4e326d1ca14ad35225cce6bef125f243202a3ac00d1">
         <source xml:lang="en">Organize Imports</source>
         <target>Організувати імпорти</target>
@@ -406,6 +410,10 @@ Please try disabling these extensions before filing an issue against VS Code.</s
 This may be caused by a plugin contributed by one of these extensions: {0}.
 Please try disabling these extensions before filing an issue against VS Code.</source>
         <target>Служба мови JS/TS відразу ж зламалася 5 разів. Служба не буде перезапущена. Це може бути викликано плагіном, внесеним одним із цих розширень: {0}. Будь ласка, спробуйте вимкнути ці розширення перед тим, як подати запит на виправлення проблеми у VS Code.</target>
+      </trans-unit>
+      <trans-unit id="++CODE++f042c53a9eee9047d6f2d807ed1266c13253a6848e195a9fd2a5f23bd3e24660">
+        <source xml:lang="en">The TypeScript Go extension is not installed.</source>
+        <target>Розширення TypeScript Go не встановлено.</target>
       </trans-unit>
       <trans-unit id="++CODE++db560cf2114ff87b85623ee5375a8f83059098968a27572f492b18a9c494ba46">
         <source xml:lang="en">The current selection cannot be extracted</source>
@@ -723,6 +731,10 @@ Before reporting an issue, please update the workspace to use TypeScript {1} or 
         <source xml:lang="en">Disable this feature.</source>
         <target>Вимкнути цю функцію.</target>
       </trans-unit>
+      <trans-unit id="typescript.useTsgo">
+        <source xml:lang="en">Disables TypeScript and JavaScript language features to allow usage of the TypeScript Go experimental extension. Requires TypeScript Go to be installed and configured. Requires reloading extensions after changing this setting.</source>
+        <target>Вимикає функції мови TypeScript та JavaScript, щоб дозволити використання експериментального розширення TypeScript Go. Потрібно встановити та налаштувати TypeScript Go. Потрібно перезавантажити розширення після зміни цього налаштування.</target>
+      </trans-unit>
       <trans-unit id="typescript.disableAutomaticTypeAcquisition">
         <source xml:lang="en">Disables [automatic type acquisition](https://code.visualstudio.com/docs/nodejs/working-with-javascript#_typings-and-automatic-type-acquisition). Automatic type acquisition fetches `@types` packages from npm to improve IntelliSense for external libraries.</source>
         <target>Вимикає [автоматичне отримання типів](https://code.visualstudio.com/docs/nodejs/working-with-javascript#_typings-and-automatic-type-acquisition). Автоматичне отримання типів завантажує пакунки `@types` з npm для покращення IntelliSense для зовнішніх бібліотек.</target>
@@ -742,6 +754,10 @@ Before reporting an issue, please update the workspace to use TypeScript {1} or 
       <trans-unit id="typescript.tsserver.pluginPaths.item">
         <source xml:lang="en">Either an absolute or relative path. Relative path will be resolved against workspace folder(s).</source>
         <target>Абсолютний або відносний шлях. Відносний шлях буде вирішено відносно папки(ок) робочого простору.</target>
+      </trans-unit>
+      <trans-unit id="configuration.expandableHover">
+        <source xml:lang="en">Enable expanding/contracting the hover to reveal more/less information from the TS server. Requires TypeScript 5.9+.</source>
+        <target>Увімкніть розширення/згортання підказки, щоб відобразити більше/менше інформації з сервера TS. Потрібен TypeScript 5.9+.</target>
       </trans-unit>
       <trans-unit id="inlayHints.parameterNames.all">
         <source xml:lang="en">Enable parameter name hints for literal and non-literal arguments.</source>
@@ -778,6 +794,10 @@ Before reporting an issue, please update the workspace to use TypeScript {1} or 
       <trans-unit id="configuration.suggest.includeCompletionsForImportStatements">
         <source xml:lang="en">Enable/disable auto-import-style completions on partially-typed import statements.</source>
         <target>Увімкнути/вимкнути автозаповнення стилю імпорту для частково введених операторів імпорту.</target>
+      </trans-unit>
+      <trans-unit id="typescript.suggest.enabled">
+        <source xml:lang="en">Enable/disable autocomplete suggestions.</source>
+        <target>Увімкнути/вимкнути пропозиції автозаповнення.</target>
       </trans-unit>
       <trans-unit id="typescript.autoClosingTags">
         <source xml:lang="en">Enable/disable automatic closing of JSX tags.</source>
@@ -983,10 +1003,6 @@ parseInt(/* str: */ '123', /* radix: */ 8)
         <source xml:lang="en">Enable/disable suggestions for paths in import statements and require calls.</source>
         <target>Увімкнути/вимкнути підказки для шляхів у імпортних деклараціях та викликах require.</target>
       </trans-unit>
-      <trans-unit id="typescript.suggest.enabled">
-        <source xml:lang="en">Enabled/disable autocomplete suggestions.</source>
-        <target>Увімкнути/вимкнути пропозиції автозаповнення.</target>
-      </trans-unit>
       <trans-unit id="typescript.tsserver.log">
         <source xml:lang="en">Enables logging of the TS server to a file. This log can be used to diagnose TS Server issues. The log may contain file paths, source code, and other potentially sensitive information from your project.</source>
         <target>Дозволяє записувати журнал сервера TS у файл. Цей журнал можна використовувати для діагностики проблем сервера TS. Журнал може містити шляхи до файлів, вихідний код та іншу потенційно чутливу інформацію з вашого проєкту.</target>
@@ -1022,6 +1038,10 @@ parseInt(/* str: */ '123', /* radix: */ 8)
       <trans-unit id="typescript.findAllFileReferences">
         <source xml:lang="en">Find File References</source>
         <target>Знайти посилання на файл</target>
+      </trans-unit>
+      <trans-unit id="configuration.format">
+        <source xml:lang="en">Formatting</source>
+        <target>Форматування</target>
       </trans-unit>
       <trans-unit id="walkthroughs.nodejsWelcome.title">
         <source xml:lang="en">Get started with JavaScript and Node.js</source>
@@ -1164,6 +1184,10 @@ Another easy way to run Node.js programs is by using VS Code's debugger which le
       <trans-unit id="configuration.tsserver.watchOptions.watchFile.fixedChunkSizePolling">
         <source xml:lang="en">Polls files in chunks at regular interval.</source>
         <target>Опитування файлів частинами через регулярні інтервали.</target>
+      </trans-unit>
+      <trans-unit id="configuration.preferences">
+        <source xml:lang="en">Preferences</source>
+        <target>Налаштування</target>
       </trans-unit>
       <trans-unit id="typescript.preferences.importModuleSpecifierEnding">
         <source xml:lang="en">Preferred path ending for auto imports.</source>
@@ -1361,6 +1385,10 @@ See the [TypeScript documentation](https://code.visualstudio.com/docs/typescript
         <source xml:lang="en">Strategy for how individual files are watched.</source>
         <target>Стратегія щодо того, як спостерігаються окремі файли.</target>
       </trans-unit>
+      <trans-unit id="configuration.suggest">
+        <source xml:lang="en">Suggestions</source>
+        <target>Пропозиції</target>
+      </trans-unit>
       <trans-unit id="configuration.inlayHints.parameterNames.suppressWhenArgumentMatchesName">
         <source xml:lang="en">Suppress parameter name hints on arguments whose text is identical to the parameter name.</source>
         <target>Приховати підказки імен параметрів для аргументів, текст яких ідентичний імені параметра.</target>
@@ -1372,6 +1400,10 @@ See the [TypeScript documentation](https://code.visualstudio.com/docs/typescript
       <trans-unit id="configuration.tsserver.web.projectWideIntellisense.suppressSemanticErrors">
         <source xml:lang="en">Suppresses semantic errors on web even when project wide IntelliSense is enabled. This is always on when project wide IntelliSense is not enabled or available. See `#typescript.tsserver.web.projectWideIntellisense.enabled#`</source>
         <target>Приховує семантичні помилки в вебі, навіть коли увімкнено IntelliSense для всього проєкту. Це завжди активовано, коли IntelliSense для всього проєкту не увімкнено або недоступно. Дивіться `#typescript.tsserver.web.projectWideIntellisense.enabled#`</target>
+      </trans-unit>
+      <trans-unit id="configuration.server">
+        <source xml:lang="en">TS Server</source>
+        <target>TS Сервер</target>
       </trans-unit>
       <trans-unit id="workspaceTrust">
         <source xml:lang="en">The extension requires workspace trust when the workspace version is used because it executes code specified by the workspace.</source>
