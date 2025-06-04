@@ -1394,6 +1394,10 @@ Default Skipped Commands:
         <source xml:lang="en">Controls whether the terminal will ignore bracketed paste mode even if the terminal was put into the mode, omitting the {0} and {1} sequences when pasting. This is useful when the shell is not respecting the mode which can happen in sub-shells for example.</source>
         <target>Контролює, чи термінал ігноруватиме режим вставки в дужках, навіть якщо термінал був переведений у цей режим, пропускаючи послідовності {0} та {1} під час вставки. Це корисно, коли оболонка не дотримується режиму, що може статися, наприклад, у підоболонках.</target>
       </trans-unit>
+      <trans-unit id="terminal.integrated.killGracefully">
+        <source xml:lang="en">Controls how terminal processes are terminated. When enabled, attempts a graceful shutdown of the process tree. On POSIX, this will send `SIGTERM`. On Windows, it uses `taskkill.exe` without the `/F` (force) flag. Note that this may allow misbehaving processes to remain running. When disabled (default), processes are terminated with: `SIGHUP`.</source>
+        <target>Контролює, як завершуються термінальні процеси. Коли увімкнено, намагається виконати коректне завершення дерева процесів. На POSIX це надішле `SIGTERM`. На Windows використовується `taskkill.exe` без прапора `/F` (примусово). Зверніть увагу, що це може дозволити неправильно працюючим процесам залишатися запущеними. Коли вимкнено (за замовчуванням), процеси завершуються з: `SIGHUP`.</target>
+      </trans-unit>
       <trans-unit id="terminal.integrated.letterSpacing">
         <source xml:lang="en">Controls the letter spacing of the terminal. This is an integer value which represents the number of additional pixels to add between characters.</source>
         <target>Контролює міжбуквений інтервал терміналу. Це ціле число, яке представляє кількість додаткових пікселів, які потрібно додати між символами.</target>

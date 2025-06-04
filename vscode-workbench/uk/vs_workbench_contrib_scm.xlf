@@ -401,6 +401,10 @@
         <source xml:lang="en">Graph</source>
         <target>Граф</target>
       </trans-unit>
+      <trans-unit id="scmHistoryItemChatContext">
+        <source xml:lang="en">Copilot</source>
+        <target>Копілот</target>
+      </trans-unit>
       <trans-unit id="scmRepositories">
         <source xml:lang="en">Repositories</source>
         <target>Репозиторії</target>
@@ -591,6 +595,30 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/scm/browser/scmHistoryChatContext" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="chat.action.scmHistoryItemContext">
+        <source xml:lang="en">Add History Item to Chat</source>
+        <target>Додати елемент історії до чату</target>
+      </trans-unit>
+      <trans-unit id="chat.action.scmHistoryItemSummarize">
+        <source xml:lang="en">Summarize History Item</source>
+        <target>Підсумувати елемент історії</target>
+      </trans-unit>
+      <trans-unit id="chatContext.scmHistoryItems">
+        <source xml:lang="en">Source Control...</source>
+        <target>Системи контролю версій...</target>
+      </trans-unit>
+      <trans-unit id="chatContext.scmHistoryItems.placeholder">
+        <source xml:lang="en">Select a change</source>
+        <target>Виберіть зміни</target>
+      </trans-unit>
+      <trans-unit id="files">
+        <source xml:lang="en">file(s)</source>
+        <target>файл(и)</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/scm/browser/scmHistoryViewPane" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="activeRepository">
@@ -613,26 +641,6 @@
         <source xml:lang="en">Current history item reference(s)</source>
         <target>Поточні посилання на елемент історії</target>
       </trans-unit>
-      <trans-unit id="deletion">
-        <source xml:lang="en">{0} deletion{1}</source>
-        <target>{0} видалення{1}</target>
-      </trans-unit>
-      <trans-unit id="deletions">
-        <source xml:lang="en">{0} deletions{1}</source>
-        <target>{0} видалень{1}</target>
-      </trans-unit>
-      <trans-unit id="emailLinkTitle">
-        <source xml:lang="en">Email</source>
-        <target>Електронна пошта</target>
-      </trans-unit>
-      <trans-unit id="fileChanged">
-        <source xml:lang="en">{0} file changed</source>
-        <target>{0} файл змінено</target>
-      </trans-unit>
-      <trans-unit id="filesChanged">
-        <source xml:lang="en">{0} files changed</source>
-        <target>{0} файлів змінено</target>
-      </trans-unit>
       <trans-unit id="goToCurrentHistoryItem">
         <source xml:lang="en">Go to Current History Item</source>
         <target>Перейти до поточного історичного елемента</target>
@@ -640,14 +648,6 @@
       <trans-unit id="historyItemChangesEditorTitle">
         <source xml:lang="en">All Changes ({0} ↔ {1})</source>
         <target>Усі зміни ({0} ↔ {1})</target>
-      </trans-unit>
-      <trans-unit id="insertion">
-        <source xml:lang="en">{0} insertion{1}</source>
-        <target>{0} вставка{1}</target>
-      </trans-unit>
-      <trans-unit id="insertions">
-        <source xml:lang="en">{0} insertions{1}</source>
-        <target>{0} вставок{1}</target>
       </trans-unit>
       <trans-unit id="items">
         <source xml:lang="en">{0} Items</source>
@@ -660,6 +660,10 @@
       <trans-unit id="openChanges">
         <source xml:lang="en">Open Changes</source>
         <target>Відкриті зміни</target>
+      </trans-unit>
+      <trans-unit id="openFile">
+        <source xml:lang="en">Open File</source>
+        <target>Відкрити файл</target>
       </trans-unit>
       <trans-unit id="referencePicker">
         <source xml:lang="en">History Item Reference Picker</source>
@@ -688,6 +692,14 @@
       <trans-unit id="scmGraphViewOutdated">
         <source xml:lang="en">Please refresh the graph using the refresh action ($(refresh)).</source>
         <target>Будь ласка, оновіть графік, використовуючи дію оновлення ($(refresh)).</target>
+      </trans-unit>
+      <trans-unit id="setListViewMode">
+        <source xml:lang="en">View as List</source>
+        <target>Перегляд у вигляді списку</target>
+      </trans-unit>
+      <trans-unit id="setTreeViewMode">
+        <source xml:lang="en">View as Tree</source>
+        <target>Переглянути як Дерево</target>
       </trans-unit>
     </body>
   </file>
@@ -749,6 +761,10 @@
         <source xml:lang="en">Cancel</source>
         <target>Скасувати</target>
       </trans-unit>
+      <trans-unit id="scmInputGenerateCommitMessage">
+        <source xml:lang="en">Generate Commit Message with Copilot</source>
+        <target>Згенерувати повідомлення коміту з Copilot</target>
+      </trans-unit>
       <trans-unit id="scmInputMoreActions">
         <source xml:lang="en">More Actions...</source>
         <target>Більше дій...</target>
@@ -763,11 +779,11 @@
       </trans-unit>
       <trans-unit id="setListViewMode">
         <source xml:lang="en">View as List</source>
-        <target>Переглянути як список</target>
+        <target>Перегляд у вигляді списку</target>
       </trans-unit>
       <trans-unit id="setTreeViewMode">
         <source xml:lang="en">View as Tree</source>
-        <target>Перегляд як Дерево</target>
+        <target>Переглянути як Дерево</target>
       </trans-unit>
       <trans-unit id="sortAction">
         <source xml:lang="en">View &amp; Sort</source>
@@ -792,6 +808,38 @@
       <trans-unit id="auto">
         <source xml:lang="en">Auto</source>
         <target>Авто</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/scm/browser/util" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="deletion">
+        <source xml:lang="en">{0} deletion{1}</source>
+        <target>{0} видалення{1}</target>
+      </trans-unit>
+      <trans-unit id="deletions">
+        <source xml:lang="en">{0} deletions{1}</source>
+        <target>{0} видалень{1}</target>
+      </trans-unit>
+      <trans-unit id="emailLinkTitle">
+        <source xml:lang="en">Email</source>
+        <target>Електронна пошта</target>
+      </trans-unit>
+      <trans-unit id="fileChanged">
+        <source xml:lang="en">{0} file changed</source>
+        <target>{0} файл змінено</target>
+      </trans-unit>
+      <trans-unit id="filesChanged">
+        <source xml:lang="en">{0} files changed</source>
+        <target>{0} файлів змінено</target>
+      </trans-unit>
+      <trans-unit id="insertion">
+        <source xml:lang="en">{0} insertion{1}</source>
+        <target>{0} вставка{1}</target>
+      </trans-unit>
+      <trans-unit id="insertions">
+        <source xml:lang="en">{0} insertions{1}</source>
+        <target>{0} вставок{1}</target>
       </trans-unit>
     </body>
   </file>

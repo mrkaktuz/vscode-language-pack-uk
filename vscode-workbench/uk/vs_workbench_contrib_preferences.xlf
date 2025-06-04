@@ -334,6 +334,10 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
         <source xml:lang="en">Preferences</source>
         <target>Налаштування</target>
       </trans-unit>
+      <trans-unit id="preferencesEditor">
+        <source xml:lang="en">Preferences Editor</source>
+        <target>Редактор налаштувань</target>
+      </trans-unit>
       <trans-unit id="settings">
         <source xml:lang="en">Settings</source>
         <target>Налаштування</target>
@@ -369,6 +373,10 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
       <trans-unit id="settings.showContextMenu">
         <source xml:lang="en">Show Setting Context Menu</source>
         <target>Показати контекстне меню налаштувань</target>
+      </trans-unit>
+      <trans-unit id="settings.toggleAiSearch">
+        <source xml:lang="en">Toggle AI Settings Search</source>
+        <target>Перемкнути налаштування ШІ Пошук</target>
       </trans-unit>
       <trans-unit id="settingsEditor2">
         <source xml:lang="en">Settings Editor 2</source>
@@ -408,6 +416,18 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/preferences/browser/preferencesEditor" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="FullTextSearchPlaceholder">
+        <source xml:lang="en">Search {0}</source>
+        <target>Пошук {0}</target>
+      </trans-unit>
+      <trans-unit id="preferencesTabSwitcherBarAriaLabel">
+        <source xml:lang="en">Preferences Tab Switcher</source>
+        <target>Перемикач вкладок налаштувань</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/preferences/browser/preferencesIcons" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="keybindingsAddIcon">
@@ -425,6 +445,10 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
       <trans-unit id="keybindingsSortIcon">
         <source xml:lang="en">Icon for the 'sort by precedence' toggle in the keybinding UI.</source>
         <target>Іконка для перемикача 'сортувати за пріоритетом' у інтерфейсі налаштувань клавіш.</target>
+      </trans-unit>
+      <trans-unit id="preferencesAiResults">
+        <source xml:lang="en">Icon for showing AI results in the Settings UI.</source>
+        <target>Іконка для відображення результатів ШІ в інтерфейсі налаштувань.</target>
       </trans-unit>
       <trans-unit id="preferencesClearInput">
         <source xml:lang="en">Icon for clear input in the Settings and keybinding UI.</source>
@@ -590,9 +614,9 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
         <source xml:lang="en">Workspace Trust</source>
         <target>Довіра до робочого простору</target>
       </trans-unit>
-      <trans-unit id="suggestionsPrefix">
-        <source xml:lang="en">Did you mean: </source>
-        <target>Ви мали на увазі:</target>
+      <trans-unit id="showAiResultsDescription">
+        <source xml:lang="en">Search settings with AI</source>
+        <target>Пошук налаштувань за допомогою ШІ</target>
       </trans-unit>
       <trans-unit id="turnOnSyncButton">
         <source xml:lang="en">Backup and Sync Settings</source>
@@ -961,6 +985,14 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
       <trans-unit id="featureSettingsSearchTooltip">
         <source xml:lang="en">Add feature filter</source>
         <target>Додати фільтр функцій</target>
+      </trans-unit>
+      <trans-unit id="idSettingsSearch">
+        <source xml:lang="en">Setting ID</source>
+        <target>Ідентифікатор налаштування</target>
+      </trans-unit>
+      <trans-unit id="idSettingsSearchTooltip">
+        <source xml:lang="en">Add Setting ID filter</source>
+        <target>Додати фільтр за ID налаштування</target>
       </trans-unit>
       <trans-unit id="langSettingsSearch">
         <source xml:lang="en">Language...</source>

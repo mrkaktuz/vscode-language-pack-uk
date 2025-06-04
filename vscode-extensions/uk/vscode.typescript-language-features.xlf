@@ -1075,6 +1075,10 @@ parseInt(/* str: */ '123', /* radix: */ 8)
         <source xml:lang="en">Infer quote type from existing code</source>
         <target>Визначити тип цитати з існуючого коду</target>
       </trans-unit>
+      <trans-unit id="configuration.inlayHints">
+        <source xml:lang="en">Inlay Hints</source>
+        <target>Вставні підказки</target>
+      </trans-unit>
       <trans-unit id="typescript.preferences.jsxAttributeCompletionStyle.braces">
         <source xml:lang="en">Insert `={}` after attribute names.</source>
         <target>Вставте `={}` після назв атрибутів.</target>
@@ -1172,10 +1176,6 @@ Another easy way to run Node.js programs is by using VS Code's debugger which le
       <trans-unit id="typescript.openTsServerLog.title">
         <source xml:lang="en">Open TS Server log</source>
         <target>Відкрити журнал сервера TS</target>
-      </trans-unit>
-      <trans-unit id="configuration.tsserver.useVsCodeWatcher.deprecation">
-        <source xml:lang="en">Please use the `#typescript.tsserver.watchOptions#` setting instead.</source>
-        <target>Будь ласка, використовуйте налаштування `#typescript.tsserver.watchOptions#` замість цього.</target>
       </trans-unit>
       <trans-unit id="configuration.tsserver.watchOptions.watchDirectory.fixedChunkSizePolling">
         <source xml:lang="en">Polls directories in chunks at regular interval.</source>
@@ -1413,25 +1413,13 @@ See the [TypeScript documentation](https://code.visualstudio.com/docs/typescript
         <source xml:lang="en">The maximum amount of memory (in MB) to allocate to the TypeScript server process. To use a memory limit greater than 4 GB, use `#typescript.tsserver.nodePath#` to run TS Server with a custom Node installation.</source>
         <target>Максимальна кількість пам'яті (в МБ), яку можна виділити для процесу сервера TypeScript. Щоб використовувати обмеження пам'яті більше 4 ГБ, використовуйте `#typescript.tsserver.nodePath#`, щоб запустити TS Server з власною установкою Node.</target>
       </trans-unit>
-      <trans-unit id="typescript.preferences.renameShorthandProperties.deprecationMessage">
-        <source xml:lang="en">The setting 'typescript.preferences.renameShorthandProperties' has been deprecated in favor of 'typescript.preferences.useAliasesForRenames'</source>
-        <target>Налаштування 'typescript.preferences.renameShorthandProperties' було застарілим на користь 'typescript.preferences.useAliasesForRenames'</target>
+      <trans-unit id="configuration.hover.maximumLength">
+        <source xml:lang="en">The maximum number of characters in a hover. If the hover is longer than this, it will be truncated. Requires TypeScript 5.9+.</source>
+        <target>Максимальна кількість символів у ховері. Якщо ховер перевищує цю кількість, він буде обрізаний. Потрібен TypeScript 5.9+.</target>
       </trans-unit>
       <trans-unit id="taskDefinition.tsconfig.description">
         <source xml:lang="en">The tsconfig file that defines the TS build.</source>
         <target>Файл tsconfig, який визначає збірку TS.</target>
-      </trans-unit>
-      <trans-unit id="configuration.javascript.checkJs.checkJs.deprecation">
-        <source xml:lang="en">This setting has been deprecated in favor of `js/ts.implicitProjectConfig.checkJs`.</source>
-        <target>Цю настройку було застаріло на користь `js/ts.implicitProjectConfig.checkJs`.</target>
-      </trans-unit>
-      <trans-unit id="configuration.javascript.checkJs.experimentalDecorators.deprecation">
-        <source xml:lang="en">This setting has been deprecated in favor of `js/ts.implicitProjectConfig.experimentalDecorators`.</source>
-        <target>Це налаштування було застарілим на користь `js/ts.implicitProjectConfig.experimentalDecorators`.</target>
-      </trans-unit>
-      <trans-unit id="configuration.tsserver.useSeparateSyntaxServer.deprecation">
-        <source xml:lang="en">This setting has been deprecated in favor of `typescript.tsserver.useSyntaxServer`.</source>
-        <target>Цю налаштування було застаріло на користь `typescript.tsserver.useSyntaxServer`.</target>
       </trans-unit>
       <trans-unit id="typescript.preferences.organizeImports.typeOrder.first">
         <source xml:lang="en">Type only named imports are sorted to the beginning of the import list. E.g. `import { type A, type Y, B, Z } from 'module';`</source>

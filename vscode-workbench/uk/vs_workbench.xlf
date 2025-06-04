@@ -19,6 +19,26 @@
         <source xml:lang="en">The extension '{0}' wants you to sign in again using {1}.</source>
         <target>Розширення '{0}' хоче, щоб ви знову ввійшли, використовуючи {1}.</target>
       </trans-unit>
+      <trans-unit id="copyAndContinue">
+        <source xml:lang="en">Copy &amp; Continue</source>
+        <target>Копіювати та продовжити</target>
+      </trans-unit>
+      <trans-unit id="deviceCodeDetail">
+        <source xml:lang="en">Your code: {0}
+
+To complete authentication, navigate to {1} and enter the code above.</source>
+        <target>Ваш код: {0}
+
+Щоб завершити аутентифікацію, перейдіть за посиланням {1} і введіть код вище.</target>
+      </trans-unit>
+      <trans-unit id="deviceCodeTitle">
+        <source xml:lang="en">Device Code Authentication</source>
+        <target>Аутентифікація за кодом пристрою</target>
+      </trans-unit>
+      <trans-unit id="failedToOpenUri">
+        <source xml:lang="en">Failed to open {0}</source>
+        <target>Не вдалося відкрити {0}</target>
+      </trans-unit>
       <trans-unit id="incorrectAccount">
         <source xml:lang="en">Incorrect account detected</source>
         <target>Виявлено неправильний обліковий запис</target>
@@ -39,9 +59,17 @@
         <source xml:lang="en">Login with {0}</source>
         <target>Увійти з {0}</target>
       </trans-unit>
+      <trans-unit id="no">
+        <source xml:lang="en">No</source>
+        <target>Ні</target>
+      </trans-unit>
       <trans-unit id="signedOut">
         <source xml:lang="en">Successfully signed out.</source>
         <target>Успішно вийшли з системи.</target>
+      </trans-unit>
+      <trans-unit id="yes">
+        <source xml:lang="en">Yes</source>
+        <target>Так</target>
       </trans-unit>
     </body>
   </file>
@@ -215,6 +243,39 @@
       <trans-unit id="languageModelsAccountId">
         <source xml:lang="en">Language Models</source>
         <target>Моделі мови</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/api/browser/mainThreadMcp" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="allow">
+        <source xml:lang="en">&amp;&amp;Allow</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Дозволити</target>
+      </trans-unit>
+      <trans-unit id="confirmLogin">
+        <source xml:lang="en">The MCP Server Definition '{0}' wants to authenticate to {1}.</source>
+        <target>Розширення '{0}' хоче увійти, використовуючи {1}.</target>
+      </trans-unit>
+      <trans-unit id="confirmRelogin">
+        <source xml:lang="en">The MCP Server Definition '{0}' wants you to authenticate to {1}.</source>
+        <target>Розширення '{0}' хоче, щоб ви знову ввійшли, використовуючи {1}.</target>
+      </trans-unit>
+      <trans-unit id="incorrectAccount">
+        <source xml:lang="en">Incorrect account detected</source>
+        <target>Виявлено неправильний обліковий запис</target>
+      </trans-unit>
+      <trans-unit id="incorrectAccountDetail">
+        <source xml:lang="en">The chosen account, {0}, does not match the requested account, {1}.</source>
+        <target>Вибраний обліковий запис, {0}, не відповідає запитаному обліковому запису, {1}.</target>
+      </trans-unit>
+      <trans-unit id="keep">
+        <source xml:lang="en">Keep {0}</source>
+        <target>Зберегти {0}</target>
+      </trans-unit>
+      <trans-unit id="loginWith">
+        <source xml:lang="en">Login with {0}</source>
+        <target>Увійти з {0}</target>
       </trans-unit>
     </body>
   </file>
@@ -789,6 +850,30 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/api/common/extHostAuthentication" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="authenticatingTo">
+        <source xml:lang="en">Authenticating to '{0}'</source>
+        <target>Аутентифікація до '{0}'</target>
+      </trans-unit>
+      <trans-unit id="completeAuth">
+        <source xml:lang="en">Complete the authentication in the browser window that has opened.</source>
+        <target>Завершіть аутентифікацію у вікні браузера, яке відкрилося.</target>
+      </trans-unit>
+      <trans-unit id="continueWith">
+        <source xml:lang="en">You have not yet finished authenticating to '{0}'. Would you like to try a different way? ({1})</source>
+        <target>Ви ще не завершили аутентифікацію до '{0}'. Чи хочете спробувати інший спосіб? ({1})</target>
+      </trans-unit>
+      <trans-unit id="url handler">
+        <source xml:lang="en">URL Handler</source>
+        <target>URL обробник</target>
+      </trans-unit>
+      <trans-unit id="userCanceledContinue">
+        <source xml:lang="en">Having trouble authenticating to '{0}'? Would you like to try a different way? ({1})</source>
+        <target>Виникли проблеми з аутентифікацією до '{0}'? Хотіли б ви спробувати інший спосіб? ({1})</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/api/common/extHostDiagnostics" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="limitHit">
@@ -963,6 +1048,26 @@
       <trans-unit id="schema">
         <source xml:lang="en">Schema</source>
         <target>Схема</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/api/node/extHostAuthentication" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="completeAuth">
+        <source xml:lang="en">Complete the authentication in the browser window that has opened.</source>
+        <target>Завершіть аутентифікацію у вікні браузера, яке відкрилося.</target>
+      </trans-unit>
+      <trans-unit id="device code">
+        <source xml:lang="en">Device Code</source>
+        <target>Код пристрою</target>
+      </trans-unit>
+      <trans-unit id="loopback">
+        <source xml:lang="en">Loopback Server</source>
+        <target>Сервер Loopback</target>
+      </trans-unit>
+      <trans-unit id="waitingForAuth">
+        <source xml:lang="en">Open [{0}]({0}) in a new tab and paste your one-time code: {1}</source>
+        <target>Відкрийте [{0}]({0}) у новій вкладці та вставте свій одноразовий код: {1}</target>
       </trans-unit>
     </body>
   </file>
@@ -2377,11 +2482,11 @@ Browser: {3}</source>
   <file original="src/vs/workbench/browser/parts/editor/auxiliaryEditorPart" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="disableCompactAuxiliaryWindow">
-        <source xml:lang="en">Unset Compact Mode</source>
+        <source xml:lang="en">Turn Off Compact Mode</source>
         <target>Вимкнути компактний режим</target>
       </trans-unit>
       <trans-unit id="enableCompactAuxiliaryWindow">
-        <source xml:lang="en">Set Compact Mode</source>
+        <source xml:lang="en">Turn On Compact Mode</source>
         <target>Увімкнути компактний режим</target>
       </trans-unit>
       <trans-unit id="toggleCompactAuxiliaryWindow">
@@ -4371,6 +4476,10 @@ Browser: {3}</source>
         <source xml:lang="en">Manage Trusted Extensions</source>
         <target>Керувати надійними розширеннями</target>
       </trans-unit>
+      <trans-unit id="manageTrustedMCPServers">
+        <source xml:lang="en">Manage Trusted MCP Servers</source>
+        <target>Керувати надійними серверами MCP</target>
+      </trans-unit>
       <trans-unit id="signOut">
         <source xml:lang="en">Sign Out</source>
         <target>Вийти</target>
@@ -5044,8 +5153,8 @@ Browser: {3}</source>
         <target>&amp;&amp;Перегляд</target>
       </trans-unit>
       <trans-unit id="menubar.customTitlebarAccessibilityNotification">
-        <source xml:lang="en">Accessibility support is enabled for you. For the most accessible experience, we recommend the custom title bar style.</source>
-        <target>Підтримка доступності увімкнена для вас. Для найзручнішого досвіду ми рекомендуємо стиль заголовка з налаштуваннями.</target>
+        <source xml:lang="en">Accessibility support is enabled for you. For the most accessible experience, we recommend the custom menu style.</source>
+        <target>Підтримка доступності увімкнена для вас. Для найзручнішого досвіду ми рекомендуємо користувальницький стиль меню.</target>
       </trans-unit>
       <trans-unit id="restartToUpdate">
         <source xml:lang="en">Restart to &amp;&amp;Update</source>
@@ -5738,9 +5847,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Use the settings UI editor.</source>
         <target>Використовуйте редактор налаштувань UI.</target>
       </trans-unit>
-      <trans-unit id="settings.showSuggestions">
-        <source xml:lang="en">Controls whether setting suggestions are shown below the search bar in the Settings editor.</source>
-        <target>Контролює, чи відображаються пропозиції налаштувань під рядком пошуку в редакторі налаштувань.</target>
+      <trans-unit id="settings.showAISearchToggle">
+        <source xml:lang="en">Controls whether the AI search toggle is shown in the search bar in the Settings editor.</source>
+        <target>Контролює, чи перемикач пошуку AI відображається в рядку пошуку в редакторі налаштувань.</target>
       </trans-unit>
       <trans-unit id="sharedViewState">
         <source xml:lang="en">Preserves the most recent editor view state (such as scroll position) across all editor groups and restores that if no specific editor view state is found for the editor group.</source>
@@ -5854,9 +5963,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <target>Меню відображається вгорі вікна і приховане лише в режимі повного екрану.</target>
       </trans-unit>
       <trans-unit id="window.menuBarVisibility.compact">
-        <source xml:lang="en">Menu is displayed as a compact button in the side bar. This value is ignored when {0} is {1}.</source>
+        <source xml:lang="en">Menu is displayed as a compact button in the side bar. This value is ignored when {0} is {1} and {2} is either {3} or {4}.</source>
         <note>{0}, {1} is a placeholder for a setting identifier.</note>
-        <target>Меню відображається як компактна кнопка в бічній панелі. Це значення ігнорується, коли {0} є {1}.</target>
+        <target>Меню відображається як компактна кнопка в бічній панелі. Це значення ігнорується, коли {0} є {1}, а {2} є або {3}, або {4}.</target>
       </trans-unit>
       <trans-unit id="window.menuBarVisibility.compact.web">
         <source xml:lang="en">Menu is displayed as a compact button in the side bar.</source>
@@ -6469,13 +6578,9 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Whether Zen mode is enabled</source>
         <target>Чи увімкнено режим Zen</target>
       </trans-unit>
-      <trans-unit id="isAuxiliaryEditorPart">
-        <source xml:lang="en">Editor Part is in an auxiliary window</source>
-        <target>Частина редактора знаходиться в допоміжному вікні</target>
-      </trans-unit>
-      <trans-unit id="isAuxiliaryTitleBar">
-        <source xml:lang="en">Title bar is in an auxiliary window</source>
-        <target>Заголовок вікна знаходиться в допоміжному вікні.</target>
+      <trans-unit id="isAuxiliaryWindow">
+        <source xml:lang="en">Window is an auxiliary window</source>
+        <target>Вікно є допоміжним вікном</target>
       </trans-unit>
       <trans-unit id="isAuxiliaryWindowFocusedContext">
         <source xml:lang="en">Whether an auxiliary window is focused</source>
@@ -7365,6 +7470,27 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Show GPU Info</source>
         <target>Показати інформацію про GPU</target>
       </trans-unit>
+      <trans-unit id="stopTracing">
+        <source xml:lang="en">Stop Tracing</source>
+        <target>Зупинити трасування</target>
+      </trans-unit>
+      <trans-unit id="stopTracing.button">
+        <source xml:lang="en">&amp;&amp;Relaunch and Enable Tracing</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Відновити та ввімкнути трасування</target>
+      </trans-unit>
+      <trans-unit id="stopTracing.detail">
+        <source xml:lang="en">This can take up to one minute to complete.</source>
+        <target>Це може зайняти до однієї хвилини для завершення.</target>
+      </trans-unit>
+      <trans-unit id="stopTracing.message">
+        <source xml:lang="en">Tracing requires to launch with a '--trace' argument</source>
+        <target>Відстеження вимагає запуску з аргументом '--trace'</target>
+      </trans-unit>
+      <trans-unit id="stopTracing.title">
+        <source xml:lang="en">Creating trace file...</source>
+        <target>Створення файлу трасування...</target>
+      </trans-unit>
       <trans-unit id="toggleDevTools">
         <source xml:lang="en">Toggle Developer Tools</source>
         <target>Переключити інструменти розробника</target>
@@ -7410,12 +7536,12 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <target>Поточне вікно</target>
       </trans-unit>
       <trans-unit id="disableWindowAlwaysOnTop">
-        <source xml:lang="en">Unset Always on Top</source>
-        <target>Скинути завжди зверху</target>
+        <source xml:lang="en">Turn Off Always on Top</source>
+        <target>Вимкнути завжди зверху</target>
       </trans-unit>
       <trans-unit id="enableWindowAlwaysOnTop">
-        <source xml:lang="en">Set Always on Top</source>
-        <target>Встановити завжди поверх інших</target>
+        <source xml:lang="en">Turn On Always on Top</source>
+        <target>Увімкнути Завжди зверху</target>
       </trans-unit>
       <trans-unit id="miCloseWindow">
         <source xml:lang="en">Clos&amp;&amp;e Window</source>
@@ -7501,6 +7627,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Allows to disable crash reporting, should restart the app if the value is changed.</source>
         <target>Дозволяє вимкнути звітність про збої, слід перезапустити додаток, якщо значення змінено.</target>
       </trans-unit>
+      <trans-unit id="argv.enableRDPDisplayTracking">
+        <source xml:lang="en">Ensures that maximized windows gets restored to correct display during RDP reconnection.</source>
+        <target>Забезпечує, щоб максимізовані вікна відновлювалися до правильного відображення під час повторного підключення RDP.</target>
+      </trans-unit>
       <trans-unit id="argv.enebleProposedApi">
         <source xml:lang="en">Enable proposed APIs for a list of extension ids (such as `vscode.git`). Proposed APIs are unstable and subject to breaking without warning at any time. This should only be set for extension development and testing purposes.</source>
         <target>Увімкніть запропоновані API для списку ідентифікаторів розширень (таких як `vscode.git`). Запропоновані API є нестабільними і можуть бути змінені без попередження в будь-який момент. Це слід встановлювати лише для розробки та тестування розширень.</target>
@@ -7546,8 +7676,8 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <target>Налаштуйте вигляд елементів керування вікном, щоб вони були рідними для ОС, кастомізованими або прихованими. Зміни потребують повного перезавантаження для застосування.</target>
       </trans-unit>
       <trans-unit id="dialogStyle">
-        <source xml:lang="en">Adjust the appearance of dialog windows.</source>
-        <target>Налаштуйте вигляд вікон діалогу.</target>
+        <source xml:lang="en">Adjust the appearance of dialogs to be native by the OS or custom.</source>
+        <target>Налаштуйте вигляд діалогів, щоб вони були рідними для ОС або кастомізованими.</target>
       </trans-unit>
       <trans-unit id="enableCrashReporterDeprecated">
         <source xml:lang="en">If this setting is false, no telemetry will be sent regardless of the new setting's value. Deprecated due to being combined into the {0} setting.</source>
@@ -7617,7 +7747,7 @@ This option requires restart to take effect.</source>
         <target>Телеметрія</target>
       </trans-unit>
       <trans-unit id="titleBarStyle">
-        <source xml:lang="en">Adjust the appearance of the window title bar to be native by the OS or custom. On Linux and Windows, this setting also affects the application and context menu appearances. Changes require a full restart to apply.</source>
+        <source xml:lang="en">Adjust the appearance of the window title bar to be native by the OS or custom. Changes require a full restart to apply.</source>
         <target>Стиль заголовка вікна</target>
       </trans-unit>
       <trans-unit id="toggleWindowTabsBar">
@@ -7655,6 +7785,38 @@ This option requires restart to take effect.</source>
       <trans-unit id="window.doubleClickIconToClose">
         <source xml:lang="en">If enabled, this setting will close the window when the application icon in the title bar is double-clicked. The window will not be able to be dragged by the icon. This setting is effective only if {0} is set to `custom`.</source>
         <target>Якщо увімкнено, ця настройка закриє вікно, коли значок програми в заголовку буде двічі клацнуто. Вікно не можна буде перетягувати за значком. Ця настройка є ефективною лише якщо {0} встановлено на `custom`.</target>
+      </trans-unit>
+      <trans-unit id="window.menuStyle">
+        <source xml:lang="en">Adjust the menu style to either be native by the OS, custom, or inherited from the title bar style defined in {0}. This also affects the context menu appearance. Changes require a full restart to apply.</source>
+        <target>Налаштуйте стиль меню так, щоб він був або рідним для ОС, або кастомним, або успадкованим від стилю заголовка, визначеного в {0}. Це також вплине на вигляд контекстного меню. Зміни потребують повного перезапуску для застосування.</target>
+      </trans-unit>
+      <trans-unit id="window.menuStyle.custom">
+        <source xml:lang="en">Use the custom menu.</source>
+        <target>Використовуйте користувацьке меню.</target>
+      </trans-unit>
+      <trans-unit id="window.menuStyle.custom.mac">
+        <source xml:lang="en">Use the custom context menu.</source>
+        <target>Використовуйте контекстне меню за замовчуванням.</target>
+      </trans-unit>
+      <trans-unit id="window.menuStyle.inherit">
+        <source xml:lang="en">Matches the menu style to the title bar style defined in {0}.</source>
+        <target>Відповідає стилю меню стилю заголовка, визначеному в {0}.</target>
+      </trans-unit>
+      <trans-unit id="window.menuStyle.inherit.mac">
+        <source xml:lang="en">Matches the context menu style to the title bar style defined in {0}.</source>
+        <target>Відповідає стилю контекстного меню стилю заголовка, визначеному в {0}.</target>
+      </trans-unit>
+      <trans-unit id="window.menuStyle.mac">
+        <source xml:lang="en">Adjust the context menu appearances to either be native by the OS, custom, or inherited from the title bar style defined in {0}.</source>
+        <target>Налаштуйте зовнішній вигляд контекстного меню так, щоб він був або рідним для ОС, або кастомізованим, або успадкованим від стилю заголовка, визначеного в {0}.</target>
+      </trans-unit>
+      <trans-unit id="window.menuStyle.native">
+        <source xml:lang="en">Use the native menu. This is ignored when {0} is set to {1}.</source>
+        <target>Використовуйте рідне меню. Це ігнорується, коли {0} встановлено на {1}.</target>
+      </trans-unit>
+      <trans-unit id="window.menuStyle.native.mac">
+        <source xml:lang="en">Use the native context menu.</source>
+        <target>Використовуйте рідне контекстне меню.</target>
       </trans-unit>
       <trans-unit id="window.nativeFullScreen">
         <source xml:lang="en">Controls if native full-screen should be used on macOS. Disable this option to prevent macOS from creating a new space when going full-screen.</source>

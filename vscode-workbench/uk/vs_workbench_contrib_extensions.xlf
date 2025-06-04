@@ -514,6 +514,10 @@
         <source xml:lang="en">Download Pre-Release VSIX</source>
         <target>Завантажити попередню версію VSIX</target>
       </trans-unit>
+      <trans-unit id="download specific version">
+        <source xml:lang="en">Download Specific Version VSIX...</source>
+        <target>Завантажити конкретну версію VSIX...</target>
+      </trans-unit>
       <trans-unit id="enableAll">
         <source xml:lang="en">Enable All Extensions</source>
         <target>Увімкнути всі розширення</target>
@@ -601,10 +605,6 @@
       <trans-unit id="extensions.gallery.serviceUrl">
         <source xml:lang="en">Configure the Marketplace service URL to connect to</source>
         <target>Налаштуйте URL-адресу служби Marketplace для підключення до</target>
-      </trans-unit>
-      <trans-unit id="extensions.gallery.useUnpkgResourceApi">
-        <source xml:lang="en">When enabled, extensions to update are fetched from Unpkg service.</source>
-        <target>Коли увімкнено, розширення для оновлення завантажуються з сервісу Unpkg.</target>
       </trans-unit>
       <trans-unit id="extensions.supportUntrustedWorkspaces">
         <source xml:lang="en">Override the untrusted workspace support of an extension. Extensions using `true` will always be enabled. Extensions using `limited` will always be enabled, and the extension will hide functionality that requires trust. Extensions using `false` will only be enabled only when the workspace is trusted.</source>
@@ -766,6 +766,14 @@
       <trans-unit id="installWorkspaceRecommendedExtensions">
         <source xml:lang="en">Install Workspace Recommended Extensions</source>
         <target>Встановити рекомендовані розширення для робочого простору</target>
+      </trans-unit>
+      <trans-unit id="installed filter">
+        <source xml:lang="en">Installed</source>
+        <target>Встановлено</target>
+      </trans-unit>
+      <trans-unit id="installedExtensions">
+        <source xml:lang="en">Show Installed Extensions</source>
+        <target>Показати встановлені розширення</target>
       </trans-unit>
       <trans-unit id="manageExtensionsHelp">
         <source xml:lang="en">Manage Extensions</source>
@@ -1428,6 +1436,10 @@
         <source xml:lang="en">Migrate</source>
         <target>Міграція</target>
       </trans-unit>
+      <trans-unit id="missing from gallery tooltip">
+        <source xml:lang="en">This extension is no longer available on the Extension Marketplace.</source>
+        <target>Ця розширення більше недоступне на Ринку Розширень.</target>
+      </trans-unit>
       <trans-unit id="more information">
         <source xml:lang="en">&amp;&amp;More Information</source>
         <note>&amp;&amp; denotes a mnemonic</note>
@@ -1566,6 +1578,10 @@
       <trans-unit id="uninstallAction">
         <source xml:lang="en">Uninstall</source>
         <target>Видалити</target>
+      </trans-unit>
+      <trans-unit id="uninstallAll">
+        <source xml:lang="en">Uninstall (All Profiles)</source>
+        <target>Видалити (Усі профілі)</target>
       </trans-unit>
       <trans-unit id="uninstallExtensionComplete">
         <source xml:lang="en">Please reload Visual Studio Code to complete the uninstallation of the extension {0}.</source>
@@ -2040,6 +2056,10 @@ Would you like to update the extension?</source>
         <source xml:lang="en">Unable to search the Marketplace when offline, please check your network connection.</source>
         <target>Неможливо здійснити пошук на Marketplace в режимі офлайн, будь ласка, перевірте ваше мережеве з'єднання.</target>
       </trans-unit>
+      <trans-unit id="showing local extensions only">
+        <source xml:lang="en">{0} Showing local extensions.</source>
+        <target>{0} Показуючи локальні розширення.</target>
+      </trans-unit>
       <trans-unit id="showingExtensionsForFeature">
         <source xml:lang="en">Extensions using {0} in the last 30 days</source>
         <target>Розширення, що використовують {0} за останні 30 днів</target>
@@ -2328,6 +2348,10 @@ Would you like to update the extension?</source>
         <source xml:lang="en">Cannot uninstall '{0}' extension alone. '{1}', '{2}' and other extensions depend on this. Do you want to uninstall all these extensions?</source>
         <target>Не можна видалити розширення '{0}' окремо. '{1}', '{2}' та інші розширення залежать від цього. Ви хочете видалити всі ці розширення?</target>
       </trans-unit>
+      <trans-unit id="no versions">
+        <source xml:lang="en">This extension has no other versions.</source>
+        <target>Ця розширення не має інших версій.</target>
+      </trans-unit>
       <trans-unit id="not an extension">
         <source xml:lang="en">The provided object is not an extension.</source>
         <target>Наданий об'єкт не є розширенням.</target>
@@ -2380,6 +2404,10 @@ Would you like to update the extension?</source>
         <source xml:lang="en">Please update {0} to enable the updated extension.</source>
         <target>Будь ласка, оновіть {0}, щоб активувати оновлене розширення.</target>
       </trans-unit>
+      <trans-unit id="pre-release">
+        <source xml:lang="en">pre-release</source>
+        <target>попередній реліз</target>
+      </trans-unit>
       <trans-unit id="reload">
         <source xml:lang="en">reload window</source>
         <target>Перезавантажити вікно</target>
@@ -2395,6 +2423,10 @@ Would you like to update the extension?</source>
       <trans-unit id="restart extensions">
         <source xml:lang="en">restart extensions</source>
         <target>Перезапустити розширення</target>
+      </trans-unit>
+      <trans-unit id="selectVersion">
+        <source xml:lang="en">Select Version to Download</source>
+        <target>Виберіть версію для встановлення</target>
       </trans-unit>
       <trans-unit id="singleDependentError">
         <source xml:lang="en">Cannot disable '{0}' extension alone. '{1}' extension depends on this. Do you want to disable all these extensions?</source>
@@ -2418,7 +2450,19 @@ Would you like to update the extension?</source>
       </trans-unit>
       <trans-unit id="uninstallAll">
         <source xml:lang="en">Uninstall All</source>
-        <target>Видалити все</target>
+        <target>Видалити (Усі профілі)</target>
+      </trans-unit>
+      <trans-unit id="uninstallAllProfiles">
+        <source xml:lang="en">Uninstall (All Profiles)</source>
+        <target>Видалити (всі профілі)</target>
+      </trans-unit>
+      <trans-unit id="uninstallApplicationScoped">
+        <source xml:lang="en">Uninstall Extension</source>
+        <target>Видалити розширення</target>
+      </trans-unit>
+      <trans-unit id="uninstallApplicationScopedMessage">
+        <source xml:lang="en">Would you like to Uninstall {0} from all profiles?</source>
+        <target>Ви хочете видалити {0} з усіх профілів?</target>
       </trans-unit>
       <trans-unit id="uninstallDependents">
         <source xml:lang="en">Uninstall Extension with Dependents</source>
@@ -2522,6 +2566,38 @@ Would you like to update the extension?</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/extensions/common/installExtensionsTool" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="installExtensionsTool.confirmationMessage">
+        <source xml:lang="en">Review the suggested extensions and click the **Install** button for each extension you wish to add. Once you have finished installing the selected extensions, click **Continue** to proceed.</source>
+        <target>Перегляньте запропоновані розширення та натисніть кнопку **Встановити** для кожного розширення, яке ви бажаєте додати. Після завершення встановлення вибраних розширень натисніть **Продовжити**, щоб продовжити.</target>
+      </trans-unit>
+      <trans-unit id="installExtensionsTool.confirmationTitle">
+        <source xml:lang="en">Install Extensions</source>
+        <target>Встановити розширення</target>
+      </trans-unit>
+      <trans-unit id="installExtensionsTool.displayName">
+        <source xml:lang="en">Install Extensions</source>
+        <target>Встановити розширення</target>
+      </trans-unit>
+      <trans-unit id="installExtensionsTool.modelDescription">
+        <source xml:lang="en">This is a tool for installing extensions in Visual Studio Code. You should provide the list of extension ids to install. The identifier of an extension is '${ publisher }.${ name }' for example: 'vscode.csharp'.</source>
+        <target>Це інструмент для встановлення розширень у Visual Studio Code. Ви повинні надати список ідентифікаторів розширень для встановлення. Ідентифікатором розширення є '${ publisher }.${ name }', наприклад: 'vscode.csharp'.</target>
+      </trans-unit>
+      <trans-unit id="installExtensionsTool.noResultMessage">
+        <source xml:lang="en">No extensions were installed.</source>
+        <target>Не було встановлено жодних розширень.</target>
+      </trans-unit>
+      <trans-unit id="installExtensionsTool.resultMessage">
+        <source xml:lang="en">Following extensions are installed: {0}</source>
+        <target>Встановлені наступні розширення: {0}</target>
+      </trans-unit>
+      <trans-unit id="installExtensionsTool.userDescription">
+        <source xml:lang="en">Tool for installing extensions</source>
+        <target>Інструмент для встановлення розширень</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/extensions/common/reportExtensionIssueAction" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="reportExtensionIssue">
@@ -2555,6 +2631,10 @@ Would you like to update the extension?</source>
       <trans-unit id="searchExtensionsTool.noInput">
         <source xml:lang="en">Please provide a category or keywords or ids to search for.</source>
         <target>Будь ласка, надайте категорію або ключові слова, або ідентифікатори для пошуку.</target>
+      </trans-unit>
+      <trans-unit id="searchExtensionsTool.userDescription">
+        <source xml:lang="en">Search for extensions in the Visual Studio Code Extensions Marketplace</source>
+        <target>Шукайте розширення в маркетплейсі розширень Visual Studio Code</target>
       </trans-unit>
     </body>
   </file>

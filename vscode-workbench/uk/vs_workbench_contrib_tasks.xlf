@@ -58,6 +58,10 @@
         <source xml:lang="en">The following workspace folders are ignored since they use task version 0.1.0: {0}</source>
         <target>Наступні папки робочого простору ігноруються, оскільки вони використовують версію завдання 0.1.0: {0}</target>
       </trans-unit>
+      <trans-unit id="TaskService.instanceToTerminate">
+        <source xml:lang="en">Select an instance to terminate</source>
+        <target>Виберіть екземпляр для завершення</target>
+      </trans-unit>
       <trans-unit id="TaskService.noBuildTask">
         <source xml:lang="en">No build task to run found. Configure Build Task...</source>
         <target>Не знайдено завдання для виконання. Налаштуйте завдання збірки...</target>
@@ -81,6 +85,10 @@ The task will be ignored.</source>
       <trans-unit id="TaskService.noEntryToRun">
         <source xml:lang="en">Configure a Task</source>
         <target>Налаштувати задачу</target>
+      </trans-unit>
+      <trans-unit id="TaskService.noInstanceRunning">
+        <source xml:lang="en">No instance is currently running</source>
+        <target>Жоден екземпляр наразі не працює.</target>
       </trans-unit>
       <trans-unit id="TaskService.noTaskIsRunning">
         <source xml:lang="en">No task is running</source>
@@ -194,13 +202,13 @@ The task will be ignored.</source>
         <source xml:lang="en">All Running Tasks</source>
         <target>Усі запущені завдання</target>
       </trans-unit>
+      <trans-unit id="TaskSystem.InstancePolicy.warn">
+        <source xml:lang="en">The instance limit for this task has been reached.</source>
+        <target>Досягнуто межі екземплярів для цього завдання.</target>
+      </trans-unit>
       <trans-unit id="TaskSystem.active">
         <source xml:lang="en">There is already a task running. Terminate it first before executing another task.</source>
         <target>Вже виконується завдання. Спочатку заверште його, перш ніж виконувати інше завдання.</target>
-      </trans-unit>
-      <trans-unit id="TaskSystem.activeSame.noBackground">
-        <source xml:lang="en">The task '{0}' is already active.</source>
-        <target>Завдання '{0}' вже активне.</target>
       </trans-unit>
       <trans-unit id="TaskSystem.configurationErrors">
         <source xml:lang="en">Error: the provided task configuration has validation errors and can't not be used. Please correct the errors first.</source>
@@ -283,10 +291,6 @@ The task will be ignored.</source>
         <source xml:lang="en">recently used tasks</source>
         <target>недавно використані завдання</target>
       </trans-unit>
-      <trans-unit id="restartTask">
-        <source xml:lang="en">Restart Task</source>
-        <target>Перезапустити задачу</target>
-      </trans-unit>
       <trans-unit id="runTask.arg">
         <source xml:lang="en">Filters the tasks shown in the quickpick</source>
         <target>Фільтрує завдання, що відображаються у швидкому виборі</target>
@@ -322,7 +326,7 @@ The task will be ignored.</source>
         <target>Виберіть, для яких видів помилок і попереджень сканувати вихідні дані завдання.</target>
       </trans-unit>
       <trans-unit id="showOutput">
-        <source xml:lang="en">Show output</source>
+        <source xml:lang="en">Show Output</source>
         <target>Показати вихідні дані</target>
       </trans-unit>
       <trans-unit id="taskEvent">
@@ -389,6 +393,10 @@ The task will be ignored.</source>
         <source xml:lang="en">There are task errors. See the output for details.</source>
         <target>Є помилки завдань. Дивіться вивід для деталей.</target>
       </trans-unit>
+      <trans-unit id="taskServiceOutputPromptChat">
+        <source xml:lang="en">There are task errors. Use chat to fix them or view the output for details.</source>
+        <target>Є помилки завдань. Використовуйте чат, щоб їх виправити, або перегляньте вихідні дані для деталей.</target>
+      </trans-unit>
       <trans-unit id="tasks">
         <source xml:lang="en">Tasks</source>
         <target>Завдання</target>
@@ -399,9 +407,9 @@ The task will be ignored.</source>
         <target>// Дивіться https://go.microsoft.com/fwlink/?LinkId=733558 
 // для документації про формат tasks.json</target>
       </trans-unit>
-      <trans-unit id="terminateTask">
-        <source xml:lang="en">Terminate Task</source>
-        <target>Припинити завдання</target>
+      <trans-unit id="troubleshootWithChat">
+        <source xml:lang="en">Fix with Chat</source>
+        <target>Виправити за допомогою Chat</target>
       </trans-unit>
       <trans-unit id="unexpectedTaskType">
         <source xml:lang="en">The task provider for "{0}" tasks unexpectedly provided a task of type "{1}".
@@ -1155,6 +1163,30 @@ The task command line or label</note>
       <trans-unit id="JsonSchema.tasks.instanceLimit">
         <source xml:lang="en">The number of instances of the task that are allowed to run simultaneously.</source>
         <target>Кількість екземплярів завдання, які можуть виконуватись одночасно.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.instancePolicy">
+        <source xml:lang="en">Policy to apply when instance limit is reached.</source>
+        <target>Політика, яка застосовується, коли досягнуто межі екземплярів.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.instancePolicy.prompt">
+        <source xml:lang="en">Asks which instance to terminate.</source>
+        <target>Запитує, яку інстанцію завершити.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.instancePolicy.silent">
+        <source xml:lang="en">Does nothing.</source>
+        <target>Не робить нічого.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.instancePolicy.terminateNewest">
+        <source xml:lang="en">Terminates the newest instance.</source>
+        <target>Припиняє найновіший екземпляр.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.instancePolicy.terminateOldest">
+        <source xml:lang="en">Terminates the oldest instance.</source>
+        <target>Припиняє найстаріший екземпляр.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.instancePolicy.warn">
+        <source xml:lang="en">Does nothing but warns that the instance limit has been reached.</source>
+        <target>Не робить нічого, крім як попереджає, що досягнуто межі екземплярів.</target>
       </trans-unit>
       <trans-unit id="JsonSchema.tasks.isBuildCommand.deprecated">
         <source xml:lang="en">The property isBuildCommand is deprecated. Use the group property instead. See also the 1.14 release notes.</source>
