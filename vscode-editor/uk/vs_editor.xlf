@@ -103,6 +103,26 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/editor/browser/services/inlineCompletionsService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="action.inlineSuggest.cancelSnooze">
+        <source xml:lang="en">Cancel Snooze Inline Suggestions</source>
+        <target>Скасувати пропозиції на зупинку</target>
+      </trans-unit>
+      <trans-unit id="action.inlineSuggest.snooze">
+        <source xml:lang="en">Snooze Inline Suggestions</source>
+        <target>Вимкнути вбудовані пропозиції</target>
+      </trans-unit>
+      <trans-unit id="inlineCompletions.snoozed">
+        <source xml:lang="en">Whether inline completions are currently snoozed</source>
+        <target>Чи наразі вимкнені вбудовані завершення</target>
+      </trans-unit>
+      <trans-unit id="snooze.placeholder">
+        <source xml:lang="en">Select snooze duration for Code completions and NES</source>
+        <target>Виберіть тривалість відкладання для завершення коду та NES</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/editor/browser/widget/codeEditor/codeEditorWidget" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="cursors.maximum">
@@ -441,24 +461,24 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
         <target>Контролює, чи слід перевіряти асинхронну токенізацію на відповідність застарілій фоновій токенізації. Може сповільнити токенізацію. Тільки для налагодження.</target>
       </trans-unit>
       <trans-unit id="editor.experimental.preferTreeSitter.css">
-        <source xml:lang="en">Controls whether tree sitter parsing should be turned on for css. This will take precedence over `editor.experimental.treeSitterTelemetry` for css.</source>
-        <target>Контролює, чи має бути увімкнено парсинг tree sitter для css. Це матиме пріоритет над `editor.experimental.treeSitterTelemetry` для css.</target>
+        <source xml:lang="en">Controls whether tree sitter parsing should be turned on for css. This will take precedence over `#editor.experimental.treeSitterTelemetry#` for css.</source>
+        <target>Контролює, чи слід увімкнути парсинг tree sitter для css. Це матиме пріоритет над `#editor.experimental.treeSitterTelemetry#` для css.</target>
       </trans-unit>
       <trans-unit id="editor.experimental.preferTreeSitter.ini">
-        <source xml:lang="en">Controls whether tree sitter parsing should be turned on for ini. This will take precedence over `editor.experimental.treeSitterTelemetry` for ini.</source>
-        <target>Контролює, чи має бути увімкнене парсинг деревом для ini. Це матиме пріоритет над `editor.experimental.treeSitterTelemetry` для ini.</target>
+        <source xml:lang="en">Controls whether tree sitter parsing should be turned on for ini. This will take precedence over `#editor.experimental.treeSitterTelemetry#` for ini.</source>
+        <target>Контролює, чи має бути увімкнено парсинг tree sitter для ini. Це матиме пріоритет над `#editor.experimental.treeSitterTelemetry#` для ini.</target>
       </trans-unit>
       <trans-unit id="editor.experimental.preferTreeSitter.regex">
-        <source xml:lang="en">Controls whether tree sitter parsing should be turned on for regex. This will take precedence over `editor.experimental.treeSitterTelemetry` for regex.</source>
-        <target>Контролює, чи має бути увімкнено парсинг tree sitter для regex. Це матиме пріоритет над `editor.experimental.treeSitterTelemetry` для regex.</target>
+        <source xml:lang="en">Controls whether tree sitter parsing should be turned on for regex. This will take precedence over `#editor.experimental.treeSitterTelemetry#` for regex.</source>
+        <target>Контролює, чи має бути увімкнено парсинг tree sitter для regex. Це матиме пріоритет над `#editor.experimental.treeSitterTelemetry#` для regex.</target>
       </trans-unit>
       <trans-unit id="editor.experimental.preferTreeSitter.typescript">
-        <source xml:lang="en">Controls whether tree sitter parsing should be turned on for typescript. This will take precedence over `editor.experimental.treeSitterTelemetry` for typescript.</source>
-        <target>Контролює, чи має бути увімкнено парсинг tree sitter для typescript. Це матиме пріоритет над `editor.experimental.treeSitterTelemetry` для typescript.</target>
+        <source xml:lang="en">Controls whether tree sitter parsing should be turned on for typescript. This will take precedence over `#editor.experimental.treeSitterTelemetry#` for typescript.</source>
+        <target>Контролює, чи має бути увімкнено парсинг tree sitter для typescript. Це матиме пріоритет над `#editor.experimental.treeSitterTelemetry#` для typescript.</target>
       </trans-unit>
       <trans-unit id="editor.experimental.treeSitterTelemetry">
-        <source xml:lang="en">Controls whether tree sitter parsing should be turned on and telemetry collected. Setting `editor.experimental.preferTreeSitter` for specific languages will take precedence.</source>
-        <target>Контролює, чи слід увімкнути парсинг tree sitter та збір телеметрії. Налаштування `editor.experimental.preferTreeSitter` для конкретних мов матиме пріоритет.</target>
+        <source xml:lang="en">Controls whether tree sitter parsing should be turned on and telemetry collected. Setting `#editor.experimental.preferTreeSitter#` for specific languages will take precedence.</source>
+        <target>Контролює, чи має бути увімкнено парсинг tree sitter та зібрано телеметрію. Налаштування `#editor.experimental.preferTreeSitter#` для конкретних мов матиме пріоритет.</target>
       </trans-unit>
       <trans-unit id="editorConfigurationTitle">
         <source xml:lang="en">Editor</source>
@@ -656,6 +676,18 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
         <source xml:lang="en">Optimize for usage with a Screen Reader.</source>
         <target>Оптимізувати для використання з екранним читачем.</target>
       </trans-unit>
+      <trans-unit id="allowVariableFonts">
+        <source xml:lang="en">Controls whether to allow using variable fonts in the editor.</source>
+        <target>Контролює, чи дозволяти використання змінних шрифтів в редакторі.</target>
+      </trans-unit>
+      <trans-unit id="allowVariableFontsInAccessibilityMode">
+        <source xml:lang="en">Controls whether to allow using variable fonts in the editor in the accessibility mode.</source>
+        <target>Контролює, чи дозволити використання змінних шрифтів в редакторі в режимі доступності.</target>
+      </trans-unit>
+      <trans-unit id="allowVariableLineHeights">
+        <source xml:lang="en">Controls whether to allow using variable line heights in the editor.</source>
+        <target>Контролює, чи дозволяти використання змінних висот рядків в редакторі.</target>
+      </trans-unit>
       <trans-unit id="alternativeDeclarationCommand">
         <source xml:lang="en">Alternative command id that is being executed when the result of 'Go to Declaration' is the current location.</source>
         <target>Альтернативний ідентифікатор команди, який виконується, коли результатом 'Перейти до оголошення' є поточне місце.</target>
@@ -699,6 +731,14 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <trans-unit id="autoIndent">
         <source xml:lang="en">Controls whether the editor should automatically adjust the indentation when users type, paste, move or indent lines.</source>
         <target>Контролює, чи має редактор автоматично налаштовувати відступ, коли користувачі вводять текст, вставляють, переміщують або задають відступ для рядків.</target>
+      </trans-unit>
+      <trans-unit id="autoIndentOnPaste">
+        <source xml:lang="en">Controls whether the editor should automatically auto-indent the pasted content.</source>
+        <target>Контролює, чи редактор має автоматично вирівнювати вставлений вміст.</target>
+      </trans-unit>
+      <trans-unit id="autoIndentOnPasteWithinString">
+        <source xml:lang="en">Controls whether the editor should automatically auto-indent the pasted content when pasted within a string. This takes effect when autoIndentOnPaste is true.</source>
+        <target>Контролює, чи має редактор автоматично вирівнювати вставлений вміст, коли він вставлений у рядок. Це набирає чинності, коли autoIndentOnPaste дорівнює true.</target>
       </trans-unit>
       <trans-unit id="autoSurround">
         <source xml:lang="en">Controls whether the editor should automatically surround selections when typing quotes or brackets.</source>
@@ -755,6 +795,10 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <trans-unit id="cursorBlinking">
         <source xml:lang="en">Control the cursor animation style.</source>
         <target>Контролюйте стиль анімації курсора.</target>
+      </trans-unit>
+      <trans-unit id="cursorHeight">
+        <source xml:lang="en">Controls the height of the cursor when `#editor.cursorStyle#` is set to `line`. Cursor's max height depends on line height.</source>
+        <target>Контролює висоту курсора, коли `#editor.cursorStyle#` встановлено на `line`. Максимальна висота курсора залежить від висоти рядка.</target>
       </trans-unit>
       <trans-unit id="cursorSmoothCaretAnimation">
         <source xml:lang="en">Controls whether the smooth caret animation should be enabled.</source>
@@ -827,6 +871,10 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <trans-unit id="dropIntoEditor.showDropSelector.never">
         <source xml:lang="en">Never show the drop selector widget. Instead the default drop provider is always used.</source>
         <target>Ніколи не показуйте віджет вибору дропу. Замість цього завжди використовується постачальник дропу за замовчуванням.</target>
+      </trans-unit>
+      <trans-unit id="editContext">
+        <source xml:lang="en">Sets whether the EditContext API should be used instead of the text area to power input in the editor.</source>
+        <target>Встановлює, чи слід використовувати API EditContext замість текстової області для введення в редакторі.</target>
       </trans-unit>
       <trans-unit id="editor.autoClosingBrackets.beforeWhitespace">
         <source xml:lang="en">Autoclose brackets only when the cursor is to the left of whitespace.</source>
@@ -1232,10 +1280,6 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
         <source xml:lang="en">Enables the Code Action lightbulb in the editor.</source>
         <target>Увімкнення світлодіода дії коду в редакторі.</target>
       </trans-unit>
-      <trans-unit id="experimentalEditContextEnabled">
-        <source xml:lang="en">Sets whether the new experimental edit context should be used instead of the text area.</source>
-        <target>Встановлює, чи слід використовувати новий експериментальний контекст редагування замість текстової області.</target>
-      </trans-unit>
       <trans-unit id="experimentalGpuAcceleration">
         <source xml:lang="en">Controls whether to use the experimental GPU acceleration to render the editor.</source>
         <target>Контролює, чи використовувати експериментальне прискорення GPU для рендерингу редактора.</target>
@@ -1401,12 +1445,16 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
         <target>Контролює, чи відображається наведення.</target>
       </trans-unit>
       <trans-unit id="hover.hidingDelay">
-        <source xml:lang="en">Controls the delay in milliseconds after which the hover is hidden. Requires `editor.hover.sticky` to be enabled.</source>
-        <target>Контролює затримку в мілісекундах, після якої наведення зникає. Потрібно, щоб `editor.hover.sticky` був увімкнений.</target>
+        <source xml:lang="en">Controls the delay in milliseconds after which the hover is hidden. Requires `#editor.hover.sticky#` to be enabled.</source>
+        <target>Контролює затримку в мілісекундах, після якої ховер приховується. Потрібно, щоб `#editor.hover.sticky#` був увімкнений.</target>
       </trans-unit>
       <trans-unit id="hover.sticky">
         <source xml:lang="en">Controls whether the hover should remain visible when mouse is moved over it.</source>
         <target>Контролює, чи має залишатися видимим елемент при наведенні миші на нього.</target>
+      </trans-unit>
+      <trans-unit id="inertialScroll">
+        <source xml:lang="en">Make scrolling inertial - mostly useful with touchpad on linux.</source>
+        <target>Зробіть прокрутку інерційною - в основному корисно з тачпадом на linux.</target>
       </trans-unit>
       <trans-unit id="inlayHints.enable">
         <source xml:lang="en">Enables the inlay hints in the editor.</source>
@@ -1456,6 +1504,14 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
         <source xml:lang="en">Controls the font family of the inline suggestions.</source>
         <target>Контролює сімейство шрифтів вбудованих пропозицій.</target>
       </trans-unit>
+      <trans-unit id="inlineSuggest.minShowDelay">
+        <source xml:lang="en">Controls the minimal delay in milliseconds after which inline suggestions are shown after typing.</source>
+        <target>Контролює мінімальну затримку в мілісекундах, після якої вбудовані підказки з'являються після введення тексту.</target>
+      </trans-unit>
+      <trans-unit id="inlineSuggest.showOnSuggestConflict">
+        <source xml:lang="en">Controls whether to show inline suggestions when there is a suggest conflict.</source>
+        <target>Контролює, чи показувати вбудовані пропозиції, коли виникає конфлікт пропозицій.</target>
+      </trans-unit>
       <trans-unit id="inlineSuggest.showToolbar">
         <source xml:lang="en">Controls when to show the inline suggestion toolbar.</source>
         <target>Контролює, коли показувати панель вбудованих підказок.</target>
@@ -1473,8 +1529,8 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
         <target>Показати панель пропозицій в рядку при наведенні на пропозицію в рядку.</target>
       </trans-unit>
       <trans-unit id="inlineSuggest.suppressInlineSuggestions">
-        <source xml:lang="en">Suppresses inline completions for specified extension IDs.</source>
-        <target>Приховує вбудовані завершення для вказаних ідентифікаторів розширень.</target>
+        <source xml:lang="en">Suppresses inline completions for specified extension IDs -- comma separated.</source>
+        <target>Приховує вбудовані завершення для вказаних ідентифікаторів розширень -- через кому.</target>
       </trans-unit>
       <trans-unit id="inlineSuggest.suppressSuggestions">
         <source xml:lang="en">Controls how inline suggestions interact with the suggest widget. If enabled, the suggest widget is not shown automatically when inline suggestions are available.</source>
@@ -1483,6 +1539,10 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <trans-unit id="inlineSuggest.syntaxHighlightingEnabled">
         <source xml:lang="en">Controls whether to show syntax highlighting for inline suggestions in the editor.</source>
         <target>Контролює, чи показувати підсвічування синтаксису для вбудованих пропозицій в редакторі.</target>
+      </trans-unit>
+      <trans-unit id="inlineSuggest.triggerCommandOnProviderChange">
+        <source xml:lang="en">Controls whether to trigger a command when the inline suggestion provider changes.</source>
+        <target>Контролює, чи слід активувати команду, коли змінюється постачальник вбудованих пропозицій.</target>
       </trans-unit>
       <trans-unit id="letterSpacing">
         <source xml:lang="en">Controls the letter spacing in pixels.</source>
@@ -1533,6 +1593,18 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <trans-unit id="minimap.autohide">
         <source xml:lang="en">Controls whether the minimap is hidden automatically.</source>
         <target>Контролює, чи міні-карта прихована автоматично.</target>
+      </trans-unit>
+      <trans-unit id="minimap.autohide.mouseover">
+        <source xml:lang="en">The minimap is hidden when mouse is not over the minimap and shown when mouse is over the minimap.</source>
+        <target>Мінімапа прихована, коли курсор миші не над мінімапою, і показується, коли курсор миші над мінімапою.</target>
+      </trans-unit>
+      <trans-unit id="minimap.autohide.none">
+        <source xml:lang="en">The minimap is always shown.</source>
+        <target>Мінікарта завжди відображається.</target>
+      </trans-unit>
+      <trans-unit id="minimap.autohide.scroll">
+        <source xml:lang="en">The minimap is only shown when the editor is scrolled</source>
+        <target>Міні-карта відображається лише тоді, коли редактор прокручений.</target>
       </trans-unit>
       <trans-unit id="minimap.enabled">
         <source xml:lang="en">Controls whether the minimap is shown.</source>
@@ -1749,8 +1821,8 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
         <target>Контролює, чи редактор автоматично перейменовує під час введення.</target>
       </trans-unit>
       <trans-unit id="renameOnTypeDeprecate">
-        <source xml:lang="en">Deprecated, use `editor.linkedEditing` instead.</source>
-        <target>Застаріло, використовуйте `editor.linkedEditing` замість цього.</target>
+        <source xml:lang="en">Deprecated, use `#editor.linkedEditing#` instead.</source>
+        <target>Застаріло, використовуйте `#editor.linkedEditing#` замість цього.</target>
       </trans-unit>
       <trans-unit id="renderControlCharacters">
         <source xml:lang="en">Controls whether the editor should render control characters.</source>
@@ -1771,6 +1843,10 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <trans-unit id="renderLineHighlightOnlyWhenFocus">
         <source xml:lang="en">Controls if the editor should render the current line highlight only when the editor is focused.</source>
         <target>Контролює, чи редактор повинен підсвічувати поточний рядок лише тоді, коли редактор має фокус.</target>
+      </trans-unit>
+      <trans-unit id="renderRichScreenReaderContent">
+        <source xml:lang="en">Whether to render rich screen reader content when the `#editor.editContext#` setting is enabled.</source>
+        <target>Чи потрібно відображати багатий контент для читачів екрану, коли увімкнено налаштування `#editor.editContext#`.</target>
       </trans-unit>
       <trans-unit id="renderWhitespace">
         <source xml:lang="en">Controls how the editor should render whitespace characters.</source>
@@ -1815,6 +1891,10 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <trans-unit id="scrollBeyondLastLine">
         <source xml:lang="en">Controls whether the editor will scroll beyond the last line.</source>
         <target>Контролює, чи буде редактор прокручуватися за межі останнього рядка.</target>
+      </trans-unit>
+      <trans-unit id="scrollOnMiddleClick">
+        <source xml:lang="en">Controls whether the editor will scroll when the middle button is pressed.</source>
+        <target>Контролює, чи буде редактор прокручуватися, коли натиснуто середню кнопку.</target>
       </trans-unit>
       <trans-unit id="scrollPredominantAxis">
         <source xml:lang="en">Scroll only along the predominant axis when scrolling both vertically and horizontally at the same time. Prevents horizontal drift when scrolling vertically on a trackpad.</source>
@@ -1883,6 +1963,14 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <trans-unit id="selectionHighlight">
         <source xml:lang="en">Controls whether the editor should highlight matches similar to the selection.</source>
         <target>Контролює, чи повинен редактор підсвічувати збіги, подібні до вибору.</target>
+      </trans-unit>
+      <trans-unit id="selectionHighlightMaxLength">
+        <source xml:lang="en">Controls how many characters can be in the selection before similiar matches are not highlighted. Set to zero for unlimited.</source>
+        <target>Контролює, скільки символів може бути в виборі, перш ніж подібні збіги не будуть підсвічені. Встановіть на нуль для необмеженої кількості.</target>
+      </trans-unit>
+      <trans-unit id="selectionHighlightMultiline">
+        <source xml:lang="en">Controls whether the editor should highlight selection matches that span multiple lines.</source>
+        <target>Контролює, чи повинен редактор підсвічувати збіги вибору, які охоплюють кілька рядків.</target>
       </trans-unit>
       <trans-unit id="showDeprecated">
         <source xml:lang="en">Controls strikethrough deprecated variables.</source>
@@ -2052,6 +2140,10 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
         <source xml:lang="en">Controls whether the editor receives tabs or defers them to the workbench for navigation.</source>
         <target>Контролює, чи редактор отримує вкладки, чи передає їх на робочу панель для навігації.</target>
       </trans-unit>
+      <trans-unit id="trimWhitespaceOnDelete">
+        <source xml:lang="en">Controls whether the editor will also delete the next line's indentation whitespace when deleting a newline.</source>
+        <target>Контролює, чи редактор також видалятиме пробіли відступу наступного рядка при видаленні нового рядка.</target>
+      </trans-unit>
       <trans-unit id="unfoldOnClickAfterEndOfLine">
         <source xml:lang="en">Controls whether clicking on the empty content after a folded line will unfold the line.</source>
         <target>Контролює, чи клацання на порожньому контенті після складеної лінії розгорне цю лінію.</target>
@@ -2154,6 +2246,30 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
         <note>- `editor.wordWrap` refers to a different setting and should not be localized.&#xD;
 - 'wordWrapColumn' and 'bounded' refer to values the different setting can take and should not be localized.</note>
         <target>Контролює стовпець обгортання редактора, коли `#editor.wordWrap#` є `wordWrapColumn` або `bounded`.</target>
+      </trans-unit>
+      <trans-unit id="wrapOnEscapedLineFeeds">
+        <source xml:lang="en">Controls whether literal `\n` shall trigger a wordWrap when `#editor.wordWrap#` is enabled.
+
+For example:
+```c
+char* str="hello\nworld"
+```
+will be displayed as
+```c
+char* str="hello\n
+           world"
+```</source>
+        <target>Контролює, чи літерал `\n` викликатиме перенесення слів, коли увімкнено `#editor.wordWrap#`.
+
+Наприклад:
+```c
+char* str="hello\nworld"
+```
+буде відображено як
+```c
+char* str="hello\n
+           world"
+```</target>
       </trans-unit>
       <trans-unit id="wrappingIndent">
         <source xml:lang="en">Controls the indentation of wrapped lines.</source>
@@ -2936,8 +3052,8 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
         <target>Налаштуйте застосунок для оптимізації використання з екранним читачем (Control+E).</target>
       </trans-unit>
       <trans-unit id="chatEditing.navigation">
-        <source xml:lang="en">Navigate between edits in the editor with navigate previous{0} and next{1} and accept{2}, reject{3} or view the diff{4} for the current change.</source>
-        <target>Переміщуйтеся між редагуваннями в редакторі за допомогою navigate previous{0} та next{1} і прийміть{2}, відхиліть{3} або перегляньте diff{4} для поточної зміни.</target>
+        <source xml:lang="en">Navigate between edits in the editor with navigate previous{0} and next{1} and accept{2}, reject{3} or view the diff{4} for the current change. Accept edits across all files{5}.</source>
+        <target>Переміщуйтеся між редагуваннями в редакторі за допомогою navigate previous{0} і next{1} та прийміть{2}, відхиліть{3} або перегляньте різницю{4} для поточної зміни. Прийміть редагування у всіх файлах{5}.</target>
       </trans-unit>
       <trans-unit id="chatEditorModification">
         <source xml:lang="en">The editor contains pending modifications that have been made by chat.</source>

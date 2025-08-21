@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file original="src/vs/workbench/contrib/remoteTunnel/electron-sandbox/remoteTunnel.contribution" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/contrib/remoteTunnel/electron-browser/remoteTunnel.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="accountPreference.placeholder">
         <source xml:lang="en">Sign in to an account to enable remote access</source>
@@ -39,11 +39,11 @@
       <trans-unit id="manage.title.attached">
         <source xml:lang="en">Remote Tunnel Access enabled for {0} (launched externally)</source>
         <note>{0} is the tunnel name</note>
-        <target>Доступ до віддаленого тунелю увімкнено для {0} (запущено зовні)</target>
+        <target>Доступ до віддаленого тунелю увімкнено для {0} (запущено зовнішньо)</target>
       </trans-unit>
       <trans-unit id="manage.title.off">
         <source xml:lang="en">Remote Tunnel Access not enabled</source>
-        <target>Доступ до віддаленого тунелю не ввімкнено</target>
+        <target>Доступ до віддаленого тунелю не увімкнено</target>
       </trans-unit>
       <trans-unit id="manage.title.orunning">
         <source xml:lang="en">Remote Tunnel Access enabled for {0}</source>
@@ -65,7 +65,7 @@
       <trans-unit id="progress.turnOn.final">
         <source xml:lang="en">You can now access this machine anywhere via the secure tunnel [{0}](command:{4}). To connect via a different machine, use the generated [{1}]({2}) link or use the [{6}]({7}) extension in the desktop or web. You can [configure](command:{3}) or [turn off](command:{5}) this access via the VS Code Accounts menu.</source>
         <note>{0} will be the tunnel name, {1} will the link address to the web UI, {6} an extension name, {7} a link to the extension documentation. [label](command:commandId) is a markdown link. Only translate the label, do not modify the format</note>
-        <target>Тепер ви можете отримати доступ до цієї машини з будь-якого місця через безпечний тунель [{0}](command:{4}). Щоб підключитися через іншу машину, використовуйте згенероване [{1}]({2}) посилання або використовуйте розширення [{6}]({7}) в настільній або веб-версії. Ви можете [налаштувати](command:{3}) або [вимкнути](command:{5}) цей доступ через меню облікових записів VS Code.</target>
+        <target>Тепер ви можете отримати доступ до цієї машини з будь-якого місця через захищений тунель [{0}](command:{4}). Щоб підключитися через іншу машину, використовуйте згенероване [{1}]({2}) посилання або використовуйте розширення [{6}]({7}) у настільній або веб-версії. Ви можете [налаштувати](command:{3}) або [вимкнути](command:{5}) цей доступ через меню облікових записів VS Code.</target>
       </trans-unit>
       <trans-unit id="recommend.remoteExtension">
         <source xml:lang="en">Tunnel '{0}' is avaiable for remote access. The {1} extension can be used to connect to it.</source>
@@ -82,11 +82,11 @@
       </trans-unit>
       <trans-unit id="remoteTunnel.actions.learnMore">
         <source xml:lang="en">Get Started with Tunnels</source>
-        <target>Почніть працювати з тунелями</target>
+        <target>Розпочніть роботу з тунелями</target>
       </trans-unit>
       <trans-unit id="remoteTunnel.actions.manage.connecting">
         <source xml:lang="en">Remote Tunnel Access is Connecting</source>
-        <target>Віддалений доступ до тунелю підключається</target>
+        <target>Доступ до віддаленого тунелю підключається</target>
       </trans-unit>
       <trans-unit id="remoteTunnel.actions.manage.on.v2">
         <source xml:lang="en">Remote Tunnel Access is On</source>
@@ -111,7 +111,7 @@
       <trans-unit id="remoteTunnel.serviceInstallFailed">
         <source xml:lang="en">Installation as a service failed, and we fell back to running the tunnel for this session. See the [error log](command:{0}) for details.</source>
         <note>{Locked="](command:{0})"}</note>
-        <target>Встановлення як сервіс не вдалося, і ми повернулися до запуску тунелю для цієї сесії. Дивіться [журнал помилок](command:{0}) для деталей.</target>
+        <target>Встановлення як служби не вдалося, і ми повернулися до запуску тунелю для цієї сесії. Дивіться [журнал помилок](command:{0}) для деталей.</target>
       </trans-unit>
       <trans-unit id="remoteTunnel.turnOff.confirm">
         <source xml:lang="en">Do you want to turn off Remote Tunnel Access?</source>
@@ -119,11 +119,11 @@
       </trans-unit>
       <trans-unit id="remoteTunnel.turnOffAttached.confirm">
         <source xml:lang="en">Do you want to turn off Remote Tunnel Access? This will also stop the service that was started externally.</source>
-        <target>Ви хочете вимкнути доступ до віддаленого тунелю? Це також зупинить службу, яка була запущена зовнішньо.</target>
+        <target>Ви хочете вимкнути доступ до віддаленого тунелю? Це також зупинить службу, яка була запущена зовні.</target>
       </trans-unit>
       <trans-unit id="remoteTunnelAccess.machineName">
         <source xml:lang="en">The name under which the remote tunnel access is registered. If not set, the host name is used.</source>
-        <target>Ім'я, під яким зареєстровано віддалений доступ до тунелю. Якщо не встановлено, використовується ім'я хоста.</target>
+        <target>Ім'я, під яким зареєстровано доступ до віддаленого тунелю. Якщо не встановлено, використовується ім'я хоста.</target>
       </trans-unit>
       <trans-unit id="remoteTunnelAccess.machineNameRegex">
         <source xml:lang="en">The name must only consist of letters, numbers, underscore and dash. It must not start with a dash.</source>
@@ -157,11 +157,11 @@
       </trans-unit>
       <trans-unit id="tunnel.enable.service.description">
         <source xml:lang="en">Run whenever you're logged in</source>
-        <target>Запускайте, коли ви ввійшли в систему</target>
+        <target>Запускайте, коли ви увійшли в систему</target>
       </trans-unit>
       <trans-unit id="tunnel.enable.session">
         <source xml:lang="en">Turn on for this session</source>
-        <target>Увімкнути для цієї сесії</target>
+        <target>Увімкніть для цієї сесії</target>
       </trans-unit>
       <trans-unit id="tunnel.enable.session.description">
         <source xml:lang="en">Run whenever {0} is open</source>
@@ -169,7 +169,7 @@
       </trans-unit>
       <trans-unit id="tunnel.preview">
         <source xml:lang="en">Remote Tunnels is currently in preview. Please report any problems using the "Help: Report Issue" command.</source>
-        <target>Remote Tunnels наразі перебуває в режимі попереднього перегляду. Будь ласка, повідомте про будь-які проблеми, використовуючи команду "Допомога: Повідомити про проблему".</target>
+        <target>Remote Tunnels наразі знаходиться в режимі попереднього перегляду. Будь ласка, повідомте про будь-які проблеми, використовуючи команду "Допомога: Повідомити про проблему".</target>
       </trans-unit>
     </body>
   </file>

@@ -506,25 +506,17 @@
   </file>
   <file original="src/vs/workbench/contrib/notebook/browser/contrib/notebookVariables/notebookVariablesTree" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="debugConsole">
-        <source xml:lang="en">Notebook Variables</source>
-        <target>Змінні нотатника</target>
-      </trans-unit>
-      <trans-unit id="notebookVariableAriaLabel">
-        <source xml:lang="en">Variable {0}, value {1}</source>
-        <target>Змінна {0}, значення {1}</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/workbench/contrib/notebook/browser/contrib/notebookVariables/notebookVariablesView" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
       <trans-unit id="notebook.ReplVariables">
         <source xml:lang="en">REPL Variables</source>
         <target>Змінні REPL</target>
       </trans-unit>
       <trans-unit id="notebook.notebookVariables">
         <source xml:lang="en">Notebook Variables</source>
-        <target>Змінні нотатника</target>
+        <target>Змінні блокнота</target>
+      </trans-unit>
+      <trans-unit id="notebookVariableAriaLabel">
+        <source xml:lang="en">Variable {0}, value {1}</source>
+        <target>Змінна {0}, значення {1}</target>
       </trans-unit>
     </body>
   </file>
@@ -543,8 +535,8 @@
         <target>Коли увімкнено, швидкий вибір Перейти до символу відобразить повні кодові символи з блокнота, а також заголовки Markdown.</target>
       </trans-unit>
       <trans-unit id="outline.showCodeCellSymbols">
-        <source xml:lang="en">When enabled, notebook outline shows code cell symbols. Relies on `notebook.outline.showCodeCells` being enabled.</source>
-        <target>Коли увімкнено, контур блокнота показує символи кодових клітин. Потребує, щоб `notebook.outline.showCodeCells` був увімкнений.</target>
+        <source xml:lang="en">When enabled, notebook outline shows code cell symbols. Relies on `#notebook.outline.showCodeCells#` being enabled.</source>
+        <target>Коли увімкнено, контур блокнота показує символи кодових клітин. Потребує, щоб `#notebook.outline.showCodeCells#` було увімкнено.</target>
       </trans-unit>
       <trans-unit id="outline.showCodeCells">
         <source xml:lang="en">When enabled, notebook outline shows code cells.</source>
@@ -779,6 +771,10 @@
         <source xml:lang="en">Select a kernel variable</source>
         <target>Виберіть змінну ядра</target>
       </trans-unit>
+      <trans-unit id="noKernelVariables">
+        <source xml:lang="en">No kernel variables found</source>
+        <target>Не знайдено змінних ядра</target>
+      </trans-unit>
       <trans-unit id="notebookActions.addOutputToChat">
         <source xml:lang="en">Add Cell Output to Chat</source>
         <target>Додати вихідні дані осередку до чату</target>
@@ -820,8 +816,8 @@
   <file original="src/vs/workbench/contrib/notebook/browser/controller/chat/notebookChatController" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="default.placeholder">
-        <source xml:lang="en">Ask a question</source>
-        <target>Задайте питання</target>
+        <source xml:lang="en">Ask or edit in context</source>
+        <target>Запитайте або редагуйте в контексті</target>
       </trans-unit>
       <trans-unit id="welcome.1">
         <source xml:lang="en">AI-generated code may be incorrect</source>
@@ -930,6 +926,10 @@
       <trans-unit id="notebookActions.quitEdit">
         <source xml:lang="en">Stop Editing Cell</source>
         <target>Припинити редагування клітинки</target>
+      </trans-unit>
+      <trans-unit id="notebookActions.quitEditAllCells">
+        <source xml:lang="en">Stop Editing All Cells</source>
+        <target>Припинити редагування всіх клітинок</target>
       </trans-unit>
       <trans-unit id="pickAction">
         <source xml:lang="en">Select Action</source>

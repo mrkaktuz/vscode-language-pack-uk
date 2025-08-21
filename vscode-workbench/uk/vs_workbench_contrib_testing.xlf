@@ -46,6 +46,10 @@
         <source xml:lang="en">Filter Coverage to Test</source>
         <target>Фільтрувати покриття для тестування</target>
       </trans-unit>
+      <trans-unit id="testing.hideCoverageInExplorer">
+        <source xml:lang="en">Hide Coverage in Explorer</source>
+        <target>Сховати покриття в Провіднику</target>
+      </trans-unit>
       <trans-unit id="testing.hideInlineCoverage">
         <source xml:lang="en">Hide Inline Coverage</source>
         <target>Сховати вбудоване покриття</target>
@@ -57,6 +61,14 @@
       <trans-unit id="testing.showInlineCoverage">
         <source xml:lang="en">Show Inline Coverage</source>
         <target>Показати вбудоване покриття</target>
+      </trans-unit>
+      <trans-unit id="testing.toggleCoverageInExplorerDesc">
+        <source xml:lang="en">Toggle the display of test coverage in the File Explorer view.</source>
+        <target>Перемикайте відображення покриття тестами у вигляді Провідника файлів.</target>
+      </trans-unit>
+      <trans-unit id="testing.toggleCoverageInExplorerTitle">
+        <source xml:lang="en">Toggle Coverage in Explorer</source>
+        <target>Переключити покриття в Explorer</target>
       </trans-unit>
       <trans-unit id="testing.toggleInlineCoverage">
         <source xml:lang="en">Toggle Inline</source>
@@ -438,6 +450,10 @@
         <source xml:lang="en">Debug Failed Tests</source>
         <target>Виправити невдалі тести</target>
       </trans-unit>
+      <trans-unit id="testing.debugFailedFromLastRun">
+        <source xml:lang="en">Debug Failed Tests from Last Run</source>
+        <target>Виправити невдалі тести з останнього запуску</target>
+      </trans-unit>
       <trans-unit id="testing.debugLastRun">
         <source xml:lang="en">Debug Last Run</source>
         <target>Відлагодити останній запуск</target>
@@ -481,6 +497,10 @@
       <trans-unit id="testing.reRunFailTests">
         <source xml:lang="en">Rerun Failed Tests</source>
         <target>Перезапустити невдалі тести</target>
+      </trans-unit>
+      <trans-unit id="testing.reRunFailedFromLastRun">
+        <source xml:lang="en">Rerun Failed Tests from Last Run</source>
+        <target>Повторити невдалі тести з останнього запуску</target>
       </trans-unit>
       <trans-unit id="testing.reRunLastRun">
         <source xml:lang="en">Rerun Last Run</source>
@@ -634,6 +654,10 @@
         <source xml:lang="en">Cancel Test Run</source>
         <target>Скасувати тестовий запуск</target>
       </trans-unit>
+      <trans-unit id="testing.debugFailedFromLastRun">
+        <source xml:lang="en">Debug Failed Tests</source>
+        <target>Виправити невдалі тести з останнього запуску</target>
+      </trans-unit>
       <trans-unit id="testing.debugLastRun">
         <source xml:lang="en">Debug Last Run</source>
         <target>Відлагодити останній запуск</target>
@@ -649,6 +673,10 @@
       <trans-unit id="testing.goToTest">
         <source xml:lang="en">Go to Test</source>
         <target>Перейти до тесту</target>
+      </trans-unit>
+      <trans-unit id="testing.reRunFailedFromLastRun">
+        <source xml:lang="en">Rerun Failed Tests</source>
+        <target>Повторити невдалі тести з останнього запуску</target>
       </trans-unit>
       <trans-unit id="testing.reRunLastRun">
         <source xml:lang="en">Rerun Last Run</source>
@@ -968,30 +996,6 @@ Please make sure the markdown extension is enabled.</source>
       <trans-unit id="testing.toggleTestingPeekHistory.description">
         <source xml:lang="en">Shows or hides the history of test runs in the peek view</source>
         <target>Показує або приховує історію виконання тестів у попередньому перегляді</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/workbench/contrib/testing/browser/testingProgressUiService" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="testProgress.completed">
-        <source xml:lang="en">{0}/{1} tests passed ({2}%)</source>
-        <target>{0}/{1} тести пройдено ({2}%)</target>
-      </trans-unit>
-      <trans-unit id="testProgress.running">
-        <source xml:lang="en">Running tests, {0}/{1} passed ({2}%)</source>
-        <target>Виконуються тести, {0}/{1} пройдено ({2}%)</target>
-      </trans-unit>
-      <trans-unit id="testProgress.runningInitial">
-        <source xml:lang="en">Running tests...</source>
-        <target>Виконання тестів...</target>
-      </trans-unit>
-      <trans-unit id="testProgressWithSkip.completed">
-        <source xml:lang="en">{0}/{1} tests passed ({2}%, {3} skipped)</source>
-        <target>{0}/{1} тести пройдено ({2}%, {3} пропущено)</target>
-      </trans-unit>
-      <trans-unit id="testProgressWithSkip.running">
-        <source xml:lang="en">Running tests, {0}/{1} tests passed ({2}%, {3} skipped)</source>
-        <target>Запуск тестів, {0}/{1} тестів пройшли ({2}%, {3} пропущено)</target>
       </trans-unit>
     </body>
   </file>
@@ -1356,6 +1360,54 @@ Please make sure the markdown extension is enabled.</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/testing/common/testingChatAgentTool" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="runTestTool.confirm.all">
+        <source xml:lang="en">The model wants to run all tests.</source>
+        <target>Модель хоче виконати всі тести.</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.confirm.invocation">
+        <source xml:lang="en">Running tests...</source>
+        <target>Виконання тестів...</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.confirm.message">
+        <source xml:lang="en">The model wants to run tests in {0}.</source>
+        <target>Модель хоче провести тести в {0}.</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.confirm.title">
+        <source xml:lang="en">Allow test run?</source>
+        <target>Дозволити запуск тесту?</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.invoke.cancelled">
+        <source xml:lang="en">Test run was cancelled.</source>
+        <target>Запуск тесту був скасований.</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.invoke.filesProgress">
+        <source xml:lang="en">Discovering tests...</source>
+        <target>Відкриття тестів...</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.invoke.filterProgress">
+        <source xml:lang="en">Filtering tests...</source>
+        <target>Фільтрація тестів...</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.invoke.progress">
+        <source xml:lang="en">Starting test run...</source>
+        <target>Початок тестового запуску...</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.noRunStarted">
+        <source xml:lang="en">No test run was started. This may be an issue with your test runner or extension.</source>
+        <target>Не було розпочато жодного тестового запуску. Це може бути проблемою з вашим тестовим запуском або розширенням.</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.noTests">
+        <source xml:lang="en">No tests found in the files</source>
+        <target>Не знайдено тестів у файлах</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.userDescription">
+        <source xml:lang="en">Runs unit tests</source>
+        <target>Виконує модульні тести</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/testing/common/testingContentProvider" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="runNoOutout">
@@ -1409,6 +1461,10 @@ Please make sure the markdown extension is enabled.</source>
       <trans-unit id="testing.hasDebuggableTests">
         <source xml:lang="en">Indicates whether any test controller has registered a debug configuration</source>
         <target>Вказує, чи зареєстрував будь-який контролер тестування конфігурацію налагодження.</target>
+      </trans-unit>
+      <trans-unit id="testing.hasInlineCoverageDetails">
+        <source xml:lang="en">Indicates whether detailed per-line coverage is available for inline display</source>
+        <target>Вказує, чи доступне детальне покриття по рядках для вбудованого відображення</target>
       </trans-unit>
       <trans-unit id="testing.hasNonDefaultConfig">
         <source xml:lang="en">Indicates whether any test controller has registered a non-default configuration</source>
@@ -1485,6 +1541,30 @@ Please make sure the markdown extension is enabled.</source>
       <trans-unit id="testing.testResultState">
         <source xml:lang="en">Value available testing/item/result indicating the state of the item.</source>
         <target>Значення доступного тестування/предмета/результату, що вказує на стан предмета.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/testing/common/testingProgressMessages" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="testProgress.completed">
+        <source xml:lang="en">{0}/{1} tests passed ({2}%)</source>
+        <target>{0}/{1} тестів пройдено ({2}%)</target>
+      </trans-unit>
+      <trans-unit id="testProgress.running">
+        <source xml:lang="en">Running tests, {0}/{1} passed ({2}%)</source>
+        <target>Виконуються тести, {0}/{1} пройдено ({2}%)</target>
+      </trans-unit>
+      <trans-unit id="testProgress.runningInitial">
+        <source xml:lang="en">Running tests...</source>
+        <target>Виконання тестів...</target>
+      </trans-unit>
+      <trans-unit id="testProgressWithSkip.completed">
+        <source xml:lang="en">{0}/{1} tests passed ({2}%, {3} skipped)</source>
+        <target>{0}/{1} тестів пройдено ({2}%, {3} пропущено)</target>
+      </trans-unit>
+      <trans-unit id="testProgressWithSkip.running">
+        <source xml:lang="en">Running tests, {0}/{1} tests passed ({2}%, {3} skipped)</source>
+        <target>Виконуються тести, {0}/{1} тестів пройшли ({2}%, {3} пропущено)</target>
       </trans-unit>
     </body>
   </file>

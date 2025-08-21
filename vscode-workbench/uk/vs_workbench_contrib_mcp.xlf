@@ -2,14 +2,6 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file original="src/vs/workbench/contrib/mcp/browser/mcp.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="mcp">
-        <source xml:lang="en">MCP Servers</source>
-        <target>MCP Сервери</target>
-      </trans-unit>
-      <trans-unit id="mcp-installed">
-        <source xml:lang="en">MCP Servers - Installed</source>
-        <target>MCP Сервери - Встановлено</target>
-      </trans-unit>
       <trans-unit id="mcp.quickaccess.add">
         <source xml:lang="en">MCP Server Resources</source>
         <target>Ресурси сервера MCP</target>
@@ -66,6 +58,10 @@
         <source xml:lang="en">Add a new server configuration</source>
         <target>Додати нову конфігурацію сервера</target>
       </trans-unit>
+      <trans-unit id="mcp.autoStart">
+        <source xml:lang="en">Automatically start MCP servers when sending a chat message</source>
+        <target>Автоматично запускати сервери MCP при відправці повідомлення в чаті</target>
+      </trans-unit>
       <trans-unit id="mcp.browseResources">
         <source xml:lang="en">Browse Resources...</source>
         <target>Переглянути ресурси...</target>
@@ -74,13 +70,37 @@
         <source xml:lang="en">MCP Servers</source>
         <target>MCP Сервери</target>
       </trans-unit>
-      <trans-unit id="mcp.command.installFromActivation">
-        <source xml:lang="en">Install...</source>
-        <target>Встановити...</target>
+      <trans-unit id="mcp.command.browse.mcp">
+        <source xml:lang="en">Browse Servers</source>
+        <target>Перегляд серверів</target>
+      </trans-unit>
+      <trans-unit id="mcp.command.open">
+        <source xml:lang="en">Browse MCP Servers</source>
+        <target>Перегляд серверів MCP</target>
+      </trans-unit>
+      <trans-unit id="mcp.command.openRemoteUserMcp">
+        <source xml:lang="en">Open Remote User Configuration</source>
+        <target>Відкрити конфігурацію віддаленого користувача</target>
+      </trans-unit>
+      <trans-unit id="mcp.command.openUserMcp">
+        <source xml:lang="en">Open User Configuration</source>
+        <target>Відкрити конфігурацію користувача</target>
+      </trans-unit>
+      <trans-unit id="mcp.command.openWorkspaceFolderMcp">
+        <source xml:lang="en">Open Workspace Folder MCP Configuration</source>
+        <target>Відкрити папку робочого простору конфігурації MCP</target>
+      </trans-unit>
+      <trans-unit id="mcp.command.openWorkspaceMcp">
+        <source xml:lang="en">Open Workspace MCP Configuration</source>
+        <target>Відкрити конфігурацію робочого простору MCP</target>
       </trans-unit>
       <trans-unit id="mcp.command.restartServer">
         <source xml:lang="en">Restart Server</source>
         <target>Перезапустити сервер</target>
+      </trans-unit>
+      <trans-unit id="mcp.command.show.installed">
+        <source xml:lang="en">Show Installed Servers</source>
+        <target>Показати встановлені сервери</target>
       </trans-unit>
       <trans-unit id="mcp.command.showConfiguration">
         <source xml:lang="en">Show Configuration</source>
@@ -114,9 +134,25 @@
         <source xml:lang="en">Pick the models {0} can access via MCP sampling</source>
         <target>Виберіть моделі, до яких {0} може отримати доступ через вибірку MCP.</target>
       </trans-unit>
+      <trans-unit id="mcp.disconnect">
+        <source xml:lang="en">Disconnect Account</source>
+        <target>Відключити обліковий запис</target>
+      </trans-unit>
       <trans-unit id="mcp.editStoredInput">
         <source xml:lang="en">Edit Stored Input</source>
         <target>Редагувати збережений ввід</target>
+      </trans-unit>
+      <trans-unit id="mcp.err.md.multi">
+        <source xml:lang="en">Multiple MCP servers were unable to start successfully:
+
+{0}</source>
+        <target>Кілька серверів MCP не змогли успішно запуститися:
+
+{0}</target>
+      </trans-unit>
+      <trans-unit id="mcp.err.md.single">
+        <source xml:lang="en">MCP server {0} was unable to start successfully.</source>
+        <target>Сервер MCP {0} не зміг успішно запуститися.</target>
       </trans-unit>
       <trans-unit id="mcp.list">
         <source xml:lang="en">List Servers</source>
@@ -125,6 +161,18 @@
       <trans-unit id="mcp.newTools">
         <source xml:lang="en">New tools available ({0})</source>
         <target>Нові інструменти доступні ({0})</target>
+      </trans-unit>
+      <trans-unit id="mcp.newTools.md.multi">
+        <source xml:lang="en">MCP servers have been updated and may have new tools available:
+
+{0}</source>
+        <target>Сервери MCP були оновлені і можуть мати нові доступні інструменти:
+
+{0}</target>
+      </trans-unit>
+      <trans-unit id="mcp.newTools.md.single">
+        <source xml:lang="en">MCP server {0} has been updated and may have new tools available.</source>
+        <target>Сервер MCP {0} був оновлений і може мати нові доступні інструменти.</target>
       </trans-unit>
       <trans-unit id="mcp.options">
         <source xml:lang="en">Server Options</source>
@@ -166,6 +214,10 @@
         <source xml:lang="en">Select an MCP Server</source>
         <target>Виберіть сервер MCP</target>
       </trans-unit>
+      <trans-unit id="mcp.servers">
+        <source xml:lang="en">MCP Servers</source>
+        <target>MCP Сервери</target>
+      </trans-unit>
       <trans-unit id="mcp.showOutput">
         <source xml:lang="en">Show Output</source>
         <target>Показати вихідні дані</target>
@@ -173,6 +225,10 @@
       <trans-unit id="mcp.showOutput.description">
         <source xml:lang="en">Set the models the server can use via MCP sampling</source>
         <target>Встановіть моделі, які сервер може використовувати через вибірку MCP.</target>
+      </trans-unit>
+      <trans-unit id="mcp.signOut">
+        <source xml:lang="en">Sign Out</source>
+        <target>Вийти</target>
       </trans-unit>
       <trans-unit id="mcp.start">
         <source xml:lang="en">Start Server</source>
@@ -205,10 +261,6 @@
       <trans-unit id="cancel">
         <source xml:lang="en">Cancel</source>
         <target>Скасувати</target>
-      </trans-unit>
-      <trans-unit id="install.description">
-        <source xml:lang="en">Install in your user settings</source>
-        <target>Встановіть у налаштуваннях користувача</target>
       </trans-unit>
       <trans-unit id="install.error">
         <source xml:lang="en">Error installing MCP server {0}: {1}</source>
@@ -243,8 +295,8 @@
         <target>Введіть команду</target>
       </trans-unit>
       <trans-unit id="mcp.confirmPublish">
-        <source xml:lang="en">Install {0} from {1}?</source>
-        <target>Встановити {0} з {1}?</target>
+        <source xml:lang="en">Install {0}{1} from {2}?</source>
+        <target>Встановити {0}{1} з {2}?</target>
       </trans-unit>
       <trans-unit id="mcp.docker.placeholder">
         <source xml:lang="en">Image name (e.g., mcp/imagename)</source>
@@ -253,6 +305,10 @@
       <trans-unit id="mcp.docker.title">
         <source xml:lang="en">Enter Docker Image Name</source>
         <target>Введіть ім'я Docker-образу</target>
+      </trans-unit>
+      <trans-unit id="mcp.error.openHelpUri">
+        <source xml:lang="en">Open help URL</source>
+        <target>Відкрити URL допомоги</target>
       </trans-unit>
       <trans-unit id="mcp.error.retry">
         <source xml:lang="en">Try a different package</source>
@@ -269,6 +325,14 @@
       <trans-unit id="mcp.npm.title">
         <source xml:lang="en">Enter NPM Package Name</source>
         <target>Введіть назву пакету NPM</target>
+      </trans-unit>
+      <trans-unit id="mcp.nuget.placeholder">
+        <source xml:lang="en">Package name (e.g., Package.Name)</source>
+        <target>Назва пакету (наприклад, Package.Name)</target>
+      </trans-unit>
+      <trans-unit id="mcp.nuget.title">
+        <source xml:lang="en">Enter NuGet Package Name</source>
+        <target>Введіть назву пакету NuGet</target>
       </trans-unit>
       <trans-unit id="mcp.pip.placeholder">
         <source xml:lang="en">Package name (e.g., package-name)</source>
@@ -326,6 +390,14 @@
         <source xml:lang="en">Install from an NPM package name</source>
         <target>Встановити з назви пакету NPM</target>
       </trans-unit>
+      <trans-unit id="mcp.serverType.nuget">
+        <source xml:lang="en">NuGet Package</source>
+        <target>NuGet пакет</target>
+      </trans-unit>
+      <trans-unit id="mcp.serverType.nuget.description">
+        <source xml:lang="en">Install from a NuGet package name</source>
+        <target>Встановити з назви пакету NuGet</target>
+      </trans-unit>
       <trans-unit id="mcp.serverType.pip">
         <source xml:lang="en">Pip Package</source>
         <target>Пакет Pip</target>
@@ -342,29 +414,33 @@
         <source xml:lang="en">Browse MCP Servers...</source>
         <target>Перегляд серверів MCP...</target>
       </trans-unit>
+      <trans-unit id="mcp.servers.discovery">
+        <source xml:lang="en">Add from another application...</source>
+        <target>Додати з іншого додатку...</target>
+      </trans-unit>
       <trans-unit id="mcp.target..remote.description">
         <source xml:lang="en">Available on this remote machine, runs on {0}</source>
         <target>Доступно на цьому віддаленому комп'ютері, працює на {0}</target>
       </trans-unit>
       <trans-unit id="mcp.target.remote">
-        <source xml:lang="en">Remote Settings</source>
-        <target>Віддалені налаштування</target>
+        <source xml:lang="en">Remote</source>
+        <target>Віддалений</target>
       </trans-unit>
       <trans-unit id="mcp.target.title">
-        <source xml:lang="en">Choose where to save the configuration</source>
-        <target>Виберіть, де зберегти конфігурацію</target>
+        <source xml:lang="en">Choose where to install the MCP server</source>
+        <target>Виберіть, куди встановити сервер MCP</target>
       </trans-unit>
       <trans-unit id="mcp.target.user">
-        <source xml:lang="en">User Settings</source>
-        <target>Налаштування користувача</target>
+        <source xml:lang="en">Global</source>
+        <target>Глобальний</target>
       </trans-unit>
       <trans-unit id="mcp.target.user.description">
         <source xml:lang="en">Available in all workspaces, runs locally</source>
         <target>Доступно у всіх робочих просторах, працює локально</target>
       </trans-unit>
       <trans-unit id="mcp.target.workspace">
-        <source xml:lang="en">Workspace Settings</source>
-        <target>Налаштування робочого простору</target>
+        <source xml:lang="en">Workspace</source>
+        <target>Робоча область</target>
       </trans-unit>
       <trans-unit id="mcp.target.workspace.description">
         <source xml:lang="en">Available in this workspace, runs locally</source>
@@ -381,6 +457,90 @@
       <trans-unit id="mcp.url.title">
         <source xml:lang="en">Enter Server URL</source>
         <target>Введіть URL сервера</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/mcp/browser/mcpElicitationService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="mcp.elicit.accept">
+        <source xml:lang="en">Respond</source>
+        <target>Відповісти</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.cancel">
+        <source xml:lang="en">Cancel</source>
+        <target>Скасувати</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.enum.none">
+        <source xml:lang="en">None</source>
+        <target>Ні</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.enum.none.description">
+        <source xml:lang="en">No selection</source>
+        <target>Немає вибору</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.give">
+        <source xml:lang="en">Respond</source>
+        <target>Відповісти</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.reject">
+        <source xml:lang="en">Cancel</source>
+        <target>Скасувати</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.source">
+        <source xml:lang="en">MCP Server ({0})</source>
+        <target>MCP сервер ({0})</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.title">
+        <source xml:lang="en">Request for Input</source>
+        <target>Запит на введення</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.validation.date">
+        <source xml:lang="en">Please enter a valid date (YYYY-MM-DD)</source>
+        <target>Будь ласка, введіть дійсну дату (YYYY-MM-DD)</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.validation.dateTime">
+        <source xml:lang="en">Please enter a valid date-time</source>
+        <target>Будь ласка, введіть дійсну дату-час.</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.validation.email">
+        <source xml:lang="en">Please enter a valid email address</source>
+        <target>Будь ласка, введіть дійсну адресу електронної пошти.</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.validation.integer">
+        <source xml:lang="en">Please enter a valid integer</source>
+        <target>Будь ласка, введіть дійсне ціле число</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.validation.maxLength">
+        <source xml:lang="en">Maximum length is {0}</source>
+        <target>Максимальна довжина становить {0}</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.validation.maximum">
+        <source xml:lang="en">Maximum value is {0}</source>
+        <target>Максимальне значення - {0}</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.validation.minLength">
+        <source xml:lang="en">Minimum length is {0}</source>
+        <target>Мінімальна довжина становить {0}</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.validation.minimum">
+        <source xml:lang="en">Minimum value is {0}</source>
+        <target>Мінімальне значення – {0}</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.validation.number">
+        <source xml:lang="en">Please enter a valid number</source>
+        <target>Будь ласка, введіть дійсний номер</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.validation.uri">
+        <source xml:lang="en">Please enter a valid URI</source>
+        <target>Будь ласка, введіть дійсний URI</target>
+      </trans-unit>
+      <trans-unit id="msg.subtitle">
+        <source xml:lang="en">{0} (MCP Server)</source>
+        <target>{0} (MCP Сервер)</target>
+      </trans-unit>
+      <trans-unit id="optional">
+        <source xml:lang="en">Optional</source>
+        <target>Необов'язковий</target>
       </trans-unit>
     </body>
   </file>
@@ -448,6 +608,30 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/mcp/browser/mcpMigration" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="mcp.migration.openRemoteConfig">
+        <source xml:lang="en">Open Remote User MCP Configuration</source>
+        <target>Відкрити конфігурацію віддаленого користувача MCP</target>
+      </trans-unit>
+      <trans-unit id="mcp.migration.openUserConfig">
+        <source xml:lang="en">Open User MCP Configuration</source>
+        <target>Відкрити конфігурацію користувача MCP</target>
+      </trans-unit>
+      <trans-unit id="mcp.migration.remoteConfigFound">
+        <source xml:lang="en">MCP servers should no longer be configured in remote user settings. Use the dedicated MCP configuration instead.</source>
+        <target>Сервери MCP більше не повинні налаштовуватися в налаштуваннях віддаленого користувача. Замість цього використовуйте спеціалізовану конфігурацію MCP.</target>
+      </trans-unit>
+      <trans-unit id="mcp.migration.update">
+        <source xml:lang="en">Update Now</source>
+        <target>Оновити зараз</target>
+      </trans-unit>
+      <trans-unit id="mcp.migration.userConfigFound">
+        <source xml:lang="en">MCP servers should no longer be configured in user settings. Use the dedicated MCP configuration instead.</source>
+        <target>Сервери MCP більше не повинні налаштовуватися в налаштуваннях користувача. Замість цього використовуйте спеціальну конфігурацію MCP.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpPromptArgumentPick" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="loading">
@@ -488,7 +672,7 @@
       </trans-unit>
       <trans-unit id="optional">
         <source xml:lang="en">Optional</source>
-        <target>Необов'язково</target>
+        <target>Необов'язковий</target>
       </trans-unit>
     </body>
   </file>
@@ -530,13 +714,53 @@
         <source xml:lang="en">Show Configuration</source>
         <target>Показати конфігурацію</target>
       </trans-unit>
+      <trans-unit id="configJson">
+        <source xml:lang="en">Show Configuration (JSON)</source>
+        <target>Показати конфігурацію (JSON)</target>
+      </trans-unit>
+      <trans-unit id="disabled - not allowed">
+        <source xml:lang="en">This MCP Server is disabled because {0}</source>
+        <target>Цей MCP сервер вимкнено, оскільки {0}</target>
+      </trans-unit>
       <trans-unit id="install">
         <source xml:lang="en">Install</source>
         <target>Встановити</target>
       </trans-unit>
+      <trans-unit id="installing">
+        <source xml:lang="en">Installing</source>
+        <target>Встановлення</target>
+      </trans-unit>
       <trans-unit id="manage">
         <source xml:lang="en">Manage</source>
         <target>Керувати</target>
+      </trans-unit>
+      <trans-unit id="mcp.configAccess">
+        <source xml:lang="en">Configure Model Access</source>
+        <target>Налаштувати доступ до моделі</target>
+      </trans-unit>
+      <trans-unit id="mcp.disconnect">
+        <source xml:lang="en">Disconnect Account</source>
+        <target>Відключити обліковий запис</target>
+      </trans-unit>
+      <trans-unit id="mcp.resources">
+        <source xml:lang="en">Browse Resources</source>
+        <target>Переглянути ресурси</target>
+      </trans-unit>
+      <trans-unit id="mcp.samplingLog">
+        <source xml:lang="en">Show Sampling Requests</source>
+        <target>Показати запити на вибірку</target>
+      </trans-unit>
+      <trans-unit id="mcp.samplingLog.title">
+        <source xml:lang="en">MCP Sampling: {0}</source>
+        <target>MCP вибірка: {0}</target>
+      </trans-unit>
+      <trans-unit id="mcp.signOut">
+        <source xml:lang="en">Sign Out</source>
+        <target>Вийти</target>
+      </trans-unit>
+      <trans-unit id="mcpServerInstallation">
+        <source xml:lang="en">Installing MCP Server {0} started. An editor is now open with more details on this MCP Server</source>
+        <target>Встановлення MCP Server {0} розпочато. Тепер відкрито редактор з додатковими деталями про цей MCP Server.</target>
       </trans-unit>
       <trans-unit id="output">
         <source xml:lang="en">Show Output</source>
@@ -578,6 +802,22 @@
         <source xml:lang="en">Version</source>
         <target>Версія</target>
       </trans-unit>
+      <trans-unit id="arguments">
+        <source xml:lang="en">Arguments:</source>
+        <target>Аргументи:</target>
+      </trans-unit>
+      <trans-unit id="command">
+        <source xml:lang="en">Command:</source>
+        <target>Команда:</target>
+      </trans-unit>
+      <trans-unit id="configuration">
+        <source xml:lang="en">Configuration</source>
+        <target>Конфігурація</target>
+      </trans-unit>
+      <trans-unit id="configurationtooltip">
+        <source xml:lang="en">Server configuration details</source>
+        <target>Деталі конфігурації сервера</target>
+      </trans-unit>
       <trans-unit id="details">
         <source xml:lang="en">Details</source>
         <target>Деталі</target>
@@ -585,6 +825,14 @@
       <trans-unit id="detailstooltip">
         <source xml:lang="en">Extension details, rendered from the extension's 'README.md' file</source>
         <target>Деталі розширення, відображені з файлу 'README.md' розширення</target>
+      </trans-unit>
+      <trans-unit id="environmentVariables">
+        <source xml:lang="en">Environment Variables:</source>
+        <target>Змінні середовища:</target>
+      </trans-unit>
+      <trans-unit id="headers">
+        <source xml:lang="en">Headers:</source>
+        <target>Заголовки:</target>
       </trans-unit>
       <trans-unit id="id">
         <source xml:lang="en">Identifier</source>
@@ -594,13 +842,45 @@
         <source xml:lang="en">Last Released</source>
         <target>Останнє випущене</target>
       </trans-unit>
+      <trans-unit id="manifest">
+        <source xml:lang="en">Manifest</source>
+        <target>Манифест</target>
+      </trans-unit>
+      <trans-unit id="manifesttooltip">
+        <source xml:lang="en">Server manifest details</source>
+        <target>Деталі маніфесту сервера</target>
+      </trans-unit>
       <trans-unit id="name">
         <source xml:lang="en">Extension name</source>
         <target>Назва розширення</target>
       </trans-unit>
+      <trans-unit id="noConfig">
+        <source xml:lang="en">No configuration available for this MCP server.</source>
+        <target>Немає конфігурації для цього сервера MCP.</target>
+      </trans-unit>
+      <trans-unit id="noManifest">
+        <source xml:lang="en">No manifest available for this MCP server.</source>
+        <target>Немає маніфесту для цього MCP сервера.</target>
+      </trans-unit>
       <trans-unit id="noReadme">
         <source xml:lang="en">No README available.</source>
         <target>README недоступний.</target>
+      </trans-unit>
+      <trans-unit id="packageName">
+        <source xml:lang="en">Package:</source>
+        <target>Пакет:</target>
+      </trans-unit>
+      <trans-unit id="packagearguments">
+        <source xml:lang="en">Package Arguments:</source>
+        <target>Аргументи пакету:</target>
+      </trans-unit>
+      <trans-unit id="packages">
+        <source xml:lang="en">Packages</source>
+        <target>Пакети</target>
+      </trans-unit>
+      <trans-unit id="remotes">
+        <source xml:lang="en">Remote</source>
+        <target>Віддалений</target>
       </trans-unit>
       <trans-unit id="repository">
         <source xml:lang="en">Repository</source>
@@ -610,17 +890,53 @@
         <source xml:lang="en">Resources</source>
         <target>Ресурси</target>
       </trans-unit>
+      <trans-unit id="runtimeargs">
+        <source xml:lang="en">Runtime Arguments:</source>
+        <target>Аргументи виконання:</target>
+      </trans-unit>
+      <trans-unit id="serverName">
+        <source xml:lang="en">Name:</source>
+        <target>Ім'я:</target>
+      </trans-unit>
+      <trans-unit id="serverType">
+        <source xml:lang="en">Type:</source>
+        <target>Тип:</target>
+      </trans-unit>
+      <trans-unit id="transport">
+        <source xml:lang="en">Transport:</source>
+        <target>Транспорт:</target>
+      </trans-unit>
+      <trans-unit id="url">
+        <source xml:lang="en">URL:</source>
+        <target>URL:</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpServerEditorInput" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="extensionsEditorLabelIcon">
-        <source xml:lang="en">Icon of the extensions editor label.</source>
-        <target>Іконка мітки редактора розширень.</target>
-      </trans-unit>
       <trans-unit id="extensionsInputName">
-        <source xml:lang="en">Extension: {0}</source>
-        <target>Розширення: {0}</target>
+        <source xml:lang="en">MCP Server: {0}</source>
+        <target>MCP сервер: {0}</target>
+      </trans-unit>
+      <trans-unit id="mcpServerEditorLabelIcon">
+        <source xml:lang="en">Icon of the MCP Server editor.</source>
+        <target>Іконка редактора сервера MCP.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/mcp/browser/mcpServerIcons" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="mcpServer">
+        <source xml:lang="en">Icon used for the MCP server.</source>
+        <target>MCP Сервер</target>
+      </trans-unit>
+      <trans-unit id="mcpServerRemoteIcon">
+        <source xml:lang="en">Icon to indicate that an MCP server is for the remote user scope.</source>
+        <target>Іконка, що вказує на те, що сервер MCP призначений для області віддаленого користувача.</target>
+      </trans-unit>
+      <trans-unit id="mcpServerWorkspaceIcon">
+        <source xml:lang="en">Icon to indicate that an MCP server is for the workspace scope.</source>
+        <target>Іконка, що вказує на те, що сервер MCP призначений для області робочого простору.</target>
       </trans-unit>
     </body>
   </file>
@@ -638,17 +954,65 @@
         <source xml:lang="en">Average rating: {0} out of 5</source>
         <target>Середня оцінка: {0} з 5</target>
       </trans-unit>
+      <trans-unit id="remote user extension">
+        <source xml:lang="en">Remote MCP Server</source>
+        <target>Віддалений MCP сервер</target>
+      </trans-unit>
       <trans-unit id="verified publisher">
         <source xml:lang="en">This publisher has verified ownership of {0}</source>
         <target>Цей видавець підтвердив право власності на {0}</target>
+      </trans-unit>
+      <trans-unit id="workspace extension">
+        <source xml:lang="en">Workspace MCP Server</source>
+        <target>Сервер MCP робочого простору</target>
       </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpServersView" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="mcp">
+        <source xml:lang="en">MCP Servers</source>
+        <target>MCP Сервери</target>
+      </trans-unit>
       <trans-unit id="mcp servers">
         <source xml:lang="en">MCP Servers</source>
         <target>MCP Сервери</target>
+      </trans-unit>
+      <trans-unit id="mcp-installed">
+        <source xml:lang="en">MCP Servers - Installed</source>
+        <target>MCP Сервери - Встановлено</target>
+      </trans-unit>
+      <trans-unit id="mcp.welcome.browseButton">
+        <source xml:lang="en">Browse MCP Servers</source>
+        <target>Перегляд серверів MCP</target>
+      </trans-unit>
+      <trans-unit id="mcp.welcome.descriptionWithLink">
+        <source xml:lang="en">Extend agent mode by installing MCP servers to bring extra tools for connecting to databases, invoking APIs and performing specialized tasks.</source>
+        <target>Розширте режим агента, встановивши сервери MCP, щоб додати додаткові інструменти для підключення до баз даних, виклику API та виконання спеціалізованих завдань.</target>
+      </trans-unit>
+      <trans-unit id="mcp.welcome.title">
+        <source xml:lang="en">MCP Servers</source>
+        <target>Сервери MCP</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/mcp/browser/mcpWorkbenchService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="cannot be installed">
+        <source xml:lang="en">Cannot install the '{0}' MCP Server because it is not available in this setup.</source>
+        <target>Не вдається встановити '{0}' MCP Server, оскільки він недоступний у цій конфігурації.</target>
+      </trans-unit>
+      <trans-unit id="mcp.configuration.userLocalValue">
+        <source xml:lang="en">Global in {0}</source>
+        <target>Глобальний у {0}</target>
+      </trans-unit>
+      <trans-unit id="not an extension">
+        <source xml:lang="en">The provided object is not an mcp server.</source>
+        <target>Наданий об'єкт не є сервером mcp.</target>
+      </trans-unit>
+      <trans-unit id="overwriting">
+        <source xml:lang="en">Overwriting mcp server '{0}' from {1} with {2}.</source>
+        <target>Перезаписування сервера mcp '{0}' з {1} на {2}.</target>
       </trans-unit>
     </body>
   </file>
@@ -673,14 +1037,6 @@
       <trans-unit id="onRemoteLabel">
         <source xml:lang="en"> on {0}</source>
         <target>на {0}</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/workbench/contrib/mcp/common/mcpConfigPathsService" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="mcp.configuration.userLocalValue">
-        <source xml:lang="en">Global in {0}</source>
-        <target>Глобальний у {0}</target>
       </trans-unit>
     </body>
   </file>
@@ -750,25 +1106,53 @@
         <source xml:lang="en">The URL must start with 'http://' or 'https://'.</source>
         <target>URL повинен починатися з 'http://' або 'https://'.</target>
       </trans-unit>
+      <trans-unit id="id">
+        <source xml:lang="en">ID</source>
+        <target>Ідентифікатор</target>
+      </trans-unit>
       <trans-unit id="mcp.discovery.source.claude-desktop">
         <source xml:lang="en">Claude Desktop</source>
         <target>Claude Desktop</target>
+      </trans-unit>
+      <trans-unit id="mcp.discovery.source.claude-desktop.config">
+        <source xml:lang="en">Claude Desktop configuration (`claude_desktop_config.json`)</source>
+        <target>Конфігурація настільного додатку Claude (`claude_desktop_config.json`)</target>
       </trans-unit>
       <trans-unit id="mcp.discovery.source.cursor-global">
         <source xml:lang="en">Cursor (Global)</source>
         <target>Курсор (Глобальний)</target>
       </trans-unit>
+      <trans-unit id="mcp.discovery.source.cursor-global.config">
+        <source xml:lang="en">Cursor global configuration (`~/.cursor/mcp.json`)</source>
+        <target>Глобальна конфігурація курсора (`~/.cursor/mcp.json`)</target>
+      </trans-unit>
       <trans-unit id="mcp.discovery.source.cursor-workspace">
         <source xml:lang="en">Cursor (Workspace)</source>
         <target>Курсор (Робоча область)</target>
+      </trans-unit>
+      <trans-unit id="mcp.discovery.source.cursor-workspace.config">
+        <source xml:lang="en">Cursor workspace configuration (`.cursor/mcp.json`)</source>
+        <target>Конфігурація робочого простору курсора (`.cursor/mcp.json`)</target>
       </trans-unit>
       <trans-unit id="mcp.discovery.source.windsurf">
         <source xml:lang="en">Windsurf</source>
         <target>Вітрильний серфінг</target>
       </trans-unit>
+      <trans-unit id="mcp.discovery.source.windsurf.config">
+        <source xml:lang="en">Windsurf configurations (`~/.codeium/windsurf/mcp_config.json`)</source>
+        <target>Конфігурації віндсерфінгу (`~/.codeium/windsurf/mcp_config.json`)</target>
+      </trans-unit>
+      <trans-unit id="mcpServerDefinitionProviders">
+        <source xml:lang="en">MCP Servers</source>
+        <target>Сервери MCP</target>
+      </trans-unit>
+      <trans-unit id="name">
+        <source xml:lang="en">Name</source>
+        <target>Назва розширення</target>
+      </trans-unit>
       <trans-unit id="vscode.extension.contributes.mcp">
-        <source xml:lang="en">Contributes Model Context Protocol servers. Users of this should also use `vscode.lm.registerMcpConfigurationProvider`.</source>
-        <target>Сприяє серверам протоколу контексту моделі. Користувачі цього також повинні використовувати `vscode.lm.registerMcpConfigurationProvider`.</target>
+        <source xml:lang="en">Contributes Model Context Protocol servers. Users of this should also use `vscode.lm.registerMcpServerDefinitionProvider`.</source>
+        <target>Сприяє серверам протоколу контексту моделі. Користувачі цього також повинні використовувати `vscode.lm.registerMcpServerDefinitionProvider`.</target>
       </trans-unit>
       <trans-unit id="vscode.extension.contributes.mcp.id">
         <source xml:lang="en">Unique ID for the collection.</source>
@@ -812,6 +1196,34 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/mcp/common/mcpLanguageModelToolContribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="mcp.tool.warning">
+        <source xml:lang="en">Note that MCP servers or malicious conversation content may attempt to misuse '{0}' through tools.</source>
+        <target>Зверніть увагу, що сервери MCP або шкідливий вміст розмов можуть намагатися зловживати '{0}' за допомогою інструментів.</target>
+      </trans-unit>
+      <trans-unit id="mcp.toolset">
+        <source xml:lang="en">{0}: All Tools</source>
+        <target>{0}: Усі інструменти</target>
+      </trans-unit>
+      <trans-unit id="msg.ran">
+        <source xml:lang="en">Ran {0} </source>
+        <target>Запущено {0}</target>
+      </trans-unit>
+      <trans-unit id="msg.run">
+        <source xml:lang="en">Running {0}</source>
+        <target>Запуск {0}</target>
+      </trans-unit>
+      <trans-unit id="msg.subtitle">
+        <source xml:lang="en">{0} (MCP Server)</source>
+        <target>{0} (MCP Сервер)</target>
+      </trans-unit>
+      <trans-unit id="msg.title">
+        <source xml:lang="en">Run {0}</source>
+        <target>Запустити {0}</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpRegistry" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="mcp.launchError">
@@ -823,24 +1235,44 @@
         <target>Відкрити конфігурацію</target>
       </trans-unit>
       <trans-unit id="mcp.trust.details">
-        <source xml:lang="en">{0} discovered Model Context Protocol servers from {1} (`{2}`). {0} can use their capabilities in Chat.
+        <source xml:lang="en">The MCP server {0} was updated. MCP servers may add context to your chat session and lead to unexpected behavior. Do you want to trust and run this server?</source>
+        <target>Сервер MCP {0} був оновлений. Сервери MCP можуть додати контекст до вашої чат-сесії та призвести до несподіваної поведінки. Ви хочете довіряти та запустити цей сервер?</target>
+      </trans-unit>
+      <trans-unit id="mcp.trust.detailsMulti">
+        <source xml:lang="en">Several updated MCP servers were discovered:
 
-Do you want to allow running MCP servers from {3}?</source>
-        <target>{0} виявив сервери Model Context Protocol з {1} (`{2}`). {0} може використовувати їх можливості в Chat.
+{0}
 
-Ви хочете дозволити запускати сервери MCP з {3}?</target>
+ MCP servers may add context to your chat session and lead to unexpected behavior. Do you want to trust and run these server?</source>
+        <target>Було виявлено кілька оновлених серверів MCP:
+
+{0}
+
+Сервери MCP можуть додати контекст до вашої чат-сесії та призвести до несподіваної поведінки. Чи хочете ви довіряти цим серверам і запустити їх?</target>
       </trans-unit>
       <trans-unit id="mcp.trust.no">
         <source xml:lang="en">Do not trust</source>
         <target>Не довіряйте</target>
       </trans-unit>
+      <trans-unit id="mcp.trust.pick">
+        <source xml:lang="en">Pick Trusted</source>
+        <target>Виберіть надійний</target>
+      </trans-unit>
       <trans-unit id="mcp.trust.yes">
         <source xml:lang="en">Trust</source>
         <target>Довіра</target>
       </trans-unit>
+      <trans-unit id="trustFromExt">
+        <source xml:lang="en">from {0}</source>
+        <target>з {0}</target>
+      </trans-unit>
       <trans-unit id="trustTitleWithOrigin">
-        <source xml:lang="en">Trust MCP servers from {0}?</source>
-        <target>Довіряти серверам MCP від {0}?</target>
+        <source xml:lang="en">Trust and run MCP server {0}?</source>
+        <target>Довіртеся і запустіть сервер MCP {0}?</target>
+      </trans-unit>
+      <trans-unit id="trustTitleWithOriginMulti">
+        <source xml:lang="en">Trust and run {0} MCP servers?</source>
+        <target>Довіряти та запускати {0} MCP сервери?</target>
       </trans-unit>
     </body>
   </file>
@@ -879,7 +1311,7 @@ Do you want to allow running MCP servers from {3}?</source>
         <target>Не зараз</target>
       </trans-unit>
       <trans-unit id="mcp.sampling.allowDuringChat.desc">
-        <source xml:lang="en">The MCP server "{0}" has issued a request to make an language model call. Do you want to allow it to make requests during chat?</source>
+        <source xml:lang="en">The MCP server "{0}" has issued a request to make a language model call. Do you want to allow it to make requests during chat?</source>
         <target>Сервер MCP "{0}" надіслав запит на виклик мовної моделі. Чи хочете ви дозволити йому робити запити під час чату?</target>
       </trans-unit>
       <trans-unit id="mcp.sampling.allowDuringChat.title">
@@ -887,8 +1319,8 @@ Do you want to allow running MCP servers from {3}?</source>
         <target>Дозволити інструментам MCP з "{0}" робити запити LLM?</target>
       </trans-unit>
       <trans-unit id="mcp.sampling.allowOutsideChat.desc">
-        <source xml:lang="en">The MCP server "{0}" has issued a request to make an language model call. Do you want to allow it to make requests, outside of tool calls during chat?</source>
-        <target>Сервер MCP "{0}" надіслав запит на виклик мовної моделі. Чи бажаєте ви дозволити йому робити запити поза викликами інструментів під час чату?</target>
+        <source xml:lang="en">The MCP server "{0}" has issued a request to make a language model call. Do you want to allow it to make requests, outside of tool calls during chat?</source>
+        <target>Сервер MCP "{0}" надіслав запит на виклик мовної моделі. Чи хочете ви дозволити йому робити запити, поза викликами інструментів під час чату?</target>
       </trans-unit>
       <trans-unit id="mcp.sampling.allowOutsideChat.title">
         <source xml:lang="en">Allow MCP server "{0}" to make LLM requests?</source>
@@ -958,38 +1390,18 @@ Do you want to allow running MCP servers from {3}?</source>
   </file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="mcp.tool.warning">
-        <source xml:lang="en">Note that MCP servers or malicious conversation content may attempt to misuse '{0}' through tools.</source>
-        <target>Зверніть увагу, що сервери MCP або шкідливий контент розмови можуть намагатися зловживати '{0}' за допомогою інструментів.</target>
+      <trans-unit id="mcp.autostart.configure">
+        <source xml:lang="en">Configure MCP Autostart</source>
+        <target>Налаштувати автозапуск MCP</target>
       </trans-unit>
-      <trans-unit id="mcp.toolset">
-        <source xml:lang="en">{0}: All Tools</source>
-        <target>{0}: Усі інструменти</target>
-      </trans-unit>
-      <trans-unit id="msg.ran">
-        <source xml:lang="en">Ran {0} </source>
-        <target>Запущено {0}</target>
-      </trans-unit>
-      <trans-unit id="msg.run">
-        <source xml:lang="en">Running {0}</source>
-        <target>Запуск {0}</target>
-      </trans-unit>
-      <trans-unit id="msg.subtitle">
-        <source xml:lang="en">{0} (MCP Server)</source>
-        <target>{0} (MCP Сервер)</target>
-      </trans-unit>
-      <trans-unit id="msg.title">
-        <source xml:lang="en">Run {0}</source>
-        <target>Запустити {0}</target>
+      <trans-unit id="mcp.autostart.progress">
+        <source xml:lang="en">Starting MCP server: {0}</source>
+        <target>Запуск сервера MCP: {0}</target>
       </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpTypes" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="mcpServer">
-        <source xml:lang="en">Icon used for the MCP server.</source>
-        <target>MCP Сервер</target>
-      </trans-unit>
       <trans-unit id="mcpstate.error">
         <source xml:lang="en">Error {0}</source>
         <target>Помилка {0}</target>

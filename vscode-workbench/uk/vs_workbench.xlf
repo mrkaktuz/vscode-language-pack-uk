@@ -2,18 +2,42 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file original="src/vs/workbench/api/browser/mainThreadAuthentication" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="addClientRegistrationDetails">
+        <source xml:lang="en">Add Client Registration Details</source>
+        <target>Додати деталі реєстрації клієнта</target>
+      </trans-unit>
       <trans-unit id="allow">
         <source xml:lang="en">&amp;&amp;Allow</source>
         <note>&amp;&amp; denotes a mnemonic</note>
         <target>&amp;&amp;Дозволити</target>
       </trans-unit>
+      <trans-unit id="cancel">
+        <source xml:lang="en">Cancel</source>
+        <target>Скасувати</target>
+      </trans-unit>
+      <trans-unit id="clientIdPlaceholder">
+        <source xml:lang="en">OAuth client ID (azye39d...)</source>
+        <target>OAuth клієнтський ID (azye39d...)</target>
+      </trans-unit>
+      <trans-unit id="clientIdPrompt">
+        <source xml:lang="en">Enter an existing client ID that has been registered with the following redirect URIs: http://127.0.0.1:33418, https://vscode.dev/redirect</source>
+        <target>Введіть існуючий ідентифікатор клієнта, який був зареєстрований з наступними URI перенаправлення: http://127.0.0.1:33418, https://vscode.dev/redirect</target>
+      </trans-unit>
+      <trans-unit id="clientIdRequired">
+        <source xml:lang="en">Client ID is required</source>
+        <target>Необхідний ідентифікатор клієнта.</target>
+      </trans-unit>
+      <trans-unit id="clientSecretPlaceholder">
+        <source xml:lang="en">OAuth client secret (wer32o50f...) or leave it blank</source>
+        <target>Секрет клієнта OAuth (wer32o50f...) або залиште його порожнім</target>
+      </trans-unit>
+      <trans-unit id="clientSecretPrompt">
+        <source xml:lang="en">(optional) Enter an existing client secret associated with the client id '{0}' or leave this field blank</source>
+        <target>(необов'язково) Введіть існуючий секрет клієнта, пов'язаний з ідентифікатором клієнта '{0}', або залиште це поле порожнім</target>
+      </trans-unit>
       <trans-unit id="confirmLogin">
         <source xml:lang="en">The extension '{0}' wants to sign in using {1}.</source>
         <target>Розширення '{0}' хоче увійти, використовуючи {1}.</target>
-      </trans-unit>
-      <trans-unit id="confirmModelAccess">
-        <source xml:lang="en">The extension '{0}' wants to access the language models provided by {1}.</source>
-        <target>Розширення '{0}' хоче отримати доступ до мовних моделей, наданих {1}.</target>
       </trans-unit>
       <trans-unit id="confirmRelogin">
         <source xml:lang="en">The extension '{0}' wants you to sign in again using {1}.</source>
@@ -22,6 +46,22 @@
       <trans-unit id="copyAndContinue">
         <source xml:lang="en">Copy &amp; Continue</source>
         <target>Копіювати та продовжити</target>
+      </trans-unit>
+      <trans-unit id="dcrNotSupported">
+        <source xml:lang="en">Dynamic Client Registration not supported</source>
+        <target>Динамічна реєстрація клієнта не підтримується</target>
+      </trans-unit>
+      <trans-unit id="dcrNotSupportedDetail">
+        <source xml:lang="en">The authorization server '{0}' does not support automatic client registration. Do you want to proceed by manually providing a client registration (client ID)?
+
+Note: When registering your OAuth application, make sure to include these redirect URIs:
+http://127.0.0.1:33418
+https://vscode.dev/redirect</source>
+        <target>Сервер авторизації '{0}' не підтримує автоматичну реєстрацію клієнтів. Чи хочете ви продовжити, надавши реєстрацію клієнта вручну (ідентифікатор клієнта)?
+
+Примітка: При реєстрації вашого OAuth додатку, переконайтеся, що ви включили ці URI для перенаправлення:
+http://127.0.0.1:33418
+https://vscode.dev/redirect</target>
       </trans-unit>
       <trans-unit id="deviceCodeDetail">
         <source xml:lang="en">Your code: {0}
@@ -63,9 +103,9 @@ To complete authentication, navigate to {1} and enter the code above.</source>
         <source xml:lang="en">No</source>
         <target>Ні</target>
       </trans-unit>
-      <trans-unit id="signedOut">
-        <source xml:lang="en">Successfully signed out.</source>
-        <target>Успішно вийшли з системи.</target>
+      <trans-unit id="provideClientDetails">
+        <source xml:lang="en">Proceed</source>
+        <target>Продовжити</target>
       </trans-unit>
       <trans-unit id="yes">
         <source xml:lang="en">Yes</source>
@@ -78,6 +118,14 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       <trans-unit id="cannot be installed">
         <source xml:lang="en">Cannot install the '{0}' extension because it is declared to not run in this setup.</source>
         <target>Не вдається встановити розширення '{0}', оскільки воно оголошено таким, що не працює в цій конфігурації.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/api/browser/mainThreadChatSessions" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="interruptActiveResponse">
+        <source xml:lang="en">Are you sure you want to interrupt the active session?</source>
+        <target>Ви впевнені, що хочете перервати активну сесію?</target>
       </trans-unit>
     </body>
   </file>
@@ -201,7 +249,7 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       </trans-unit>
       <trans-unit id="cancel">
         <source xml:lang="en">Skip Changes</source>
-        <target>Пропустити зміни</target>
+        <target>Скасувати</target>
       </trans-unit>
       <trans-unit id="label">
         <source xml:lang="en">Reset choice for 'File operation needs preview'</source>
@@ -240,6 +288,10 @@ To complete authentication, navigate to {1} and enter the code above.</source>
   </file>
   <file original="src/vs/workbench/api/browser/mainThreadLanguageModels" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="confirmLanguageModelAccess">
+        <source xml:lang="en">The extension '{0}' wants to access the language models provided by {1}.</source>
+        <target>Розширення '{0}' хоче отримати доступ до мовних моделей, наданих {1}.</target>
+      </trans-unit>
       <trans-unit id="languageModelsAccountId">
         <source xml:lang="en">Language Models</source>
         <target>Моделі мови</target>
@@ -283,7 +335,7 @@ To complete authentication, navigate to {1} and enter the code above.</source>
     <body>
       <trans-unit id="cancel">
         <source xml:lang="en">Cancel</source>
-        <target>Пропустити зміни</target>
+        <target>Скасувати</target>
       </trans-unit>
       <trans-unit id="defaultSource">
         <source xml:lang="en">Extension</source>
@@ -1779,6 +1831,14 @@ This action is irreversible and may result in data loss!</source>
         <source xml:lang="en">Side Bar / {0}</source>
         <target>Бокова панель / {0}</target>
       </trans-unit>
+      <trans-unit id="sidebarHidden">
+        <source xml:lang="en">Primary Side Bar hidden</source>
+        <target>Основна бічна панель прихована</target>
+      </trans-unit>
+      <trans-unit id="sidebarVisible">
+        <source xml:lang="en">Primary Side Bar shown</source>
+        <target>Показано основну бокову панель</target>
+      </trans-unit>
       <trans-unit id="statusBar">
         <source xml:lang="en">Status Bar</source>
         <target>Рядок стану</target>
@@ -2297,6 +2357,18 @@ This action is irreversible and may result in data loss!</source>
   </file>
   <file original="src/vs/workbench/browser/parts/auxiliarybar/auxiliaryBarActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="auxiliaryBarHidden">
+        <source xml:lang="en">Secondary Side Bar hidden</source>
+        <target>Секундарна бічна панель прихована</target>
+      </trans-unit>
+      <trans-unit id="auxiliaryBarVisible">
+        <source xml:lang="en">Secondary Side Bar shown</source>
+        <target>Показано бічну панель вторинного боку</target>
+      </trans-unit>
+      <trans-unit id="closeIcon">
+        <source xml:lang="en">Icon to close the secondary side bar.</source>
+        <target>Іконка для закриття вторинної бокової панелі.</target>
+      </trans-unit>
       <trans-unit id="closeSecondarySideBar">
         <source xml:lang="en">Hide Secondary Side Bar</source>
         <target>Сховати вторинну бокову панель</target>
@@ -2308,6 +2380,23 @@ This action is irreversible and may result in data loss!</source>
       <trans-unit id="hideAuxiliaryBar">
         <source xml:lang="en">Hide Secondary Side Bar</source>
         <target>Сховати вторинну бокову панель</target>
+      </trans-unit>
+      <trans-unit id="maximizeAuxiliaryBar">
+        <source xml:lang="en">Maximize Secondary Side Bar</source>
+        <target>Максимізувати бокову панель вторинного рівня</target>
+      </trans-unit>
+      <trans-unit id="maximizeAuxiliaryBarTooltip">
+        <source xml:lang="en">Maximize Secondary Side Bar Size</source>
+        <target>Максимізувати розмір бокової панелі вторинного боку</target>
+      </trans-unit>
+      <trans-unit id="maximizeIcon">
+        <source xml:lang="en">Icon to maximize the secondary side bar.</source>
+        <target>Іконка для розгортання вторинної бокової панелі.</target>
+      </trans-unit>
+      <trans-unit id="miCloseSecondarySideBar">
+        <source xml:lang="en">&amp;&amp;Secondary Side Bar</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Другорядна бічна панель</target>
       </trans-unit>
       <trans-unit id="nextAuxiliaryBarView">
         <source xml:lang="en">Next Secondary Side Bar View</source>
@@ -2321,30 +2410,37 @@ This action is irreversible and may result in data loss!</source>
         <source xml:lang="en">Previous Secondary Side Bar View</source>
         <target>Попередній вигляд бічної панелі вторинного боку</target>
       </trans-unit>
-      <trans-unit id="secondary sidebar mnemonic">
-        <source xml:lang="en">Secondary Si&amp;&amp;de Bar</source>
-        <note>&amp;&amp; denotes a mnemonic</note>
-        <target>Вторинна б&amp;&amp;ічна панель</target>
+      <trans-unit id="restoreAuxiliaryBar">
+        <source xml:lang="en">Restore Secondary Side Bar</source>
+        <target>Відновити бічну панель вторинного рівня</target>
+      </trans-unit>
+      <trans-unit id="restoreAuxiliaryBarTooltip">
+        <source xml:lang="en">Restore Secondary Side Bar Size</source>
+        <target>Відновити розмір бокової панелі вторинного рівня</target>
       </trans-unit>
       <trans-unit id="toggleAuxiliaryBar">
         <source xml:lang="en">Toggle Secondary Side Bar Visibility</source>
         <target>Перемикати видимість вторинної бокової панелі</target>
       </trans-unit>
       <trans-unit id="toggleAuxiliaryIconLeft">
-        <source xml:lang="en">Icon to toggle the auxiliary bar in its left position.</source>
-        <target>Іконка для перемикання допоміжної панелі в її лівому положенні.</target>
+        <source xml:lang="en">Icon to toggle the secondary side bar in its left position.</source>
+        <target>Іконка для перемикання вторинної бічної панелі у її лівому положенні.</target>
       </trans-unit>
       <trans-unit id="toggleAuxiliaryIconLeftOn">
-        <source xml:lang="en">Icon to toggle the auxiliary bar on in its left position.</source>
-        <target>Іконка для вмикання допоміжної панелі у її лівому положенні.</target>
+        <source xml:lang="en">Icon to toggle the secondary side bar on in its left position.</source>
+        <target>Іконка для перемикання вторинної бічної панелі в її лівому положенні.</target>
       </trans-unit>
       <trans-unit id="toggleAuxiliaryIconRight">
-        <source xml:lang="en">Icon to toggle the auxiliary bar off in its right position.</source>
-        <target>Іконка для вимкнення допоміжної панелі у її правому положенні.</target>
+        <source xml:lang="en">Icon to toggle the secondary side bar off in its right position.</source>
+        <target>Іконка для вимкнення вторинної бокової панелі у її правому положенні.</target>
       </trans-unit>
       <trans-unit id="toggleAuxiliaryIconRightOn">
-        <source xml:lang="en">Icon to toggle the auxiliary bar on in its right position.</source>
-        <target>Іконка для перемикання допоміжної панелі у її праве положення.</target>
+        <source xml:lang="en">Icon to toggle the secondary side bar on in its right position.</source>
+        <target>Іконка для перемикання вторинної бокової панелі у її правому положенні.</target>
+      </trans-unit>
+      <trans-unit id="toggleMaximizedAuxiliaryBar">
+        <source xml:lang="en">Toggle Maximized Secondary Side Bar</source>
+        <target>Перемкнути максимізовану бічну панель вторинного боку</target>
       </trans-unit>
       <trans-unit id="toggleSecondarySideBar">
         <source xml:lang="en">Toggle Secondary Side Bar</source>
@@ -2458,16 +2554,6 @@ This action is irreversible and may result in data loss!</source>
   </file>
   <file original="src/vs/workbench/browser/parts/dialogs/dialogHandler" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="aboutDetail">
-        <source xml:lang="en">Version: {0}
-Commit: {1}
-Date: {2}
-Browser: {3}</source>
-        <target>Версія: {0}
-Коміт: {1}
-Дата: {2}
-Браузер: {3}</target>
-      </trans-unit>
       <trans-unit id="copy">
         <source xml:lang="en">&amp;&amp;Copy</source>
         <note>&amp;&amp; denotes a mnemonic</note>
@@ -2721,15 +2807,10 @@ Browser: {3}</source>
         <source xml:lang="en">no elements</source>
         <target>немає елементів</target>
       </trans-unit>
-      <trans-unit id="miBreadcrumbs">
-        <source xml:lang="en">Toggle &amp;&amp;Breadcrumbs</source>
-        <note>&amp;&amp; denotes a mnemonic</note>
-        <target>Перемкнути &amp;&amp;хлібні крихти</target>
-      </trans-unit>
       <trans-unit id="miBreadcrumbs2">
-        <source xml:lang="en">Toggle &amp;&amp;Breadcrumbs</source>
+        <source xml:lang="en">&amp;&amp;Breadcrumbs</source>
         <note>&amp;&amp; denotes a mnemonic</note>
-        <target>Перемкнути &amp;&amp;хлібні крихти</target>
+        <target>&amp;&amp;Хлібні крихти</target>
       </trans-unit>
       <trans-unit id="separatorIcon">
         <source xml:lang="en">Icon for the separator in the breadcrumbs.</source>
@@ -2754,6 +2835,10 @@ Browser: {3}</source>
       <trans-unit id="compare.nextChange">
         <source xml:lang="en">Go to Next Change</source>
         <target>Перейти до наступної зміни</target>
+      </trans-unit>
+      <trans-unit id="compare.openSide">
+        <source xml:lang="en">Open Active Diff Side</source>
+        <target>Відкрити активну диференційну сторону</target>
       </trans-unit>
       <trans-unit id="compare.previousChange">
         <source xml:lang="en">Go to Previous Change</source>
@@ -3186,6 +3271,14 @@ Browser: {3}</source>
         <source xml:lang="en">Two Rows Right</source>
         <target>Два рядки вправо</target>
       </trans-unit>
+      <trans-unit id="moveAbove">
+        <source xml:lang="en">Move Above</source>
+        <target>Перемістити вгору</target>
+      </trans-unit>
+      <trans-unit id="moveBelow">
+        <source xml:lang="en">Move Below</source>
+        <target>Перемістити вниз</target>
+      </trans-unit>
       <trans-unit id="moveEditorGroupToNewWindow">
         <source xml:lang="en">Move into New Window</source>
         <target>Перейти в нове вікно</target>
@@ -3193,6 +3286,14 @@ Browser: {3}</source>
       <trans-unit id="moveEditorToNewWindow">
         <source xml:lang="en">Move Editor into New Window</source>
         <target>Перемістити редактор у нове вікно</target>
+      </trans-unit>
+      <trans-unit id="moveLeft">
+        <source xml:lang="en">Move Left</source>
+        <target>Перемістити вліво</target>
+      </trans-unit>
+      <trans-unit id="moveRight">
+        <source xml:lang="en">Move Right</source>
+        <target>Перемістити вправо</target>
       </trans-unit>
       <trans-unit id="moveToNewWindow">
         <source xml:lang="en">Move into New Window</source>
@@ -3249,6 +3350,10 @@ Browser: {3}</source>
       <trans-unit id="singleTab">
         <source xml:lang="en">Single Tab</source>
         <target>Одна вкладка</target>
+      </trans-unit>
+      <trans-unit id="splitAndMoveEditor">
+        <source xml:lang="en">Split &amp; Move</source>
+        <target>Розділити та перемістити</target>
       </trans-unit>
       <trans-unit id="splitDown">
         <source xml:lang="en">Split Down</source>
@@ -3839,6 +3944,10 @@ Browser: {3}</source>
         <source xml:lang="en">Toggle Maximize Editor Group</source>
         <target>Перемкнути максимізацію групи редактора</target>
       </trans-unit>
+      <trans-unit id="unmaximizeGroup">
+        <source xml:lang="en">Unmaximize Group</source>
+        <target>Зменшити групу</target>
+      </trans-unit>
       <trans-unit id="unpinEditor">
         <source xml:lang="en">Unpin Editor</source>
         <target>Відкріпити редактор</target>
@@ -4107,6 +4216,10 @@ Browser: {3}</source>
         <source xml:lang="en">Try Again</source>
         <target>Спробуйте ще раз</target>
       </trans-unit>
+      <trans-unit id="showLogs">
+        <source xml:lang="en">Show Logs</source>
+        <target>Показати журнали</target>
+      </trans-unit>
       <trans-unit id="trustRequiredEditor">
         <source xml:lang="en">Workspace Trust Required</source>
         <target>Необхідна довіра до робочого простору</target>
@@ -4291,9 +4404,21 @@ Browser: {3}</source>
         <source xml:lang="en">Select Language Mode to Associate with '{0}'</source>
         <target>Виберіть мовний режим для асоціації з '{0}'</target>
       </trans-unit>
+      <trans-unit id="reopen">
+        <source xml:lang="en">Discard Changes and Reopen</source>
+        <target>Скасувати зміни та повторно відкрити</target>
+      </trans-unit>
       <trans-unit id="reopenWithEncoding">
         <source xml:lang="en">Reopen with Encoding</source>
         <target>Відкрити з кодуванням</target>
+      </trans-unit>
+      <trans-unit id="reopenWithEncodingDetail">
+        <source xml:lang="en">This will discard any unsaved changes.</source>
+        <target>Це скасує всі незбережені зміни.</target>
+      </trans-unit>
+      <trans-unit id="reopenWithEncodingWarning">
+        <source xml:lang="en">Do you want to revert the active text editor and reopen with a different encoding?</source>
+        <target>Ви хочете скасувати активний текстовий редактор і відкрити його з іншим кодуванням?</target>
       </trans-unit>
       <trans-unit id="saveWithEncoding">
         <source xml:lang="en">Save with Encoding</source>
@@ -4472,6 +4597,10 @@ Browser: {3}</source>
         <source xml:lang="en">Manage {0} (Profile)</source>
         <target>Керувати {0} (Профіль)</target>
       </trans-unit>
+      <trans-unit id="manageDynamicAuthProviders">
+        <source xml:lang="en">Manage Dynamic Authentication Providers...</source>
+        <target>Керувати Динамічними Провайдерами Аутентифікації...</target>
+      </trans-unit>
       <trans-unit id="manageTrustedExtensions">
         <source xml:lang="en">Manage Trusted Extensions</source>
         <target>Керувати надійними розширеннями</target>
@@ -4491,10 +4620,6 @@ Browser: {3}</source>
       <trans-unit id="clearNotification">
         <source xml:lang="en">Clear Notification</source>
         <target>Очистити сповіщення</target>
-      </trans-unit>
-      <trans-unit id="notification.accessibleView">
-        <source xml:lang="en">{0}</source>
-        <target>{0}</target>
       </trans-unit>
       <trans-unit id="notification.accessibleViewSrc">
         <source xml:lang="en">{0} Source: {1}</source>
@@ -4866,7 +4991,7 @@ Browser: {3}</source>
       </trans-unit>
       <trans-unit id="closeIcon">
         <source xml:lang="en">Icon to close a panel.</source>
-        <target>Іконка для закриття панелі.</target>
+        <target>Іконка для закриття вторинної бокової панелі.</target>
       </trans-unit>
       <trans-unit id="closePanel">
         <source xml:lang="en">Hide Panel</source>
@@ -4878,11 +5003,16 @@ Browser: {3}</source>
       </trans-unit>
       <trans-unit id="maximizeIcon">
         <source xml:lang="en">Icon to maximize a panel.</source>
-        <target>Іконка для розгортання панелі.</target>
+        <target>Іконка для розгортання вторинної бокової панелі.</target>
       </trans-unit>
       <trans-unit id="maximizePanel">
         <source xml:lang="en">Maximize Panel Size</source>
         <target>Максимізувати розмір панелі</target>
+      </trans-unit>
+      <trans-unit id="miTogglePanelMnemonic">
+        <source xml:lang="en">&amp;&amp;Panel</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Панель</target>
       </trans-unit>
       <trans-unit id="minimizePanel">
         <source xml:lang="en">Restore Panel Size</source>
@@ -4947,15 +5077,6 @@ Browser: {3}</source>
       <trans-unit id="previousPanelView">
         <source xml:lang="en">Previous Panel View</source>
         <target>Попередній вигляд панелі</target>
-      </trans-unit>
-      <trans-unit id="restoreIcon">
-        <source xml:lang="en">Icon to restore a panel.</source>
-        <target>Іконка для відновлення панелі.</target>
-      </trans-unit>
-      <trans-unit id="toggle panel mnemonic">
-        <source xml:lang="en">&amp;&amp;Panel</source>
-        <note>&amp;&amp; denotes a mnemonic</note>
-        <target>&amp;&amp;Панель</target>
       </trans-unit>
       <trans-unit id="toggleMaximizedPanel">
         <source xml:lang="en">Toggle Maximized Panel</source>
@@ -5395,16 +5516,6 @@ Browser: {3}</source>
         <note>&amp;&amp; denotes a mnemonic</note>
         <target>&amp;&amp;Вихід</target>
       </trans-unit>
-      <trans-unit id="learnMore">
-        <source xml:lang="en">&amp;&amp;Learn More</source>
-        <note>&amp;&amp; denotes a mnemonic</note>
-        <target>Дізнатися більше</target>
-      </trans-unit>
-      <trans-unit id="open">
-        <source xml:lang="en">&amp;&amp;Open</source>
-        <note>&amp;&amp; denotes a mnemonic</note>
-        <target>&amp;&amp;Відкрити</target>
-      </trans-unit>
       <trans-unit id="openExternalDialogButtonInstall.v3">
         <source xml:lang="en">&amp;&amp;Install</source>
         <note>&amp;&amp; denotes a mnemonic</note>
@@ -5453,6 +5564,11 @@ If {1} did not launch, try again below.</source>
         <note>&amp;&amp; denotes a mnemonic</note>
         <target>Перезавантажити вікно</target>
       </trans-unit>
+      <trans-unit id="retry">
+        <source xml:lang="en">&amp;&amp;Retry</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>Спробуйте ще раз</target>
+      </trans-unit>
       <trans-unit id="shutdownError">
         <source xml:lang="en">An unexpected error occurred that requires a reload of this page.</source>
         <target>Сталася несподівана помилка, яка вимагає перезавантаження цієї сторінки.</target>
@@ -5462,8 +5578,12 @@ If {1} did not launch, try again below.</source>
         <target>Робочий стіл був несподівано видалений під час виконання.</target>
       </trans-unit>
       <trans-unit id="unableToOpenExternal">
-        <source xml:lang="en">The browser interrupted the opening of a new tab or window. Press 'Open' to open it anyway.</source>
-        <target>Браузер перервав відкриття нової вкладки або вікна. Натисніть 'Відкрити', щоб все ж відкрити його.</target>
+        <source xml:lang="en">The browser blocked opening a new tab or window. Press 'Retry' to try again.</source>
+        <target>Браузер заблокував відкриття нової вкладки або вікна. Натисніть 'Спробувати знову', щоб спробувати ще раз.</target>
+      </trans-unit>
+      <trans-unit id="unableToOpenWindowDetail">
+        <source xml:lang="en">Please allow pop-ups for this website in your [browser settings]({0}).</source>
+        <target>Будь ласка, дозвольте спливаючі вікна для цього веб-сайту у ваших [налаштуваннях браузера]({0}).</target>
       </trans-unit>
     </body>
   </file>
@@ -5848,8 +5968,8 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <target>Використовуйте редактор налаштувань UI.</target>
       </trans-unit>
       <trans-unit id="settings.showAISearchToggle">
-        <source xml:lang="en">Controls whether the AI search toggle is shown in the search bar in the Settings editor.</source>
-        <target>Контролює, чи перемикач пошуку AI відображається в рядку пошуку в редакторі налаштувань.</target>
+        <source xml:lang="en">Controls whether the AI search results toggle is shown in the search bar in the Settings editor after doing a search and once AI search results are available.</source>
+        <target>Контролює, чи перемикач результатів пошуку AI відображається в рядку пошуку в редакторі налаштувань після виконання пошуку та коли результати пошуку AI доступні.</target>
       </trans-unit>
       <trans-unit id="sharedViewState">
         <source xml:lang="en">Preserves the most recent editor view state (such as scroll position) across all editor groups and restores that if no specific editor view state is found for the editor group.</source>
@@ -5863,13 +5983,18 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Controls whether opened editors should show with an icon or not. This requires a file icon theme to be enabled as well.</source>
         <target>Показати значки</target>
       </trans-unit>
+      <trans-unit id="showTabIndex">
+        <source xml:lang="en">When enabled, will show the tab index. This value is ignored when {0} is not set to {1}.</source>
+        <note>{0}, {1} will be a setting name rendered as a link</note>
+        <target>Коли увімкнено, буде показано індекс вкладки. Це значення ігнорується, коли {0} не встановлено на {1}.</target>
+      </trans-unit>
       <trans-unit id="sideBarLocation">
         <source xml:lang="en">Controls the location of the primary side bar and activity bar. They can either show on the left or right of the workbench. The secondary side bar will show on the opposite side of the workbench.</source>
         <target>Контролює розташування основної бічної панелі та панелі активності. Вони можуть відображатися зліва або справа від робочої області. Вторинна бічна панель відображатиметься на протилежному боці робочої області.</target>
       </trans-unit>
       <trans-unit id="sideBySideDirection">
-        <source xml:lang="en">Controls the default direction of editors that are opened side by side (for example, from the Explorer). By default, editors will open on the right hand side of the currently active one. If changed to `down`, the editors will open below the currently active one.</source>
-        <target>Контролює стандартний напрямок редакторів, які відкриваються поряд (наприклад, з Провідника). За замовчуванням редактори відкриватимуться праворуч від активного. Якщо змінити на `вниз`, редактори відкриватимуться під активним.</target>
+        <source xml:lang="en">Controls the default direction of editors that are opened side by side (for example, from the Explorer). By default, editors will open on the right hand side of the currently active one. If changed to `down`, the editors will open below the currently active one. This also impacts the split editor action in the editor toolbar.</source>
+        <target>Контролює напрямок за замовчуванням для редакторів, які відкриваються поряд (наприклад, з Провідника). За замовчуванням редактори відкриватимуться з правого боку від активного. Якщо змінити на `down`, редактори відкриватимуться під активним. Це також вплине на дію розділення редактора в панелі інструментів редактора.</target>
       </trans-unit>
       <trans-unit id="splitInGroupLayout">
         <source xml:lang="en">Controls the layout for when an editor is split in an editor group to be either vertical or horizontal.</source>
@@ -5912,6 +6037,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="tips.enabled">
         <source xml:lang="en">When enabled, will show the watermark tips when no editor is open.</source>
         <target>Коли увімкнено, буде показувати підказки водяного знака, коли жоден редактор не відкрито.</target>
+      </trans-unit>
+      <trans-unit id="titleScrollbarVisibility">
+        <source xml:lang="en">Controls the visibility of the scrollbars used for tabs and breadcrumbs in the editor title area.</source>
+        <target>Контролює видимість смуг прокрутки, які використовуються для вкладок і хлібних крихт у заголовку редактора.</target>
       </trans-unit>
       <trans-unit id="untitledLabelFormat">
         <source xml:lang="en">Controls the format of the label for an untitled editor.</source>
@@ -6273,6 +6402,18 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Increases the size, so it can be grabbed more easily with the mouse.</source>
         <target>Збільшує розмір, щоб його можна було легше захопити мишкою.</target>
       </trans-unit>
+      <trans-unit id="workbench.editor.titleScrollbarVisibility.auto">
+        <source xml:lang="en">The horizontal scrollbar will be visible only when necessary.</source>
+        <target>Горизонтальна смуга прокрутки буде видима лише за необхідності.</target>
+      </trans-unit>
+      <trans-unit id="workbench.editor.titleScrollbarVisibility.hidden">
+        <source xml:lang="en">The horizontal scrollbar will always be hidden.</source>
+        <target>Горизонтальна смуга прокрутки завжди буде прихована.</target>
+      </trans-unit>
+      <trans-unit id="workbench.editor.titleScrollbarVisibility.visible">
+        <source xml:lang="en">The horizontal scrollbar will always be visible.</source>
+        <target>Горизонтальна смуга прокрутки завжди буде видимою.</target>
+      </trans-unit>
       <trans-unit id="workbench.editor.untitled.labelFormat.content">
         <source xml:lang="en">The name of the untitled file is derived from the contents of its first line unless it has an associated file path. It will fallback to the name in case the line is empty or contains no word characters.</source>
         <target>Ім'я файлу без назви походить з вмісту його першого рядка, якщо у нього немає асоційованого шляху до файлу. У разі, якщо рядок порожній або не містить жодних буквено-цифрових символів, буде використано ім'я за замовчуванням.</target>
@@ -6306,8 +6447,8 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <target>Завжди розгортайте панель на повний екран при її відкритті.</target>
       </trans-unit>
       <trans-unit id="workbench.panel.opensMaximized.never">
-        <source xml:lang="en">Never maximize the panel when opening it. The panel will open un-maximized.</source>
-        <target>Ніколи не розгортайте панель при її відкритті. Панель відкриється в незгорнутому вигляді.</target>
+        <source xml:lang="en">Never maximize the panel when opening it.</source>
+        <target>Ніколи не розгортайте панель на весь екран при її відкритті.</target>
       </trans-unit>
       <trans-unit id="workbench.panel.opensMaximized.preserve">
         <source xml:lang="en">Open the panel to the state that it was in, before it was closed.</source>
@@ -6340,6 +6481,14 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="workbench.secondarySideBar.defaultVisibility.hidden">
         <source xml:lang="en">The secondary side bar is hidden by default.</source>
         <target>Бічна панель вторинного рівня за замовчуванням прихована.</target>
+      </trans-unit>
+      <trans-unit id="workbench.secondarySideBar.defaultVisibility.maximized">
+        <source xml:lang="en">The secondary side bar is visible and maximized by default.</source>
+        <target>Бічна панель вторинного рівня видима та розгорнута за замовчуванням.</target>
+      </trans-unit>
+      <trans-unit id="workbench.secondarySideBar.defaultVisibility.maximizedInWorkspace">
+        <source xml:lang="en">The secondary side bar is visible and maximized by default if a workspace is opened.</source>
+        <target>Бічна панель вторинного рівня видима і розгорнута за замовчуванням, якщо відкрито робоче середовище.</target>
       </trans-unit>
       <trans-unit id="workbench.secondarySideBar.defaultVisibility.visible">
         <source xml:lang="en">The secondary side bar is visible by default.</source>
@@ -6534,9 +6683,13 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Whether the auxiliary bar has keyboard focus</source>
         <target>Чи має допоміжна панель фокус клавіатури</target>
       </trans-unit>
+      <trans-unit id="auxiliaryBarMaximized">
+        <source xml:lang="en">Whether the auxiliary bar is maximized</source>
+        <target>Чи максимізовано допоміжну панель</target>
+      </trans-unit>
       <trans-unit id="auxiliaryBarVisible">
         <source xml:lang="en">Whether the auxiliary bar is visible</source>
-        <target>Чи видима допоміжна панель</target>
+        <target>Показано бічну панель вторинного боку</target>
       </trans-unit>
       <trans-unit id="bannerFocused">
         <source xml:lang="en">Whether the banner has keyboard focus</source>
@@ -7452,7 +7605,7 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/electron-sandbox/actions/developerActions" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/electron-browser/actions/developerActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="configureRuntimeArguments">
         <source xml:lang="en">Configure Runtime Arguments</source>
@@ -7464,7 +7617,7 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       </trans-unit>
       <trans-unit id="revealUserDataFolder">
         <source xml:lang="en">Reveal User Data Folder</source>
-        <target>Показати папку даних користувача</target>
+        <target>Відкрити папку даних користувача</target>
       </trans-unit>
       <trans-unit id="showGPUInfo">
         <source xml:lang="en">Show GPU Info</source>
@@ -7472,12 +7625,12 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       </trans-unit>
       <trans-unit id="stopTracing">
         <source xml:lang="en">Stop Tracing</source>
-        <target>Зупинити трасування</target>
+        <target>Зупинити відстеження</target>
       </trans-unit>
       <trans-unit id="stopTracing.button">
         <source xml:lang="en">&amp;&amp;Relaunch and Enable Tracing</source>
         <note>&amp;&amp; denotes a mnemonic</note>
-        <target>&amp;&amp;Відновити та ввімкнути трасування</target>
+        <target>&amp;&amp;Перезапустити та увімкнути трасування</target>
       </trans-unit>
       <trans-unit id="stopTracing.detail">
         <source xml:lang="en">This can take up to one minute to complete.</source>
@@ -7493,11 +7646,11 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       </trans-unit>
       <trans-unit id="toggleDevTools">
         <source xml:lang="en">Toggle Developer Tools</source>
-        <target>Переключити інструменти розробника</target>
+        <target>Перемкнути інструменти розробника</target>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/electron-sandbox/actions/installActions" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/electron-browser/actions/installActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="install">
         <source xml:lang="en">Install '{0}' command in PATH</source>
@@ -7521,7 +7674,7 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/electron-sandbox/actions/windowActions" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/electron-browser/actions/windowActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="close">
         <source xml:lang="en">Close Window</source>
@@ -7541,12 +7694,12 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       </trans-unit>
       <trans-unit id="enableWindowAlwaysOnTop">
         <source xml:lang="en">Turn On Always on Top</source>
-        <target>Увімкнути Завжди зверху</target>
+        <target>Увімкнути Завжди на верху</target>
       </trans-unit>
       <trans-unit id="miCloseWindow">
         <source xml:lang="en">Clos&amp;&amp;e Window</source>
         <note>&amp;&amp; denotes a mnemonic</note>
-        <target>Закр&amp;&amp;ити вікно</target>
+        <target>Закрити вікно</target>
       </trans-unit>
       <trans-unit id="miZoomIn">
         <source xml:lang="en">&amp;&amp;Zoom In</source>
@@ -7565,7 +7718,7 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       </trans-unit>
       <trans-unit id="quickSwitchWindow">
         <source xml:lang="en">Quick Switch Window...</source>
-        <target>Швидке перемикання вікна...</target>
+        <target>Швидкий перемикач вікон...</target>
       </trans-unit>
       <trans-unit id="switchWindow">
         <source xml:lang="en">Switch Window...</source>
@@ -7573,11 +7726,11 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       </trans-unit>
       <trans-unit id="switchWindowPlaceHolder">
         <source xml:lang="en">Select a window to switch to</source>
-        <target>Виберіть вікно, до якого потрібно перемкнутися</target>
+        <target>Виберіть вікно, щоб перемкнутися на нього</target>
       </trans-unit>
       <trans-unit id="toggleWindowAlwaysOnTop">
         <source xml:lang="en">Toggle Window Always on Top</source>
-        <target>Перемикати вікно завжди поверх інших</target>
+        <target>Перемикати вікно завжди зверху</target>
       </trans-unit>
       <trans-unit id="windowDirtyAriaLabel">
         <source xml:lang="en">{0}, window with unsaved changes</source>
@@ -7585,7 +7738,7 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       </trans-unit>
       <trans-unit id="windowGroup">
         <source xml:lang="en">window group</source>
-        <target>група вікон</target>
+        <target>віконна група</target>
       </trans-unit>
       <trans-unit id="zoomIn">
         <source xml:lang="en">Zoom In</source>
@@ -7601,15 +7754,15 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/electron-sandbox/desktop.contribution" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/electron-browser/desktop.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="application.shellEnvironmentResolutionTimeout">
         <source xml:lang="en">Controls the timeout in seconds before giving up resolving the shell environment when the application is not already launched from a terminal. See our [documentation](https://go.microsoft.com/fwlink/?linkid=2149667) for more information.</source>
-        <target>Контролює тайм-аут у секундах перед тим, як відмовитися від вирішення середовища оболонки, коли додаток ще не запущено з терміналу. Дивіться нашу [документацію](https://go.microsoft.com/fwlink/?linkid=2149667) для отримання додаткової інформації.</target>
+        <target>Контролює тайм-аут у секундах перед відмовою від вирішення середовища оболонки, коли додаток ще не запущено з терміналу. Дивіться нашу [документацію](https://go.microsoft.com/fwlink/?linkid=2149667) для отримання додаткової інформації.</target>
       </trans-unit>
       <trans-unit id="argv.crashReporterId">
         <source xml:lang="en">Unique id used for correlating crash reports sent from this app instance.</source>
-        <target>Унікальний ідентифікатор, що використовується для кореляції звітів про збої, надісланих з цього екземпляра програми.</target>
+        <target>Унікальний ідентифікатор, що використовується для кореляції звітів про аварії, надісланих з цього екземпляра програми.</target>
       </trans-unit>
       <trans-unit id="argv.disableChromiumSandbox">
         <source xml:lang="en">Disables the Chromium sandbox. This is useful when running VS Code as elevated on Linux and running under Applocker on Windows.</source>
@@ -7617,7 +7770,7 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       </trans-unit>
       <trans-unit id="argv.disableHardwareAcceleration">
         <source xml:lang="en">Disables hardware acceleration. ONLY change this option if you encounter graphic issues.</source>
-        <target>Вимикає апаратне прискорення. Змінюйте цю опцію ТІЛЬКИ в разі виникнення графічних проблем.</target>
+        <target>Вимикає апаратне прискорення. Змінюйте цю опцію ТІЛЬКИ у разі виникнення графічних проблем.</target>
       </trans-unit>
       <trans-unit id="argv.disableLcdText">
         <source xml:lang="en">Disables LCD font antialiasing.</source>
@@ -7625,63 +7778,67 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       </trans-unit>
       <trans-unit id="argv.enableCrashReporter">
         <source xml:lang="en">Allows to disable crash reporting, should restart the app if the value is changed.</source>
-        <target>Дозволяє вимкнути звітність про збої, слід перезапустити додаток, якщо значення змінено.</target>
+        <target>Дозволяє вимкнути звітність про збої, потрібно перезапустити додаток, якщо значення змінено.</target>
       </trans-unit>
       <trans-unit id="argv.enableRDPDisplayTracking">
         <source xml:lang="en">Ensures that maximized windows gets restored to correct display during RDP reconnection.</source>
-        <target>Забезпечує, щоб максимізовані вікна відновлювалися до правильного відображення під час повторного підключення RDP.</target>
+        <target>Забезпечує, щоб максимізовані вікна відновлювались до правильного відображення під час повторного підключення RDP.</target>
       </trans-unit>
       <trans-unit id="argv.enebleProposedApi">
         <source xml:lang="en">Enable proposed APIs for a list of extension ids (such as `vscode.git`). Proposed APIs are unstable and subject to breaking without warning at any time. This should only be set for extension development and testing purposes.</source>
-        <target>Увімкніть запропоновані API для списку ідентифікаторів розширень (таких як `vscode.git`). Запропоновані API є нестабільними і можуть бути змінені без попередження в будь-який момент. Це слід встановлювати лише для розробки та тестування розширень.</target>
+        <target>Увімкніть запропоновані API для списку ідентифікаторів розширень (таких як `vscode.git`). Запропоновані API є нестабільними і можуть зазнати змін без попередження в будь-який момент. Це слід встановлювати лише для цілей розробки та тестування розширень.</target>
       </trans-unit>
       <trans-unit id="argv.force-renderer-accessibility">
         <source xml:lang="en">Forces the renderer to be accessible. ONLY change this if you are using a screen reader on Linux. On other platforms the renderer will automatically be accessible. This flag is automatically set if you have editor.accessibilitySupport: on.</source>
-        <target>Примушує рендерер бути доступним. ЗМІНЮЙТЕ це лише якщо ви використовуєте екранний зчитувач на Linux. На інших платформах рендерер буде автоматично доступним. Цей прапорець автоматично встановлюється, якщо у вас editor.accessibilitySupport: on.</target>
+        <target>Примушує рендерер бути доступним. Змінюйте це ТІЛЬКИ, якщо ви використовуєте екранний читач на Linux. На інших платформах рендерер буде автоматично доступним. Цей прапорець автоматично встановлюється, якщо у вас editor.accessibilitySupport: on.</target>
       </trans-unit>
       <trans-unit id="argv.forceColorProfile">
         <source xml:lang="en">Allows to override the color profile to use. If you experience colors appear badly, try to set this to `srgb` and restart.</source>
-        <target>Дозволяє перевизначити профіль кольору для використання. Якщо ви помічаєте, що кольори виглядають неправильно, спробуйте встановити це на `srgb` і перезапустити.</target>
+        <target>Дозволяє перевизначити профіль кольору для використання. Якщо ви помічаєте, що кольори виглядають неправильно, спробуйте встановити це значення на `srgb` і перезапустити.</target>
       </trans-unit>
       <trans-unit id="argv.locale">
         <source xml:lang="en">The display Language to use. Picking a different language requires the associated language pack to be installed.</source>
-        <target>Мова відображення, яку потрібно використовувати. Вибір іншої мови вимагає встановлення відповідного мовного пакета.</target>
+        <target>Мова відображення для використання. Вибір іншої мови вимагає встановлення відповідного мовного пакету.</target>
       </trans-unit>
       <trans-unit id="argv.logLevel">
         <source xml:lang="en">Log level to use. Default is 'info'. Allowed values are 'error', 'warn', 'info', 'debug', 'trace', 'off'.</source>
-        <target>Рівень журналювання для використання. За замовчуванням - 'info'. Дозволені значення: 'error', 'warn', 'info', 'debug', 'trace', 'off'.</target>
+        <target>Рівень журналювання для використання. Значення за замовчуванням - 'info'. Дозволені значення: 'error', 'warn', 'info', 'debug', 'trace', 'off'.</target>
       </trans-unit>
       <trans-unit id="argv.passwordStore">
         <source xml:lang="en">Configures the backend used to store secrets on Linux. This argument is ignored on Windows &amp; macOS.</source>
-        <target>Налаштовує бекенд, який використовується для зберігання секретів на Linux. Цей аргумент ігнорується на Windows та macOS.</target>
+        <target>Налаштовує бекенд, що використовується для зберігання секретів на Linux. Цей аргумент ігнорується на Windows і macOS.</target>
       </trans-unit>
       <trans-unit id="argv.proxyBypassList">
         <source xml:lang="en">Bypass any specified proxy for the given semi-colon-separated list of hosts. Example value "&lt;local&gt;;*.microsoft.com;*foo.com;1.2.3.4:5678", will use the proxy server for all hosts except for local addresses (localhost, 127.0.0.1 etc.), microsoft.com subdomains, hosts that contain the suffix foo.com and anything at 1.2.3.4:5678</source>
-        <target>Обійти будь-який вказаний проксі для заданого списку хостів, розділеного крапками з комою. Приклад значення "&lt;local&gt;;*.microsoft.com;*foo.com;1.2.3.4:5678" використовуватиме проксі-сервер для всіх хостів, за винятком локальних адрес (localhost, 127.0.0.1 тощо), піддоменів microsoft.com, хостів, які містять суфікс foo.com, та всього на 1.2.3.4:5678.</target>
+        <target>Обійти будь-який вказаний проксі для заданого списку хостів, розділеного крапкою з комою. Приклад значення "&lt;local&gt;;*.microsoft.com;*foo.com;1.2.3.4:5678" буде використовувати проксі-сервер для всіх хостів, за винятком локальних адрес (localhost, 127.0.0.1 тощо), піддоменів microsoft.com, хостів, що містять суфікс foo.com, та всього на 1.2.3.4:5678.</target>
+      </trans-unit>
+      <trans-unit id="argv.remoteDebuggingPort">
+        <source xml:lang="en">Specifies the port to use for remote debugging.</source>
+        <target>Вказує порт, який потрібно використовувати для віддаленого налагодження.</target>
       </trans-unit>
       <trans-unit id="argv.useInMemorySecretStorage">
         <source xml:lang="en">Ensures that an in-memory store will be used for secret storage instead of using the OS's credential store. This is often used when running VS Code extension tests or when you're experiencing difficulties with the credential store.</source>
-        <target>Гарантує, що для зберігання секретів буде використано сховище в пам'яті, а не сховище облікових даних ОС. Це часто використовується під час запуску тестів розширень VS Code або коли ви стикаєтеся з труднощами зі сховищем облікових даних.</target>
+        <target>Забезпечує використання сховища в пам'яті для зберігання секретів замість використання сховища облікових даних ОС. Це часто використовується під час виконання тестів розширень VS Code або коли ви стикаєтеся з труднощами зі сховищем облікових даних.</target>
       </trans-unit>
       <trans-unit id="closeWhenEmpty">
         <source xml:lang="en">Controls whether closing the last editor should also close the window. This setting only applies for windows that do not show folders.</source>
-        <target>Контролює, чи закриття останнього редактора також повинно закрити вікно. Цей параметр застосовується лише для вікон, які не показують папки.</target>
+        <target>Контролює, чи закриття останнього редактора повинно також закрити вікно. Ця настройка застосовується лише для вікон, які не показують папки.</target>
       </trans-unit>
       <trans-unit id="confirmSaveUntitledWorkspace">
         <source xml:lang="en">Controls whether a confirmation dialog shows asking to save or discard an opened untitled workspace in the window when switching to another workspace. Disabling the confirmation dialog will always discard the untitled workspace.</source>
-        <target>Контролює, чи показується діалог підтвердження, що запитує про збереження або скасування відкритого неназваного робочого простору у вікні при переході до іншого робочого простору. Вимкнення діалогу підтвердження завжди скасує неназваний робочий простір.</target>
+        <target>Контролює, чи показується діалог підтвердження, що запитує зберегти чи скасувати відкритий незбережений робочий простір у вікні при переході до іншого робочого простору. Вимкнення діалогу підтвердження завжди скасує незбережений робочий простір.</target>
       </trans-unit>
       <trans-unit id="controlsStyle">
         <source xml:lang="en">Adjust the appearance of the window controls to be native by the OS, custom drawn or hidden. Changes require a full restart to apply.</source>
-        <target>Налаштуйте вигляд елементів керування вікном, щоб вони були рідними для ОС, кастомізованими або прихованими. Зміни потребують повного перезавантаження для застосування.</target>
+        <target>Налаштуйте вигляд елементів керування вікном, щоб вони були рідними для ОС, кастомно намальованими або прихованими. Зміни вимагають повного перезапуску для застосування.</target>
       </trans-unit>
       <trans-unit id="dialogStyle">
         <source xml:lang="en">Adjust the appearance of dialogs to be native by the OS or custom.</source>
-        <target>Налаштуйте вигляд діалогів, щоб вони були рідними для ОС або кастомізованими.</target>
+        <target>Налаштуйте вигляд діалогів, щоб вони були рідними для ОС або користувацькими.</target>
       </trans-unit>
       <trans-unit id="enableCrashReporterDeprecated">
         <source xml:lang="en">If this setting is false, no telemetry will be sent regardless of the new setting's value. Deprecated due to being combined into the {0} setting.</source>
-        <target>Якщо це налаштування є хибним, жодна телеметрія не буде надіслана, незалежно від значення нового налаштування. Застаріло через об'єднання в налаштування {0}.</target>
+        <target>Якщо ця настройка є хибною, жодна телеметрія не буде надіслана, незалежно від значення нової настройки. Відмінену через об'єднання в настройку {0}.</target>
       </trans-unit>
       <trans-unit id="keyboardConfigurationTitle">
         <source xml:lang="en">Keyboard</source>
@@ -7694,11 +7851,11 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="miExit">
         <source xml:lang="en">E&amp;&amp;xit</source>
         <note>&amp;&amp; denotes a mnemonic</note>
-        <target>&amp;&amp;Вихід</target>
+        <target>E&amp;&amp;вихід</target>
       </trans-unit>
       <trans-unit id="moveWindowTabToNewWindow">
         <source xml:lang="en">Move Window Tab to New Window</source>
-        <target>Перемістити вкладку вікна в нове вікно</target>
+        <target>Перемістити вкладку в нове вікно</target>
       </trans-unit>
       <trans-unit id="newTab">
         <source xml:lang="en">New Window Tab</source>
@@ -7706,28 +7863,28 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       </trans-unit>
       <trans-unit id="newWindowDimensions">
         <source xml:lang="en">Controls the dimensions of opening a new window when at least one window is already opened. Note that this setting does not have an impact on the first window that is opened. The first window will always restore the size and location as you left it before closing.</source>
-        <target>Контролює розміри відкриття нового вікна, коли принаймні одне вікно вже відкрите. Зверніть увагу, що ця налаштування не впливає на перше вікно, яке відкривається. Перше вікно завжди відновлюватиме розмір і місце, як ви залишили його перед закриттям.</target>
+        <target>Контролює розміри відкриття нового вікна, коли принаймні одне вікно вже відкрите. Зверніть увагу, що ця настройка не впливає на перше вікно, яке відкривається. Перше вікно завжди відновлює розмір і місце, як ви залишили його перед закриттям.</target>
       </trans-unit>
       <trans-unit id="openWithoutArgumentsInNewWindow">
         <source xml:lang="en">Controls whether a new empty window should open when starting a second instance without arguments or if the last running instance should get focus.
 Note that there can still be cases where this setting is ignored (e.g. when using the `--new-window` or `--reuse-window` command line option).</source>
-        <target>Контролює, чи повинно відкриватися нове порожнє вікно при запуску другого екземпляра без аргументів, або чи має отримати фокус останній запущений екземпляр. Зверніть увагу, що можуть бути випадки, коли ця настройка ігнорується (наприклад, при використанні параметра командного рядка `--new-window` або `--reuse-window`).</target>
+        <target>Контролює, чи має відкриватися нове порожнє вікно при запуску другого екземпляра без аргументів, або чи має отримати фокус останній запущений екземпляр. Зверніть увагу, що можуть бути випадки, коли ця настройка ігнорується (наприклад, при використанні параметра командного рядка `--new-window` або `--reuse-window`).</target>
       </trans-unit>
       <trans-unit id="restoreFullscreen">
         <source xml:lang="en">Controls whether a window should restore to full screen mode if it was exited in full screen mode.</source>
-        <target>Контролює, чи вікно повинно відновлюватися в режимі повного екрану, якщо воно було закрито в режимі повного екрану.</target>
+        <target>Контролює, чи повинно вікно відновлюватися в режимі повного екрану, якщо воно було закрито в режимі повного екрану.</target>
       </trans-unit>
       <trans-unit id="restoreWindows">
         <source xml:lang="en">Controls how windows and editors within are being restored when opening.</source>
-        <target>Контролює, як вікна та редактори відновлюються при відкритті.</target>
+        <target>Контролює, як вікна та редактори відновлюються під час відкриття.</target>
       </trans-unit>
       <trans-unit id="security.promptForLocalFileProtocolHandling">
         <source xml:lang="en">If enabled, a dialog will ask for confirmation whenever a local file or workspace is about to open through a protocol handler.</source>
-        <target>Якщо увімкнено, діалогове вікно запитуватиме підтвердження щоразу, коли локальний файл або робочий простір збирається відкритися через обробник протоколів.</target>
+        <target>Якщо увімкнено, діалогове вікно запитає підтвердження щоразу, коли локальний файл або робоче середовище збирається відкритися через обробник протоколів.</target>
       </trans-unit>
       <trans-unit id="security.promptForRemoteFileProtocolHandling">
         <source xml:lang="en">If enabled, a dialog will ask for confirmation whenever a remote file or workspace is about to open through a protocol handler.</source>
-        <target>Якщо увімкнено, діалогове вікно запитуватиме підтвердження щоразу, коли віддалений файл або робоче середовище збирається відкритися через обробник протоколів.</target>
+        <target>Якщо увімкнено, діалогове вікно запитуватиме підтвердження щоразу, коли віддалений файл або робоча область збираються відкритися через обробник протоколів.</target>
       </trans-unit>
       <trans-unit id="showNextWindowTab">
         <source xml:lang="en">Show Next Window Tab</source>
@@ -7752,7 +7909,7 @@ This option requires restart to take effect.</source>
       </trans-unit>
       <trans-unit id="toggleWindowTabsBar">
         <source xml:lang="en">Toggle Window Tabs Bar</source>
-        <target>Перемикання панелі вкладок вікна</target>
+        <target>Перемикати панель вкладок вікна</target>
       </trans-unit>
       <trans-unit id="touchbar.enabled">
         <source xml:lang="en">Enables the macOS touchbar buttons on the keyboard if available.</source>
@@ -7760,15 +7917,19 @@ This option requires restart to take effect.</source>
       </trans-unit>
       <trans-unit id="touchbar.ignored">
         <source xml:lang="en">A set of identifiers for entries in the touchbar that should not show up (for example `workbench.action.navigateBack`).</source>
-        <target>Набір ідентифікаторів для записів у touchbar, які не повинні з'являтися (наприклад, `workbench.action.navigateBack`).</target>
+        <target>Набір ідентифікаторів для записів у панелі дотиків, які не повинні відображатися (наприклад, `workbench.action.navigateBack`).</target>
+      </trans-unit>
+      <trans-unit id="window.border">
+        <source xml:lang="en">Controls the border color of the window. Set to `default` to respect Windows settings, `off` to disable or to a specific color in Hex, RGB, RGBA, HSL, HSLA format. This requires Windows to have the 'Show accent color on title bars and window borders' enabled and is ignored when {0} is set to {1}.</source>
+        <target>Контролює колір рамки вікна. Встановіть на `default`, щоб дотримуватися налаштувань Windows, `off`, щоб вимкнути, або на конкретний колір у форматах Hex, RGB, RGBA, HSL, HSLA. Це вимагає, щоб у Windows була увімкнена опція 'Показувати акцентний колір на заголовках вікон і рамках вікон', і ігнорується, коли {0} встановлено на {1}.</target>
       </trans-unit>
       <trans-unit id="window.clickThroughInactive">
         <source xml:lang="en">If enabled, clicking on an inactive window will both activate the window and trigger the element under the mouse if it is clickable. If disabled, clicking anywhere on an inactive window will activate it only and a second click is required on the element.</source>
-        <target>Якщо увімкнено, клацання на неактивному вікні активує вікно та спрацьовує елемент під мишкою, якщо він є клікабельним. Якщо вимкнено, клацання будь-де на неактивному вікні активує його лише, і для спрацьовування елемента потрібен другий клік.</target>
+        <target>Якщо увімкнено, клацання на неактивному вікні активує вікно та викликає елемент під мишкою, якщо він клікабельний. Якщо вимкнено, клацання будь-де на неактивному вікні активує його лише, і для взаємодії з елементом потрібен другий клік.</target>
       </trans-unit>
       <trans-unit id="window.customTitleBarVisibility">
         <source xml:lang="en">Adjust when the custom title bar should be shown. The custom title bar can be hidden when in full screen mode with `windowed`. The custom title bar can only be hidden in non full screen mode with `never` when {0} is set to `native`.</source>
-        <target>Налаштуйте, коли має відображатися користувацька панель заголовка. Користувацька панель заголовка може бути прихована в режимі повноекранного перегляду з `віконним`. Користувацька панель заголовка може бути прихована лише в режимі не повноекранного перегляду з `ніколи`, коли {0} встановлено на `рідний`.</target>
+        <target>Налаштуйте, коли має з'являтися користувацька панель заголовка. Користувацька панель заголовка може бути прихована в режимі повного екрану з `windowed`. Користувацька панель заголовка може бути прихована лише в режимі не повного екрану з `never`, коли {0} встановлено на `native`.</target>
       </trans-unit>
       <trans-unit id="window.customTitleBarVisibility.auto">
         <source xml:lang="en">Automatically changes custom title bar visibility.</source>
@@ -7776,7 +7937,7 @@ This option requires restart to take effect.</source>
       </trans-unit>
       <trans-unit id="window.customTitleBarVisibility.never">
         <source xml:lang="en">Hide custom titlebar when {0} is set to `native`.</source>
-        <target>Сховати користувацьку панель заголовка, коли {0} встановлено на `native`.</target>
+        <target>Сховати користувацьку заголовну панель, коли {0} встановлено на `native`.</target>
       </trans-unit>
       <trans-unit id="window.customTitleBarVisibility.windowed">
         <source xml:lang="en">Hide custom titlebar in full screen. When not in full screen, automatically change custom title bar visibility.</source>
@@ -7784,11 +7945,11 @@ This option requires restart to take effect.</source>
       </trans-unit>
       <trans-unit id="window.doubleClickIconToClose">
         <source xml:lang="en">If enabled, this setting will close the window when the application icon in the title bar is double-clicked. The window will not be able to be dragged by the icon. This setting is effective only if {0} is set to `custom`.</source>
-        <target>Якщо увімкнено, ця настройка закриє вікно, коли значок програми в заголовку буде двічі клацнуто. Вікно не можна буде перетягувати за значком. Ця настройка є ефективною лише якщо {0} встановлено на `custom`.</target>
+        <target>Якщо увімкнено, ця налаштування закриє вікно, коли значок програми в заголовку буде двічі натиснуто. Вікно не можна буде перетягувати за значком. Це налаштування діє лише якщо {0} встановлено на `custom`.</target>
       </trans-unit>
       <trans-unit id="window.menuStyle">
         <source xml:lang="en">Adjust the menu style to either be native by the OS, custom, or inherited from the title bar style defined in {0}. This also affects the context menu appearance. Changes require a full restart to apply.</source>
-        <target>Налаштуйте стиль меню так, щоб він був або рідним для ОС, або кастомним, або успадкованим від стилю заголовка, визначеного в {0}. Це також вплине на вигляд контекстного меню. Зміни потребують повного перезапуску для застосування.</target>
+        <target>Налаштуйте стиль меню, щоб він був або рідним для ОС, або кастомним, або успадкованим від стилю заголовка, визначеного в {0}. Це також вплине на вигляд контекстного меню. Зміни потребують повного перезапуску для застосування.</target>
       </trans-unit>
       <trans-unit id="window.menuStyle.custom">
         <source xml:lang="en">Use the custom menu.</source>
@@ -7820,7 +7981,7 @@ This option requires restart to take effect.</source>
       </trans-unit>
       <trans-unit id="window.nativeFullScreen">
         <source xml:lang="en">Controls if native full-screen should be used on macOS. Disable this option to prevent macOS from creating a new space when going full-screen.</source>
-        <target>Контролює, чи слід використовувати нативний повноекранний режим на macOS. Вимкніть цю опцію, щоб запобігти створенню нової області при переході в повноекранний режим.</target>
+        <target>Контролює, чи слід використовувати нативний повноекранний режим на macOS. Вимкніть цю опцію, щоб запобігти створенню нової області в macOS при переході в повноекранний режим.</target>
       </trans-unit>
       <trans-unit id="window.nativeTabs">
         <source xml:lang="en">Enables macOS Sierra window tabs. Note that changes require a full restart to apply and that native tabs will disable a custom title bar style if configured.</source>
@@ -7828,19 +7989,19 @@ This option requires restart to take effect.</source>
       </trans-unit>
       <trans-unit id="window.newWindowDimensions.default">
         <source xml:lang="en">Open new windows in the center of the screen.</source>
-        <target>Відкрийте нові вікна в центрі екрану.</target>
+        <target>Відкривайте нові вікна в центрі екрану.</target>
       </trans-unit>
       <trans-unit id="window.newWindowDimensions.fullscreen">
         <source xml:lang="en">Open new windows in full screen mode.</source>
-        <target>Відкрийте нові вікна в режимі повного екрану.</target>
+        <target>Відкривати нові вікна в режимі повного екрану.</target>
       </trans-unit>
       <trans-unit id="window.newWindowDimensions.inherit">
         <source xml:lang="en">Open new windows with same dimension as last active one.</source>
-        <target>Відкрийте нові вікна з тими ж розмірами, що й у останнього активного.</target>
+        <target>Відкривати нові вікна з такими ж розмірами, як у останнього активного.</target>
       </trans-unit>
       <trans-unit id="window.newWindowDimensions.maximized">
         <source xml:lang="en">Open new windows maximized.</source>
-        <target>Відкривати нові вікна в максимальному режимі.</target>
+        <target>Відкривати нові вікна в максимальному розмірі.</target>
       </trans-unit>
       <trans-unit id="window.newWindowDimensions.offset">
         <source xml:lang="en">Open new windows with same dimension as last active one with an offset position.</source>
@@ -7860,19 +8021,19 @@ This option requires restart to take effect.</source>
       </trans-unit>
       <trans-unit id="window.reopenFolders.folders">
         <source xml:lang="en">Reopen all windows that had folders or workspaces opened unless a folder, workspace or file is opened (e.g. from the command line). If a file is opened, it will replace any of the editors that were previously opened in a window.</source>
-        <target>Відкрийте знову всі вікна, в яких були відкриті папки або робочі простори, якщо не відкрито папку, робочий простір або файл (наприклад, з командного рядка). Якщо файл відкрито, він замінить будь-які редактори, які були раніше відкриті в вікні.</target>
+        <target>Відкрийте знову всі вікна, в яких були відкриті папки або робочі простори, якщо не відкрита папка, робочий простір або файл (наприклад, з командного рядка). Якщо файл відкритий, він замінить будь-які редактори, які раніше були відкриті у вікні.</target>
       </trans-unit>
       <trans-unit id="window.reopenFolders.none">
         <source xml:lang="en">Never reopen a window. Unless a folder or workspace is opened (e.g. from the command line), an empty window will appear.</source>
-        <target>Ніколи не відкривайте вікно знову. Якщо папка або робочий простір не відкриті (наприклад, з командного рядка), з'явиться порожнє вікно.</target>
+        <target>Ніколи не відкривайте вікно знову. Якщо папка або робоче середовище не відкриті (наприклад, з командного рядка), з'явиться порожнє вікно.</target>
       </trans-unit>
       <trans-unit id="window.reopenFolders.one">
         <source xml:lang="en">Reopen the last active window unless a folder, workspace or file is opened (e.g. from the command line). If a file is opened, it will replace any of the editors that were previously opened in a window.</source>
-        <target>Відкрийте останнє активне вікно, якщо не відкрито папку, робочий простір або файл (наприклад, з командного рядка). Якщо відкрито файл, він замінить будь-які редактори, які раніше були відкриті у вікні.</target>
+        <target>Відкрийте останнє активне вікно, якщо не відкрито папку, робочу область або файл (наприклад, з командного рядка). Якщо відкрито файл, він замінить будь-які редактори, які були раніше відкриті у вікні.</target>
       </trans-unit>
       <trans-unit id="window.reopenFolders.preserve">
         <source xml:lang="en">Always reopen all windows. If a folder or workspace is opened (e.g. from the command line) it opens as a new window unless it was opened before. If files are opened they will open in one of the restored windows together with editors that were previously opened.</source>
-        <target>Завжди повторно відкривати всі вікна. Якщо папка або робочий простір відкриті (наприклад, з командного рядка), вони відкриваються як нове вікно, якщо не були відкриті раніше. Якщо файли відкриваються, вони відкриються в одному з відновлених вікон разом з редакторами, які були відкриті раніше.</target>
+        <target>Завжди повторно відкривати всі вікна. Якщо папка або робочий простір відкриті (наприклад, з командного рядка), вони відкриваються як нове вікно, якщо не були відкриті раніше. Якщо файли відкриті, вони відкриються в одному з відновлених вікон разом з редакторами, які були відкриті раніше.</target>
       </trans-unit>
       <trans-unit id="windowConfigurationTitle">
         <source xml:lang="en">Window</source>
@@ -7881,41 +8042,25 @@ This option requires restart to take effect.</source>
       <trans-unit id="zoomLevel">
         <source xml:lang="en">Adjust the default zoom level for all windows. Each increment above `0` (e.g. `1`) or below (e.g. `-1`) represents zooming `20%` larger or smaller. You can also enter decimals to adjust the zoom level with a finer granularity. See {0} for configuring if the 'Zoom In' and 'Zoom Out' commands apply the zoom level to all windows or only the active window.</source>
         <note>{0} will be a setting name rendered as a link</note>
-        <target>Налаштуйте рівень масштабування за замовчуванням для всіх вікон. Кожне збільшення вище `0` (наприклад, `1`) або нижче (наприклад, `-1`) представляє масштабування на `20%` більше або менше. Ви також можете вводити десяткові дроби, щоб налаштувати рівень масштабування з більшою точністю. Дивіться {0} для налаштування, чи застосовуються команди 'Масштабувати вперед' і 'Масштабувати назад' до всіх вікон або лише до активного вікна.</target>
+        <target>Відрегулюйте рівень масштабування за замовчуванням для всіх вікон. Кожне збільшення вище `0` (наприклад, `1`) або нижче (наприклад, `-1`) представляє масштабування на `20%` більше або менше. Ви також можете вводити десяткові дроби, щоб налаштувати рівень масштабування з більшою точністю. Дивіться {0} для налаштування, чи команди 'Масштабувати вгору' та 'Масштабувати вниз' застосовують рівень масштабування до всіх вікон або лише до активного вікна.</target>
       </trans-unit>
       <trans-unit id="zoomPerWindow">
         <source xml:lang="en">Controls if the 'Zoom In' and 'Zoom Out' commands apply the zoom level to all windows or only the active window. See {0} for configuring a default zoom level for all windows.</source>
         <note>{0} will be a setting name rendered as a link</note>
-        <target>Контролює, чи команди 'Збільшити' та 'Зменшити' застосовують рівень масштабування до всіх вікон або лише до активного вікна. Дивіться {0} для налаштування рівня масштабування за замовчуванням для всіх вікон.</target>
+        <target>Контролює, чи команди 'Збільшити' та 'Зменшити' застосовують рівень збільшення до всіх вікон або лише до активного вікна. Дивіться {0} для налаштування рівня збільшення за замовчуванням для всіх вікон.</target>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/electron-sandbox/desktop.main" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/electron-browser/desktop.main" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="join.closeStorage">
         <source xml:lang="en">Saving UI state</source>
-        <target>Збереження стану інтерфейсу</target>
+        <target>Збереження стану інтерфейсу користувача</target>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/electron-sandbox/parts/dialogs/dialogHandler" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/electron-browser/parts/dialogs/dialogHandler" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="aboutDetail">
-        <source xml:lang="en">Version: {0}
-Commit: {1}
-Date: {2}
-Electron: {3}
-ElectronBuildId: {4}
-Chromium: {5}
-Node.js: {6}
-V8: {7}
-OS: {8}</source>
-        <note>Electron, Chromium, Node.js and V8 are product names that need no translation</note>
-        <target>Версія: {0}
-Коміт: {1}
-Дата: {2}
-Браузер: {3}</target>
-      </trans-unit>
       <trans-unit id="copy">
         <source xml:lang="en">&amp;&amp;Copy</source>
         <note>&amp;&amp; denotes a mnemonic</note>
@@ -7923,15 +8068,15 @@ OS: {8}</source>
       </trans-unit>
       <trans-unit id="okButton">
         <source xml:lang="en">OK</source>
-        <target>Добре</target>
+        <target>Гаразд</target>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/electron-sandbox/window" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/electron-browser/window" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="appRootWarning.banner">
         <source xml:lang="en">Files you store within the installation folder ('{0}') may be OVERWRITTEN or DELETED IRREVERSIBLY without warning at update time.</source>
-        <target>Файли, які ви зберігаєте в папці встановлення ('{0}'), можуть бути ПЕРЕПИСАНІ або НЕВІДМОВНО УДАЛЕНІ без попередження під час оновлення.</target>
+        <target>Файли, які ви зберігаєте в папці встановлення ('{0}'), можуть бути ПЕРЕПИСАНІ або УДАЛЕНІ НЕВІДМІННО без попередження під час оновлення.</target>
       </trans-unit>
       <trans-unit id="configure">
         <source xml:lang="en">Configure</source>
@@ -7943,7 +8088,7 @@ OS: {8}</source>
       </trans-unit>
       <trans-unit id="keychainWriteError">
         <source xml:lang="en">Writing login information to the keychain failed with error '{0}'.</source>
-        <target>Запис інформації для входу в сховище ключів не вдався з помилкою '{0}'.</target>
+        <target>Запис інформації для входу в ключницю не вдався з помилкою '{0}'.</target>
       </trans-unit>
       <trans-unit id="learnMore">
         <source xml:lang="en">Learn More</source>
@@ -7968,7 +8113,7 @@ OS: {8}</source>
       </trans-unit>
       <trans-unit id="rememberCredentials">
         <source xml:lang="en">Remember my credentials</source>
-        <target>Запам'ятати мої облікові дані</target>
+        <target>Запам'ятайте мої облікові дані</target>
       </trans-unit>
       <trans-unit id="resolveShellEnvironment">
         <source xml:lang="en">Resolving shell environment...</source>
@@ -7988,7 +8133,7 @@ OS: {8}</source>
       </trans-unit>
       <trans-unit id="sharedProcessCrash">
         <source xml:lang="en">A shared background process terminated unexpectedly. Please restart the application to recover.</source>
-        <target>Спільний фоновий процес завершив роботу несподівано. Будь ласка, перезапустіть додаток, щоб відновити.</target>
+        <target>Спільний фоновий процес завершився несподівано. Будь ласка, перезапустіть додаток, щоб відновити роботу.</target>
       </trans-unit>
       <trans-unit id="showArgvParseWarning">
         <source xml:lang="en">The runtime arguments file 'argv.json' contains errors. Please correct them and restart.</source>
@@ -8000,7 +8145,7 @@ OS: {8}</source>
       </trans-unit>
       <trans-unit id="shutdownErrorClose">
         <source xml:lang="en">An unexpected error prevented the window to close</source>
-        <target>Несподівана помилка завадила закриттю вікна</target>
+        <target>Несподівана помилка завадила закриттю вікна.</target>
       </trans-unit>
       <trans-unit id="shutdownErrorDetail">
         <source xml:lang="en">Error: {0}</source>
@@ -8008,27 +8153,27 @@ OS: {8}</source>
       </trans-unit>
       <trans-unit id="shutdownErrorLoad">
         <source xml:lang="en">An unexpected error prevented to change the workspace</source>
-        <target>Несподівана помилка завадила змінити робоче середовище</target>
+        <target>Несподівана помилка завадила змінити робочий простір.</target>
       </trans-unit>
       <trans-unit id="shutdownErrorQuit">
         <source xml:lang="en">An unexpected error prevented the application to quit</source>
-        <target>Несподівана помилка завадила закриттю програми</target>
+        <target>Несподівана помилка завадила закриттю програми.</target>
       </trans-unit>
       <trans-unit id="shutdownErrorReload">
         <source xml:lang="en">An unexpected error prevented the window to reload</source>
-        <target>Несподівана помилка завадила перезавантаженню вікна</target>
+        <target>Несподівана помилка завадила перезавантаженню вікна.</target>
       </trans-unit>
       <trans-unit id="shutdownForceClose">
         <source xml:lang="en">Close Anyway</source>
-        <target>Закрити все одно</target>
+        <target>Закрити в будь-якому випадку</target>
       </trans-unit>
       <trans-unit id="shutdownForceLoad">
         <source xml:lang="en">Change Anyway</source>
-        <target>Змінити все одно</target>
+        <target>Змінити в будь-якому випадку</target>
       </trans-unit>
       <trans-unit id="shutdownForceQuit">
         <source xml:lang="en">Quit Anyway</source>
-        <target>Все одно вийти</target>
+        <target>Кинути все одно</target>
       </trans-unit>
       <trans-unit id="shutdownForceReload">
         <source xml:lang="en">Reload Anyway</source>
@@ -8052,11 +8197,11 @@ OS: {8}</source>
       </trans-unit>
       <trans-unit id="status.windowZoom">
         <source xml:lang="en">Window Zoom</source>
-        <target>Масштабування вікна</target>
+        <target>Вікно масштабування</target>
       </trans-unit>
       <trans-unit id="troubleshooting">
         <source xml:lang="en">Troubleshooting Guide</source>
-        <target>Посібник з усунення неполадок</target>
+        <target>Посібник з усунення несправностей</target>
       </trans-unit>
       <trans-unit id="username">
         <source xml:lang="en">Username</source>
@@ -8074,7 +8219,7 @@ OS: {8}</source>
       </trans-unit>
       <trans-unit id="zoomNumber">
         <source xml:lang="en">Zoom Level: {0} ({1}%)</source>
-        <target>Рівень збільшення: {0} ({1}%)</target>
+        <target>Рівень масштабування: {0} ({1}%)</target>
       </trans-unit>
       <trans-unit id="zoomOut">
         <source xml:lang="en">Zoom Out</source>

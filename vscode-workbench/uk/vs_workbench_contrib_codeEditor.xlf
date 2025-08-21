@@ -79,12 +79,12 @@
   <file original="src/vs/workbench/contrib/codeEditor/browser/emptyTextEditorHint/emptyTextEditorHint" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="defaultHintAriaLabelWithInlineChat">
-        <source xml:lang="en">Execute {0} to ask a question, execute {1} to select a language, or execute {2} to fill with template and get started. Start typing to dismiss.</source>
-        <target>Виконайте {0}, щоб задати питання, виконайте {1}, щоб вибрати мову, або виконайте {2}, щоб заповнити шаблон і почати. Почніть вводити, щоб закрити.</target>
+        <source xml:lang="en">Execute {0} to ask a question, execute {1} to select a language and get started. Start typing to dismiss.</source>
+        <target>Виконайте {0}, щоб задати питання, виконайте {1}, щоб вибрати мову та почати. Почніть вводити, щоб закрити.</target>
       </trans-unit>
       <trans-unit id="defaultHintAriaLabelWithoutInlineChat">
-        <source xml:lang="en">Execute {0} to select a language, execute {1} to fill with template, or execute {2} to open a different editor and get started. Start typing to dismiss.</source>
-        <target>Виконайте {0}, щоб вибрати мову, виконайте {1}, щоб заповнити шаблоном, або виконайте {2}, щоб відкрити інший редактор і почати. Почніть набирати, щоб закрити.</target>
+        <source xml:lang="en">Execute {0} to select a language and get started. Start typing to dismiss.</source>
+        <target>Виконайте {0}, щоб вибрати мову та розпочати. Почніть вводити, щоб закрити.</target>
       </trans-unit>
       <trans-unit id="disableEditorEmptyHint">
         <source xml:lang="en">Disable Empty Editor Hint</source>
@@ -95,20 +95,16 @@
         <target>Увімкніть {0} у налаштуваннях, щоб вимкнути це підказку.</target>
       </trans-unit>
       <trans-unit id="emptyTextEditorHintWithInlineChat">
-        <source xml:lang="en">[[Open chat]] ({0}), or [[select a language]] ({1}), or [[fill with template]] ({2}) to get started.
-Start typing to dismiss or [[don't show]] this again.</source>
+        <source xml:lang="en">[[Generate code]] ({0}), or [[select a language]] ({1}). Start typing to dismiss or [[don't show]] this again.</source>
         <note>Preserve double-square brackets and their order&#xD;
 language refers to a programming language</note>
-        <target>[[Відкрити чат]] ({0}), або [[вибрати мову]] ({1}), або [[заповнити шаблоном]] ({2}), щоб почати.  
-Почніть вводити, щоб закрити, або [[не показувати]] це знову.</target>
+        <target>[[Згенерувати код]] ({0}), або [[вибрати мову]] ({1}). Почніть вводити, щоб закрити, або [[не показувати]] це знову.</target>
       </trans-unit>
       <trans-unit id="emptyTextEditorHintWithoutInlineChat">
-        <source xml:lang="en">[[Select a language]] ({0}), or [[fill with template]] ({1}), or [[open a different editor]] ({2}) to get started.
-Start typing to dismiss or [[don't show]] this again.</source>
+        <source xml:lang="en">[[Select a language]] ({0}) to get started. Start typing to dismiss or [[don't show]] this again.</source>
         <note>Preserve double-square brackets and their order&#xD;
 language refers to a programming language</note>
-        <target>[[Виберіть мову]] ({0}), або [[заповніть шаблоном]] ({1}), або [[відкрийте інший редактор]] ({2}), щоб почати.  
-Почніть вводити, щоб закрити, або [[не показувати]] це знову.</target>
+        <target>[[Виберіть мову]] ({0}), щоб почати. Почніть вводити, щоб закрити або [[не показувати]] це знову.</target>
       </trans-unit>
     </body>
   </file>
@@ -544,9 +540,17 @@ language refers to a programming language</note>
         <source xml:lang="en">The RegExp pattern for unIndentedLinePattern.</source>
         <target>Шаблон RegExp для unIndentedLinePattern.</target>
       </trans-unit>
-      <trans-unit id="schema.lineComment">
+      <trans-unit id="schema.lineComment.comment">
         <source xml:lang="en">The character sequence that starts a line comment.</source>
         <target>Послідовність символів, яка починає коментар рядка.</target>
+      </trans-unit>
+      <trans-unit id="schema.lineComment.noIndent">
+        <source xml:lang="en">Whether the comment token should not be indented and placed at the first column. Defaults to false.</source>
+        <target>Чи повинен токен коментаря бути без відступу і розміщений у першій колонці. За замовчуванням - false.</target>
+      </trans-unit>
+      <trans-unit id="schema.lineComment.object">
+        <source xml:lang="en">Configuration for line comments.</source>
+        <target>Конфігурація для рядкових коментарів.</target>
       </trans-unit>
       <trans-unit id="schema.onEnterRules">
         <source xml:lang="en">The language's rules to be evaluated when pressing Enter.</source>
@@ -662,7 +666,7 @@ language refers to a programming language</note>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/codeEditor/electron-sandbox/selectionClipboard" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/contrib/codeEditor/electron-browser/selectionClipboard" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="actions.pasteSelectionClipboard">
         <source xml:lang="en">Paste Selection Clipboard</source>
@@ -670,11 +674,11 @@ language refers to a programming language</note>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/codeEditor/electron-sandbox/startDebugTextMate" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/contrib/codeEditor/electron-browser/startDebugTextMate" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="startDebugTextMate">
         <source xml:lang="en">Start TextMate Syntax Grammar Logging</source>
-        <target>Почати журналювання синтаксичної граматики TextMate</target>
+        <target>Почати ведення журналу синтаксичної граматики TextMate</target>
       </trans-unit>
     </body>
   </file>

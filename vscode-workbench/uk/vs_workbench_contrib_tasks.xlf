@@ -90,6 +90,10 @@ The task will be ignored.</source>
         <source xml:lang="en">No instance is currently running</source>
         <target>Жоден екземпляр наразі не працює.</target>
       </trans-unit>
+      <trans-unit id="TaskService.noRunningTasks">
+        <source xml:lang="en">No running tasks to restart</source>
+        <target>Немає запущених завдань для перезапуску</target>
+      </trans-unit>
       <trans-unit id="TaskService.noTaskIsRunning">
         <source xml:lang="en">No task is running</source>
         <target>Немає запущених завдань</target>
@@ -230,6 +234,10 @@ The task will be ignored.</source>
       <trans-unit id="TaskSystem.saveBeforeRun.prompt.title">
         <source xml:lang="en">Save all editors?</source>
         <target>Зберегти всіх редакторів?</target>
+      </trans-unit>
+      <trans-unit id="TaskSystem.taskNoLongerExists">
+        <source xml:lang="en">Task {0} no longer exists or has been modified. Cannot restart.</source>
+        <target>Завдання {0} більше не існує або було змінено. Не можна перезапустити.</target>
       </trans-unit>
       <trans-unit id="TaskSystem.unknownError">
         <source xml:lang="en">An error has occurred while running a task. See task log for details.</source>
@@ -408,8 +416,8 @@ The task will be ignored.</source>
 // для документації про формат tasks.json</target>
       </trans-unit>
       <trans-unit id="troubleshootWithChat">
-        <source xml:lang="en">Fix with Chat</source>
-        <target>Виправити за допомогою Chat</target>
+        <source xml:lang="en">Fix with {0}</source>
+        <target>Виправити з {0}</target>
       </trans-unit>
       <trans-unit id="unexpectedTaskType">
         <source xml:lang="en">The task provider for "{0}" tasks unexpectedly provided a task of type "{1}".
@@ -451,6 +459,10 @@ The task will be ignored.</source>
       <trans-unit id="ReRunTaskAction.label">
         <source xml:lang="en">Rerun Last Task</source>
         <target>Повторити останнє завдання</target>
+      </trans-unit>
+      <trans-unit id="RerunAllRunningTasksAction.label">
+        <source xml:lang="en">Rerun All Running Tasks</source>
+        <target>Перезапустити всі запущені завдання</target>
       </trans-unit>
       <trans-unit id="RestartTaskAction.label">
         <source xml:lang="en">Restart Running Task</source>
@@ -518,10 +530,6 @@ The task will be ignored.</source>
       <trans-unit id="numberOfRunningTasks">
         <source xml:lang="en">{0} running tasks</source>
         <target>{0} виконує завдання</target>
-      </trans-unit>
-      <trans-unit id="rerunTaskIcon">
-        <source xml:lang="en">View icon of the rerun task.</source>
-        <target>Переглянути іконку повторного запуску завдання.</target>
       </trans-unit>
       <trans-unit id="runningTasks">
         <source xml:lang="en">Show Running Tasks</source>
@@ -1519,6 +1527,10 @@ The task command line or label</note>
         <source xml:lang="en">The loop property is only supported on the last line matcher.</source>
         <target>Властивість циклу підтримується лише на останньому рядку, що відповідає шаблону.</target>
       </trans-unit>
+      <trans-unit id="ProblemPatternParser.problemPattern.emptyPattern">
+        <source xml:lang="en">The problem pattern is invalid. It must contain at least one pattern.</source>
+        <target>Шаблон проблеми є недійсним. Він повинен містити принаймні один шаблон.</target>
+      </trans-unit>
       <trans-unit id="ProblemPatternParser.problemPattern.kindProperty.notFirst">
         <source xml:lang="en">The problem pattern is invalid. The kind property must be provided only in the first element</source>
         <target>Шаблон проблеми недійсний. Властивість kind повинна бути надана лише в першому елементі.</target>
@@ -1769,6 +1781,10 @@ The task command line or label</note>
         <source xml:lang="en">Whether the task commands have been registered yet</source>
         <target>Чи були вже зареєстровані команди завдання?</target>
       </trans-unit>
+      <trans-unit id="tasks.tasksAvailable">
+        <source xml:lang="en">Whether any tasks are available in the workspace.</source>
+        <target>Чи доступні будь-які завдання в робочому просторі.</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/tasks/common/taskTemplates" source-language="en" datatype="plaintext" target-language="uk">
@@ -1797,6 +1813,10 @@ The task command line or label</note>
         <source xml:lang="en">Error: the task identifier '{0}' is missing the required property '{1}'. The task identifier will be ignored.</source>
         <target>Помилка: ідентифікатор завдання '{0}' не містить обов'язкову властивість '{1}'. Ідентифікатор завдання буде проігноровано.</target>
       </trans-unit>
+      <trans-unit id="rerunTaskIcon">
+        <source xml:lang="en">View icon of the rerun task.</source>
+        <target>Переглянути іконку повторного запуску завдання.</target>
+      </trans-unit>
       <trans-unit id="taskTerminalActive">
         <source xml:lang="en">Whether the active terminal is a task terminal.</source>
         <target>Чи є активний термінал терміналом завдань.</target>
@@ -1811,7 +1831,7 @@ The task command line or label</note>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/tasks/electron-sandbox/taskService" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/contrib/tasks/electron-browser/taskService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="TaskSystem.exitAnyways">
         <source xml:lang="en">&amp;&amp;Exit Anyways</source>
@@ -1820,7 +1840,7 @@ The task command line or label</note>
       </trans-unit>
       <trans-unit id="TaskSystem.noProcess">
         <source xml:lang="en">The launched task doesn't exist anymore. If the task spawned background processes exiting VS Code might result in orphaned processes. To avoid this start the last background process with a wait flag.</source>
-        <target>Запущене завдання більше не існує. Якщо завдання створило фонові процеси, вихід з VS Code може призвести до залишкових процесів. Щоб уникнути цього, запустіть останній фоновий процес з прапором очікування.</target>
+        <target>Запущене завдання більше не існує. Якщо завдання створило фонові процеси, вихід з VS Code може призвести до появи сирітських процесів. Щоб уникнути цього, запустіть останній фоновий процес з прапором очікування.</target>
       </trans-unit>
       <trans-unit id="TaskSystem.runningTask">
         <source xml:lang="en">There is a task running. Do you want to terminate it?</source>

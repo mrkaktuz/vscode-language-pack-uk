@@ -433,8 +433,8 @@ A keybinding</note>
         <target>Не вдається зареєструвати '{0}'. Це відповідає шаблону властивості '\\[.*\\]$' для опису специфічних для мови налаштувань редактора. Використовуйте внесок 'configurationDefaults'.</target>
       </trans-unit>
       <trans-unit id="defaultLanguageConfiguration.description">
-        <source xml:lang="en">Configure settings to be overridden for the {0} language.</source>
-        <target>Налаштуйте параметри, які будуть перекриті для мови {0}.</target>
+        <source xml:lang="en">Configure settings to be overridden for {0}.</source>
+        <target>Налаштуйте параметри, які будуть перекриті для {0}.</target>
       </trans-unit>
       <trans-unit id="defaultLanguageConfigurationOverrides.title">
         <source xml:lang="en">Default Language Configuration Overrides</source>
@@ -572,6 +572,20 @@ Received: '{1}'.</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/platform/dialogs/browser/dialog" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="aboutDetail">
+        <source xml:lang="en">Version: {0}
+Commit: {1}
+Date: {2}
+Browser: {3}</source>
+        <target>Версія: {0}  
+Коміт: {1}  
+Дата: {2}  
+Браузер: {3}</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/platform/dialogs/common/dialogs" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="cancelButton">
@@ -595,6 +609,26 @@ Received: '{1}'.</source>
         <source xml:lang="en">&amp;&amp;Yes</source>
         <note>&amp;&amp; denotes a mnemonic</note>
         <target>&amp;&amp;Так</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/dialogs/electron-browser/dialog" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="aboutDetail">
+        <source xml:lang="en">Version: {0}
+Commit: {1}
+Date: {2}
+Electron: {3}
+ElectronBuildId: {4}
+Chromium: {5}
+Node.js: {6}
+V8: {7}
+OS: {8}</source>
+        <note>Electron, Chromium, Node.js and V8 are product names that need no translation</note>
+        <target>Версія: {0}  
+Коміт: {1}  
+Дата: {2}  
+Браузер: {3}</target>
       </trans-unit>
     </body>
   </file>
@@ -637,6 +671,10 @@ Received: '{1}'.</source>
         <source xml:lang="en">Add folder(s) to the last active window.</source>
         <target>Додати папку(и) до останнього активного вікна.</target>
       </trans-unit>
+      <trans-unit id="addFile">
+        <source xml:lang="en">Add files as context to the chat session.</source>
+        <target>Додайте файли як контекст до сесії чату.</target>
+      </trans-unit>
       <trans-unit id="addMcp">
         <source xml:lang="en">Adds a Model Context Protocol server definition to the user profile. Accepts JSON input in the form '{"name":"server-name","command":...}'</source>
         <target>Додає визначення сервера протоколу контексту моделі до профілю користувача. Приймає JSON-вхід у формі '{"name":"server-name","command":...}'</target>
@@ -645,9 +683,21 @@ Received: '{1}'.</source>
         <source xml:lang="en">Filters installed extensions by provided category, when using --list-extensions.</source>
         <target>Фільтрує встановлені розширення за наданою категорією, коли використовується --list-extensions.</target>
       </trans-unit>
+      <trans-unit id="chatMaximize">
+        <source xml:lang="en">Maximize the chat session view.</source>
+        <target>Максимізуйте перегляд сеансу чату.</target>
+      </trans-unit>
+      <trans-unit id="chatMode">
+        <source xml:lang="en">The mode to use for the chat session. Available options: 'ask', 'edit', 'agent', or the identifier of a custom mode. Defaults to 'agent'.</source>
+        <target>Режим, який використовувати для сеансу чату. Доступні варіанти: 'ask', 'edit', 'agent' або ідентифікатор користувацького режиму. За замовчуванням - 'agent'.</target>
+      </trans-unit>
       <trans-unit id="cliDataDir">
         <source xml:lang="en">Directory where CLI metadata should be stored.</source>
         <target>Каталог, де повинні зберігатися метадані CLI.</target>
+      </trans-unit>
+      <trans-unit id="cliPrompt">
+        <source xml:lang="en">prompt</source>
+        <target>підказка</target>
       </trans-unit>
       <trans-unit id="deprecated.useInstead">
         <source xml:lang="en">Use {0} instead.</source>
@@ -729,6 +779,10 @@ Received: '{1}'.</source>
         <source xml:lang="en">Log level to use. Default is 'info'. Allowed values are 'critical', 'error', 'warn', 'info', 'debug', 'trace', 'off'. You can also configure the log level of an extension by passing extension id and log level in the following format: '${publisher}.${name}:${logLevel}'. For example: 'vscode.csharp:trace'. Can receive one or more such entries.</source>
         <target>Рівень журналювання, який потрібно використовувати. За замовчуванням - 'info'. Дозволені значення: 'critical', 'error', 'warn', 'info', 'debug', 'trace', 'off'. Ви також можете налаштувати рівень журналювання розширення, передавши ідентифікатор розширення та рівень журналювання у наступному форматі: '${publisher}.${name}:${logLevel}'. Наприклад: 'vscode.csharp:trace'. Може приймати одну або кілька таких записів.</target>
       </trans-unit>
+      <trans-unit id="mcp">
+        <source xml:lang="en">Model Context Protocol</source>
+        <target>Модель контекстного протоколу</target>
+      </trans-unit>
       <trans-unit id="merge">
         <source xml:lang="en">Perform a three-way merge by providing paths for two modified versions of a file, the common origin of both modified versions and the output file to save merge results.</source>
         <target>Виконайте трьохстороннє злиття, надавши шляхи до двох змінених версій файлу, спільного походження обох змінених версій та вихідного файлу для збереження результатів злиття.</target>
@@ -736,6 +790,10 @@ Received: '{1}'.</source>
       <trans-unit id="newWindow">
         <source xml:lang="en">Force to open a new window.</source>
         <target>Примусити відкрити нове вікно.</target>
+      </trans-unit>
+      <trans-unit id="newWindowForChat">
+        <source xml:lang="en">Force to open an empty window for the chat session.</source>
+        <target>Примусити відкрити порожнє вікно для сеансу чату.</target>
       </trans-unit>
       <trans-unit id="options">
         <source xml:lang="en">options</source>
@@ -757,6 +815,10 @@ Received: '{1}'.</source>
         <source xml:lang="en">Opens the provided folder or workspace with the given profile and associates the profile with the workspace. If the profile does not exist, a new empty one is created.</source>
         <target>Відкриває надану папку або робоче середовище з вказаним профілем і асоціює профіль з робочим середовищем. Якщо профіль не існує, створюється новий порожній.</target>
       </trans-unit>
+      <trans-unit id="prompt">
+        <source xml:lang="en">The prompt to use as chat.</source>
+        <target>Запит для використання в чаті.</target>
+      </trans-unit>
       <trans-unit id="remove">
         <source xml:lang="en">Remove folder(s) from the last active window.</source>
         <target>Видалити папку(и) з останнього активного вікна.</target>
@@ -764,6 +826,10 @@ Received: '{1}'.</source>
       <trans-unit id="reuseWindow">
         <source xml:lang="en">Force to open a file or folder in an already opened window.</source>
         <target>Примусово відкрити файл або папку в уже відкритому вікні.</target>
+      </trans-unit>
+      <trans-unit id="reuseWindowForChat">
+        <source xml:lang="en">Force to use the last active window for the chat session.</source>
+        <target>Примусити використовувати останнє активне вікно для сеансу чату.</target>
       </trans-unit>
       <trans-unit id="showVersions">
         <source xml:lang="en">Show versions of installed extensions, when using --list-extensions.</source>
@@ -773,13 +839,9 @@ Received: '{1}'.</source>
         <source xml:lang="en">Print process usage and diagnostics information.</source>
         <target>Друкувати інформацію про використання процесу та діагностику.</target>
       </trans-unit>
-      <trans-unit id="stdinUnix">
-        <source xml:lang="en">To read from stdin, append '-' (e.g. 'ps aux | grep code | {0} -')</source>
-        <target>Щоб читати з stdin, додайте '-' (наприклад, 'ps aux | grep code | {0} -')</target>
-      </trans-unit>
-      <trans-unit id="stdinWindows">
-        <source xml:lang="en">To read output from another program, append '-' (e.g. 'echo Hello World | {0} -')</source>
-        <target>Щоб прочитати вихідні дані з іншої програми, додайте '-' (наприклад, 'echo Hello World | {0} -')</target>
+      <trans-unit id="stdinUsage">
+        <source xml:lang="en">To read from stdin, append '-' (e.g. '{0}')</source>
+        <target>Щоб читати з stdin, додайте '-' (наприклад, '{0}')</target>
       </trans-unit>
       <trans-unit id="subcommands">
         <source xml:lang="en">Subcommands</source>
@@ -1823,11 +1885,31 @@ Received: '{1}'.</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/platform/mcp/common/allowedMcpServersService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="mcp servers are not allowed">
+        <source xml:lang="en">Model Context Protocol servers are disabled in the Editor. Please check your [settings]({0}).</source>
+        <target>Сервери протоколу контексту моделі вимкнені в редакторі. Будь ласка, перевірте свої [налаштування]({0}).</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/platform/mcp/common/mcpGalleryService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="noReadme">
         <source xml:lang="en">No README available</source>
         <target>Немає доступного README</target>
+      </trans-unit>
+      <trans-unit id="readme.viewInBrowser">
+        <source xml:lang="en">You can find information about this server [here]({0})</source>
+        <target>Ви можете знайти інформацію про цей сервер [тут]({0})</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/mcp/common/mcpManagementService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="not allowed to install">
+        <source xml:lang="en">This mcp server cannot be installed because {0}</source>
+        <target>Цю розширення не можна встановити, оскільки {0}</target>
       </trans-unit>
     </body>
   </file>
@@ -1836,6 +1918,11 @@ Received: '{1}'.</source>
       <trans-unit id="cancel">
         <source xml:lang="en">Cancel</source>
         <target>Скасувати</target>
+      </trans-unit>
+      <trans-unit id="exit">
+        <source xml:lang="en">&amp;&amp;Exit</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Вихід</target>
       </trans-unit>
       <trans-unit id="mAbout">
         <source xml:lang="en">About {0}</source>
@@ -1986,6 +2073,10 @@ Received: '{1}'.</source>
         <target>&amp;&amp;Вихід</target>
       </trans-unit>
       <trans-unit id="quitMessage">
+        <source xml:lang="en">Are you sure you want to exit?</source>
+        <target>Ви впевнені, що хочете вийти?</target>
+      </trans-unit>
+      <trans-unit id="quitMessageMac">
         <source xml:lang="en">Are you sure you want to quit?</source>
         <target>Ви впевнені, що хочете вийти?</target>
       </trans-unit>
@@ -2005,10 +2096,23 @@ Received: '{1}'.</source>
         <source xml:lang="en">Unable to uninstall the shell command '{0}'.</source>
         <target>Неможливо видалити команду оболонки '{0}'.</target>
       </trans-unit>
+      <trans-unit id="copyLink">
+        <source xml:lang="en">&amp;&amp;Copy Link</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Скопіювати посилання</target>
+      </trans-unit>
       <trans-unit id="ok">
         <source xml:lang="en">&amp;&amp;OK</source>
         <note>&amp;&amp; denotes a mnemonic</note>
         <target>&amp;&amp;Гаразд</target>
+      </trans-unit>
+      <trans-unit id="openExternalErrorLinkMessage">
+        <source xml:lang="en">An error occurred opening a link in your default browser.</source>
+        <target>Виникла помилка при відкритті посилання у вашому браузері за замовчуванням.</target>
+      </trans-unit>
+      <trans-unit id="openExternalProgramErrorMessage">
+        <source xml:lang="en">An error occurred opening an external program.</source>
+        <target>Виникла помилка при відкритті зовнішньої програми.</target>
       </trans-unit>
       <trans-unit id="sourceMissing">
         <source xml:lang="en">Unable to find shell script in '{0}'</source>
@@ -2036,6 +2140,22 @@ Received: '{1}'.</source>
       <trans-unit id="warnEscalationUninstall">
         <source xml:lang="en">{0} will now prompt with 'osascript' for Administrator privileges to uninstall the shell command.</source>
         <target>{0} тепер запитає 'osascript' для отримання прав адміністратора для видалення командного рядка.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/notification/common/notification" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="severityPrefix.error">
+        <source xml:lang="en">Error: {0}</source>
+        <target>Помилка: {0}</target>
+      </trans-unit>
+      <trans-unit id="severityPrefix.info">
+        <source xml:lang="en">Info: {0}</source>
+        <target>Інформація: {0}</target>
+      </trans-unit>
+      <trans-unit id="severityPrefix.warning">
+        <source xml:lang="en">Warning: {0}</source>
+        <target>Увага: {0}</target>
       </trans-unit>
     </body>
   </file>
@@ -2177,7 +2297,7 @@ Received: '{1}'.</source>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/platform/quickinput/browser/quickInputTree" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/platform/quickinput/browser/quickInputList" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="quickInput">
         <source xml:lang="en">Quick Input</source>
@@ -2206,6 +2326,22 @@ Received: '{1}'.</source>
       <trans-unit id="terminal.commands.pinned">
         <source xml:lang="en">pinned</source>
         <target>закріплено</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/quickinput/browser/tree/quickInputTreeAccessibilityProvider" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="quickTree">
+        <source xml:lang="en">Quick Tree</source>
+        <target>Швидке дерево</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/quickinput/browser/tree/quickTree" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="quickInputBox.ariaLabel">
+        <source xml:lang="en">Type to narrow down results.</source>
+        <target>Введіть текст для звуження результатів.</target>
       </trans-unit>
     </body>
   </file>
@@ -2921,6 +3057,10 @@ To override an existing profile use its profile name as the key, for example:
       <trans-unit id="editorStickyScrollBorder">
         <source xml:lang="en">Border color of sticky scroll in the editor</source>
         <target>Колір рамки липкого скролу в редакторі</target>
+      </trans-unit>
+      <trans-unit id="editorStickyScrollGutterBackground">
+        <source xml:lang="en">Background color of the gutter part of sticky scroll in the editor</source>
+        <target>Колір фону частини канавки липкого скролу в редакторі</target>
       </trans-unit>
       <trans-unit id="editorStickyScrollHoverBackground">
         <source xml:lang="en">Background color of sticky scroll on hover in the editor</source>

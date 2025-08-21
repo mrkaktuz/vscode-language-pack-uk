@@ -79,10 +79,6 @@
         <source xml:lang="en">There are no unattached terminals to attach to</source>
         <target>Немає не підключених терміналів, до яких можна підключитися.</target>
       </trans-unit>
-      <trans-unit id="sendSequence">
-        <source xml:lang="en">The sequence of text to send to the terminal</source>
-        <target>Послідовність тексту для відправки на термінал</target>
-      </trans-unit>
       <trans-unit id="showTerminalTabs">
         <source xml:lang="en">Show Tabs</source>
         <target>Показати вкладки</target>
@@ -496,6 +492,11 @@
         <source xml:lang="en">Launch Profile...</source>
         <target>Запустити профіль...</target>
       </trans-unit>
+      <trans-unit id="miNewInNewWindow">
+        <source xml:lang="en">New Terminal &amp;&amp;Window</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>Новий Терминал &amp;&amp;Вікно</target>
+      </trans-unit>
       <trans-unit id="miNewTerminal">
         <source xml:lang="en">&amp;&amp;New Terminal</source>
         <note>&amp;&amp; denotes a mnemonic</note>
@@ -516,9 +517,9 @@
         <note>&amp;&amp; denotes a mnemonic</note>
         <target>&amp;&amp;Розділити термінал</target>
       </trans-unit>
-      <trans-unit id="splitTerminal">
-        <source xml:lang="en">Split Terminal</source>
-        <target>Розділений термінал</target>
+      <trans-unit id="split.profile">
+        <source xml:lang="en">Split Terminal with Profile</source>
+        <target>Розділений термінал з профілем</target>
       </trans-unit>
       <trans-unit id="workbench.action.tasks.configureTaskRunner">
         <source xml:lang="en">Configure Tasks...</source>
@@ -1016,6 +1017,10 @@ The terminal's title</note>
   </file>
   <file original="src/vs/workbench/contrib/terminal/common/terminalConfiguration" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="autoApproveMode.description">
+        <source xml:lang="en">Controls whether to allow auto approval in the run in terminal tool.</source>
+        <target>Контролює, чи дозволяти автоматичне схвалення в інструменті запуску в терміналі.</target>
+      </trans-unit>
       <trans-unit id="cwd">
         <source xml:lang="en">the terminal's current working directory.</source>
         <target>поточний робочий каталог термінала.</target>
@@ -1023,6 +1028,14 @@ The terminal's title</note>
       <trans-unit id="cwdFolder">
         <source xml:lang="en">the terminal's current working directory, displayed for multi-root workspaces or in a single root workspace when the value differs from the initial working directory. On Windows, this will only be displayed when shell integration is enabled.</source>
         <target>поточний робочий каталог терміналу, відображений для багатокореневих робочих просторів або в одному кореневому робочому просторі, коли значення відрізняється від початкового робочого каталогу. У Windows це буде відображено лише тоді, коли інтеграція оболонки увімкнена.</target>
+      </trans-unit>
+      <trans-unit id="enableAutoApprove.off">
+        <source xml:lang="en">Terminal auto approval is disabled.</source>
+        <target>Автоматичне схвалення терміналу вимкнено.</target>
+      </trans-unit>
+      <trans-unit id="enableAutoApprove.on">
+        <source xml:lang="en">Terminal auto approval is enabled, with the default rules defined in {0}.</source>
+        <target>Автоматичне схвалення терміналу увімкнено, з правилами за замовчуванням, визначеними в {0}.</target>
       </trans-unit>
       <trans-unit id="enableFileLinks.notRemote">
         <source xml:lang="en">Enable only when not in a remote workspace.</source>
@@ -1394,10 +1407,6 @@ Default Skipped Commands:
         <source xml:lang="en">Controls whether the terminal will ignore bracketed paste mode even if the terminal was put into the mode, omitting the {0} and {1} sequences when pasting. This is useful when the shell is not respecting the mode which can happen in sub-shells for example.</source>
         <target>Контролює, чи термінал ігноруватиме режим вставки в дужках, навіть якщо термінал був переведений у цей режим, пропускаючи послідовності {0} та {1} під час вставки. Це корисно, коли оболонка не дотримується режиму, що може статися, наприклад, у підоболонках.</target>
       </trans-unit>
-      <trans-unit id="terminal.integrated.killGracefully">
-        <source xml:lang="en">Controls how terminal processes are terminated. When enabled, attempts a graceful shutdown of the process tree. On POSIX, this will send `SIGTERM`. On Windows, it uses `taskkill.exe` without the `/F` (force) flag. Note that this may allow misbehaving processes to remain running. When disabled (default), processes are terminated with: `SIGHUP`.</source>
-        <target>Контролює, як завершуються термінальні процеси. Коли увімкнено, намагається виконати коректне завершення дерева процесів. На POSIX це надішле `SIGTERM`. На Windows використовується `taskkill.exe` без прапора `/F` (примусово). Зверніть увагу, що це може дозволити неправильно працюючим процесам залишатися запущеними. Коли вимкнено (за замовчуванням), процеси завершуються з: `SIGHUP`.</target>
-      </trans-unit>
       <trans-unit id="terminal.integrated.letterSpacing">
         <source xml:lang="en">Controls the letter spacing of the terminal. This is an integer value which represents the number of additional pixels to add between characters.</source>
         <target>Контролює міжбуквений інтервал терміналу. Це ціле число, яке представляє кількість додаткових пікселів, які потрібно додати між символами.</target>
@@ -1740,6 +1749,10 @@ This setting applies only when terminals are created, so you will need to restar
         <source xml:lang="en">Whether the focused tab's terminal is a split terminal.</source>
         <target>Чи є термінал фокусованої вкладки розділеним терміналом.</target>
       </trans-unit>
+      <trans-unit id="splitPaneActive">
+        <source xml:lang="en">Whether the active terminal is a split pane.</source>
+        <target>Чи є активний термінал розділеною панеллю.</target>
+      </trans-unit>
       <trans-unit id="terminalAltBufferActive">
         <source xml:lang="en">Whether the terminal's alt buffer is active.</source>
         <target>Чи активний альтернативний буфер термінала.</target>
@@ -1828,6 +1841,10 @@ This setting applies only when terminals are created, so you will need to restar
         <source xml:lang="en">Move Terminal into Editor Area</source>
         <target>Перемістити термінал у область редактора</target>
       </trans-unit>
+      <trans-unit id="newInNewWindow">
+        <source xml:lang="en">New Terminal Window</source>
+        <target>Новий термінал</target>
+      </trans-unit>
       <trans-unit id="previousSessionCategory">
         <source xml:lang="en">previous session</source>
         <target>попередня сесія</target>
@@ -1904,17 +1921,13 @@ This setting applies only when terminals are created, so you will need to restar
         <source xml:lang="en">Scroll to Previous Command</source>
         <target>Прокрутити до попередньої команди</target>
       </trans-unit>
-      <trans-unit id="workbench.action.terminal.sendSequence">
-        <source xml:lang="en">Send Custom Sequence to Terminal</source>
-        <target>Відправити користувацьку послідовність на термінал</target>
-      </trans-unit>
       <trans-unit id="workbench.action.terminal.sizeToContentWidthInstance">
         <source xml:lang="en">Toggle Size to Content Width</source>
         <target>Перемкнути розмір на ширину вмісту</target>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/terminal/electron-sandbox/terminalRemote" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/contrib/terminal/electron-browser/terminalRemote" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="workbench.action.terminal.newLocal">
         <source xml:lang="en">Create New Integrated Terminal (Local)</source>

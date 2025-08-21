@@ -206,6 +206,18 @@ Can be an array of strings or a single string. When the program is launched in a
         <source xml:lang="en">Configures glob patterns for determining when to attach in "smart" `#debug.javascript.autoAttachFilter#` mode. `$KNOWN_TOOLS$` is replaced with a list of names of common test and code runners. [Read more on the VS Code docs](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_auto-attach-smart-patterns).</source>
         <target>Налаштовує глобальні шаблони для визначення, коли приєднуватися в "розумному" `#debug.javascript.autoAttachFilter#` режимі. `$KNOWN_TOOLS$` замінюється списком назв загальних тестових та кодових запусків. [Читати більше в документації VS Code](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_auto-attach-smart-patterns).</target>
       </trans-unit>
+      <trans-unit id="browser.killBehavior.description">
+        <source xml:lang="en">Configures how browser processes are killed when stopping the session with `cleanUp: wholeBrowser`. Can be:
+
+- forceful (default): forcefully tears down the process tree. Sends SIGKILL on posix, or `taskkill.exe /F` on Windows.
+- polite: gracefully tears down the process tree. It's possible that misbehaving processes continue to run after shutdown in this way. Sends SIGTERM on posix, or `taskkill.exe` with no `/F` (force) flag on Windows.
+- none: no termination will happen.</source>
+        <target>Налаштовує, як браузерні процеси зупиняються при завершенні сесії з `cleanUp: wholeBrowser`. Може бути:
+
+- примусовим (за замовчуванням): примусово знищує дерево процесів. Надсилає SIGKILL на posix або `taskkill.exe /F` на Windows.
+- ввічливим: коректно знищує дерево процесів. Можливо, що неправильно працюючі процеси продовжать виконання після завершення в такий спосіб. Надсилає SIGTERM на posix або `taskkill.exe` без прапора `/F` (примус) на Windows.
+- жодного: жодне завершення не відбудеться.</target>
+      </trans-unit>
       <trans-unit id="node.killBehavior.description">
         <source xml:lang="en">Configures how debug processes are killed when stopping the session. Can be:
 

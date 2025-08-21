@@ -506,6 +506,22 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
         <source xml:lang="en">Manage Workspace Trust</source>
         <target>Керувати довірою робочого простору</target>
       </trans-unit>
+      <trans-unit id="mcp.renderer.openRemoteConfig">
+        <source xml:lang="en">Open Remote User MCP Configuration</source>
+        <target>Відкрити конфігурацію віддаленого користувача MCP</target>
+      </trans-unit>
+      <trans-unit id="mcp.renderer.openUserConfig">
+        <source xml:lang="en">Open User MCP Configuration</source>
+        <target>Відкрити конфігурацію користувача MCP</target>
+      </trans-unit>
+      <trans-unit id="mcp.renderer.remoteConfigFound">
+        <source xml:lang="en">MCP servers should not be configured in remote user settings. Use the dedicated MCP configuration instead.</source>
+        <target>Сервери MCP не повинні бути налаштовані в налаштуваннях віддаленого користувача. Замість цього використовуйте спеціальну конфігурацію MCP.</target>
+      </trans-unit>
+      <trans-unit id="mcp.renderer.userConfigFound">
+        <source xml:lang="en">MCP servers should not be configured in user settings. Use the dedicated MCP configuration instead.</source>
+        <target>Сервери MCP не повинні бути налаштовані в налаштуваннях користувача. Замість цього використовуйте спеціальну конфігурацію MCP.</target>
+      </trans-unit>
       <trans-unit id="replaceDefaultValue">
         <source xml:lang="en">Replace in Settings</source>
         <target>Замінити в Налаштуваннях</target>
@@ -519,8 +535,8 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
         <target>Цю настройку не можна застосувати, оскільки вона не зареєстрована як налаштування переваги мови.</target>
       </trans-unit>
       <trans-unit id="unsupportedApplicationSetting">
-        <source xml:lang="en">This setting has an application scope and can be set only in the user settings file.</source>
-        <target>Ця настройка має область застосування і може бути встановлена лише у файлі налаштувань користувача.</target>
+        <source xml:lang="en">This setting has an application scope and can only be set in the settings file from the Default profile.</source>
+        <target>Ця налаштування має область застосування на рівні програми і може бути встановлено лише у файлі налаштувань з профілю за замовчуванням.</target>
       </trans-unit>
       <trans-unit id="unsupportedMachineSetting">
         <source xml:lang="en">This setting can only be applied in user settings in local window or in remote settings in remote window.</source>
@@ -598,13 +614,29 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
         <source xml:lang="en">{0} Settings Found</source>
         <target>{0} Налаштування знайдено</target>
       </trans-unit>
+      <trans-unit id="moreThanOneResultWithAiAvailable">
+        <source xml:lang="en">{0} Settings Found. AI Results Available</source>
+        <target>{0} Налаштування знайдено. Результати ШІ доступні.</target>
+      </trans-unit>
+      <trans-unit id="noAiResults">
+        <source xml:lang="en">No AI results available at this time.</source>
+        <target>На даний момент немає доступних результатів AI.</target>
+      </trans-unit>
       <trans-unit id="noResults">
         <source xml:lang="en">No Settings Found</source>
         <target>Налаштувань не знайдено</target>
       </trans-unit>
+      <trans-unit id="noResultsWithAiAvailable">
+        <source xml:lang="en">No Settings Found. AI Results Available</source>
+        <target>Налаштувань не знайдено. Доступні результати ШІ.</target>
+      </trans-unit>
       <trans-unit id="oneResult">
         <source xml:lang="en">1 Setting Found</source>
         <target>1 Налаштування знайдено</target>
+      </trans-unit>
+      <trans-unit id="oneResultWithAiAvailable">
+        <source xml:lang="en">1 Setting Found. AI Results Available</source>
+        <target>1 Налаштування знайдено. Результати ШІ доступні</target>
       </trans-unit>
       <trans-unit id="settings">
         <source xml:lang="en">Settings</source>
@@ -614,9 +646,13 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
         <source xml:lang="en">Workspace Trust</source>
         <target>Довіра до робочого простору</target>
       </trans-unit>
-      <trans-unit id="showAiResultsDescription">
-        <source xml:lang="en">Search settings with AI</source>
-        <target>Пошук налаштувань за допомогою ШІ</target>
+      <trans-unit id="showAiResultsDisabled">
+        <source xml:lang="en">No AI results available at this time...</source>
+        <target>Немає результатів ШІ на даний момент...</target>
+      </trans-unit>
+      <trans-unit id="showAiResultsEnabled">
+        <source xml:lang="en">Show AI-recommended results</source>
+        <target>Показати результати, рекомендовані ШІ</target>
       </trans-unit>
       <trans-unit id="turnOnSyncButton">
         <source xml:lang="en">Backup and Sync Settings</source>

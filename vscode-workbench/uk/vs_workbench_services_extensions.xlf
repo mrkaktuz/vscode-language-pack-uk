@@ -200,6 +200,10 @@
         <source xml:lang="en">An activation event emitted whenever a file that resolves to the specified language gets opened.</source>
         <target>Подія активації, що генерується щоразу, коли відкривається файл, який відповідає вказаній мові.</target>
       </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onLanguageModelChat">
+        <source xml:lang="en">An activation event emitted when a chat model provider for the given vendor is requested.</source>
+        <target>Подія активації, що генерується, коли запитується постачальник моделі чату для вказаного постачальника.</target>
+      </trans-unit>
       <trans-unit id="vscode.extension.activationEvents.onLanguageModelTool">
         <source xml:lang="en">An activation event emitted when the specified language model tool is invoked.</source>
         <target>Подія активації, що генерується, коли викликається вказаний інструмент мовної моделі.</target>
@@ -232,6 +236,10 @@
         <source xml:lang="en">An activation event emitted whenever tasks of a certain type need to be listed or resolved.</source>
         <target>Подія активації, що виникає щоразу, коли потрібно перерахувати або вирішити завдання певного типу.</target>
       </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onTerminal">
+        <source xml:lang="en">An activation event emitted when a terminal of the given shell type is opened.</source>
+        <target>Подія активації, що генерується, коли відкривається термінал вказаного типу оболонки.</target>
+      </trans-unit>
       <trans-unit id="vscode.extension.activationEvents.onTerminalCompletionsRequested">
         <source xml:lang="en">An activation event emitted when terminal completions are requested.</source>
         <target>Подія активації, що генерується, коли запитуються завершення терміналу.</target>
@@ -243,6 +251,10 @@
       <trans-unit id="vscode.extension.activationEvents.onTerminalQuickFixRequest">
         <source xml:lang="en">An activation event emitted when a command matches the selector associated with this ID</source>
         <target>Подія активації, що виникає, коли команда відповідає селектору, пов'язаному з цим ідентифікатором.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onTerminalShellIntegration">
+        <source xml:lang="en">An activation event emitted when terminal shell integration is activated for the given shell type.</source>
+        <target>Подія активації, що виникає, коли інтеграція термінального шеллу активується для вказаного типу шеллу.</target>
       </trans-unit>
       <trans-unit id="vscode.extension.activationEvents.onUri">
         <source xml:lang="en">An activation event emitted whenever a system-wide Uri directed towards this extension is open.</source>
@@ -468,11 +480,19 @@
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/services/extensions/electron-sandbox/cachedExtensionScanner" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/services/extensions/electron-browser/cachedExtensionScanner" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="extensionCache.invalid">
         <source xml:lang="en">Extensions have been modified on disk. Please reload the window.</source>
         <target>Розширення були змінені на диску. Будь ласка, перезавантажте вікно.</target>
+      </trans-unit>
+      <trans-unit id="extensionUnderDevelopment.invalid">
+        <source xml:lang="en">Failed loading extension '{0}' under development because it is invalid: {1}</source>
+        <target>Не вдалося завантажити розширення '{0}' під час розробки, оскільки воно є недійсним: {1}</target>
+      </trans-unit>
+      <trans-unit id="extensionsUnderDevelopment.invalid">
+        <source xml:lang="en">Failed loading extensions {0} under development because they are invalid: {1}</source>
+        <target>Не вдалося завантажити розширення {0} під час розробки, оскільки вони є недійсними: {1}</target>
       </trans-unit>
       <trans-unit id="reloadWindow">
         <source xml:lang="en">Reload Window</source>
@@ -480,7 +500,7 @@
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/services/extensions/electron-sandbox/localProcessExtensionHost" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/services/extensions/electron-browser/localProcessExtensionHost" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="extensionHost.startupFail">
         <source xml:lang="en">Extension host did not start in 10 seconds, that might be a problem.</source>
@@ -500,7 +520,7 @@
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/services/extensions/electron-sandbox/nativeExtensionService" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/services/extensions/electron-browser/nativeExtensionService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="devTools">
         <source xml:lang="en">Open Developer Tools</source>

@@ -337,7 +337,8 @@ The destination path may use the following variables:
 - `${documentWorkspaceFolder}` — The workspace folder for the Markdown document, e.g. `/Users/me/myProject`. This is the same as `${documentDirName}` if the file is not part of a workspace.
 - `${fileName}` — The file name of the dropped file, e.g. `image.png`.
 - `${fileExtName}` — The extension of the dropped file, e.g. `png`.
-- `${unixTime}` — The current Unix timestamp in milliseconds.</source>
+- `${unixTime}` — The current Unix timestamp in milliseconds.
+- `${isoTime}` — The current time in ISO 8601 format, e.g. '2025-06-06T08:40:32.123Z'.</source>
         <note>This setting is use the user drops or pastes image data into the editor. In this case, VS Code automatically creates a new image file in the workspace containing the dropped/pasted image.&#xD;
 It's easier to explain this setting with an example. For example, let's say the setting value was:&#xD;
 &#xD;
@@ -345,7 +346,7 @@ It's easier to explain this setting with an example. For example, let's say the 
 &#xD;
 Here the setting is an object mapping from a set of globs to a set of file destinations.&#xD;
 The left hand side ('docs/*.md') is a glob that matches against a markdown document. If the glob, matches then we use the right hand side to compute the new file's path and name. The right hand side can also use the special variables document in this setting description.</note>
-        <target>Налаштовує шлях та ім'я файлу для файлів, створених за допомогою копіювання/вставки або перетягування. Це карта глоїв, які відповідають шляху до документа Markdown, до шляху призначення, де має бути створений новий файл.
+        <target>Налаштовує шлях та ім'я файлу для файлів, створених шляхом копіювання/вставки або перетягування. Це карта глобусів, які відповідають шляху до документа Markdown, до шляху призначення, де має бути створено новий файл.
 
 Шлях призначення може використовувати такі змінні:
 
@@ -359,7 +360,8 @@ The left hand side ('docs/*.md') is a glob that matches against a markdown docum
 - `${documentWorkspaceFolder}` — Папка робочого простору для документа Markdown, наприклад, `/Users/me/myProject`. Це те саме, що і `${documentDirName}`, якщо файл не є частиною робочого простору.
 - `${fileName}` — Ім'я файлу перетягнутого файлу, наприклад, `image.png`.
 - `${fileExtName}` — Розширення перетягнутого файлу, наприклад, `png`.
-- `${unixTime}` — Поточний Unix-часовий штамп у мілісекундах.</target>
+- `${unixTime}` — Поточна Unix мітка часу в мілісекундах.
+- `${isoTime}` — Поточний час у форматі ISO 8601, наприклад, '2025-06-06T08:40:32.123Z'.</target>
       </trans-unit>
       <trans-unit id="configuration.markdown.preview.openMarkdownLinks.description">
         <source xml:lang="en">Controls how links to other Markdown files in the Markdown preview should be opened.</source>

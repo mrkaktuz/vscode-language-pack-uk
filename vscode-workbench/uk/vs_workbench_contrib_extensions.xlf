@@ -666,6 +666,10 @@
         <source xml:lang="en">This setting is deprecated. Use extensions.ignoreRecommendations setting to control recommendation notifications. Use Extensions view's visibility actions to hide Recommended view by default.</source>
         <target>Це налаштування застаріле. Використовуйте налаштування extensions.ignoreRecommendations для контролю сповіщень про рекомендації. Використовуйте дії видимості в режимі розширень, щоб за замовчуванням приховати перегляд Рекомендовані.</target>
       </trans-unit>
+      <trans-unit id="extensionsSupportNodeGlobalNavigator">
+        <source xml:lang="en">When enabled, Node.js navigator object is exposed on the global scope.</source>
+        <target>Коли увімкнено, об'єкт навігатора Node.js доступний у глобальній області видимості.</target>
+      </trans-unit>
       <trans-unit id="extensionsWebWorker">
         <source xml:lang="en">Enable web worker extension host.</source>
         <target>Увімкнути хост розширення веб-працівника.</target>
@@ -876,6 +880,10 @@
       <trans-unit id="showWorkspaceUnsupportedExtensions">
         <source xml:lang="en">Show Extensions Unsupported By Workspace</source>
         <target>Показати розширення, які не підтримуються робочим простором</target>
+      </trans-unit>
+      <trans-unit id="signInToMarketplace">
+        <source xml:lang="en">Sign in to access Extensions Marketplace</source>
+        <target>Увійдіть, щоб отримати доступ до Ринку розширень</target>
       </trans-unit>
       <trans-unit id="sort by installs">
         <source xml:lang="en">Install Count</source>
@@ -1839,6 +1847,22 @@ Would you like to update the extension?</source>
         <source xml:lang="en">Error</source>
         <target>Помилка</target>
       </trans-unit>
+      <trans-unit id="extension.arialabel.deprecated">
+        <source xml:lang="en">Deprecated</source>
+        <target>Застарілий</target>
+      </trans-unit>
+      <trans-unit id="extension.arialabel.publisher">
+        <source xml:lang="en">Publisher {0}</source>
+        <target>Видавець {0}</target>
+      </trans-unit>
+      <trans-unit id="extension.arialabel.rating">
+        <source xml:lang="en">Rated {0} out of 5 stars by {1} users</source>
+        <target>Оцінено {0} з 5 зірок користувачами {1}</target>
+      </trans-unit>
+      <trans-unit id="extension.arialabel.verifiedPublisher">
+        <source xml:lang="en">Verified Publisher {0}</source>
+        <target>Перевірений видавець {0}</target>
+      </trans-unit>
       <trans-unit id="extensions">
         <source xml:lang="en">Extensions</source>
         <target>Розширення</target>
@@ -1847,6 +1871,14 @@ Would you like to update the extension?</source>
   </file>
   <file original="src/vs/workbench/contrib/extensions/browser/extensionsViewlet" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="access denied">
+        <source xml:lang="en">Your account does not have access to the Extensions Marketplace. Please contact your administrator.</source>
+        <target>Ваш обліковий запис не має доступу до Ринку розширень. Будь ласка, зв'яжіться з вашим адміністратором.</target>
+      </trans-unit>
+      <trans-unit id="accessDenied">
+        <source xml:lang="en">Access denied to marketplace</source>
+        <target>Доступ заборонено до ринку</target>
+      </trans-unit>
       <trans-unit id="availableUpdates">
         <source xml:lang="en">Available Updates</source>
         <target>Доступні оновлення</target>
@@ -1992,6 +2024,18 @@ Would you like to update the extension?</source>
         <source xml:lang="en">Show</source>
         <target>Показати</target>
       </trans-unit>
+      <trans-unit id="sign in">
+        <source xml:lang="en">[Sign in to access Extensions Marketplace]({0})</source>
+        <target>[Увійдіть, щоб отримати доступ до ринку розширень]({0})</target>
+      </trans-unit>
+      <trans-unit id="sign in enterprise marketplace">
+        <source xml:lang="en">Sign in to access Marketplace</source>
+        <target>Увійдіть, щоб отримати доступ до Marketplace</target>
+      </trans-unit>
+      <trans-unit id="signInRequired">
+        <source xml:lang="en">Sign in required to access marketplace</source>
+        <target>Необхідно увійти, щоб отримати доступ до маркетплейсу.</target>
+      </trans-unit>
       <trans-unit id="suggestProxyError">
         <source xml:lang="en">Marketplace returned 'ECONNREFUSED'. Please check the 'http.proxy' setting.</source>
         <target>Маркетплейс повернув 'ECONNREFUSED'. Будь ласка, перевірте налаштування 'http.proxy'.</target>
@@ -2027,22 +2071,6 @@ Would you like to update the extension?</source>
       <trans-unit id="error">
         <source xml:lang="en">Error while fetching extensions. {0}</source>
         <target>Помилка</target>
-      </trans-unit>
-      <trans-unit id="extension.arialabel.deprecated">
-        <source xml:lang="en">Deprecated</source>
-        <target>Застарілий</target>
-      </trans-unit>
-      <trans-unit id="extension.arialabel.publisher">
-        <source xml:lang="en">Publisher {0}</source>
-        <target>Видавець {0}</target>
-      </trans-unit>
-      <trans-unit id="extension.arialabel.rating">
-        <source xml:lang="en">Rated {0} out of 5 stars by {1} users</source>
-        <target>Оцінено {0} з 5 зірок користувачами {1}</target>
-      </trans-unit>
-      <trans-unit id="extension.arialabel.verifiedPublisher">
-        <source xml:lang="en">Verified Publisher {0}</source>
-        <target>Перевірений видавець {0}</target>
       </trans-unit>
       <trans-unit id="no extensions found">
         <source xml:lang="en">No extensions found.</source>
@@ -2255,6 +2283,10 @@ Would you like to update the extension?</source>
       <trans-unit id="download.completed">
         <source xml:lang="en">Successfully downloaded the VSIX</source>
         <target>Успішно завантажено VSIX</target>
+      </trans-unit>
+      <trans-unit id="download.failed">
+        <source xml:lang="en">Error while downloading the VSIX: {0}</source>
+        <target>Помилка під час завантаження VSIX: {0}</target>
       </trans-unit>
       <trans-unit id="downloading...">
         <source xml:lang="en">Downloading VSIX...</source>
@@ -2638,11 +2670,11 @@ Would you like to update the extension?</source>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/extensions/electron-sandbox/debugExtensionHostAction" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/contrib/extensions/electron-browser/debugExtensionHostAction" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="debugExtensionHost">
-        <source xml:lang="en">Start Debugging Extension Host In New Window</source>
-        <target>Почати налагодження розширення хоста в новому вікні</target>
+        <source xml:lang="en">Debug Extension Host In New Window</source>
+        <target>Налагодження хоста розширення в новому вікні</target>
       </trans-unit>
       <trans-unit id="debugExtensionHost.launch.name">
         <source xml:lang="en">Attach Extension Host</source>
@@ -2652,26 +2684,34 @@ Would you like to update the extension?</source>
         <source xml:lang="en">Attaching Debugger To Extension Host</source>
         <target>Приєднання налагоджувача до хоста розширення</target>
       </trans-unit>
+      <trans-unit id="openDevToolsForExtensionHost">
+        <source xml:lang="en">Debug Extension Host In Dev Tools</source>
+        <target>Налагодження хоста розширення в інструментах розробника</target>
+      </trans-unit>
       <trans-unit id="restart1">
         <source xml:lang="en">Debug Extensions</source>
         <target>Налагодження розширень</target>
       </trans-unit>
       <trans-unit id="restart2">
         <source xml:lang="en">In order to debug extensions a restart is required. Do you want to restart '{0}' now?</source>
-        <target>Для налагодження розширень потрібен перезапуск. Ви хочете перезапустити '{0}' зараз?</target>
+        <target>Щоб налагодити розширення, потрібен перезапуск. Ви хочете перезапустити '{0}' зараз?</target>
       </trans-unit>
       <trans-unit id="restart3">
         <source xml:lang="en">&amp;&amp;Restart</source>
         <note>&amp;&amp; denotes a mnemonic</note>
         <target>&amp;&amp;Перезапустити</target>
       </trans-unit>
+      <trans-unit id="selectExtensionHost">
+        <source xml:lang="en">Pick extension host</source>
+        <target>Виберіть хост розширення</target>
+      </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/extensions/electron-sandbox/extensionProfileService" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/contrib/extensions/electron-browser/extensionProfileService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="profilingExtensionHost">
         <source xml:lang="en">Profiling Extension Host</source>
-        <target>Розширення профілювання хоста</target>
+        <target>Профілювання розширення хоста</target>
       </trans-unit>
       <trans-unit id="profilingExtensionHostTime">
         <source xml:lang="en">Profiling Extension Host ({0} sec)</source>
@@ -2683,7 +2723,7 @@ Would you like to update the extension?</source>
       </trans-unit>
       <trans-unit id="restart2">
         <source xml:lang="en">In order to profile extensions a restart is required. Do you want to restart '{0}' now?</source>
-        <target>Для налагодження розширень потрібен перезапуск. Ви хочете перезапустити '{0}' зараз?</target>
+        <target>Щоб налагодити розширення, потрібен перезапуск. Ви хочете перезапустити '{0}' зараз?</target>
       </trans-unit>
       <trans-unit id="restart3">
         <source xml:lang="en">&amp;&amp;Restart</source>
@@ -2700,7 +2740,7 @@ Would you like to update the extension?</source>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/extensions/electron-sandbox/extensions.contribution" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/contrib/extensions/electron-browser/extensions.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="runtimeExtension">
         <source xml:lang="en">Running Extensions</source>
@@ -2708,7 +2748,7 @@ Would you like to update the extension?</source>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/extensions/electron-sandbox/extensionsActions" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/contrib/extensions/electron-browser/extensionsActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="cleanUpExtensionsFolder">
         <source xml:lang="en">Cleanup Extensions Folder</source>
@@ -2720,7 +2760,7 @@ Would you like to update the extension?</source>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/extensions/electron-sandbox/extensionsAutoProfiler" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/contrib/extensions/electron-browser/extensionsAutoProfiler" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="show">
         <source xml:lang="en">Show Extensions</source>
@@ -2728,11 +2768,11 @@ Would you like to update the extension?</source>
       </trans-unit>
       <trans-unit id="unresponsive-exthost">
         <source xml:lang="en">The extension '{0}' took a very long time to complete its last operation and it has prevented other extensions from running.</source>
-        <target>Розширення '{0}' зайняло дуже багато часу для завершення останньої операції, і це завадило виконанню інших розширень.</target>
+        <target>Розширення '{0}' зайняло дуже багато часу для завершення своєї останньої операції, і це завадило іншим розширенням працювати.</target>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/extensions/electron-sandbox/extensionsSlowActions" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/contrib/extensions/electron-browser/extensionsSlowActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="attach.msg">
         <source xml:lang="en">This is a reminder to make sure that you have not forgotten to attach '{0}' to the issue you have just created.</source>
@@ -2752,7 +2792,7 @@ Would you like to update the extension?</source>
       </trans-unit>
       <trans-unit id="cmd.reportOrShow">
         <source xml:lang="en">Performance Issue</source>
-        <target>Проблема з продуктивністю</target>
+        <target>Проблема продуктивності</target>
       </trans-unit>
       <trans-unit id="cmd.show">
         <source xml:lang="en">Show Issues</source>
@@ -2760,7 +2800,7 @@ Would you like to update the extension?</source>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/extensions/electron-sandbox/runtimeExtensionsEditor" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/contrib/extensions/electron-browser/runtimeExtensionsEditor" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="extensionHostProfileStart">
         <source xml:lang="en">Start Extension Host Profile</source>
@@ -2780,7 +2820,7 @@ Would you like to update the extension?</source>
       </trans-unit>
       <trans-unit id="stopExtensionHostProfileStart">
         <source xml:lang="en">Stop Extension Host Profile</source>
-        <target>Зупинити профіль хосту розширення</target>
+        <target>Зупинити профіль хоста розширення</target>
       </trans-unit>
     </body>
   </file>
