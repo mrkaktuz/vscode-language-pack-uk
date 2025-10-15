@@ -47,6 +47,14 @@
         <source xml:lang="en">Copy &amp; Continue</source>
         <target>Копіювати та продовжити</target>
       </trans-unit>
+      <trans-unit id="dcrCopyUrlsAndProceed">
+        <source xml:lang="en">Copy URIs &amp; Proceed</source>
+        <target>Скопіюйте URI та продовжте</target>
+      </trans-unit>
+      <trans-unit id="dcrFailedToCopy">
+        <source xml:lang="en">Failed to copy redirect URIs to clipboard.</source>
+        <target>Не вдалося скопіювати URI перенаправлення в буфер обміну.</target>
+      </trans-unit>
       <trans-unit id="dcrNotSupported">
         <source xml:lang="en">Dynamic Client Registration not supported</source>
         <target>Динамічна реєстрація клієнта не підтримується</target>
@@ -55,13 +63,11 @@
         <source xml:lang="en">The authorization server '{0}' does not support automatic client registration. Do you want to proceed by manually providing a client registration (client ID)?
 
 Note: When registering your OAuth application, make sure to include these redirect URIs:
-http://127.0.0.1:33418
-https://vscode.dev/redirect</source>
-        <target>Сервер авторизації '{0}' не підтримує автоматичну реєстрацію клієнтів. Чи хочете ви продовжити, надавши реєстрацію клієнта вручну (ідентифікатор клієнта)?
+{1}</source>
+        <target>Сервер авторизації '{0}' не підтримує автоматичну реєстрацію клієнтів. Ви хочете продовжити, надавши реєстрацію клієнта вручну (ідентифікатор клієнта)?
 
-Примітка: При реєстрації вашого OAuth додатку, переконайтеся, що ви включили ці URI для перенаправлення:
-http://127.0.0.1:33418
-https://vscode.dev/redirect</target>
+Примітка: При реєстрації вашого OAuth додатку, переконайтеся, що ви включили ці URI перенаправлення:
+{1}</target>
       </trans-unit>
       <trans-unit id="deviceCodeDetail">
         <source xml:lang="en">Your code: {0}
@@ -102,10 +108,6 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       <trans-unit id="no">
         <source xml:lang="en">No</source>
         <target>Ні</target>
-      </trans-unit>
-      <trans-unit id="provideClientDetails">
-        <source xml:lang="en">Proceed</source>
-        <target>Продовжити</target>
       </trans-unit>
       <trans-unit id="yes">
         <source xml:lang="en">Yes</source>
@@ -590,6 +592,10 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       <trans-unit id="views.container.panel">
         <source xml:lang="en">Contribute views containers to Panel</source>
         <target>Внесіть контейнери переглядів до Панелі</target>
+      </trans-unit>
+      <trans-unit id="views.container.secondarySidebar">
+        <source xml:lang="en">Contribute views containers to Secondary Side Bar</source>
+        <target>Додати контейнери для переглядів до вторинної бокової панелі</target>
       </trans-unit>
       <trans-unit id="views.contributed">
         <source xml:lang="en">Contributes views to contributed views container</source>
@@ -1170,6 +1176,10 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       <trans-unit id="machine">
         <source xml:lang="en">Machine</source>
         <target>Машина</target>
+      </trans-unit>
+      <trans-unit id="policyDiagnostics">
+        <source xml:lang="en">Policy Diagnostics</source>
+        <target>Діагностика політики</target>
       </trans-unit>
       <trans-unit id="profile">
         <source xml:lang="en">Profile</source>
@@ -3451,6 +3461,10 @@ This action is irreversible and may result in data loss!</source>
       <trans-unit id="clearEditorHistory">
         <source xml:lang="en">Clear Editor History</source>
         <target>Очистити історію редактора</target>
+      </trans-unit>
+      <trans-unit id="clearEditorHistoryWithoutConfirm">
+        <source xml:lang="en">Clear Editor History without Confirmation</source>
+        <target>Очистити історію редактора без підтвердження</target>
       </trans-unit>
       <trans-unit id="clearRecentFiles">
         <source xml:lang="en">Clear Recently Opened...</source>
@@ -5944,8 +5958,8 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <target>Контролює, чи відкриватимуться вкладки при прокручуванні, чи ні. За замовчуванням вкладки лише з'являтимуться при прокручуванні, але не відкриватимуться. Ви можете натиснути і утримувати клавішу Shift під час прокручування, щоб змінити цю поведінку на цей час. Це значення ігнорується, коли {0} не встановлено на {1}.</target>
       </trans-unit>
       <trans-unit id="secondarySideBarDefaultVisibility">
-        <source xml:lang="en">Controls the default visibility of the secondary side bar in workspaces or empty windows opened for the first time.</source>
-        <target>Контролює стандартну видимість вторинної бічної панелі в робочих просторах або порожніх вікнах, відкритих вперше.</target>
+        <source xml:lang="en">Controls the default visibility of the secondary side bar in workspaces or empty windows that are opened for the first time.</source>
+        <target>Контролює стандартну видимість вторинної бічної панелі в робочих просторах або порожніх вікнах, які відкриваються вперше.</target>
       </trans-unit>
       <trans-unit id="secondarySideBarShowLabels">
         <source xml:lang="en">Controls whether activity items in the secondary side bar title are shown as label or icon. This setting only has an effect when {0} is not set to {1}.</source>
@@ -5974,6 +5988,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="sharedViewState">
         <source xml:lang="en">Preserves the most recent editor view state (such as scroll position) across all editor groups and restores that if no specific editor view state is found for the editor group.</source>
         <target>Зберігає останній стан перегляду редактора (такий як позиція прокрутки) для всіх груп редакторів і відновлює його, якщо не знайдено конкретного стану перегляду редактора для групи редакторів.</target>
+      </trans-unit>
+      <trans-unit id="showAskInChat">
+        <source xml:lang="en">Controls whether the command palette shows 'Ask in Chat' option at the bottom.</source>
+        <target>Контролює, чи відображається опція 'Запитати в чаті' внизу командної палітри.</target>
       </trans-unit>
       <trans-unit id="showEditorTabs">
         <source xml:lang="en">Controls whether opened editors should show as individual tabs, one single large tab or if the title area should not be shown.</source>
@@ -6462,6 +6480,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Controls whether the last typed input to Quick Open should be restored when opening it the next time.</source>
         <target>Контролює, чи слід відновити останній введений текст у Quick Open при наступному його відкритті.</target>
       </trans-unit>
+      <trans-unit id="workbench.quickOpen.useZeroBasedOffset">
+        <source xml:lang="en">Controls whether 'Go To' character offset in Quick Open will use zero-based offset (default is one-based).</source>
+        <target>Контролює, чи буде 'Перейти до' зсув символів у Швидкому відкритті використовувати нульовий зсув (за замовчуванням - зсув на основі одиниці).</target>
+      </trans-unit>
       <trans-unit id="workbench.reduceMotion">
         <source xml:lang="en">Controls whether the workbench should render with fewer animations.</source>
         <target>Контролює, чи повинна робоча панель відображатися з меншою кількістю анімацій.</target>
@@ -6726,6 +6748,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="groupEditorsCount">
         <source xml:lang="en">The number of opened editor groups</source>
         <target>Кількість відкритих груп редакторів</target>
+      </trans-unit>
+      <trans-unit id="inAutomation">
+        <source xml:lang="en">Whether VS Code is running under automation/smoke test</source>
+        <target>Чи працює VS Code під автоматизацією/димовим тестом</target>
       </trans-unit>
       <trans-unit id="inZenMode">
         <source xml:lang="en">Whether Zen mode is enabled</source>
@@ -7919,9 +7945,29 @@ This option requires restart to take effect.</source>
         <source xml:lang="en">A set of identifiers for entries in the touchbar that should not show up (for example `workbench.action.navigateBack`).</source>
         <target>Набір ідентифікаторів для записів у панелі дотиків, які не повинні відображатися (наприклад, `workbench.action.navigateBack`).</target>
       </trans-unit>
-      <trans-unit id="window.border">
-        <source xml:lang="en">Controls the border color of the window. Set to `default` to respect Windows settings, `off` to disable or to a specific color in Hex, RGB, RGBA, HSL, HSLA format. This requires Windows to have the 'Show accent color on title bars and window borders' enabled and is ignored when {0} is set to {1}.</source>
-        <target>Контролює колір рамки вікна. Встановіть на `default`, щоб дотримуватися налаштувань Windows, `off`, щоб вимкнути, або на конкретний колір у форматах Hex, RGB, RGBA, HSL, HSLA. Це вимагає, щоб у Windows була увімкнена опція 'Показувати акцентний колір на заголовках вікон і рамках вікон', і ігнорується, коли {0} встановлено на {1}.</target>
+      <trans-unit id="window.border.color">
+        <source xml:lang="en">{0}: specific color in Hex, RGB, RGBA, HSL, HSLA format</source>
+        <target>{0}: специфічний колір у форматі Hex, RGB, RGBA, HSL, HSLA</target>
+      </trans-unit>
+      <trans-unit id="window.border.default">
+        <source xml:lang="en">{0}: respect color theme settings, fallback to Windows settings</source>
+        <target>{0}: поважати налаштування кольорової теми, повернутися до налаштувань Windows</target>
+      </trans-unit>
+      <trans-unit id="window.border.off">
+        <source xml:lang="en">{0}: disable border colors</source>
+        <target>{0}: вимкнути кольори межі</target>
+      </trans-unit>
+      <trans-unit id="window.border.prefix">
+        <source xml:lang="en">Controls the border color of the window:</source>
+        <target>Контролює колір рамки вікна:</target>
+      </trans-unit>
+      <trans-unit id="window.border.suffix">
+        <source xml:lang="en">Use {0} to set different colors for active and inactive windows. This setting is ignored when {1} is set to {2}.</source>
+        <target>Використовуйте {0} для встановлення різних кольорів для активних і неактивних вікон. Цей параметр ігнорується, коли {1} встановлено на {2}.</target>
+      </trans-unit>
+      <trans-unit id="window.border.system">
+        <source xml:lang="en">{0}: respect Windows settings only</source>
+        <target>{0}: поважати лише налаштування Windows</target>
       </trans-unit>
       <trans-unit id="window.clickThroughInactive">
         <source xml:lang="en">If enabled, clicking on an inactive window will both activate the window and trigger the element under the mouse if it is clickable. If disabled, clicking anywhere on an inactive window will activate it only and a second click is required on the element.</source>
@@ -7984,8 +8030,8 @@ This option requires restart to take effect.</source>
         <target>Контролює, чи слід використовувати нативний повноекранний режим на macOS. Вимкніть цю опцію, щоб запобігти створенню нової області в macOS при переході в повноекранний режим.</target>
       </trans-unit>
       <trans-unit id="window.nativeTabs">
-        <source xml:lang="en">Enables macOS Sierra window tabs. Note that changes require a full restart to apply and that native tabs will disable a custom title bar style if configured.</source>
-        <target>Увімкнення вкладок вікон macOS Sierra. Зверніть увагу, що зміни потребують повного перезавантаження для застосування, і що рідні вкладки вимкнуть стиль заголовка вікна, якщо він налаштований.</target>
+        <source xml:lang="en">Enables macOS native window tabs. Note that changes require a full restart to apply and that native tabs will disable a custom title bar style if configured.</source>
+        <target>Увімкнення рідних вкладок вікон macOS. Зверніть увагу, що зміни вимагають повного перезапуску для застосування, і що рідні вкладки вимкнуть стиль заголовка вікна, якщо він налаштований.</target>
       </trans-unit>
       <trans-unit id="window.newWindowDimensions.default">
         <source xml:lang="en">Open new windows in the center of the screen.</source>
@@ -8098,6 +8144,10 @@ This option requires restart to take effect.</source>
         <source xml:lang="en">&amp;&amp;Log In</source>
         <note>&amp;&amp; denotes a mnemonic</note>
         <target>&amp;&amp;Увійти</target>
+      </trans-unit>
+      <trans-unit id="macoseolmessage">
+        <source xml:lang="en">{0} on {1} will soon stop receiving updates. Consider upgrading your macOS version.</source>
+        <target>{0} на {1} незабаром перестане отримувати оновлення. Розгляньте можливість оновлення версії macOS.</target>
       </trans-unit>
       <trans-unit id="password">
         <source xml:lang="en">Password</source>

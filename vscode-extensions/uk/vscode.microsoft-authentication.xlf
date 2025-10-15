@@ -2,9 +2,9 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file original="extensions/vscode.microsoft-authentication/bundle" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="++CODE++fab2fbc62210f63d1e04db7304c64d70ea21df9269e47c24aa22cdb43093ce36">
-        <source xml:lang="en">Authorization code is required.</source>
-        <target>Необхідний код авторизації.</target>
+      <trans-unit id="++CODE++915085da15e4202a102aa9c4b9df0ec1596c94264ba7405de6f10c1980cceb7e">
+        <source xml:lang="en">Copy &amp; Continue to Microsoft</source>
+        <target>Скопіювати та продовжити до Microsoft</target>
       </trans-unit>
       <trans-unit id="++CODE++3d16e08ba7da5814cb58bbc53d0b9904ec6b00593e40644497e2fe4b6716348f">
         <source xml:lang="en">Error validating custom environment setting: {0}</source>
@@ -30,17 +30,15 @@
         <source xml:lang="en">No</source>
         <target>Ні</target>
       </trans-unit>
+      <trans-unit id="++CODE++24d0a8cae43900b8ff761c8be7d45e038921609c10f6e8462839333b89abc873">
+        <source xml:lang="en">Open [{0}]({0}) in a new tab and paste your one-time code: {1}</source>
+        <note>The [{0}]({0}) will be a url and the {1} will be a code, e.g. 123456&#xD;
+{Locked="[{0}]({0})"}</note>
+        <target>Відкрийте [{0}]({0}) в новій вкладці та вставте ваш одноразовий код: {1}</target>
+      </trans-unit>
       <trans-unit id="++CODE++ca381c1e76e681b6c18fa984a2e2fda6ed4a9f28e914f539db34a6dcb3737149">
         <source xml:lang="en">Open settings</source>
         <target>Відкрити налаштування</target>
-      </trans-unit>
-      <trans-unit id="++CODE++a19a3e5a991c8e6eac6532be261a4c51eca60d6160e9d6f68f9e186f94ed18e5">
-        <source xml:lang="en">Paste authorization code here...</source>
-        <target>Вставте код авторизації сюди...</target>
-      </trans-unit>
-      <trans-unit id="++CODE++75d90547bd787139c44b1b6149334f8bcb24fe12fb6b5200c611c2ba6e22d32e">
-        <source xml:lang="en">Provide the authorization code to complete the sign in flow.</source>
-        <target>Надайте код авторизації, щоб завершити процес входу.</target>
       </trans-unit>
       <trans-unit id="++CODE++bdc090ec61e3fcfc65f469951dfe00f3f2ecfc6003c44deac8e05b7237092de6">
         <source xml:lang="en">Reload</source>
@@ -58,6 +56,10 @@
         <source xml:lang="en">The environment `{0}` is not a valid environment.</source>
         <target>Середовище `{0}` не є дійсним середовищем.</target>
       </trans-unit>
+      <trans-unit id="++CODE++ff5f5d54f4fa2a219a852e80817e2b77b141c08bd8285aea2ea13e6338133831">
+        <source xml:lang="en">To finish authenticating, navigate to Microsoft and paste in the above one-time code.</source>
+        <target>Щоб завершити аутентифікацію, перейдіть на Microsoft і вставте вищезазначений одноразовий код.</target>
+      </trans-unit>
       <trans-unit id="++CODE++85a39ab345d672ff8ca9b9c6876f3adcacf45ee7c1e2dbd2408fd338bd55e07e">
         <source xml:lang="en">Yes</source>
         <target>Так</target>
@@ -73,6 +75,11 @@
       <trans-unit id="++CODE++97e3447a773bc2cd2f5f31a05ac17d624f0d7e8996241fa3944e58893f6faa89">
         <source xml:lang="en">You must also specify a custom environment in order to use the custom environment auth provider.</source>
         <target>Вам також потрібно вказати власне середовище, щоб використовувати постачальника автентифікації для власного середовища.</target>
+      </trans-unit>
+      <trans-unit id="++CODE++5cd54bf182ab05afda0e219c101add4b96941dd2f851acc6d7e211136f05e26b">
+        <source xml:lang="en">Your Code: {0}</source>
+        <note>The {0} will be a code, e.g. 123-456</note>
+        <target>Ваш код: {0}</target>
       </trans-unit>
     </body>
   </file>
@@ -127,12 +134,12 @@ The `#microsoft-sovereign-cloud.customEnvironment#` syntax will turn into a link
       <trans-unit id="microsoft-authentication.implementation.description">
         <source xml:lang="en">The authentication implementation to use for signing in with a Microsoft account.
 
-*NOTE: The `classic` implementation is deprecated and will be removed, along with this setting, in a future release. If only the `classic` implementation works for you, please [open an issue](command:workbench.action.openIssueReporter) and explain what you are trying to log in to.*</source>
+*NOTE: The `classic` implementation is deprecated and will be removed in a future release. If the `msal` implementation does not work for you, please [open an issue](command:workbench.action.openIssueReporter) and explain what you are trying to log in to.*</source>
         <note>{Locked='[(command:workbench.action.openIssueReporter)]'}&#xD;
 The `command:` syntax will turn into a link. Do not translate it.</note>
         <target>Реалізація автентифікації, яку слід використовувати для входу з обліковим записом Microsoft.
 
-*ПРИМІТКА: Реалізація `classic` застаріла і буде видалена разом із цим налаштуванням у майбутньому випуску. Якщо тільки реалізація `classic` працює для вас, будь ласка, [відкрийте проблему](command:workbench.action.openIssueReporter) і поясніть, до чого ви намагаєтеся увійти.*</target>
+*ПРИМІТКА: Реалізація `classic` застаріла і буде видалена в майбутньому випуску. Якщо реалізація `msal` не працює для вас, будь ласка, [відкрийте проблему](command:workbench.action.openIssueReporter) і поясніть, до чого ви намагаєтеся увійти.*</target>
       </trans-unit>
       <trans-unit id="microsoft-sovereign-cloud.customEnvironment.description">
         <source xml:lang="en">The custom configuration for the Sovereign Cloud to use with the Microsoft Sovereign Cloud authentication provider. This along with setting `#microsoft-sovereign-cloud.environment#` to `custom` is required to use this feature.</source>
@@ -155,6 +162,10 @@ The `#microsoft-sovereign-cloud.environment#` syntax will turn into a link. Do n
       <trans-unit id="microsoft-sovereign-cloud.customEnvironment.resourceManagerEndpointUrl.description">
         <source xml:lang="en">The resource manager endpoint for the custom Sovereign Cloud.</source>
         <target>Точка доступу менеджера ресурсів для користувацького Суверенного Хмари.</target>
+      </trans-unit>
+      <trans-unit id="microsoft-authentication.implementation.enumDescriptions.msal-no-broker">
+        <source xml:lang="en">Use the Microsoft Authentication Library (MSAL) to sign in with a Microsoft account using a browser. This is useful if you are having issues with the native broker.</source>
+        <target>Використовуйте бібліотеку автентифікації Microsoft (MSAL) для входу за допомогою облікового запису Microsoft через браузер. Це корисно, якщо у вас виникають проблеми з рідним брокером.</target>
       </trans-unit>
       <trans-unit id="microsoft-authentication.implementation.enumDescriptions.msal">
         <source xml:lang="en">Use the Microsoft Authentication Library (MSAL) to sign in with a Microsoft account.</source>

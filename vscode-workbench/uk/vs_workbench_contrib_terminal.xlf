@@ -589,6 +589,22 @@
         <source xml:lang="en">Select Default Profile</source>
         <target>Вибрати профіль за замовчуванням</target>
       </trans-unit>
+      <trans-unit id="workbench.action.terminal.startVoice">
+        <source xml:lang="en">Start Dictation</source>
+        <target>Почати диктування</target>
+      </trans-unit>
+      <trans-unit id="workbench.action.terminal.startVoiceEditor">
+        <source xml:lang="en">Start Dictation</source>
+        <target>Почати диктування</target>
+      </trans-unit>
+      <trans-unit id="workbench.action.terminal.stopVoice">
+        <source xml:lang="en">Stop Dictation</source>
+        <target>Зупинити диктування</target>
+      </trans-unit>
+      <trans-unit id="workbench.action.terminal.stopVoiceEditor">
+        <source xml:lang="en">Stop Dictation</source>
+        <target>Зупинити диктування</target>
+      </trans-unit>
       <trans-unit id="workbench.action.terminal.switchTerminal">
         <source xml:lang="en">Switch Terminal</source>
         <target>Перемикач терміналу</target>
@@ -897,6 +913,18 @@ The terminal's title</note>
         <source xml:lang="en">Contributes terminal functionality.</source>
         <target>Сприяє функціональності терміналу.</target>
       </trans-unit>
+      <trans-unit id="vscode.extension.contributes.terminal.completionProviders">
+        <source xml:lang="en">Defines terminal completion providers that will be registered when the extension activates.</source>
+        <target>Визначає постачальників завершення терміналу, які будуть зареєстровані під час активації розширення.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.contributes.terminal.completionProviders.description">
+        <source xml:lang="en">A description of what the completion provider does. This will be shown in the settings UI.</source>
+        <target>Опис того, що робить постачальник завершення. Це буде показано в інтерфейсі налаштувань.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.contributes.terminal.completionProviders.id">
+        <source xml:lang="en">The ID of the terminal completion provider.</source>
+        <target>Ідентифікатор постачальника завершення терміналу.</target>
+      </trans-unit>
       <trans-unit id="vscode.extension.contributes.terminal.profiles">
         <source xml:lang="en">Defines additional terminal profiles that the user can create.</source>
         <target>Визначає додаткові профілі терміналів, які користувач може створити.</target>
@@ -1028,14 +1056,6 @@ The terminal's title</note>
       <trans-unit id="cwdFolder">
         <source xml:lang="en">the terminal's current working directory, displayed for multi-root workspaces or in a single root workspace when the value differs from the initial working directory. On Windows, this will only be displayed when shell integration is enabled.</source>
         <target>поточний робочий каталог терміналу, відображений для багатокореневих робочих просторів або в одному кореневому робочому просторі, коли значення відрізняється від початкового робочого каталогу. У Windows це буде відображено лише тоді, коли інтеграція оболонки увімкнена.</target>
-      </trans-unit>
-      <trans-unit id="enableAutoApprove.off">
-        <source xml:lang="en">Terminal auto approval is disabled.</source>
-        <target>Автоматичне схвалення терміналу вимкнено.</target>
-      </trans-unit>
-      <trans-unit id="enableAutoApprove.on">
-        <source xml:lang="en">Terminal auto approval is enabled, with the default rules defined in {0}.</source>
-        <target>Автоматичне схвалення терміналу увімкнено, з правилами за замовчуванням, визначеними в {0}.</target>
       </trans-unit>
       <trans-unit id="enableFileLinks.notRemote">
         <source xml:lang="en">Enable only when not in a remote workspace.</source>
@@ -1306,22 +1326,6 @@ Default Skipped Commands:
       <trans-unit id="terminal.integrated.env.windows">
         <source xml:lang="en">Object with environment variables that will be added to the VS Code process to be used by the terminal on Windows. Set to `null` to delete the environment variable.</source>
         <target>Об'єкт з змінними середовища, які будуть додані до процесу VS Code для використання терміналом на Windows. Встановіть значення `null`, щоб видалити змінну середовища.</target>
-      </trans-unit>
-      <trans-unit id="terminal.integrated.environmentChangesIndicator">
-        <source xml:lang="en">Whether to display the environment changes indicator on each terminal which explains whether extensions have made, or want to make changes to the terminal's environment.</source>
-        <target>Чи відображати індикатор змін середовища на кожному терміналі, який пояснює, чи розширення внесли, або хочуть внести зміни до середовища терміналу.</target>
-      </trans-unit>
-      <trans-unit id="terminal.integrated.environmentChangesIndicator.off">
-        <source xml:lang="en">Disable the indicator.</source>
-        <target>Вимкніть індикатор.</target>
-      </trans-unit>
-      <trans-unit id="terminal.integrated.environmentChangesIndicator.on">
-        <source xml:lang="en">Enable the indicator.</source>
-        <target>Увімкніть індикатор.</target>
-      </trans-unit>
-      <trans-unit id="terminal.integrated.environmentChangesIndicator.warnonly">
-        <source xml:lang="en">Only show the warning indicator when a terminal's environment is 'stale', not the information indicator that shows a terminal has had its environment modified by an extension.</source>
-        <target>Показуйте індикатор попередження лише тоді, коли середовище терміналу є 'застарілим', а не індикатор інформації, який показує, що середовище терміналу було змінено розширенням.</target>
       </trans-unit>
       <trans-unit id="terminal.integrated.environmentChangesRelaunch">
         <source xml:lang="en">Whether to relaunch terminals automatically if extensions want to contribute to their environment and have not been interacted with yet.</source>

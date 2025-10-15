@@ -318,8 +318,12 @@ Remarks:
         <target>Запустити першу команду чату</target>
       </trans-unit>
       <trans-unit id="startChat">
-        <source xml:lang="en">Terminal Inline Chat</source>
-        <target>Термінальний інтерактивний чат</target>
+        <source xml:lang="en">Open Inline Chat</source>
+        <target>Відкрити інтерактивний чат</target>
+      </trans-unit>
+      <trans-unit id="terminalCategory">
+        <source xml:lang="en">Terminal</source>
+        <target>Термінал</target>
       </trans-unit>
       <trans-unit id="viewInChat">
         <source xml:lang="en">View in Chat</source>
@@ -343,26 +347,6 @@ Remarks:
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/bufferOutputPolling" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="poll.terminal.accept">
-        <source xml:lang="en">Yes</source>
-        <target>Так</target>
-      </trans-unit>
-      <trans-unit id="poll.terminal.polling">
-        <source xml:lang="en">This will continue to poll for output to determine when the terminal becomes idle for up to 2 minutes.</source>
-        <target>Це буде продовжувати опитувати наявність виходу, щоб визначити, коли термінал стане бездіяльним протягом до 2 хвилин.</target>
-      </trans-unit>
-      <trans-unit id="poll.terminal.reject">
-        <source xml:lang="en">No</source>
-        <target>Ні</target>
-      </trans-unit>
-      <trans-unit id="poll.terminal.waiting">
-        <source xml:lang="en">Continue waiting for `{0}`?</source>
-        <target>Продовжити чекати на `{0}`?</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/runInTerminalHelpers" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="autoApprove.baseCommand">
@@ -378,8 +362,8 @@ Remarks:
         <target>Налаштувати Автоматичне Схвалення...</target>
       </trans-unit>
       <trans-unit id="autoApprove.exactCommand">
-        <source xml:lang="en">Always Allow Exact Command Line: {0}</source>
-        <target>Завжди дозволяти точний рядок команд: {0}</target>
+        <source xml:lang="en">Always Allow Exact Command Line</source>
+        <target>Завжди дозволяти точний рядок команд</target>
       </trans-unit>
     </body>
   </file>
@@ -448,6 +432,58 @@ Remarks:
       <trans-unit id="terminalSelectionTool.displayName">
         <source xml:lang="en">Get Terminal Selection</source>
         <target>Отримати вибір терміналу</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/monitoring/outputMonitor" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="poll.terminal.accept">
+        <source xml:lang="en">Yes</source>
+        <target>Так</target>
+      </trans-unit>
+      <trans-unit id="poll.terminal.acceptRun">
+        <source xml:lang="en">Allow</source>
+        <target>Дозволити</target>
+      </trans-unit>
+      <trans-unit id="poll.terminal.confirmRequired">
+        <source xml:lang="en">The terminal is awaiting input.</source>
+        <target>Термінал очікує вводу.</target>
+      </trans-unit>
+      <trans-unit id="poll.terminal.confirmRunDetail">
+        <source xml:lang="en">{0}
+ Do you want to send `{1}`{2} followed by `Enter` to the terminal?</source>
+        <target>{0} Ви хочете надіслати `{1}`{2}, натиснувши `Enter` у терміналі?</target>
+      </trans-unit>
+      <trans-unit id="poll.terminal.enterInput">
+        <source xml:lang="en">Focus terminal</source>
+        <target>Фокус термінал</target>
+      </trans-unit>
+      <trans-unit id="poll.terminal.inputRequest">
+        <source xml:lang="en">The terminal is awaiting input.</source>
+        <target>Термінал очікує вводу.</target>
+      </trans-unit>
+      <trans-unit id="poll.terminal.polling">
+        <source xml:lang="en">This will continue to poll for output to determine when the terminal becomes idle for up to 2 minutes.</source>
+        <target>Це буде продовжувати опитувати наявність виходу, щоб визначити, коли термінал стане неактивним протягом до 2 хвилин.</target>
+      </trans-unit>
+      <trans-unit id="poll.terminal.reject">
+        <source xml:lang="en">No</source>
+        <target>Ні</target>
+      </trans-unit>
+      <trans-unit id="poll.terminal.rejectRun">
+        <source xml:lang="en">Focus Terminal</source>
+        <target>Фокус Терминал</target>
+      </trans-unit>
+      <trans-unit id="poll.terminal.requireInput">
+        <source xml:lang="en">{0}
+Please provide the required input to the terminal.
+
+</source>
+        <target>{0} Будь ласка, введіть необхідні дані в термінал.</target>
+      </trans-unit>
+      <trans-unit id="poll.terminal.waiting">
+        <source xml:lang="en">Continue waiting for `{0}`?</source>
+        <target>Продовжити чекати на `{0}`?</target>
       </trans-unit>
     </body>
   </file>
@@ -524,10 +560,6 @@ Remarks:
       <trans-unit id="copilotChat.runningTask">
         <source xml:lang="en">Running task `{0}`</source>
         <target>Виконання завдання `{0}`</target>
-      </trans-unit>
-      <trans-unit id="copilotChat.taskFailedWithExitCode">
-        <source xml:lang="en">Task `{0}` failed with exit code {1}.</source>
-        <target>Завдання `{0}` завершилося з кодом виходу {1}.</target>
       </trans-unit>
       <trans-unit id="copilotChat.taskNotFound">
         <source xml:lang="en">Task not found: `{0}`</source>
@@ -629,10 +661,6 @@ Remarks:
         <source xml:lang="en">The task `{0}` is already running.</source>
         <target>Завдання `{0}` вже виконується.</target>
       </trans-unit>
-      <trans-unit id="copilotChat.taskFailedWithExitCode">
-        <source xml:lang="en">Task `{0}` failed with exit code {1}.</source>
-        <target>Завдання `{0}` завершилося з кодом виходу {1}.</target>
-      </trans-unit>
       <trans-unit id="copilotChat.taskIsAlreadyRunning">
         <source xml:lang="en">`{0}` is already running.</source>
         <target>`{0}` вже запущено.</target>
@@ -652,6 +680,14 @@ Remarks:
       <trans-unit id="runInTerminalTool.userDescription">
         <source xml:lang="en">Tool for running tasks in the workspace</source>
         <target>Інструмент для виконання команд у терміналі</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/task/taskHelpers" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="copilotChat.taskFailedWithExitCode">
+        <source xml:lang="en">Task `{0}` failed with exit code {1}.</source>
+        <target>Завдання `{0}` завершилося з кодом виходу {1}.</target>
       </trans-unit>
     </body>
   </file>
@@ -753,9 +789,29 @@ Remarks:
         <source xml:lang="en">Automatically approve the pattern.</source>
         <target>Автоматично затвердити шаблон.</target>
       </trans-unit>
+      <trans-unit id="autoReplyToPrompts.key">
+        <source xml:lang="en">Whether to automatically respond to prompts in the terminal such as `Confirm? y/n`. This is an experimental feature and may not work in all scenarios.</source>
+        <target>Чи автоматично відповідати на запити в терміналі, такі як `Confirm? y/n`. Це експериментальна функція і може не працювати в усіх сценаріях.</target>
+      </trans-unit>
       <trans-unit id="shellIntegrationTimeout.description">
         <source xml:lang="en">Configures the duration in milliseconds to wait for shell integration to be detected when the run in terminal tool launches a new terminal. Set to `0` to wait the minimum time, the default value `-1` means the wait time is variable based on the value of {0} and whether it's a remote window. A large value can be useful if your shell starts very slowly and a low value if you're intentionally not using shell integration.</source>
         <target>Налаштовує тривалість у мілісекундах, протягом якої потрібно чекати на виявлення інтеграції оболонки, коли інструмент запуску в терміналі відкриває новий термінал. Встановіть `0`, щоб чекати мінімальний час, значення за замовчуванням `-1` означає, що час очікування змінюється в залежності від значення {0} і того, чи це віддалене вікно. Велике значення може бути корисним, якщо ваша оболонка запускається дуже повільно, а низьке значення, якщо ви навмисно не використовуєте інтеграцію оболонки.</target>
+      </trans-unit>
+      <trans-unit id="terminalChatAgentProfile.linux">
+        <source xml:lang="en">The terminal profile to use on Linux for chat agent's run in terminal tool.</source>
+        <target>Профіль терміналу, який слід використовувати на Linux для запуску агента чату в інструменті терміналу.</target>
+      </trans-unit>
+      <trans-unit id="terminalChatAgentProfile.osx">
+        <source xml:lang="en">The terminal profile to use on macOS for chat agent's run in terminal tool.</source>
+        <target>Профіль терміналу, який слід використовувати на macOS для запуску агента чату в інструменті терміналу.</target>
+      </trans-unit>
+      <trans-unit id="terminalChatAgentProfile.path">
+        <source xml:lang="en">A path to a shell executable.</source>
+        <target>Шлях до виконуваного файлу оболонки.</target>
+      </trans-unit>
+      <trans-unit id="terminalChatAgentProfile.windows">
+        <source xml:lang="en">The terminal profile to use on Windows for chat agent's run in terminal tool.</source>
+        <target>Профіль терміналу, який слід використовувати на Windows для запуску агента чату в інструменті терміналу.</target>
       </trans-unit>
     </body>
   </file>
@@ -1409,6 +1465,14 @@ For example:
         <source xml:lang="en">Argument</source>
         <target>Аргумент</target>
       </trans-unit>
+      <trans-unit id="branch">
+        <source xml:lang="en">Branch</source>
+        <target>Гілка</target>
+      </trans-unit>
+      <trans-unit id="commit">
+        <source xml:lang="en">Commit</source>
+        <target>Коміт</target>
+      </trans-unit>
       <trans-unit id="file">
         <source xml:lang="en">File</source>
         <target>Файл</target>
@@ -1441,6 +1505,22 @@ For example:
         <source xml:lang="en">Option Value</source>
         <target>Значення опції</target>
       </trans-unit>
+      <trans-unit id="pullRequest">
+        <source xml:lang="en">Pull Request</source>
+        <target>Запит на злиття</target>
+      </trans-unit>
+      <trans-unit id="pullRequestDone">
+        <source xml:lang="en">Pull Request (Done)</source>
+        <target>Запит на злиття (Зроблено)</target>
+      </trans-unit>
+      <trans-unit id="remote">
+        <source xml:lang="en">Remote</source>
+        <target>Віддалений</target>
+      </trans-unit>
+      <trans-unit id="stash">
+        <source xml:lang="en">Stash</source>
+        <target>Сховище</target>
+      </trans-unit>
       <trans-unit id="symbolicLinkFile">
         <source xml:lang="en">Symbolic Link File</source>
         <target>Символічне посилання файл</target>
@@ -1448,6 +1528,10 @@ For example:
       <trans-unit id="symbolicLinkFolder">
         <source xml:lang="en">Symbolic Link Folder</source>
         <target>Символічна посилання на папку</target>
+      </trans-unit>
+      <trans-unit id="tag">
+        <source xml:lang="en">Tag</source>
+        <target>Тег</target>
       </trans-unit>
     </body>
   </file>
@@ -1460,6 +1544,14 @@ For example:
       <trans-unit id="terminalSymbolArgumentIcon">
         <source xml:lang="en">Icon for arguments in the terminal suggest widget.</source>
         <target>Іконка для аргументів у віджеті терміналу.</target>
+      </trans-unit>
+      <trans-unit id="terminalSymbolBranchIcon">
+        <source xml:lang="en">Icon for branches in the terminal suggest widget.</source>
+        <target>Іконка для гілок у віджеті пропозицій терміналу.</target>
+      </trans-unit>
+      <trans-unit id="terminalSymbolCommitIcon">
+        <source xml:lang="en">Icon for commits in the terminal suggest widget.</source>
+        <target>Іконка для комітів у віджеті терміналу.</target>
       </trans-unit>
       <trans-unit id="terminalSymbolFileIcon">
         <source xml:lang="en">Icon for files in the terminal suggest widget.</source>
@@ -1480,6 +1572,14 @@ For example:
       <trans-unit id="terminalSymbolIcon.argumentForeground">
         <source xml:lang="en">The foreground color for an argument icon. These icons will appear in the terminal suggest widget.</source>
         <target>Колір переднього плану для іконки аргументу. Ці іконки з'являться у віджеті підказок терміналу.</target>
+      </trans-unit>
+      <trans-unit id="terminalSymbolIcon.branchForeground">
+        <source xml:lang="en">The foreground color for a branch icon. These icons will appear in the terminal suggest widget.</source>
+        <target>Колір переднього плану для іконки гілки. Ці іконки з'являться у віджеті підказок терміналу.</target>
+      </trans-unit>
+      <trans-unit id="terminalSymbolIcon.commitForeground">
+        <source xml:lang="en">The foreground color for a commit icon. These icons will appear in the terminal suggest widget.</source>
+        <target>Колір переднього плану для іконки коміту. Ці іконки з'являться у віджеті пропозицій терміналу.</target>
       </trans-unit>
       <trans-unit id="terminalSymbolIcon.enumMemberForeground">
         <source xml:lang="en">The foreground color for an enum member icon. These icons will appear in the terminal suggest widget.</source>
@@ -1509,6 +1609,22 @@ For example:
         <source xml:lang="en">The foreground color for an option icon. These icons will appear in the terminal suggest widget.</source>
         <target>Колір переднього плану для значка опції. Ці значки з'являться у віджеті пропозицій терміналу.</target>
       </trans-unit>
+      <trans-unit id="terminalSymbolIcon.pullRequestDoneForeground">
+        <source xml:lang="en">The foreground color for a completed pull request icon. These icons will appear in the terminal suggest widget.</source>
+        <target>Колір переднього плану для значка завершеного запиту на злиття. Ці значки з'являться у віджеті пропозицій терміналу.</target>
+      </trans-unit>
+      <trans-unit id="terminalSymbolIcon.pullRequestForeground">
+        <source xml:lang="en">The foreground color for a pull request icon. These icons will appear in the terminal suggest widget.</source>
+        <target>Колір переднього плану для іконки запиту на злиття. Ці іконки з'являться у віджеті пропозицій терміналу.</target>
+      </trans-unit>
+      <trans-unit id="terminalSymbolIcon.remoteForeground">
+        <source xml:lang="en">The foreground color for a remote icon. These icons will appear in the terminal suggest widget.</source>
+        <target>Колір переднього плану для віддаленого значка. Ці значки з'являться у віджеті пропозицій терміналу.</target>
+      </trans-unit>
+      <trans-unit id="terminalSymbolIcon.stashForeground">
+        <source xml:lang="en">The foreground color for a stash icon. These icons will appear in the terminal suggest widget.</source>
+        <target>Колір переднього плану для іконки сховища. Ці іконки з'являться у віджеті пропозицій терміналу.</target>
+      </trans-unit>
       <trans-unit id="terminalSymbolIcon.symbolicLinkFileForeground">
         <source xml:lang="en">The foreground color for a symbolic link file icon. These icons will appear in the terminal suggest widget.</source>
         <target>Колір переднього плану для значка файлу символічного посилання. Ці значки з'являться у віджеті пропозицій терміналу.</target>
@@ -1516,6 +1632,10 @@ For example:
       <trans-unit id="terminalSymbolIcon.symbolicLinkFolderForeground">
         <source xml:lang="en">The foreground color for a symbolic link folder icon. These icons will appear in the terminal suggest widget.</source>
         <target>Колір переднього плану для значка папки символічного посилання. Ці значки з'являться у віджеті пропозицій терміналу.</target>
+      </trans-unit>
+      <trans-unit id="terminalSymbolIcon.tagForeground">
+        <source xml:lang="en">The foreground color for a tag icon. These icons will appear in the terminal suggest widget.</source>
+        <target>Колір переднього плану для значка тегу. Ці значки з'являться у віджеті пропозицій терміналу.</target>
       </trans-unit>
       <trans-unit id="terminalSymbolInlineSuggestionIcon">
         <source xml:lang="en">Icon for inline suggestions in the terminal suggest widget.</source>
@@ -1533,6 +1653,22 @@ For example:
         <source xml:lang="en">Icon for enum members in the terminal suggest widget.</source>
         <target>Іконка для членів enum у віджеті пропозицій терміналу.</target>
       </trans-unit>
+      <trans-unit id="terminalSymbolPullRequestDoneIcon">
+        <source xml:lang="en">Icon for completed pull requests in the terminal suggest widget.</source>
+        <target>Іконка для завершених запитів на злиття у віджеті терміналу.</target>
+      </trans-unit>
+      <trans-unit id="terminalSymbolPullRequestIcon">
+        <source xml:lang="en">Icon for pull requests in the terminal suggest widget.</source>
+        <target>Іконка для запитів на злиття в віджеті пропозицій терміналу.</target>
+      </trans-unit>
+      <trans-unit id="terminalSymbolRemoteIcon">
+        <source xml:lang="en">Icon for remotes in the terminal suggest widget.</source>
+        <target>Іконка для пультів у віджеті пропозицій терміналу.</target>
+      </trans-unit>
+      <trans-unit id="terminalSymbolStashIcon">
+        <source xml:lang="en">Icon for stashes in the terminal suggest widget.</source>
+        <target>Іконка для сховищ у віджеті терміналу.</target>
+      </trans-unit>
       <trans-unit id="terminalSymbolSymbolicLinkFileIcon">
         <source xml:lang="en">Icon for symbolic link files in the terminal suggest widget.</source>
         <target>Іконка для символічних посилань у файлах у віджеті терміналу.</target>
@@ -1540,6 +1676,10 @@ For example:
       <trans-unit id="terminalSymbolSymbolicLinkFolderIcon">
         <source xml:lang="en">Icon for symbolic link folders in the terminal suggest widget.</source>
         <target>Іконка для символічних посилань на папки в віджеті терміналу.</target>
+      </trans-unit>
+      <trans-unit id="terminalSymbolTagIcon">
+        <source xml:lang="en">Icon for tags in the terminal suggest widget.</source>
+        <target>Іконка для тегів у віджеті пропозицій терміналу.</target>
       </trans-unit>
     </body>
   </file>
@@ -1578,12 +1718,8 @@ For example:
         <target>Увімкніть функцію та використовуйте відносні шляхи.</target>
       </trans-unit>
       <trans-unit id="suggest.enabled">
-        <source xml:lang="en">Enables terminal intellisense suggestions (preview) for supported shells ({0}) when {1} is set to {2}.
-
-If shell integration is installed manually, {3} needs to be set to {4} before calling the shell integration script.</source>
-        <target>Увімкнення пропозицій інтелектуального завершення терміналу (попередній перегляд) для підтримуваних оболонок ({0}), коли {1} встановлено на {2}.
-
-Якщо інтеграцію оболонки встановлено вручну, {3} потрібно встановити на {4} перед викликом скрипта інтеграції оболонки.</target>
+        <source xml:lang="en">Enables terminal intellisense suggestions (preview) for supported shells ({0}) when {1} is set to {2}.</source>
+        <target>Увімкнення пропозицій інтелектуального завершення командного рядка (попередній перегляд) для підтримуваних оболонок ({0}), коли {1} встановлено на {2}.</target>
       </trans-unit>
       <trans-unit id="suggest.inlineSuggestion">
         <source xml:lang="en">Controls whether the shell's inline suggestion should be detected and how it is scored.</source>
@@ -1606,8 +1742,8 @@ If shell integration is installed manually, {3} needs to be set to {4} before ca
         <target>Чи ввімкнути цього постачальника.</target>
       </trans-unit>
       <trans-unit id="suggest.provider.lsp.description">
-        <source xml:lang="en">Enable or disable the LSP-based provider. This enables language server protocol-specific argument completion.</source>
-        <target>Увімкніть або вимкніть постачальника на основі LSP. Це дозволяє завершення аргументів, специфічних для протоколу мовного сервера.</target>
+        <source xml:lang="en">Provides completions for language server protocol-specific arguments.</source>
+        <target>Надає завершення для специфічних аргументів протоколу мовного сервера.</target>
       </trans-unit>
       <trans-unit id="suggest.providers">
         <source xml:lang="en">Providers are enabled by default. Omit them by setting the id of the provider to `false`.</source>
@@ -1729,6 +1865,26 @@ To exclude an extension, set it to `false`
   </file>
   <file original="src/vs/workbench/contrib/terminalContrib/voice/browser/terminalVoiceActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="enableExtension">
+        <source xml:lang="en">Enable Extension</source>
+        <target>Увімкнути розширення</target>
+      </trans-unit>
+      <trans-unit id="installExtension">
+        <source xml:lang="en">Install Extension</source>
+        <target>Встановити розширення</target>
+      </trans-unit>
+      <trans-unit id="terminal.voice.detail">
+        <source xml:lang="en">Microphone support requires this extension.</source>
+        <target>Підтримка мікрофона вимагає цього розширення.</target>
+      </trans-unit>
+      <trans-unit id="terminal.voice.enableSpeechExtension">
+        <source xml:lang="en">Would you like to enable the speech extension?</source>
+        <target>Чи хочете ви увімкнути розширення для мовлення?</target>
+      </trans-unit>
+      <trans-unit id="terminal.voice.installSpeechExtension">
+        <source xml:lang="en">Would you like to install 'VS Code Speech' extension from 'Microsoft'?</source>
+        <target>Ви хочете встановити розширення 'VS Code Speech' від 'Microsoft'?</target>
+      </trans-unit>
       <trans-unit id="workbench.action.terminal.startDictation">
         <source xml:lang="en">Start Dictation in Terminal</source>
         <target>Почати диктування в терміналі</target>

@@ -71,10 +71,10 @@
         <target>MCP Сервери</target>
       </trans-unit>
       <trans-unit id="mcp.command.browse.mcp">
-        <source xml:lang="en">Browse Servers</source>
-        <target>Перегляд серверів</target>
+        <source xml:lang="en">Browse MCP Servers</source>
+        <target>Перегляд серверів MCP</target>
       </trans-unit>
-      <trans-unit id="mcp.command.open">
+      <trans-unit id="mcp.command.browse.tooltip">
         <source xml:lang="en">Browse MCP Servers</source>
         <target>Перегляд серверів MCP</target>
       </trans-unit>
@@ -229,6 +229,10 @@
       <trans-unit id="mcp.signOut">
         <source xml:lang="en">Sign Out</source>
         <target>Вийти</target>
+      </trans-unit>
+      <trans-unit id="mcp.skipCurrentAutostart">
+        <source xml:lang="en">Skip Current Autostart</source>
+        <target>Пропустити поточний автозапуск</target>
       </trans-unit>
       <trans-unit id="mcp.start">
         <source xml:lang="en">Start Server</source>
@@ -494,6 +498,10 @@
         <source xml:lang="en">Request for Input</source>
         <target>Запит на введення</target>
       </trans-unit>
+      <trans-unit id="mcp.elicit.useDefault">
+        <source xml:lang="en">Default value</source>
+        <target>Значення за замовчуванням</target>
+      </trans-unit>
       <trans-unit id="mcp.elicit.validation.date">
         <source xml:lang="en">Please enter a valid date (YYYY-MM-DD)</source>
         <target>Будь ласка, введіть дійсну дату (YYYY-MM-DD)</target>
@@ -638,6 +646,14 @@
         <source xml:lang="en">Loading...</source>
         <target>Завантаження...</target>
       </trans-unit>
+      <trans-unit id="mcp.arg.activeFile">
+        <source xml:lang="en">Active File</source>
+        <target>Активний файл</target>
+      </trans-unit>
+      <trans-unit id="mcp.arg.activeFiles">
+        <source xml:lang="en">Active File</source>
+        <target>Активний файл</target>
+      </trans-unit>
       <trans-unit id="mcp.arg.asCommand">
         <source xml:lang="en">Run as Command</source>
         <target>Запустити як команду</target>
@@ -657,6 +673,18 @@
       <trans-unit id="mcp.arg.required">
         <source xml:lang="en">This argument is required</source>
         <target>Цей аргумент є обов'язковим</target>
+      </trans-unit>
+      <trans-unit id="mcp.arg.selectedText">
+        <source xml:lang="en">Selected Text</source>
+        <target>Вибраний текст</target>
+      </trans-unit>
+      <trans-unit id="mcp.arg.selectedText.multiLine">
+        <source xml:lang="en">{0} lines</source>
+        <target>{0} рядків</target>
+      </trans-unit>
+      <trans-unit id="mcp.arg.selectedText.singleLine">
+        <source xml:lang="en">line {0}</source>
+        <target>рядок {0}</target>
       </trans-unit>
       <trans-unit id="mcp.arg.suggestions">
         <source xml:lang="en">Suggestions</source>
@@ -718,9 +746,13 @@
         <source xml:lang="en">Show Configuration (JSON)</source>
         <target>Показати конфігурацію (JSON)</target>
       </trans-unit>
-      <trans-unit id="disabled - not allowed">
-        <source xml:lang="en">This MCP Server is disabled because {0}</source>
-        <target>Цей MCP сервер вимкнено, оскільки {0}</target>
+      <trans-unit id="disabled - all not allowed">
+        <source xml:lang="en">This MCP Server is disabled because MCP servers are configured to be disabled in the Editor. Please check your [settings]({0}).</source>
+        <target>Цей сервер MCP вимкнено, оскільки сервери MCP налаштовані на вимкнення в Редакторі. Будь ласка, перевірте свої [налаштування]({0}).</target>
+      </trans-unit>
+      <trans-unit id="disabled - some not allowed">
+        <source xml:lang="en">This MCP Server is disabled because it is configured to be disabled in the Editor. Please check your [settings]({0}).</source>
+        <target>Цей MCP сервер вимкнено, оскільки він налаштований на вимкнення в Редакторі. Будь ласка, перевірте свої [налаштування]({0}).</target>
       </trans-unit>
       <trans-unit id="install">
         <source xml:lang="en">Install</source>
@@ -838,7 +870,7 @@
         <source xml:lang="en">Identifier</source>
         <target>Ідентифікатор</target>
       </trans-unit>
-      <trans-unit id="last released">
+      <trans-unit id="last updated">
         <source xml:lang="en">Last Released</source>
         <target>Останнє випущене</target>
       </trans-unit>
@@ -878,6 +910,10 @@
         <source xml:lang="en">Packages</source>
         <target>Пакети</target>
       </trans-unit>
+      <trans-unit id="published">
+        <source xml:lang="en">Published</source>
+        <target>Опубліковано</target>
+      </trans-unit>
       <trans-unit id="remotes">
         <source xml:lang="en">Remote</source>
         <target>Віддалений</target>
@@ -901,6 +937,14 @@
       <trans-unit id="serverType">
         <source xml:lang="en">Type:</source>
         <target>Тип:</target>
+      </trans-unit>
+      <trans-unit id="support">
+        <source xml:lang="en">Contact Support</source>
+        <target>Зв'язатися з підтримкою</target>
+      </trans-unit>
+      <trans-unit id="tags">
+        <source xml:lang="en">Tags</source>
+        <target>Теги</target>
       </trans-unit>
       <trans-unit id="transport">
         <source xml:lang="en">Transport:</source>
@@ -926,6 +970,10 @@
   </file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpServerIcons" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="licenseIcon">
+        <source xml:lang="en">Icon shown along with the license status.</source>
+        <target>Іконка, що відображається разом зі статусом ліцензії.</target>
+      </trans-unit>
       <trans-unit id="mcpServer">
         <source xml:lang="en">Icon used for the MCP server.</source>
         <target>MCP Сервер</target>
@@ -938,21 +986,21 @@
         <source xml:lang="en">Icon to indicate that an MCP server is for the workspace scope.</source>
         <target>Іконка, що вказує на те, що сервер MCP призначений для області робочого простору.</target>
       </trans-unit>
+      <trans-unit id="starredIcon">
+        <source xml:lang="en">Icon shown along with the starred status.</source>
+        <target>Іконка, що відображається разом з позначкою "зірка".</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpServerWidgets" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="install count">
-        <source xml:lang="en">Install count</source>
-        <target>Встановлення кількості</target>
+      <trans-unit id="mcpIconStarForeground">
+        <source xml:lang="en">The icon color for mcp starred.</source>
+        <target>Колір іконки для mcp зірковий.</target>
       </trans-unit>
       <trans-unit id="publisher">
         <source xml:lang="en">Publisher ({0})</source>
         <target>Видавець ({0})</target>
-      </trans-unit>
-      <trans-unit id="ratedLabel">
-        <source xml:lang="en">Average rating: {0} out of 5</source>
-        <target>Середня оцінка: {0} з 5</target>
       </trans-unit>
       <trans-unit id="remote user extension">
         <source xml:lang="en">Remote MCP Server</source>
@@ -982,17 +1030,41 @@
         <source xml:lang="en">MCP Servers - Installed</source>
         <target>MCP Сервери - Встановлено</target>
       </trans-unit>
-      <trans-unit id="mcp.welcome.browseButton">
-        <source xml:lang="en">Browse MCP Servers</source>
-        <target>Перегляд серверів MCP</target>
+      <trans-unit id="mcp.gallery.enableDialog.cancel">
+        <source xml:lang="en">Cancel</source>
+        <target>Скасувати</target>
+      </trans-unit>
+      <trans-unit id="mcp.gallery.enableDialog.enable">
+        <source xml:lang="en">Enable</source>
+        <target>Увімкнути</target>
+      </trans-unit>
+      <trans-unit id="mcp.gallery.enableDialog.setting">
+        <source xml:lang="en">This feature is currently in preview. You can disable it anytime using the setting {0}.</source>
+        <target>Ця функція наразі в режимі попереднього перегляду. Ви можете вимкнути її в будь-який час, використовуючи налаштування {0}.</target>
+      </trans-unit>
+      <trans-unit id="mcp.gallery.enableDialog.title">
+        <source xml:lang="en">Enable MCP Servers Marketplace?</source>
+        <target>Увімкнути ринок серверів MCP?</target>
       </trans-unit>
       <trans-unit id="mcp.welcome.descriptionWithLink">
-        <source xml:lang="en">Extend agent mode by installing MCP servers to bring extra tools for connecting to databases, invoking APIs and performing specialized tasks.</source>
-        <target>Розширте режим агента, встановивши сервери MCP, щоб додати додаткові інструменти для підключення до баз даних, виклику API та виконання спеціалізованих завдань.</target>
+        <source xml:lang="en">Browse and install [Model Context Protocol (MCP) servers](https://code.visualstudio.com/docs/copilot/customization/mcp-servers) directly from VS Code to extend agent mode with extra tools for connecting to databases, invoking APIs and performing specialized tasks.</source>
+        <target>Переглядайте та встановлюйте [сервера протоколу контексту моделі (MCP)](https://code.visualstudio.com/docs/copilot/customization/mcp-servers) безпосередньо з VS Code, щоб розширити режим агента додатковими інструментами для підключення до баз даних, виклику API та виконання спеціалізованих завдань.</target>
+      </trans-unit>
+      <trans-unit id="mcp.welcome.enableGalleryButton">
+        <source xml:lang="en">Enable MCP Servers Marketplace</source>
+        <target>Увімкнути ринок серверів MCP</target>
+      </trans-unit>
+      <trans-unit id="mcp.welcome.settings.tooltip">
+        <source xml:lang="en">Open Settings</source>
+        <target>Відкрити Налаштування</target>
       </trans-unit>
       <trans-unit id="mcp.welcome.title">
         <source xml:lang="en">MCP Servers</source>
         <target>Сервери MCP</target>
+      </trans-unit>
+      <trans-unit id="no extensions found">
+        <source xml:lang="en">No MCP Servers found.</source>
+        <target>Не знайдено серверів MCP.</target>
       </trans-unit>
     </body>
   </file>
@@ -1029,6 +1101,10 @@
       <trans-unit id="invalidLabel">
         <source xml:lang="en">Expected 'label' to be a non-empty string.</source>
         <target>Очікувалося, що 'label' буде непорожнім рядком.</target>
+      </trans-unit>
+      <trans-unit id="invalidWhen">
+        <source xml:lang="en">Expected 'when' to be a non-empty string.</source>
+        <target>Очікувалося, що 'when' буде непорожнім рядком.</target>
       </trans-unit>
     </body>
   </file>
@@ -1161,6 +1237,10 @@
       <trans-unit id="vscode.extension.contributes.mcp.label">
         <source xml:lang="en">Display name for the collection.</source>
         <target>Відображуване ім'я для колекції.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.contributes.mcp.when">
+        <source xml:lang="en">Condition which must be true to enable this collection.</source>
+        <target>Умова, яка повинна бути істинною, щоб активувати цю колекцію.</target>
       </trans-unit>
     </body>
   </file>
@@ -1385,18 +1465,6 @@
       <trans-unit id="mcpServer.stopping">
         <source xml:lang="en">Stopping server {0}</source>
         <target>Зупинка сервера {0}</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/workbench/contrib/mcp/common/mcpService" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="mcp.autostart.configure">
-        <source xml:lang="en">Configure MCP Autostart</source>
-        <target>Налаштувати автозапуск MCP</target>
-      </trans-unit>
-      <trans-unit id="mcp.autostart.progress">
-        <source xml:lang="en">Starting MCP server: {0}</source>
-        <target>Запуск сервера MCP: {0}</target>
       </trans-unit>
     </body>
   </file>

@@ -254,6 +254,18 @@
   </file>
   <file original="src/vs/workbench/contrib/notebook/browser/contrib/find/notebookFind" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="notebook.findNext.enter">
+        <source xml:lang="en">Find Next</source>
+        <target>Знайти далі</target>
+      </trans-unit>
+      <trans-unit id="notebook.findNext.fromWidget">
+        <source xml:lang="en">Find Next</source>
+        <target>Знайти наступний</target>
+      </trans-unit>
+      <trans-unit id="notebook.findPrevious.fromWidget">
+        <source xml:lang="en">Find Previous</source>
+        <target>Знайти попереднє</target>
+      </trans-unit>
       <trans-unit id="notebookActions.findInNotebook">
         <source xml:lang="en">Find in Notebook</source>
         <target>Знайти в Блокноті</target>
@@ -663,50 +675,6 @@
   </file>
   <file original="src/vs/workbench/contrib/notebook/browser/controller/chat/cellChatActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="apply1">
-        <source xml:lang="en">Accept Changes</source>
-        <target>Прийняти зміни</target>
-      </trans-unit>
-      <trans-unit id="apply2">
-        <source xml:lang="en">Accept</source>
-        <target>Прийняти</target>
-      </trans-unit>
-      <trans-unit id="apply3">
-        <source xml:lang="en">Accept Changes</source>
-        <target>Прийняти зміни</target>
-      </trans-unit>
-      <trans-unit id="arrowDown">
-        <source xml:lang="en">Cursor Down</source>
-        <target>Курсор вниз</target>
-      </trans-unit>
-      <trans-unit id="arrowUp">
-        <source xml:lang="en">Cursor Up</source>
-        <target>Курсор вгору</target>
-      </trans-unit>
-      <trans-unit id="discard">
-        <source xml:lang="en">Discard</source>
-        <target>Видалити</target>
-      </trans-unit>
-      <trans-unit id="focusChatWidget">
-        <source xml:lang="en">Focus Chat Widget</source>
-        <target>Віджет чату Фокус</target>
-      </trans-unit>
-      <trans-unit id="focusNextCell">
-        <source xml:lang="en">Focus Next Cell</source>
-        <target>Сфокусувати наступну клітинку</target>
-      </trans-unit>
-      <trans-unit id="focusNextChatWidget">
-        <source xml:lang="en">Focus Next Cell Chat Widget</source>
-        <target>Сфокусуватися на наступній клітинці віджета чату</target>
-      </trans-unit>
-      <trans-unit id="focusNotebookChat">
-        <source xml:lang="en">Focus Chat</source>
-        <target>Фокус Чат</target>
-      </trans-unit>
-      <trans-unit id="focusPreviousCell">
-        <source xml:lang="en">Focus Previous Cell</source>
-        <target>Сфокусувати попередню клітинку</target>
-      </trans-unit>
       <trans-unit id="notebook.apply1">
         <source xml:lang="en">Accept and Run</source>
         <target>Прийняти та запустити</target>
@@ -718,26 +686,6 @@
       <trans-unit id="notebook.apply3">
         <source xml:lang="en">Accept the changes and run the cell</source>
         <target>Прийміть зміни та запустіть клітинку</target>
-      </trans-unit>
-      <trans-unit id="notebook.cell.chat.accept">
-        <source xml:lang="en">Make Request</source>
-        <target>Зробити запит</target>
-      </trans-unit>
-      <trans-unit id="notebook.cell.chat.close">
-        <source xml:lang="en">Close Chat</source>
-        <target>Закрити чат</target>
-      </trans-unit>
-      <trans-unit id="notebook.cell.chat.nextFromHistory">
-        <source xml:lang="en">Next From History</source>
-        <target>Далі з історії</target>
-      </trans-unit>
-      <trans-unit id="notebook.cell.chat.previousFromHistory">
-        <source xml:lang="en">Previous From History</source>
-        <target>Попереднє з історії</target>
-      </trans-unit>
-      <trans-unit id="notebook.cell.chat.stop">
-        <source xml:lang="en">Stop Request</source>
-        <target>Зупинити запит</target>
       </trans-unit>
       <trans-unit id="notebookActions.menu.insertCode.ontoolbar">
         <source xml:lang="en">Generate</source>
@@ -754,10 +702,6 @@
       <trans-unit id="notebookActions.menu.insertCodeCellWithChat.tooltip">
         <source xml:lang="en">Start Chat to Generate Code</source>
         <target>Почати чат для генерації коду</target>
-      </trans-unit>
-      <trans-unit id="notebookActions.restoreCellprompt">
-        <source xml:lang="en">Generate</source>
-        <target>Генерувати</target>
       </trans-unit>
     </body>
   </file>
@@ -791,37 +735,9 @@
   </file>
   <file original="src/vs/workbench/contrib/notebook/browser/controller/chat/notebookChatContext" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="notebookCellChatFocused">
-        <source xml:lang="en">Whether the cell chat editor is focused</source>
-        <target>Чи сфокусовано редактор чату комірки</target>
-      </trans-unit>
       <trans-unit id="notebookChatAgentRegistered">
         <source xml:lang="en">Whether a chat agent for notebook is registered</source>
         <target>Чи зареєстрований агент чату для ноутбука</target>
-      </trans-unit>
-      <trans-unit id="notebookChatHasActiveRequest">
-        <source xml:lang="en">Whether the cell chat editor has an active request</source>
-        <target>Чи має редактор чату клітинки активний запит</target>
-      </trans-unit>
-      <trans-unit id="notebookChatOuterFocusPosition">
-        <source xml:lang="en">Whether the focus of the notebook editor is above or below the cell chat</source>
-        <target>Чи знаходиться фокус редактора нотаток вище чи нижче чату клітинки</target>
-      </trans-unit>
-      <trans-unit id="notebookChatUserDidEdit">
-        <source xml:lang="en">Whether the user did changes ontop of the notebook cell chat</source>
-        <target>Чи вносив користувач зміни поверх чату клітинки нотатки</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/workbench/contrib/notebook/browser/controller/chat/notebookChatController" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="default.placeholder">
-        <source xml:lang="en">Ask or edit in context</source>
-        <target>Запитайте або редагуйте в контексті</target>
-      </trans-unit>
-      <trans-unit id="welcome.1">
-        <source xml:lang="en">AI-generated code may be incorrect</source>
-        <target>Код, згенерований ШІ, може бути неправильним.</target>
       </trans-unit>
     </body>
   </file>

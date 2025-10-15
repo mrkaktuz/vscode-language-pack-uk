@@ -337,6 +337,26 @@ The task will be ignored.</source>
         <source xml:lang="en">Show Output</source>
         <target>Показати вихідні дані</target>
       </trans-unit>
+      <trans-unit id="task.longRunningTaskCompleted">
+        <source xml:lang="en">Task finished in {0}.</source>
+        <target>Завдання завершено за {0}.</target>
+      </trans-unit>
+      <trans-unit id="task.longRunningTaskCompletedWithLabel">
+        <source xml:lang="en">Task "{0}" finished in {1}.</source>
+        <target>Завдання "{0}" завершено за {1}.</target>
+      </trans-unit>
+      <trans-unit id="task.longRunningTaskDurationMinutes">
+        <source xml:lang="en">{0}m</source>
+        <target>{0}м</target>
+      </trans-unit>
+      <trans-unit id="task.longRunningTaskDurationMinutesSeconds">
+        <source xml:lang="en">{0}m {1}s</source>
+        <target>{0}м {1}с</target>
+      </trans-unit>
+      <trans-unit id="task.longRunningTaskDurationSeconds">
+        <source xml:lang="en">{0}s</source>
+        <target>{0}s</target>
+      </trans-unit>
       <trans-unit id="taskEvent">
         <source xml:lang="en">Task Event kind: {0}</source>
         <target>Тип події завдання: {0}</target>
@@ -416,8 +436,8 @@ The task will be ignored.</source>
 // для документації про формат tasks.json</target>
       </trans-unit>
       <trans-unit id="troubleshootWithChat">
-        <source xml:lang="en">Fix with {0}</source>
-        <target>Виправити з {0}</target>
+        <source xml:lang="en">Fix with AI</source>
+        <target>Виправити за допомогою ШІ</target>
       </trans-unit>
       <trans-unit id="unexpectedTaskType">
         <source xml:lang="en">The task provider for "{0}" tasks unexpectedly provided a task of type "{1}".
@@ -538,6 +558,10 @@ The task will be ignored.</source>
       <trans-unit id="status.runningTasks">
         <source xml:lang="en">Running Tasks</source>
         <target>Виконання завдань</target>
+      </trans-unit>
+      <trans-unit id="task.NotifyWindowOnTaskCompletion">
+        <source xml:lang="en">Controls the minimum task runtime in milliseconds before showing an OS notification when the task finishes while the window is not in focus. Set to -1 to disable notifications. Set to 0 to always show notifications. This includes a window badge as well as notification toast.</source>
+        <target>Контролює мінімальний час виконання завдання в мілісекундах перед показом сповіщення ОС, коли завдання завершується, а вікно не в фокусі. Встановіть -1, щоб вимкнути сповіщення. Встановіть 0, щоб завжди показувати сповіщення. Це включає значок вікна, а також сповіщення у вигляді тосту.</target>
       </trans-unit>
       <trans-unit id="task.SaveBeforeRun.prompt">
         <source xml:lang="en">Prompts whether to save editors before running.</source>
@@ -1243,6 +1267,10 @@ The task command line or label</note>
       <trans-unit id="JsonSchema.tasks.presentation.instance">
         <source xml:lang="en">Controls if the panel is shared between tasks, dedicated to this task or a new one is created on every run.</source>
         <target>Контролює, чи панель спільна між завданнями, присвячена цьому завданню, чи нова створюється при кожному запуску.</target>
+      </trans-unit>
+      <trans-unit id="JsonSchema.tasks.presentation.preserveTerminalName">
+        <source xml:lang="en">Controls whether to preserve the task name in the terminal after task completion.</source>
+        <target>Контролює, чи зберігати ім'я задачі в терміналі після завершення задачі.</target>
       </trans-unit>
       <trans-unit id="JsonSchema.tasks.presentation.reveal">
         <source xml:lang="en">Controls whether the terminal running the task is revealed or not. May be overridden by option "revealProblems". Default is "always".</source>

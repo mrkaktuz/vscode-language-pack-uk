@@ -851,6 +851,10 @@ OS: {8}</source>
         <source xml:lang="en">Shows all telemetry events which VS code collects.</source>
         <target>Показує всі події телеметрії, які збирає VS Code.</target>
       </trans-unit>
+      <trans-unit id="transient">
+        <source xml:lang="en">Run with temporary data and extension directories, as if launched for the first time.</source>
+        <target>Запустіть з тимчасовими даними та каталогами розширень, ніби запущено вперше.</target>
+      </trans-unit>
       <trans-unit id="troubleshooting">
         <source xml:lang="en">Troubleshooting</source>
         <target>Виправлення несправностей</target>
@@ -2249,6 +2253,14 @@ OS: {8}</source>
   </file>
   <file original="src/vs/platform/quickinput/browser/quickInputActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="nonQuickWidget">
+        <source xml:lang="en">Used while in the context of some quick input. If you change one keybinding for this command, you should change all of the other keybindings (modifier variants) of this command as well.</source>
+        <target>Використовується в контексті швидкого введення. Якщо ви змінюєте одну комбінацію клавіш для цієї команди, ви також повинні змінити всі інші комбінації клавіш (варіанти з модифікаторами) цієї команди.</target>
+      </trans-unit>
+      <trans-unit id="quickInput">
+        <source xml:lang="en">Used while in the context of any kind of quick input. If you change one keybinding for this command, you should change all of the other keybindings (modifier variants) of this command as well.</source>
+        <target>Використовується в контексті будь-якого швидкого введення. Якщо ви змінюєте одну клавішу для цієї команди, ви також повинні змінити всі інші клавіші (варіанти модифікаторів) цієї команди.</target>
+      </trans-unit>
       <trans-unit id="quickInput.nextSeparatorWithQuickAccessFallback">
         <source xml:lang="en">If we're in quick access mode, this will navigate to the next item. If we are not in quick access mode, this will navigate to the next separator.</source>
         <target>Якщо ми в режимі швидкого доступу, це перемістить до наступного елемента. Якщо ми не в режимі швидкого доступу, це перемістить до наступного роздільника.</target>
@@ -2301,7 +2313,7 @@ OS: {8}</source>
     <body>
       <trans-unit id="quickInput">
         <source xml:lang="en">Quick Input</source>
-        <target>Швидкий ввід</target>
+        <target>Використовується в контексті будь-якого швидкого введення. Якщо ви змінюєте одну клавішу для цієї команди, ви також повинні змінити всі інші клавіші (варіанти модифікаторів) цієї команди.</target>
       </trans-unit>
     </body>
   </file>
@@ -2392,6 +2404,10 @@ OS: {8}</source>
       <trans-unit id="httpConfigurationTitle">
         <source xml:lang="en">HTTP</source>
         <target>HTTP</target>
+      </trans-unit>
+      <trans-unit id="networkInterfaceCheckInterval">
+        <source xml:lang="en">Controls the interval in seconds for checking network interface changes to invalidate the proxy cache. Set to -1 to disable. When during [remote development](https://aka.ms/vscode-remote) the {0} setting is disabled this setting can be configured in the local and the remote settings separately.</source>
+        <target>Контролює інтервал у секундах для перевірки змін мережевого інтерфейсу для анулювання кешу проксі. Встановіть на -1, щоб вимкнути. Коли під час [віддаленої розробки](https://aka.ms/vscode-remote) налаштування {0} вимкнене, це налаштування можна налаштувати окремо в локальних і віддалених налаштуваннях.</target>
       </trans-unit>
       <trans-unit id="noProxy">
         <source xml:lang="en">Specifies domain names for which proxy settings should be ignored for HTTP/HTTPS requests. When during [remote development](https://aka.ms/vscode-remote) the {0} setting is disabled this setting can be configured in the local and the remote settings separately.</source>
@@ -2502,8 +2518,8 @@ OS: {8}</source>
         <target>Телеметрія помилок</target>
       </trans-unit>
       <trans-unit id="telemetry.feedback.enabled">
-        <source xml:lang="en">Enable feedback mechanisms such as the issue reporter, surveys, and feedback options in features like Copilot Chat.</source>
-        <target>Увімкніть механізми зворотного зв'язку, такі як репортер проблем, опитування та варіанти зворотного зв'язку в таких функціях, як Copilot Chat.</target>
+        <source xml:lang="en">Enable feedback mechanisms such as the issue reporter, surveys, and other feedback options.</source>
+        <target>Увімкніть механізми зворотного зв'язку, такі як репортер проблем, опитування та інші варіанти зворотного зв'язку.</target>
       </trans-unit>
       <trans-unit id="telemetry.restart">
         <source xml:lang="en">A full restart of the application is necessary for crash reporting changes to take effect.</source>
@@ -2631,8 +2647,8 @@ To override an existing profile use its profile name as the key, for example:
         <target>Контролює, чи відображаються дистрибутиви WSL у випадаючому меню терміналу</target>
       </trans-unit>
       <trans-unit id="terminalAutomationProfile.path">
-        <source xml:lang="en">A single path to a shell executable.</source>
-        <target>Єдиний шлях до виконуваного файлу оболонки.</target>
+        <source xml:lang="en">A path to a shell executable.</source>
+        <target>Шлях до виконуваного файлу оболонки.</target>
       </trans-unit>
       <trans-unit id="terminalIntegratedConfigurationTitle">
         <source xml:lang="en">Integrated Terminal</source>
