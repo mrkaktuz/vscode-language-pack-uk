@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/update/browser/postUpdateWidget" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="postUpdate.close">
+        <source xml:lang="en">Close</source>
+        <target>Закрити</target>
+      </trans-unit>
+      <trans-unit id="postUpdate.releaseNotes">
+        <source xml:lang="en">Release Notes</source>
+        <target>Примітки до випуску</target>
+      </trans-unit>
+      <trans-unit id="postUpdate.title">
+        <source xml:lang="en">New in {0}</source>
+        <target>Новий у {0}</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/update/browser/releaseNotesEditor" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="releaseNotesInputName">
@@ -34,10 +50,6 @@
         <source xml:lang="en">Checking for Updates...</source>
         <target>Перевірка оновлень...</target>
       </trans-unit>
-      <trans-unit id="download update">
-        <source xml:lang="en">Download Update</source>
-        <target>Завантажити оновлення</target>
-      </trans-unit>
       <trans-unit id="download update_1">
         <source xml:lang="en">Download Update (1)</source>
         <target>Завантажити оновлення (1)</target>
@@ -46,10 +58,6 @@
         <source xml:lang="en">Downloading {0} update...</source>
         <target>Завантаження оновлення {0}...</target>
       </trans-unit>
-      <trans-unit id="installUpdate">
-        <source xml:lang="en">Install Update</source>
-        <target>Встановити оновлення</target>
-      </trans-unit>
       <trans-unit id="installUpdate...">
         <source xml:lang="en">Install Update... (1)</source>
         <target>Встановити оновлення... (1)</target>
@@ -57,14 +65,6 @@
       <trans-unit id="installingUpdate">
         <source xml:lang="en">Installing Update...</source>
         <target>Встановлення оновлення...</target>
-      </trans-unit>
-      <trans-unit id="later">
-        <source xml:lang="en">Later</source>
-        <target>Пізніше</target>
-      </trans-unit>
-      <trans-unit id="learn more">
-        <source xml:lang="en">Learn More</source>
-        <target>Дізнатися більше</target>
       </trans-unit>
       <trans-unit id="noUpdatesAvailable">
         <source xml:lang="en">There are currently no updates available.</source>
@@ -119,37 +119,13 @@
         <source xml:lang="en">Switch to Stable Version...</source>
         <target>Перейти на стабільну версію...</target>
       </trans-unit>
-      <trans-unit id="thereIsUpdateAvailable">
-        <source xml:lang="en">There is an available update.</source>
-        <target>Є доступне оновлення.</target>
-      </trans-unit>
-      <trans-unit id="update service">
-        <source xml:lang="en">Update Service</source>
-        <target>Оновлення служби</target>
-      </trans-unit>
-      <trans-unit id="update service disabled">
-        <source xml:lang="en">Updates are disabled because you are running the user-scope installation of {0} as Administrator.</source>
-        <target>Оновлення вимкнені, оскільки ви запускаєте установку {0} для користувача як Адміністратор.</target>
-      </trans-unit>
       <trans-unit id="update.noReleaseNotesOnline">
         <source xml:lang="en">This version of {0} does not have release notes online</source>
         <target>Ця версія {0} не має онлайн-нотаток про випуск.</target>
       </trans-unit>
-      <trans-unit id="updateAvailable">
-        <source xml:lang="en">There's an update available: {0} {1}</source>
-        <target>Є доступне оновлення: {0} {1}</target>
-      </trans-unit>
-      <trans-unit id="updateAvailableAfterRestart">
-        <source xml:lang="en">Restart {0} to apply the latest update.</source>
-        <target>Перезавантажте {0}, щоб застосувати останнє оновлення.</target>
-      </trans-unit>
       <trans-unit id="updateIsReady">
         <source xml:lang="en">New {0} update available.</source>
         <target>Новий {0} оновлення доступний.</target>
-      </trans-unit>
-      <trans-unit id="updateNow">
-        <source xml:lang="en">Update Now</source>
-        <target>Оновити зараз</target>
       </trans-unit>
       <trans-unit id="updating">
         <source xml:lang="en">Updating {0}...</source>
@@ -218,6 +194,14 @@
         <source xml:lang="en">Open Current File as Release Notes</source>
         <target>Відкрити поточний файл як примітки до випуску</target>
       </trans-unit>
+      <trans-unit id="showUpdateInfo">
+        <source xml:lang="en">Show Update Info</source>
+        <target>Показати інформацію про оновлення</target>
+      </trans-unit>
+      <trans-unit id="showUpdateInfo.prompt">
+        <source xml:lang="en">Enter markdown to render, or JSON with markdown/buttons (leave empty to load from URL)</source>
+        <target>Введіть markdown для рендерингу або JSON з markdown/кнопками (залиште порожнім, щоб завантажити з URL)</target>
+      </trans-unit>
       <trans-unit id="update.noReleaseNotesOnline">
         <source xml:lang="en">This version of {0} does not have release notes online</source>
         <target>Ця версія {0} не має онлайн-нотаток про випуск.</target>
@@ -226,6 +210,262 @@
         <source xml:lang="en">&amp;&amp;Update</source>
         <note>&amp;&amp; denotes a mnemonic</note>
         <target>&amp;&amp;Оновити</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/update/browser/updateTitleBarEntry" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="updateIndicator.checking">
+        <source xml:lang="en">Checking...</source>
+        <target>Перевірка...</target>
+      </trans-unit>
+      <trans-unit id="updateIndicator.downloading">
+        <source xml:lang="en">Downloading...</source>
+        <target>Завантаження...</target>
+      </trans-unit>
+      <trans-unit id="updateIndicator.installing">
+        <source xml:lang="en">Installing...</source>
+        <target>Встановлення...</target>
+      </trans-unit>
+      <trans-unit id="updateIndicator.overwriting">
+        <source xml:lang="en">Updating...</source>
+        <target>Оновлення...</target>
+      </trans-unit>
+      <trans-unit id="updateIndicator.restarting">
+        <source xml:lang="en">Restarting...</source>
+        <target>Перезапуск...</target>
+      </trans-unit>
+      <trans-unit id="updateIndicator.update">
+        <source xml:lang="en">Update</source>
+        <target>Оновити</target>
+      </trans-unit>
+      <trans-unit id="updateIndicatorTitleBarAction">
+        <source xml:lang="en">Update</source>
+        <target>Оновити</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/update/browser/updateTooltip" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="updateTooltip.autoUpdateDefault">
+        <source xml:lang="en">Automatic updates are enabled. Happy Coding!</source>
+        <target>Автоматичні оновлення увімкнені. Щасливого кодування!</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.autoUpdateManual">
+        <source xml:lang="en">Automatic updates will be checked but not installed automatically.</source>
+        <target>Автоматичні оновлення будуть перевірені, але не встановлені автоматично.</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.autoUpdateNone">
+        <source xml:lang="en">Automatic updates are disabled.</source>
+        <target>Автоматичні оновлення вимкнені.</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.autoUpdateStart">
+        <source xml:lang="en">Updates will be applied on restart.</source>
+        <target>Оновлення будуть застосовані при перезавантаженні.</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.checkingForUpdatesTitle">
+        <source xml:lang="en">Checking for Updates</source>
+        <target>Перевірка оновлень</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.checkingPleaseWait">
+        <source xml:lang="en">Checking for updates, please wait...</source>
+        <target>Перевірка оновлень, будь ласка, зачекайте...</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.copyVersion">
+        <source xml:lang="en">Copy</source>
+        <target>Копіювати</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.currentVersionLabel">
+        <source xml:lang="en">Current Version: {0}</source>
+        <target>Поточна версія: {0}</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.currentVersionLabelWithCommit">
+        <source xml:lang="en">Current Version: {0} ({1})</source>
+        <target>Поточна версія: {0} ({1})</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.disabledByEnvironment">
+        <source xml:lang="en">Updates are disabled by the --disable-updates command line flag.</source>
+        <target>Оновлення вимкнені за допомогою прапора командного рядка --disable-updates.</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.disabledByPolicy">
+        <source xml:lang="en">Updates are disabled by organization policy.</source>
+        <target>Оновлення вимкнені політикою організації.</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.disabledGeneric">
+        <source xml:lang="en">Updates are disabled.</source>
+        <target>Оновлення вимкнені.</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.disabledInvalidConfig">
+        <source xml:lang="en">Updates are disabled because the update URL is invalid.</source>
+        <target>Оновлення вимкнено, оскільки URL-адреса оновлення є недійсною.</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.disabledManually">
+        <source xml:lang="en">Updates are manually disabled. Change the "update.mode" setting to enable.</source>
+        <target>Оновлення вручну вимкнені. Змініть налаштування "update.mode", щоб увімкнути.</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.disabledMissingConfig">
+        <source xml:lang="en">Updates are disabled because no update URL is configured.</source>
+        <target>Оновлення вимкнені, оскільки URL-адреса для оновлень не налаштована.</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.disabledNotBuilt">
+        <source xml:lang="en">Updates are not available for this build.</source>
+        <target>Оновлення недоступні для цієї збірки.</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.disabledRunningAsAdmin">
+        <source xml:lang="en">Updates are not available when running a user install of {0} as administrator.</source>
+        <target>Оновлення недоступні при виконанні інсталяції {0} користувачем з правами адміністратора.</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.downloadButton">
+        <source xml:lang="en">Download</source>
+        <target>Завантажити</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.downloadSpeed">
+        <source xml:lang="en">{0}/s</source>
+        <target>{0}/s</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.downloadingNewerPleaseWait">
+        <source xml:lang="en">A newer update was released. Downloading, please wait...</source>
+        <target>Вийшло новіше оновлення. Завантаження, будь ласка, зачекайте...</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.downloadingNewerUpdateTitle">
+        <source xml:lang="en">Downloading Newer Update</source>
+        <target>Завантаження новішого оновлення</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.downloadingPleaseWait">
+        <source xml:lang="en">Downloading update, please wait...</source>
+        <target>Завантаження оновлення, будь ласка, зачекайте...</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.downloadingUpdateTitle">
+        <source xml:lang="en">Downloading Update</source>
+        <target>Завантаження оновлення</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.initializingMessage">
+        <source xml:lang="en">Initializing update service...</source>
+        <target>Ініціалізація служби оновлення...</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.initializingTitle">
+        <source xml:lang="en">Initializing</source>
+        <target>Ініціалізація</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.installButton">
+        <source xml:lang="en">Install</source>
+        <target>Встановити</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.installingPleaseWait">
+        <source xml:lang="en">Installing update, please wait...</source>
+        <target>Встановлення оновлення, будь ласка, зачекайте...</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.installingUpdateTitle">
+        <source xml:lang="en">Installing Update</source>
+        <target>Встановлення оновлення</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.latestVersionLabel">
+        <source xml:lang="en">Latest Version: {0}</source>
+        <target>Остання версія: {0}</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.latestVersionLabelWithCommit">
+        <source xml:lang="en">Latest Version: {0} ({1})</source>
+        <target>Остання версія: {0} ({1})</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.meteredConnectionMessage">
+        <source xml:lang="en">Automatic updates are paused because the network connection is metered.</source>
+        <target>Автоматичні оновлення призупинені, оскільки з'єднання з мережею є обмеженим.</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.noUpdateAvailableMessage">
+        <source xml:lang="en">There are no updates currently available.</source>
+        <target>Наразі немає доступних оновлень.</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.noUpdateAvailableTitle">
+        <source xml:lang="en">No Update Available</source>
+        <target>Немає доступних оновлень</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.releasedLabel">
+        <source xml:lang="en">Released {0}</source>
+        <target>Випущено {0}</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.restartButton">
+        <source xml:lang="en">Restart</source>
+        <target>Перезапустити</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.restartToUpdateTitle">
+        <source xml:lang="en">Restart to Update</source>
+        <target>Перезавантажте для оновлення</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.restartingPleaseWait">
+        <source xml:lang="en">Restarting to update, please wait...</source>
+        <target>Перезавантаження для оновлення, будь ласка, зачекайте...</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.restartingTitle">
+        <source xml:lang="en">Restarting {0}</source>
+        <target>Перезапуск {0}</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.timeRemaining">
+        <source xml:lang="en">remaining</source>
+        <target>залишок</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.upToDateTitle">
+        <source xml:lang="en">Up to Date</source>
+        <target>Актуально</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.updateAvailableTitle">
+        <source xml:lang="en">Update Available</source>
+        <target>Оновлення доступне</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.updateErrorTitle">
+        <source xml:lang="en">Update Error</source>
+        <target>Помилка оновлення</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.updateInstalledTitle">
+        <source xml:lang="en">Update Installed</source>
+        <target>Оновити встановлене</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.updateReadyTitle">
+        <source xml:lang="en">Update is Ready to Install</source>
+        <target>Оновлення готове до встановлення</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.updatesDisabledTitle">
+        <source xml:lang="en">Updates Disabled</source>
+        <target>Оновлення вимкнено</target>
+      </trans-unit>
+      <trans-unit id="updateTooltip.viewReleaseNotes">
+        <source xml:lang="en">Release Notes</source>
+        <target>Примітки до випуску</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/update/common/updateUtils" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="update.bytes">
+        <source xml:lang="en">{0} B</source>
+        <target>{0} B</target>
+      </trans-unit>
+      <trans-unit id="update.gigabytes">
+        <source xml:lang="en">{0} GB</source>
+        <target>{0} ГБ</target>
+      </trans-unit>
+      <trans-unit id="update.kilobytes">
+        <source xml:lang="en">{0} KB</source>
+        <target>{0} КБ</target>
+      </trans-unit>
+      <trans-unit id="update.megabytes">
+        <source xml:lang="en">{0} MB</source>
+        <target>{0} МБ</target>
+      </trans-unit>
+      <trans-unit id="update.timeRemainingHour">
+        <source xml:lang="en">{0} hour</source>
+        <target>{0} година</target>
+      </trans-unit>
+      <trans-unit id="update.timeRemainingHours">
+        <source xml:lang="en">{0} hours</source>
+        <target>{0} години</target>
+      </trans-unit>
+      <trans-unit id="update.timeRemainingMinutes">
+        <source xml:lang="en">{0} min</source>
+        <target>{0} хв</target>
+      </trans-unit>
+      <trans-unit id="update.timeRemainingSeconds">
+        <source xml:lang="en">{0}s</source>
+        <target>{0}s</target>
       </trans-unit>
     </body>
   </file>

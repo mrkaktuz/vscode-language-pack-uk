@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/editTelemetry/browser/editStats/aiStatsChart" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="noData">
+        <source xml:lang="en">No data yet</source>
+        <target>Немає даних ще</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/editTelemetry/browser/editStats/aiStatsStatusBar" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="aiStats.statusBar.configure">
@@ -9,6 +17,14 @@
       <trans-unit id="aiStatsStatusBarHeader">
         <source xml:lang="en">AI Usage Statistics</source>
         <target>Статистика використання ШІ</target>
+      </trans-unit>
+      <trans-unit id="chartHeaderDays">
+        <source xml:lang="en">AI Rate by Day</source>
+        <target>AI ставка за день</target>
+      </trans-unit>
+      <trans-unit id="chartHeaderSessions">
+        <source xml:lang="en">AI Rate by Session</source>
+        <target>AI ставка за сеанс</target>
       </trans-unit>
       <trans-unit id="inlineSuggestions">
         <source xml:lang="en">Inline Suggestions</source>
@@ -26,6 +42,14 @@
         <source xml:lang="en">Accepted inline suggestions today: {0}</source>
         <target>Прийняті інлайн-пропозиції сьогодні: {0}</target>
       </trans-unit>
+      <trans-unit id="viewByDays">
+        <source xml:lang="en">Days</source>
+        <target>Дні</target>
+      </trans-unit>
+      <trans-unit id="viewBySessions">
+        <source xml:lang="en">Sessions</source>
+        <target>Сесії</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/editTelemetry/browser/editTelemetry.contribution" source-language="en" datatype="plaintext" target-language="uk">
@@ -35,8 +59,8 @@
         <target>Редагувати телеметрію</target>
       </trans-unit>
       <trans-unit id="editor.aiStats.enabled">
-        <source xml:lang="en">Controls whether to enable AI statistics in the editor. The gauge represents the average amount of code inserted by AI vs manual typing over a 24 hour period.</source>
-        <target>Контролює, чи потрібно увімкнути статистику AI в редакторі. Індикатор представляє середню кількість коду, вставленого AI в порівнянні з ручним введенням за 24 години.</target>
+        <source xml:lang="en">Controls whether to enable AI statistics in the editor. The gauge shows the average AI rate across 5-minute sessions, where each session's rate is calculated as AI-inserted characters divided by total inserted characters.</source>
+        <target>Контролює, чи потрібно увімкнути статистику ШІ в редакторі. Прилад показує середній показник ШІ за 5-хвилинними сесіями, де показник кожної сесії розраховується як кількість символів, вставлених ШІ, поділена на загальну кількість вставлених символів.</target>
       </trans-unit>
       <trans-unit id="telemetry.editStats.detailed.enabled">
         <source xml:lang="en">Controls whether to enable telemetry for detailed edit statistics (only sends statistics if general telemetry is enabled).</source>

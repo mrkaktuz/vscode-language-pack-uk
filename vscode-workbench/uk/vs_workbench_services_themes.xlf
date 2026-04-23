@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/services/themes/browser/cssExtensionPoint" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="contributes.css">
+        <source xml:lang="en">Contributes CSS files to be loaded in the workbench.</source>
+        <target>Вносить CSS-файли для завантаження в робочій області.</target>
+      </trans-unit>
+      <trans-unit id="contributes.css.path">
+        <source xml:lang="en">Path to the CSS file. The path is relative to the extension folder.</source>
+        <target>Шлях до файлу CSS. Шлях є відносним до папки розширення.</target>
+      </trans-unit>
+      <trans-unit id="invalid.css.configuration">
+        <source xml:lang="en">'contributes.css' must be an array.</source>
+        <target>'contributes.css' має бути масивом.</target>
+      </trans-unit>
+      <trans-unit id="invalid.css.path">
+        <source xml:lang="en">'contributes.css.path' must be a string.</source>
+        <target>'contributes.css.path' має бути рядком.</target>
+      </trans-unit>
+      <trans-unit id="invalid.css.path.location">
+        <source xml:lang="en">Expected 'contributes.css.path' ({0}) to be included inside extension's folder ({1}).</source>
+        <target>Очікувалося, що 'contributes.css.path' ({0}) буде включено до папки розширення ({1}).</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/services/themes/browser/fileIconThemeData" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="error.cannotparseicontheme">
@@ -71,6 +95,19 @@
       <trans-unit id="error.cannotloadtheme">
         <source xml:lang="en">Unable to load {0}: {1}</source>
         <target>Не вдалося завантажити {0}: {1}</target>
+      </trans-unit>
+      <trans-unit id="noThanks">
+        <source xml:lang="en">No Thanks</source>
+        <target>Ні, дякую</target>
+      </trans-unit>
+      <trans-unit id="themeUpdatedNotification">
+        <source xml:lang="en">VS Code has a new default theme: '{0}'.</source>
+        <note>{0} is the name of the new default theme</note>
+        <target>{0} — це назва нової теми за замовчуванням.</target>
+      </trans-unit>
+      <trans-unit id="tryNewTheme">
+        <source xml:lang="en">Keep It</source>
+        <target>Залишай це</target>
       </trans-unit>
     </body>
   </file>
@@ -235,6 +272,14 @@
         <source xml:lang="en">Token background colors are currently not supported.</source>
         <target>Фонові кольори токенів наразі не підтримуються.</target>
       </trans-unit>
+      <trans-unit id="schema.token.fontFamily">
+        <source xml:lang="en">Font family for the token (e.g., "Fira Code", "JetBrains Mono").</source>
+        <target>Сімейство шрифтів для токена (наприклад, "Fira Code", "JetBrains Mono").</target>
+      </trans-unit>
+      <trans-unit id="schema.token.fontSize">
+        <source xml:lang="en">Font size multiplier for the token (e.g., 1.2 will use 1.2 times the default font size).</source>
+        <target>Множник розміру шрифту для токена (наприклад, 1.2 використовуватиме 1.2 рази від стандартного розміру шрифту).</target>
+      </trans-unit>
       <trans-unit id="schema.token.fontStyle">
         <source xml:lang="en">Font style of the rule: 'italic', 'bold', 'underline', 'strikethrough' or a combination. The empty string unsets inherited settings.</source>
         <target>Стиль шрифту правила: 'курсив', 'жирний', 'підкреслений', 'перекреслений' або комбінація. Порожній рядок скидає успадковані налаштування.</target>
@@ -246,6 +291,10 @@
       <trans-unit id="schema.token.foreground">
         <source xml:lang="en">Foreground color for the token.</source>
         <target>Колір переднього плану для токена.</target>
+      </trans-unit>
+      <trans-unit id="schema.token.lineHeight">
+        <source xml:lang="en">Line height multiplier for the token (e.g., 1.2 will use 1.2 times the default height). If the font size is set and the line height is not explicitly set, the line height will be computed based on the font size.</source>
+        <target>Множник висоти рядка для токена (наприклад, 1.2 використовуватиме 1.2 рази стандартну висоту). Якщо розмір шрифту встановлений, а висота рядка не задана явно, висота рядка буде обчислена на основі розміру шрифту.</target>
       </trans-unit>
       <trans-unit id="schema.token.settings">
         <source xml:lang="en">Colors and styles for the token.</source>
@@ -720,12 +769,12 @@
         <target>Мітка кольорової теми, як показано в інтерфейсі.</target>
       </trans-unit>
       <trans-unit id="vscode.extension.contributes.themes.path">
-        <source xml:lang="en">Path of the tmTheme file. The path is relative to the extension folder and is typically './colorthemes/awesome-color-theme.json'.</source>
-        <target>Шлях до файлу tmTheme. Шлях є відносним до папки розширення і зазвичай має вигляд './colorthemes/awesome-color-theme.json'.</target>
+        <source xml:lang="en">Path of the tmTheme file. The path is relative to the extension folder and is typically `./colorthemes/awesome-color-theme.json`.</source>
+        <target>Шлях до файлу tmTheme. Шлях є відносним до папки розширення і зазвичай виглядає так: `./colorthemes/awesome-color-theme.json`.</target>
       </trans-unit>
       <trans-unit id="vscode.extension.contributes.themes.uiTheme">
-        <source xml:lang="en">Base theme defining the colors around the editor: 'vs' is the light color theme, 'vs-dark' is the dark color theme. 'hc-black' is the dark high contrast theme, 'hc-light' is the light high contrast theme.</source>
-        <target>Базова тема, що визначає кольори навколо редактора: 'vs' — це світла кольорова тема, 'vs-dark' — це темна кольорова тема. 'hc-black' — це темна тема з високим контрастом, 'hc-light' — це світла тема з високим контрастом.</target>
+        <source xml:lang="en">Base theme defining the colors around the editor: `vs` is the light color theme, `vs-dark` is the dark color theme. `hc-black` is the dark high contrast theme, `hc-light` is the light high contrast theme.</source>
+        <target>Базова тема, що визначає кольори навколо редактора: `vs` - це світла кольорова тема, `vs-dark` - це темна кольорова тема. `hc-black` - це темна тема з високим контрастом, `hc-light` - це світла тема з високим контрастом.</target>
       </trans-unit>
     </body>
   </file>

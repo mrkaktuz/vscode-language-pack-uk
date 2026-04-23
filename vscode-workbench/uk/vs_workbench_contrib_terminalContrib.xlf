@@ -150,31 +150,6 @@ Remarks:
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/terminalContrib/chat/browser/terminal.initialHint.contribution" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="disableHint">
-        <source xml:lang="en"> Toggle {0} in settings to disable this hint.</source>
-        <target>Перемкніть {0} у налаштуваннях, щоб вимкнути це підказку.</target>
-      </trans-unit>
-      <trans-unit id="disableInitialHint">
-        <source xml:lang="en">Disable Initial Hint</source>
-        <target>Вимкнути початкову підказку</target>
-      </trans-unit>
-      <trans-unit id="emptyHintText">
-        <source xml:lang="en">Open chat {0}. </source>
-        <target>Відкрити чат {0}.</target>
-      </trans-unit>
-      <trans-unit id="hintTextDismiss">
-        <source xml:lang="en">Start typing to dismiss.</source>
-        <target>Почніть вводити, щоб закрити.</target>
-      </trans-unit>
-      <trans-unit id="inlineChatHint">
-        <source xml:lang="en">[[Open chat]] or start typing to dismiss.</source>
-        <note>Preserve double-square brackets and their order</note>
-        <target>[[Відкрити чат]] або почніть вводити, щоб закрити.</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/workbench/contrib/terminalContrib/chat/browser/terminalChat" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="chatAgentRegisteredContextKey">
@@ -204,6 +179,14 @@ Remarks:
       <trans-unit id="chatVisibleContextKey">
         <source xml:lang="en">Whether the chat view is visible.</source>
         <target>Чи видима область чату.</target>
+      </trans-unit>
+      <trans-unit id="terminalHasChatTerminals">
+        <source xml:lang="en">Whether there are any chat terminals.</source>
+        <target>Чи є які-небудь термінали чату.</target>
+      </trans-unit>
+      <trans-unit id="terminalHasHiddenChatTerminals">
+        <source xml:lang="en">Whether there are any hidden chat terminals.</source>
+        <target>Чи є якісь приховані термінали чату.</target>
       </trans-unit>
     </body>
   </file>
@@ -277,9 +260,21 @@ Remarks:
   </file>
   <file original="src/vs/workbench/contrib/terminalContrib/chat/browser/terminalChatActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="chat.focusMostRecentTerminal">
+        <source xml:lang="en">Chat: Focus Most Recent Terminal</source>
+        <target>Чат: Зосередитися на найновішому терміналі</target>
+      </trans-unit>
+      <trans-unit id="chat.focusMostRecentTerminalOutput">
+        <source xml:lang="en">Chat: Focus Most Recent Terminal Output</source>
+        <target>Чат: Зосередитися на найновішому виході терміналу</target>
+      </trans-unit>
       <trans-unit id="chat.rerun.label">
         <source xml:lang="en">Rerun Request</source>
         <target>Повторний запит</target>
+      </trans-unit>
+      <trans-unit id="chatTerminal.lastCommand">
+        <source xml:lang="en">Last: {0}</source>
+        <target>Останній: {0}</target>
       </trans-unit>
       <trans-unit id="closeChat">
         <source xml:lang="en">Close</source>
@@ -317,6 +312,14 @@ Remarks:
         <source xml:lang="en">Run First Chat Command</source>
         <target>Запустити першу команду чату</target>
       </trans-unit>
+      <trans-unit id="selectChatTerminal">
+        <source xml:lang="en">Select a chat terminal to show and focus</source>
+        <target>Виберіть термінал чату для відображення та фокусування</target>
+      </trans-unit>
+      <trans-unit id="showChatTerminals.title">
+        <source xml:lang="en">Chat Terminals</source>
+        <target>Чат Терминали</target>
+      </trans-unit>
       <trans-unit id="startChat">
         <source xml:lang="en">Open Inline Chat</source>
         <target>Відкрити інтерактивний чат</target>
@@ -324,6 +327,14 @@ Remarks:
       <trans-unit id="terminalCategory">
         <source xml:lang="en">Terminal</source>
         <target>Термінал</target>
+      </trans-unit>
+      <trans-unit id="terminalCategory2">
+        <source xml:lang="en">Terminal</source>
+        <target>Термінал</target>
+      </trans-unit>
+      <trans-unit id="viewHiddenChatTerminals">
+        <source xml:lang="en">View Hidden Chat Terminals</source>
+        <target>Переглянути приховані термінали чату</target>
       </trans-unit>
       <trans-unit id="viewInChat">
         <source xml:lang="en">View in Chat</source>
@@ -339,23 +350,15 @@ Remarks:
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/terminalContrib/chat/common/terminalInitialHintConfiguration" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="terminal.integrated.initialHint">
-        <source xml:lang="en">Controls if the first terminal without input will show a hint about available actions when it is focused.</source>
-        <target>Контролює, чи перший термінал без введення покаже підказку про доступні дії, коли він буде в фокусі.</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/runInTerminalHelpers" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="autoApprove.baseCommand">
-        <source xml:lang="en">Always Allow Commands: {0}</source>
-        <target>Завжди дозволяти команди: {0}</target>
+      <trans-unit id="allowSession">
+        <source xml:lang="en">Allow All Commands in this Session</source>
+        <target>Дозволити всі команди в цій сесії</target>
       </trans-unit>
-      <trans-unit id="autoApprove.baseCommandSingle">
-        <source xml:lang="en">Always Allow Command: {0}</source>
-        <target>Завжди дозволяти команду: {0}</target>
+      <trans-unit id="allowSessionTooltip">
+        <source xml:lang="en">Allow this tool to run in this session without confirmation.</source>
+        <target>Дозволити цьому інструменту працювати в цій сесії без підтвердження.</target>
       </trans-unit>
       <trans-unit id="autoApprove.configure">
         <source xml:lang="en">Configure Auto Approve...</source>
@@ -364,6 +367,14 @@ Remarks:
       <trans-unit id="autoApprove.exactCommand">
         <source xml:lang="en">Always Allow Exact Command Line</source>
         <target>Завжди дозволяти точний рядок команд</target>
+      </trans-unit>
+      <trans-unit id="autoApprove.exactCommand1">
+        <source xml:lang="en">Allow Exact Command Line in this Session</source>
+        <target>Дозволити точну командну строку в цій сесії</target>
+      </trans-unit>
+      <trans-unit id="autoApprove.exactCommand2">
+        <source xml:lang="en">Allow Exact Command Line in this Workspace</source>
+        <target>Дозволити точний рядок команд у цьому робочому просторі</target>
       </trans-unit>
     </body>
   </file>
@@ -377,13 +388,73 @@ Remarks:
         <source xml:lang="en">Terminal Selection</source>
         <target>Вибір терміналу</target>
       </trans-unit>
-      <trans-unit id="toolset.runCommands">
-        <source xml:lang="en">Runs commands in the terminal</source>
-        <target>Виконує команди в терміналі</target>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/commandLineAnalyzer/autoApprove/npmScriptAutoApprover" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="autoApprove.npmScript">
+        <source xml:lang="en">Auto approved as {0} is defined in package.json</source>
+        <target>Автоматично затверджено, оскільки {0} визначено в package.json</target>
       </trans-unit>
-      <trans-unit id="toolset.runTasks">
-        <source xml:lang="en">Runs tasks and gets their output for your workspace</source>
-        <target>Виконує завдання та отримує їхні результати для вашого робочого простору.</target>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/commandLineAnalyzer/commandLineAutoApproveAnalyzer" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="autoApprove.global">
+        <source xml:lang="en">Auto approved by setting {0}</source>
+        <target>Автоматично затверджено за налаштуванням {0}</target>
+      </trans-unit>
+      <trans-unit id="autoApprove.rule">
+        <source xml:lang="en">Auto approved by rule {0}</source>
+        <target>Автоматично затверджено за правилом {0}</target>
+      </trans-unit>
+      <trans-unit id="autoApprove.rules">
+        <source xml:lang="en">Auto approved by rules {0}</source>
+        <target>Автоматично затверджено за правилами {0}</target>
+      </trans-unit>
+      <trans-unit id="autoApprove.session">
+        <source xml:lang="en">Auto approved for this session</source>
+        <target>Автоматично затверджено для цієї сесії</target>
+      </trans-unit>
+      <trans-unit id="autoApprove.session.disable">
+        <source xml:lang="en">Disable</source>
+        <target>Вимкнути</target>
+      </trans-unit>
+      <trans-unit id="autoApproveDenied.rule">
+        <source xml:lang="en">Auto approval denied by rule {0}</source>
+        <target>Автоматичне схвалення відхилено за правилом {0}</target>
+      </trans-unit>
+      <trans-unit id="autoApproveDenied.rules">
+        <source xml:lang="en">Auto approval denied by rules {0}</source>
+        <target>Автоматичне схвалення відхилено правилами {0}</target>
+      </trans-unit>
+      <trans-unit id="autoApproveRule.sessionIndicator">
+        <source xml:lang="en">{0} (session)</source>
+        <target>{0} (сеанс)</target>
+      </trans-unit>
+      <trans-unit id="ruleTooltip">
+        <source xml:lang="en">View rule in settings</source>
+        <target>Переглянути правило в налаштуваннях</target>
+      </trans-unit>
+      <trans-unit id="ruleTooltip.global">
+        <source xml:lang="en">View settings</source>
+        <target>Перегляд налаштувань</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.promptInjectionDisclaimer">
+        <source xml:lang="en">Web content may contain malicious code or attempt prompt injection attacks.</source>
+        <target>Веб-контент може містити шкідливий код або намагатися здійснити атаки з впровадженням запитів.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/commandLineAnalyzer/commandLineFileWriteAnalyzer" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="runInTerminal.fileWriteBlockedDisclaimer">
+        <source xml:lang="en">File write operations detected that cannot be auto approved: {0}</source>
+        <target>Виявлено операції запису файлів, які не можуть бути автоматично затверджені: {0}</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.fileWriteDisclaimer">
+        <source xml:lang="en">File write operations detected: {0}</source>
+        <target>Виявлено операції запису файлів: {0}</target>
       </trans-unit>
     </body>
   </file>
@@ -405,13 +476,13 @@ Remarks:
   </file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/getTerminalOutputTool" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="bg.past">
-        <source xml:lang="en">Checked background terminal output</source>
-        <target>Перевірено вихідні дані терміналу фону</target>
+      <trans-unit id="getTerminalOutput.past">
+        <source xml:lang="en">Checked terminal output</source>
+        <target>Перевірено вихідні дані терміналу</target>
       </trans-unit>
-      <trans-unit id="bg.progressive">
-        <source xml:lang="en">Checking background terminal output</source>
-        <target>Перевірка виходу терміналу в фоновому режимі</target>
+      <trans-unit id="getTerminalOutput.progressive">
+        <source xml:lang="en">Checking terminal output</source>
+        <target>Перевірка виходу терміналу</target>
       </trans-unit>
       <trans-unit id="getTerminalOutputTool.displayName">
         <source xml:lang="en">Get Terminal Output</source>
@@ -435,107 +506,287 @@ Remarks:
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/killTerminalTool" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="kill.past">
+        <source xml:lang="en">Killed terminal</source>
+        <target>Вбито термінал</target>
+      </trans-unit>
+      <trans-unit id="kill.progressive">
+        <source xml:lang="en">Killing terminal</source>
+        <target>Вбивство терміналу</target>
+      </trans-unit>
+      <trans-unit id="killTerminalTool.displayName">
+        <source xml:lang="en">Kill Terminal</source>
+        <target>Вбити термінал</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/monitoring/outputMonitor" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="poll.terminal.accept">
-        <source xml:lang="en">Yes</source>
-        <target>Так</target>
+      <trans-unit id="closeTerminal">
+        <source xml:lang="en">Terminal will be reused by tasks, press any key to close it.</source>
+        <target>Термінал буде повторно використаний завданнями, натисніть будь-яку клавішу, щоб закрити його.</target>
       </trans-unit>
-      <trans-unit id="poll.terminal.acceptRun">
-        <source xml:lang="en">Allow</source>
-        <target>Дозволити</target>
+      <trans-unit id="exitCode.closeTerminal">
+        <source xml:lang="en">Press any key to close the terminal.</source>
+        <target>Натисніть будь-яку клавішу, щоб закрити термінал.</target>
       </trans-unit>
-      <trans-unit id="poll.terminal.confirmRequired">
-        <source xml:lang="en">The terminal is awaiting input.</source>
-        <target>Термінал очікує вводу.</target>
+      <trans-unit id="exitCode.reuseTerminal">
+        <source xml:lang="en">Press any key to close the terminal.</source>
+        <target>Натисніть будь-яку клавішу, щоб закрити термінал.</target>
       </trans-unit>
-      <trans-unit id="poll.terminal.confirmRunDetail">
-        <source xml:lang="en">{0}
- Do you want to send `{1}`{2} followed by `Enter` to the terminal?</source>
-        <target>{0} Ви хочете надіслати `{1}`{2}, натиснувши `Enter` у терміналі?</target>
+      <trans-unit id="reuseTerminal">
+        <source xml:lang="en">Terminal will be reused by tasks, press any key to close it.</source>
+        <target>Термінал буде повторно використаний завданнями, натисніть будь-яку клавішу, щоб закрити його.</target>
       </trans-unit>
-      <trans-unit id="poll.terminal.enterInput">
-        <source xml:lang="en">Focus terminal</source>
-        <target>Фокус термінал</target>
+      <trans-unit id="reuseTerminal.pressClose">
+        <source xml:lang="en">The terminal will be reused by tasks. Press any key to close.</source>
+        <target>Термінал буде повторно використаний завданнями. Натисніть будь-яку клавішу, щоб закрити.</target>
       </trans-unit>
-      <trans-unit id="poll.terminal.inputRequest">
-        <source xml:lang="en">The terminal is awaiting input.</source>
-        <target>Термінал очікує вводу.</target>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/runInTerminalConfirmationTool" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="confirmTerminalCommandTool.displayName">
+        <source xml:lang="en">Confirm Terminal Command</source>
+        <target>Підтвердити команду терміналу</target>
       </trans-unit>
-      <trans-unit id="poll.terminal.polling">
-        <source xml:lang="en">This will continue to poll for output to determine when the terminal becomes idle for up to 2 minutes.</source>
-        <target>Це буде продовжувати опитувати наявність виходу, щоб визначити, коли термінал стане неактивним протягом до 2 хвилин.</target>
-      </trans-unit>
-      <trans-unit id="poll.terminal.reject">
-        <source xml:lang="en">No</source>
-        <target>Ні</target>
-      </trans-unit>
-      <trans-unit id="poll.terminal.rejectRun">
-        <source xml:lang="en">Focus Terminal</source>
-        <target>Фокус Терминал</target>
-      </trans-unit>
-      <trans-unit id="poll.terminal.requireInput">
-        <source xml:lang="en">{0}
-Please provide the required input to the terminal.
-
-</source>
-        <target>{0} Будь ласка, введіть необхідні дані в термінал.</target>
-      </trans-unit>
-      <trans-unit id="poll.terminal.waiting">
-        <source xml:lang="en">Continue waiting for `{0}`?</source>
-        <target>Продовжити чекати на `{0}`?</target>
+      <trans-unit id="confirmTerminalCommandTool.userDescription">
+        <source xml:lang="en">Tool for confirming terminal commands</source>
+        <target>Інструмент для підтвердження команд терміналу</target>
       </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/runInTerminalTool" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="autoApprove.global">
-        <source xml:lang="en">Auto approved by setting {0}</source>
-        <target>Автоматично затверджено за налаштуванням {0}</target>
-      </trans-unit>
-      <trans-unit id="autoApprove.rule">
-        <source xml:lang="en">Auto approved by rule {0}</source>
-        <target>Автоматично затверджено за правилом {0}</target>
-      </trans-unit>
-      <trans-unit id="autoApprove.rules">
-        <source xml:lang="en">Auto approved by rules {0}</source>
-        <target>Автоматично затверджено за правилами {0}</target>
-      </trans-unit>
-      <trans-unit id="autoApproveDenied.rule">
-        <source xml:lang="en">Auto approval denied by rule {0}</source>
-        <target>Автоматичне схвалення відхилено за правилом {0}</target>
-      </trans-unit>
-      <trans-unit id="autoApproveDenied.rules">
-        <source xml:lang="en">Auto approval denied by rules {0}</source>
-        <target>Автоматичне схвалення відхилено правилами {0}</target>
-      </trans-unit>
-      <trans-unit id="ruleTooltip">
-        <source xml:lang="en">View rule in settings</source>
-        <target>Переглянути правило в налаштуваннях</target>
-      </trans-unit>
-      <trans-unit id="ruleTooltip.global">
-        <source xml:lang="en">View settings</source>
-        <target>Перегляд налаштувань</target>
+      <trans-unit id="allow">
+        <source xml:lang="en">Allow</source>
+        <target>Дозволити</target>
       </trans-unit>
       <trans-unit id="runInTerminal">
         <source xml:lang="en">Run `{0}` command?</source>
         <target>Запустити команду `{0}`?</target>
       </trans-unit>
-      <trans-unit id="runInTerminal.background">
-        <source xml:lang="en">Run `{0}` command? (background terminal)</source>
-        <target>Запустити команду `{0}`? (фоновий термінал)</target>
+      <trans-unit id="runInTerminal.confirmationMessage">
+        <source xml:lang="en">Explanation: {0}
+
+Goal: {1}</source>
+        <target>Пояснення: {0}
+
+Мета: {1}</target>
       </trans-unit>
-      <trans-unit id="runInTerminal.promptInjectionDisclaimer">
-        <source xml:lang="en">Web content may contain malicious code or attempt prompt injection attacks.</source>
-        <target>Веб-контент може містити шкідливий код або намагатися здійснити атаки з використанням ін'єкцій запитів.</target>
+      <trans-unit id="runInTerminal.defaultExplanation">
+        <source xml:lang="en">No explanation provided</source>
+        <target>Не надано пояснення</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.defaultGoal">
+        <source xml:lang="en">No goal provided</source>
+        <target>Не вказано мету</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.inDirectory">
+        <source xml:lang="en">Run `{0}` command within `{1}`?</source>
+        <target>Виконати команду `{0}` у `{1}`?</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.invocation">
+        <source xml:lang="en">Running `{0}`</source>
+        <target>Виконання `{0}`</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.invocation.sandbox">
+        <source xml:lang="en">Running `{0}` in sandbox</source>
+        <target>Запуск `{0}` у пісочниці</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.missingDeps.cancel">
+        <source xml:lang="en">Cancel</source>
+        <target>Скасувати</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.missingDeps.cancelled">
+        <source xml:lang="en">Sandbox dependency installation was cancelled by the user.</source>
+        <target>Встановлення залежностей пісочниці було скасовано користувачем.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.missingDeps.failed">
+        <source xml:lang="en">Sandbox dependency installation failed (exit code {0}). The command was not executed.</source>
+        <target>Встановлення залежностей пісочниці не вдалося (код виходу {0}). Команда не була виконана.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.missingDeps.install">
+        <source xml:lang="en">Install</source>
+        <target>Встановити</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.missingDeps.message">
+        <source xml:lang="en">The following dependencies required for sandboxed execution are not installed: {0}. Would you like to install them?</source>
+        <target>Наступні залежності, необхідні для виконання в пісочниці, не встановлені: {0}. Бажаєте їх встановити?</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.missingDeps.title">
+        <source xml:lang="en">Missing Sandbox Dependencies</source>
+        <target>Відсутні залежності пісочниці</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.missingDeps.unknown">
+        <source xml:lang="en">Could not determine whether sandbox dependency installation succeeded. The command was not executed.</source>
+        <target>Не вдалося визначити, чи успішно встановлено залежності пісочниці. Команда не була виконана.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.presentationOverride">
+        <source xml:lang="en">Run `{0}` command in `{1}`?</source>
+        <target>Запустити команду `{0}` у `{1}`?</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.presentationOverride.inDirectory">
+        <source xml:lang="en">Run `{0}` command in `{1}` within `{2}`?</source>
+        <target>Виконати команду `{0}` у `{1}` в межах `{2}`?</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.presentationOverride.inDirectory.withoutLanguage">
+        <source xml:lang="en">Run command in `{0}` within `{1}`?</source>
+        <target>Запустити команду в `{0}` в межах `{1}`?</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.presentationOverride.withoutLanguage">
+        <source xml:lang="en">Run command in `{0}`?</source>
+        <target>Запустити команду в `{0}`?</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.streaming">
+        <source xml:lang="en">Running `{0}`</source>
+        <target>Виконання `{0}`</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.streaming.default">
+        <source xml:lang="en">Running command</source>
+        <target>Виконання команди</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.unsandboxed">
+        <source xml:lang="en">Run `{0}` command outside the [sandbox]({1})?</source>
+        <target>Запустити команду `{0}` поза [пісочницею]({1})?</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.unsandboxed.autoRetry">
+        <source xml:lang="en">Run `{0}` command outside the sandbox?</source>
+        <target>Запустити команду `{0}` поза пісочницею?</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.unsandboxed.autoRetry.confirmationMessage">
+        <source xml:lang="en">`{0}`</source>
+        <target>`{0}`</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.unsandboxed.autoRetry.domain">
+        <source xml:lang="en">Run `{0}` command outside the sandbox to access {1}?</source>
+        <target>Запустіть команду `{0}` поза пісочницею, щоб отримати доступ до {1}?</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.unsandboxed.autoRetry.invocation">
+        <source xml:lang="en">Running `{0}` outside the sandbox</source>
+        <target>Виконання `{0}` поза пісочницею</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.unsandboxed.autoRetry.reason">
+        <source xml:lang="en">The sandboxed execution output indicated the sandbox blocked the command.</source>
+        <target>Вихідні дані виконання в пісочниці вказували на те, що пісочниця заблокувала команду.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.unsandboxed.confirmationMessage">
+        <source xml:lang="en">Explanation: {0}
+
+Goal: {1}
+
+Reason for leaving the sandbox: {2}</source>
+        <target>Пояснення: {0}
+
+Мета: {1}
+
+Причина виходу з пісочниці: {2}</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.unsandboxed.confirmationMessage.defaultReason">
+        <source xml:lang="en">The model indicated that this command needs unsandboxed access.</source>
+        <target>Модель вказала, що ця команда потребує доступу без обмежень.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.unsandboxed.domain">
+        <source xml:lang="en">Run `{0}` command outside the [sandbox]({1}) to access {2}?</source>
+        <target>Запустіть команду `{0}` поза [пісочницею]({1}), щоб отримати доступ до {2}?</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.unsandboxed.domain.reason.denied.multi">
+        <source xml:lang="en">This command accesses {0} and {1} more domains that are blocked by chat.agent.deniedNetworkDomains.</source>
+        <target>Ця команда отримує доступ до {0} та {1} більше доменів, які заблоковані chat.agent.deniedNetworkDomains.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.unsandboxed.domain.reason.denied.single">
+        <source xml:lang="en">This command accesses {0}, which is blocked by chat.agent.deniedNetworkDomains.</source>
+        <target>Ця команда отримує доступ до {0}, який заблокований chat.agent.deniedNetworkDomains.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.unsandboxed.domain.reason.mixed.multi">
+        <source xml:lang="en">This command accesses {0} and {1} more domains that are blocked by chat.agent.deniedNetworkDomains or not added to chat.agent.allowedNetworkDomains.</source>
+        <target>Ця команда отримує доступ до {0} та {1} додаткових доменів, які заблоковані chat.agent.deniedNetworkDomains або не додані до chat.agent.allowedNetworkDomains.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.unsandboxed.domain.reason.mixed.single">
+        <source xml:lang="en">This command accesses {0}, which is blocked by chat.agent.deniedNetworkDomains or not added to chat.agent.allowedNetworkDomains.</source>
+        <target>Ця команда отримує доступ до {0}, який заблокований chat.agent.deniedNetworkDomains або не доданий до chat.agent.allowedNetworkDomains.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.unsandboxed.domain.reason.multi">
+        <source xml:lang="en">This command accesses {0} and {1} more domains that are not permitted by the current chat.agent.sandbox configuration.</source>
+        <target>Ця команда отримує доступ до {0} та {1} більше доменів, які не дозволені поточною конфігурацією chat.agent.sandbox.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.unsandboxed.domain.reason.single">
+        <source xml:lang="en">This command accesses {0}, which is not permitted by the current chat.agent.sandbox configuration.</source>
+        <target>Ця команда отримує доступ до {0}, що не дозволено поточною конфігурацією chat.agent.sandbox.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.unsandboxed.domain.summary">
+        <source xml:lang="en">`{0}` and {1} more domains</source>
+        <target>`{0}` та ще {1} доменів</target>
+      </trans-unit>
+      <trans-unit id="runInTerminalTool.altBufferMessage">
+        <source xml:lang="en">The command opened the alternate buffer.</source>
+        <target>Команда відкрила альтернативний буфер.</target>
       </trans-unit>
       <trans-unit id="runInTerminalTool.displayName">
         <source xml:lang="en">Run in Terminal</source>
         <target>Запустити в Терминалі</target>
       </trans-unit>
       <trans-unit id="runInTerminalTool.userDescription">
-        <source xml:lang="en">Tool for running commands in the terminal</source>
-        <target>Інструмент для виконання команд у терміналі</target>
+        <source xml:lang="en">Run commands in the terminal</source>
+        <target>Виконуйте команди в терміналі</target>
+      </trans-unit>
+      <trans-unit id="skip">
+        <source xml:lang="en">Skip</source>
+        <target>Пропустити</target>
+      </trans-unit>
+      <trans-unit id="terminalCommandCompleted">
+        <source xml:lang="en">`{0}` completed</source>
+        <target>`{0}` завершено</target>
+      </trans-unit>
+      <trans-unit id="terminalNeedsInput">
+        <source xml:lang="en">`{0}` needs input</source>
+        <target>`{0}` потребує введення</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/sendToTerminalTool" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="focusTerminal">
+        <source xml:lang="en">Focus Terminal</source>
+        <target>Фокус Термінал</target>
+      </trans-unit>
+      <trans-unit id="send.confirm.message">
+        <source xml:lang="en">Run {0} in terminal {1}</source>
+        <target>Запустіть {0} у терміналі {1}</target>
+      </trans-unit>
+      <trans-unit id="send.confirm.message.enter">
+        <source xml:lang="en">Press `Enter` in terminal {0}</source>
+        <target>Натисніть `Enter` у терміналі {0}</target>
+      </trans-unit>
+      <trans-unit id="send.confirm.title">
+        <source xml:lang="en">Send to Terminal</source>
+        <target>Відправити в Терминал</target>
+      </trans-unit>
+      <trans-unit id="send.past">
+        <source xml:lang="en">Sent {0} to terminal</source>
+        <target>Відправлено {0} на термінал</target>
+      </trans-unit>
+      <trans-unit id="send.past.enter">
+        <source xml:lang="en">Pressed `Enter` in terminal</source>
+        <target>Натиснуто `Enter` у терміналі</target>
+      </trans-unit>
+      <trans-unit id="send.progressive">
+        <source xml:lang="en">Sending {0} to terminal</source>
+        <target>Відправка {0} до терміналу</target>
+      </trans-unit>
+      <trans-unit id="send.progressive.enter">
+        <source xml:lang="en">Pressing `Enter` in terminal</source>
+        <target>Натискання `Enter` у терміналі</target>
+      </trans-unit>
+      <trans-unit id="send.replyingTo">
+        <source xml:lang="en">replying to: </source>
+        <target>відповідаючи на:</target>
+      </trans-unit>
+      <trans-unit id="sendToTerminalTool.displayName">
+        <source xml:lang="en">Send to Terminal</source>
+        <target>Відправити в Терминал</target>
       </trans-unit>
     </body>
   </file>
@@ -565,21 +816,17 @@ Please provide the required input to the terminal.
         <source xml:lang="en">Task not found: `{0}`</source>
         <target>Завдання не знайдено: `{0}`</target>
       </trans-unit>
-      <trans-unit id="copilotCreateTask">
-        <source xml:lang="en">Copilot will create the task `{0}` with command `{1}`{2}.</source>
-        <target>Copilot створить завдання `{0}` з командою `{1}`{2}.</target>
-      </trans-unit>
       <trans-unit id="createAndRunTask.displayName">
         <source xml:lang="en">Create and run Task</source>
         <target>Створити та запустити завдання</target>
       </trans-unit>
-      <trans-unit id="createAndRunTask.modelDescription">
-        <source xml:lang="en">Creates and runs a build, run, or custom task for the workspace by generating or adding to a tasks.json file based on the project structure (such as package.json or README.md). If the user asks to build, run, launch and they have no tasks.json file, use this tool. If they ask to create or add a task, use this tool.</source>
-        <target>Створює та виконує збірку, запуск або користувацьке завдання для робочого простору, генеруючи або додаючи до файлу tasks.json на основі структури проєкту (такої як package.json або README.md). Якщо користувач просить виконати збірку, запуск або запуск програми, і в них немає файлу tasks.json, використовуйте цей інструмент. Якщо вони просять створити або додати завдання, використовуйте цей інструмент.</target>
-      </trans-unit>
       <trans-unit id="createAndRunTask.userDescription">
         <source xml:lang="en">Create and run a task in the workspace</source>
         <target>Створіть і запустіть задачу в робочому просторі</target>
+      </trans-unit>
+      <trans-unit id="createTask">
+        <source xml:lang="en">A task `{0}` with command `{1}`{2} will be created.</source>
+        <target>Завдання `{0}` з командою `{1}`{2} буде створено.</target>
       </trans-unit>
       <trans-unit id="createdTask">
         <source xml:lang="en">Created task `{0}`</source>
@@ -629,47 +876,47 @@ Please provide the required input to the terminal.
   </file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/task/runTaskTool" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="copilotChat.allowTaskRunMsg">
-        <source xml:lang="en">Allow Copilot to run the task `{0}`?</source>
-        <target>Дозволити Copilot виконати завдання `{0}`?</target>
+      <trans-unit id="chat.allowTaskRunMsg">
+        <source xml:lang="en">Allow to run the task `{0}`?</source>
+        <target>Дозволити виконати задачу `{0}`?</target>
       </trans-unit>
-      <trans-unit id="copilotChat.allowTaskRunTitle">
+      <trans-unit id="chat.allowTaskRunTitle">
         <source xml:lang="en">Allow task run?</source>
-        <target>Дозволити виконання задачі?</target>
+        <target>Дозволити виконання завдання?</target>
       </trans-unit>
-      <trans-unit id="copilotChat.noTerminal">
+      <trans-unit id="chat.noTerminal">
         <source xml:lang="en">Task started but no terminal was found for: `{0}`</source>
         <target>Завдання розпочато, але термінал не знайдено для: `{0}`</target>
       </trans-unit>
-      <trans-unit id="copilotChat.ranTask">
+      <trans-unit id="chat.ranTask">
         <source xml:lang="en">Ran `{0}`</source>
         <target>Запущено `{0}`</target>
       </trans-unit>
-      <trans-unit id="copilotChat.runningTask">
+      <trans-unit id="chat.runningTask">
         <source xml:lang="en">Running `{0}`</source>
-        <target>Виконання завдання `{0}`</target>
+        <target>Виконання `{0}`</target>
       </trans-unit>
-      <trans-unit id="copilotChat.startedTask">
+      <trans-unit id="chat.startedTask">
         <source xml:lang="en">Started `{0}`</source>
         <target>Почато `{0}`</target>
       </trans-unit>
-      <trans-unit id="copilotChat.taskAlreadyActive">
+      <trans-unit id="chat.taskAlreadyActive">
         <source xml:lang="en">The task is already running.</source>
         <target>Завдання вже виконується.</target>
       </trans-unit>
-      <trans-unit id="copilotChat.taskAlreadyRunning">
+      <trans-unit id="chat.taskAlreadyRunning">
         <source xml:lang="en">The task `{0}` is already running.</source>
         <target>Завдання `{0}` вже виконується.</target>
       </trans-unit>
-      <trans-unit id="copilotChat.taskIsAlreadyRunning">
+      <trans-unit id="chat.taskIsAlreadyRunning">
         <source xml:lang="en">`{0}` is already running.</source>
         <target>`{0}` вже запущено.</target>
       </trans-unit>
-      <trans-unit id="copilotChat.taskNotFound">
+      <trans-unit id="chat.taskNotFound">
         <source xml:lang="en">Task not found: `{0}`</source>
         <target>Завдання не знайдено: `{0}`</target>
       </trans-unit>
-      <trans-unit id="copilotChat.taskWasAlreadyRunning">
+      <trans-unit id="chat.taskWasAlreadyRunning">
         <source xml:lang="en">`{0}` was already running.</source>
         <target>`{0}` вже працював.</target>
       </trans-unit>
@@ -678,8 +925,8 @@ Please provide the required input to the terminal.
         <target>Запустити в Терминалі</target>
       </trans-unit>
       <trans-unit id="runInTerminalTool.userDescription">
-        <source xml:lang="en">Tool for running tasks in the workspace</source>
-        <target>Інструмент для виконання команд у терміналі</target>
+        <source xml:lang="en">Run tasks in the workspace</source>
+        <target>Виконуйте команди в терміналі</target>
       </trans-unit>
     </body>
   </file>
@@ -693,6 +940,70 @@ Please provide the required input to the terminal.
   </file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/common/terminalChatAgentToolsConfiguration" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="agentSandbox.enabled.deprecated">
+        <source xml:lang="en">Use {0} instead</source>
+        <target>Використовуйте {0} замість цього.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.enabledSetting">
+        <source xml:lang="en">Controls whether agent mode uses sandboxing to restrict what tools can do. When enabled, tools like the terminal are run in a sandboxed environment to limit access to the system.</source>
+        <target>Контролює, чи режим агента використовує пісочницю для обмеження можливостей інструментів. Коли увімкнено, такі інструменти, як термінал, виконуються в середовищі пісочниці для обмеження доступу до системи.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.enabledSetting.offDescription">
+        <source xml:lang="en">Disable sandboxing for agent mode tools.</source>
+        <target>Вимкніть пісочницю для інструментів режиму агента.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.enabledSetting.onDescription">
+        <source xml:lang="en">Enable sandboxing for agent mode tools.</source>
+        <target>Увімкніть пісочницю для інструментів режиму агента.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.fileSystemLinux.deprecated">
+        <source xml:lang="en">Use {0} instead</source>
+        <target>Використовуйте {0} замість цього</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.fileSystemMac.deprecated">
+        <source xml:lang="en">Use {0} instead</source>
+        <target>Використовуйте {0} замість цього.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.linuxFileSystemSetting">
+        <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Controls file system access in sandbox on Linux. Paths do not support glob patterns, only literal paths (ex: ./src/, ~/.ssh, .env). **bubblewrap** and **socat** should be installed for this setting to work.</source>
+        <target>Примітка: ця настройка застосовується лише коли {0} увімкнено. Контролює доступ до файлової системи в пісочниці на Linux. Шляхи не підтримують шаблони glob, лише літеральні шляхи (наприклад: ./src/, ~/.ssh, .env). **bubblewrap** і **socat** повинні бути встановлені для роботи цієї настройки.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.linuxFileSystemSetting.allowWrite">
+        <source xml:lang="en">Array of paths to allow write access. Leave empty to disallow all writes.</source>
+        <target>Масив шляхів для дозволу на запис. Залиште порожнім, щоб заборонити всі записи.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.linuxFileSystemSetting.denyRead">
+        <source xml:lang="en">Array of paths to deny read access. Leave empty to allow reading all paths.</source>
+        <target>Масив шляхів для заборони доступу на читання. Залиште порожнім, щоб дозволити читання всіх шляхів.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.linuxFileSystemSetting.denyWrite">
+        <source xml:lang="en">Array of paths to deny write access within allowed paths (takes precedence over allowWrite).</source>
+        <target>Масив шляхів для заборони запису в межах дозволених шляхів (має пріоритет над allowWrite).</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.macFileSystemSetting">
+        <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Controls file system access in sandbox on macOS. Paths also support git-style glob patterns(ex: *.ts, ./src, ./src/**/*.ts, file?.txt).</source>
+        <target>Примітка: це налаштування застосовується лише тоді, коли {0} увімкнено. Контролює доступ до файлової системи в пісочниці на macOS. Шляхи також підтримують шаблони glob у стилі git (наприклад: *.ts, ./src, ./src/**/*.ts, file?.txt).</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.macFileSystemSetting.allowWrite">
+        <source xml:lang="en">Array of paths to allow write access. Leave empty to disallow all writes.</source>
+        <target>Масив шляхів для дозволу на запис. Залиште порожнім, щоб заборонити всі записи.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.macFileSystemSetting.denyRead">
+        <source xml:lang="en">Array of paths to deny read access. Leave empty to allow reading all paths.</source>
+        <target>Масив шляхів для заборони доступу на читання. Залиште порожнім, щоб дозволити читання всіх шляхів.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.macFileSystemSetting.denyWrite">
+        <source xml:lang="en">Array of paths to deny write access within allowed paths (takes precedence over allowWrite).</source>
+        <target>Масив шляхів для заборони запису в межах дозволених шляхів (має пріоритет над allowWrite).</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.runtimeSetting">
+        <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Key/value pairs are passed through to the root of the sandbox runtime configuration.</source>
+        <target>Примітка: це налаштування застосовується тільки коли {0} увімкнено. Параметри ключ/значення передаються до кореня конфігурації середовища пісочниці.</target>
+      </trans-unit>
+      <trans-unit id="autoApprove.defaults">
+        <source xml:lang="en">Note that there's a default set of rules to allow and also deny commands. Consider setting {0} to {1} to ignore all default rules to ensure there are no conflicts with your own rules. Do this at your own risk, the default denial rules are designed to protect you against running dangerous commands.</source>
+        <target>Зверніть увагу, що існує набір правил за замовчуванням, які дозволяють і також забороняють команди. Розгляньте можливість встановлення {0} на {1}, щоб ігнорувати всі правила за замовчуванням, щоб забезпечити відсутність конфліктів з вашими власними правилами. Робіть це на свій ризик, правила заборони за замовчуванням призначені для захисту вас від виконання небезпечних команд.</target>
+      </trans-unit>
       <trans-unit id="autoApprove.deprecated">
         <source xml:lang="en">Use {0} instead</source>
         <target>Використовуйте {0} замість цього.</target>
@@ -754,8 +1065,8 @@ Please provide the required input to the terminal.
         <target>Список команд або регулярних виразів, які контролюють, чи потребують команди інструменту запуску в терміналі явного схвалення. Вони будуть співвіднесені з початком команди. Регулярний вираз можна надати, обгорнувши рядок у символи {0}, за якими можуть слідувати необов'язкові прапорці, такі як {1} для нечутливості до регістру.</target>
       </trans-unit>
       <trans-unit id="autoApprove.description.subCommands">
-        <source xml:lang="en">Note that these commands and regular expressions are evaluated for every _sub-command_ within the full _command line_, so {0} for example will need both {1} and {2} to match a {3} entry and must not match a {4} entry in order to auto approve. Inline commands such as {5} (command sustitution) or {6} (process substitution) are currently blocked by default via broad rules that detect these patterns.</source>
-        <target>Зверніть увагу, що ці команди та регулярні вирази оцінюються для кожного _підкоманди_ в межах повної _командного рядка_, тому {0}, наприклад, потребуватиме як {1}, так і {2} для відповідності запису {3} і не повинно відповідати запису {4}, щоб автоматично затвердити. Вбудовані команди, такі як {5} (заміна команди) або {6} (заміна процесу), наразі заблоковані за замовчуванням через загальні правила, які виявляють ці шаблони.</target>
+        <source xml:lang="en">Note that these commands and regular expressions are evaluated for every _sub-command_ within the full _command line_, so {0} for example will need both {1} and {2} to match a {3} entry and must not match a {4} entry in order to auto approve. Inline commands such as {5} (process substitution) should also be detected.</source>
+        <target>Зверніть увагу, що ці команди та регулярні вирази оцінюються для кожного _підкоманди_ в межах повної _командної строки_, тому {0}, наприклад, потребуватиме як {1}, так і {2}, щоб відповідати запису {3} і не повинно відповідати запису {4}, щоб автоматично затвердити. Інлайн-команди, такі як {5} (підстановка процесу), також повинні бути виявлені.</target>
       </trans-unit>
       <trans-unit id="autoApprove.description.values">
         <source xml:lang="en">Set to {0} to automatically approve commands, {1} to always require explicit approval or {2} to unset the value.</source>
@@ -789,13 +1100,99 @@ Please provide the required input to the terminal.
         <source xml:lang="en">Automatically approve the pattern.</source>
         <target>Автоматично затвердити шаблон.</target>
       </trans-unit>
-      <trans-unit id="autoReplyToPrompts.key">
-        <source xml:lang="en">Whether to automatically respond to prompts in the terminal such as `Confirm? y/n`. This is an experimental feature and may not work in all scenarios.</source>
-        <target>Чи автоматично відповідати на запити в терміналі, такі як `Confirm? y/n`. Це експериментальна функція і може не працювати в усіх сценаріях.</target>
+      <trans-unit id="autoApproveMode.description">
+        <source xml:lang="en">Controls whether to allow auto approval in the run in terminal tool.</source>
+        <target>Контролює, чи дозволити автоматичне схвалення в інструменті запуску в терміналі.</target>
+      </trans-unit>
+      <trans-unit id="autoApproveWorkspaceNpmScripts.description">
+        <source xml:lang="en">Whether to automatically approve npm, yarn, and pnpm run commands when the script is defined in a workspace package.json file. Since the workspace is trusted, scripts defined in package.json are considered safe to run without explicit approval.</source>
+        <target>Чи автоматично схвалювати команди npm, yarn та pnpm run, коли скрипт визначено у файлі package.json робочого простору. Оскільки робочий простір є надійним, скрипти, визначені у файлі package.json, вважаються безпечними для виконання без явного схвалення.</target>
+      </trans-unit>
+      <trans-unit id="backgroundNotifications.deprecated">
+        <source xml:lang="en">This setting is deprecated. Terminal completion and input-needed notifications are now always enabled.</source>
+        <target>Це налаштування застаріле. Завершення терміналу та сповіщення про необхідність введення тепер завжди увімкнені.</target>
+      </trans-unit>
+      <trans-unit id="backgroundNotifications.description">
+        <source xml:lang="en">This setting is deprecated and no longer has any effect. Terminal completion and input-needed notifications are now always enabled for any command that continues running after the tool returns.</source>
+        <target>Ця настройка застаріла і більше не має жодного ефекту. Завершення терміналу та сповіщення про необхідність введення тепер завжди увімкнені для будь-якої команди, яка продовжує виконуватись після повернення інструмента.</target>
+      </trans-unit>
+      <trans-unit id="blockFileWrites.all">
+        <source xml:lang="en">Block all detected file writes.</source>
+        <target>Блокувати всі виявлені записи файлів.</target>
+      </trans-unit>
+      <trans-unit id="blockFileWrites.description">
+        <source xml:lang="en">Controls whether detected file write operations are blocked in the run in terminal tool. When detected, this will require explicit approval regardless of whether the command would normally be auto approved. Note that this cannot detect all possible methods of writing files, this is what is currently detected:
+
+- File redirection (detected via the bash or PowerShell tree sitter grammar)
+- `sed` in-place editing (`-i`, `-I`, `--in-place`)</source>
+        <target>Контролює, чи заблоковані виявлені операції запису файлів у інструменті запуску в терміналі. При виявленні це вимагатиме явного підтвердження, незалежно від того, чи буде команда зазвичай автоматично схвалена. Зверніть увагу, що це не може виявити всі можливі методи запису файлів, ось що наразі виявляється:
+
+- Перенаправлення файлів (виявлено за допомогою граматики tree sitter bash або PowerShell)
+- Редагування `sed` на місці (`-i`, `-I`, `--in-place`)</target>
+      </trans-unit>
+      <trans-unit id="blockFileWrites.never">
+        <source xml:lang="en">Allow all detected file writes.</source>
+        <target>Дозволити всі виявлені записи файлів.</target>
+      </trans-unit>
+      <trans-unit id="blockFileWrites.outsideWorkspace">
+        <source xml:lang="en">Block file writes detected outside the workspace. This depends on the shell integration feature working correctly to determine the current working directory of the terminal.</source>
+        <target>Виявлено блокування запису файлів поза робочою областю. Це залежить від правильної роботи функції інтеграції оболонки для визначення поточного робочого каталогу терміналу.</target>
+      </trans-unit>
+      <trans-unit id="detachBackgroundProcesses.description">
+        <source xml:lang="en">Whether to detach persistent terminal processes so they survive when VS Code exits. When enabled, commands started with `mode: "async"` (legacy: `isBackground: true`) are wrapped with `nohup` (POSIX) or `Start-Process` (Windows) so the process continues running after the terminal is disposed.</source>
+        <target>Чи відключити постійні процеси термінала, щоб вони продовжували працювати після виходу з VS Code. Коли це ввімкнено, команди, що починаються з `mode: "async"` (старий формат: `isBackground: true`), обгортаються в `nohup` (POSIX) або `Start-Process` (Windows), щоб процес продовжував виконуватись після закриття термінала.</target>
+      </trans-unit>
+      <trans-unit id="enforceTimeoutFromModel.description">
+        <source xml:lang="en">Whether to enforce the timeout value provided by the model in the run in terminal tool. When enabled, if the model provides a timeout parameter, the tool will stop tracking the command after that duration and return the output collected so far.</source>
+        <target>Чи застосовувати значення тайм-ауту, надане моделлю, у інструменті run in terminal. Коли це ввімкнено, якщо модель надає параметр тайм-ауту, інструмент зупинить відстеження команди після цього часу і поверне зібраний до цього моменту вихід.</target>
+      </trans-unit>
+      <trans-unit id="idlePollInterval.description">
+        <source xml:lang="en">Configures the idle poll interval in milliseconds used by the run in terminal tool to detect when commands have finished executing. Lower values make command detection faster but may cause false positives on slow systems. This primarily affects terminals without shell integration where idle detection is used instead of shell integration events.</source>
+        <target>Налаштовує інтервал опитування в мілісекундах, який використовується інструментом запуску в терміналі для виявлення завершення виконання команд. Нижчі значення прискорюють виявлення команд, але можуть призвести до хибнопозитивних результатів на повільних системах. Це в основному впливає на термінали без інтеграції оболонки, де використовується виявлення бездіяльності замість подій інтеграції оболонки.</target>
+      </trans-unit>
+      <trans-unit id="ignoreDefaultAutoApproveRules.description">
+        <source xml:lang="en">Whether to ignore the built-in default auto-approve rules used by the run in terminal tool as defined in {0}. When this setting is enabled, the run in terminal tool will ignore any rule that comes from the default set but still follow rules defined in the user, remote and workspace settings. Use this setting at your own risk; the default auto-approve rules are designed to protect you against running dangerous commands.</source>
+        <target>Чи ігнорувати вбудовані правила автоматичного затвердження за замовчуванням, що використовуються інструментом запуску в терміналі, як визначено в {0}. Коли ця настройка увімкнена, інструмент запуску в терміналі ігноруватиме будь-яке правило, що походить з набору за замовчуванням, але все ще дотримуватиметься правил, визначених у налаштуваннях користувача, віддалених та робочого простору. Використовуйте цю настройку на свій власний ризик; правила автоматичного затвердження за замовчуванням розроблені для захисту вас від виконання небезпечних команд.</target>
+      </trans-unit>
+      <trans-unit id="outputLocation.chat">
+        <source xml:lang="en">Reveal the terminal output within chat only.</source>
+        <target>Відобразити вихід терміналу лише в чаті.</target>
+      </trans-unit>
+      <trans-unit id="outputLocation.description">
+        <source xml:lang="en">Where to show the output from the run in terminal tool.</source>
+        <target>Де показати вихідні дані з виконання в інструменті терміналу.</target>
+      </trans-unit>
+      <trans-unit id="outputLocation.terminal">
+        <source xml:lang="en">Reveal the terminal in the panel or editor in addition to chat.</source>
+        <target>Відкрийте термінал у панелі або редакторі на додаток до чату.</target>
+      </trans-unit>
+      <trans-unit id="preventShellHistory.description">
+        <source xml:lang="en">Whether to exclude commands run by the terminal tool from the shell history. See below for the supported shells and the method used for each:</source>
+        <target>Чи виключити команди, виконані термінальним інструментом, з історії оболонки. Дивіться нижче підтримувані оболонки та метод, що використовується для кожної:</target>
+      </trans-unit>
+      <trans-unit id="preventShellHistory.description.bash">
+        <source xml:lang="en">Sets `HISTCONTROL=ignorespace` and prepends the command with space</source>
+        <target>Встановлює `HISTCONTROL=ignorespace` і додає пробіл перед командою</target>
+      </trans-unit>
+      <trans-unit id="preventShellHistory.description.fish">
+        <source xml:lang="en">Sets `fish_private_mode` to prevent any command from entering history</source>
+        <target>Встановлює `fish_private_mode`, щоб запобігти запису будь-якої команди в історію</target>
+      </trans-unit>
+      <trans-unit id="preventShellHistory.description.pwsh">
+        <source xml:lang="en">Sets a custom history handler via PSReadLine's `AddToHistoryHandler` to prevent any command from entering history</source>
+        <target>Встановлює користувацький обробник історії через PSReadLine's `AddToHistoryHandler`, щоб запобігти запису будь-якої команди в історію.</target>
+      </trans-unit>
+      <trans-unit id="preventShellHistory.description.zsh">
+        <source xml:lang="en">Sets `HIST_IGNORE_SPACE` option and prepends the command with space</source>
+        <target>Встановлює опцію `HIST_IGNORE_SPACE` і додає пробіл перед командою</target>
+      </trans-unit>
+      <trans-unit id="shellIntegrationTimeout.deprecated">
+        <source xml:lang="en">Use {0} instead</source>
+        <target>Використовуйте {0} замість цього</target>
       </trans-unit>
       <trans-unit id="shellIntegrationTimeout.description">
-        <source xml:lang="en">Configures the duration in milliseconds to wait for shell integration to be detected when the run in terminal tool launches a new terminal. Set to `0` to wait the minimum time, the default value `-1` means the wait time is variable based on the value of {0} and whether it's a remote window. A large value can be useful if your shell starts very slowly and a low value if you're intentionally not using shell integration.</source>
-        <target>Налаштовує тривалість у мілісекундах, протягом якої потрібно чекати на виявлення інтеграції оболонки, коли інструмент запуску в терміналі відкриває новий термінал. Встановіть `0`, щоб чекати мінімальний час, значення за замовчуванням `-1` означає, що час очікування змінюється в залежності від значення {0} і того, чи це віддалене вікно. Велике значення може бути корисним, якщо ваша оболонка запускається дуже повільно, а низьке значення, якщо ви навмисно не використовуєте інтеграцію оболонки.</target>
+        <source xml:lang="en">Configures the duration in milliseconds to wait for shell integration to be detected when the run in terminal tool launches a new terminal. Set to `0` to skip the wait entirely, the default value `-1` uses a variable wait time based on the value of {0} and whether it's a remote window. A large value can be useful if your shell starts very slowly.</source>
+        <target>Налаштовує тривалість у мілісекундах для очікування виявлення інтеграції оболонки, коли інструмент запуску в терміналі відкриває новий термінал. Встановіть `0`, щоб повністю пропустити очікування, значення за замовчуванням `-1` використовує змінний час очікування, заснований на значенні {0} і тому, чи є це віддаленим вікном. Велике значення може бути корисним, якщо ваша оболонка запускається дуже повільно.</target>
       </trans-unit>
       <trans-unit id="terminalChatAgentProfile.linux">
         <source xml:lang="en">The terminal profile to use on Linux for chat agent's run in terminal tool.</source>
@@ -812,6 +1209,26 @@ Please provide the required input to the terminal.
       <trans-unit id="terminalChatAgentProfile.windows">
         <source xml:lang="en">The terminal profile to use on Windows for chat agent's run in terminal tool.</source>
         <target>Профіль терміналу, який слід використовувати на Windows для запуску агента чату в інструменті терміналу.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/common/terminalSandboxService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="deleteFilesInSandboxTempDir">
+        <source xml:lang="en">Delete Files in Sandbox Temp Dir</source>
+        <target>Видалити файли в тимчасовій директорії пісочниці</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.missingDeps.focusTerminal">
+        <source xml:lang="en">Focus Terminal</source>
+        <target>Фокус Термінал</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.missingDeps.passwordPromptMessage">
+        <source xml:lang="en">Installing missing sandbox dependencies may prompt for your sudo password. Select Focus Terminal to type it in the terminal.</source>
+        <target>Встановлення відсутніх залежностей пісочниці може вимагати введення вашого пароля sudo. Виберіть Focus Terminal, щоб ввести його в терміналі.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.missingDeps.passwordPromptTitle">
+        <source xml:lang="en">The terminal is awaiting input.</source>
+        <target>Термінал очікує вводу.</target>
       </trans-unit>
     </body>
   </file>
@@ -977,6 +1394,126 @@ Please provide the required input to the terminal.
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/terminalContrib/find/browser/terminalFindAccessibilityHelp" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="terminal.closingDesc">
+        <source xml:lang="en">Press Escape to close Terminal Find. Focus moves to the terminal command line, and your search history is available on next Find.</source>
+        <target>Натисніть Escape, щоб закрити пошук у терміналі. Фокус переміщується на командний рядок терміналу, а ваша історія пошуку доступна при наступному пошуку.</target>
+      </trans-unit>
+      <trans-unit id="terminal.closingHeader">
+        <source xml:lang="en">Closing:</source>
+        <target>Закриття:</target>
+      </trans-unit>
+      <trans-unit id="terminal.context">
+        <source xml:lang="en">You are in the Terminal Find input. This searches the entire terminal buffer: both the current output and the scrollback history.</source>
+        <target>Ви в полі вводу пошуку термінала. Це шукає в усьому буфері термінала: як у поточному виводі, так і в історії прокрутки.</target>
+      </trans-unit>
+      <trans-unit id="terminal.focusDesc1">
+        <source xml:lang="en">When you navigate from the Terminal Find input, the terminal buffer updates in the background while your focus stays in the input. This is intentional, so you can keep refining your search without losing your place.</source>
+        <target>Коли ви переходите з поля вводу Terminal Find, буфер терміналу оновлюється у фоновому режимі, поки ваша увага залишається на полі вводу. Це зроблено навмисно, щоб ви могли продовжувати уточнювати свій пошук, не втрачаючи своє місце.</target>
+      </trans-unit>
+      <trans-unit id="terminal.focusDesc2">
+        <source xml:lang="en">The terminal automatically scrolls to show the match you navigate to.</source>
+        <target>Термінал автоматично прокручує, щоб показати збіг, до якого ви переходите.</target>
+      </trans-unit>
+      <trans-unit id="terminal.focusDesc3">
+        <source xml:lang="en">If you want to close Find and return focus to the terminal command line, press Escape. Focus moves to the command input at the bottom of the terminal.</source>
+        <target>Якщо ви хочете закрити Пошук і повернути фокус до командного рядка терміналу, натисніть Escape. Фокус переміщується на введення команд внизу терміналу.</target>
+      </trans-unit>
+      <trans-unit id="terminal.focusHeader">
+        <source xml:lang="en">Focus Behavior (Important):</source>
+        <target>Фокус поведінки (важливо):</target>
+      </trans-unit>
+      <trans-unit id="terminal.header">
+        <source xml:lang="en">Accessibility Help: Terminal Find</source>
+        <target>Допомога з доступністю: Знайти в терміналі</target>
+      </trans-unit>
+      <trans-unit id="terminal.hear1">
+        <source xml:lang="en">1) The full line that contains the match is read first, so you get immediate context.</source>
+        <target>1) Спочатку читається весь рядок, що містить збіг, щоб ви отримали миттєвий контекст.</target>
+      </trans-unit>
+      <trans-unit id="terminal.hear2">
+        <source xml:lang="en">2) Your position among the matches is announced, so you know how far you are through the results.</source>
+        <target>2) Ваша позиція серед матчів оголошена, тож ви знаєте, на якому етапі ви знаходитесь у результатах.</target>
+      </trans-unit>
+      <trans-unit id="terminal.hear3">
+        <source xml:lang="en">3) The exact line and column are announced, so you know precisely where the match is in the buffer.</source>
+        <target>3) Точний рядок і стовпець оголошуються, тому ви точно знаєте, де знаходиться збіг у буфері.</target>
+      </trans-unit>
+      <trans-unit id="terminal.hearDesc">
+        <source xml:lang="en">Each navigation step gives you a complete spoken update:</source>
+        <target>Кожен крок навігації надає вам повне усне оновлення:</target>
+      </trans-unit>
+      <trans-unit id="terminal.hearHeader">
+        <source xml:lang="en">What You Hear Each Time You Move to a Match:</source>
+        <target>Що ви чуєте щоразу, коли переходите до матчу:</target>
+      </trans-unit>
+      <trans-unit id="terminal.inputDesc">
+        <source xml:lang="en">While you are in the Terminal Find input, your focus stays in the field. You can type, edit your search term, or navigate matches without leaving the input. When you navigate to a match, the terminal scrolls to show it, but your focus remains in the Find input.</source>
+        <target>Поки ви знаходитесь у полі вводу "Знайти" в Терминалі, ваша увага залишається в цьому полі. Ви можете вводити, редагувати свій пошуковий запит або переходити до збігів, не виходячи з вводу. Коли ви переходите до збігу, термінал прокручує, щоб його показати, але ваша увага залишається в полі вводу "Знайти".</target>
+      </trans-unit>
+      <trans-unit id="terminal.inputHeader">
+        <source xml:lang="en">Inside the Terminal Find Input (What It Does):</source>
+        <target>Всередині терміналу знайти введення (Що це робить):</target>
+      </trans-unit>
+      <trans-unit id="terminal.keyEnter">
+        <source xml:lang="en">- Enter: Move to the next match while staying in the Find input.</source>
+        <target>- Введіть: Перейдіть до наступного матчу, залишаючись у полі пошуку.</target>
+      </trans-unit>
+      <trans-unit id="terminal.keyNavHeader">
+        <source xml:lang="en">While focused IN the Find input:</source>
+        <target>Поки зосереджено в полі вводу Пошук:</target>
+      </trans-unit>
+      <trans-unit id="terminal.keyNavNote">
+        <source xml:lang="en">Note: Terminal Find keeps focus in the Find input. If you need to return to the terminal command line, press Escape to close Find.</source>
+        <target>Примітка: Терминал Find зберігає фокус у полі вводу пошуку. Якщо вам потрібно повернутися до командного рядка термінала, натисніть Escape, щоб закрити пошук.</target>
+      </trans-unit>
+      <trans-unit id="terminal.keyShiftEnter">
+        <source xml:lang="en">- Shift+Enter: Move to the previous match while staying in the Find input.</source>
+        <target>- Shift+Enter: Перейти до попереднього збігу, залишаючись у полі введення Пошуку.</target>
+      </trans-unit>
+      <trans-unit id="terminal.keyboardHeader">
+        <source xml:lang="en">Keyboard Navigation Summary:</source>
+        <target>Резюме навігації з клавіатури:</target>
+      </trans-unit>
+      <trans-unit id="terminal.optionCase">
+        <source xml:lang="en">- Match Case: Only exact case matches are included.</source>
+        <target>- Урахування регістру: Включаються лише точні збіги регістру.</target>
+      </trans-unit>
+      <trans-unit id="terminal.optionRegex">
+        <source xml:lang="en">- Regular Expression: Use pattern matching for advanced searches.</source>
+        <target>- Регулярний вираз: Використовуйте шаблонне співпадіння для розширених пошуків.</target>
+      </trans-unit>
+      <trans-unit id="terminal.optionWord">
+        <source xml:lang="en">- Whole Word: Only full words are matched.</source>
+        <target>- Повне слово: Відповідають лише повні слова.</target>
+      </trans-unit>
+      <trans-unit id="terminal.optionsHeader">
+        <source xml:lang="en">Find Options:</source>
+        <target>Знайти параметри:</target>
+      </trans-unit>
+      <trans-unit id="terminal.settingVerbosity">
+        <source xml:lang="en">- `accessibility.verbosity.find`: Controls whether the Terminal Find input announces the Accessibility Help hint.</source>
+        <target>- `accessibility.verbosity.find`: Контролює, чи оголошує введення пошуку в терміналі підказку допомоги з доступності.</target>
+      </trans-unit>
+      <trans-unit id="terminal.settingsDesc">
+        <source xml:lang="en">Terminal Find has limited configuration options. Most behavior is controlled by the terminal itself.</source>
+        <target>Термінал Find має обмежені можливості конфігурації. Більшість поведінки контролюється самим терміналом.</target>
+      </trans-unit>
+      <trans-unit id="terminal.settingsHeader">
+        <source xml:lang="en">Settings You Can Adjust ({0} opens Settings):</source>
+        <target>Налаштування, які ви можете змінити ({0} відкриває Налаштування):</target>
+      </trans-unit>
+      <trans-unit id="terminal.statusDesc">
+        <source xml:lang="en">You are searching the terminal buffer.</source>
+        <target>Ви шукаєте буфер терміналу.</target>
+      </trans-unit>
+      <trans-unit id="terminal.statusHeader">
+        <source xml:lang="en">Current Search Status:</source>
+        <target>Поточний статус пошуку:</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/terminalContrib/history/browser/terminal.history.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="goToRecentDirectory.metadata">
@@ -999,6 +1536,10 @@ Please provide the required input to the terminal.
   </file>
   <file original="src/vs/workbench/contrib/terminalContrib/history/browser/terminalRunRecentQuickPick" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="fuzzySearch">
+        <source xml:lang="en">Fuzzy search</source>
+        <target>Нечіткий пошук</target>
+      </trans-unit>
       <trans-unit id="openShellHistoryFile">
         <source xml:lang="en">Open File</source>
         <target>Відкрити файл</target>
@@ -1038,6 +1579,74 @@ Please provide the required input to the terminal.
       <trans-unit id="terminal.integrated.shellIntegration.history">
         <source xml:lang="en">Controls the number of recently used commands to keep in the terminal command history. Set to 0 to disable terminal command history.</source>
         <target>Контролює кількість нещодавно використаних команд, які зберігатимуться в історії команд терміналу. Встановіть 0, щоб вимкнути історію команд терміналу.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/terminalContrib/inlineHint/browser/terminal.initialHint.contribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="copilotCliHint">
+        <source xml:lang="en">Type [[copilot]] to use Copilot CLI.</source>
+        <note>Preserve double-square brackets and their order</note>
+        <target>Введіть [[copilot]], щоб використовувати Copilot CLI.</target>
+      </trans-unit>
+      <trans-unit id="copilotCliHintAriaLabel">
+        <source xml:lang="en">Type copilot to use Copilot CLI.</source>
+        <target>Введіть copilot, щоб використовувати Copilot CLI.</target>
+      </trans-unit>
+      <trans-unit id="disableHint">
+        <source xml:lang="en"> Toggle {0} in settings to disable this hint.</source>
+        <target>Переключіть {0} у налаштуваннях, щоб вимкнути це підказку.</target>
+      </trans-unit>
+      <trans-unit id="disableInitialHint">
+        <source xml:lang="en">Disable Initial Hint</source>
+        <target>Вимкнути початкову підказку</target>
+      </trans-unit>
+      <trans-unit id="emptyHintText">
+        <source xml:lang="en">Open chat {0}. </source>
+        <target>Відкрити чат {0}.</target>
+      </trans-unit>
+      <trans-unit id="hintTextDismiss">
+        <source xml:lang="en">[[don't show]] this again.</source>
+        <note>Preserve double-square brackets and their order</note>
+        <target>[[не показувати]] це знову.</target>
+      </trans-unit>
+      <trans-unit id="hintTextDismissAriaLabel">
+        <source xml:lang="en">Start typing to dismiss or don't show this again.</source>
+        <target>Почніть вводити текст, щоб закрити, або не показувати це знову.</target>
+      </trans-unit>
+      <trans-unit id="hintTextDismissCompact">
+        <source xml:lang="en">[[Don't show this again]]</source>
+        <note>Preserve double-square brackets and their order</note>
+        <target>[[Не показувати це знову]]</target>
+      </trans-unit>
+      <trans-unit id="hintTextDismissProse">
+        <source xml:lang="en"> Start typing to dismiss or </source>
+        <target>Почніть вводити, щоб закрити або</target>
+      </trans-unit>
+      <trans-unit id="inlineChatHint">
+        <source xml:lang="en">[[Open chat]] or start typing to dismiss.</source>
+        <note>Preserve double-square brackets and their order</note>
+        <target>[[Відкрити чат]] або почніть вводити, щоб закрити.</target>
+      </trans-unit>
+      <trans-unit id="openChatHint">
+        <source xml:lang="en">Open chat or start typing to dismiss.</source>
+        <target>Відкрийте чат або почніть вводити текст, щоб закрити.</target>
+      </trans-unit>
+      <trans-unit id="showSuggestHint">
+        <source xml:lang="en">Show suggestions {0}. </source>
+        <target>Показати пропозиції {0}.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/terminalContrib/inlineHint/common/terminalInitialHintConfiguration" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="terminal.integrated.initialHint">
+        <source xml:lang="en">Controls if the first terminal without input will show a hint about available actions when it is focused. This will only show when {0} is disabled.</source>
+        <target>Контролює, чи перший термінал без вводу відобразить підказку про доступні дії, коли він буде в фокусі. Це буде показано лише тоді, коли {0} вимкнено.</target>
+      </trans-unit>
+      <trans-unit id="terminal.integrated.initialHintCopilotCli">
+        <source xml:lang="en">When enabled, the terminal initial hint will suggest using Copilot CLI by typing {0} instead of opening Copilot Chat.</source>
+        <target>Коли увімкнено, початковий підказка терміналу запропонує використовувати Copilot CLI, ввівши {0}, замість відкриття Copilot Chat.</target>
       </trans-unit>
     </body>
   </file>
@@ -1089,7 +1698,7 @@ Please provide the required input to the terminal.
     <body>
       <trans-unit id="allow">
         <source xml:lang="en">Allow {0}</source>
-        <target>Дозволити {0}</target>
+        <target>Дозволити</target>
       </trans-unit>
       <trans-unit id="followForwardedLink">
         <source xml:lang="en">Follow link using forwarded port</source>
@@ -1146,6 +1755,30 @@ Please provide the required input to the terminal.
       <trans-unit id="terminal.integrated.urlLinks">
         <source xml:lang="en">Url</source>
         <target>Url</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/terminalContrib/notification/browser/terminalNotificationHandler" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="terminalNotificationDisable">
+        <source xml:lang="en">Disable Terminal Notifications</source>
+        <target>Вимкнути сповіщення терміналу</target>
+      </trans-unit>
+      <trans-unit id="terminalNotificationDismiss">
+        <source xml:lang="en">Dismiss</source>
+        <target>Відхилити</target>
+      </trans-unit>
+      <trans-unit id="terminalNotificationSource">
+        <source xml:lang="en">Terminal</source>
+        <target>Термінал</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/terminalContrib/notification/common/terminalNotificationConfiguration" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="terminal.integrated.enableNotifications">
+        <source xml:lang="en">Controls whether notifications sent from the terminal via OSC 99 are shown. This uses notifications inside the product instead of desktop notifications. Sounds, icons and filtering are not supported.</source>
+        <target>Контролює, чи відображаються сповіщення, надіслані з термінала через OSC 99. Це використовує сповіщення всередині продукту замість настільних сповіщень. Звуки, іконки та фільтрація не підтримуються.</target>
       </trans-unit>
     </body>
   </file>
@@ -1385,6 +2018,10 @@ For example:
         <source xml:lang="en">Shows the current command at the top of the terminal. This feature requires [shell integration]({0}) to be activated. See {1}.</source>
         <target>Показує поточну команду вгорі терміналу. Ця функція вимагає активації [інтеграції оболонки]({0}). Дивіться {1}.</target>
       </trans-unit>
+      <trans-unit id="stickyScroll.ignoredCommands">
+        <source xml:lang="en">A list of commands that should not trigger sticky scroll. When a command from this list is detected, the sticky scroll overlay will be hidden.</source>
+        <target>Список команд, які не повинні активувати фіксовану прокрутку. Коли буде виявлено команду з цього списку, накладка фіксованої прокрутки буде прихована.</target>
+      </trans-unit>
       <trans-unit id="stickyScroll.maxLineCount">
         <source xml:lang="en">Defines the maximum number of sticky lines to show. Sticky scroll lines will never exceed 40% of the viewport regardless of this setting.</source>
         <target>Визначає максимальну кількість закріплених рядків для відображення. Закріплені рядки прокрутки ніколи не перевищать 40% від області перегляду, незалежно від цього налаштування.</target>
@@ -1401,9 +2038,37 @@ For example:
         <source xml:lang="en">Accept Selected Suggestion (Enter)</source>
         <target>Прийняти вибране припущення (Enter)</target>
       </trans-unit>
+      <trans-unit id="workbench.action.terminal.changeSelectionMode.always">
+        <source xml:lang="en">Selection Mode: Always (Tab or Enter)</source>
+        <target>Режим вибору: Завжди (Tab або Enter)</target>
+      </trans-unit>
+      <trans-unit id="workbench.action.terminal.changeSelectionMode.always.tooltip">
+        <source xml:lang="en">Always select the top suggestion, Tab or Enter will accept a suggestion when visible. Activate to change.</source>
+        <target>Завжди вибирайте найкращу пропозицію, Tab або Enter прийме пропозицію, коли вона видима. Активуйте, щоб змінити.</target>
+      </trans-unit>
+      <trans-unit id="workbench.action.terminal.changeSelectionMode.never">
+        <source xml:lang="en">Selection Mode: None</source>
+        <target>Режим вибору: Немає</target>
+      </trans-unit>
+      <trans-unit id="workbench.action.terminal.changeSelectionMode.never.tooltip">
+        <source xml:lang="en">Do not select the top suggestion until down is pressed, at which point Tab or Enter will accept the suggestion. Activate to change.</source>
+        <target>Не вибирайте верхню пропозицію, поки не буде натиснуто вниз, після чого Tab або Enter приймуть пропозицію. Активуйте, щоб змінити.</target>
+      </trans-unit>
+      <trans-unit id="workbench.action.terminal.changeSelectionMode.partial">
+        <source xml:lang="en">Selection Mode: Partial (Tab)</source>
+        <target>Режим вибору: Частковий (Tab)</target>
+      </trans-unit>
+      <trans-unit id="workbench.action.terminal.changeSelectionMode.partial.tooltip">
+        <source xml:lang="en">Partially select the top suggestion, Tab will accept a suggestion when visible. Activate to change.</source>
+        <target>Частково виберіть найкращу пропозицію, Tab прийме пропозицію, коли вона буде видима. Активуйте, щоб змінити.</target>
+      </trans-unit>
       <trans-unit id="workbench.action.terminal.configureSuggestSettings">
         <source xml:lang="en">Configure</source>
         <target>Налаштувати</target>
+      </trans-unit>
+      <trans-unit id="workbench.action.terminal.doNotShowSuggestOnType">
+        <source xml:lang="en">Don't show IntelliSense unless triggered explicitly. This disables the quick suggestions and suggest on trigger characters settings.</source>
+        <target>Не показувати IntelliSense, якщо не викликано явно. Це вимикає налаштування швидких підказок і підказок за символами тригера.</target>
       </trans-unit>
       <trans-unit id="workbench.action.terminal.hideSuggestWidget">
         <source xml:lang="en">Hide Suggest Widget</source>
@@ -1416,10 +2081,6 @@ For example:
       <trans-unit id="workbench.action.terminal.learnMore">
         <source xml:lang="en">Learn More</source>
         <target>Дізнатися більше</target>
-      </trans-unit>
-      <trans-unit id="workbench.action.terminal.requestCompletions">
-        <source xml:lang="en">Request Completions</source>
-        <target>Запит на завершення</target>
       </trans-unit>
       <trans-unit id="workbench.action.terminal.resetSuggestWidgetSize">
         <source xml:lang="en">Reset Suggest Widget Size</source>
@@ -1441,6 +2102,10 @@ For example:
         <source xml:lang="en">Select the Previous Suggestion</source>
         <target>Виберіть попередню пропозицію</target>
       </trans-unit>
+      <trans-unit id="workbench.action.terminal.showSuggestOnType">
+        <source xml:lang="en">Show IntelliSense while typing. This enables the quick suggestions for commands and arguments, and suggest on trigger characters settings.</source>
+        <target>Показувати IntelliSense під час введення. Це дозволяє швидкі пропозиції для команд і аргументів, а також пропозиції на основі налаштувань тригерних символів.</target>
+      </trans-unit>
       <trans-unit id="workbench.action.terminal.suggestToggleDetails">
         <source xml:lang="en">Suggest Toggle Details</source>
         <target>Пропозиція перемикання деталей</target>
@@ -1452,6 +2117,10 @@ For example:
       <trans-unit id="workbench.action.terminal.suggestToggleExplainMode">
         <source xml:lang="en">Suggest Toggle Explain Modes</source>
         <target>Пропозиція перемикання пояснень режимів</target>
+      </trans-unit>
+      <trans-unit id="workbench.action.terminal.triggerSuggest">
+        <source xml:lang="en">Trigger Suggest</source>
+        <target>Запустити пропозицію</target>
       </trans-unit>
     </body>
   </file>
@@ -1625,6 +2294,10 @@ For example:
         <source xml:lang="en">The foreground color for a stash icon. These icons will appear in the terminal suggest widget.</source>
         <target>Колір переднього плану для іконки сховища. Ці іконки з'являться у віджеті пропозицій терміналу.</target>
       </trans-unit>
+      <trans-unit id="terminalSymbolIcon.symbolTextForeground">
+        <source xml:lang="en">The foreground color for a plaintext suggestion. These icons will appear in the terminal suggest widget.</source>
+        <target>Колір переднього плану для текстового підказки. Ці значки з'являться у віджеті підказок терміналу.</target>
+      </trans-unit>
       <trans-unit id="terminalSymbolIcon.symbolicLinkFileForeground">
         <source xml:lang="en">The foreground color for a symbolic link file icon. These icons will appear in the terminal suggest widget.</source>
         <target>Колір переднього плану для значка файлу символічного посилання. Ці значки з'являться у віджеті пропозицій терміналу.</target>
@@ -1668,6 +2341,10 @@ For example:
       <trans-unit id="terminalSymbolStashIcon">
         <source xml:lang="en">Icon for stashes in the terminal suggest widget.</source>
         <target>Іконка для сховищ у віджеті терміналу.</target>
+      </trans-unit>
+      <trans-unit id="terminalSymbolSymboTextIcon">
+        <source xml:lang="en">Icon for plain text suggestions in the terminal suggest widget.</source>
+        <target>Іконка для простих текстових пропозицій у віджеті пропозицій терміналу.</target>
       </trans-unit>
       <trans-unit id="terminalSymbolSymbolicLinkFileIcon">
         <source xml:lang="en">Icon for symbolic link files in the terminal suggest widget.</source>
@@ -1718,8 +2395,8 @@ For example:
         <target>Увімкніть функцію та використовуйте відносні шляхи.</target>
       </trans-unit>
       <trans-unit id="suggest.enabled">
-        <source xml:lang="en">Enables terminal intellisense suggestions (preview) for supported shells ({0}) when {1} is set to {2}.</source>
-        <target>Увімкнення пропозицій інтелектуального завершення командного рядка (попередній перегляд) для підтримуваних оболонок ({0}), коли {1} встановлено на {2}.</target>
+        <source xml:lang="en">Enables terminal IntelliSense suggestions (also known as autocomplete) for supported shells ({0}). This requires {1} to be enabled and working or [manually installed](https://code.visualstudio.com/docs/terminal/shell-integration#_manual-installation-install).</source>
+        <target>Увімкнення пропозицій IntelliSense терміналу (також відомих як автозаповнення) для підтримуваних оболонок ({0}). Це вимагає, щоб {1} було увімкнено та працювало або [встановлено вручну](https://code.visualstudio.com/docs/terminal/shell-integration#_manual-installation-install).</target>
       </trans-unit>
       <trans-unit id="suggest.inlineSuggestion">
         <source xml:lang="en">Controls whether the shell's inline suggestion should be detected and how it is scored.</source>
@@ -1730,24 +2407,32 @@ For example:
         <target>Увімкніть цю функцію та завжди розміщуйте вбудовану пропозицію зверху.</target>
       </trans-unit>
       <trans-unit id="suggest.inlineSuggestion.alwaysOnTopExceptExactMatch">
-        <source xml:lang="en">Enable the feature and sort the inline suggestion without forcing it to be on top. This means that exact matches will be will be above the inline suggestion.</source>
-        <target>Увімкніть функцію та відсортуйте вбудовану пропозицію без примусу її бути на верху. Це означає, що точні збіги будуть вище вбудованої пропозиції.</target>
+        <source xml:lang="en">Enable the feature and sort the inline suggestion without forcing it to be on top. This means that exact matches will be above the inline suggestion.</source>
+        <target>Увімкніть функцію та сортуйте вбудовану пропозицію, не примушуючи її бути на верху. Це означає, що точні збіги будуть вище вбудованої пропозиції.</target>
       </trans-unit>
       <trans-unit id="suggest.inlineSuggestion.off">
         <source xml:lang="en">Disable the feature.</source>
         <target>Вимкніть функцію.</target>
       </trans-unit>
-      <trans-unit id="suggest.provider.description">
-        <source xml:lang="en">Whether to enable this provider.</source>
-        <target>Чи ввімкнути цього постачальника.</target>
+      <trans-unit id="suggest.insertTrailingSpace">
+        <source xml:lang="en">Controls whether a space is automatically inserted after accepting a suggestion and re-trigger suggestions. Folders and symbolic link folders will never have a trailing space added.</source>
+        <target>Контролює, чи пробіл автоматично вставляється після прийняття пропозиції та повторного виклику пропозицій. Папки та папки з символічними посиланнями ніколи не матимуть доданого пробілу в кінці.</target>
       </trans-unit>
       <trans-unit id="suggest.provider.lsp.description">
-        <source xml:lang="en">Provides completions for language server protocol-specific arguments.</source>
-        <target>Надає завершення для специфічних аргументів протоколу мовного сервера.</target>
+        <source xml:lang="en">Show suggestions from language servers.</source>
+        <target>Показати пропозиції від мовних серверів.</target>
+      </trans-unit>
+      <trans-unit id="suggest.provider.title">
+        <source xml:lang="en">Show suggestions from {0}.</source>
+        <target>Показати пропозиції від {0}.</target>
       </trans-unit>
       <trans-unit id="suggest.providers">
         <source xml:lang="en">Providers are enabled by default. Omit them by setting the id of the provider to `false`.</source>
         <target>Постачальники увімкнені за замовчуванням. Виключіть їх, встановивши ідентифікатор постачальника на `false`.</target>
+      </trans-unit>
+      <trans-unit id="suggest.providersEnabledByDefault">
+        <source xml:lang="en">Controls which suggestions automatically show up while typing. Suggestion providers are enabled by default.</source>
+        <target>Контролює, які пропозиції автоматично з'являються під час введення. Провайдери пропозицій увімкнені за замовчуванням.</target>
       </trans-unit>
       <trans-unit id="suggest.quickSuggestions">
         <source xml:lang="en">Controls whether suggestions should automatically show up while typing. Also be aware of the {0}-setting which controls if suggestions are triggered by special characters.</source>
@@ -1884,6 +2569,10 @@ To exclude an extension, set it to `false`
       <trans-unit id="terminal.voice.installSpeechExtension">
         <source xml:lang="en">Would you like to install 'VS Code Speech' extension from 'Microsoft'?</source>
         <target>Ви хочете встановити розширення 'VS Code Speech' від 'Microsoft'?</target>
+      </trans-unit>
+      <trans-unit id="voiceCategory">
+        <source xml:lang="en">Voice</source>
+        <target>Голос</target>
       </trans-unit>
       <trans-unit id="workbench.action.terminal.startDictation">
         <source xml:lang="en">Start Dictation in Terminal</source>

@@ -107,8 +107,8 @@
   <file original="src/vs/workbench/contrib/notebook/browser/contrib/cellDiagnostics/diagnosticCellStatusBarContrib" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="notebook.cell.status.diagnostic">
-        <source xml:lang="en">Quick Actions {0}</source>
-        <target>Швидкі дії {0}</target>
+        <source xml:lang="en">Quick Actions</source>
+        <target>Швидкі дії</target>
       </trans-unit>
     </body>
   </file>
@@ -254,10 +254,6 @@
   </file>
   <file original="src/vs/workbench/contrib/notebook/browser/contrib/find/notebookFind" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="notebook.findNext.enter">
-        <source xml:lang="en">Find Next</source>
-        <target>Знайти далі</target>
-      </trans-unit>
       <trans-unit id="notebook.findNext.fromWidget">
         <source xml:lang="en">Find Next</source>
         <target>Знайти наступний</target>
@@ -655,6 +651,10 @@
   </file>
   <file original="src/vs/workbench/contrib/notebook/browser/controller/cellOutputActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="imageFiles">
+        <source xml:lang="en">Image Files</source>
+        <target>Файли зображень</target>
+      </trans-unit>
       <trans-unit id="notebookActions.copyOutput">
         <source xml:lang="en">Copy Cell Output</source>
         <target>Копіювати вихід клітинки</target>
@@ -666,6 +666,10 @@
       <trans-unit id="notebookActions.openOutputInNotebookOutputEditor">
         <source xml:lang="en">Open in Output Preview</source>
         <target>Відкрити в попередньому перегляді виходу</target>
+      </trans-unit>
+      <trans-unit id="notebookActions.saveOutputImage">
+        <source xml:lang="en">Save Image</source>
+        <target>Зберегти зображення</target>
       </trans-unit>
       <trans-unit id="notebookActions.showAllOutput">
         <source xml:lang="en">Show Empty Outputs</source>
@@ -1007,14 +1011,18 @@
   </file>
   <file original="src/vs/workbench/contrib/notebook/browser/controller/layoutActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="cmd.toggle2">
+        <source xml:lang="en">Breadcrumbs</source>
+        <target>Хлібні крихти</target>
+      </trans-unit>
       <trans-unit id="customizeNotebook">
         <source xml:lang="en">Customize Notebook...</source>
         <target>Налаштувати блокнот...</target>
       </trans-unit>
       <trans-unit id="mitoggleNotebookStickyScroll">
-        <source xml:lang="en">&amp;&amp;Toggle Notebook Sticky Scroll</source>
+        <source xml:lang="en">&amp;&amp;Sticky Scroll</source>
         <note>&amp;&amp; denotes a mnemonic</note>
-        <target>&amp;&amp;Перемкнути закріплене прокручування нотатника</target>
+        <target>&amp;&amp;Липке прокручування</target>
       </trans-unit>
       <trans-unit id="notebook.placeholder">
         <source xml:lang="en">Settings file to save in</source>
@@ -1025,12 +1033,16 @@
         <target>Зберегти порядок відображення типу MIME</target>
       </trans-unit>
       <trans-unit id="notebook.showLineNumbers">
-        <source xml:lang="en">Notebook Line Numbers</source>
-        <target>Номери рядків блокнота</target>
+        <source xml:lang="en">Line Numbers</source>
+        <target>Номери рядків</target>
       </trans-unit>
       <trans-unit id="notebook.toggleBreadcrumb">
         <source xml:lang="en">Toggle Breadcrumbs</source>
         <target>Переключити хлібні крихти</target>
+      </trans-unit>
+      <trans-unit id="notebook.toggleBreadcrumb.short">
+        <source xml:lang="en">Breadcrumbs</source>
+        <target>Хлібні крихти</target>
       </trans-unit>
       <trans-unit id="notebook.toggleCellToolbarPosition">
         <source xml:lang="en">Toggle Cell Toolbar Position</source>
@@ -1040,9 +1052,13 @@
         <source xml:lang="en">Toggle Notebook Line Numbers</source>
         <target>Перемкнути номери рядків блокнота</target>
       </trans-unit>
+      <trans-unit id="notebook.toggleLineNumbers.short">
+        <source xml:lang="en">Line Numbers</source>
+        <target>Номери рядків</target>
+      </trans-unit>
       <trans-unit id="notebookStickyScroll">
-        <source xml:lang="en">Toggle Notebook Sticky Scroll</source>
-        <target>Перемкнути закріплену прокрутку нотатника</target>
+        <source xml:lang="en">Sticky Scroll</source>
+        <target>Липке прокручування</target>
       </trans-unit>
       <trans-unit id="saveTarget.machine">
         <source xml:lang="en">User Settings</source>
@@ -1055,6 +1071,10 @@
       <trans-unit id="toggleStickyScroll">
         <source xml:lang="en">Toggle Notebook Sticky Scroll</source>
         <target>Перемикання фіксованого прокручування нотатника</target>
+      </trans-unit>
+      <trans-unit id="toggleStickyScroll.short">
+        <source xml:lang="en">Sticky Scroll</source>
+        <target>Липке прокручування</target>
       </trans-unit>
       <trans-unit id="workbench.notebook.layout.configure.label">
         <source xml:lang="en">Customize Notebook Layout</source>
@@ -1564,15 +1584,15 @@
         <target>Чи слід показувати панель стану клітинки.</target>
       </trans-unit>
       <trans-unit id="notebook.showCellStatusbar.hidden.description">
-        <source xml:lang="en">The cell Status bar is always hidden.</source>
-        <target>Панель стану комірки завжди прихована.</target>
+        <source xml:lang="en">The cell status bar is always hidden.</source>
+        <target>Статусна панель комірки завжди прихована.</target>
       </trans-unit>
       <trans-unit id="notebook.showCellStatusbar.visible.description">
-        <source xml:lang="en">The cell Status bar is always visible.</source>
-        <target>Панель стану комірки завжди видима.</target>
+        <source xml:lang="en">The cell status bar is always visible.</source>
+        <target>Статусна панель клітинки завжди видима.</target>
       </trans-unit>
       <trans-unit id="notebook.showCellStatusbar.visibleAfterExecute.description">
-        <source xml:lang="en">The cell Status bar is hidden until the cell has executed. Then it becomes visible to show the execution status.</source>
+        <source xml:lang="en">The cell status bar is hidden until the cell has executed. Then it becomes visible to show the execution status.</source>
         <target>Панель стану комірки прихована, поки комірка не виконається. Потім вона стає видимою, щоб показати статус виконання.</target>
       </trans-unit>
       <trans-unit id="notebook.showFoldingControls.description">
@@ -1902,7 +1922,7 @@ Run the Open Accessibility Help command for more information</source>
         <target>Рендерер не потребує повідомлень.</target>
       </trans-unit>
       <trans-unit id="contributes.notebook.renderer.requiresMessaging.optional">
-        <source xml:lang="en">The renderer is better with messaging available, but it's not requried.</source>
+        <source xml:lang="en">The renderer is better with messaging available, but it's not required.</source>
         <target>Рендерер працює краще з доступним повідомленням, але це не є обов'язковим.</target>
       </trans-unit>
       <trans-unit id="contributes.notebook.renderer.viewType">
@@ -2041,6 +2061,10 @@ Run the Open Accessibility Help command for more information</source>
         <source xml:lang="en">Icon to revert in notebook editors.</source>
         <target>Іконка для скасування в редакторах нотаток.</target>
       </trans-unit>
+      <trans-unit id="saveIcon">
+        <source xml:lang="en">Icon to save content to disk</source>
+        <target>Іконка для збереження вмісту на диск</target>
+      </trans-unit>
       <trans-unit id="selectKernelIcon">
         <source xml:lang="en">Configure icon to select a kernel in notebook editors.</source>
         <target>Налаштуйте значок для вибору ядра в редакторах нотаток.</target>
@@ -2154,12 +2178,16 @@ Run the Open Accessibility Help command for more information</source>
         <target>Контролює відображення номерів рядків у редакторі клітинок.</target>
       </trans-unit>
       <trans-unit id="notebook.showLineNumbers">
-        <source xml:lang="en">Notebook Line Numbers</source>
-        <target>Номери рядків блокнота</target>
+        <source xml:lang="en">Line Numbers</source>
+        <target>Номери рядків</target>
       </trans-unit>
       <trans-unit id="notebook.toggleLineNumbers">
         <source xml:lang="en">Toggle Notebook Line Numbers</source>
         <target>Перемкнути номери рядків блокнота</target>
+      </trans-unit>
+      <trans-unit id="notebook.toggleLineNumbers.short">
+        <source xml:lang="en">Line Numbers</source>
+        <target>Номери рядків</target>
       </trans-unit>
     </body>
   </file>

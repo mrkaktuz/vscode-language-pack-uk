@@ -471,6 +471,18 @@
         <source xml:lang="en">Render Characters</source>
         <target>Відобразити персонажів</target>
       </trans-unit>
+      <trans-unit id="context.minimap.side">
+        <source xml:lang="en">Side</source>
+        <target>Бік</target>
+      </trans-unit>
+      <trans-unit id="context.minimap.side.left">
+        <source xml:lang="en">Left</source>
+        <target>Лівий</target>
+      </trans-unit>
+      <trans-unit id="context.minimap.side.right">
+        <source xml:lang="en">Right</source>
+        <target>Правильно</target>
+      </trans-unit>
       <trans-unit id="context.minimap.size">
         <source xml:lang="en">Vertical size</source>
         <target>Вертикальний розмір</target>
@@ -653,6 +665,10 @@ The first edit matching the preferences will be applied.</source>
   </file>
   <file original="src/vs/editor/contrib/find/browser/findController" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="ariaSearchNoResult">
+        <source xml:lang="en">{0} found for '{1}'</source>
+        <target>{0} знайдено для '{1}'</target>
+      </trans-unit>
       <trans-unit id="findMatchAction.goToMatch">
         <source xml:lang="en">Go to Match...</source>
         <target>Перейти до матчу...</target>
@@ -719,6 +735,10 @@ The first edit matching the preferences will be applied.</source>
   </file>
   <file original="src/vs/editor/contrib/find/browser/findWidget" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="accessibilityHelpHintInLabel">
+        <source xml:lang="en">Press {0} for accessibility help</source>
+        <target>Натисніть {0} для отримання допомоги з доступністю</target>
+      </trans-unit>
       <trans-unit id="ariaSearchNoResult">
         <source xml:lang="en">{0} found for '{1}'</source>
         <target>{0} знайдено для '{1}'</target>
@@ -742,6 +762,10 @@ The first edit matching the preferences will be applied.</source>
       <trans-unit id="findExpandedIcon">
         <source xml:lang="en">Icon to indicate that the editor find widget is expanded.</source>
         <target>Іконка, що вказує на те, що віджет пошуку редактора розгорнуто.</target>
+      </trans-unit>
+      <trans-unit id="findInputAriaLabelWithHint">
+        <source xml:lang="en">{0}, {1}</source>
+        <target>{0}, {1}</target>
       </trans-unit>
       <trans-unit id="findNextMatchIcon">
         <source xml:lang="en">Icon for 'Find Next' in the editor find widget.</source>
@@ -818,6 +842,10 @@ The first edit matching the preferences will be applied.</source>
       <trans-unit id="placeholder.replace">
         <source xml:lang="en">Replace</source>
         <target>Замінити</target>
+      </trans-unit>
+      <trans-unit id="replaceInputAriaLabelWithHint">
+        <source xml:lang="en">{0}, {1}</source>
+        <target>{0}, {1}</target>
       </trans-unit>
       <trans-unit id="title.matchesCountLimit">
         <source xml:lang="en">Only the first {0} results are highlighted, but all find operations work on the entire text.</source>
@@ -1509,6 +1537,18 @@ This allows for users to show the hover without using the mouse.</note>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/editor/contrib/hover/browser/hoverCopyButton" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="hover.copied">
+        <source xml:lang="en">Copied to clipboard</source>
+        <target>Скопійовано в буфер обміну</target>
+      </trans-unit>
+      <trans-unit id="hover.copy">
+        <source xml:lang="en">Copy</source>
+        <target>Копіювати</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/editor/contrib/hover/browser/markdownHoverParticipant" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="decreaseHoverVerbosity">
@@ -1519,10 +1559,6 @@ This allows for users to show the hover without using the mouse.</note>
         <source xml:lang="en">Decrease Hover Verbosity</source>
         <target>- Рівень детальності частини зосередженого наведення можна зменшити за допомогою команди Зменшити детальність наведення.</target>
       </trans-unit>
-      <trans-unit id="decreaseVerbosityWithKb">
-        <source xml:lang="en">Decrease Hover Verbosity ({0})</source>
-        <target>Зменшити детальність наведення ({0})</target>
-      </trans-unit>
       <trans-unit id="increaseHoverVerbosity">
         <source xml:lang="en">Icon for increaseing hover verbosity.</source>
         <target>Іконка для збільшення детальності наведення.</target>
@@ -1531,21 +1567,21 @@ This allows for users to show the hover without using the mouse.</note>
         <source xml:lang="en">Increase Hover Verbosity</source>
         <target>- Рівень деталізації частини зосередженого наведення можна збільшити за допомогою команди Збільшити деталізацію наведення.</target>
       </trans-unit>
-      <trans-unit id="increaseVerbosityWithKb">
-        <source xml:lang="en">Increase Hover Verbosity ({0})</source>
-        <target>Збільшити детальність наведення ({0})</target>
-      </trans-unit>
       <trans-unit id="modesContentHover.loading">
         <source xml:lang="en">Loading...</source>
         <target>Завантаження...</target>
       </trans-unit>
       <trans-unit id="stopped rendering">
-        <source xml:lang="en">Rendering paused for long line for performance reasons. This can be configured via `editor.stopRenderingLineAfter`.</source>
-        <target>Відображення призупинено для довгого рядка з причин продуктивності. Це можна налаштувати через `editor.stopRenderingLineAfter`.</target>
+        <source xml:lang="en">Rendering paused for long line for performance reasons. This can be configured via `editor.stopRenderingLineAfter`. [Don't Show Again](command:{0})</source>
+        <note>Please do not translate the word "command", it is part of our internal syntax which must not change&#xD;
+{Locked="](command:{0})"}</note>
+        <target>{Locked="](command:{0})"} Рендеринг призупинено для довгого рядка з причин продуктивності. Це можна налаштувати через `editor.stopRenderingLineAfter`. [Не показувати знову](command:{0})</target>
       </trans-unit>
       <trans-unit id="too many characters">
-        <source xml:lang="en">Tokenization is skipped for long lines for performance reasons. This can be configured via `editor.maxTokenizationLineLength`.</source>
-        <target>Токенізація пропускається для довгих рядків з причин продуктивності. Це можна налаштувати через `editor.maxTokenizationLineLength`.</target>
+        <source xml:lang="en">Tokenization is skipped for long lines for performance reasons. This can be configured via `editor.maxTokenizationLineLength`. [Don't Show Again](command:{0})</source>
+        <note>Please do not translate the word "command", it is part of our internal syntax which must not change&#xD;
+{Locked="](command:{0})"}</note>
+        <target>{Locked="](command:{0})"} Токенізація пропускається для довгих рядків з причин продуктивності. Це можна налаштувати через `editor.maxTokenizationLineLength`. [Не показувати знову](command:{0})</target>
       </trans-unit>
     </body>
   </file>
@@ -1720,6 +1756,10 @@ This allows for users to show the hover without using the mouse.</note>
         <source xml:lang="en">Accept Inline Suggestion</source>
         <target>Прийняти вбудовану пропозицію</target>
       </trans-unit>
+      <trans-unit id="action.inlineSuggest.acceptAlternativeAction">
+        <source xml:lang="en">Accept Inline Suggestion Alternative Action</source>
+        <target>Прийняти альтернативну дію вбудованої пропозиції</target>
+      </trans-unit>
       <trans-unit id="action.inlineSuggest.acceptNextLine">
         <source xml:lang="en">Accept Next Line Of Inline Suggestion</source>
         <target>Прийняти наступний рядок вбудованої пропозиції</target>
@@ -1760,17 +1800,21 @@ This allows for users to show the hover without using the mouse.</note>
         <source xml:lang="en">Trigger Inline Suggestion</source>
         <target>Запустити вбудовану пропозицію</target>
       </trans-unit>
-      <trans-unit id="action.inlineSuggest.trigger.explicitInlineEdit">
-        <source xml:lang="en">Trigger Next Edit Suggestion</source>
-        <target>Запустити наступну пропозицію редагування</target>
+      <trans-unit id="inlineSuggest.trigger.args">
+        <source xml:lang="en">Options for triggering inline suggestions.</source>
+        <target>Опції для виклику вбудованих підказок.</target>
+      </trans-unit>
+      <trans-unit id="inlineSuggest.trigger.description">
+        <source xml:lang="en">Triggers an inline suggestion in the editor.</source>
+        <target>Викликає вбудовану підказку в редакторі.</target>
       </trans-unit>
       <trans-unit id="jump">
         <source xml:lang="en">Jump</source>
         <target>Стрибок</target>
       </trans-unit>
-      <trans-unit id="noInlineEditAvailable">
-        <source xml:lang="en">No inline edit is available.</source>
-        <target>Редагування в рядку недоступне.</target>
+      <trans-unit id="noInlineSuggestionAvailable">
+        <source xml:lang="en">No inline suggestion is available.</source>
+        <target>Немає доступних вбудованих пропозицій.</target>
       </trans-unit>
       <trans-unit id="reject">
         <source xml:lang="en">Reject</source>
@@ -1803,6 +1847,10 @@ This allows for users to show the hover without using the mouse.</note>
       <trans-unit id="inlineEditVisible">
         <source xml:lang="en">Whether an inline edit is visible</source>
         <target>Чи видима вбудована редакція</target>
+      </trans-unit>
+      <trans-unit id="inlineSuggestionAlternativeActionVisible">
+        <source xml:lang="en">Whether an alternative action for the inline suggestion is visible.</source>
+        <target>Чи видима альтернативна дія для вбудованої пропозиції.</target>
       </trans-unit>
       <trans-unit id="inlineSuggestionHasIndentation">
         <source xml:lang="en">Whether the inline suggestion starts with whitespace</source>
@@ -1852,12 +1900,6 @@ This allows for users to show the hover without using the mouse.</note>
   </file>
   <file original="src/vs/editor/contrib/inlineCompletions/browser/hintsWidget/inlineCompletionsHintsWidget" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="content">
-        <source xml:lang="en">{0} ({1})</source>
-        <note>A label&#xD;
-A keybinding</note>
-        <target>{0} ({1})</target>
-      </trans-unit>
       <trans-unit id="next">
         <source xml:lang="en">Next</source>
         <target>Далі</target>
@@ -1876,15 +1918,19 @@ A keybinding</note>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/editor/contrib/inlineCompletions/browser/model/renameSymbolProcessor" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="rename">
+        <source xml:lang="en">Rename</source>
+        <target>Перейменувати</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/components/gutterIndicatorMenu" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="accept">
-        <source xml:lang="en">Accept</source>
-        <target>Прийняти</target>
-      </trans-unit>
-      <trans-unit id="goto">
-        <source xml:lang="en">Go To</source>
-        <target>Перейти до</target>
+      <trans-unit id="gotoAndAccept">
+        <source xml:lang="en">Go To / Accept</source>
+        <target>Перейти / Прийняти</target>
       </trans-unit>
       <trans-unit id="reject">
         <source xml:lang="en">Reject</source>
@@ -1908,27 +1954,27 @@ A keybinding</note>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/components/indicatorView" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/components/gutterIndicatorView" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="inlineEdit.indicator.background">
-        <source xml:lang="en">Background color for the inline edit indicator.</source>
-        <target>Колір фону для індикатора редагування в рядку.</target>
-      </trans-unit>
-      <trans-unit id="inlineEdit.indicator.border">
-        <source xml:lang="en">Border color for the inline edit indicator.</source>
-        <target>Колір рамки для індикатора вбудованого редагування.</target>
-      </trans-unit>
-      <trans-unit id="inlineEdit.indicator.foreground">
-        <source xml:lang="en">Foreground color for the inline edit indicator.</source>
-        <target>Колір переднього плану для індикатора вбудованого редагування.</target>
+      <trans-unit id="inlineSuggestion">
+        <source xml:lang="en">Inline Suggestion</source>
+        <target>Вбудована пропозиція</target>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/inlineEditsModel" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/editor/contrib/inlineCompletions/browser/view/inlineEdits/inlineEditsViews/inlineEditsWordReplacementView" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="inlineEdit">
-        <source xml:lang="en">Inline Edit</source>
-        <target>Редагування на місці</target>
+      <trans-unit id="labelOccurence">
+        <source xml:lang="en">{0} 1 occurrence</source>
+        <target>{0} 1 виникнення</target>
+      </trans-unit>
+      <trans-unit id="labelOccurences">
+        <source xml:lang="en">{0} {1} occurrences</source>
+        <target>{0} {1} випадків</target>
+      </trans-unit>
+      <trans-unit id="shiftToSeeOccurences">
+        <source xml:lang="en">{0} show occurrences</source>
+        <target>{0} показати випадки</target>
       </trans-unit>
     </body>
   </file>
@@ -2443,35 +2489,55 @@ A keybinding</note>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/editor/contrib/quickAccess/browser/editorNavigationQuickAccess" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="gotoLocation.status">
+        <source xml:lang="en">Line {0}, column {1}: {2}</source>
+        <target>Рядок {0}, стовпець {1}: {2}</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/editor/contrib/quickAccess/browser/gotoLineQuickAccess" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="cannotRunGotoLine">
-        <source xml:lang="en">Open a text editor first to go to a line.</source>
-        <target>Спочатку відкрийте текстовий редактор, щоб перейти до рядка.</target>
+      <trans-unit id="gotoLine.ariaLabel">
+        <source xml:lang="en">Go to line. Type a line number, optionally followed by colon and column number.</source>
+        <target>Перейдіть до рядка. Введіть номер рядка, за бажанням, після якого може йти двокрапка та номер стовпця.</target>
       </trans-unit>
-      <trans-unit id="gotoLineColumnLabel">
-        <source xml:lang="en">Go to line {0} and character {1}.</source>
-        <target>Перейдіть до рядка {0} і символу {1}.</target>
+      <trans-unit id="gotoLine.columnPrompt">
+        <source xml:lang="en">Press 'Enter' to go to line {0} or enter a column number (from 1 to {1}).</source>
+        <target>Натисніть 'Enter', щоб перейти до рядка {0} або введіть номер стовпця (від 1 до {1}).</target>
       </trans-unit>
-      <trans-unit id="gotoLineLabel">
-        <source xml:lang="en">Go to line {0}.</source>
-        <target>Перейти до рядка {0}.</target>
+      <trans-unit id="gotoLine.goToPosition">
+        <source xml:lang="en">Press 'Enter' to go to line {0} at column {1}.</source>
+        <target>Натисніть 'Enter', щоб перейти до рядка {0} у стовпці {1}.</target>
       </trans-unit>
-      <trans-unit id="gotoLineLabelEmpty">
-        <source xml:lang="en">Current Line: {0}, Character: {1}. Type a line number to navigate to.</source>
-        <target>Поточний рядок: {0}, Символ: {1}. Введіть номер рядка, щоб перейти до нього.</target>
+      <trans-unit id="gotoLine.itemAriaLabel">
+        <source xml:lang="en">Go to line {0}, column {1}. Press Enter to navigate.</source>
+        <target>Перейдіть до рядка {0}, стовпця {1}. Натисніть Enter, щоб перейти.</target>
       </trans-unit>
-      <trans-unit id="gotoLineLabelEmptyWithLimit">
-        <source xml:lang="en">Current Line: {0}, Character: {1}. Type a line number between 1 and {2} to navigate to.</source>
-        <target>Поточний рядок: {0}, Символ: {1}. Введіть номер рядка від 1 до {2}, щоб перейти до нього.</target>
+      <trans-unit id="gotoLine.lineColumnPrompt">
+        <source xml:lang="en">Press 'Enter' to go to line {0} or enter colon : to add a column number.</source>
+        <target>Натисніть 'Enter', щоб перейти до рядка {0} або введіть двокрапку : для додавання номера стовпця.</target>
       </trans-unit>
-      <trans-unit id="gotoLineOffsetLabel">
-        <source xml:lang="en">Current Line: {0}, Character: {1}. Type a character offset to navigate to.</source>
-        <target>Поточний рядок: {0}, Символ: {1}. Введіть зсув символу для навігації.</target>
+      <trans-unit id="gotoLine.linePrompt">
+        <source xml:lang="en">Type a line number to go to (from 1 to {0}).</source>
+        <target>Введіть номер рядка, щоб перейти до нього (від 1 до {0}).</target>
       </trans-unit>
-      <trans-unit id="gotoLineToggle">
-        <source xml:lang="en">Use zero-based offset</source>
-        <target>Використовуйте нульову базу зсуву</target>
+      <trans-unit id="gotoLine.noEditor">
+        <source xml:lang="en">Open a text editor first to go to a line or an offset.</source>
+        <target>Спочатку відкрийте текстовий редактор, щоб перейти до рядка або зсуву.</target>
+      </trans-unit>
+      <trans-unit id="gotoLine.offsetPrompt">
+        <source xml:lang="en">Type a character position to go to (from 1 to {0}).</source>
+        <target>Введіть позицію символу, щоб перейти до неї (від 1 до {0}).</target>
+      </trans-unit>
+      <trans-unit id="gotoLine.offsetPromptZero">
+        <source xml:lang="en">Type a character position to go to (from 0 to {0}).</source>
+        <target>Введіть позицію символу, щоб перейти до неї (від 0 до {0}).</target>
+      </trans-unit>
+      <trans-unit id="gotoLineToggleButton">
+        <source xml:lang="en">Toggle Zero-Based Offset</source>
+        <target>Перемкнути нульову базу зсуву</target>
       </trans-unit>
     </body>
   </file>
@@ -2955,6 +3021,10 @@ A keybinding</note>
         <source xml:lang="en">Whether suggestions are inserted when pressing Enter</source>
         <target>Чи вставляються пропозиції при натисканні Enter</target>
       </trans-unit>
+      <trans-unit id="suggestWidgetDetailsFocused">
+        <source xml:lang="en">Whether the details pane of the suggest widget has focus</source>
+        <target>Чи має панель деталей віджету пропозицій фокус</target>
+      </trans-unit>
       <trans-unit id="suggestWidgetDetailsVisible">
         <source xml:lang="en">Whether suggestion details are visible</source>
         <target>Чи видимі деталі пропозиції</target>
@@ -3006,6 +3076,10 @@ A keybinding</note>
       <trans-unit id="detail.more">
         <source xml:lang="en">Show Less</source>
         <target>Показати менше</target>
+      </trans-unit>
+      <trans-unit id="focus.suggestion">
+        <source xml:lang="en">Select</source>
+        <target>Вибрати</target>
       </trans-unit>
       <trans-unit id="suggest.reset.label">
         <source xml:lang="en">Reset Suggest Widget Size</source>
@@ -3484,6 +3558,14 @@ It is recommended to remove them from the file. This can be configured via `edit
       <trans-unit id="deleteInsideWord">
         <source xml:lang="en">Delete Word</source>
         <target>Видалити слово</target>
+      </trans-unit>
+      <trans-unit id="deleteInsideWord.args.onlyWord">
+        <source xml:lang="en">Delete only the word and leave surrounding whitespace</source>
+        <target>Видалити лише слово та залишити навколишні пробіли</target>
+      </trans-unit>
+      <trans-unit id="deleteInsideWord.description">
+        <source xml:lang="en">Delete the word at the cursor</source>
+        <target>Видалити слово під курсором</target>
       </trans-unit>
     </body>
   </file>

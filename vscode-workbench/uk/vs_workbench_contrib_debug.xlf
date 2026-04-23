@@ -241,6 +241,10 @@
         <source xml:lang="en">Breakpoint</source>
         <target>Точка зупинки</target>
       </trans-unit>
+      <trans-unit id="breakpointFolder">
+        <source xml:lang="en">Breakpoints in {0}, {1} breakpoints</source>
+        <target>Перерви в {0}, {1} перервах</target>
+      </trans-unit>
       <trans-unit id="breakpointUnsupported">
         <source xml:lang="en">Breakpoints of this type are not supported by the debugger</source>
         <target>Точки зупинки цього типу не підтримуються відладчиком</target>
@@ -248,6 +252,10 @@
       <trans-unit id="breakpoints">
         <source xml:lang="en">Breakpoints</source>
         <target>Точки зупинки</target>
+      </trans-unit>
+      <trans-unit id="cannotLoadLine">
+        <source xml:lang="en">(cannot load line)</source>
+        <target>(не вдалося завантажити рядок)</target>
       </trans-unit>
       <trans-unit id="dataBreakPointExpresionAriaLabel">
         <source xml:lang="en">Type expression. Data breakpoint will break when expression evaluates to true</source>
@@ -268,6 +276,10 @@
       <trans-unit id="dataBreakpointAddrFormat">
         <source xml:lang="en">Address should be a range of numbers the form "[Start] - [End]" or "[Start] + [Bytes]"</source>
         <target>Адреса повинна бути діапазоном чисел у формі "[Start] - [End]" або "[Start] + [Bytes]"</target>
+      </trans-unit>
+      <trans-unit id="dataBreakpointAddrOrder">
+        <source xml:lang="en">End ({1}) should be greater than Start ({0})</source>
+        <target>Кінець ({1}) має бути більшим за Початок ({0})</target>
       </trans-unit>
       <trans-unit id="dataBreakpointAddrStartEnd">
         <source xml:lang="en">Number must be a decimal integer or hex value starting with "0x", got {0}</source>
@@ -336,6 +348,10 @@
       <trans-unit id="editMode">
         <source xml:lang="en">Edit Mode...</source>
         <target>Режим редагування...</target>
+      </trans-unit>
+      <trans-unit id="emptyLine">
+        <source xml:lang="en">(empty line)</source>
+        <target>(порожній рядок)</target>
       </trans-unit>
       <trans-unit id="enableAllBreakpoints">
         <source xml:lang="en">Enable All Breakpoints</source>
@@ -413,6 +429,14 @@
         <source xml:lang="en">Instruction breakpoints not supported by this debug type</source>
         <target>Точки зупинки інструкцій не підтримуються цим типом налагодження</target>
       </trans-unit>
+      <trans-unit id="lineNotFound">
+        <source xml:lang="en">(line not found)</source>
+        <target>(рядок не знайдено)</target>
+      </trans-unit>
+      <trans-unit id="loading">
+        <source xml:lang="en">Loading...</source>
+        <target>Завантаження...</target>
+      </trans-unit>
       <trans-unit id="logMessage">
         <source xml:lang="en">Log Message: {0}</source>
         <target>Повідомлення журналу</target>
@@ -458,9 +482,17 @@
         <source xml:lang="en">Remove Breakpoint</source>
         <target>Видалити {0}</target>
       </trans-unit>
+      <trans-unit id="removeBreakpointsInFile">
+        <source xml:lang="en">Remove Breakpoints in File</source>
+        <target>Видалити точки зупинки у файлі</target>
+      </trans-unit>
       <trans-unit id="selectBreakpointMode">
         <source xml:lang="en">Select Breakpoint Mode</source>
         <target>Виберіть режим зупинки</target>
+      </trans-unit>
+      <trans-unit id="toggleBreakpointsPresentation">
+        <source xml:lang="en">Toggle Breakpoints View Presentation</source>
+        <target>Перемикання подання точок зупинки</target>
       </trans-unit>
       <trans-unit id="triggeredBy">
         <source xml:lang="en">Hit after breakpoint: {0}</source>
@@ -599,8 +631,8 @@
         <target>Дозволити встановлення точок зупинки в будь-якому файлі.</target>
       </trans-unit>
       <trans-unit id="always">
-        <source xml:lang="en">Always show debug in Status bar</source>
-        <target>Завжди показувати налагодження в рядку стану</target>
+        <source xml:lang="en">Always show debug item in status bar</source>
+        <target>Завжди показувати елемент налагодження в рядку стану</target>
       </trans-unit>
       <trans-unit id="breakWhenValueChanges">
         <source xml:lang="en">Break on Value Change</source>
@@ -655,6 +687,10 @@
         <source xml:lang="en">Always automatically expand lazy variables.</source>
         <target>Завжди автоматично розширювати ліниві змінні.</target>
       </trans-unit>
+      <trans-unit id="debug.breakpointsView.presentation">
+        <source xml:lang="en">Controls whether breakpoints are displayed in a tree view grouped by file, or as a flat list.</source>
+        <target>Контролює, чи відображаються точки зупинки у вигляді деревовидного перегляду, згрупованого за файлами, чи як плоский список.</target>
+      </trans-unit>
       <trans-unit id="debug.confirmOnExit">
         <source xml:lang="en">Controls whether to confirm when the window closes if there are active debug sessions.</source>
         <target>Контролює, чи підтверджувати закриття вікна, якщо є активні сеанси налагодження.</target>
@@ -708,7 +744,7 @@
         <target>Показати вихідний код у вигляді дизасемблера.</target>
       </trans-unit>
       <trans-unit id="debug.enableStatusBarColor">
-        <source xml:lang="en">Color of the Status bar when debugger is active.</source>
+        <source xml:lang="en">Color of the status bar when the debugger is active.</source>
         <target>Колір панелі стану, коли відладчик активний.</target>
       </trans-unit>
       <trans-unit id="debug.focusEditorOnBreak">
@@ -930,12 +966,12 @@
         <target>&amp;&amp;Запустити</target>
       </trans-unit>
       <trans-unit id="never">
-        <source xml:lang="en">Never show debug in Status bar</source>
-        <target>Ніколи не показувати налагодження в рядку стану</target>
+        <source xml:lang="en">Never show debug item in status bar</source>
+        <target>Ніколи не показувати елемент налагодження в рядку стану</target>
       </trans-unit>
       <trans-unit id="onFirstSessionStart">
-        <source xml:lang="en">Show debug in Status bar only after debug was started for the first time</source>
-        <target>Показувати налагодження в рядку стану лише після того, як налагодження було розпочато вперше</target>
+        <source xml:lang="en">Show debug item in status bar only after debug was started for the first time</source>
+        <target>Показувати елемент налагодження в рядку стану лише після того, як налагодження було розпочато вперше</target>
       </trans-unit>
       <trans-unit id="openDebug">
         <source xml:lang="en">Controls when the debug view should open.</source>
@@ -984,9 +1020,9 @@
         <target>Показати перегляд Проблем і не починати налагодження.</target>
       </trans-unit>
       <trans-unit id="showInStatusBar">
-        <source xml:lang="en">Controls when the debug Status bar should be visible.</source>
+        <source xml:lang="en">Controls when the debug status bar item should be visible.</source>
         <note>This is the description for a setting</note>
-        <target>Контролює, коли панель стану налагодження повинна бути видимою.</target>
+        <target>Контролює, коли елемент статусного рядка налагодження має бути видимим.</target>
       </trans-unit>
       <trans-unit id="showInlineBreakpointCandidates">
         <source xml:lang="en">Controls whether inline breakpoints candidate decorations should be shown in the editor while debugging.</source>
@@ -1128,6 +1164,50 @@
       <trans-unit id="suppressMultipleSessionWarning">
         <source xml:lang="en">Disable the warning when trying to start the same debug configuration more than once.</source>
         <target>Вимкніть попередження при спробі запустити одну й ту ж конфігурацію налагодження більше ніж один раз.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/debug/browser/debugChatIntegration" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="addToChat">
+        <source xml:lang="en">Add to Chat</source>
+        <target>Додати до чату</target>
+      </trans-unit>
+      <trans-unit id="allVariablesInScope">
+        <source xml:lang="en">All variables in {0}</source>
+        <target>Усі змінні в {0}</target>
+      </trans-unit>
+      <trans-unit id="chatContext.debugSession">
+        <source xml:lang="en">Debug Session...</source>
+        <target>Сесія налагодження...</target>
+      </trans-unit>
+      <trans-unit id="evaluationError">
+        <source xml:lang="en">Evaluation error</source>
+        <target>Помилка оцінки</target>
+      </trans-unit>
+      <trans-unit id="expressionValue">
+        <source xml:lang="en">Expression Value...</source>
+        <target>Значення виразу...</target>
+      </trans-unit>
+      <trans-unit id="noDebugSession">
+        <source xml:lang="en">No active debug session</source>
+        <target>Немає активної сесії налагодження</target>
+      </trans-unit>
+      <trans-unit id="noResult">
+        <source xml:lang="en">No result</source>
+        <target>Немає результату</target>
+      </trans-unit>
+      <trans-unit id="selectDebugData">
+        <source xml:lang="en">Select debug data to attach</source>
+        <target>Виберіть дані для налагодження, щоб прикріпити</target>
+      </trans-unit>
+      <trans-unit id="typeExpression">
+        <source xml:lang="en">Type an expression to evaluate...</source>
+        <target>Введіть вираз для оцінки...</target>
+      </trans-unit>
+      <trans-unit id="watchExpressions">
+        <source xml:lang="en">Watch Expressions</source>
+        <target>Дивитися вирази</target>
       </trans-unit>
     </body>
   </file>
@@ -1389,6 +1469,10 @@
         <source xml:lang="en">Debug: Add Conditional Breakpoint...</source>
         <target>Налагодження: Додати умовну точку зупинки...</target>
       </trans-unit>
+      <trans-unit id="debugCategory">
+        <source xml:lang="en">Debug</source>
+        <target>Виправлення помилок</target>
+      </trans-unit>
       <trans-unit id="editor.debug.action.stepIntoTargets.notAvailable">
         <source xml:lang="en">Step targets are not available here</source>
         <target>Цільові кроки тут недоступні</target>
@@ -1462,8 +1546,8 @@
         <target>Крок у ціль</target>
       </trans-unit>
       <trans-unit id="toggleBreakpointAction">
-        <source xml:lang="en">Debug: Toggle Breakpoint</source>
-        <target>Налагодження: Перемкнути Точка зупинки</target>
+        <source xml:lang="en">Toggle Breakpoint</source>
+        <target>Перемкнути точку зупинки</target>
       </trans-unit>
       <trans-unit id="toggleDisassemblyViewSourceCode">
         <source xml:lang="en">Toggle Source Code in Disassembly View</source>
@@ -2276,37 +2360,149 @@
   </file>
   <file original="src/vs/workbench/contrib/debug/browser/replAccessibilityHelp" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="repl.accessibleView">
-        <source xml:lang="en">The Open Accessible View command{0} will allow character by character navigation of the console output.</source>
-        <target>Команда Open Accessible View{0} дозволить навігацію по консолі виходу символ за символом.</target>
+      <trans-unit id="repl.closingDesc">
+        <source xml:lang="en">Press Escape to clear the filter, or close the Debug Console. Your filter text is preserved if you reopen the console.</source>
+        <target>Натисніть Escape, щоб очистити фільтр, або закрийте Консоль налагодження. Ваш текст фільтра зберігається, якщо ви знову відкриєте консоль.</target>
       </trans-unit>
-      <trans-unit id="repl.clear">
-        <source xml:lang="en">The Debug: Clear Console command{0} will clear the console output.</source>
-        <target>Команда Debug: Clear Console {0} очистить вивід консолі.</target>
+      <trans-unit id="repl.closingHeader">
+        <source xml:lang="en">Closing:</source>
+        <target>Закриття:</target>
       </trans-unit>
-      <trans-unit id="repl.help">
-        <source xml:lang="en">The debug console is a Read-Eval-Print-Loop that allows you to evaluate expressions and run commands and can be focused with{0}.</source>
-        <target>Консоль налагодження - це цикл Read-Eval-Print-Loop, який дозволяє оцінювати вирази та виконувати команди, і може бути сфокусований за допомогою {0}.</target>
+      <trans-unit id="repl.context">
+        <source xml:lang="en">You are in the Debug Console filter input. This is a filter that instantly hides console messages that do not match your filter, showing only the messages you want to see.</source>
+        <target>Ви в полі фільтра Консолі налагодження. Це фільтр, який миттєво приховує повідомлення консолі, що не відповідають вашому фільтру, показуючи лише ті повідомлення, які ви хочете бачити.</target>
       </trans-unit>
-      <trans-unit id="repl.history">
-        <source xml:lang="en">The debug console output history can be navigated with the up and down arrow keys.</source>
-        <target>Історію виводу консолі налагодження можна переглядати за допомогою клавіш зі стрілками вгору та вниз.</target>
+      <trans-unit id="repl.distinguishConsole">
+        <source xml:lang="en">The console input is at the bottom of the console, after all displayed messages. That is where you type and press Enter to evaluate expressions during debugging.</source>
+        <target>Вхідні дані консолі знаходяться внизу консолі, після всіх відображених повідомлень. Саме там ви вводите текст і натискаєте Enter для оцінки виразів під час налагодження.</target>
       </trans-unit>
-      <trans-unit id="repl.input">
-        <source xml:lang="en">The debug console input can be navigated to from the output with the Focus Next Widget command{0}.</source>
-        <target>Вхід консолі налагодження можна перейти з виходу за допомогою команди Focus Next Widget{0}.</target>
+      <trans-unit id="repl.distinguishFilter">
+        <source xml:lang="en">The filter input is where you are now. It hides or shows messages without running code.</source>
+        <target>Вхідний фільтр - це те місце, де ви зараз. Він приховує або показує повідомлення без виконання коду.</target>
       </trans-unit>
-      <trans-unit id="repl.lazyVariables">
-        <source xml:lang="en">The setting `debug.expandLazyVariables` controls whether variables are evaluated automatically. This is enabled by default when using a screen reader.</source>
-        <target>Налаштування `debug.expandLazyVariables` контролює, чи змінні оцінюються автоматично. Це увімкнено за замовчуванням при використанні екранного читача.</target>
+      <trans-unit id="repl.distinguishHeader">
+        <source xml:lang="en">Distinguishing Filter from Console Input:</source>
+        <target>Відрізнення фільтра від введення з консолі:</target>
       </trans-unit>
-      <trans-unit id="repl.output">
-        <source xml:lang="en">The debug console output can be navigated to from the input field with the Focus Previous Widget command{0}.</source>
-        <target>Вивід консолі налагодження можна відкрити з поля введення за допомогою команди Focus Previous Widget{0}.</target>
+      <trans-unit id="repl.distinguishSwitch">
+        <source xml:lang="en">To switch to the console input and evaluate an expression, use {0} to focus the console input.</source>
+        <target>Щоб переключитися на введення в консолі та оцінити вираз, використовуйте {0}, щоб зосередити увагу на введенні консолі.</target>
       </trans-unit>
-      <trans-unit id="repl.showRunAndDebug">
-        <source xml:lang="en">The Show Run and Debug view command{0} will open the Run and Debug view and provides more information about debugging.</source>
-        <target>Команда Show Run and Debug view{0} відкриє вигляд Run and Debug та надасть більше інформації про налагодження.</target>
+      <trans-unit id="repl.filterDesc">
+        <source xml:lang="en">Each time you change the filter text, the console instantly regenerates to show only matching messages. Your screen reader announces how many messages are now visible. This is live feedback: text searches console output, variable values, and log messages.</source>
+        <target>Щоразу, коли ви змінюєте текст фільтра, консоль миттєво регенерується, щоб показати лише відповідні повідомлення. Ваш зчитувач екрану оголошує, скільки повідомлень зараз видно. Це живий зворотний зв'язок: текстові пошуки виводять консольний вивід, значення змінних та повідомлення журналу.</target>
+      </trans-unit>
+      <trans-unit id="repl.filterHeader">
+        <source xml:lang="en">What Happens When You Filter:</source>
+        <target>Що відбувається, коли ви фільтруєте:</target>
+      </trans-unit>
+      <trans-unit id="repl.focusDesc1">
+        <source xml:lang="en">Your focus stays in the filter input while the console updates in the background. This is intentional, so you can keep typing without losing your place.</source>
+        <target>Ваш фокус залишається в полі фільтра, поки консоль оновлюється у фоновому режимі. Це зроблено навмисно, щоб ви могли продовжувати друкувати, не втрачаючи своє місце.</target>
+      </trans-unit>
+      <trans-unit id="repl.focusDesc2">
+        <source xml:lang="en">If you want to review the filtered console output, press Down Arrow to move focus from the filter into the console messages above.</source>
+        <target>Якщо ви хочете переглянути відфільтрований вивід консолі, натисніть клавішу зі стрілкою вниз, щоб перемістити фокус з фільтра на повідомлення консолі вище.</target>
+      </trans-unit>
+      <trans-unit id="repl.focusDesc3">
+        <source xml:lang="en">Important: The console input area is at the bottom of the console, separate from the filter. To evaluate expressions, navigate to the console input (after the filtered messages) and type your expression.</source>
+        <target>Важливо: Область введення консолі знаходиться внизу консолі, окремо від фільтра. Щоб оцінити вирази, перейдіть до області введення консолі (після відфільтрованих повідомлень) і введіть свій вираз.</target>
+      </trans-unit>
+      <trans-unit id="repl.focusHeader">
+        <source xml:lang="en">Focus Behavior (Important):</source>
+        <target>Фокусна поведінка (важливо):</target>
+      </trans-unit>
+      <trans-unit id="repl.header">
+        <source xml:lang="en">Accessibility Help: Debug Console Filter</source>
+        <target>Допомога з доступністю: Фільтр консолі налагодження</target>
+      </trans-unit>
+      <trans-unit id="repl.inputDesc">
+        <source xml:lang="en">While you are in the filter input, your focus stays in the field. You can type, edit, or adjust your filter without leaving the input. As you type, the console instantly updates to show only messages matching your filter.</source>
+        <target>Поки ви знаходитесь у полі фільтра, ваша увага залишається в цьому полі. Ви можете вводити, редагувати або налаштовувати свій фільтр, не виходячи з поля вводу. Під час введення консоль миттєво оновлюється, щоб показати лише повідомлення, що відповідають вашому фільтру.</target>
+      </trans-unit>
+      <trans-unit id="repl.inputHeader">
+        <source xml:lang="en">Inside the Filter Input (What It Does):</source>
+        <target>Всередині фільтра вводу (Що він робить):</target>
+      </trans-unit>
+      <trans-unit id="repl.keyDown">
+        <source xml:lang="en">- Down Arrow: Move focus from filter into the console output.</source>
+        <target>- Стрілка вниз: Перемістіть фокус з фільтра в консольний вивід.</target>
+      </trans-unit>
+      <trans-unit id="repl.keyEscape">
+        <source xml:lang="en">- Escape: Clear the filter or close the filter.</source>
+        <target>- Escape: Очистити фільтр або закрити фільтр.</target>
+      </trans-unit>
+      <trans-unit id="repl.keyFocus">
+        <source xml:lang="en">- {0}: Focus the console input to evaluate expressions.</source>
+        <target>- {0}: Сфокусуйте введення в консолі для оцінки виразів.</target>
+      </trans-unit>
+      <trans-unit id="repl.keyTab">
+        <source xml:lang="en">- Tab: Move to other console controls if available.</source>
+        <target>- Tab: Переміститися до інших елементів керування консолі, якщо доступні.</target>
+      </trans-unit>
+      <trans-unit id="repl.keyboardHeader">
+        <source xml:lang="en">Keyboard Navigation Summary:</source>
+        <target>Підсумок навігації з клавіатури:</target>
+      </trans-unit>
+      <trans-unit id="repl.settingCloseOnEnd">
+        <source xml:lang="en">- `debug.console.closeOnEnd`: Automatically close the Debug Console when the debugging session ends.</source>
+        <target>- `debug.console.closeOnEnd`: Автоматично закривати Консоль відладки, коли сесія відладки закінчується.</target>
+      </trans-unit>
+      <trans-unit id="repl.settingCollapse">
+        <source xml:lang="en">- `debug.console.collapseIdenticalLines`: Collapse repeated messages with a count.</source>
+        <target>- `debug.console.collapseIdenticalLines`: Згорнути повторювані повідомлення з підрахунком.</target>
+      </trans-unit>
+      <trans-unit id="repl.settingFontFamily">
+        <source xml:lang="en">- `debug.console.fontFamily`: Font family in the console.</source>
+        <target>- `debug.console.fontFamily`: Шрифт у консолі.</target>
+      </trans-unit>
+      <trans-unit id="repl.settingFontSize">
+        <source xml:lang="en">- `debug.console.fontSize`: Font size in the console.</source>
+        <target>- `debug.console.fontSize`: Розмір шрифту в консолі.</target>
+      </trans-unit>
+      <trans-unit id="repl.settingHistory">
+        <source xml:lang="en">- `debug.console.historySuggestions`: Suggest previously typed input.</source>
+        <target>- `debug.console.historySuggestions`: Пропонувати раніше введені дані.</target>
+      </trans-unit>
+      <trans-unit id="repl.settingMaxLines">
+        <source xml:lang="en">- `debug.console.maximumLines`: Maximum number of messages to keep in the console.</source>
+        <target>- `debug.console.maximumLines`: Максимальна кількість повідомлень, які слід зберігати в консолі.</target>
+      </trans-unit>
+      <trans-unit id="repl.settingVerbosity">
+        <source xml:lang="en">- `accessibility.verbosity.find`: Controls whether the filter input announces the Accessibility Help hint.</source>
+        <target>- `accessibility.verbosity.find`: Контролює, чи оголошує вхід фільтра підказку Доступності.</target>
+      </trans-unit>
+      <trans-unit id="repl.settingWordWrap">
+        <source xml:lang="en">- `debug.console.wordWrap`: Wrap lines in the console.</source>
+        <target>- `debug.console.wordWrap`: Переносити рядки в консолі.</target>
+      </trans-unit>
+      <trans-unit id="repl.settingsHeader">
+        <source xml:lang="en">Settings You Can Adjust ({0} opens Settings):</source>
+        <target>Налаштування, які ви можете змінити ({0} відкриває Налаштування):</target>
+      </trans-unit>
+      <trans-unit id="repl.settingsIntro">
+        <source xml:lang="en">These settings affect the Debug Console.</source>
+        <target>Ці налаштування впливають на Консоль налагодження.</target>
+      </trans-unit>
+      <trans-unit id="repl.statusDesc">
+        <source xml:lang="en">You are filtering the console output.</source>
+        <target>Ви фільтруєте вивід консолі.</target>
+      </trans-unit>
+      <trans-unit id="repl.statusHeader">
+        <source xml:lang="en">Current Filter Status:</source>
+        <target>Поточний статус фільтра:</target>
+      </trans-unit>
+      <trans-unit id="repl.syntaxExclude">
+        <source xml:lang="en">- !text (exclude): Hides messages containing the text, showing all others.</source>
+        <target>- !text (виключити): Приховує повідомлення, що містять текст, показуючи всі інші.</target>
+      </trans-unit>
+      <trans-unit id="repl.syntaxHeader">
+        <source xml:lang="en">Filter Syntax and Patterns:</source>
+        <target>Синтаксис і шаблони фільтра:</target>
+      </trans-unit>
+      <trans-unit id="repl.syntaxText">
+        <source xml:lang="en">- Type text: Shows only messages containing that text.</source>
+        <target>- Введіть текст: Показує лише повідомлення, що містять цей текст.</target>
       </trans-unit>
     </body>
   </file>
@@ -2511,13 +2707,18 @@
         <source xml:lang="en">All debug extensions are disabled. Enable a debug extension or install a new one from the Marketplace.</source>
         <target>Усі розширення для налагодження вимкнені. Увімкніть розширення для налагодження або встановіть нове з Marketplace.</target>
       </trans-unit>
-      <trans-unit id="customizeRunAndDebug">
+      <trans-unit id="customizeRunAndDebug2">
         <source xml:lang="en">To customize Run and Debug [create a launch.json file]({0}).</source>
-        <target>Щоб налаштувати запуск і налагодження [створіть файл launch.json]({0}).</target>
+        <note>{Locked="launch.json"}&#xD;
+{Locked="["}&#xD;
+{Locked="]({0})"}</note>
+        <target>Щоб налаштувати виконання та налагодження [створіть файл launch.json]({0}).</target>
       </trans-unit>
-      <trans-unit id="customizeRunAndDebugOpenFolder">
+      <trans-unit id="customizeRunAndDebugOpenFolder2">
         <source xml:lang="en">To customize Run and Debug, [open a folder]({0}) and create a launch.json file.</source>
-        <note>Please do not translate "launch.json", it is the specific configuration file name</note>
+        <note>{Locked="launch.json"}&#xD;
+{Locked="["}&#xD;
+{Locked="]({0})"}</note>
         <target>Щоб налаштувати виконання та налагодження, [відкрийте папку]({0}) та створіть файл launch.json.</target>
       </trans-unit>
       <trans-unit id="openAFileWhichCanBeDebugged">
@@ -2571,8 +2772,8 @@
         <target>Чи є елемент точки зупинки точкою зупинки даних у діапазоні байтів.</target>
       </trans-unit>
       <trans-unit id="breakpointItemType">
-        <source xml:lang="en">Represents the item type of the focused element in the BREAKPOINTS view. For example: 'breakpoint', 'exceptionBreakppint', 'functionBreakpoint', 'dataBreakpoint'</source>
-        <target>Представляє тип елемента зосередження в режимі BREAKPOINTS. Наприклад: 'breakpoint', 'exceptionBreakpoint', 'functionBreakpoint', 'dataBreakpoint'</target>
+        <source xml:lang="en">Represents the item type of the focused element in the BREAKPOINTS view. For example: 'breakpoint', 'exceptionBreakpoint', 'functionBreakpoint', 'dataBreakpoint'</source>
+        <target>Представляє тип елемента зосередженого елемента у вигляді BREAKPOINTS. Наприклад: 'breakpoint', 'exceptionBreakpoint', 'functionBreakpoint', 'dataBreakpoint'</target>
       </trans-unit>
       <trans-unit id="breakpointSupportsCondition">
         <source xml:lang="en">True when the focused breakpoint supports conditions.</source>
@@ -2595,8 +2796,8 @@
         <target>Істина, коли фокус на вигляді CALLSTACK, хибність в іншому випадку.</target>
       </trans-unit>
       <trans-unit id="callStackItemStopped">
-        <source xml:lang="en">True when the focused item in the CALL STACK is stopped. Used internaly for inline menus in the CALL STACK view.</source>
-        <target>Істина, коли вибраний елемент у CALL STACK зупинений. Використовується внутрішньо для вбудованих меню у вигляді CALL STACK.</target>
+        <source xml:lang="en">True when the focused item in the CALL STACK is stopped. Used internally for inline menus in the CALL STACK view.</source>
+        <target>Істина, коли вибраний елемент у CALL STACK зупинено. Використовується внутрішньо для вбудованих меню у вигляді CALL STACK.</target>
       </trans-unit>
       <trans-unit id="callStackItemType">
         <source xml:lang="en">Represents the item type of the focused element in the CALL STACK view. For example: 'session', 'thread', 'stackFrame'</source>
@@ -2611,8 +2812,8 @@
         <target>Істинно, коли сесія в режимі CALL STACK приєднана, хибно в іншому випадку. Використовується внутрішньо для вбудованих меню в режимі CALL STACK.</target>
       </trans-unit>
       <trans-unit id="canViewMemory">
-        <source xml:lang="en">Indicates whether the item in the view has an associated memory refrence.</source>
-        <target>Вказує, чи має елемент у вигляді асоційовану пам'ятеву посилання.</target>
+        <source xml:lang="en">Indicates whether the item in the view has an associated memory reference.</source>
+        <target>Вказує, чи має елемент у вигляді асоційовану пам'ять.</target>
       </trans-unit>
       <trans-unit id="debugConfigurationType">
         <source xml:lang="en">Debug type of the selected launch configuration. For example 'python'.</source>
@@ -2759,8 +2960,8 @@
         <target>Істинно, коли фокусована сесія підтримує можливість завершення потоків.</target>
       </trans-unit>
       <trans-unit id="variableEvaluateNamePresent">
-        <source xml:lang="en">True when the focused variable has an 'evalauteName' field set.</source>
-        <target>Правда, коли зосереджена змінна має поле 'evalauteName', встановлене.</target>
+        <source xml:lang="en">True when the focused variable has an 'evaluateName' field set.</source>
+        <target>Правда, коли у зосередженій змінній встановлено поле 'evaluateName'.</target>
       </trans-unit>
       <trans-unit id="variableExtensionId">
         <source xml:lang="en">Extension ID of the variable source, present for debug visualization clauses.</source>

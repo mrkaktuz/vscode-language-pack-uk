@@ -152,6 +152,10 @@
         <source xml:lang="en">An activation event emitted whenever sessions are requested from the specified authentication provider.</source>
         <target>Подія активації, що генерується щоразу, коли запитуються сесії від вказаного постачальника аутентифікації.</target>
       </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onChatContextProvider">
+        <source xml:lang="en">An activation event emitted when the specified chat context provider is invoked.</source>
+        <target>Подія активації, що генерується, коли викликається вказаний постачальник контексту чату.</target>
+      </trans-unit>
       <trans-unit id="vscode.extension.activationEvents.onChatParticipant">
         <source xml:lang="en">An activation event emitted when the specified chat participant is invoked.</source>
         <target>Подія активації, що виводиться, коли викликається вказаний учасник чату.</target>
@@ -209,8 +213,8 @@
         <target>Подія активації, що генерується, коли викликається вказаний інструмент мовної моделі.</target>
       </trans-unit>
       <trans-unit id="vscode.extension.activationEvents.onMcpCollection">
-        <source xml:lang="en">An activation event emitted whenver a tool from the MCP server is requested.</source>
-        <target>Подія активації, що виникає щоразу, коли запитується інструмент з сервера MCP.</target>
+        <source xml:lang="en">An activation event emitted whenever a tool from the MCP server is requested.</source>
+        <target>Подія активації, що генерується щоразу, коли запитується інструмент з сервера MCP.</target>
       </trans-unit>
       <trans-unit id="vscode.extension.activationEvents.onNotebook">
         <source xml:lang="en">An activation event emitted whenever the specified notebook document is opened.</source>
@@ -240,10 +244,6 @@
         <source xml:lang="en">An activation event emitted when a terminal of the given shell type is opened.</source>
         <target>Подія активації, що генерується, коли відкривається термінал вказаного типу оболонки.</target>
       </trans-unit>
-      <trans-unit id="vscode.extension.activationEvents.onTerminalCompletionsRequested">
-        <source xml:lang="en">An activation event emitted when terminal completions are requested.</source>
-        <target>Подія активації, що генерується, коли запитуються завершення терміналу.</target>
-      </trans-unit>
       <trans-unit id="vscode.extension.activationEvents.onTerminalProfile">
         <source xml:lang="en">An activation event emitted when a specific terminal profile is launched.</source>
         <target>Подія активації, що генерується при запуску конкретного термінального профілю.</target>
@@ -269,8 +269,8 @@
         <target>Подія активації, що виникає, коли відкривається вказаний посібник.</target>
       </trans-unit>
       <trans-unit id="vscode.extension.activationEvents.onWebviewPanel">
-        <source xml:lang="en">An activation event emmited when a webview is loaded of a certain viewType</source>
-        <target>Подія активації, що виникає, коли веб-переглядач завантажується з певним viewType.</target>
+        <source xml:lang="en">An activation event emitted when a webview is loaded of a certain viewType</source>
+        <target>Подія активації, яка генерується, коли веб-переглядач завантажується з певним viewType.</target>
       </trans-unit>
       <trans-unit id="vscode.extension.activationEvents.star">
         <source xml:lang="en">An activation event emitted on VS Code startup. To ensure a great end user experience, please use this activation event in your extension only when no other activation events combination works in your use-case.</source>
@@ -401,8 +401,12 @@
         <target>Сумісність двигуна.</target>
       </trans-unit>
       <trans-unit id="vscode.extension.engines.vscode">
-        <source xml:lang="en">For VS Code extensions, specifies the VS Code version that the extension is compatible with. Cannot be *. For example: ^0.10.5 indicates compatibility with a minimum VS Code version of 0.10.5.</source>
-        <target>Для розширень VS Code вказує версію VS Code, з якою розширення є сумісним. Не може бути *. Наприклад: ^0.10.5 вказує на сумісність з мінімальною версією VS Code 0.10.5.</target>
+        <source xml:lang="en">For VS Code extensions, specifies the VS Code version that the extension is compatible with. Cannot be *. For example: ^1.105.0 indicates compatibility with a minimum VS Code version of 1.105.0.</source>
+        <target>Для розширень VS Code вказує версію VS Code, з якою розширення є сумісним. Не може бути *. Наприклад: ^1.105.0 вказує на сумісність з мінімальною версією VS Code 1.105.0.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.extensionAffinity">
+        <source xml:lang="en">Extensions that this extension should be colocated with in the same extension host process if possible. The identifier of an extension is always ${publisher}.${name}. For example: vscode.git.</source>
+        <target>Розширення, з якими це розширення повинно бути розміщене в одному процесі хоста розширень, якщо це можливо. Ідентифікатор розширення завжди має формат ${publisher}.${name}. Наприклад: vscode.git.</target>
       </trans-unit>
       <trans-unit id="vscode.extension.extensionDependencies">
         <source xml:lang="en">Dependencies to other extensions. The identifier of an extension is always ${publisher}.${name}. For example: vscode.csharp.</source>

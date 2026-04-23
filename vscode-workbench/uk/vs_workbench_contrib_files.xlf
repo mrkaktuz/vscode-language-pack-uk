@@ -473,12 +473,12 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
         <target>Нова папка...</target>
       </trans-unit>
       <trans-unit id="openFileInEmptyWorkspace">
-        <source xml:lang="en">Open Active File in New Empty Workspace</source>
-        <target>Відкрити активний файл у новому порожньому робочому просторі</target>
+        <source xml:lang="en">Open Active Editor in New Empty Workspace</source>
+        <target>Відкрити активний редактор у новому порожньому робочому просторі</target>
       </trans-unit>
       <trans-unit id="openFileInEmptyWorkspaceMetadata">
-        <source xml:lang="en">Opens the active file in a new window with no folders open.</source>
-        <target>Відкриває активний файл у новому вікні без відкритих папок.</target>
+        <source xml:lang="en">Opens the active editor in a new window with no folders open.</source>
+        <target>Відкриває активний редактор у новому вікні без відкритих папок.</target>
       </trans-unit>
       <trans-unit id="openFileToShowInNewWindow.unsupportedschema">
         <source xml:lang="en">The active editor must contain an openable resource.</source>
@@ -1023,8 +1023,8 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
         <target>Контролює, чи повинен Провідник відображати папки в компактному вигляді. У такому вигляді окремі дочірні папки будуть стиснуті в комбінований елемент дерева. Корисно для структур пакетів Java, наприклад.</target>
       </trans-unit>
       <trans-unit id="confirmDelete">
-        <source xml:lang="en">Controls whether the Explorer should ask for confirmation when deleting a file via the trash.</source>
-        <target>Контролює, чи повинен Провідник запитувати підтвердження при видаленні файлу через кошик.</target>
+        <source xml:lang="en">Controls whether the Explorer should ask for confirmation when deleting files and folders.</source>
+        <target>Контролює, чи повинен Провідник запитувати підтвердження при видаленні файлів і папок.</target>
       </trans-unit>
       <trans-unit id="confirmDragAndDrop">
         <source xml:lang="en">Controls whether the Explorer should ask for confirmation to move files and folders via drag and drop.</source>
@@ -1144,8 +1144,8 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
         <target>Шаблон glob для порівняння з шляхами до файлів. Встановіть true або false, щоб увімкнути або вимкнути шаблон.</target>
       </trans-unit>
       <trans-unit id="explorer.autoRevealExclude.when">
-        <source xml:lang="en">Additional check on the siblings of a matching file. Use $(basename) as variable for the matching file name.</source>
-        <target>Додаткова перевірка на родичів відповідного файлу. Використовуйте $(basename) як змінну для імені відповідного файлу.</target>
+        <source xml:lang="en">Additional check on the siblings of a matching file. Use {0} as variable for the matching file name.</source>
+        <target>Додаткова перевірка на родичів файлу, що відповідає. Використовуйте {0} як змінну для імені файлу, що відповідає.</target>
       </trans-unit>
       <trans-unit id="explorer.decorations.badges">
         <source xml:lang="en">Controls whether file decorations should use badges.</source>
@@ -1291,14 +1291,14 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
         <target>Коли увімкнено, вставте фінальний новий рядок наприкінці файлу під час його збереження.</target>
       </trans-unit>
       <trans-unit id="modification">
-        <source xml:lang="en">Format modifications (requires source control).</source>
+        <source xml:lang="en">Format modifications. Requires source control and a formatter that supports 'Format Selection'.</source>
         <note>This is the description of an option</note>
-        <target>Модифікації формату (вимагає контролю версій).</target>
+        <target>Модифікації формату. Потребує контролю версій та форматувальника, який підтримує 'Форматувати вибір'.</target>
       </trans-unit>
       <trans-unit id="modificationIfAvailable">
-        <source xml:lang="en">Will attempt to format modifications only (requires source control). If source control can't be used, then the whole file will be formatted.</source>
+        <source xml:lang="en">Will attempt to format modifications only (requires source control and a formatter that supports 'Format Selection'). If source control can't be used, then the whole file will be formatted.</source>
         <note>This is the description of an option</note>
-        <target>Спробує відформатувати лише модифікації (потрібен контроль версій). Якщо контроль версій не може бути використаний, тоді буде відформатовано весь файл.</target>
+        <target>Спробує відформатувати лише модифікації (потрібен контроль версій та форматер, який підтримує 'Форматувати вибір'). Якщо контроль версій не може бути використаний, тоді буде відформатовано весь файл.</target>
       </trans-unit>
       <trans-unit id="openEditorsSortOrder">
         <source xml:lang="en">Controls the sorting order of editors in the Open Editors pane.</source>
@@ -1404,8 +1404,8 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
         <target>Коли ввімкнено, буде видаляти пробіли в кінці рядка при збереженні файлу.</target>
       </trans-unit>
       <trans-unit id="trimTrailingWhitespaceInRegexAndStrings">
-        <source xml:lang="en">When enabled, trailing whitespace will be removed from multiline strings and regexes will be removed on save or when executing 'editor.action.trimTrailingWhitespace'. This can cause whitespace to not be trimmed from lines when there isn't up-to-date token information.</source>
-        <target>Коли увімкнено, пробіли в кінці рядка будуть видалені з багаторядкових рядків, а регулярні вирази будуть видалені під час збереження або при виконанні 'editor.action.trimTrailingWhitespace'. Це може призвести до того, що пробіли не будуть видалені з рядків, коли немає актуальної інформації про токени.</target>
+        <source xml:lang="en">When enabled, trailing whitespace will be removed from multiline strings and regexes on save or when executing 'editor.action.trimTrailingWhitespace'. This can cause whitespace to not be trimmed from lines when there isn't up-to-date token information.</source>
+        <target>Коли ця опція увімкнена, пробіли в кінці рядків будуть видалені з багаторядкових рядків і регулярних виразів під час збереження або при виконанні 'editor.action.trimTrailingWhitespace'. Це може призвести до того, що пробіли не будуть видалені з рядків, коли немає актуальної інформації про токени.</target>
       </trans-unit>
       <trans-unit id="trueDescription">
         <source xml:lang="en">Enable the pattern.</source>
@@ -1579,6 +1579,7 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
       </trans-unit>
       <trans-unit id="openEditors">
         <source xml:lang="en">Open Editors</source>
+        <note>Open is an adjective</note>
         <target>Відкриті редактори</target>
       </trans-unit>
     </body>

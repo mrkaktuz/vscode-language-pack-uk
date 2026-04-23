@@ -2,6 +2,18 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file original="src/vs/workbench/contrib/codeEditor/browser/accessibility/accessibility" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="announceCursorPosition">
+        <source xml:lang="en">Announce Cursor Position</source>
+        <target>Оголосити позицію курсора</target>
+      </trans-unit>
+      <trans-unit id="announceCursorPosition.description">
+        <source xml:lang="en">Announce the current cursor position (line and column) via screen reader.</source>
+        <target>Оголосіть поточну позицію курсора (рядок та стовпець) через програму для читання з екрану.</target>
+      </trans-unit>
+      <trans-unit id="screenReader.lineColPosition">
+        <source xml:lang="en">Line {0}, Column {1}</source>
+        <target>Рядок {0}, Стовпець {1}</target>
+      </trans-unit>
       <trans-unit id="toggleScreenReaderMode">
         <source xml:lang="en">Toggle Screen Reader Accessibility Mode</source>
         <target>Перемикання режиму доступності для екранного читача</target>
@@ -76,6 +88,470 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/editorFindAccessibilityHelp" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="find.closingDesc">
+        <source xml:lang="en">Press Escape to close Find. Focus returns to the editor at the most recent match, and your search history is preserved.</source>
+        <target>Натисніть Escape, щоб закрити пошук. Фокус повертається до редактора на останньому збігу, а ваша історія пошуку зберігається.</target>
+      </trans-unit>
+      <trans-unit id="find.closingHeader">
+        <source xml:lang="en">Closing:</source>
+        <target>Закриття:</target>
+      </trans-unit>
+      <trans-unit id="find.context">
+        <source xml:lang="en">You are in the Find dialog for the active editor. This dialog is where you type what you want to locate. The editor is a separate surface that shows each match and its surrounding context.</source>
+        <target>Ви в діалоговому вікні пошуку для активного редактора. Це діалогове вікно, де ви вводите те, що хочете знайти. Редактор - це окрема область, яка показує кожне збіг і його оточуючий контекст.</target>
+      </trans-unit>
+      <trans-unit id="find.dialogDesc">
+        <source xml:lang="en">While you are in the Find dialog, your focus stays in the input. You can keep typing, edit your search text, or move through matches without leaving the dialog. When you navigate to a match from here, the editor updates in the background, but your focus remains in the Find dialog.</source>
+        <target>Поки ви знаходитесь у діалоговому вікні "Знайти", ваша увага залишається в полі введення. Ви можете продовжувати друкувати, редагувати свій текст пошуку або переходити до збігів, не виходячи з діалогу. Коли ви переходите до збігу звідси, редактор оновлюється у фоновому режимі, але ваша увага залишається в діалоговому вікні "Знайти".</target>
+      </trans-unit>
+      <trans-unit id="find.dialogHeader">
+        <source xml:lang="en">Inside the Find Dialog (What It Does):</source>
+        <target>Всередині діалогу пошуку (Що він робить):</target>
+      </trans-unit>
+      <trans-unit id="find.focusDesc1">
+        <source xml:lang="en">When you navigate from inside the Find dialog, the editor updates while your focus stays in the input. This is intentional, so you can keep adjusting your search without losing your place.</source>
+        <target>Коли ви навігуєте зсередини діалогу Пошук, редактор оновлюється, поки ваш фокус залишається в полі введення. Це зроблено навмисно, щоб ви могли продовжувати налаштовувати свій пошук, не втрачаючи своє місце.</target>
+      </trans-unit>
+      <trans-unit id="find.focusDesc2">
+        <source xml:lang="en">If you want to move focus into the editor to edit text or inspect surrounding code, press Escape to close Find. Focus returns to the editor at the most recent match.</source>
+        <target>Якщо ви хочете перемістити фокус в редактор, щоб редагувати текст або перевірити навколишній код, натисніть Escape, щоб закрити пошук. Фокус повертається до редактора на останньому знайденому збігу.</target>
+      </trans-unit>
+      <trans-unit id="find.focusHeader">
+        <source xml:lang="en">Focus Behavior (Important):</source>
+        <target>Фокусна поведінка (важливо):</target>
+      </trans-unit>
+      <trans-unit id="find.header">
+        <source xml:lang="en">Accessibility Help: Editor Find</source>
+        <target>Допомога з доступністю: Знайти редактор</target>
+      </trans-unit>
+      <trans-unit id="find.hear1">
+        <source xml:lang="en">1) The full line that contains the match is read first, so you get immediate context.</source>
+        <target>1) Повний рядок, що містить збіг, читається спочатку, тому ви отримуєте негайний контекст.</target>
+      </trans-unit>
+      <trans-unit id="find.hear2">
+        <source xml:lang="en">2) Your position among the matches is announced, so you know how far you are through the results.</source>
+        <target>2) Ваша позиція серед матчів оголошена, тож ви знаєте, на якому етапі ви перебуваєте за результатами.</target>
+      </trans-unit>
+      <trans-unit id="find.hear3">
+        <source xml:lang="en">3) The exact line and column are announced, so you know precisely where the match is in the file.</source>
+        <target>3) Точний рядок і стовпець оголошуються, тож ви точно знаєте, де знаходиться збіг у файлі.</target>
+      </trans-unit>
+      <trans-unit id="find.hearConclusion">
+        <source xml:lang="en">This sequence happens every time you move forward or backward.</source>
+        <target>Ця послідовність відбувається щоразу, коли ви рухаєтеся вперед або назад.</target>
+      </trans-unit>
+      <trans-unit id="find.hearDesc">
+        <source xml:lang="en">Each navigation step gives you a complete spoken update so you always know where you are. The order is consistent:</source>
+        <target>Кожен крок навігації надає вам повне усне оновлення, тому ви завжди знаєте, де ви знаходитесь. Порядок є послідовним:</target>
+      </trans-unit>
+      <trans-unit id="find.hearHeader">
+        <source xml:lang="en">What You Hear Each Time You Move to a Match:</source>
+        <target>Що ви чуєте кожного разу, коли переходите до матчу:</target>
+      </trans-unit>
+      <trans-unit id="find.keyEnter">
+        <source xml:lang="en">- Enter: Move to the next match while staying in the Find dialog.</source>
+        <target>- Введіть: Перейдіть до наступного матчу, залишаючись у діалоговому вікні Пошук.</target>
+      </trans-unit>
+      <trans-unit id="find.keyF3">
+        <source xml:lang="en">- {0}: Move to the next match.</source>
+        <target>- {0}: Перейти до наступного матчу.</target>
+      </trans-unit>
+      <trans-unit id="find.keyNavEditorHeader">
+        <source xml:lang="en">While focused IN the editor (not the Find input):</source>
+        <target>Поки зосереджені В Редакторі (не в полі пошуку):</target>
+      </trans-unit>
+      <trans-unit id="find.keyNavFindHeader">
+        <source xml:lang="en">While focused IN the Find input:</source>
+        <target>Поки зосереджено на полі введення Find:</target>
+      </trans-unit>
+      <trans-unit id="find.keyNavNote">
+        <source xml:lang="en">Note: Don't press Enter or Shift+Enter when focused in the editor - these will insert line breaks instead of navigating.</source>
+        <target>Примітка: Не натискайте Enter або Shift+Enter, коли ви зосереджені в редакторі - це вставить розриви рядка замість навігації.</target>
+      </trans-unit>
+      <trans-unit id="find.keyShiftEnter">
+        <source xml:lang="en">- Shift+Enter: Move to the previous match while staying in the Find dialog.</source>
+        <target>- Shift+Enter: Перейти до попереднього збігу, залишаючись у діалоговому вікні Пошук.</target>
+      </trans-unit>
+      <trans-unit id="find.keyShiftF3">
+        <source xml:lang="en">- {0}: Move to the previous match.</source>
+        <target>- {0}: Перейти до попереднього матчу.</target>
+      </trans-unit>
+      <trans-unit id="find.keyboardHeader">
+        <source xml:lang="en">Keyboard Navigation Summary:</source>
+        <target>Підсумок навігації з клавіатури:</target>
+      </trans-unit>
+      <trans-unit id="find.macSetting">
+        <source xml:lang="en">- `editor.find.globalFindClipboard`: Uses the shared macOS Find clipboard when available.</source>
+        <target>- `editor.find.globalFindClipboard`: Використовує спільний буфер обміну Find macOS, коли це можливо.</target>
+      </trans-unit>
+      <trans-unit id="find.macSettingHeader">
+        <source xml:lang="en">Platform-Specific Setting (macOS only):</source>
+        <target>Налаштування, специфічні для платформи (тільки macOS):</target>
+      </trans-unit>
+      <trans-unit id="find.matchStatus">
+        <source xml:lang="en">Match {0} of {1}.</source>
+        <target>Матч {0} з {1}.</target>
+      </trans-unit>
+      <trans-unit id="find.noMatches">
+        <source xml:lang="en">No matches found in the current file. Try adjusting your search text or the options below.</source>
+        <target>Не знайдено збігів у поточному файлі. Спробуйте відкоригувати ваш текст пошуку або параметри нижче.</target>
+      </trans-unit>
+      <trans-unit id="find.noSearchTerm">
+        <source xml:lang="en">No search text entered yet. Start typing to find matches in the editor.</source>
+        <target>Ще не введено текст пошуку. Почніть вводити, щоб знайти збіги в редакторі.</target>
+      </trans-unit>
+      <trans-unit id="find.optionCase">
+        <source xml:lang="en">- Match Case: Only exact case matches are included.</source>
+        <target>- Враховувати регістр: Включаються лише точні збіги регістру.</target>
+      </trans-unit>
+      <trans-unit id="find.optionRegex">
+        <source xml:lang="en">- Regular Expression: Use pattern matching for advanced searches.</source>
+        <target>- Регулярний вираз: Використовуйте шаблонне співпадіння для розширених пошуків.</target>
+      </trans-unit>
+      <trans-unit id="find.optionSelection">
+        <source xml:lang="en">- Find in Selection: Limit matches to the current selection.</source>
+        <target>- Знайти в виборі: Обмежити збіги поточним вибором.</target>
+      </trans-unit>
+      <trans-unit id="find.optionWord">
+        <source xml:lang="en">- Whole Word: Only full words are matched.</source>
+        <target>- Повне слово: Відповідають лише повні слова.</target>
+      </trans-unit>
+      <trans-unit id="find.optionsHeader">
+        <source xml:lang="en">Find Options in the Dialog:</source>
+        <target>Знайти параметри в діалоговому вікні:</target>
+      </trans-unit>
+      <trans-unit id="find.outsideConclusion">
+        <source xml:lang="en">You hear the same three-step sequence: full line, match position, then line and column.</source>
+        <target>Ви чуєте ту ж саму трьохетапну послідовність: повна лінія, позиція збігу, потім рядок і стовпець.</target>
+      </trans-unit>
+      <trans-unit id="find.outsideDesc">
+        <source xml:lang="en">When you are focused in the editor instead of the Find dialog, you can still navigate matches.</source>
+        <target>Коли ви зосереджені в редакторі замість діалогу Пошук, ви все ще можете переходити до збігів.</target>
+      </trans-unit>
+      <trans-unit id="find.outsideF3">
+        <source xml:lang="en">- Press {0} to move to the next match.</source>
+        <target>- Натисніть {0}, щоб перейти до наступного матчу.</target>
+      </trans-unit>
+      <trans-unit id="find.outsideHeader">
+        <source xml:lang="en">Outside the Find Dialog (Inside the Editor):</source>
+        <target>Зовні діалогу пошуку (всередині редактора):</target>
+      </trans-unit>
+      <trans-unit id="find.outsideShiftF3">
+        <source xml:lang="en">- Press {0} to move to the previous match.</source>
+        <target>- Натисніть {0}, щоб перейти до попереднього матчу.</target>
+      </trans-unit>
+      <trans-unit id="find.searchTerm">
+        <source xml:lang="en">You are searching for: "{0}".</source>
+        <target>Ви шукаєте: "{0}".</target>
+      </trans-unit>
+      <trans-unit id="find.settingAutoSelection">
+        <source xml:lang="en">- `editor.find.autoFindInSelection`: Automatically enables Find in Selection based on selection type.</source>
+        <target>- `editor.find.autoFindInSelection`: Автоматично вмикає Пошук у виборі на основі типу вибору.</target>
+      </trans-unit>
+      <trans-unit id="find.settingCloseOnResult">
+        <source xml:lang="en">- `editor.find.closeOnResult`: Closes the Find dialog after an explicit find navigation command lands on a match.</source>
+        <target>- `editor.find.closeOnResult`: Закриває діалогове вікно пошуку після того, як явна команда навігації до пошуку приземлиться на збігу.</target>
+      </trans-unit>
+      <trans-unit id="find.settingCursorMove">
+        <source xml:lang="en">- `editor.find.cursorMoveOnType`: Moves the cursor to the best match while you type.</source>
+        <target>- `editor.find.cursorMoveOnType`: Переміщує курсор до найкращого збігу під час введення тексту.</target>
+      </trans-unit>
+      <trans-unit id="find.settingExtraSpace">
+        <source xml:lang="en">- `editor.find.addExtraSpaceOnTop`: Adds extra scroll space so matches are not hidden behind the Find dialog.</source>
+        <target>- `editor.find.addExtraSpaceOnTop`: Додає додатковий простір для прокрутки, щоб збіги не були приховані за діалоговим вікном пошуку.</target>
+      </trans-unit>
+      <trans-unit id="find.settingFindOnType">
+        <source xml:lang="en">- `editor.find.findOnType`: Runs Find as you type.</source>
+        <target>- `editor.find.findOnType`: Виконує пошук під час введення.</target>
+      </trans-unit>
+      <trans-unit id="find.settingHistory">
+        <source xml:lang="en">- `editor.find.history`: Controls whether Find search history is stored.</source>
+        <target>- `editor.find.history`: Контролює, чи зберігається історія пошуку Find.</target>
+      </trans-unit>
+      <trans-unit id="find.settingLoop">
+        <source xml:lang="en">- `editor.find.loop`: Wraps search at the beginning or end of the file.</source>
+        <target>- `editor.find.loop`: Обгортає пошук на початку або в кінці файлу.</target>
+      </trans-unit>
+      <trans-unit id="find.settingOccurrences">
+        <source xml:lang="en">- `editor.occurrencesHighlight`: Highlights other occurrences of the current symbol.</source>
+        <target>- `editor.occurrencesHighlight`: Виділяє інші випадки поточного символу.</target>
+      </trans-unit>
+      <trans-unit id="find.settingOccurrencesDelay">
+        <source xml:lang="en">- `editor.occurrencesHighlightDelay`: Controls how soon occurrences are highlighted.</source>
+        <target>- `editor.occurrencesHighlightDelay`: Контролює, як швидко виділяються збіги.</target>
+      </trans-unit>
+      <trans-unit id="find.settingSeed">
+        <source xml:lang="en">- `editor.find.seedSearchStringFromSelection`: Controls when selection text is used to seed Find.</source>
+        <target>- `editor.find.seedSearchStringFromSelection`: Контролює, коли текст вибору використовується для ініціалізації пошуку.</target>
+      </trans-unit>
+      <trans-unit id="find.settingSelectionHighlight">
+        <source xml:lang="en">- `editor.selectionHighlight`: Highlights other matches of the current selection.</source>
+        <target>- `editor.selectionHighlight`: Виділяє інші збіги поточного вибору.</target>
+      </trans-unit>
+      <trans-unit id="find.settingSelectionMaxLength">
+        <source xml:lang="en">- `editor.selectionHighlightMaxLength`: Limits selection highlight length.</source>
+        <target>- `editor.selectionHighlightMaxLength`: Обмежує довжину підсвічування вибору.</target>
+      </trans-unit>
+      <trans-unit id="find.settingSelectionMultiline">
+        <source xml:lang="en">- `editor.selectionHighlightMultiline`: Controls whether multi-line selections are highlighted.</source>
+        <target>- `editor.selectionHighlightMultiline`: Контролює, чи виділяються багаторядкові вибори.</target>
+      </trans-unit>
+      <trans-unit id="find.settingVerbosity">
+        <source xml:lang="en">- `accessibility.verbosity.find`: Controls whether the Find input announces the Accessibility Help hint.</source>
+        <target>- `accessibility.verbosity.find`: Контролює, чи оголошує поле вводу Find підказку Accessibility Help.</target>
+      </trans-unit>
+      <trans-unit id="find.settingsHeader">
+        <source xml:lang="en">Settings You Can Adjust ({0} opens Settings):</source>
+        <target>Налаштування, які ви можете змінити ({0} відкриває Налаштування):</target>
+      </trans-unit>
+      <trans-unit id="find.settingsIntro">
+        <source xml:lang="en">These settings affect how Find behaves or how matches are highlighted.</source>
+        <target>Ці налаштування впливають на те, як працює функція "Знайти" або як підсвічуються збіги.</target>
+      </trans-unit>
+      <trans-unit id="find.statusHeader">
+        <source xml:lang="en">Current Search Status:</source>
+        <target>Поточний статус пошуку:</target>
+      </trans-unit>
+      <trans-unit id="replace.closingDesc">
+        <source xml:lang="en">Press Escape to close Find and Replace. Focus returns to the editor at the last replacement location, and your search and replace history is preserved.</source>
+        <target>Натисніть Escape, щоб закрити пошук і заміну. Фокус повертається до редактора на останньому місці заміни, а ваша історія пошуку та заміни зберігається.</target>
+      </trans-unit>
+      <trans-unit id="replace.closingHeader">
+        <source xml:lang="en">Closing:</source>
+        <target>Закриття:</target>
+      </trans-unit>
+      <trans-unit id="replace.context">
+        <source xml:lang="en">You are in the Find and Replace dialog for the active editor. This dialog lets you locate text and replace it. The editor is a separate surface that shows each match and the surrounding context.</source>
+        <target>Ви знаходитесь у діалоговому вікні "Знайти та замінити" для активного редактора. Це діалогове вікно дозволяє вам знаходити текст і замінювати його. Редактор є окремою поверхнею, яка показує кожне співпадіння та навколишній контекст.</target>
+      </trans-unit>
+      <trans-unit id="replace.dialogDesc">
+        <source xml:lang="en">While you are in either input, your focus stays in that input. You can type, edit, or navigate matches without leaving. When you navigate to a match from the Find input, the editor updates in the background, but your focus remains in the dialog. Tab moves you from Find to Replace and back.</source>
+        <target>Поки ви знаходитесь в будь-якому з полів вводу, ваша увага залишається в цьому полі. Ви можете вводити текст, редагувати або переходити до збігів, не виходячи з поля. Коли ви переходите до збігу з поля "Знайти", редактор оновлюється у фоновому режимі, але ваша увага залишається в діалоговому вікні. Клавіша Tab переміщує вас з "Знайти" до "Замінити" і назад.</target>
+      </trans-unit>
+      <trans-unit id="replace.dialogHeader">
+        <source xml:lang="en">Inside the Find and Replace Dialog (What It Does):</source>
+        <target>Всередині діалогового вікна "Знайти та замінити" (Що воно робить):</target>
+      </trans-unit>
+      <trans-unit id="replace.focusDesc1">
+        <source xml:lang="en">When you navigate from inside the Find dialog, the editor updates while your focus stays in the input. This is intentional, so you can keep adjusting your search without losing your place.</source>
+        <target>Коли ви переміщаєтеся зсередини діалогу Пошук, редактор оновлюється, поки ваш фокус залишається в полі введення. Це зроблено навмисно, щоб ви могли продовжувати налаштовувати свій пошук, не втрачаючи своє місце.</target>
+      </trans-unit>
+      <trans-unit id="replace.focusDesc2">
+        <source xml:lang="en">When you replace from the Replace input, the match is replaced and focus moves to the next match. If you have replaced all matches, the dialog remains open.</source>
+        <target>Коли ви замінюєте текст у полі Заміна, збіг замінюється, і фокус переходить до наступного збігу. Якщо ви замінили всі збіги, діалогове вікно залишається відкритим.</target>
+      </trans-unit>
+      <trans-unit id="replace.focusDesc3">
+        <source xml:lang="en">If you want to move focus into the editor to edit text, press Escape to close the dialog. Focus returns to the editor at the last replacement location.</source>
+        <target>Якщо ви хочете перемістити фокус у редактор для редагування тексту, натисніть Escape, щоб закрити діалогове вікно. Фокус повертається до редактора в останньому місці заміни.</target>
+      </trans-unit>
+      <trans-unit id="replace.focusHeader">
+        <source xml:lang="en">Focus Behavior (Important):</source>
+        <target>Фокус поведінки (важливо):</target>
+      </trans-unit>
+      <trans-unit id="replace.header">
+        <source xml:lang="en">Accessibility Help: Editor Find and Replace</source>
+        <target>Допомога з доступності: Знайти та замінити в редакторі</target>
+      </trans-unit>
+      <trans-unit id="replace.hear1">
+        <source xml:lang="en">1) The full line that contains the match is read first, so you get immediate context.</source>
+        <target>1) Повний рядок, що містить збіг, читається спочатку, тому ви отримуєте негайний контекст.</target>
+      </trans-unit>
+      <trans-unit id="replace.hear2">
+        <source xml:lang="en">2) Your position among the matches is announced, so you know how far you are through the results.</source>
+        <target>2) Ваша позиція серед матчів оголошена, тож ви знаєте, наскільки далеко ви просунулися за результатами.</target>
+      </trans-unit>
+      <trans-unit id="replace.hear3">
+        <source xml:lang="en">3) The exact line and column are announced, so you know precisely where the match is in the file.</source>
+        <target>3) Точний рядок і стовпець оголошуються, тому ви точно знаєте, де знаходиться збіг у файлі.</target>
+      </trans-unit>
+      <trans-unit id="replace.hearDesc">
+        <source xml:lang="en">Each navigation step gives you a complete spoken update:</source>
+        <target>Кожен крок навігації надає вам повне усне оновлення:</target>
+      </trans-unit>
+      <trans-unit id="replace.hearHeader">
+        <source xml:lang="en">What You Hear Each Time You Move to a Match:</source>
+        <target>Що ви чуєте кожного разу, коли переходите до матчу:</target>
+      </trans-unit>
+      <trans-unit id="replace.keyEnter">
+        <source xml:lang="en">- Enter: Move to the next match while staying in Find.</source>
+        <target>- Введіть: Перейдіть до наступного матчу, залишаючись у Пошуку.</target>
+      </trans-unit>
+      <trans-unit id="replace.keyF3">
+        <source xml:lang="en">- {0}: Move to the next match.</source>
+        <target>- {0}: Перейти до наступного матчу.</target>
+      </trans-unit>
+      <trans-unit id="replace.keyNavEditorHeader">
+        <source xml:lang="en">While focused IN the editor (not the Find input):</source>
+        <target>Поки зосереджені В Редакторі (не в полі пошуку):</target>
+      </trans-unit>
+      <trans-unit id="replace.keyNavFindHeader">
+        <source xml:lang="en">While focused IN the Find input:</source>
+        <target>Поки зосереджено в полі пошуку:</target>
+      </trans-unit>
+      <trans-unit id="replace.keyNavNote">
+        <source xml:lang="en">Note: Don't press Enter or Shift+Enter when focused in the editor - these will insert line breaks instead of navigating.</source>
+        <target>Примітка: Не натискайте Enter або Shift+Enter, коли ви зосереджені в редакторі - це вставить розриви рядків замість навігації.</target>
+      </trans-unit>
+      <trans-unit id="replace.keyNavReplaceHeader">
+        <source xml:lang="en">While focused IN the Replace input:</source>
+        <target>Поки зосереджено на полі Замінити:</target>
+      </trans-unit>
+      <trans-unit id="replace.keyReplaceAll">
+        <source xml:lang="en">- {0}: Replace all matches at once.</source>
+        <target>- {0}: Замініть всі збіги одразу.</target>
+      </trans-unit>
+      <trans-unit id="replace.keyReplaceEnter">
+        <source xml:lang="en">- Enter: Replace the current match and move to the next.</source>
+        <target>- Введіть: Замініть поточне співпадіння та перейдіть до наступного.</target>
+      </trans-unit>
+      <trans-unit id="replace.keyReplaceOne">
+        <source xml:lang="en">- {0}: Replace only the current match.</source>
+        <target>- {0}: Замінити лише поточне співпадіння.</target>
+      </trans-unit>
+      <trans-unit id="replace.keyShiftEnter">
+        <source xml:lang="en">- Shift+Enter: Move to the previous match while staying in Find.</source>
+        <target>- Shift+Enter: Перейти до попереднього збігу, залишаючись у пошуку.</target>
+      </trans-unit>
+      <trans-unit id="replace.keyShiftF3">
+        <source xml:lang="en">- {0}: Move to the previous match.</source>
+        <target>- {0}: Перейти до попереднього матчу.</target>
+      </trans-unit>
+      <trans-unit id="replace.keyTab">
+        <source xml:lang="en">- Tab: Move between Find and Replace inputs.</source>
+        <target>- Tab: Переміщення між полями Знайти та Замінити.</target>
+      </trans-unit>
+      <trans-unit id="replace.keyboardHeader">
+        <source xml:lang="en">Keyboard Navigation Summary:</source>
+        <target>Підсумок навігації з клавіатури:</target>
+      </trans-unit>
+      <trans-unit id="replace.macSetting">
+        <source xml:lang="en">- `editor.find.globalFindClipboard`: Uses the shared macOS Find clipboard when available.</source>
+        <target>- `editor.find.globalFindClipboard`: Використовує спільний буфер обміну Find macOS, коли це можливо.</target>
+      </trans-unit>
+      <trans-unit id="replace.macSettingHeader">
+        <source xml:lang="en">Platform-Specific Setting (macOS only):</source>
+        <target>Налаштування, специфічні для платформи (тільки для macOS):</target>
+      </trans-unit>
+      <trans-unit id="replace.matchStatus">
+        <source xml:lang="en">Match {0} of {1}.</source>
+        <target>Матч {0} з {1}.</target>
+      </trans-unit>
+      <trans-unit id="replace.noMatches">
+        <source xml:lang="en">No matches found in the current file. Try adjusting your search text or the options below.</source>
+        <target>Не знайдено збігів у поточному файлі. Спробуйте відкоригувати ваш текст пошуку або параметри нижче.</target>
+      </trans-unit>
+      <trans-unit id="replace.noReplaceText">
+        <source xml:lang="en">No replacement text entered yet. Press Tab to move to the Replace input and type your replacement.</source>
+        <target>Ще не введено текст заміни. Натисніть Tab, щоб перейти до поля Заміна і введіть вашу заміну.</target>
+      </trans-unit>
+      <trans-unit id="replace.noSearchTerm">
+        <source xml:lang="en">No search text entered yet. Start typing to find matches in the editor.</source>
+        <target>Ще не введено текст для пошуку. Почніть вводити, щоб знайти збіги в редакторі.</target>
+      </trans-unit>
+      <trans-unit id="replace.optionCase">
+        <source xml:lang="en">- Match Case: Only exact case matches are included.</source>
+        <target>- Урахування регістру: Включаються лише точні збіги регістру.</target>
+      </trans-unit>
+      <trans-unit id="replace.optionPreserve">
+        <source xml:lang="en">- Preserve Case: When replacing, maintains the case of the original match.</source>
+        <target>- Зберігати регістр: При заміні зберігає регістр оригінального збігу.</target>
+      </trans-unit>
+      <trans-unit id="replace.optionRegex">
+        <source xml:lang="en">- Regular Expression: Use pattern matching for advanced searches.</source>
+        <target>- Регулярний вираз: Використовуйте шаблонне співпадіння для розширених пошуків.</target>
+      </trans-unit>
+      <trans-unit id="replace.optionSelection">
+        <source xml:lang="en">- Find in Selection: Limit matches to the current selection.</source>
+        <target>- Знайти в виборі: Обмежити збіги поточним вибором.</target>
+      </trans-unit>
+      <trans-unit id="replace.optionWord">
+        <source xml:lang="en">- Whole Word: Only full words are matched.</source>
+        <target>- Повне слово: Відповідають лише повні слова.</target>
+      </trans-unit>
+      <trans-unit id="replace.optionsHeader">
+        <source xml:lang="en">Find and Replace Options in the Dialog:</source>
+        <target>Параметри Знайти та Замінити в діалоговому вікні:</target>
+      </trans-unit>
+      <trans-unit id="replace.replaceText">
+        <source xml:lang="en">Replacement text: "{0}".</source>
+        <target>Текст заміни: "{0}".</target>
+      </trans-unit>
+      <trans-unit id="replace.searchTerm">
+        <source xml:lang="en">You are searching for: "{0}".</source>
+        <target>Ви шукаєте: "{0}".</target>
+      </trans-unit>
+      <trans-unit id="replace.settingAutoSelection">
+        <source xml:lang="en">- `editor.find.autoFindInSelection`: Automatically enables Find in Selection based on selection type.</source>
+        <target>- `editor.find.autoFindInSelection`: Автоматично вмикає Пошук у Виділеному на основі типу виділення.</target>
+      </trans-unit>
+      <trans-unit id="replace.settingCursorMove">
+        <source xml:lang="en">- `editor.find.cursorMoveOnType`: Moves the cursor to the best match while you type.</source>
+        <target>- `editor.find.cursorMoveOnType`: Переміщує курсор до найкращого збігу під час введення тексту.</target>
+      </trans-unit>
+      <trans-unit id="replace.settingExtraSpace">
+        <source xml:lang="en">- `editor.find.addExtraSpaceOnTop`: Adds extra scroll space so matches are not hidden behind the Find and Replace dialog.</source>
+        <target>- `editor.find.addExtraSpaceOnTop`: Додає додатковий простір для прокрутки, щоб збіги не були приховані за діалоговим вікном Знайти та Замінити.</target>
+      </trans-unit>
+      <trans-unit id="replace.settingFindHistory">
+        <source xml:lang="en">- `editor.find.history`: Controls whether Find search history is stored.</source>
+        <target>- `editor.find.history`: Контролює, чи зберігається історія пошуку в Find.</target>
+      </trans-unit>
+      <trans-unit id="replace.settingFindOnType">
+        <source xml:lang="en">- `editor.find.findOnType`: Runs Find as you type.</source>
+        <target>- `editor.find.findOnType`: Виконує пошук під час введення.</target>
+      </trans-unit>
+      <trans-unit id="replace.settingLoop">
+        <source xml:lang="en">- `editor.find.loop`: Wraps search at the beginning or end of the file.</source>
+        <target>- `editor.find.loop`: Обертає пошук на початку або в кінці файлу.</target>
+      </trans-unit>
+      <trans-unit id="replace.settingOccurrences">
+        <source xml:lang="en">- `editor.occurrencesHighlight`: Highlights other occurrences of the current symbol.</source>
+        <target>- `editor.occurrencesHighlight`: Виділяє інші випадки поточного символу.</target>
+      </trans-unit>
+      <trans-unit id="replace.settingOccurrencesDelay">
+        <source xml:lang="en">- `editor.occurrencesHighlightDelay`: Controls how soon occurrences are highlighted.</source>
+        <target>- `editor.occurrencesHighlightDelay`: Контролює, як швидко підсвічуються збіги.</target>
+      </trans-unit>
+      <trans-unit id="replace.settingReplaceHistory">
+        <source xml:lang="en">- `editor.find.replaceHistory`: Controls whether Replace history is stored.</source>
+        <target>- `editor.find.replaceHistory`: Контролює, чи зберігається історія заміни.</target>
+      </trans-unit>
+      <trans-unit id="replace.settingSeed">
+        <source xml:lang="en">- `editor.find.seedSearchStringFromSelection`: Controls when selection text is used to seed Find.</source>
+        <target>- `editor.find.seedSearchStringFromSelection`: Контролює, коли текст вибору використовується для ініціалізації пошуку.</target>
+      </trans-unit>
+      <trans-unit id="replace.settingSelectionHighlight">
+        <source xml:lang="en">- `editor.selectionHighlight`: Highlights other matches of the current selection.</source>
+        <target>- `editor.selectionHighlight`: Підсвічує інші збіги поточного вибору.</target>
+      </trans-unit>
+      <trans-unit id="replace.settingSelectionMaxLength">
+        <source xml:lang="en">- `editor.selectionHighlightMaxLength`: Limits selection highlight length.</source>
+        <target>- `editor.selectionHighlightMaxLength`: Обмежує довжину підсвічування вибору.</target>
+      </trans-unit>
+      <trans-unit id="replace.settingSelectionMultiline">
+        <source xml:lang="en">- `editor.selectionHighlightMultiline`: Controls whether multi-line selections are highlighted.</source>
+        <target>- `editor.selectionHighlightMultiline`: Контролює, чи виділяються багаторядкові вибори.</target>
+      </trans-unit>
+      <trans-unit id="replace.settingVerbosity">
+        <source xml:lang="en">- `accessibility.verbosity.find`: Controls whether the Find and Replace inputs announce the Accessibility Help hint.</source>
+        <target>- `accessibility.verbosity.find`: Контролює, чи оголошують поля введення Пошуку та Замінювання підказку Доступності.</target>
+      </trans-unit>
+      <trans-unit id="replace.settingsHeader">
+        <source xml:lang="en">Settings You Can Adjust ({0} opens Settings):</source>
+        <target>Налаштування, які ви можете змінити ({0} відкриває Налаштування):</target>
+      </trans-unit>
+      <trans-unit id="replace.settingsIntro">
+        <source xml:lang="en">These settings affect how Find and Replace behave or how matches are highlighted.</source>
+        <target>Ці налаштування впливають на те, як працюють функції Знайти та Замінити, або як підсвічуються збіги.</target>
+      </trans-unit>
+      <trans-unit id="replace.statusHeader">
+        <source xml:lang="en">Current Search Status:</source>
+        <target>Поточний статус пошуку:</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/codeEditor/browser/emptyTextEditorHint/emptyTextEditorHint" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="defaultHintAriaLabelWithInlineChat">
@@ -110,6 +586,10 @@ language refers to a programming language</note>
   </file>
   <file original="src/vs/workbench/contrib/codeEditor/browser/find/simpleFindWidget" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="accessibilityHelpHintInLabel">
+        <source xml:lang="en">Press {0} for accessibility help</source>
+        <target>Натисніть {0} для отримання допомоги з доступністю</target>
+      </trans-unit>
       <trans-unit id="ariaSearchNoInput">
         <source xml:lang="en">Enter search input</source>
         <target>Введіть пошуковий запит</target>
@@ -232,8 +712,16 @@ language refers to a programming language</note>
         <target>Перейти до рядка/стовпця</target>
       </trans-unit>
       <trans-unit id="gotoLineQuickAccessPlaceholder">
-        <source xml:lang="en">Type the line number and optional column to go to (e.g. 42:5 for line 42 and column 5).</source>
-        <target>Введіть номер рядка та необов'язкову колонку, щоб перейти до (наприклад, 42:5 для рядка 42 та колонки 5).</target>
+        <source xml:lang="en">Type the line number and optional column to go to (e.g. :42:5 for line 42, column 5). Type :: to go to a character offset (e.g. ::1024 for character 1024 from the start of the file). Use negative values to navigate backwards.</source>
+        <target>Введіть номер рядка та необов'язкову колонку для переходу (наприклад: :42:5 для рядка 42, колонки 5). Введіть :: для переходу до зміщення символа (наприклад: ::1024 для символа 1024 з початку файлу). Використовуйте від'ємні значення для навігації назад.</target>
+      </trans-unit>
+      <trans-unit id="gotoOffset">
+        <source xml:lang="en">Go to Offset...</source>
+        <target>Перейти до Зсув...</target>
+      </trans-unit>
+      <trans-unit id="gotoOffsetQuickAccess">
+        <source xml:lang="en">Go to Offset</source>
+        <target>Перейти до Зсуву</target>
       </trans-unit>
     </body>
   </file>
@@ -366,10 +854,49 @@ language refers to a programming language</note>
   </file>
   <file original="src/vs/workbench/contrib/codeEditor/browser/toggleRenderWhitespace" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="miToggleRenderWhitespace">
-        <source xml:lang="en">&amp;&amp;Render Whitespace</source>
-        <note>&amp;&amp; denotes a mnemonic</note>
-        <target>&amp;&amp;Відобразити пробіли</target>
+      <trans-unit id="renderWhitespace">
+        <source xml:lang="en">Render Whitespace</source>
+        <target>Відображення пробілів</target>
+      </trans-unit>
+      <trans-unit id="renderWhitespace.all">
+        <source xml:lang="en">All</source>
+        <target>Усе</target>
+      </trans-unit>
+      <trans-unit id="renderWhitespace.boundary">
+        <source xml:lang="en">Boundary</source>
+        <target>Межа</target>
+      </trans-unit>
+      <trans-unit id="renderWhitespace.none">
+        <source xml:lang="en">None</source>
+        <target>Немає</target>
+      </trans-unit>
+      <trans-unit id="renderWhitespace.selection">
+        <source xml:lang="en">Selection</source>
+        <target>Вибір</target>
+      </trans-unit>
+      <trans-unit id="renderWhitespace.setAll">
+        <source xml:lang="en">Set Render Whitespace to All</source>
+        <target>Встановити відображення пробілів на Усі</target>
+      </trans-unit>
+      <trans-unit id="renderWhitespace.setBoundary">
+        <source xml:lang="en">Set Render Whitespace to Boundary</source>
+        <target>Встановіть відображення пробілів на межу</target>
+      </trans-unit>
+      <trans-unit id="renderWhitespace.setNone">
+        <source xml:lang="en">Set Render Whitespace to None</source>
+        <target>Встановіть відображення пробілів на Ні</target>
+      </trans-unit>
+      <trans-unit id="renderWhitespace.setSelection">
+        <source xml:lang="en">Set Render Whitespace to Selection</source>
+        <target>Встановити відображення пробілів на вибір</target>
+      </trans-unit>
+      <trans-unit id="renderWhitespace.setTrailing">
+        <source xml:lang="en">Set Render Whitespace to Trailing</source>
+        <target>Встановити відображення пробілів на завершальні</target>
+      </trans-unit>
+      <trans-unit id="renderWhitespace.trailing">
+        <source xml:lang="en">Trailing</source>
+        <target>Трейлінг</target>
       </trans-unit>
       <trans-unit id="toggleRenderWhitespace">
         <source xml:lang="en">Toggle Render Whitespace</source>

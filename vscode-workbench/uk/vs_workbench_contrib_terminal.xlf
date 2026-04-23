@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/terminal/browser/agentHostTerminalService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHostTerminal.default">
+        <source xml:lang="en">Agent Host Terminal</source>
+        <target>Агентський хост термінал</target>
+      </trans-unit>
+      <trans-unit id="agentHostTerminal.pick">
+        <source xml:lang="en">Agent Host…</source>
+        <target>Агент Хост…</target>
+      </trans-unit>
+      <trans-unit id="agentHostTerminal.pickHost">
+        <source xml:lang="en">Select an agent host to open a terminal on</source>
+        <target>Виберіть хост агента, щоб відкрити термінал.</target>
+      </trans-unit>
+      <trans-unit id="agentHostTerminal.profileName">
+        <source xml:lang="en">Agent Host ({0})</source>
+        <target>Агент Хост ({0})</target>
+      </trans-unit>
+      <trans-unit id="agentHostTerminal.tool">
+        <source xml:lang="en">Agent Host Terminal</source>
+        <target>Агент Хост Термінал</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/terminal/browser/baseTerminalBackend" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="nonResponsivePtyHost">
@@ -188,7 +212,7 @@
         <target>Налаштувати налаштування терміналу</target>
       </trans-unit>
       <trans-unit id="workbench.action.terminal.overriddenCwdDescription">
-        <source xml:lang="en">(Overriden) {0}</source>
+        <source xml:lang="en">(Overridden) {0}</source>
         <target>(Перекрито) {0}</target>
       </trans-unit>
       <trans-unit id="workbench.action.terminal.relaunch">
@@ -384,17 +408,9 @@
         <source xml:lang="en">Select a color for the terminal</source>
         <target>Виберіть колір для терміналу</target>
       </trans-unit>
-      <trans-unit id="configureTerminalSettings">
-        <source xml:lang="en">Configure Terminal Settings</source>
-        <target>Налаштувати налаштування терміналу</target>
-      </trans-unit>
       <trans-unit id="disconnectStatus">
         <source xml:lang="en">Lost connection to process</source>
         <target>Втрата з'єднання з процесом</target>
-      </trans-unit>
-      <trans-unit id="keybindingHandling">
-        <source xml:lang="en">Some keybindings don't go to the terminal by default and are handled by {0} instead.</source>
-        <target>Деякі комбінації клавіш за замовчуванням не передаються в термінал і обробляються замість цього {0}.</target>
       </trans-unit>
       <trans-unit id="launchFailed.errorMessage">
         <source xml:lang="en">The terminal process failed to launch: {0}.</source>
@@ -420,13 +436,33 @@
         <source xml:lang="en">Set Fixed Dimensions: Row</source>
         <target>Встановити фіксовані розміри: Рядок</target>
       </trans-unit>
+      <trans-unit id="shellIntegration">
+        <source xml:lang="en">Shell integration</source>
+        <target>Інтеграція оболонки</target>
+      </trans-unit>
+      <trans-unit id="shellIntegration.basic">
+        <source xml:lang="en">Basic</source>
+        <target>Основний</target>
+      </trans-unit>
+      <trans-unit id="shellIntegration.injectionFailed">
+        <source xml:lang="en">Injection failed to activate</source>
+        <target>Активація ін'єкції не вдалася</target>
+      </trans-unit>
       <trans-unit id="shellIntegration.learnMore">
         <source xml:lang="en">Learn more about shell integration</source>
         <target>Дізнайтеся більше про інтеграцію оболонки</target>
       </trans-unit>
+      <trans-unit id="shellIntegration.no">
+        <source xml:lang="en">No</source>
+        <target>Ні</target>
+      </trans-unit>
       <trans-unit id="shellIntegration.openSettings">
         <source xml:lang="en">Open user settings</source>
         <target>Відкрити налаштування користувача</target>
+      </trans-unit>
+      <trans-unit id="shellIntegration.rich">
+        <source xml:lang="en">Rich</source>
+        <target>Багатий</target>
       </trans-unit>
       <trans-unit id="terminal.integrated.a11yPromptLabel">
         <source xml:lang="en">Terminal input</source>
@@ -472,13 +508,13 @@
         <source xml:lang="en">The terminal process terminated with exit code: {0}.</source>
         <target>Процес терміналу завершився з кодом виходу: {0}.</target>
       </trans-unit>
+      <trans-unit id="workspaceEmptyCreateTerminalCwd">
+        <source xml:lang="en">Cannot launch a terminal process in an empty workspace with cwd {0} different from userHome {1}</source>
+        <target>Не вдалося запустити процес терміналу в порожньому робочому просторі з cwd {0}, що відрізняється від userHome {1}</target>
+      </trans-unit>
       <trans-unit id="workspaceNotTrustedCreateTerminal">
         <source xml:lang="en">Cannot launch a terminal process in an untrusted workspace</source>
         <target>Не вдається запустити процес терміналу в ненадійному робочому просторі.</target>
-      </trans-unit>
-      <trans-unit id="workspaceNotTrustedCreateTerminalCwd">
-        <source xml:lang="en">Cannot launch a terminal process in an untrusted workspace with cwd {0} and userHome {1}</source>
-        <target>Не вдається запустити процес терміналу в ненадійному робочому просторі з cwd {0} та userHome {1}</target>
       </trans-unit>
     </body>
   </file>
@@ -712,6 +748,38 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/terminal/browser/terminalTabsChatEntry" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="terminal.tabs.chatEntryAriaLabelPlural">
+        <source xml:lang="en">Show {0} hidden chat terminals</source>
+        <target>Показати {0} прихованих терміналів чату</target>
+      </trans-unit>
+      <trans-unit id="terminal.tabs.chatEntryAriaLabelSingle">
+        <source xml:lang="en">Show 1 hidden chat terminal</source>
+        <target>Показати 1 прихований чат термінал</target>
+      </trans-unit>
+      <trans-unit id="terminal.tabs.chatEntryDeleteAriaLabel">
+        <source xml:lang="en">Kill all hidden chat terminals</source>
+        <target>Вимкніть всі приховані термінали чату</target>
+      </trans-unit>
+      <trans-unit id="terminal.tabs.chatEntryDeleteTooltip">
+        <source xml:lang="en">Kill all hidden chat terminals</source>
+        <target>Знищити всі приховані термінали чату</target>
+      </trans-unit>
+      <trans-unit id="terminal.tabs.chatEntryLabelPlural">
+        <source xml:lang="en">{0} Hidden Terminals</source>
+        <target>{0} Сховані термінали</target>
+      </trans-unit>
+      <trans-unit id="terminal.tabs.chatEntryLabelSingle">
+        <source xml:lang="en">{0} Hidden Terminal</source>
+        <target>{0} Схований термінал</target>
+      </trans-unit>
+      <trans-unit id="terminal.tabs.chatEntryTooltip">
+        <source xml:lang="en">Show hidden chat terminals</source>
+        <target>Показати приховані термінали чату</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/terminal/browser/terminalTabsList" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="label">
@@ -747,26 +815,6 @@ The terminal's title</note>
       <trans-unit id="hideDetails">
         <source xml:lang="en">Hide Details</source>
         <target>Сховати деталі</target>
-      </trans-unit>
-      <trans-unit id="shellIntegration">
-        <source xml:lang="en">Shell integration</source>
-        <target>Інтеграція оболонки</target>
-      </trans-unit>
-      <trans-unit id="shellIntegration.basic">
-        <source xml:lang="en">Basic</source>
-        <target>Основний</target>
-      </trans-unit>
-      <trans-unit id="shellIntegration.injectionFailed">
-        <source xml:lang="en">Injection failed to activate</source>
-        <target>Впорскування не вдалося активувати</target>
-      </trans-unit>
-      <trans-unit id="shellIntegration.no">
-        <source xml:lang="en">No</source>
-        <target>Ні</target>
-      </trans-unit>
-      <trans-unit id="shellIntegration.rich">
-        <source xml:lang="en">Rich</source>
-        <target>Багатий</target>
       </trans-unit>
       <trans-unit id="shellProcessTooltip.commandLine">
         <source xml:lang="en">Command line: {0}</source>
@@ -821,6 +869,10 @@ The terminal's title</note>
         <source xml:lang="en">Do you want to run the command: {0}</source>
         <target>Ви хочете виконати команду: {0}</target>
       </trans-unit>
+      <trans-unit id="terminal.attachToChat">
+        <source xml:lang="en">Attach To Chat</source>
+        <target>Прикріпити до чату</target>
+      </trans-unit>
       <trans-unit id="terminal.copyCommand">
         <source xml:lang="en">Copy Command</source>
         <target>Копіювати команду</target>
@@ -869,6 +921,14 @@ The terminal's title</note>
   </file>
   <file original="src/vs/workbench/contrib/terminal/browser/xterm/decorationStyles" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="terminalCommandDecoration.running">
+        <source xml:lang="en">Running</source>
+        <target>Запуск</target>
+      </trans-unit>
+      <trans-unit id="terminalCommandDecoration.unknown">
+        <source xml:lang="en">Unknown</source>
+        <target>Невідомо</target>
+      </trans-unit>
       <trans-unit id="terminalPromptCommandFailed">
         <source xml:lang="en">Command executed {0} and failed</source>
         <target>Команда виконана {0} і не вдалася</target>
@@ -886,7 +946,11 @@ The terminal's title</note>
         <target>Команда виконана {0}, зайняла {1} і не вдалася (Код виходу {2})</target>
       </trans-unit>
       <trans-unit id="terminalPromptCommandSuccess">
-        <source xml:lang="en">Command executed {0}</source>
+        <source xml:lang="en">Command executed {0} now</source>
+        <target>Команда виконана {0} зараз</target>
+      </trans-unit>
+      <trans-unit id="terminalPromptCommandSuccess.">
+        <source xml:lang="en">Command executed {0} </source>
         <target>Команда виконана {0}</target>
       </trans-unit>
       <trans-unit id="terminalPromptCommandSuccess.duration">
@@ -921,10 +985,6 @@ The terminal's title</note>
         <source xml:lang="en">A description of what the completion provider does. This will be shown in the settings UI.</source>
         <target>Опис того, що робить постачальник завершення. Це буде показано в інтерфейсі налаштувань.</target>
       </trans-unit>
-      <trans-unit id="vscode.extension.contributes.terminal.completionProviders.id">
-        <source xml:lang="en">The ID of the terminal completion provider.</source>
-        <target>Ідентифікатор постачальника завершення терміналу.</target>
-      </trans-unit>
       <trans-unit id="vscode.extension.contributes.terminal.profiles">
         <source xml:lang="en">Defines additional terminal profiles that the user can create.</source>
         <target>Визначає додаткові профілі терміналів, які користувач може створити.</target>
@@ -936,6 +996,10 @@ The terminal's title</note>
       <trans-unit id="vscode.extension.contributes.terminal.profiles.title">
         <source xml:lang="en">Title for this terminal profile.</source>
         <target>Назва для цього термінального профілю.</target>
+      </trans-unit>
+      <trans-unit id="vscode.extension.contributes.terminal.profiles.titleTemplate">
+        <source xml:lang="en">A title template string for the terminal tab. Supports variables like ${sequence}, ${process}, ${cwd}, etc. Overrides the default terminal.integrated.tabs.title setting for terminals created with this profile.</source>
+        <target>Шаблон рядка заголовка для вкладки термінала. Підтримує змінні, такі як ${sequence}, ${process}, ${cwd} тощо. Перезаписує налаштування за замовчуванням terminal.integrated.tabs.title для терміналів, створених з цим профілем.</target>
       </trans-unit>
       <trans-unit id="vscode.extension.contributes.terminal.types.icon">
         <source xml:lang="en">A codicon, URI, or light and dark URIs to associate with this terminal type.</source>
@@ -988,6 +1052,10 @@ The terminal's title</note>
       <trans-unit id="terminal.foreground">
         <source xml:lang="en">The foreground color of the terminal.</source>
         <target>Колір переднього плану терміналу.</target>
+      </trans-unit>
+      <trans-unit id="terminal.hoverHighlightBackground">
+        <source xml:lang="en">Highlight below the word for which a hover is shown. The color must not be opaque so as not to hide underlying decorations.</source>
+        <target>Виділіть нижче слово, для якого показується підказка. Колір не повинен бути непрозорим, щоб не приховувати підлеглі декорації.</target>
       </trans-unit>
       <trans-unit id="terminal.inactiveSelectionBackground">
         <source xml:lang="en">The selection background color of the terminal when it does not have focus.</source>
@@ -1045,10 +1113,6 @@ The terminal's title</note>
   </file>
   <file original="src/vs/workbench/contrib/terminal/common/terminalConfiguration" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="autoApproveMode.description">
-        <source xml:lang="en">Controls whether to allow auto approval in the run in terminal tool.</source>
-        <target>Контролює, чи дозволяти автоматичне схвалення в інструменті запуску в терміналі.</target>
-      </trans-unit>
       <trans-unit id="cwd">
         <source xml:lang="en">the terminal's current working directory.</source>
         <target>поточний робочий каталог термінала.</target>
@@ -1128,6 +1192,14 @@ The terminal's title</note>
       <trans-unit id="terminal.integrated.allowChords">
         <source xml:lang="en">Whether or not to allow chord keybindings in the terminal. Note that when this is true and the keystroke results in a chord it will bypass {0}, setting this to false is particularly useful when you want ctrl+k to go to your shell (not VS Code).</source>
         <target>Чи дозволяти прив'язки клавіш акордів у терміналі. Зверніть увагу, що коли це істинно і натискання клавіші призводить до акорду, воно обійде {0}, встановлення цього значення на хибне особливо корисне, коли ви хочете, щоб ctrl+k переходив до вашої оболонки (а не до VS Code).</target>
+      </trans-unit>
+      <trans-unit id="terminal.integrated.allowInUntrustedWorkspace">
+        <source xml:lang="en">Controls whether terminals can be created in an untrusted workspace.
+
+**This feature bypasses a security protection that prevents terminals from launching in untrusted workspaces. The reason this is a security risk is because shells are often set up to potentially execute code automatically based on the contents of the current working directory. This should be safe to use provided your shell is set up in such a way that code execution in the folder never happens.**</source>
+        <target>Контролює, чи можуть бути створені термінали в ненадійній робочій області.
+
+**Ця функція обминає захист безпеки, який заважає запуску терміналів у ненадійних робочих областях. Причина, чому це є ризиком безпеки, полягає в тому, що оболонки часто налаштовуються на можливе автоматичне виконання коду на основі вмісту поточного робочого каталогу. Це має бути безпечно, якщо ваша оболонка налаштована таким чином, що виконання коду в папці ніколи не відбувається.**</target>
       </trans-unit>
       <trans-unit id="terminal.integrated.allowMnemonics">
         <source xml:lang="en">Whether to allow menubar mnemonics (for example Alt+F) to trigger the open of the menubar. Note that this will cause all alt keystrokes to skip the shell when true. This does nothing on macOS.</source>
@@ -1234,8 +1306,16 @@ Default Skipped Commands:
         <target>Контролює ширину курсора, коли {0} встановлено на {1}.</target>
       </trans-unit>
       <trans-unit id="terminal.integrated.customGlyphs">
-        <source xml:lang="en">Whether to draw custom glyphs for block element and box drawing characters instead of using the font, which typically yields better rendering with continuous lines. Note that this doesn't work when {0} is disabled.</source>
-        <target>Чи потрібно малювати власні гліфи для блокових елементів і символів малювання рамок замість використання шрифту, що зазвичай забезпечує кращу візуалізацію з безперервними лініями. Зверніть увагу, що це не працює, коли {0} вимкнено.</target>
+        <source xml:lang="en">Whether to draw custom glyphs instead of using the font for the following unicode ranges:
+
+{0}
+
+This will typically result in better rendering with continuous lines, even when line height and letter spacing is used. This feature only works when {1} is enabled.</source>
+        <target>Чи слід малювати власні гліфи замість використання шрифту для наступних діапазонів юнікоду:
+
+{0}
+
+Це зазвичай призводить до кращого рендерингу з безперервними лініями, навіть коли використовується висота рядка та міжбуквений інтервал. Ця функція працює лише тоді, коли {1} увімкнено.</target>
       </trans-unit>
       <trans-unit id="terminal.integrated.cwd">
         <source xml:lang="en">An explicit start path where the terminal will be launched, this is used as the current working directory (cwd) for the shell process. This may be particularly useful in workspace settings if the root directory is not a convenient cwd.</source>
@@ -1269,6 +1349,18 @@ Default Skipped Commands:
         <source xml:lang="en">Always set the `$LANG` environment variable.</source>
         <target>Завжди встановлюйте змінну середовища `$LANG`.</target>
       </trans-unit>
+      <trans-unit id="terminal.integrated.developer.devMode">
+        <source xml:lang="en">Enable developer mode for the terminal. This shows additional debug information and visualizations for shell integration sequences.</source>
+        <target>Увімкніть режим розробника для терміналу. Це показує додаткову інформацію для налагодження та візуалізації для послідовностей інтеграції оболонки.</target>
+      </trans-unit>
+      <trans-unit id="terminal.integrated.developer.ptyHost.latency">
+        <source xml:lang="en">Simulated latency in milliseconds applied to all calls made to the pty host. This is useful for testing terminal behavior under high latency conditions.</source>
+        <target>Симульоване затримка в мілісекундах, застосована до всіх викликів, зроблених до хоста pty. Це корисно для тестування поведінки терміналу в умовах високої затримки.</target>
+      </trans-unit>
+      <trans-unit id="terminal.integrated.developer.ptyHost.startupDelay">
+        <source xml:lang="en">Simulated startup delay in milliseconds for the pty host process. This is useful for testing terminal initialization under slow startup conditions.</source>
+        <target>Симульоване затримка запуску в мілісекундах для процесу хоста pty. Це корисно для тестування ініціалізації терміналу в умовах повільного запуску.</target>
+      </trans-unit>
       <trans-unit id="terminal.integrated.drawBoldTextInBrightColors">
         <source xml:lang="en">Controls whether bold text in the terminal will always use the "bright" ANSI color variant.</source>
         <target>Контролює, чи буде жирний текст у терміналі завжди використовувати "яскравий" варіант кольору ANSI.</target>
@@ -1282,8 +1374,12 @@ Default Skipped Commands:
         <target>Чи дозволити посилання на файли в терміналах. Посилання можуть бути повільними, особливо при роботі з мережевим диском, оскільки кожне посилання на файл перевіряється відповідно до файлової системи. Зміни набудуть чинності лише в нових терміналах.</target>
       </trans-unit>
       <trans-unit id="terminal.integrated.enableImages">
-        <source xml:lang="en">Enables image support in the terminal, this will only work when {0} is enabled. Both sixel and iTerm's inline image protocol are supported on Linux and macOS. This will only work on Windows for versions of ConPTY &gt;= v2 which is shipped with Windows itself, see also {1}. Images will currently not be restored between window reloads/reconnects.</source>
-        <target>Увімкнення підтримки зображень у терміналі, це буде працювати лише коли {0} увімкнено. Підтримуються як sixel, так і вбудований протокол зображень iTerm на Linux і macOS. Це буде працювати на Windows лише для версій ConPTY &gt;= v2, які постачаються разом із Windows, див. також {1}. Зображення наразі не відновлюватимуться між перезавантаженнями вікна/перепідключеннями.</target>
+        <source xml:lang="en">Enables image support in the terminal, this will only work when {0} is enabled. Sixel and iTerm's inline image protocol are supported on Linux and macOS. The kitty graphics protocol is supported on all platforms. On Windows, all image protocols will only work for versions of ConPTY &gt;= v2 which is shipped with Windows itself, see also {1}. Images will currently not be restored between window reloads/reconnects. When enabled, transparency mode is also turned on in the terminal.</source>
+        <target>Увімкнення підтримки зображень у терміналі, це буде працювати лише коли {0} увімкнено. Протоколи Sixel та вбудованих зображень iTerm підтримуються на Linux та macOS. Протокол графіки kitty підтримується на всіх платформах. На Windows усі протоколи зображень працюватимуть лише для версій ConPTY &gt;= v2, які постачаються з Windows, див. також {1}. Зображення наразі не будуть відновлені між перезавантаженнями/перепідключеннями вікна. Коли увімкнено, режим прозорості також активується в терміналі.</target>
+      </trans-unit>
+      <trans-unit id="terminal.integrated.enableKittyKeyboardProtocol">
+        <source xml:lang="en">Whether to enable the kitty keyboard protocol, which allows a program in the terminal to request more detailed keyboard input reporting. This can, for example, enable `Shift+Enter` to be handled by the program.</source>
+        <target>Чи слід увімкнути протокол клавіатури kitty, який дозволяє програмі в терміналі запитувати більш детальну інформацію про введення з клавіатури. Це може, наприклад, дозволити програмі обробляти `Shift+Enter`.</target>
       </trans-unit>
       <trans-unit id="terminal.integrated.enableMultiLinePasteWarning">
         <source xml:lang="en">Controls whether to show a warning dialog when pasting multiple lines into the terminal.</source>
@@ -1314,6 +1410,10 @@ Default Skipped Commands:
       <trans-unit id="terminal.integrated.enableVisualBell">
         <source xml:lang="en">Controls whether the visual terminal bell is enabled. This shows up next to the terminal's name.</source>
         <target>Контролює, чи увімкнено візуальний звуковий сигнал терміналу. Це відображається поруч з ім'ям терміналу.</target>
+      </trans-unit>
+      <trans-unit id="terminal.integrated.enableWin32InputMode">
+        <source xml:lang="en">Whether to enable the win32 input mode, which provides enhanced keyboard input support on Windows.</source>
+        <target>Чи слід увімкнути режим введення win32, який забезпечує покращену підтримку введення з клавіатури на Windows.</target>
       </trans-unit>
       <trans-unit id="terminal.integrated.env.linux">
         <source xml:lang="en">Object with environment variables that will be added to the VS Code process to be used by the terminal on Linux. Set to `null` to delete the environment variable.</source>
@@ -1569,6 +1669,14 @@ This setting applies only when terminals are created, so you will need to restar
         <source xml:lang="en">Controls whether to report the shell environment, enabling its use in features such as {0}. This may cause a slowdown when printing your shell's prompt.</source>
         <target>Контролює, чи слід звітувати про середовище оболонки, що дозволяє його використання в таких функціях, як {0}. Це може спричинити уповільнення при друку вашого запиту оболонки.</target>
       </trans-unit>
+      <trans-unit id="terminal.integrated.shellIntegration.quickFixEnabled">
+        <source xml:lang="en">When shell integration is enabled, enables quick fixes for terminal commands that appear as a lightbulb or sparkle icon to the left of the prompt.</source>
+        <target>Коли інтеграцію оболонки увімкнено, це дозволяє швидко виправляти команди терміналу, які з'являються у вигляді значка лампочки або іконки спалаху зліва від запиту.</target>
+      </trans-unit>
+      <trans-unit id="terminal.integrated.shellIntegration.timeout">
+        <source xml:lang="en">Configures the duration in milliseconds to wait for shell integration after launch before declaring it's not there. The default value {0} uses a variable wait time based on whether shell integration injection is enabled and whether it's a remote window. Values between 1 and 499 are clamped to 500ms. Consider setting this to a large value if your shell starts very slowly.</source>
+        <target>Налаштовує тривалість у мілісекундах, щоб чекати на інтеграцію оболонки після запуску, перш ніж оголосити, що її немає. Значення за замовчуванням {0} використовує змінний час очікування, залежно від того, чи увімкнено ін'єкцію інтеграції оболонки та чи це віддалене вікно. Значення між 1 і 499 обмежуються до 500 мс. Розгляньте можливість встановлення цього значення на велике, якщо ваша оболонка запускається дуже повільно.</target>
+      </trans-unit>
       <trans-unit id="terminal.integrated.showExitAlert">
         <source xml:lang="en">Controls whether to show the alert "The terminal process terminated with exit code" when exit code is non-zero.</source>
         <target>Контролює, чи показувати сповіщення "Процес терміналу завершився з кодом виходу" коли код виходу не нульовий.</target>
@@ -1596,6 +1704,10 @@ This setting applies only when terminals are created, so you will need to restar
       <trans-unit id="terminal.integrated.tabStopWidth">
         <source xml:lang="en">The number of cells in a tab stop.</source>
         <target>Кількість комірок у табуляції.</target>
+      </trans-unit>
+      <trans-unit id="terminal.integrated.tabs.allowAgentCliTitle">
+        <source xml:lang="en">Controls whether agentic CLIs (such as Claude Code, Codex, GitHub Copilot CLI, and Gemini CLI) are allowed to set the terminal tab title via escape sequences. When disabled, the configured tab title template is used instead.</source>
+        <target>Контролює, чи дозволено агентним CLI (таким як Claude Code, Codex, GitHub Copilot CLI та Gemini CLI) встановлювати заголовок вкладки терміналу за допомогою escape-послідовностей. Коли це вимкнено, використовується замість цього налаштований шаблон заголовка вкладки.</target>
       </trans-unit>
       <trans-unit id="terminal.integrated.tabs.defaultColor">
         <source xml:lang="en">A theme color ID to associate with terminal icons by default.</source>
@@ -1697,6 +1809,10 @@ This setting applies only when terminals are created, so you will need to restar
         <source xml:lang="en">Show the active terminal when it is the only terminal opened or when the tabs view is in its narrow textless state</source>
         <target>Показати активний термінал, коли це єдиний відкритий термінал або коли вигляд вкладок знаходиться в його вузькому безтекстовому стані.</target>
       </trans-unit>
+      <trans-unit id="terminal.integrated.textBlinking">
+        <source xml:lang="en">Controls whether text blinking is enabled in the terminal.</source>
+        <target>Контролює, чи ввімкнено миготіння тексту в терміналі.</target>
+      </trans-unit>
       <trans-unit id="terminal.integrated.unicodeVersion">
         <source xml:lang="en">Controls what version of Unicode to use when evaluating the width of characters in the terminal. If you experience emoji or other wide characters not taking up the right amount of space or backspace either deleting too much or too little then you may want to try tweaking this setting.</source>
         <target>Контролює, яку версію Unicode використовувати при оцінці ширини символів у терміналі. Якщо ви помічаєте, що емодзі або інші широкі символи займають неправильну кількість місця, або що клавіша видалення видаляє занадто багато або занадто мало, вам може знадобитися спробувати налаштувати цю опцію.</target>
@@ -1709,13 +1825,9 @@ This setting applies only when terminals are created, so you will need to restar
         <source xml:lang="en">Version 6 of Unicode. This is an older version which should work better on older systems.</source>
         <target>Версія 6 Unicode. Це стара версія, яка повинна працювати краще на старих системах.</target>
       </trans-unit>
-      <trans-unit id="terminal.integrated.windowsEnableConpty">
-        <source xml:lang="en">Whether to use ConPTY for Windows terminal process communication (requires Windows 10 build number 18309+). Winpty will be used if this is false.</source>
-        <target>Чи використовувати ConPTY для зв'язку процесів терміналу Windows (потрібен номер збірки Windows 10 18309+). Якщо це неправда, буде використано Winpty.</target>
-      </trans-unit>
       <trans-unit id="terminal.integrated.windowsUseConptyDll">
-        <source xml:lang="en">Whether to use the experimental conpty.dll (v1.22.250204002) shipped with VS Code, instead of the one bundled with Windows.</source>
-        <target>Чи використовувати експериментальний conpty.dll (v1.22.250204002), що постачається з VS Code, замість того, що входить до складу Windows.</target>
+        <source xml:lang="en">Whether to use the experimental conpty.dll (v1.25.260303002) shipped with VS Code, instead of the one bundled with Windows.</source>
+        <target>Чи використовувати експериментальний conpty.dll (v1.25.260303002), що постачається з VS Code, замість того, що входить до складу Windows.</target>
       </trans-unit>
       <trans-unit id="terminal.integrated.wordSeparators">
         <source xml:lang="en">A string containing all characters to be considered word separators when double-clicking to select word and in the fallback 'word' link detection. Since this is used for link detection, including characters such as `:` that are used when detecting links will cause the line and column part of links like `file:10:5` to be ignored.</source>
@@ -1901,6 +2013,10 @@ This setting applies only when terminals are created, so you will need to restar
         <source xml:lang="en">Focus Hover</source>
         <target>Фокус Наведення</target>
       </trans-unit>
+      <trans-unit id="workbench.action.terminal.focusInstance">
+        <source xml:lang="en">Focus Terminal</source>
+        <target>Фокус Терминал</target>
+      </trans-unit>
       <trans-unit id="workbench.action.terminal.moveToTerminalPanel">
         <source xml:lang="en">Move Terminal into Panel</source>
         <target>Перемістити термінал у панель</target>
@@ -1916,6 +2032,10 @@ This setting applies only when terminals are created, so you will need to restar
       <trans-unit id="workbench.action.terminal.renameWithArg">
         <source xml:lang="en">Rename the Currently Active Terminal</source>
         <target>Перейменувати активний термінал</target>
+      </trans-unit>
+      <trans-unit id="workbench.action.terminal.revealCommand">
+        <source xml:lang="en">Reveal Command in Terminal</source>
+        <target>Відкрити команду в терміналі</target>
       </trans-unit>
       <trans-unit id="workbench.action.terminal.scrollToNextCommand">
         <source xml:lang="en">Scroll to Next Command</source>

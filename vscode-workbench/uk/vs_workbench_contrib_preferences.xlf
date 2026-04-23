@@ -34,10 +34,6 @@
         <source xml:lang="en">Add Keybinding</source>
         <target>Додати комбінацію клавіш</target>
       </trans-unit>
-      <trans-unit id="addKeybindingLabelWithKey">
-        <source xml:lang="en">Add Keybinding {0}</source>
-        <target>Додати комбінацію клавіш {0}</target>
-      </trans-unit>
       <trans-unit id="addLabel">
         <source xml:lang="en">Add Keybinding...</source>
         <target>Додати прив'язку клавіші...</target>
@@ -70,10 +66,6 @@
         <source xml:lang="en">Change Keybinding</source>
         <target>Змінити прив'язку клавіші</target>
       </trans-unit>
-      <trans-unit id="editKeybindingLabelWithKey">
-        <source xml:lang="en">Change Keybinding {0}</source>
-        <target>Змінити прив'язку клавіші {0}</target>
-      </trans-unit>
       <trans-unit id="editWhen">
         <source xml:lang="en">Change When Expression</source>
         <target>Змінити вираз при зміні</target>
@@ -86,10 +78,6 @@
         <source xml:lang="en">Extension ({0})</source>
         <target>Розширення ({0})</target>
       </trans-unit>
-      <trans-unit id="foundResults">
-        <source xml:lang="en">{0} results</source>
-        <target>{0} результати</target>
-      </trans-unit>
       <trans-unit id="keybinding">
         <source xml:lang="en">Keybinding</source>
         <target>Прив'язка клавіш</target>
@@ -101,6 +89,10 @@
       <trans-unit id="keyboard shortcuts aria label">
         <source xml:lang="en">use space or enter to change the keybinding.</source>
         <target>використовуйте пробіл або Enter, щоб змінити прив'язку клавіші.</target>
+      </trans-unit>
+      <trans-unit id="navigateToResults">
+        <source xml:lang="en">Use {0} to navigate to the results table.</source>
+        <target>Використовуйте {0} для переходу до таблиці результатів.</target>
       </trans-unit>
       <trans-unit id="noKeybinding">
         <source xml:lang="en">No keybinding assigned</source>
@@ -173,50 +165,6 @@ The placeholders will contain a keyboard combination e.g. Ctrl+Shift+/</note>
         <note>Please translate maintaining the stars (*) around the placeholder such that it will be rendered in bold.&#xD;
 The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
         <target>**{0}** для вашої поточної розкладки клавіатури.</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/workbench/contrib/preferences/browser/keyboardLayoutPicker" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="autoDetect">
-        <source xml:lang="en">Auto Detect</source>
-        <target>Автовизначення</target>
-      </trans-unit>
-      <trans-unit id="configureKeyboardLayout">
-        <source xml:lang="en">Configure Keyboard Layout</source>
-        <target>Налаштувати розкладку клавіатури</target>
-      </trans-unit>
-      <trans-unit id="displayLanguage">
-        <source xml:lang="en">Defines the keyboard layout used in VS Code in the browser environment.</source>
-        <target>Визначає розкладку клавіатури, що використовується у VS Code в браузерному середовищі.</target>
-      </trans-unit>
-      <trans-unit id="doc">
-        <source xml:lang="en">Open VS Code and run "Developer: Inspect Key Mappings (JSON)" from Command Palette.</source>
-        <target>Відкрийте VS Code і запустіть "Розробник: Перевірити ключові відображення (JSON)" з палітри команд.</target>
-      </trans-unit>
-      <trans-unit id="fail.createSettings">
-        <source xml:lang="en">Unable to create '{0}' ({1}).</source>
-        <target>Неможливо створити '{0}' ({1}).</target>
-      </trans-unit>
-      <trans-unit id="keyboard.chooseLayout">
-        <source xml:lang="en">Change Keyboard Layout</source>
-        <target>Змінити розкладку клавіатури</target>
-      </trans-unit>
-      <trans-unit id="keyboardLayout">
-        <source xml:lang="en">Layout: {0}</source>
-        <target>Макет: {0}</target>
-      </trans-unit>
-      <trans-unit id="layoutPicks">
-        <source xml:lang="en">Keyboard Layouts ({0})</source>
-        <target>Розкладки клавіатури ({0})</target>
-      </trans-unit>
-      <trans-unit id="pickKeyboardLayout">
-        <source xml:lang="en">Select Keyboard Layout</source>
-        <target>Виберіть розкладку клавіатури</target>
-      </trans-unit>
-      <trans-unit id="status.workbench.keyboardLayout">
-        <source xml:lang="en">Keyboard Layout</source>
-        <target>Розкладка клавіатури</target>
       </trans-unit>
     </body>
   </file>
@@ -662,6 +610,10 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
   </file>
   <file original="src/vs/workbench/contrib/preferences/browser/settingsEditorSettingIndicators" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="advancedLabel">
+        <source xml:lang="en">Advanced</source>
+        <target>Розширений</target>
+      </trans-unit>
       <trans-unit id="alsoConfiguredElsewhere">
         <source xml:lang="en">Also modified elsewhere</source>
         <target>Також змінено в іншому місці</target>
@@ -822,9 +774,45 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
         <source xml:lang="en">Breadcrumbs</source>
         <target>Хлібні крихти</target>
       </trans-unit>
+      <trans-unit id="browser">
+        <source xml:lang="en">Browser</source>
+        <target>Браузер</target>
+      </trans-unit>
       <trans-unit id="chat">
         <source xml:lang="en">Chat</source>
         <target>Чат</target>
+      </trans-unit>
+      <trans-unit id="chatAgent">
+        <source xml:lang="en">Agent</source>
+        <target>Агент</target>
+      </trans-unit>
+      <trans-unit id="chatAppearance">
+        <source xml:lang="en">Appearance</source>
+        <target>Зовнішній вигляд</target>
+      </trans-unit>
+      <trans-unit id="chatContext">
+        <source xml:lang="en">Context</source>
+        <target>Контекст</target>
+      </trans-unit>
+      <trans-unit id="chatInlineChat">
+        <source xml:lang="en">Inline Chat</source>
+        <target>Вбудований чат</target>
+      </trans-unit>
+      <trans-unit id="chatMcp">
+        <source xml:lang="en">MCP</source>
+        <target>MCP</target>
+      </trans-unit>
+      <trans-unit id="chatMiscellaneous">
+        <source xml:lang="en">Miscellaneous</source>
+        <target>Різне</target>
+      </trans-unit>
+      <trans-unit id="chatSessions">
+        <source xml:lang="en">Sessions</source>
+        <target>Сесії</target>
+      </trans-unit>
+      <trans-unit id="chatTools">
+        <source xml:lang="en">Tools</source>
+        <target>Інструменти</target>
       </trans-unit>
       <trans-unit id="comments">
         <source xml:lang="en">Comments</source>
@@ -901,6 +889,10 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
       <trans-unit id="multiDiffEditor">
         <source xml:lang="en">Multi-File Diff Editor</source>
         <target>Мульті-файловий редактор відмінностей</target>
+      </trans-unit>
+      <trans-unit id="network">
+        <source xml:lang="en">Network</source>
+        <target>Мережа</target>
       </trans-unit>
       <trans-unit id="newWindow">
         <source xml:lang="en">New Window</source>
@@ -1006,6 +998,22 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
   </file>
   <file original="src/vs/workbench/contrib/preferences/browser/settingsSearchMenu" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="advancedSettingsSearch">
+        <source xml:lang="en">Advanced</source>
+        <target>Розширений</target>
+      </trans-unit>
+      <trans-unit id="advancedSettingsSearchTooltip">
+        <source xml:lang="en">Show advanced settings</source>
+        <target>Показати розширені налаштування</target>
+      </trans-unit>
+      <trans-unit id="experimental">
+        <source xml:lang="en">Experimental</source>
+        <target>Експериментальний</target>
+      </trans-unit>
+      <trans-unit id="experimentalSettingsSearchTooltip">
+        <source xml:lang="en">Show experimental settings</source>
+        <target>Показати експериментальні налаштування</target>
+      </trans-unit>
       <trans-unit id="extSettingsSearch">
         <source xml:lang="en">Extension ID...</source>
         <target>Ідентифікатор розширення...</target>
@@ -1023,8 +1031,8 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
         <target>Додати фільтр функцій</target>
       </trans-unit>
       <trans-unit id="idSettingsSearch">
-        <source xml:lang="en">Setting ID</source>
-        <target>Ідентифікатор налаштування</target>
+        <source xml:lang="en">Setting ID...</source>
+        <target>Встановлення ID...</target>
       </trans-unit>
       <trans-unit id="idSettingsSearchTooltip">
         <source xml:lang="en">Add Setting ID filter</source>
@@ -1055,12 +1063,28 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
         <target>Показати налаштування для онлайн-сервісів</target>
       </trans-unit>
       <trans-unit id="policySettingsSearch">
-        <source xml:lang="en">Policy services</source>
-        <target>Послуги політики</target>
+        <source xml:lang="en">Organization policies</source>
+        <target>Політики організації</target>
       </trans-unit>
       <trans-unit id="policySettingsSearchTooltip">
-        <source xml:lang="en">Show settings for policy services</source>
-        <target>Показати налаштування для сервісів політики</target>
+        <source xml:lang="en">Show organization policy settings</source>
+        <target>Показати налаштування політики організації</target>
+      </trans-unit>
+      <trans-unit id="previewSettings">
+        <source xml:lang="en">Preview</source>
+        <target>Попередній перегляд</target>
+      </trans-unit>
+      <trans-unit id="previewSettingsSearchTooltip">
+        <source xml:lang="en">Show preview settings</source>
+        <target>Показати налаштування попереднього перегляду</target>
+      </trans-unit>
+      <trans-unit id="stableSettings">
+        <source xml:lang="en">Stable</source>
+        <target>Стабільний</target>
+      </trans-unit>
+      <trans-unit id="stableSettingsSearchTooltip">
+        <source xml:lang="en">Show stable settings</source>
+        <target>Показати стабільні налаштування</target>
       </trans-unit>
       <trans-unit id="tagSettingsSearch">
         <source xml:lang="en">Tag...</source>
@@ -1287,6 +1311,10 @@ The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/</note>
   </file>
   <file original="src/vs/workbench/contrib/preferences/common/preferences" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="advancedIndicatorDescription">
+        <source xml:lang="en">Advanced setting: this setting is intended for advanced scenarios and configurations. Only modify this if you know what it does.</source>
+        <target>Розширене налаштування: це налаштування призначене для просунутих сценаріїв та конфігурацій. Змінюйте це лише якщо знаєте, що воно робить.</target>
+      </trans-unit>
       <trans-unit id="experimentalIndicatorDescription">
         <source xml:lang="en">Experimental setting: this setting controls a new feature that is actively being developed and may be unstable. It is subject to change or removal.</source>
         <target>Експериментальні налаштування: це налаштування контролює нову функцію, яка активно розробляється і може бути нестабільною. Воно підлягає змінам або видаленню.</target>

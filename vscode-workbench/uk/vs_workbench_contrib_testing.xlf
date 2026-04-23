@@ -67,16 +67,16 @@
         <target>Сховати покриття в Провіднику</target>
       </trans-unit>
       <trans-unit id="testing.hideInlineCoverage">
-        <source xml:lang="en">Hide Inline Coverage</source>
-        <target>Сховати вбудоване покриття</target>
+        <source xml:lang="en">Hide Inline</source>
+        <target>Сховати в рядку</target>
       </trans-unit>
       <trans-unit id="testing.rerun">
         <source xml:lang="en">Rerun</source>
         <target>Перезапустити</target>
       </trans-unit>
       <trans-unit id="testing.showInlineCoverage">
-        <source xml:lang="en">Show Inline Coverage</source>
-        <target>Показати вбудоване покриття</target>
+        <source xml:lang="en">Show Inline</source>
+        <target>Показати в рядку</target>
       </trans-unit>
       <trans-unit id="testing.toggleCoverageInExplorerDesc">
         <source xml:lang="en">Toggle the display of test coverage in the File Explorer view.</source>
@@ -95,8 +95,8 @@
         <target>Перемикайте закріплену панель покриття в редакторі.</target>
       </trans-unit>
       <trans-unit id="testing.toggleToolbarTitle">
-        <source xml:lang="en">Test Coverage Toolbar</source>
-        <target>Панель покриття тестів</target>
+        <source xml:lang="en">Show Test Coverage Toolbar</source>
+        <target>Показати панель інструментів покриття тестів</target>
       </trans-unit>
     </body>
   </file>
@@ -107,8 +107,8 @@
         <target>Натисніть, щоб переглянути покриття для одного тесту</target>
       </trans-unit>
       <trans-unit id="testing.allTests">
-        <source xml:lang="en">All tests</source>
-        <target>Усі тести</target>
+        <source xml:lang="en">Entire run</source>
+        <target>Весь запуск</target>
       </trans-unit>
       <trans-unit id="testing.coverageForTest">
         <source xml:lang="en">Showing "{0}"</source>
@@ -965,6 +965,10 @@
         <source xml:lang="en">No tests were found in this file.</source>
         <target>У цьому файлі не знайдено жодних тестів.</target>
       </trans-unit>
+      <trans-unit id="testingRunningBadge">
+        <source xml:lang="en">Tests are running</source>
+        <target>Тести виконуються</target>
+      </trans-unit>
       <trans-unit id="testingSelectConfig">
         <source xml:lang="en">Select Configuration...</source>
         <target>Виберіть конфігурацію...</target>
@@ -1052,6 +1056,10 @@ Please make sure the markdown extension is enabled.</source>
       <trans-unit id="testing.coveredGutterBackground">
         <source xml:lang="en">Gutter color of regions where code was covered.</source>
         <target>Колір жолоба регіонів, де код був покритий.</target>
+      </trans-unit>
+      <trans-unit id="testing.coveredMinimapBackground">
+        <source xml:lang="en">Minimap color of regions where code was covered.</source>
+        <target>Колір міні-карти регіонів, де код був покритий.</target>
       </trans-unit>
       <trans-unit id="testing.iconErrored">
         <source xml:lang="en">Color for the 'Errored' icon in the test explorer.</source>
@@ -1157,6 +1165,10 @@ Please make sure the markdown extension is enabled.</source>
         <source xml:lang="en">Gutter color of regions where code not covered.</source>
         <target>Колір жолоба регіонів, де код не покритий.</target>
       </trans-unit>
+      <trans-unit id="testing.uncoveredMinimapBackground">
+        <source xml:lang="en">Minimap color of regions where code was not covered.</source>
+        <target>Колір міні-карти регіонів, де код не був покритий.</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/testing/common/configuration" source-language="en" datatype="plaintext" target-language="uk">
@@ -1216,6 +1228,10 @@ Please make sure the markdown extension is enabled.</source>
       <trans-unit id="testing.coverageBarThresholds">
         <source xml:lang="en">Configures the colors used for percentages in test coverage bars.</source>
         <target>Налаштовує кольори, що використовуються для відсотків у графіках покриття тестами.</target>
+      </trans-unit>
+      <trans-unit id="testing.coverageMinimapEnabled">
+        <source xml:lang="en">Controls whether coverage indicators are shown in the minimap.</source>
+        <target>Контролює, чи відображаються індикатори покриття на міні-карті.</target>
       </trans-unit>
       <trans-unit id="testing.coverageToolbarEnabled">
         <source xml:lang="en">Controls whether the coverage toolbar is shown in the editor.</source>
@@ -1439,8 +1455,24 @@ Please make sure the markdown extension is enabled.</source>
         <target>Не знайдено тестів у файлах</target>
       </trans-unit>
       <trans-unit id="runTestTool.userDescription">
-        <source xml:lang="en">Runs unit tests (optionally with coverage)</source>
-        <target>Запускає модульні тести (опційно з покриттям)</target>
+        <source xml:lang="en">Run unit tests (optionally with coverage)</source>
+        <target>Запустіть модульні тести (за бажанням з покриттям)</target>
+      </trans-unit>
+      <trans-unit id="testFailureTool.displayName">
+        <source xml:lang="en">Test failures</source>
+        <target>Тестові помилки</target>
+      </trans-unit>
+      <trans-unit id="testFailureTool.invocation">
+        <source xml:lang="en">Finding test failures</source>
+        <target>Виявлення помилок тестування</target>
+      </trans-unit>
+      <trans-unit id="testFailureTool.pastTense">
+        <source xml:lang="en">Found test failures</source>
+        <target>Знайдено помилки тестування</target>
+      </trans-unit>
+      <trans-unit id="testFailureTool.userDescription">
+        <source xml:lang="en">Include test failure information</source>
+        <target>Включити інформацію про невдачі тесту</target>
       </trans-unit>
     </body>
   </file>
@@ -1551,8 +1583,8 @@ Please make sure the markdown extension is enabled.</source>
         <target>Тип меню, в якому існує підменю налаштування профілю тестування. Або "run", "debug" або "coverage"</target>
       </trans-unit>
       <trans-unit id="testing.supportsContinuousRun">
-        <source xml:lang="en">Indicates whether continous test running is supported</source>
-        <target>Вказує, чи підтримується безперервне виконання тестів.</target>
+        <source xml:lang="en">Indicates whether continuous test running is supported</source>
+        <target>Вказує, чи підтримується безперервне виконання тестів</target>
       </trans-unit>
       <trans-unit id="testing.testId">
         <source xml:lang="en">ID of the current test item, set when creating or opening menus on test items</source>

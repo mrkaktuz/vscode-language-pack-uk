@@ -87,22 +87,6 @@
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/editor/browser/services/hoverService/hoverWidget" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="hoverhint">
-        <source xml:lang="en">Hold {0} key to mouse over</source>
-        <target>Утримуйте {0} клавішу, щоб навести курсор миші</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/editor/browser/services/hoverService/updatableHoverWidget" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="iconLabel.loading">
-        <source xml:lang="en">Loading...</source>
-        <target>Завантаження...</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/editor/browser/services/inlineCompletionsService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="action.inlineSuggest.cancelSnooze">
@@ -118,8 +102,8 @@
         <target>Чи наразі вимкнені вбудовані завершення</target>
       </trans-unit>
       <trans-unit id="snooze.placeholder">
-        <source xml:lang="en">Select snooze duration for Code completions and NES</source>
-        <target>Виберіть тривалість відкладання для завершення коду та NES</target>
+        <source xml:lang="en">Select snooze duration for Inline Suggestions</source>
+        <target>Виберіть тривалість відкладання для Інлайн-пропозицій</target>
       </trans-unit>
     </body>
   </file>
@@ -628,6 +612,10 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
         <source xml:lang="en">Turn off Word Based Suggestions.</source>
         <target>Вимкнути пропозиції на основі слів.</target>
       </trans-unit>
+      <trans-unit id="wordBasedSuggestions.offWithInlineSuggestions">
+        <source xml:lang="en">Turn off Word Based Suggestions when Inline Suggestions are present.</source>
+        <target>Вимкніть пропозиції на основі слів, коли присутні вбудовані пропозиції.</target>
+      </trans-unit>
       <trans-unit id="wordWrap.inherit">
         <source xml:lang="en">Lines will wrap according to the {0} setting.</source>
         <target>Рядки будуть обгортатися відповідно до налаштування {0}.</target>
@@ -851,6 +839,10 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <trans-unit id="deprecated">
         <source xml:lang="en">This setting is deprecated, please use separate settings like 'editor.suggest.showKeywords' or 'editor.suggest.showSnippets' instead.</source>
         <target>Це налаштування застаріло, будь ласка, використовуйте окремі налаштування, такі як 'editor.suggest.showKeywords' або 'editor.suggest.showSnippets'.</target>
+      </trans-unit>
+      <trans-unit id="doubleClickSelectsBlock">
+        <source xml:lang="en">Controls whether double-clicking next to a bracket or quote selects the content inside.</source>
+        <target>Контролює, чи подвійне клацання поруч із дужкою або лапками вибирає вміст всередині.</target>
       </trans-unit>
       <trans-unit id="dragAndDrop">
         <source xml:lang="en">Controls whether the editor should allow moving selections via drag and drop.</source>
@@ -1320,6 +1312,10 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
         <source xml:lang="en">Controls the condition for turning on Find in Selection automatically.</source>
         <target>Контролює умову для автоматичного ввімкнення функції 'Знайти в виборі'.</target>
       </trans-unit>
+      <trans-unit id="find.closeOnResult">
+        <source xml:lang="en">Controls whether the Find Widget closes after an explicit find navigation command lands on a result.</source>
+        <target>Контролює, чи закривається віджет пошуку після того, як явна команда навігації пошуку приземляється на результат.</target>
+      </trans-unit>
       <trans-unit id="find.cursorMoveOnType">
         <source xml:lang="en">Controls whether the cursor should jump to find matches while typing.</source>
         <target>Контролює, чи повинен курсор стрибати для пошуку збігів під час введення.</target>
@@ -1444,9 +1440,25 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
         <source xml:lang="en">Controls whether the hover is shown.</source>
         <target>Контролює, чи відображається наведення.</target>
       </trans-unit>
+      <trans-unit id="hover.enabled.off">
+        <source xml:lang="en">Hover is disabled.</source>
+        <target>Наведення курсору вимкнено.</target>
+      </trans-unit>
+      <trans-unit id="hover.enabled.on">
+        <source xml:lang="en">Hover is enabled.</source>
+        <target>Наведення ввімкнено.</target>
+      </trans-unit>
+      <trans-unit id="hover.enabled.onKeyboardModifier">
+        <source xml:lang="en">Hover is shown when holding `{0}` or `Alt` (the opposite modifier of `#editor.multiCursorModifier#`)</source>
+        <target>Ховер відображається при утримуванні `{0}` або `Alt` (протилежний модифікатор до `#editor.multiCursorModifier#`)</target>
+      </trans-unit>
       <trans-unit id="hover.hidingDelay">
         <source xml:lang="en">Controls the delay in milliseconds after which the hover is hidden. Requires `#editor.hover.sticky#` to be enabled.</source>
         <target>Контролює затримку в мілісекундах, після якої ховер приховується. Потрібно, щоб `#editor.hover.sticky#` був увімкнений.</target>
+      </trans-unit>
+      <trans-unit id="hover.showLongLineWarning">
+        <source xml:lang="en">Controls whether long line warning hovers are shown, such as when tokenization is skipped or rendering is paused.</source>
+        <target>Контролює, чи відображаються попередження про довгі рядки, такі як у випадках, коли токенізація пропущена або рендеринг призупинено.</target>
       </trans-unit>
       <trans-unit id="hover.sticky">
         <source xml:lang="en">Controls whether the hover should remain visible when mouse is moved over it.</source>
@@ -1495,6 +1507,10 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <trans-unit id="inlineSuggest.edits.showCollapsed">
         <source xml:lang="en">Controls whether the suggestion will show as collapsed until jumping to it.</source>
         <target>Контролює, чи буде пропозиція показуватися у згорнутому вигляді, поки не буде здійснено перехід до неї.</target>
+      </trans-unit>
+      <trans-unit id="inlineSuggest.edits.showLongDistanceHint">
+        <source xml:lang="en">Controls whether long distance inline suggestions are shown.</source>
+        <target>Контролює, чи відображаються довгі дистанційні вбудовані пропозиції.</target>
       </trans-unit>
       <trans-unit id="inlineSuggest.emptyResponseInformation">
         <source xml:lang="en">Controls whether to send request information from the inline suggestion provider.</source>
@@ -1748,6 +1764,10 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
         <source xml:lang="en">Quick suggestions are disabled</source>
         <target>Швидкі пропозиції вимкнені</target>
       </trans-unit>
+      <trans-unit id="offWhenInlineCompletions">
+        <source xml:lang="en">Quick suggestions are disabled when inline completions are showing</source>
+        <target>Швидкі пропозиції вимкнені, коли відображаються вбудовані завершення.</target>
+      </trans-unit>
       <trans-unit id="on">
         <source xml:lang="en">Quick suggestions show inside the suggest widget</source>
         <target>Швидкі пропозиції відображаються всередині віджету пропозицій</target>
@@ -1823,6 +1843,22 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <trans-unit id="quickSuggestions.strings">
         <source xml:lang="en">Enable quick suggestions inside strings.</source>
         <target>Увімкніть швидкі підказки всередині рядків.</target>
+      </trans-unit>
+      <trans-unit id="quickSuggestions.topLevel.inline">
+        <source xml:lang="en">Quick suggestions show as ghost text for all token types</source>
+        <target>Швидкі пропозиції відображаються як призраковий текст для всіх типів токенів.</target>
+      </trans-unit>
+      <trans-unit id="quickSuggestions.topLevel.off">
+        <source xml:lang="en">Quick suggestions are disabled for all token types</source>
+        <target>Швидкі пропозиції вимкнені для всіх типів токенів.</target>
+      </trans-unit>
+      <trans-unit id="quickSuggestions.topLevel.offWhenInlineCompletions">
+        <source xml:lang="en">Quick suggestions are disabled for all token types when inline completions are showing</source>
+        <target>Швидкі пропозиції вимкнені для всіх типів токенів, коли відображаються вбудовані завершення.</target>
+      </trans-unit>
+      <trans-unit id="quickSuggestions.topLevel.on">
+        <source xml:lang="en">Quick suggestions are enabled for all token types</source>
+        <target>Швидкі пропозиції увімкнені для всіх типів токенів.</target>
       </trans-unit>
       <trans-unit id="quickSuggestionsDelay">
         <source xml:lang="en">Controls the delay in milliseconds after which quick suggestions will show up.</source>
@@ -2403,6 +2439,10 @@ char* str="hello\n
         <source xml:lang="en">Color for matching brackets boxes</source>
         <target>Колір для відповідності рамок дужок</target>
       </trans-unit>
+      <trans-unit id="editorBracketMatchForeground">
+        <source xml:lang="en">Foreground color for matching brackets</source>
+        <target>Колір переднього плану для відповідних дужок</target>
+      </trans-unit>
       <trans-unit id="editorBracketPairGuide.activeBackground1">
         <source xml:lang="en">Background color of active bracket pair guides (1). Requires enabling bracket pair guides.</source>
         <target>Колір фону активних підказок пар дужок (1). Потрібно увімкнути підказки пар дужок.</target>
@@ -2550,6 +2590,10 @@ char* str="hello\n
       <trans-unit id="editorWhitespaces">
         <source xml:lang="en">Color of whitespace characters in the editor.</source>
         <target>Колір пробільних символів в редакторі.</target>
+      </trans-unit>
+      <trans-unit id="inactiveLineHighlight">
+        <source xml:lang="en">Background color for the highlight of line at the cursor position when the editor is not focused.</source>
+        <target>Колір фону для виділення рядка в позиції курсора, коли редактор не має фокусу.</target>
       </trans-unit>
       <trans-unit id="lineHighlight">
         <source xml:lang="en">Background color for the highlight of line at the cursor position.</source>
@@ -2743,6 +2787,10 @@ char* str="hello\n
         <source xml:lang="en">Whether the editor is read-only</source>
         <target>Чи редактор є лише для читання</target>
       </trans-unit>
+      <trans-unit id="editorSelectionHasDiagnostics">
+        <source xml:lang="en">Whether any diagnostic is present in the current editor selection</source>
+        <target>Чи присутня яка-небудь діагностика у виборі редактора на даний момент</target>
+      </trans-unit>
       <trans-unit id="editorTabMovesFocus">
         <source xml:lang="en">Whether `Tab` will move focus out of the editor</source>
         <target>Чи перемістить `Tab` фокус за межі редактора</target>
@@ -2758,6 +2806,14 @@ char* str="hello\n
       <trans-unit id="inDiffEditor">
         <source xml:lang="en">Whether the context is a diff editor</source>
         <target>Чи є контекстом редактор відмінностей</target>
+      </trans-unit>
+      <trans-unit id="inMultiDiffEditor">
+        <source xml:lang="en">Whether the context is a multi diff editor</source>
+        <target>Чи є контекстом редактор з кількома дифами</target>
+      </trans-unit>
+      <trans-unit id="isComposing">
+        <source xml:lang="en">Whether the editor is in the composition mode</source>
+        <target>Чи знаходиться редактор у режимі композиції</target>
       </trans-unit>
       <trans-unit id="isEmbeddedDiffEditor">
         <source xml:lang="en">Whether the context is an embedded diff editor</source>
@@ -3043,6 +3099,10 @@ char* str="hello\n
         <source xml:lang="en">Accessibility Help</source>
         <target>Допомога з доступністю</target>
       </trans-unit>
+      <trans-unit id="announceCursorPosition">
+        <source xml:lang="en">Run the command: Announce Cursor Position{0} to hear the current line and column.</source>
+        <target>Виконайте команду: Announce Cursor Position{0}, щоб почути поточний рядок і стовпець.</target>
+      </trans-unit>
       <trans-unit id="auto_off">
         <source xml:lang="en">The application is configured to never be optimized for usage with a Screen Reader.</source>
         <target>Застосунок налаштовано так, щоб ніколи не оптимізуватися для використання з екранним читачем.</target>
@@ -3115,6 +3175,10 @@ char* str="hello\n
         <source xml:lang="en">Editor content</source>
         <target>Вміст редактора</target>
       </trans-unit>
+      <trans-unit id="focusNotifications">
+        <source xml:lang="en">Focus notification toasts{0} to navigate them with the keyboard. Accept the primary action of a focused notification{1}.</source>
+        <target>Сконцентруйтеся на сповіщеннях {0}, щоб переміщатися між ними за допомогою клавіатури. Прийміть основну дію сфокусованого сповіщення {1}.</target>
+      </trans-unit>
       <trans-unit id="goToSymbol">
         <source xml:lang="en">Go to Symbol{0} to quickly navigate between symbols in the current file.</source>
         <target>Перейдіть до Symbol{0}, щоб швидко переміщатися між символами в поточному файлі.</target>
@@ -3122,6 +3186,10 @@ char* str="hello\n
       <trans-unit id="gotoLineActionLabel">
         <source xml:lang="en">Go to Line/Column...</source>
         <target>Перейти до рядка/стовпця...</target>
+      </trans-unit>
+      <trans-unit id="gotoOffsetActionLabel">
+        <source xml:lang="en">Go to Offset...</source>
+        <target>Перейти до Зсув...</target>
       </trans-unit>
       <trans-unit id="helpQuickAccess">
         <source xml:lang="en">Show all Quick Access Providers</source>
@@ -3200,8 +3268,8 @@ char* str="hello\n
         <target>Зосередьтеся на Sticky Scroll{0}, щоб зосередитися на поточних вкладених областях.</target>
       </trans-unit>
       <trans-unit id="suggestActionsKb">
-        <source xml:lang="en">Trigger the suggest widget{0} to show possible code completions.</source>
-        <target>Запустіть віджет пропозицій{0}, щоб показати можливі завершення коду.</target>
+        <source xml:lang="en">Trigger the suggest widget{0} to show possible inline suggestions.</source>
+        <target>Запустіть віджет пропозицій{0}, щоб показати можливі вбудовані пропозиції.</target>
       </trans-unit>
       <trans-unit id="tabFocusModeOffMsg">
         <source xml:lang="en">Pressing Tab in the current editor will insert the tab character. Toggle this behavior{0}.</source>

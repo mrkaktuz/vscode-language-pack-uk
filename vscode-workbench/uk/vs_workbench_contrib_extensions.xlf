@@ -586,6 +586,10 @@
         <source xml:lang="en">Configure an extension to execute in a different extension host process.</source>
         <target>Налаштуйте розширення для виконання в іншому процесі хоста розширень.</target>
       </trans-unit>
+      <trans-unit id="extensions.allowOpenInModalEditor">
+        <source xml:lang="en">Controls whether extensions and MCP servers open in a modal editor overlay.</source>
+        <target>Контролює, чи відкриваються розширення та сервери MCP у модальному редакторі накладення.</target>
+      </trans-unit>
       <trans-unit id="extensions.autoUpdate">
         <source xml:lang="en">Controls the automatic update behavior of extensions. The updates are fetched from a Microsoft online service.</source>
         <target>Контролює автоматичну поведінку оновлень розширень. Оновлення отримуються з онлайн-сервісу Microsoft.</target>
@@ -661,6 +665,10 @@
       <trans-unit id="extensionsInQuickAccess">
         <source xml:lang="en">When enabled, extensions can be searched for via Quick Access and report issues from there.</source>
         <target>Коли увімкнено, розширення можна шукати через Швидкий доступ і повідомляти про проблеми звідти.</target>
+      </trans-unit>
+      <trans-unit id="extensionsRequestTimeout">
+        <source xml:lang="en">Controls the timeout in milliseconds for HTTP requests made when fetching extensions from the Marketplace</source>
+        <target>Контролює тайм-аут у мілісекундах для HTTP-запитів, що виконуються під час отримання розширень з Marketplace.</target>
       </trans-unit>
       <trans-unit id="extensionsShowRecommendationsOnlyOnDemand_Deprecated">
         <source xml:lang="en">This setting is deprecated. Use extensions.ignoreRecommendations setting to control recommendation notifications. Use Extensions view's visibility actions to hide Recommended view by default.</source>
@@ -1043,14 +1051,6 @@
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/extensions/browser/extensions.web.contribution" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="runtimeExtension">
-        <source xml:lang="en">Running Extensions</source>
-        <target>Запуск розширень</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/workbench/contrib/extensions/browser/extensionsActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="Cannot be enabled">
@@ -1159,6 +1159,22 @@
         <source xml:lang="en">This extension is deprecated as this functionality is now built-in to VS Code. Configure these {0} to use this functionality.</source>
         <target>Це розширення застаріле, оскільки ця функціональність тепер вбудована у VS Code. Налаштуйте ці {0}, щоб використовувати цю функціональність.</target>
       </trans-unit>
+      <trans-unit id="disableAIGloballyAction">
+        <source xml:lang="en">Disable AI Features</source>
+        <target>Вимкнути функції ШІ</target>
+      </trans-unit>
+      <trans-unit id="disableAIGloballyActionToolTip">
+        <source xml:lang="en">Disable AI features</source>
+        <target>Вимкнути функції ШІ</target>
+      </trans-unit>
+      <trans-unit id="disableAIInWorkspaceAction">
+        <source xml:lang="en">Disable AI Features (Workspace)</source>
+        <target>Вимкнути функції ШІ (Робоча область)</target>
+      </trans-unit>
+      <trans-unit id="disableAIInWorkspaceActionToolTip">
+        <source xml:lang="en">Disable AI features in this workspace</source>
+        <target>Вимкніть функції ШІ в цьому робочому просторі</target>
+      </trans-unit>
       <trans-unit id="disableAutoUpdate">
         <source xml:lang="en">Disabled auto updates for</source>
         <target>Вимкнути автоматичне оновлення для всіх розширень</target>
@@ -1202,6 +1218,22 @@
       <trans-unit id="download">
         <source xml:lang="en">Try Downloading Manually...</source>
         <target>Спробуйте завантажити вручну...</target>
+      </trans-unit>
+      <trans-unit id="enableAIGloballyAction">
+        <source xml:lang="en">Enable AI Features</source>
+        <target>Увімкнути функції ШІ</target>
+      </trans-unit>
+      <trans-unit id="enableAIGloballyActionToolTip">
+        <source xml:lang="en">Enable AI features</source>
+        <target>Увімкнути функції ШІ</target>
+      </trans-unit>
+      <trans-unit id="enableAIInWorkspaceAction">
+        <source xml:lang="en">Enable AI Features (Workspace)</source>
+        <target>Увімкнути функції ШІ (Робочий простір)</target>
+      </trans-unit>
+      <trans-unit id="enableAIInWorkspaceActionToolTip">
+        <source xml:lang="en">Enable AI features in this workspace</source>
+        <target>Увімкніть функції ШІ в цьому робочому просторі</target>
       </trans-unit>
       <trans-unit id="enableAutoUpdate">
         <source xml:lang="en">Enabled auto updates for</source>
@@ -1255,6 +1287,10 @@
         <source xml:lang="en">This extension has been disabled because the current workspace is not trusted.</source>
         <target>Цю розширення було вимкнено, оскільки поточне робоче середовище не є надійним.</target>
       </trans-unit>
+      <trans-unit id="extension disabled because of unification">
+        <source xml:lang="en">All GitHub Copilot functionality is now being served from the GitHub Copilot Chat extension. To temporarily opt out of this extension unification, toggle the {0} setting.</source>
+        <target>Вся функціональність GitHub Copilot тепер надається через розширення GitHub Copilot Chat. Щоб тимчасово відмовитися від цієї уніфікації розширення, перемкніть налаштування {0}.</target>
+      </trans-unit>
       <trans-unit id="extension enabled on remote">
         <source xml:lang="en">Extension is enabled on '{0}'</source>
         <target>Розширення увімкнено на '{0}'</target>
@@ -1270,6 +1306,10 @@
       <trans-unit id="extensionButtonBackground">
         <source xml:lang="en">Button background color for extension actions.</source>
         <target>Колір фону кнопки для дій розширення.</target>
+      </trans-unit>
+      <trans-unit id="extensionButtonBorder">
+        <source xml:lang="en">Button border color for extension actions.</source>
+        <target>Колір межі кнопки для дій розширення.</target>
       </trans-unit>
       <trans-unit id="extensionButtonForeground">
         <source xml:lang="en">Button foreground color for extension actions.</source>
@@ -1502,6 +1542,10 @@
       <trans-unit id="restart product">
         <source xml:lang="en">Restart to Update</source>
         <target>Перезавантажити для оновлення</target>
+      </trans-unit>
+      <trans-unit id="restartExtensionHost.reason.disable">
+        <source xml:lang="en">Disabling AI features</source>
+        <target>Вимкнення функцій ШІ</target>
       </trans-unit>
       <trans-unit id="review">
         <source xml:lang="en">Review</source>
@@ -1783,6 +1827,10 @@ Would you like to update the extension?</source>
         <source xml:lang="en">Icon to indicate that an extension is remote in the extensions view and editor.</source>
         <target>Іконка, що вказує на те, що розширення є віддаленим у перегляді та редакторі розширень.</target>
       </trans-unit>
+      <trans-unit id="restartRequiredIcon">
+        <source xml:lang="en">Icon shown when an extension requires a restart in the extensions view.</source>
+        <target>Іконка, що відображається, коли розширення потребує перезавантаження в перегляді розширень.</target>
+      </trans-unit>
       <trans-unit id="sponsorIcon">
         <source xml:lang="en">Icon used for sponsoring extensions in the extensions view and editor.</source>
         <target>Іконка, що використовується для спонсорування розширень у перегляді розширень та редакторі.</target>
@@ -1915,10 +1963,6 @@ Would you like to update the extension?</source>
         <source xml:lang="en">Disabled</source>
         <target>Вимкнено</target>
       </trans-unit>
-      <trans-unit id="dismiss">
-        <source xml:lang="en">Dismiss</source>
-        <target>Відхилити</target>
-      </trans-unit>
       <trans-unit id="enabled">
         <source xml:lang="en">Enabled</source>
         <target>Тільки увімкнені розширення</target>
@@ -2008,6 +2052,10 @@ Would you like to update the extension?</source>
         <note>Remote as in remote machine</note>
         <target>Віддалений</target>
       </trans-unit>
+      <trans-unit id="restart required">
+        <source xml:lang="en">Restart Required</source>
+        <target>Необхідний перезапуск</target>
+      </trans-unit>
       <trans-unit id="restartNow">
         <source xml:lang="en">Restart Extensions</source>
         <target>Перезапустити розширення</target>
@@ -2088,10 +2136,6 @@ Would you like to update the extension?</source>
         <source xml:lang="en">{0} Showing local extensions.</source>
         <target>{0} Показуючи локальні розширення.</target>
       </trans-unit>
-      <trans-unit id="showingExtensionsForFeature">
-        <source xml:lang="en">Extensions using {0} in the last 30 days</source>
-        <target>Розширення, що використовують {0} за останні 30 днів</target>
-      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/extensions/browser/extensionsWidgets" source-language="en" datatype="plaintext" target-language="uk">
@@ -2171,6 +2215,10 @@ Would you like to update the extension?</source>
       <trans-unit id="remote extension title">
         <source xml:lang="en">Extension in {0}</source>
         <target>Розширення в {0}</target>
+      </trans-unit>
+      <trans-unit id="restart required">
+        <source xml:lang="en">Restart Required</source>
+        <target>Необхідний перезапуск</target>
       </trans-unit>
       <trans-unit id="sponsor">
         <source xml:lang="en">Sponsor</source>
@@ -2322,6 +2370,14 @@ Would you like to update the extension?</source>
         <source xml:lang="en">Extension '{0}' not found.</source>
         <target>Розширення '{0}' не знайдено.</target>
       </trans-unit>
+      <trans-unit id="extensions need reload">
+        <source xml:lang="en">Extensions require a window reload to take effect.</source>
+        <target>Розширення потребують перезавантаження вікна, щоб набрати чинності.</target>
+      </trans-unit>
+      <trans-unit id="extensions need restart">
+        <source xml:lang="en">Extensions require a restart to take effect.</source>
+        <target>Розширення потребують перезавантаження для набуття чинності.</target>
+      </trans-unit>
       <trans-unit id="extensionsAutoRestart">
         <source xml:lang="en">Extensions were auto restarted to enable updates.</source>
         <target>Розширення були автоматично перезапущені для активації оновлень.</target>
@@ -2444,6 +2500,10 @@ Would you like to update the extension?</source>
         <source xml:lang="en">reload window</source>
         <target>Перезавантажити вікно</target>
       </trans-unit>
+      <trans-unit id="reload window">
+        <source xml:lang="en">Reload Window</source>
+        <target>Перезавантажити вікно</target>
+      </trans-unit>
       <trans-unit id="report issue">
         <source xml:lang="en">If this issue persists, please report it at {0}</source>
         <target>Повідомити про проблему</target>
@@ -2454,6 +2514,10 @@ Would you like to update the extension?</source>
       </trans-unit>
       <trans-unit id="restart extensions">
         <source xml:lang="en">restart extensions</source>
+        <target>Перезапустити розширення</target>
+      </trans-unit>
+      <trans-unit id="restart extensions action">
+        <source xml:lang="en">Restart Extensions</source>
         <target>Перезапустити розширення</target>
       </trans-unit>
       <trans-unit id="selectVersion">
@@ -2598,38 +2662,6 @@ Would you like to update the extension?</source>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/extensions/common/installExtensionsTool" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="installExtensionsTool.confirmationMessage">
-        <source xml:lang="en">Review the suggested extensions and click the **Install** button for each extension you wish to add. Once you have finished installing the selected extensions, click **Continue** to proceed.</source>
-        <target>Перегляньте запропоновані розширення та натисніть кнопку **Встановити** для кожного розширення, яке ви бажаєте додати. Після завершення встановлення вибраних розширень натисніть **Продовжити**, щоб продовжити.</target>
-      </trans-unit>
-      <trans-unit id="installExtensionsTool.confirmationTitle">
-        <source xml:lang="en">Install Extensions</source>
-        <target>Встановити розширення</target>
-      </trans-unit>
-      <trans-unit id="installExtensionsTool.displayName">
-        <source xml:lang="en">Install Extensions</source>
-        <target>Встановити розширення</target>
-      </trans-unit>
-      <trans-unit id="installExtensionsTool.modelDescription">
-        <source xml:lang="en">This is a tool for installing extensions in Visual Studio Code. You should provide the list of extension ids to install. The identifier of an extension is '${ publisher }.${ name }' for example: 'vscode.csharp'.</source>
-        <target>Це інструмент для встановлення розширень у Visual Studio Code. Ви повинні надати список ідентифікаторів розширень для встановлення. Ідентифікатором розширення є '${ publisher }.${ name }', наприклад: 'vscode.csharp'.</target>
-      </trans-unit>
-      <trans-unit id="installExtensionsTool.noResultMessage">
-        <source xml:lang="en">No extensions were installed.</source>
-        <target>Не було встановлено жодних розширень.</target>
-      </trans-unit>
-      <trans-unit id="installExtensionsTool.resultMessage">
-        <source xml:lang="en">Following extensions are installed: {0}</source>
-        <target>Встановлені наступні розширення: {0}</target>
-      </trans-unit>
-      <trans-unit id="installExtensionsTool.userDescription">
-        <source xml:lang="en">Tool for installing extensions</source>
-        <target>Інструмент для встановлення розширень</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/workbench/contrib/extensions/common/reportExtensionIssueAction" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="reportExtensionIssue">
@@ -2656,10 +2688,6 @@ Would you like to update the extension?</source>
         <source xml:lang="en">Search Extensions</source>
         <target>Пошук розширень</target>
       </trans-unit>
-      <trans-unit id="searchExtensionsTool.modelDescription">
-        <source xml:lang="en">This is a tool for browsing Visual Studio Code Extensions Marketplace. It allows the model to search for extensions and retrieve detailed information about them. The model should use this tool whenever it needs to discover extensions or resolve information about known ones. To use the tool, the model has to provide the category of the extensions, relevant search keywords, or known extension IDs. Note that search results may include false positives, so reviewing and filtering is recommended.</source>
-        <target>Це інструмент для перегляду маркетплейсу розширень Visual Studio Code. Він дозволяє моделі шукати розширення та отримувати детальну інформацію про них. Модель повинна використовувати цей інструмент щоразу, коли їй потрібно виявити розширення або отримати інформацію про відомі. Щоб використовувати інструмент, модель повинна надати категорію розширень, відповідні ключові слова для пошуку або відомі ідентифікатори розширень. Зверніть увагу, що результати пошуку можуть включати помилкові сповіщення, тому рекомендується перегляд і фільтрація.</target>
-      </trans-unit>
       <trans-unit id="searchExtensionsTool.noInput">
         <source xml:lang="en">Please provide a category or keywords or ids to search for.</source>
         <target>Будь ласка, надайте категорію або ключові слова, або ідентифікатори для пошуку.</target>
@@ -2683,6 +2711,22 @@ Would you like to update the extension?</source>
       <trans-unit id="debugExtensionHost.progress">
         <source xml:lang="en">Attaching Debugger To Extension Host</source>
         <target>Приєднання налагоджувача до хоста розширення</target>
+      </trans-unit>
+      <trans-unit id="debugExtensionHostAndRenderer">
+        <source xml:lang="en">Debug Extension Host and Renderer In New Window</source>
+        <target>Налагодження хосту розширення та рендерера у новому вікні</target>
+      </trans-unit>
+      <trans-unit id="debugRenderer">
+        <source xml:lang="en">Debug Renderer In New Window</source>
+        <target>Відлагоджувач рендерера в новому вікні</target>
+      </trans-unit>
+      <trans-unit id="debugRenderer.launch.name">
+        <source xml:lang="en">Attach Renderer</source>
+        <target>Прикріпити рендерер</target>
+      </trans-unit>
+      <trans-unit id="debugRenderer.progress">
+        <source xml:lang="en">Attaching Debugger To Renderer</source>
+        <target>Приєднання налагоджувача до рендерера</target>
       </trans-unit>
       <trans-unit id="openDevToolsForExtensionHost">
         <source xml:lang="en">Debug Extension Host In Dev Tools</source>

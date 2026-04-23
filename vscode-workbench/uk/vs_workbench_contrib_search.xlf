@@ -108,14 +108,6 @@
   </file>
   <file original="src/vs/workbench/contrib/search/browser/search.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="anythingQuickAccess">
-        <source xml:lang="en">Go to File</source>
-        <target>Перейти до Файлу</target>
-      </trans-unit>
-      <trans-unit id="anythingQuickAccessPlaceholder">
-        <source xml:lang="en">Search files by name (append {0} to go to line or {1} to go to symbol)</source>
-        <target>Шукати файли за назвою (додайте {0}, щоб перейти до рядка, або {1}, щоб перейти до символу)</target>
-      </trans-unit>
       <trans-unit id="exclude">
         <source xml:lang="en">Configure [glob patterns](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options) for excluding files and folders in fulltext searches and file search in quick open. To exclude files from the recently opened list in quick open, patterns must be absolute (for example `**/node_modules/**`). Inherits all glob patterns from the `#files.exclude#` setting.</source>
         <target>Налаштуйте [глобальні шаблони](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options) для виключення файлів і папок у повнотекстових пошуках та пошуку файлів у швидкому відкритті. Щоб виключити файли зі списку нещодавно відкритих у швидкому відкритті, шаблони повинні бути абсолютними (наприклад, `**/node_modules/**`). Спадкує всі глобальні шаблони з налаштування `#files.exclude#`.</target>
@@ -379,14 +371,6 @@
         <source xml:lang="en">Results are sorted by file extensions, in alphabetical order.</source>
         <target>Результати відсортовані за розширеннями файлів у алфавітному порядку.</target>
       </trans-unit>
-      <trans-unit id="symbolsQuickAccess">
-        <source xml:lang="en">Go to Symbol in Workspace</source>
-        <target>Перейти до символу в робочому просторі</target>
-      </trans-unit>
-      <trans-unit id="symbolsQuickAccessPlaceholder">
-        <source xml:lang="en">Type the name of a symbol to open.</source>
-        <target>Введіть назву символу для відкриття.</target>
-      </trans-unit>
       <trans-unit id="textSearchPickerHelp">
         <source xml:lang="en">Search for Text</source>
         <target>Шукати текст</target>
@@ -418,6 +402,230 @@
       <trans-unit id="useRipgrepDeprecated">
         <source xml:lang="en">Deprecated. Consider "search.usePCRE2" for advanced regex feature support.</source>
         <target>Застаріло. Розгляньте "search.usePCRE2" для підтримки розширених функцій regex.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/search/browser/searchAccessibilityHelp" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="search.closingDesc">
+        <source xml:lang="en">Press Escape to close Search. Focus returns to the editor, and your search history is preserved.</source>
+        <target>Натисніть Escape, щоб закрити пошук. Фокус повертається до редактора, а ваша історія пошуку зберігається.</target>
+      </trans-unit>
+      <trans-unit id="search.closingHeader">
+        <source xml:lang="en">Closing:</source>
+        <target>Закриття:</target>
+      </trans-unit>
+      <trans-unit id="search.context">
+        <source xml:lang="en">You are in the Search view. This workspace-wide tool lets you find text or patterns across all files in your workspace.</source>
+        <target>Ви в режимі пошуку. Цей інструмент для всього робочого простору дозволяє вам знаходити текст або шаблони у всіх файлах вашого робочого простору.</target>
+      </trans-unit>
+      <trans-unit id="search.focusDesc1">
+        <source xml:lang="en">When you navigate from the Search input, the editor updates while your focus stays in the search field. This is intentional, so you can keep refining your search without losing your place.</source>
+        <target>Коли ви переходите з поля пошуку, редактор оновлюється, поки ваш фокус залишається в полі пошуку. Це зроблено навмисно, щоб ви могли продовжувати уточнювати свій пошук, не втрачаючи своє місце.</target>
+      </trans-unit>
+      <trans-unit id="search.focusDesc2">
+        <source xml:lang="en">If you press Tab, focus moves to the results tree below the input, and you can navigate results and open them. When you press Enter on a result, the match is shown in the editor.</source>
+        <target>Якщо ви натиснете Tab, фокус переміститься до дерева результатів нижче введення, і ви зможете навігувати по результатах та відкривати їх. Коли ви натискаєте Enter на результаті, збіг відображається в редакторі.</target>
+      </trans-unit>
+      <trans-unit id="search.focusDesc3">
+        <source xml:lang="en">If you want to focus the editor to edit text at a search result, use {0} to navigate to the result and automatically focus the editor there.</source>
+        <target>Якщо ви хочете зосередити редактор на редагуванні тексту в результаті пошуку, використовуйте {0}, щоб перейти до результату та автоматично зосередити редактор там.</target>
+      </trans-unit>
+      <trans-unit id="search.focusHeader">
+        <source xml:lang="en">Focus Behavior (Important):</source>
+        <target>Фокусна поведінка (важливо):</target>
+      </trans-unit>
+      <trans-unit id="search.header">
+        <source xml:lang="en">Accessibility Help: Search Across Files</source>
+        <target>Допомога з доступністю: Пошук по файлах</target>
+      </trans-unit>
+      <trans-unit id="search.hear1">
+        <source xml:lang="en">1) The file name where the result is located is read first, so you know which file contains the match.</source>
+        <target>1) Ім'я файлу, в якому знаходиться результат, читається спочатку, щоб ви знали, який файл містить збіг.</target>
+      </trans-unit>
+      <trans-unit id="search.hear2">
+        <source xml:lang="en">2) The full line that contains the match is read, so you get immediate context.</source>
+        <target>2) Читати повний рядок, що містить збіг, щоб отримати миттєвий контекст.</target>
+      </trans-unit>
+      <trans-unit id="search.hear3">
+        <source xml:lang="en">3) Your position among the results is announced, so you know how far you are through the results.</source>
+        <target>3) Ваша позиція серед результатів оголошується, тож ви знаєте, наскільки далеко ви просунулися серед результатів.</target>
+      </trans-unit>
+      <trans-unit id="search.hear4">
+        <source xml:lang="en">4) The exact line and column are announced, so you know precisely where the match is in the file.</source>
+        <target>4) Точний рядок і стовпець оголошуються, тому ви точно знаєте, де знаходиться збіг у файлі.</target>
+      </trans-unit>
+      <trans-unit id="search.hearDesc">
+        <source xml:lang="en">Each navigation step gives you a complete spoken update:</source>
+        <target>Кожен крок навігації надає вам повне усне оновлення:</target>
+      </trans-unit>
+      <trans-unit id="search.hearHeader">
+        <source xml:lang="en">What You Hear Each Time You Move to a Result:</source>
+        <target>Що ви чуєте щоразу, коли переходите до результату:</target>
+      </trans-unit>
+      <trans-unit id="search.inputDesc">
+        <source xml:lang="en">While you are in the Search input, your focus stays in the field. You can type your search term and navigate the search results list without leaving the input. When you navigate to a result, the editor updates in the background to show the match.</source>
+        <target>Поки ви знаходитесь у полі пошуку, ваш фокус залишається в цьому полі. Ви можете ввести свій пошуковий запит і переглядати список результатів пошуку, не виходячи з поля. Коли ви переходите до результату, редактор оновлюється у фоновому режимі, щоб показати відповідність.</target>
+      </trans-unit>
+      <trans-unit id="search.inputHeader">
+        <source xml:lang="en">Inside the Search Input (What It Does):</source>
+        <target>Всередині поля пошуку (Що воно робить):</target>
+      </trans-unit>
+      <trans-unit id="search.keyArrow">
+        <source xml:lang="en">- Down Arrow: Navigate through results in the tree.</source>
+        <target>- Стрілка вниз: Переміщуйтеся по результатах у дереві.</target>
+      </trans-unit>
+      <trans-unit id="search.keyEnter">
+        <source xml:lang="en">- Enter: Run or refresh the search.</source>
+        <target>- Введіть: Запустити або оновити пошук.</target>
+      </trans-unit>
+      <trans-unit id="search.keyF4">
+        <source xml:lang="en">- {0}: Jump to the next result and focus the editor.</source>
+        <target>- {0}: Перейти до наступного результату та зосередити увагу на редакторі.</target>
+      </trans-unit>
+      <trans-unit id="search.keyNavGlobalHeader">
+        <source xml:lang="en">From anywhere (Search input or editor):</source>
+        <target>З будь-якого місця (вхідний пошук або редактор):</target>
+      </trans-unit>
+      <trans-unit id="search.keyNavResultsHeader">
+        <source xml:lang="en">Navigating search results:</source>
+        <target>Огляд результатів пошуку:</target>
+      </trans-unit>
+      <trans-unit id="search.keyNavSearchHeader">
+        <source xml:lang="en">While focused IN the Search input:</source>
+        <target>Поки зосереджено в полі пошуку:</target>
+      </trans-unit>
+      <trans-unit id="search.keyResultEnter">
+        <source xml:lang="en">- Enter (when a result is focused): Navigate to that result in the editor.</source>
+        <target>- Введіть (коли результат сфокусований): Перейти до цього результату в редакторі.</target>
+      </trans-unit>
+      <trans-unit id="search.keyShiftF4">
+        <source xml:lang="en">- {0}: Jump to the previous result and focus the editor.</source>
+        <target>- {0}: Перейти до попереднього результату та зосередити увагу на редакторі.</target>
+      </trans-unit>
+      <trans-unit id="search.keyTab">
+        <source xml:lang="en">- Tab: Move focus to the results tree below.</source>
+        <target>- Tab: Перемістіть фокус на дерево результатів нижче.</target>
+      </trans-unit>
+      <trans-unit id="search.keyboardHeader">
+        <source xml:lang="en">Keyboard Navigation Summary:</source>
+        <target>Підсумок навігації з клавіатури:</target>
+      </trans-unit>
+      <trans-unit id="search.macSetting">
+        <source xml:lang="en">- `search.globalFindClipboard`: Uses the shared macOS Find clipboard when available.</source>
+        <target>- `search.globalFindClipboard`: Використовує спільний буфер обміну Find macOS, коли він доступний.</target>
+      </trans-unit>
+      <trans-unit id="search.macSettingHeader">
+        <source xml:lang="en">Platform-Specific Setting (macOS only):</source>
+        <target>Налаштування, специфічні для платформи (тільки для macOS):</target>
+      </trans-unit>
+      <trans-unit id="search.noResults">
+        <source xml:lang="en">No results found. Check your search term or adjust options below.</source>
+        <target>Не знайдено результатів. Перевірте ваш пошуковий запит або налаштуйте параметри нижче.</target>
+      </trans-unit>
+      <trans-unit id="search.noSearch">
+        <source xml:lang="en">Type a search term to find results.</source>
+        <target>Введіть пошуковий запит, щоб знайти результати.</target>
+      </trans-unit>
+      <trans-unit id="search.optionCase">
+        <source xml:lang="en">- Match Case: Only exact case matches are included.</source>
+        <target>- Враховувати регістр: Включаються лише точні збіги регістру.</target>
+      </trans-unit>
+      <trans-unit id="search.optionRegex">
+        <source xml:lang="en">- Regular Expression: Use pattern matching for advanced searches.</source>
+        <target>- Регулярний вираз: Використовуйте шаблонне співпадіння для розширених пошуків.</target>
+      </trans-unit>
+      <trans-unit id="search.optionWord">
+        <source xml:lang="en">- Whole Word: Only full words are matched.</source>
+        <target>- Повне слово: Відповідають лише повні слова.</target>
+      </trans-unit>
+      <trans-unit id="search.optionsHeader">
+        <source xml:lang="en">Search Options in the Dialog:</source>
+        <target>Параметри пошуку в діалоговому вікні:</target>
+      </trans-unit>
+      <trans-unit id="search.replaceDesc1">
+        <source xml:lang="en">Tab to the Replace input and type your replacement text.</source>
+        <target>Перейдіть до поля заміни та введіть ваш текст заміни.</target>
+      </trans-unit>
+      <trans-unit id="search.replaceDesc2">
+        <source xml:lang="en">You can replace individual matches or all matches at once.</source>
+        <target>Ви можете замінити окремі збіги або всі збіги одразу.</target>
+      </trans-unit>
+      <trans-unit id="search.replaceHeader">
+        <source xml:lang="en">Replace Across Files (Replace Mode Active):</source>
+        <target>Замінити в усіх файлах (Активний режим заміни):</target>
+      </trans-unit>
+      <trans-unit id="search.replaceWarning">
+        <source xml:lang="en">Warning: This action affects multiple files. Make sure you have searched for exactly what you want to replace.</source>
+        <target>Увага: Ця дія впливає на кілька файлів. Переконайтеся, що ви точно знайшли те, що хочете замінити.</target>
+      </trans-unit>
+      <trans-unit id="search.resultCount">
+        <source xml:lang="en">{0} results found.</source>
+        <target>Знайдено {0} результатів.</target>
+      </trans-unit>
+      <trans-unit id="search.settingActions">
+        <source xml:lang="en">- `search.actionsPosition`: Position of action buttons.</source>
+        <target>- `search.actionsPosition`: Позиція кнопок дій.</target>
+      </trans-unit>
+      <trans-unit id="search.settingCollapse">
+        <source xml:lang="en">- `search.collapseResults`: Expand or collapse results.</source>
+        <target>- `search.collapseResults`: Розгорнути або згрупувати результати.</target>
+      </trans-unit>
+      <trans-unit id="search.settingContextLines">
+        <source xml:lang="en">- `search.searchEditor.defaultNumberOfContextLines`: Number of context lines shown around matches.</source>
+        <target>- `search.searchEditor.defaultNumberOfContextLines`: Кількість рядків контексту, що відображаються навколо збігів.</target>
+      </trans-unit>
+      <trans-unit id="search.settingDebounce">
+        <source xml:lang="en">- `search.searchOnTypeDebouncePeriod`: Wait time in milliseconds before searching as you type.</source>
+        <target>- `search.searchOnTypeDebouncePeriod`: Час очікування в мілісекундах перед пошуком під час введення.</target>
+      </trans-unit>
+      <trans-unit id="search.settingLineNumbers">
+        <source xml:lang="en">- `search.showLineNumbers`: Show line numbers for results.</source>
+        <target>- `search.showLineNumbers`: Показати номери рядків для результатів.</target>
+      </trans-unit>
+      <trans-unit id="search.settingMaxResults">
+        <source xml:lang="en">- `search.maxResults`: Maximum number of search results to show.</source>
+        <target>- `search.maxResults`: Максимальна кількість результатів пошуку для відображення.</target>
+      </trans-unit>
+      <trans-unit id="search.settingReplacePreview">
+        <source xml:lang="en">- `search.useReplacePreview`: Open preview when replacing matches.</source>
+        <target>- `search.useReplacePreview`: Відкрити попередній перегляд під час заміни збігів.</target>
+      </trans-unit>
+      <trans-unit id="search.settingSearchOnType">
+        <source xml:lang="en">- `search.searchOnType`: Search all files as you type.</source>
+        <target>- `search.searchOnType`: Шукайте всі файли під час введення.</target>
+      </trans-unit>
+      <trans-unit id="search.settingSmartCase">
+        <source xml:lang="en">- `search.smartCase`: Use case-insensitive search if your search term is all lowercase.</source>
+        <target>- `search.smartCase`: Використовуйте пошук без урахування регістру, якщо ваш пошуковий запит повністю написаний малими літерами.</target>
+      </trans-unit>
+      <trans-unit id="search.settingSortOrder">
+        <source xml:lang="en">- `search.sortOrder`: Sort results by file name, type, modified time, or match count.</source>
+        <target>- `search.sortOrder`: Сортувати результати за назвою файлу, типом, часом зміни або кількістю збігів.</target>
+      </trans-unit>
+      <trans-unit id="search.settingVerbosity">
+        <source xml:lang="en">- `accessibility.verbosity.find`: Controls whether the Search input announces the Accessibility Help hint.</source>
+        <target>- `accessibility.verbosity.find`: Контролює, чи оголошує поле пошуку підказку Доступності.</target>
+      </trans-unit>
+      <trans-unit id="search.settingViewMode">
+        <source xml:lang="en">- `search.defaultViewMode`: Show results as list or tree.</source>
+        <target>- `search.defaultViewMode`: Показати результати у вигляді списку або дерева.</target>
+      </trans-unit>
+      <trans-unit id="search.settingsHeader">
+        <source xml:lang="en">Settings You Can Adjust ({0} opens Settings):</source>
+        <target>Налаштування, які ви можете змінити ({0} відкриває Налаштування):</target>
+      </trans-unit>
+      <trans-unit id="search.settingsIntro">
+        <source xml:lang="en">These settings affect how Search across files behaves.</source>
+        <target>Ці налаштування впливають на те, як функція Пошук у файлах працює.</target>
+      </trans-unit>
+      <trans-unit id="search.statusHeader">
+        <source xml:lang="en">Current Search Status:</source>
+        <target>Поточний статус пошуку:</target>
+      </trans-unit>
+      <trans-unit id="search.statusIntro">
+        <source xml:lang="en">You are searching across your workspace.</source>
+        <target>Ви шукаєте у своєму робочому просторі.</target>
       </trans-unit>
     </body>
   </file>
@@ -779,6 +987,26 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/search/browser/searchQuickAccess.contribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="anythingQuickAccess">
+        <source xml:lang="en">Go to File</source>
+        <target>Перейти до Файлу</target>
+      </trans-unit>
+      <trans-unit id="anythingQuickAccessPlaceholder">
+        <source xml:lang="en">Search files by name (append {0} to go to line or {1} to go to symbol)</source>
+        <target>Шукати файли за назвою (додайте {0}, щоб перейти до рядка, або {1}, щоб перейти до символу)</target>
+      </trans-unit>
+      <trans-unit id="symbolsQuickAccess">
+        <source xml:lang="en">Go to Symbol in Workspace</source>
+        <target>Перейти до символу в робочому просторі</target>
+      </trans-unit>
+      <trans-unit id="symbolsQuickAccessPlaceholder">
+        <source xml:lang="en">Type the name of a symbol to open.</source>
+        <target>Введіть назву символу для відкриття.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/search/browser/searchResultsView" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="fileMatchAriaLabel">
@@ -879,8 +1107,8 @@
         <target>Не знайдено результатів у відкритих редакторах, за винятком '{0}' -</target>
       </trans-unit>
       <trans-unit id="noOpenEditorResultsFound">
-        <source xml:lang="en">No results found in open editors. Review your settings for configured exclusions and check your gitignore files - </source>
-        <target>Не знайдено результатів у відкритих редакторах. Перегляньте свої налаштування для сконфігурованих виключень і перевірте свої файли .gitignore -</target>
+        <source xml:lang="en">No results found in open editors. Review your configured exclusions and check your gitignore files - </source>
+        <target>Не знайдено результатів у відкритих редакторах. Перегляньте ваші налаштовані виключення та перевірте файли .gitignore -</target>
       </trans-unit>
       <trans-unit id="noOpenEditorResultsIncludes">
         <source xml:lang="en">No results found in open editors matching '{0}' - </source>
@@ -894,13 +1122,9 @@
         <source xml:lang="en">No results found excluding '{0}' - </source>
         <target>Не знайдено результатів, виключаючи '{0}' -</target>
       </trans-unit>
-      <trans-unit id="noResultsFallback">
-        <source xml:lang="en">No results found. </source>
-        <target>Не знайдено жодних результатів.</target>
-      </trans-unit>
       <trans-unit id="noResultsFound">
-        <source xml:lang="en">No results found. Review your settings for configured exclusions and check your gitignore files - </source>
-        <target>Не знайдено результатів. Перегляньте свої налаштування для налаштованих виключень і перевірте свої файли .gitignore -</target>
+        <source xml:lang="en">No results found. Review your configured exclusions and check your gitignore files - </source>
+        <target>Не знайдено результатів. Перегляньте ваші налаштовані виключення та перевірте файли .gitignore -</target>
       </trans-unit>
       <trans-unit id="noResultsIncludes">
         <source xml:lang="en">No results found in '{0}' - </source>
@@ -929,10 +1153,6 @@
       <trans-unit id="openInEditor.tooltip">
         <source xml:lang="en">Copy current search results to an editor</source>
         <target>Скопіювати поточні результати пошуку в редактор</target>
-      </trans-unit>
-      <trans-unit id="openSettings.learnMore">
-        <source xml:lang="en">Learn More</source>
-        <target>Дізнатися більше</target>
       </trans-unit>
       <trans-unit id="openSettings.message">
         <source xml:lang="en">Open Settings</source>
@@ -1064,8 +1284,8 @@
         <target>файли для включення</target>
       </trans-unit>
       <trans-unit id="searchWithAIButtonTooltip">
-        <source xml:lang="en">Search with AI.</source>
-        <target>Шукати з AI.</target>
+        <source xml:lang="en">Search with AI</source>
+        <target>Пошук з AI</target>
       </trans-unit>
       <trans-unit id="searchWithoutFolder">
         <source xml:lang="en">You have not opened or specified a folder. Only open files are currently searched - </source>
@@ -1087,6 +1307,10 @@
   </file>
   <file original="src/vs/workbench/contrib/search/browser/searchWidget" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="accessibilityHelpHintInLabel">
+        <source xml:lang="en">Press {0} for accessibility help</source>
+        <target>Натисніть {0} для отримання допомоги з доступністю</target>
+      </trans-unit>
       <trans-unit id="label.Replace">
         <source xml:lang="en">Replace: Type replace term and press Enter to preview</source>
         <target>Замініть: Введіть термін заміни та натисніть Enter для попереднього перегляду</target>

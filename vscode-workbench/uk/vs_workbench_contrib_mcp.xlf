@@ -134,6 +134,10 @@
         <source xml:lang="en">Pick the models {0} can access via MCP sampling</source>
         <target>Виберіть моделі, до яких {0} може отримати доступ через вибірку MCP.</target>
       </trans-unit>
+      <trans-unit id="mcp.disabled">
+        <source xml:lang="en">Disabled</source>
+        <target>Вимкнено</target>
+      </trans-unit>
       <trans-unit id="mcp.disconnect">
         <source xml:lang="en">Disconnect Account</source>
         <target>Відключити обліковий запис</target>
@@ -153,6 +157,14 @@
       <trans-unit id="mcp.err.md.single">
         <source xml:lang="en">MCP server {0} was unable to start successfully.</source>
         <target>Сервер MCP {0} не зміг успішно запуститися.</target>
+      </trans-unit>
+      <trans-unit id="mcp.installFromManifest">
+        <source xml:lang="en">Install Server from Manifest...</source>
+        <target>Встановити сервер з маніфесту...</target>
+      </trans-unit>
+      <trans-unit id="mcp.installFromManifest.description">
+        <source xml:lang="en">Install an MCP server from a JSON manifest file</source>
+        <target>Встановіть сервер MCP з файлу маніфесту JSON</target>
       </trans-unit>
       <trans-unit id="mcp.list">
         <source xml:lang="en">List Servers</source>
@@ -213,6 +225,10 @@
       <trans-unit id="mcp.selectServer">
         <source xml:lang="en">Select an MCP Server</source>
         <target>Виберіть сервер MCP</target>
+      </trans-unit>
+      <trans-unit id="mcp.server.options.tooltip">
+        <source xml:lang="en">Show server options for {0}</source>
+        <target>Показати параметри сервера для {0}</target>
       </trans-unit>
       <trans-unit id="mcp.servers">
         <source xml:lang="en">MCP Servers</source>
@@ -317,6 +333,51 @@
       <trans-unit id="mcp.error.retry">
         <source xml:lang="en">Try a different package</source>
         <target>Спробуйте інший пакет</target>
+      </trans-unit>
+      <trans-unit id="mcp.installFromManifest.filter">
+        <source xml:lang="en">MCP Manifest</source>
+        <target>MCP Маніфест</target>
+      </trans-unit>
+      <trans-unit id="mcp.installFromManifest.installError">
+        <source xml:lang="en">Failed to install MCP server: {0}</source>
+        <target>Не вдалося встановити сервер MCP: {0}</target>
+      </trans-unit>
+      <trans-unit id="mcp.installFromManifest.invalidJson">
+        <source xml:lang="en">Invalid manifest file: expected a JSON object</source>
+        <target>Недійсний файл маніфесту: очікувався об'єкт JSON</target>
+      </trans-unit>
+      <trans-unit id="mcp.installFromManifest.invalidManifest">
+        <source xml:lang="en">Invalid manifest: expected 'packages' or 'remotes' with at least one entry</source>
+        <target>Неправильний маніфест: очікувались 'packages' або 'remotes' з принаймні одним записом</target>
+      </trans-unit>
+      <trans-unit id="mcp.installFromManifest.openLabel">
+        <source xml:lang="en">&amp;&amp;Install</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Встановити</target>
+      </trans-unit>
+      <trans-unit id="mcp.installFromManifest.parseError">
+        <source xml:lang="en">Failed to parse manifest: {0}</source>
+        <target>Не вдалося розібрати маніфест: {0}</target>
+      </trans-unit>
+      <trans-unit id="mcp.installFromManifest.readError">
+        <source xml:lang="en">Failed to read manifest file: {0}</source>
+        <target>Не вдалося прочитати файл маніфесту: {0}</target>
+      </trans-unit>
+      <trans-unit id="mcp.installFromManifest.serverId.placeholder">
+        <source xml:lang="en">Unique identifier for this server</source>
+        <target>Унікальний ідентифікатор для цього сервера</target>
+      </trans-unit>
+      <trans-unit id="mcp.installFromManifest.serverId.title">
+        <source xml:lang="en">Enter Server ID</source>
+        <target>Введіть ID сервера</target>
+      </trans-unit>
+      <trans-unit id="mcp.installFromManifest.success">
+        <source xml:lang="en">MCP server '{0}' installed successfully</source>
+        <target>Сервер MCP '{0}' успішно встановлено</target>
+      </trans-unit>
+      <trans-unit id="mcp.installFromManifest.title">
+        <source xml:lang="en">Select MCP Server Manifest</source>
+        <target>Виберіть маніфест сервера MCP</target>
       </trans-unit>
       <trans-unit id="mcp.loading.title">
         <source xml:lang="en">Loading package details...</source>
@@ -426,13 +487,17 @@
         <source xml:lang="en">Available on this remote machine, runs on {0}</source>
         <target>Доступно на цьому віддаленому комп'ютері, працює на {0}</target>
       </trans-unit>
+      <trans-unit id="mcp.target.placeholder">
+        <source xml:lang="en">Select the configuration target</source>
+        <target>Виберіть цільову конфігурацію</target>
+      </trans-unit>
       <trans-unit id="mcp.target.remote">
         <source xml:lang="en">Remote</source>
         <target>Віддалений</target>
       </trans-unit>
       <trans-unit id="mcp.target.title">
-        <source xml:lang="en">Choose where to install the MCP server</source>
-        <target>Виберіть, куди встановити сервер MCP</target>
+        <source xml:lang="en">Add MCP Server</source>
+        <target>Додати MCP сервер</target>
       </trans-unit>
       <trans-unit id="mcp.target.user">
         <source xml:lang="en">Global</source>
@@ -466,10 +531,6 @@
   </file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpElicitationService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="mcp.elicit.accept">
-        <source xml:lang="en">Respond</source>
-        <target>Відповісти</target>
-      </trans-unit>
       <trans-unit id="mcp.elicit.cancel">
         <source xml:lang="en">Cancel</source>
         <target>Скасувати</target>
@@ -481,6 +542,10 @@
       <trans-unit id="mcp.elicit.enum.none.description">
         <source xml:lang="en">No selection</source>
         <target>Немає вибору</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.false">
+        <source xml:lang="en">False</source>
+        <target>Хибний</target>
       </trans-unit>
       <trans-unit id="mcp.elicit.give">
         <source xml:lang="en">Respond</source>
@@ -494,9 +559,29 @@
         <source xml:lang="en">MCP Server ({0})</source>
         <target>MCP сервер ({0})</target>
       </trans-unit>
-      <trans-unit id="mcp.elicit.title">
-        <source xml:lang="en">Request for Input</source>
-        <target>Запит на введення</target>
+      <trans-unit id="mcp.elicit.true">
+        <source xml:lang="en">True</source>
+        <target>Правда</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.url.instruction">
+        <source xml:lang="en">Open this URL?</source>
+        <target>Відкрити це URL?</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.url.instruction2">
+        <source xml:lang="en">This will open {0}</source>
+        <target>Це відкриє {0}</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.url.open">
+        <source xml:lang="en">Open {0}</source>
+        <target>Відкрити {0}</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.url.open2">
+        <source xml:lang="en">Open URL</source>
+        <target>Відкрити URL</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.url.title">
+        <source xml:lang="en">Authorization Required</source>
+        <target>Необхідна авторизація</target>
       </trans-unit>
       <trans-unit id="mcp.elicit.useDefault">
         <source xml:lang="en">Default value</source>
@@ -562,13 +647,25 @@
         <source xml:lang="en">Clear</source>
         <target>Чистий</target>
       </trans-unit>
+      <trans-unit id="clear.savedValue.tooltip">
+        <source xml:lang="en">Clear saved value</source>
+        <target>Очистити збережене значення</target>
+      </trans-unit>
       <trans-unit id="clearAll">
         <source xml:lang="en">Clear All</source>
         <target>Очистити все</target>
       </trans-unit>
+      <trans-unit id="clearAll.savedValues.tooltip">
+        <source xml:lang="en">Clear all saved values</source>
+        <target>Очистити всі збережені значення</target>
+      </trans-unit>
       <trans-unit id="edit">
         <source xml:lang="en">Edit</source>
         <target>Редагувати</target>
+      </trans-unit>
+      <trans-unit id="edit.savedValue.tooltip">
+        <source xml:lang="en">Edit saved value</source>
+        <target>Редагувати збережене значення</target>
       </trans-unit>
       <trans-unit id="mcp.debug">
         <source xml:lang="en">Debug</source>
@@ -706,6 +803,10 @@
   </file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpResourceQuickAccess" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="goBack">
+        <source xml:lang="en">Go back ↩</source>
+        <target>Повернутися назад ↩</target>
+      </trans-unit>
       <trans-unit id="mcp.quickaccess.attach">
         <source xml:lang="en">Attach to chat</source>
         <target>Прикріпити до чату</target>
@@ -746,17 +847,57 @@
         <source xml:lang="en">Show Configuration (JSON)</source>
         <target>Показати конфігурацію (JSON)</target>
       </trans-unit>
-      <trans-unit id="disabled - all not allowed">
-        <source xml:lang="en">This MCP Server is disabled because MCP servers are configured to be disabled in the Editor. Please check your [settings]({0}).</source>
-        <target>Цей сервер MCP вимкнено, оскільки сервери MCP налаштовані на вимкнення в Редакторі. Будь ласка, перевірте свої [налаштування]({0}).</target>
+      <trans-unit id="disableForWorkspace">
+        <source xml:lang="en">Disable (Workspace)</source>
+        <target>Вимкнути (Робочий простір)</target>
       </trans-unit>
-      <trans-unit id="disabled - some not allowed">
-        <source xml:lang="en">This MCP Server is disabled because it is configured to be disabled in the Editor. Please check your [settings]({0}).</source>
-        <target>Цей MCP сервер вимкнено, оскільки він налаштований на вимкнення в Редакторі. Будь ласка, перевірте свої [налаштування]({0}).</target>
+      <trans-unit id="disableForWorkspaceTooltip">
+        <source xml:lang="en">Disable this MCP server only in this workspace</source>
+        <target>Вимкніть цей MCP сервер лише в цьому робочому просторі.</target>
+      </trans-unit>
+      <trans-unit id="disableGlobally">
+        <source xml:lang="en">Disable</source>
+        <target>Вимкнути</target>
+      </trans-unit>
+      <trans-unit id="disableGloballyTooltip">
+        <source xml:lang="en">Disable this MCP server</source>
+        <target>Вимкніть цей сервер MCP</target>
+      </trans-unit>
+      <trans-unit id="enableForWorkspace">
+        <source xml:lang="en">Enable (Workspace)</source>
+        <target>Увімкнути (Робочий простір)</target>
+      </trans-unit>
+      <trans-unit id="enableForWorkspaceTooltip">
+        <source xml:lang="en">Enable this MCP server only in this workspace</source>
+        <target>Увімкніть цей сервер MCP лише в цьому робочому просторі.</target>
+      </trans-unit>
+      <trans-unit id="enableGlobally">
+        <source xml:lang="en">Enable</source>
+        <target>Увімкнути</target>
+      </trans-unit>
+      <trans-unit id="enableGloballyTooltip">
+        <source xml:lang="en">Enable this MCP server</source>
+        <target>Увімкніть цей сервер MCP</target>
       </trans-unit>
       <trans-unit id="install">
         <source xml:lang="en">Install</source>
         <target>Встановити</target>
+      </trans-unit>
+      <trans-unit id="install in workspace folder">
+        <source xml:lang="en">Workspace Folder</source>
+        <target>Папка робочого простору</target>
+      </trans-unit>
+      <trans-unit id="installInRemote">
+        <source xml:lang="en">Install (Remote)</source>
+        <target>Встановити (Віддалено)</target>
+      </trans-unit>
+      <trans-unit id="installInRemoteLabel">
+        <source xml:lang="en">Install in {0}</source>
+        <target>Встановити в {0}</target>
+      </trans-unit>
+      <trans-unit id="installInWorkspace">
+        <source xml:lang="en">Install in Workspace</source>
+        <target>Встановити в робочій області</target>
       </trans-unit>
       <trans-unit id="installing">
         <source xml:lang="en">Installing</source>
@@ -789,6 +930,14 @@
       <trans-unit id="mcp.signOut">
         <source xml:lang="en">Sign Out</source>
         <target>Вийти</target>
+      </trans-unit>
+      <trans-unit id="mcp.target.title">
+        <source xml:lang="en">Choose where to install the MCP server</source>
+        <target>Додати MCP сервер</target>
+      </trans-unit>
+      <trans-unit id="mcp.target.workspace">
+        <source xml:lang="en">Workspace</source>
+        <target>Робоча область</target>
       </trans-unit>
       <trans-unit id="mcpServerInstallation">
         <source xml:lang="en">Installing MCP Server {0} started. An editor is now open with more details on this MCP Server</source>
@@ -1074,6 +1223,22 @@
         <source xml:lang="en">Cannot install the '{0}' MCP Server because it is not available in this setup.</source>
         <target>Не вдається встановити '{0}' MCP Server, оскільки він недоступний у цій конфігурації.</target>
       </trans-unit>
+      <trans-unit id="disabled - all not allowed">
+        <source xml:lang="en">This MCP Server is disabled because MCP servers are configured to be disabled in the Editor. Please check your [settings]({0}).</source>
+        <target>Цей MCP сервер вимкнено, оскільки MCP сервери налаштовані на вимкнення в Редакторі. Будь ласка, перевірте свої [налаштування]({0}).</target>
+      </trans-unit>
+      <trans-unit id="disabled - some not allowed">
+        <source xml:lang="en">This MCP Server is disabled because it is configured to be disabled in the Editor. Please check your [settings]({0}).</source>
+        <target>Цей MCP сервер вимкнено, оскільки він налаштований на вимкнення в Редакторі. Будь ласка, перевірте свої [налаштування]({0}).</target>
+      </trans-unit>
+      <trans-unit id="disabled globally">
+        <source xml:lang="en">This MCP server is disabled.</source>
+        <target>Цей сервер MCP вимкнено.</target>
+      </trans-unit>
+      <trans-unit id="disabled in workspace">
+        <source xml:lang="en">This MCP server is disabled for this workspace.</source>
+        <target>Цей сервер MCP вимкнено для цього робочого простору.</target>
+      </trans-unit>
       <trans-unit id="mcp.configuration.userLocalValue">
         <source xml:lang="en">Global in {0}</source>
         <target>Глобальний у {0}</target>
@@ -1165,6 +1330,50 @@
       <trans-unit id="app.mcp.json.headers">
         <source xml:lang="en">Additional headers sent to the server.</source>
         <target>Додаткові заголовки надіслані на сервер.</target>
+      </trans-unit>
+      <trans-unit id="app.mcp.json.oauth">
+        <source xml:lang="en">OAuth configuration for authenticating with the server.</source>
+        <target>Конфігурація OAuth для автентифікації з сервером.</target>
+      </trans-unit>
+      <trans-unit id="app.mcp.json.oauth.clientId">
+        <source xml:lang="en">The OAuth client ID to use when authenticating with the server.</source>
+        <target>Ідентифікатор клієнта OAuth, який слід використовувати під час аутентифікації з сервером.</target>
+      </trans-unit>
+      <trans-unit id="app.mcp.json.sandbox">
+        <source xml:lang="en">Sandbox config that determines file system and network access. Sandboxing is enabled when sandboxEnabled property is set at the server level on Mac OS and Linux only.</source>
+        <target>Конфігурація пісочниці, яка визначає доступ до файлової системи та мережі. Пісочниця активується, коли властивість sandboxEnabled встановлена на рівні сервера лише на Mac OS та Linux.</target>
+      </trans-unit>
+      <trans-unit id="app.mcp.json.sandbox.filesystem">
+        <source xml:lang="en">Filesystem access settings for the sandboxed server. Glob patterns are supported for Mac OS only.</source>
+        <target>Налаштування доступу до файлової системи для ізольованого сервера. Шаблони glob підтримуються лише для Mac OS.</target>
+      </trans-unit>
+      <trans-unit id="app.mcp.json.sandbox.filesystem.allowWrite">
+        <source xml:lang="en">List of file paths that the server is allowed to write to. e.g. `~/src/`.</source>
+        <target>Список шляхів до файлів, до яких сервер має право запису. наприклад, `~/src/`.</target>
+      </trans-unit>
+      <trans-unit id="app.mcp.json.sandbox.filesystem.denyRead">
+        <source xml:lang="en">List of file paths that the server is not allowed to read. By default, all files are allowed to be read. e.g. `~/src/secrets`.</source>
+        <target>Список шляхів до файлів, які сервер не має права читати. За замовчуванням, всі файли дозволено читати. наприклад, `~/src/secrets`.</target>
+      </trans-unit>
+      <trans-unit id="app.mcp.json.sandbox.filesystem.denyWrite">
+        <source xml:lang="en">List of file paths that the server is not allowed to write to. e.g. `~/src/auth/`.</source>
+        <target>Список шляхів до файлів, до яких серверу заборонено записувати. наприклад, `~/src/auth/`.</target>
+      </trans-unit>
+      <trans-unit id="app.mcp.json.sandbox.network">
+        <source xml:lang="en">Network access settings for the sandboxed server.</source>
+        <target>Налаштування доступу до мережі для ізольованого сервера.</target>
+      </trans-unit>
+      <trans-unit id="app.mcp.json.sandbox.network.allowedDomains">
+        <source xml:lang="en">List of domains that the server is allowed to access. Wildcards are supported, e.g. `*.example.com`.</source>
+        <target>Список доменів, до яких сервер має доступ. Підтримуються шаблони, наприклад, `*.example.com`.</target>
+      </trans-unit>
+      <trans-unit id="app.mcp.json.sandbox.network.deniedDomains">
+        <source xml:lang="en">List of domains that the server is not allowed to access. e.g. `invalid.example.com`.</source>
+        <target>Список доменів, до яких серверу заборонено отримувати доступ. наприклад, `invalid.example.com`.</target>
+      </trans-unit>
+      <trans-unit id="app.mcp.json.sandboxEnabled">
+        <source xml:lang="en">Whether to run the server in a sandboxed environment.</source>
+        <target>Чи запускати сервер у ізольованому середовищі.</target>
       </trans-unit>
       <trans-unit id="app.mcp.json.title">
         <source xml:lang="en">Model Context Protocol Servers</source>
@@ -1342,6 +1551,10 @@
         <source xml:lang="en">Trust</source>
         <target>Довіра</target>
       </trans-unit>
+      <trans-unit id="runTrust">
+        <source xml:lang="en">This MCP server definition is defined in your workspace files.</source>
+        <target>Ця визначення сервера MCP визначено у ваших файлах робочого простору.</target>
+      </trans-unit>
       <trans-unit id="trustFromExt">
         <source xml:lang="en">from {0}</source>
         <target>з {0}</target>
@@ -1412,6 +1625,23 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/mcp/common/mcpSandboxService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="mcpSandboxSuggestion.allowWrite">
+        <source xml:lang="en">Add to `sandbox.filesystem.allowWrite`: {0}</source>
+        <target>Додати до `sandbox.filesystem.allowWrite`: {0}</target>
+      </trans-unit>
+      <trans-unit id="mcpSandboxSuggestion.allowedDomains">
+        <source xml:lang="en">Add to `sandbox.network.allowedDomains`: {0}</source>
+        <target>Додати до `sandbox.network.allowedDomains`: {0}</target>
+      </trans-unit>
+      <trans-unit id="mcpSandboxSuggestion.message">
+        <source xml:lang="en">The MCP server {0} reported potential sandbox blocks. VS Code found possible sandbox configuration updates:
+{1}</source>
+        <target>Сервер MCP {0} повідомив про потенційні блокування пісочниці. VS Code виявив можливі оновлення конфігурації пісочниці: {1}</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/mcp/common/mcpServer" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="mcp.command.showOutput">
@@ -1433,6 +1663,30 @@
       <trans-unit id="mcpDebugPyHelp">
         <source xml:lang="en">The command "{0}" was not found. You can specify the path to debugpy in the `dev.debug.debugpyPath` option.</source>
         <target>Команду "{0}" не знайдено. Ви можете вказати шлях до debugpy в опції `dev.debug.debugpyPath`.</target>
+      </trans-unit>
+      <trans-unit id="mcpSandboxSuggestion.apply.error">
+        <source xml:lang="en">Failed to update sandbox configuration for {0}: {1}</source>
+        <target>Не вдалося оновити конфігурацію пісочниці для {0}: {1}</target>
+      </trans-unit>
+      <trans-unit id="mcpSandboxSuggestion.apply.success">
+        <source xml:lang="en">Updated sandbox configuration for {0} in mcp.json. Restart server.</source>
+        <target>Оновлено конфігурацію пісочниці для {0} у mcp.json. Перезапустіть сервер.</target>
+      </trans-unit>
+      <trans-unit id="mcpSandboxSuggestion.apply.unavailable">
+        <source xml:lang="en">Couldn't determine where to update sandbox configuration for {0}.</source>
+        <target>Не вдалося визначити, де оновити конфігурацію пісочниці для {0}.</target>
+      </trans-unit>
+      <trans-unit id="mcpSandboxSuggestion.confirm.message">
+        <source xml:lang="en">Update sandbox configuration in mcp.json for {0}?</source>
+        <target>Оновіть конфігурацію пісочниці в mcp.json для {0}?</target>
+      </trans-unit>
+      <trans-unit id="mcpSandboxSuggestion.confirm.no">
+        <source xml:lang="en">No</source>
+        <target>Ні</target>
+      </trans-unit>
+      <trans-unit id="mcpSandboxSuggestion.confirm.yes">
+        <source xml:lang="en">Yes</source>
+        <target>Так</target>
       </trans-unit>
       <trans-unit id="mcpServerError">
         <source xml:lang="en">The MCP server {0} could not be started: {1}</source>

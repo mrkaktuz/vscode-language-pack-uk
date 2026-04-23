@@ -448,6 +448,26 @@ The task will be ignored.</source>
   </file>
   <file original="src/vs/workbench/contrib/tasks/browser/runAutomaticTasks" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="allow">
+        <source xml:lang="en">Allow</source>
+        <target>Дозволити</target>
+      </trans-unit>
+      <trans-unit id="disallow">
+        <source xml:lang="en">Disallow</source>
+        <target>Не дозволяти</target>
+      </trans-unit>
+      <trans-unit id="openTask">
+        <source xml:lang="en">Open File</source>
+        <target>Відкрити файл</target>
+      </trans-unit>
+      <trans-unit id="openTasks">
+        <source xml:lang="en">Open Files</source>
+        <target>Відкрити файли</target>
+      </trans-unit>
+      <trans-unit id="tasks.run.allowAutomatic">
+        <source xml:lang="en">This workspace has tasks ({0}) defined ({1}) that can launch processes automatically when you open this workspace. Do you want to allow automatic tasks to run in all trusted workspaces?</source>
+        <target>Цей робочий простір має завдання ({0}), визначені ({1}), які можуть автоматично запускати процеси, коли ви відкриваєте цей робочий простір. Чи хочете ви дозволити автоматичним завданням виконуватись у всіх надійних робочих просторах?</target>
+      </trans-unit>
       <trans-unit id="workbench.action.tasks.allowAutomaticTasks">
         <source xml:lang="en">Allow Automatic Tasks</source>
         <target>Дозволити автоматичні завдання</target>
@@ -688,8 +708,8 @@ The task will be ignored.</source>
         <target>Ні</target>
       </trans-unit>
       <trans-unit id="TaskQuickPick.changeSettingsOptions">
-        <source xml:lang="en">$(gear) {0} task detection is turned off. Enable {1} task detection...</source>
-        <target>$(gear) {0} виявлення завдань вимкнено. Увімкніть {1} виявлення завдань...</target>
+        <source xml:lang="en">{0} task detection is turned off. Enable {1} task detection...</source>
+        <target>Виявлення завдань {0} вимкнено. Увімкніть виявлення завдань {1}...</target>
       </trans-unit>
       <trans-unit id="TaskQuickPick.goBack">
         <source xml:lang="en">Go back ↩</source>
@@ -742,14 +762,6 @@ The task will be ignored.</source>
       <trans-unit id="taskType">
         <source xml:lang="en">All {0} tasks</source>
         <target>Усі {0} завдання</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/workbench/contrib/tasks/browser/taskService" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="taskService.processTaskSystem">
-        <source xml:lang="en">Process task system is not support in the web.</source>
-        <target>Система обробки завдань не підтримується в вебі.</target>
       </trans-unit>
     </body>
   </file>
@@ -1080,6 +1092,10 @@ The task command line or label</note>
         <source xml:lang="en">Hide this task from the run task quick pick</source>
         <target>Сховати це завдання з швидкого вибору запуску завдань</target>
       </trans-unit>
+      <trans-unit id="JsonSchema.inAgents">
+        <source xml:lang="en">Show this task in the Agents run action dropdown</source>
+        <target>Показати це завдання в спадному меню дій агентів</target>
+      </trans-unit>
       <trans-unit id="JsonSchema.linux">
         <source xml:lang="en">Linux specific command configuration</source>
         <target>Конфігурація команд, специфічних для Linux</target>
@@ -1329,8 +1345,8 @@ The task command line or label</note>
         <target>Чи потрібно переоцінювати змінні завдання при повторному запуску.</target>
       </trans-unit>
       <trans-unit id="JsonSchema.tasks.runOn">
-        <source xml:lang="en">Configures when the task should be run. If set to folderOpen, then the task will be run automatically when the folder is opened.</source>
-        <target>Налаштовує, коли завдання має бути виконано. Якщо встановлено folderOpen, то завдання буде виконано автоматично, коли папка буде відкрита.</target>
+        <source xml:lang="en">Configures when the task should be run. If set to folderOpen, then the task will be run automatically when the folder is opened. If set to worktreeCreated, then the task will be run automatically when an Agent Session worktree is created.</source>
+        <target>Налаштовує, коли завдання має бути виконано. Якщо встановлено на folderOpen, тоді завдання буде виконано автоматично, коли папка буде відкрита. Якщо встановлено на worktreeCreated, тоді завдання буде виконано автоматично, коли буде створено робоче дерево сесії агента.</target>
       </trans-unit>
       <trans-unit id="JsonSchema.tasks.runOptions">
         <source xml:lang="en">The task's run related options</source>
@@ -1772,6 +1788,10 @@ The task command line or label</note>
       <trans-unit id="TaskDefinition.properties">
         <source xml:lang="en">Additional properties of the task type</source>
         <target>Додаткові властивості типу завдання</target>
+      </trans-unit>
+      <trans-unit id="TaskDefinition.required">
+        <source xml:lang="en">The names of the properties from the `properties` object that must be provided for a task of this type to be considered a match. Used by VS Code to associate a `tasks.json` entry with a registered task provider.</source>
+        <target>Назви властивостей з об'єкта `properties`, які повинні бути надані для того, щоб завдання цього типу вважалося відповідним. Використовується VS Code для асоціації запису `tasks.json` з зареєстрованим постачальником завдань.</target>
       </trans-unit>
       <trans-unit id="TaskDefinition.when">
         <source xml:lang="en">Condition which must be true to enable this type of task. Consider using `shellExecutionSupported`, `processExecutionSupported`, and `customExecutionSupported` as appropriate for this task definition. See the [API documentation](https://code.visualstudio.com/api/extension-guides/task-provider#when-clause) for more information.</source>

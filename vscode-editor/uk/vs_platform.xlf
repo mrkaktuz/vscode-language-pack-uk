@@ -283,6 +283,22 @@
   </file>
   <file original="src/vs/platform/actionWidget/browser/actionList" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="actionList.filter.ariaLabel">
+        <source xml:lang="en">Filter items</source>
+        <target>Фільтрувати елементи</target>
+      </trans-unit>
+      <trans-unit id="actionList.filter.placeholder">
+        <source xml:lang="en">Search...</source>
+        <target>Пошук...</target>
+      </trans-unit>
+      <trans-unit id="actionList.remove">
+        <source xml:lang="en">Remove</source>
+        <target>Видалити</target>
+      </trans-unit>
+      <trans-unit id="actionList.submenuHint">
+        <source xml:lang="en">{0}, use right arrow to access options</source>
+        <target>{0}, використовуйте праву стрілку для доступу до опцій</target>
+      </trans-unit>
       <trans-unit id="customQuickFixWidget">
         <source xml:lang="en">Action Widget</source>
         <note>An action widget option</note>
@@ -315,9 +331,25 @@
         <source xml:lang="en">Background color for toggled action items in action bar.</source>
         <target>Колір фону для переключених елементів дії в панелі дій.</target>
       </trans-unit>
+      <trans-unit id="clearFilterCodeActionWidget.title">
+        <source xml:lang="en">Clear action widget filter</source>
+        <target>Очистити фільтр віджетів дій</target>
+      </trans-unit>
+      <trans-unit id="codeActionMenuFilterFocused">
+        <source xml:lang="en">Whether the action widget filter input is focused</source>
+        <target>Чи сфокусовано введення фільтра віджета дій</target>
+      </trans-unit>
       <trans-unit id="codeActionMenuVisible">
         <source xml:lang="en">Whether the action widget list is visible</source>
         <target>Чи видимий список віджетів дій</target>
+      </trans-unit>
+      <trans-unit id="collapseSectionCodeAction.title">
+        <source xml:lang="en">Collapse section</source>
+        <target>Згорнути розділ</target>
+      </trans-unit>
+      <trans-unit id="expandSectionCodeAction.title">
+        <source xml:lang="en">Expand section</source>
+        <target>Розгорнути секцію</target>
       </trans-unit>
       <trans-unit id="hideCodeActionWidget.title">
         <source xml:lang="en">Hide action widget</source>
@@ -335,25 +367,17 @@
         <source xml:lang="en">Select previous action</source>
         <target>Вибрати попередню дію</target>
       </trans-unit>
+      <trans-unit id="toggleSectionCodeAction.title">
+        <source xml:lang="en">Toggle section</source>
+        <target>Перемикання секції</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/platform/actions/browser/buttonbar" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="labelWithKeybinding">
-        <source xml:lang="en">{0} ({1})</source>
-        <target>{0} ({1})</target>
-      </trans-unit>
       <trans-unit id="moreActions">
         <source xml:lang="en">More Actions</source>
         <target>Більше дій</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/platform/actions/browser/dropdownActionViewItemWithKeybinding" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="titleAndKb">
-        <source xml:lang="en">{0} ({1})</source>
-        <target>{0} ({1})</target>
       </trans-unit>
     </body>
   </file>
@@ -369,10 +393,6 @@ A keybinding</note>
         <source xml:lang="en">{1} to {0}</source>
         <note>A label with keybindg like "ESC to dismiss"</note>
         <target>{1} для {0}</target>
-      </trans-unit>
-      <trans-unit id="titleAndKb">
-        <source xml:lang="en">{0} ({1})</source>
-        <target>{0} ({1})</target>
       </trans-unit>
       <trans-unit id="titleAndKbAndAlt">
         <source xml:lang="en">{0}
@@ -411,6 +431,470 @@ A keybinding</note>
       <trans-unit id="hide.label">
         <source xml:lang="en">Hide '{0}'</source>
         <target>Сховати '{0}'</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/agentHostMain" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHost">
+        <source xml:lang="en">Agent Host</source>
+        <target>Агент Хост</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotAgent" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHost.sessionConfig.autoApprove">
+        <source xml:lang="en">Approvals</source>
+        <target>Затвердження</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.autoApprove.autopilot">
+        <source xml:lang="en">Autopilot (Preview)</source>
+        <target>Автопілот (Попередній перегляд)</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.autoApprove.autopilotDescription">
+        <source xml:lang="en">Autonomously iterates from start to finish</source>
+        <target>Автономно ітерує від початку до кінця</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.autoApprove.bypass">
+        <source xml:lang="en">Bypass Approvals</source>
+        <target>Обійти затвердження</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.autoApprove.bypassDescription">
+        <source xml:lang="en">All tool calls are auto-approved</source>
+        <target>Усі виклики інструментів автоматично затверджуються.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.autoApprove.default">
+        <source xml:lang="en">Default Approvals</source>
+        <target>За замовчуванням затвердження</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.autoApprove.defaultDescription">
+        <source xml:lang="en">Copilot uses your configured settings</source>
+        <target>Copilot використовує ваші налаштовані параметри</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.autoApproveDescription">
+        <source xml:lang="en">Tool approval behavior for this session</source>
+        <target>Поведінка затвердження інструментів для цієї сесії</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.branch">
+        <source xml:lang="en">Branch</source>
+        <target>Гілка</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.branchDescription">
+        <source xml:lang="en">Base branch to work from</source>
+        <target>Базова гілка для роботи</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.isolation">
+        <source xml:lang="en">Isolation</source>
+        <target>Ізоляція</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.isolation.folder">
+        <source xml:lang="en">Folder</source>
+        <target>Папка</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.isolation.folderDescription">
+        <source xml:lang="en">Work directly in the folder</source>
+        <target>Працюйте безпосередньо в папці</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.isolation.worktree">
+        <source xml:lang="en">Worktree</source>
+        <target>Робоче дерево</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.isolation.worktreeDescription">
+        <source xml:lang="en">Create a Git worktree for isolation</source>
+        <target>Створіть Git worktree для ізоляції</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.isolationDescription">
+        <source xml:lang="en">Where the agent should make changes</source>
+        <target>Де агент повинен внести зміни</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.permissions">
+        <source xml:lang="en">Permissions</source>
+        <target>Дозволи</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.permissions.allow">
+        <source xml:lang="en">Allowed tools</source>
+        <target>Дозволені інструменти</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.permissions.deny">
+        <source xml:lang="en">Denied tools</source>
+        <target>Відмовлені інструменти</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.permissions.toolName">
+        <source xml:lang="en">Tool name</source>
+        <target>Назва інструменту</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.permissionsDescription">
+        <source xml:lang="en">Per-tool session permissions. Updated automatically when approving a tool "in this Session".</source>
+        <target>Дозволи сесії для кожного інструмента. Оновлюються автоматично при затвердженні інструмента "в цій сесії".</target>
+      </trans-unit>
+      <trans-unit id="copilot.modelThinkingLevel.description">
+        <source xml:lang="en">Controls how much reasoning effort the model uses.</source>
+        <target>Контролює, скільки зусиль на розумування використовує модель.</target>
+      </trans-unit>
+      <trans-unit id="copilot.modelThinkingLevel.high">
+        <source xml:lang="en">High</source>
+        <target>Високий</target>
+      </trans-unit>
+      <trans-unit id="copilot.modelThinkingLevel.low">
+        <source xml:lang="en">Low</source>
+        <target>Низький</target>
+      </trans-unit>
+      <trans-unit id="copilot.modelThinkingLevel.medium">
+        <source xml:lang="en">Medium</source>
+        <target>Середній</target>
+      </trans-unit>
+      <trans-unit id="copilot.modelThinkingLevel.title">
+        <source xml:lang="en">Thinking Level</source>
+        <target>Рівень мислення</target>
+      </trans-unit>
+      <trans-unit id="copilot.modelThinkingLevel.xhigh">
+        <source xml:lang="en">Extra High</source>
+        <target>Додатково високо</target>
+      </trans-unit>
+      <trans-unit id="copilotAgent.worktreeCreated">
+        <source xml:lang="en">Created isolated worktree for branch {0}</source>
+        <target>Створено ізольоване робоче дерево для гілки {0}</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotToolDisplay" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="copilot.permission.default.message">
+        <source xml:lang="en">Allow the model to call {0}?</source>
+        <target>Дозволити моделі викликати {0}?</target>
+      </trans-unit>
+      <trans-unit id="copilot.permission.default.title">
+        <source xml:lang="en">Allow tool call?</source>
+        <target>Дозволити виклик інструмента?</target>
+      </trans-unit>
+      <trans-unit id="copilot.permission.mcp.defaultTool">
+        <source xml:lang="en">MCP Tool</source>
+        <target>MCP Інструмент</target>
+      </trans-unit>
+      <trans-unit id="copilot.permission.mcp.title">
+        <source xml:lang="en">Allow tool from {0}?</source>
+        <target>Дозволити інструмент з {0}?</target>
+      </trans-unit>
+      <trans-unit id="copilot.permission.read.title">
+        <source xml:lang="en">Read file?</source>
+        <target>Прочитати файл?</target>
+      </trans-unit>
+      <trans-unit id="copilot.permission.shell.title">
+        <source xml:lang="en">Run in terminal?</source>
+        <target>Запустити в терміналі?</target>
+      </trans-unit>
+      <trans-unit id="copilot.permission.url.message">
+        <source xml:lang="en">Allow fetching web content?</source>
+        <target>Дозволити отримання веб-контенту?</target>
+      </trans-unit>
+      <trans-unit id="copilot.permission.url.title">
+        <source xml:lang="en">Fetch URL?</source>
+        <target>Отримати URL?</target>
+      </trans-unit>
+      <trans-unit id="copilot.permission.write.title">
+        <source xml:lang="en">Write file?</source>
+        <target>Записати файл?</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.create">
+        <source xml:lang="en">Created file</source>
+        <target>Створений файл</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.createFile">
+        <source xml:lang="en">Created {0}</source>
+        <target>Створено {0}</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.edit">
+        <source xml:lang="en">Edited file</source>
+        <target>Відредагований файл</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.editFile">
+        <source xml:lang="en">Edited {0}</source>
+        <target>Відредаговано {0}</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.failed">
+        <source xml:lang="en">"{0}" failed</source>
+        <target>"{0}" не вдалося</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.generic">
+        <source xml:lang="en">Used "{0}"</source>
+        <target>Використано "{0}"</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.glob">
+        <source xml:lang="en">Found files</source>
+        <target>Знайдені файли</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.globPattern">
+        <source xml:lang="en">Found files matching {0}</source>
+        <target>Знайдені файли, що відповідають {0}</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.grep">
+        <source xml:lang="en">Searched files</source>
+        <target>Шукані файли</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.grepPattern">
+        <source xml:lang="en">Searched for {0}</source>
+        <target>Шукали {0}</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.shell">
+        <source xml:lang="en">Ran {0} command</source>
+        <target>Виконано команду {0}</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.shellCmd">
+        <source xml:lang="en">Ran {0}</source>
+        <target>Запущено {0}</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.view">
+        <source xml:lang="en">Read file</source>
+        <target>Читати файл</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.viewFile">
+        <source xml:lang="en">Read {0}</source>
+        <target>Читати {0}</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.viewFileFromLine">
+        <source xml:lang="en">Read {0}, line {1} to the end</source>
+        <target>Прочитайте {0}, рядок {1} до кінця</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.viewFileLine">
+        <source xml:lang="en">Read {0}, line {1}</source>
+        <target>Читати {0}, рядок {1}</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.viewFileRange">
+        <source xml:lang="en">Read {0}, lines {1} to {2}</source>
+        <target>Читати {0}, рядки {1} до {2}</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.create">
+        <source xml:lang="en">Creating file</source>
+        <target>Створення файлу</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.createFile">
+        <source xml:lang="en">Creating {0}</source>
+        <target>Створення {0}</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.edit">
+        <source xml:lang="en">Editing file</source>
+        <target>Редагування файлу</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.editFile">
+        <source xml:lang="en">Editing {0}</source>
+        <target>Редагування {0}</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.generic">
+        <source xml:lang="en">Using "{0}"</source>
+        <target>Використовуючи "{0}"</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.glob">
+        <source xml:lang="en">Finding files</source>
+        <target>Знаходження файлів</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.globPattern">
+        <source xml:lang="en">Finding files matching {0}</source>
+        <target>Знайдено файли, що відповідають {0}</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.grep">
+        <source xml:lang="en">Searching files</source>
+        <target>Пошук файлів</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.grepPattern">
+        <source xml:lang="en">Searching for {0}</source>
+        <target>Шукаю {0}</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.shell">
+        <source xml:lang="en">Running {0} command</source>
+        <target>Виконання команди {0}</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.shellCmd">
+        <source xml:lang="en">Running {0}</source>
+        <target>Виконання {0}</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.view">
+        <source xml:lang="en">Reading file</source>
+        <target>Читання файлу</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.viewFile">
+        <source xml:lang="en">Reading {0}</source>
+        <target>Читання {0}</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.viewFileFromLine">
+        <source xml:lang="en">Reading {0}, line {1} to the end</source>
+        <target>Читання {0}, рядок {1} до кінця</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.viewFileLine">
+        <source xml:lang="en">Reading {0}, line {1}</source>
+        <target>Читання {0}, рядок {1}</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.viewFileRange">
+        <source xml:lang="en">Reading {0}, lines {1} to {2}</source>
+        <target>Читання {0}, рядки {1} до {2}</target>
+      </trans-unit>
+      <trans-unit id="toolName.askUser">
+        <source xml:lang="en">Ask User</source>
+        <target>Запитайте користувача</target>
+      </trans-unit>
+      <trans-unit id="toolName.bash">
+        <source xml:lang="en">Bash</source>
+        <target>Bash</target>
+      </trans-unit>
+      <trans-unit id="toolName.bashShutdown">
+        <source xml:lang="en">Stop Shell</source>
+        <target>Зупинити оболонку</target>
+      </trans-unit>
+      <trans-unit id="toolName.create">
+        <source xml:lang="en">Create File</source>
+        <target>Створити файл</target>
+      </trans-unit>
+      <trans-unit id="toolName.edit">
+        <source xml:lang="en">Edit File</source>
+        <target>Редагувати файл</target>
+      </trans-unit>
+      <trans-unit id="toolName.glob">
+        <source xml:lang="en">Find Files</source>
+        <target>Знайти файли</target>
+      </trans-unit>
+      <trans-unit id="toolName.grep">
+        <source xml:lang="en">Search</source>
+        <target>Пошук</target>
+      </trans-unit>
+      <trans-unit id="toolName.listShells">
+        <source xml:lang="en">List Shells</source>
+        <target>Список оболонок</target>
+      </trans-unit>
+      <trans-unit id="toolName.patch">
+        <source xml:lang="en">Patch</source>
+        <target>Патч</target>
+      </trans-unit>
+      <trans-unit id="toolName.powershell">
+        <source xml:lang="en">PowerShell</source>
+        <target>PowerShell</target>
+      </trans-unit>
+      <trans-unit id="toolName.readShell">
+        <source xml:lang="en">Read Shell Output</source>
+        <target>Читати вихідні дані оболонки</target>
+      </trans-unit>
+      <trans-unit id="toolName.view">
+        <source xml:lang="en">View File</source>
+        <target>Переглянути файл</target>
+      </trans-unit>
+      <trans-unit id="toolName.webFetch">
+        <source xml:lang="en">Web Fetch</source>
+        <target>Веб-запит</target>
+      </trans-unit>
+      <trans-unit id="toolName.webSearch">
+        <source xml:lang="en">Web Search</source>
+        <target>Веб-пошук</target>
+      </trans-unit>
+      <trans-unit id="toolName.writeShell">
+        <source xml:lang="en">Write Shell Input</source>
+        <target>Напишіть введення Shell</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/sessionPermissions" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="sessionPermissions.allowOnce">
+        <source xml:lang="en">Allow Once</source>
+        <target>Дозволити один раз</target>
+      </trans-unit>
+      <trans-unit id="sessionPermissions.allowSession">
+        <source xml:lang="en">Allow in this Session</source>
+        <target>Дозволити в цій сесії</target>
+      </trans-unit>
+      <trans-unit id="sessionPermissions.skip">
+        <source xml:lang="en">Skip</source>
+        <target>Пропустити</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/sshRemoteAgentHostService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="sshProgressCheckingAgent">
+        <source xml:lang="en">Checking for existing agent host...</source>
+        <target>Перевірка наявності існуючого хоста агента...</target>
+      </trans-unit>
+      <trans-unit id="sshProgressConnecting">
+        <source xml:lang="en">Establishing SSH connection...</source>
+        <target>Встановлення SSH з'єднання...</target>
+      </trans-unit>
+      <trans-unit id="sshProgressDownloadingCLI">
+        <source xml:lang="en">Installing VS Code CLI on remote...</source>
+        <target>Встановлення VS Code CLI на віддаленому...</target>
+      </trans-unit>
+      <trans-unit id="sshProgressForwarding">
+        <source xml:lang="en">Connecting to remote agent host...</source>
+        <target>Підключення до віддаленого хоста агента...</target>
+      </trans-unit>
+      <trans-unit id="sshProgressInstallingCLI">
+        <source xml:lang="en">Checking remote CLI installation...</source>
+        <target>Перевірка установки віддаленого CLI...</target>
+      </trans-unit>
+      <trans-unit id="sshProgressStartingAgent">
+        <source xml:lang="en">Starting remote agent host...</source>
+        <target>Запуск віддаленого агента хоста...</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/tunnelHostMainService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="tunnelHost.log">
+        <source xml:lang="en">Remote Connections</source>
+        <target>Віддалені з'єднання</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/browserView/common/browserView" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="browserZoomAccessibilityLabel">
+        <source xml:lang="en">Page Zoom: {0}%</source>
+        <target>Масштаб сторінки: {0}%</target>
+      </trans-unit>
+      <trans-unit id="browserZoomPercent">
+        <source xml:lang="en">{0}%</source>
+        <target>{0}%</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/browserView/electron-main/browserViewMainService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="browser.contextMenu.back">
+        <source xml:lang="en">Back</source>
+        <target>Назад</target>
+      </trans-unit>
+      <trans-unit id="browser.contextMenu.copyImage">
+        <source xml:lang="en">Copy Image</source>
+        <target>Скопіювати зображення</target>
+      </trans-unit>
+      <trans-unit id="browser.contextMenu.copyImageUrl">
+        <source xml:lang="en">Copy Image URL</source>
+        <target>Скопіювати URL зображення</target>
+      </trans-unit>
+      <trans-unit id="browser.contextMenu.copyLink">
+        <source xml:lang="en">Copy Link</source>
+        <target>Скопіювати посилання</target>
+      </trans-unit>
+      <trans-unit id="browser.contextMenu.forward">
+        <source xml:lang="en">Forward</source>
+        <target>Вперед</target>
+      </trans-unit>
+      <trans-unit id="browser.contextMenu.inspect">
+        <source xml:lang="en">Inspect</source>
+        <target>Перевірити</target>
+      </trans-unit>
+      <trans-unit id="browser.contextMenu.openImageInNewTab">
+        <source xml:lang="en">Open Image in New Tab</source>
+        <target>Відкрити зображення в новій вкладці</target>
+      </trans-unit>
+      <trans-unit id="browser.contextMenu.openLinkInExternalBrowser">
+        <source xml:lang="en">Open Link in External Browser</source>
+        <target>Відкрити посилання в зовнішньому браузері</target>
+      </trans-unit>
+      <trans-unit id="browser.contextMenu.openLinkInNewTab">
+        <source xml:lang="en">Open Link in New Tab</source>
+        <target>Відкрити посилання в новій вкладці</target>
+      </trans-unit>
+      <trans-unit id="browser.contextMenu.reload">
+        <source xml:lang="en">Reload</source>
+        <target>Перезавантажити</target>
       </trans-unit>
     </body>
   </file>
@@ -572,20 +1056,6 @@ Received: '{1}'.</source>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/platform/dialogs/browser/dialog" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="aboutDetail">
-        <source xml:lang="en">Version: {0}
-Commit: {1}
-Date: {2}
-Browser: {3}</source>
-        <target>Версія: {0}  
-Коміт: {1}  
-Дата: {2}  
-Браузер: {3}</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/platform/dialogs/common/dialogs" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="cancelButton">
@@ -655,6 +1125,11 @@ OS: {8}</source>
         <source xml:lang="en">Open Workspace from File</source>
         <target>Відкрити робочий простір з файлу</target>
       </trans-unit>
+      <trans-unit id="selectFolder">
+        <source xml:lang="en">&amp;&amp;Select folder</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Вибрати папку</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/platform/dnd/browser/dnd" source-language="en" datatype="plaintext" target-language="uk">
@@ -678,6 +1153,10 @@ OS: {8}</source>
       <trans-unit id="addMcp">
         <source xml:lang="en">Adds a Model Context Protocol server definition to the user profile. Accepts JSON input in the form '{"name":"server-name","command":...}'</source>
         <target>Додає визначення сервера протоколу контексту моделі до профілю користувача. Приймає JSON-вхід у формі '{"name":"server-name","command":...}'</target>
+      </trans-unit>
+      <trans-unit id="agents">
+        <source xml:lang="en">Opens the agents window.</source>
+        <target>Відкриває вікно агентів.</target>
       </trans-unit>
       <trans-unit id="category">
         <source xml:lang="en">Filters installed extensions by provided category, when using --list-extensions.</source>
@@ -936,8 +1415,8 @@ OS: {8}</source>
         <target>Маркетплейс не активовано</target>
       </trans-unit>
       <trans-unit id="incompatible platform">
-        <source xml:lang="en">The '{0}' extension is not available in {1} for the {2}.</source>
-        <target>Розширення '{0}' недоступне в {1} для {2}.</target>
+        <source xml:lang="en">The '{0}' extension is not available in {1} for the {2} platform.</source>
+        <target>Розширення '{0}' недоступне в {1} для платформи {2}.</target>
       </trans-unit>
       <trans-unit id="incompatibleAPI">
         <source xml:lang="en">Can't install '{0}' extension. {1}</source>
@@ -1048,8 +1527,8 @@ OS: {8}</source>
         <target>Дозволити або заборонити конкретні версії розширення. Щоб вказати платформо-специфічну версію, використовуйте формат `platform@1.2.3`, наприклад, `win32-x64@1.2.3`. Підтримувані платформи: `win32-x64`, `win32-arm64`, `linux-x64`, `linux-arm64`, `linux-armhf`, `alpine-x64`, `alpine-arm64`, `darwin-x64`, `darwin-arm64`.</target>
       </trans-unit>
       <trans-unit id="extensions.allowed">
-        <source xml:lang="en">Specify a list of extensions that are allowed to use. This helps maintain a secure and consistent development environment by restricting the use of unauthorized extensions. For more information on how to configure this setting, please visit the [Configure Allowed Extensions](https://code.visualstudio.com/docs/setup/enterprise#_configure-allowed-extensions) section.</source>
-        <target>Вкажіть список розширень, які дозволено використовувати. Це допомагає підтримувати безпечне та послідовне середовище розробки, обмежуючи використання несанкціонованих розширень. Для отримання додаткової інформації про налаштування цього параметра, будь ласка, відвідайте розділ [Налаштування дозволених розширень](https://code.visualstudio.com/docs/setup/enterprise#_configure-allowed-extensions).</target>
+        <source xml:lang="en">Specify a list of extensions that are allowed to use. This helps maintain a secure and consistent development environment by restricting the use of unauthorized extensions. For more information on how to configure this setting, please visit the [Configure Allowed Extensions](https://aka.ms/vscode/enterprise/extensions/allowed) section.</source>
+        <target>Вкажіть список розширень, які дозволено використовувати. Це допомагає підтримувати безпечне та послідовне середовище розробки, обмежуючи використання несанкціонованих розширень. Для отримання додаткової інформації про те, як налаштувати цей параметр, будь ласка, відвідайте розділ [Налаштування дозволених розширень](https://aka.ms/vscode/enterprise/extensions/allowed).</target>
       </trans-unit>
       <trans-unit id="extensions.allowed.all">
         <source xml:lang="en">All extensions are allowed.</source>
@@ -1072,8 +1551,8 @@ OS: {8}</source>
         <target>Розширення не дозволяються.</target>
       </trans-unit>
       <trans-unit id="extensions.allowed.policy">
-        <source xml:lang="en">Specify a list of extensions that are allowed to use. This helps maintain a secure and consistent development environment by restricting the use of unauthorized extensions. More information: https://code.visualstudio.com/docs/setup/enterprise#_configure-allowed-extensions</source>
-        <target>Вкажіть список розширень, які дозволено використовувати. Це допомагає підтримувати безпечне та послідовне середовище розробки, обмежуючи використання несанкціонованих розширень. Більше інформації: https://code.visualstudio.com/docs/setup/enterprise#_configure-allowed-extensions</target>
+        <source xml:lang="en">Specify a list of extensions that are allowed to use. This helps maintain a secure and consistent development environment by restricting the use of unauthorized extensions. More information: https://aka.ms/vscode/enterprise/extensions/allowed</source>
+        <target>Вкажіть список розширень, які дозволено використовувати. Це допомагає підтримувати безпечне та послідовне середовище розробки, обмежуючи використання несанкціонованих розширень. Більше інформації: https://aka.ms/vscode/enterprise/extensions/allowed</target>
       </trans-unit>
       <trans-unit id="extensions.publisher.allowed.disable.desc">
         <source xml:lang="en">All extensions from the publisher are not allowed.</source>
@@ -1110,6 +1589,10 @@ OS: {8}</source>
       <trans-unit id="builtin">
         <source xml:lang="en">Extension '{0}' is a Built-in extension and cannot be uninstalled</source>
         <target>Розширення '{0}' є вбудованим розширенням і не може бути видалено</target>
+      </trans-unit>
+      <trans-unit id="builtinAutoUpdate">
+        <source xml:lang="en">Extension '{0}' is a built-in extension and not allowed to be updated in the current product quality '{1}'.</source>
+        <target>Розширення '{0}' є вбудованим розширенням і не може бути оновлене в поточній якості продукту '{1}'.</target>
       </trans-unit>
       <trans-unit id="cancelVsixInstall">
         <source xml:lang="en">Cancelled installing extension '{0}'.</source>
@@ -1260,6 +1743,14 @@ OS: {8}</source>
   </file>
   <file original="src/vs/platform/extensionManagement/node/extensionManagementService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="builtinAutoUpdate">
+        <source xml:lang="en">Extension '{0}' is a built-in extension and not allowed to be updated in the current product quality '{1}'.</source>
+        <target>Розширення '{0}' є вбудованим розширенням і не може бути оновлене в поточній якості продукту '{1}'.</target>
+      </trans-unit>
+      <trans-unit id="builtinVersion">
+        <source xml:lang="en">Extension '{0}' is a built-in extension with version '{1}' and cannot be downgraded to version '{2}'.</source>
+        <target>Розширення '{0}' є вбудованим розширенням версії '{1}' і не може бути знижене до версії '{2}'.</target>
+      </trans-unit>
       <trans-unit id="cannot read">
         <source xml:lang="en">Cannot read the extension from {0}</source>
         <target>Не вдається прочитати розширення з {0}</target>
@@ -1336,6 +1827,10 @@ OS: {8}</source>
         <source xml:lang="en">property `{0}` is mandatory and must be of type `string`</source>
         <target>властивість `{0}` є обов'язковою і повинна бути типу `string`</target>
       </trans-unit>
+      <trans-unit id="extensionDescription.extensionAffinity">
+        <source xml:lang="en">property `{0}` can be omitted or must be of type `string[]`</source>
+        <target>властивість `{0}` може бути пропущена або повинна бути типу `string[]`</target>
+      </trans-unit>
       <trans-unit id="extensionDescription.extensionDependencies">
         <source xml:lang="en">property `{0}` can be omitted or must be of type `string[]`</source>
         <target>властивість `{0}` може бути пропущена або повинна бути типу `string[]`</target>
@@ -1396,14 +1891,6 @@ OS: {8}</source>
         <source xml:lang="en">can't find terminal application '{0}'</source>
         <target>не можу знайти термінальну програму '{0}'</target>
       </trans-unit>
-      <trans-unit id="linux.term.failed">
-        <source xml:lang="en">'{0}' failed with exit code {1}</source>
-        <target>'{0}' завершився з кодом виходу {1}</target>
-      </trans-unit>
-      <trans-unit id="mac.terminal.script.failed">
-        <source xml:lang="en">Script '{0}' failed with exit code {1}</source>
-        <target>Скрипт '{0}' завершився з кодом виходу {1}</target>
-      </trans-unit>
       <trans-unit id="mac.terminal.type.not.supported">
         <source xml:lang="en">'{0}' not supported</source>
         <target>'{0}' не підтримується</target>
@@ -1411,6 +1898,10 @@ OS: {8}</source>
       <trans-unit id="press.any.key">
         <source xml:lang="en">Press any key to continue...</source>
         <target>Натисніть будь-яку клавішу, щоб продовжити...</target>
+      </trans-unit>
+      <trans-unit id="terminal.launch.failed">
+        <source xml:lang="en">Launching '{0}' failed with exit code {1}</source>
+        <target>Запуск '{0}' не вдався з кодом виходу {1}</target>
       </trans-unit>
     </body>
   </file>
@@ -1423,34 +1914,6 @@ OS: {8}</source>
       <trans-unit id="fileSystemRenameError">
         <source xml:lang="en">Rename is only supported for files.</source>
         <target>Перейменування підтримується лише для файлів.</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/platform/files/browser/indexedDBFileSystemProvider" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="dirIsNotEmpty">
-        <source xml:lang="en">Directory is not empty</source>
-        <target>Каталог не порожній</target>
-      </trans-unit>
-      <trans-unit id="fileExceedsStorageQuota">
-        <source xml:lang="en">File exceeds available storage quota</source>
-        <target>Файл перевищує доступну квоту зберігання</target>
-      </trans-unit>
-      <trans-unit id="fileIsDirectory">
-        <source xml:lang="en">File is Directory</source>
-        <target>Файл є директорією</target>
-      </trans-unit>
-      <trans-unit id="fileNotDirectory">
-        <source xml:lang="en">File is not a directory</source>
-        <target>Файл не є директорією</target>
-      </trans-unit>
-      <trans-unit id="fileNotExists">
-        <source xml:lang="en">File does not exist</source>
-        <target>Файл не існує</target>
-      </trans-unit>
-      <trans-unit id="internal">
-        <source xml:lang="en">Internal error occurred in IndexedDB File System Provider. ({0})</source>
-        <target>Внутрішня помилка сталася в IndexedDB File System Provider. ({0})</target>
       </trans-unit>
     </body>
   </file>
@@ -1475,6 +1938,10 @@ OS: {8}</source>
       <trans-unit id="deleteFailedTrashUnsupported">
         <source xml:lang="en">Unable to delete file '{0}' via trash because provider does not support it.</source>
         <target>Неможливо видалити файл '{0}' через кошик, оскільки постачальник не підтримує цю функцію.</target>
+      </trans-unit>
+      <trans-unit id="err.noAppend">
+        <source xml:lang="en">Filesystem provider for scheme '{0}' does not does not support append</source>
+        <target>Провайдер файлової системи для схеми '{0}' не підтримує додавання.</target>
       </trans-unit>
       <trans-unit id="err.read">
         <source xml:lang="en">Unable to read file '{0}' ({1})</source>
@@ -1650,11 +2117,33 @@ OS: {8}</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/platform/hover/browser/hoverWidget" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="hoverhint">
+        <source xml:lang="en">Hold {0} key to mouse over</source>
+        <target>Утримуйте {0} клавішу, щоб навести курсор миші</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/hover/browser/updatableHoverWidget" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="iconLabel.loading">
+        <source xml:lang="en">Loading...</source>
+        <target>Завантаження...</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/platform/keybinding/common/abstractKeybindingService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="first.chord">
         <source xml:lang="en">({0}) was pressed. Waiting for second key of chord...</source>
         <target>({0}) був натиснутий. Очікування на другу клавішу акорду...</target>
+      </trans-unit>
+      <trans-unit id="keybindingLabel">
+        <source xml:lang="en">{0} ({1})</source>
+        <note>UI element label&#xD;
+A keybinding label</note>
+        <target>Прив'язка клавіші {0} ({1})</target>
       </trans-unit>
       <trans-unit id="missing.chord">
         <source xml:lang="en">The key combination ({0}, {1}) is not a command.</source>
@@ -2086,6 +2575,30 @@ OS: {8}</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/platform/meteredConnection/common/meteredConnection.config.contribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="meteredConnection">
+        <source xml:lang="en">Controls whether the current network connection should be treated as metered. When metered, automatic updates, extension downloads, and other background network activity will be postponed to reduce data usage.</source>
+        <target>Контролює, чи слід розглядати поточне мережеве з'єднання як обмежене. Коли з'єднання обмежене, автоматичні оновлення, завантаження розширень та інша фоновая мережева активність будуть відкладені, щоб зменшити використання даних.</target>
+      </trans-unit>
+      <trans-unit id="meteredConnection.auto">
+        <source xml:lang="en">Automatically detect metered connections using the operating system's network status.</source>
+        <target>Автоматично виявляти обмежені з'єднання, використовуючи статус мережі операційної системи.</target>
+      </trans-unit>
+      <trans-unit id="meteredConnection.off">
+        <source xml:lang="en">Never treat the network connection as metered.</source>
+        <target>Ніколи не вважайте мережеве з'єднання обмеженим.</target>
+      </trans-unit>
+      <trans-unit id="meteredConnection.on">
+        <source xml:lang="en">Always treat the network connection as metered. Automatic updates and downloads will be postponed.</source>
+        <target>Завжди розглядайте мережеве з'єднання як обмежене. Автоматичні оновлення та завантаження будуть відкладені.</target>
+      </trans-unit>
+      <trans-unit id="networkConfigurationTitle">
+        <source xml:lang="en">Network</source>
+        <target>Мережа</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/platform/native/electron-main/nativeHostMainService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="cancel">
@@ -2137,6 +2650,10 @@ OS: {8}</source>
         <note>&amp;&amp; denotes a mnemonic</note>
         <target>&amp;&amp;Готово</target>
       </trans-unit>
+      <trans-unit id="tracing.alreadyInProgress">
+        <source xml:lang="en">A tracing session is already in progress. Use command `"{0}"` to stop it first.</source>
+        <target>Сесія трасування вже триває. Спочатку використайте команду `"{0}"`, щоб зупинити її.</target>
+      </trans-unit>
       <trans-unit id="warnEscalation">
         <source xml:lang="en">{0} will now prompt with 'osascript' for Administrator privileges to install the shell command.</source>
         <target>{0} тепер запитає 'osascript' про права адміністратора для встановлення командного рядка.</target>
@@ -2144,6 +2661,14 @@ OS: {8}</source>
       <trans-unit id="warnEscalationUninstall">
         <source xml:lang="en">{0} will now prompt with 'osascript' for Administrator privileges to uninstall the shell command.</source>
         <target>{0} тепер запитає 'osascript' для отримання прав адміністратора для видалення командного рядка.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/networkFilter/common/networkFilterService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="networkFilter.blockedByPolicy">
+        <source xml:lang="en">Access to {0} is blocked by network domain policy (see `{1}` and `{2}` settings).</source>
+        <target>Доступ до {0} заблоковано політикою мережевого домену (див. налаштування `{1}` та `{2}`).</target>
       </trans-unit>
     </body>
   </file>
@@ -2192,6 +2717,10 @@ OS: {8}</source>
       <trans-unit id="recentlyUsed">
         <source xml:lang="en">recently used</source>
         <target>нещодавно використані</target>
+      </trans-unit>
+      <trans-unit id="removeFromRecentlyUsed">
+        <source xml:lang="en">Remove from Recently Used</source>
+        <target>Видалити з нещодавно використаних</target>
       </trans-unit>
       <trans-unit id="suggested">
         <source xml:lang="en">similar commands</source>
@@ -2453,6 +2982,10 @@ OS: {8}</source>
         <source xml:lang="en">Controls whether CA certificates should be loaded from the OS. On Windows and macOS, a reload of the window is required after turning this off. When during [remote development](https://aka.ms/vscode-remote) the {0} setting is disabled this setting can be configured in the local and the remote settings separately.</source>
         <target>Контролює, чи слід завантажувати сертифікати CA з ОС. На Windows та macOS після вимкнення цієї опції необхідно перезавантажити вікно. Коли під час [віддаленої розробки](https://aka.ms/vscode-remote) налаштування {0} вимкнене, це налаштування можна налаштувати окремо в локальних та віддалених налаштуваннях.</target>
       </trans-unit>
+      <trans-unit id="systemCertificatesNode">
+        <source xml:lang="en">Controls whether system certificates should be loaded using Node.js built-in support. Reload the window after changing this setting. When during [remote development](https://aka.ms/vscode-remote) the {0} setting is disabled this setting can be configured in the local and the remote settings separately.</source>
+        <target>Контролює, чи слід завантажувати системні сертифікати, використовуючи вбудовану підтримку Node.js. Перезавантажте вікно після зміни цього налаштування. Коли під час [віддаленої розробки](https://aka.ms/vscode-remote) налаштування {0} вимкнено, це налаштування можна налаштувати окремо в локальних та віддалених налаштуваннях.</target>
+      </trans-unit>
       <trans-unit id="systemCertificatesV2">
         <source xml:lang="en">Controls whether experimental loading of CA certificates from the OS should be enabled. This uses a more general approach than the default implementation. When during [remote development](https://aka.ms/vscode-remote) the {0} setting is disabled this setting can be configured in the local and the remote settings separately.</source>
         <target>Контролює, чи слід увімкнути експериментальне завантаження CA сертифікатів з ОС. Це використовує більш загальний підхід, ніж реалізація за замовчуванням. Коли під час [віддаленої розробки](https://aka.ms/vscode-remote) налаштування {0} вимкнене, це налаштування можна налаштувати окремо в локальних та віддалених налаштуваннях.</target>
@@ -2460,6 +2993,10 @@ OS: {8}</source>
       <trans-unit id="useLocalProxy">
         <source xml:lang="en">Controls whether in the remote extension host the local proxy configuration should be used. This setting only applies as a remote setting during [remote development](https://aka.ms/vscode-remote).</source>
         <target>Контролює, чи слід використовувати локальну конфігурацію проксі в віддаленому хості розширення. Ця настройка застосовується лише як віддалена настройка під час [віддаленої розробки](https://aka.ms/vscode-remote).</target>
+      </trans-unit>
+      <trans-unit id="webSocketAdditionalSupport">
+        <source xml:lang="en">Controls whether the built-in WebSocket implementation should be extended with additional support. Currently proxy support ({1}) and system certificates ({2}) are added when the corresponding settings are enabled. When during [remote development](https://aka.ms/vscode-remote) the {0} setting is disabled this setting can be configured in the local and the remote settings separately.</source>
+        <target>Контролює, чи слід розширити вбудовану реалізацію WebSocket додатковою підтримкою. Наразі підтримка проксі ({1}) та системних сертифікатів ({2}) додаються, коли відповідні налаштування активовані. Коли під час [віддаленої розробки](https://aka.ms/vscode-remote) налаштування {0} вимкнене, це налаштування можна налаштувати окремо в локальних та віддалених налаштуваннях.</target>
       </trans-unit>
     </body>
   </file>
@@ -2746,6 +3283,10 @@ To override an existing profile use its profile name as the key, for example:
   </file>
   <file original="src/vs/platform/terminal/node/terminalProcess" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="conptyLaunchFailed">
+        <source xml:lang="en">A native exception occurred during launch (Cannot launch conpty). Winpty has been removed, see {0} for more details. You can also try enabling the `{1}` setting.</source>
+        <target>Сталася виняткова ситуація під час запуску (Не вдалося запустити conpty). Winpty було видалено, див. {0} для отримання додаткової інформації. Ви також можете спробувати увімкнути налаштування `{1}`.</target>
+      </trans-unit>
       <trans-unit id="launchFail.cwdDoesNotExist">
         <source xml:lang="en">Starting directory (cwd) "{0}" does not exist</source>
         <target>Початковий каталог (cwd) "{0}" не існує</target>
@@ -2837,6 +3378,10 @@ To override an existing profile use its profile name as the key, for example:
       <trans-unit id="textPreformatBackground">
         <source xml:lang="en">Background color for preformatted text segments.</source>
         <target>Колір фону для сегментів попередньо відформатованого тексту.</target>
+      </trans-unit>
+      <trans-unit id="textPreformatBorder">
+        <source xml:lang="en">Border color for preformatted text segments.</source>
+        <target>Колір рамки для сегментів попередньо відформатованого тексту.</target>
       </trans-unit>
       <trans-unit id="textPreformatForeground">
         <source xml:lang="en">Foreground color for preformatted text segments.</source>
@@ -3286,6 +3831,10 @@ To override an existing profile use its profile name as the key, for example:
         <source xml:lang="en">Secondary button background color.</source>
         <target>Колір фону вторинної кнопки.</target>
       </trans-unit>
+      <trans-unit id="buttonSecondaryBorder">
+        <source xml:lang="en">Secondary button border color.</source>
+        <target>Колір рамки вторинної кнопки.</target>
+      </trans-unit>
       <trans-unit id="buttonSecondaryForeground">
         <source xml:lang="en">Secondary button foreground color.</source>
         <target>Колір переднього плану вторинної кнопки.</target>
@@ -3730,6 +4279,10 @@ To override an existing profile use its profile name as the key, for example:
         <source xml:lang="en">Border color of active sashes.</source>
         <target>Колір рамки активних вікон.</target>
       </trans-unit>
+      <trans-unit id="scrollbarBackground">
+        <source xml:lang="en">Scrollbar track background color.</source>
+        <target>Колір фону треку смуги прокрутки.</target>
+      </trans-unit>
       <trans-unit id="scrollbarShadow">
         <source xml:lang="en">Scrollbar shadow to indicate that the view is scrolled.</source>
         <target>Тінь смуги прокрутки, щоб вказати, що перегляд прокручено.</target>
@@ -3829,6 +4382,54 @@ To override an existing profile use its profile name as the key, for example:
       <trans-unit id="widgetClose">
         <source xml:lang="en">Icon for the close action in widgets.</source>
         <target>Іконка для дії закриття у віджетах.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/theme/common/sizes/baseSizes" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="bodyFontSize">
+        <source xml:lang="en">Base font size. This size is used if not overridden by a component.</source>
+        <target>Розмір базового шрифту. Цей розмір використовується, якщо не переопреділений компонентом.</target>
+      </trans-unit>
+      <trans-unit id="bodyFontSizeSmall">
+        <source xml:lang="en">Small font size for secondary content.</source>
+        <target>Маленький розмір шрифту для вторинного контенту.</target>
+      </trans-unit>
+      <trans-unit id="bodyFontSizeXSmall">
+        <source xml:lang="en">Extra small font size for less prominent content.</source>
+        <target>Додатковий малий розмір шрифту для менш помітного контенту.</target>
+      </trans-unit>
+      <trans-unit id="codiconFontSize">
+        <source xml:lang="en">Base font size for codicons.</source>
+        <target>Базовий розмір шрифту для codicons.</target>
+      </trans-unit>
+      <trans-unit id="cornerRadiusCircle">
+        <source xml:lang="en">Circular corner radius for fully rounded UI elements.</source>
+        <target>Кутовий радіус для повністю закруглених елементів інтерфейсу.</target>
+      </trans-unit>
+      <trans-unit id="cornerRadiusLarge">
+        <source xml:lang="en">Large corner radius for prominent UI elements.</source>
+        <target>Великий радіус кута для помітних елементів інтерфейсу.</target>
+      </trans-unit>
+      <trans-unit id="cornerRadiusMedium">
+        <source xml:lang="en">Base corner radius for UI elements.</source>
+        <target>Базовий радіус кута для елементів інтерфейсу.</target>
+      </trans-unit>
+      <trans-unit id="cornerRadiusSmall">
+        <source xml:lang="en">Small corner radius for compact UI elements.</source>
+        <target>Малий радіус кута для компактних елементів інтерфейсу.</target>
+      </trans-unit>
+      <trans-unit id="cornerRadiusXLarge">
+        <source xml:lang="en">Extra large corner radius for very prominent UI elements.</source>
+        <target>Додатковий великий радіус кута для дуже помітних елементів інтерфейсу.</target>
+      </trans-unit>
+      <trans-unit id="cornerRadiusXSmall">
+        <source xml:lang="en">Extra small corner radius for very compact UI elements.</source>
+        <target>Додатковий малий радіус кута для дуже компактних елементів інтерфейсу.</target>
+      </trans-unit>
+      <trans-unit id="strokeThickness">
+        <source xml:lang="en">Base stroke thickness for borders and outlines.</source>
+        <target>Базова товщина штриха для меж і контурів.</target>
       </trans-unit>
     </body>
   </file>
@@ -4106,12 +4707,12 @@ To override an existing profile use its profile name as the key, for example:
         <target>Стиль, який слід використовувати для символів, що вважаються застарілими.</target>
       </trans-unit>
       <trans-unit id="enableWindowsBackgroundUpdates">
-        <source xml:lang="en">Enable to download and install new VS Code versions in the background on Windows.</source>
-        <target>Увімкніть можливість завантаження та встановлення нових версій VS Code у фоновому режимі на Windows.</target>
+        <source xml:lang="en">Enable to download and install new VS Code versions in the background.</source>
+        <target>Увімкніть можливість завантаження та встановлення нових версій VS Code у фоновому режимі.</target>
       </trans-unit>
       <trans-unit id="enableWindowsBackgroundUpdatesTitle">
-        <source xml:lang="en">Enable Background Updates on Windows</source>
-        <target>Увімкнути фонові оновлення на Windows</target>
+        <source xml:lang="en">Enable Background Updates</source>
+        <target>Увімкнути фонові оновлення</target>
       </trans-unit>
       <trans-unit id="manual">
         <source xml:lang="en">Disable automatic background update checks. Updates will be available if you manually check for updates.</source>
@@ -4120,6 +4721,10 @@ To override an existing profile use its profile name as the key, for example:
       <trans-unit id="none">
         <source xml:lang="en">Disable updates.</source>
         <target>Вимкнути оновлення.</target>
+      </trans-unit>
+      <trans-unit id="showPostInstallInfo">
+        <source xml:lang="en">Show a post-install update tooltip in the title bar instead of opening the release notes editor.</source>
+        <target>Показати підказку про оновлення після встановлення в рядку заголовка замість відкриття редактора приміток до випуску.</target>
       </trans-unit>
       <trans-unit id="showReleaseNotes">
         <source xml:lang="en">Show Release Notes after an update. The Release Notes are fetched from a Microsoft online service.</source>

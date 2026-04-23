@@ -125,6 +125,10 @@ To complete authentication, navigate to {1} and enter the code above.</source>
   </file>
   <file original="src/vs/workbench/api/browser/mainThreadChatSessions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="chatEditorContributionName">
+        <source xml:lang="en">{0}</source>
+        <target>{0}</target>
+      </trans-unit>
       <trans-unit id="interruptActiveResponse">
         <source xml:lang="en">Are you sure you want to interrupt the active session?</source>
         <target>Ви впевнені, що хочете перервати активну сесію?</target>
@@ -284,7 +288,8 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       </trans-unit>
       <trans-unit id="preview">
         <source xml:lang="en">Show &amp;&amp;Preview</source>
-        <target>Показати &amp;&amp;попередній перегляд</target>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>Показати &amp;&amp;Попередній перегляд</target>
       </trans-unit>
     </body>
   </file>
@@ -330,6 +335,10 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       <trans-unit id="loginWith">
         <source xml:lang="en">Login with {0}</source>
         <target>Увійти з {0}</target>
+      </trans-unit>
+      <trans-unit id="mcpAuthSessionRemoved">
+        <source xml:lang="en">Authentication session for {0} removed, stopping server</source>
+        <target>Сесію автентифікації для {0} видалено, зупиняючи сервер</target>
       </trans-unit>
     </body>
   </file>
@@ -498,8 +507,8 @@ To complete authentication, navigate to {1} and enter the code above.</source>
         <target>Пріоритет запису в рядку стану. Вищий показник означає, що елемент має бути показаний більше зліва.</target>
       </trans-unit>
       <trans-unit id="text">
-        <source xml:lang="en">The text to show for the entry. You can embed icons in the text by leveraging the `$(&lt;name&gt;)`-syntax, like 'Hello $(globe)!'</source>
-        <target>Текст, який відображається для запису. Ви можете вбудовувати іконки в текст, використовуючи синтаксис `$(&lt;name&gt;)`, наприклад, 'Привіт $(globe)!'</target>
+        <source xml:lang="en">The text to show for the entry. You can embed icons in the text by leveraging the `$(&lt;name&gt;)`-syntax, like 'Hello {0}!'</source>
+        <target>Текст для відображення для запису. Ви можете вбудовувати значки в текст, використовуючи синтаксис `$(&lt;name&gt;)`, наприклад, 'Привіт {0}!'</target>
       </trans-unit>
       <trans-unit id="tooltip">
         <source xml:lang="en">The tooltip text for the entry.</source>
@@ -513,6 +522,10 @@ To complete authentication, navigate to {1} and enter the code above.</source>
   </file>
   <file original="src/vs/workbench/api/browser/viewsExtensionPoint" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="RequiresChatSessionsProposedAPI">
+        <source xml:lang="en">View container '{0}' requires 'enabledApiProposals: ["chatSessionsProvider"]'.</source>
+        <target>Перегляд контейнера '{0}' вимагає 'enabledApiProposals: ["chatSessionsProvider"]'.</target>
+      </trans-unit>
       <trans-unit id="ViewContainerDoesnotExist">
         <source xml:lang="en">View container '{0}' does not exist and all views registered to it will be added to 'Explorer'.</source>
         <target>Контейнер '{0}' не існує, і всі перегляди, зареєстровані в ньому, будуть додані до 'Explorer'.</target>
@@ -610,8 +623,8 @@ To complete authentication, navigate to {1} and enter the code above.</source>
         <target>Вносить подання до контейнера Explorer в панелі активності</target>
       </trans-unit>
       <trans-unit id="views.remote">
-        <source xml:lang="en">Contributes views to Remote container in the Activity bar. To contribute to this container, enableProposedApi needs to be turned on</source>
-        <target>Вносить подання до віддаленого контейнера в панелі активності. Щоб внести внесок у цей контейнер, потрібно увімкнути enableProposedApi.</target>
+        <source xml:lang="en">Contributes views to Remote container in the Activity bar. To contribute to this container, the 'contribViewsRemote' API proposal must be enabled.</source>
+        <target>Вносить подання до віддаленого контейнера в панелі активності. Щоб внести свій внесок у цей контейнер, потрібно активувати пропозицію API 'contribViewsRemote'.</target>
       </trans-unit>
       <trans-unit id="views.scm">
         <source xml:lang="en">Contributes views to SCM container in the Activity bar</source>
@@ -714,6 +727,14 @@ To complete authentication, navigate to {1} and enter the code above.</source>
   </file>
   <file original="src/vs/workbench/api/common/configurationExtensionPoint" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="accessibility">
+        <source xml:lang="en">Accessibility settings</source>
+        <target>Налаштування доступності</target>
+      </trans-unit>
+      <trans-unit id="advanced">
+        <source xml:lang="en">Advanced settings are hidden by default in the Settings editor unless the user chooses to show advanced settings.</source>
+        <target>Розширені налаштування за замовчуванням приховані в редакторі налаштувань, якщо користувач не вибере показати розширені налаштування.</target>
+      </trans-unit>
       <trans-unit id="config.property.defaultConfiguration.warning">
         <source xml:lang="en">Cannot register configuration defaults for '{0}'. Only defaults for machine-overridable, window, resource and language overridable scoped settings are supported.</source>
         <target>Не вдалося зареєструвати значення за замовчуванням конфігурації для '{0}'. Підтримуються лише значення за замовчуванням для налаштувань, які можна перекривати на рівні машини, вікна, ресурсу та мови.</target>
@@ -730,9 +751,17 @@ To complete authentication, navigate to {1} and enter the code above.</source>
         <source xml:lang="en">Default</source>
         <target>За замовчуванням</target>
       </trans-unit>
+      <trans-unit id="default override value">
+        <source xml:lang="en">Override Value</source>
+        <target>Перезаписати значення</target>
+      </trans-unit>
       <trans-unit id="description">
         <source xml:lang="en">Description</source>
         <target>Опис</target>
+      </trans-unit>
+      <trans-unit id="experimental">
+        <source xml:lang="en">Experimental settings are subject to change and may be removed in future releases.</source>
+        <target>Експериментальні налаштування можуть змінюватися і можуть бути видалені в майбутніх версіях.</target>
       </trans-unit>
       <trans-unit id="invalid.allOf">
         <source xml:lang="en">'configuration.allOf' is deprecated and should no longer be used. Instead, pass multiple configuration sections as an array to the 'configuration' contribution point.</source>
@@ -749,6 +778,14 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       <trans-unit id="invalid.title">
         <source xml:lang="en">'configuration.title' must be a string</source>
         <target>'configuration.title' має бути рядком</target>
+      </trans-unit>
+      <trans-unit id="language">
+        <source xml:lang="en">Languages</source>
+        <target>Мови</target>
+      </trans-unit>
+      <trans-unit id="preview">
+        <source xml:lang="en">Preview settings can be used to try out new features before they are finalized.</source>
+        <target>Показати &amp;&amp;Попередній перегляд</target>
       </trans-unit>
       <trans-unit id="scope.application.description">
         <source xml:lang="en">Configuration that can be configured only in the user settings.</source>
@@ -777,6 +814,10 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       <trans-unit id="scope.ignoreSync">
         <source xml:lang="en">When enabled, Settings Sync will not sync the user value of this configuration by default.</source>
         <target>Коли увімкнено, синхронізація налаштувань за замовчуванням не буде синхронізувати значення користувача цієї конфігурації.</target>
+      </trans-unit>
+      <trans-unit id="scope.keywords">
+        <source xml:lang="en">A list of keywords that help users find this setting in the Settings editor. These are not shown to the user.</source>
+        <target>Список ключових слів, які допомагають користувачам знайти це налаштування в редакторі налаштувань. Вони не відображаються користувачу.</target>
       </trans-unit>
       <trans-unit id="scope.language-overridable.description">
         <source xml:lang="en">Resource configuration that can be configured in language specific settings.</source>
@@ -819,12 +860,16 @@ To complete authentication, navigate to {1} and enter the code above.</source>
         <target>Значення буде показано в полі введення.</target>
       </trans-unit>
       <trans-unit id="scope.tags">
-        <source xml:lang="en">A list of categories under which to place the setting. The category can then be searched up in the Settings editor. For example, specifying the `experimental` tag allows one to find the setting by searching `@tag:experimental`.</source>
-        <target>Список категорій, під які можна помістити налаштування. Категорію можна буде знайти в редакторі налаштувань. Наприклад, вказавши тег `experimental`, можна знайти налаштування, шукаючи `@tag:experimental`.</target>
+        <source xml:lang="en">A list of tags under which to place the setting. The tag can then be searched up in the Settings editor. For example, specifying the `experimental` tag allows one to find the setting by searching `@tag:experimental`.</source>
+        <target>Список тегів, під якими можна розмістити налаштування. Тег можна буде знайти в редакторі налаштувань. Наприклад, вказавши тег `experimental`, можна знайти налаштування, шукаючи `@tag:experimental`.</target>
       </trans-unit>
       <trans-unit id="scope.window.description">
         <source xml:lang="en">Configuration that can be configured in the user, remote or workspace settings.</source>
         <target>Конфігурація, яку можна налаштувати в налаштуваннях користувача, віддалених або робочого простору.</target>
+      </trans-unit>
+      <trans-unit id="setting">
+        <source xml:lang="en">Setting</source>
+        <target>Налаштування</target>
       </trans-unit>
       <trans-unit id="setting name">
         <source xml:lang="en">ID</source>
@@ -834,9 +879,21 @@ To complete authentication, navigate to {1} and enter the code above.</source>
         <source xml:lang="en">Settings</source>
         <target>Налаштування</target>
       </trans-unit>
+      <trans-unit id="settings default overrides">
+        <source xml:lang="en">Settings Default Overrides</source>
+        <target>Налаштування стандартних переваг</target>
+      </trans-unit>
+      <trans-unit id="telemetry">
+        <source xml:lang="en">Telemetry settings</source>
+        <target>Налаштування телеметрії</target>
+      </trans-unit>
       <trans-unit id="unknownWorkspaceProperty">
         <source xml:lang="en">Unknown workspace configuration property</source>
         <target>Невідома властивість конфігурації робочого простору</target>
+      </trans-unit>
+      <trans-unit id="usesOnlineServices">
+        <source xml:lang="en">Settings that use online services</source>
+        <target>Налаштування, які використовують онлайн-сервіси</target>
       </trans-unit>
       <trans-unit id="vscode.extension.contributes.configuration">
         <source xml:lang="en">Contributes configuration settings.</source>
@@ -1029,14 +1086,6 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/api/common/extHostTreeViews" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="treeView.duplicateElement">
-        <source xml:lang="en">Element with id {0} is already registered</source>
-        <target>Елемент з ідентифікатором {0} вже зареєстровано</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/workbench/api/common/extHostTunnelService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="tunnelPrivacy.private">
@@ -1134,18 +1183,6 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       <trans-unit id="debug.terminal.title">
         <source xml:lang="en">Debug Process</source>
         <target>Процес налагодження</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/workbench/api/test/browser/mainThreadTreeViews.test" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="Test View 1">
-        <source xml:lang="en">Test View 1</source>
-        <target>Тестовий перегляд 1</target>
-      </trans-unit>
-      <trans-unit id="test">
-        <source xml:lang="en">test</source>
-        <target>тест</target>
       </trans-unit>
     </body>
   </file>
@@ -1285,6 +1322,18 @@ This action is irreversible and may result in data loss!</source>
       <trans-unit id="storageLogDialogMessage">
         <source xml:lang="en">The storage database contents have been logged to the developer tools.</source>
         <target>Вміст бази даних зберігання було зафіксовано в інструментах розробника.</target>
+      </trans-unit>
+      <trans-unit id="syncAccountPolicy">
+        <source xml:lang="en">Sync Account Policy</source>
+        <target>Політика синхронізації облікового запису</target>
+      </trans-unit>
+      <trans-unit id="syncAccountPolicy.error">
+        <source xml:lang="en">Failed to sync account policy.</source>
+        <target>Не вдалося синхронізувати політику облікового запису.</target>
+      </trans-unit>
+      <trans-unit id="syncAccountPolicy.success">
+        <source xml:lang="en">Account policy has been synced.</source>
+        <target>Політику облікового запису синхронізовано.</target>
       </trans-unit>
       <trans-unit id="toggle screencast mode">
         <source xml:lang="en">Toggle Screencast Mode</source>
@@ -2026,6 +2075,14 @@ This action is irreversible and may result in data loss!</source>
         <source xml:lang="en">About</source>
         <target>Про</target>
       </trans-unit>
+      <trans-unit id="activeOpenedRecentlyOpenedFolder">
+        <source xml:lang="en">Folder Opened in Active Window</source>
+        <target>Папка відкрита в активному вікні</target>
+      </trans-unit>
+      <trans-unit id="activeOpenedRecentlyOpenedWorkspace">
+        <source xml:lang="en">Workspace Opened in Active Window</source>
+        <target>Робочий простір відкрито в активному вікні</target>
+      </trans-unit>
       <trans-unit id="blur">
         <source xml:lang="en">Remove keyboard focus from focused element</source>
         <target>Зняти фокус з елемента, на якому є фокус клавіатури</target>
@@ -2114,6 +2171,14 @@ This action is irreversible and may result in data loss!</source>
       <trans-unit id="openRecentPlaceholderMac">
         <source xml:lang="en">Select to open (hold Cmd-key to force new window or Option-key for same window)</source>
         <target>Виберіть, щоб відкрити (утримуйте клавішу Cmd, щоб примусово відкрити нове вікно, або клавішу Option для того ж вікна)</target>
+      </trans-unit>
+      <trans-unit id="openedRecentlyOpenedFolder">
+        <source xml:lang="en">Folder Opened in a Window</source>
+        <target>Папка відкрита в вікні</target>
+      </trans-unit>
+      <trans-unit id="openedRecentlyOpenedWorkspace">
+        <source xml:lang="en">Workspace Opened in a Window</source>
+        <target>Робочий простір відкрито в вікні</target>
       </trans-unit>
       <trans-unit id="quickOpenRecent">
         <source xml:lang="en">Quick Open Recent...</source>
@@ -2261,7 +2326,7 @@ This action is irreversible and may result in data loss!</source>
       </trans-unit>
       <trans-unit id="preview">
         <source xml:lang="en">{0}, preview</source>
-        <target>Показати &amp;&amp;попередній перегляд</target>
+        <target>Показати &amp;&amp;Попередній перегляд</target>
       </trans-unit>
     </body>
   </file>
@@ -2286,6 +2351,18 @@ This action is irreversible and may result in data loss!</source>
       <trans-unit id="activity bar position">
         <source xml:lang="en">Activity Bar Position</source>
         <target>Позиція панелі активності</target>
+      </trans-unit>
+      <trans-unit id="activity bar size">
+        <source xml:lang="en">Activity Bar Size</source>
+        <target>Розмір панелі активності</target>
+      </trans-unit>
+      <trans-unit id="activityBarSizeCompact">
+        <source xml:lang="en">Compact</source>
+        <target>Компактний</target>
+      </trans-unit>
+      <trans-unit id="activityBarSizeDefault">
+        <source xml:lang="en">Default</source>
+        <target>За замовчуванням</target>
       </trans-unit>
       <trans-unit id="bottom">
         <source xml:lang="en">Bottom</source>
@@ -2396,8 +2473,12 @@ This action is irreversible and may result in data loss!</source>
         <target>Максимізувати бокову панель вторинного рівня</target>
       </trans-unit>
       <trans-unit id="maximizeAuxiliaryBarTooltip">
-        <source xml:lang="en">Maximize Secondary Side Bar Size</source>
-        <target>Максимізувати розмір бокової панелі вторинного боку</target>
+        <source xml:lang="en">Maximize Secondary Side Bar</source>
+        <target>Максимізувати бокову панель вторинного боку</target>
+      </trans-unit>
+      <trans-unit id="maximizeAuxiliaryBarTooltip2">
+        <source xml:lang="en">Maximize Secondary Side Bar</source>
+        <target>Максимізувати бокову панель вторинного боку</target>
       </trans-unit>
       <trans-unit id="maximizeIcon">
         <source xml:lang="en">Icon to maximize the secondary side bar.</source>
@@ -2423,10 +2504,6 @@ This action is irreversible and may result in data loss!</source>
       <trans-unit id="restoreAuxiliaryBar">
         <source xml:lang="en">Restore Secondary Side Bar</source>
         <target>Відновити бічну панель вторинного рівня</target>
-      </trans-unit>
-      <trans-unit id="restoreAuxiliaryBarTooltip">
-        <source xml:lang="en">Restore Secondary Side Bar Size</source>
-        <target>Відновити розмір бокової панелі вторинного рівня</target>
       </trans-unit>
       <trans-unit id="toggleAuxiliaryBar">
         <source xml:lang="en">Toggle Secondary Side Bar Visibility</source>
@@ -2559,6 +2636,20 @@ This action is irreversible and may result in data loss!</source>
       <trans-unit id="viewsAndMoreActions">
         <source xml:lang="en">Views and More Actions...</source>
         <target>Перегляди та інші дії...</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/browser/parts/dialogs/dialog" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="aboutDetail">
+        <source xml:lang="en">Version: {0}
+Commit: {1}
+Date: {2}
+Browser: {3}</source>
+        <target>Версія: {0}  
+Коміт: {1}  
+Дата: {2}  
+Браузер: {3}</target>
       </trans-unit>
     </body>
   </file>
@@ -2745,6 +2836,10 @@ This action is irreversible and may result in data loss!</source>
         <source xml:lang="en">Render breadcrumb items with icons.</source>
         <target>Відобразити елементи хлібних крихт з іконками.</target>
       </trans-unit>
+      <trans-unit id="symbolPathSeparator">
+        <source xml:lang="en">The separator used when copying the breadcrumb symbol path.</source>
+        <target>Роздільник, що використовується при копіюванні символу шляху хлібних крихт.</target>
+      </trans-unit>
       <trans-unit id="symbolSortOrder">
         <source xml:lang="en">Controls how symbols are sorted in the breadcrumbs outline view.</source>
         <target>Контролює, як символи сортуються в огляді хлібних крихт.</target>
@@ -2797,6 +2892,10 @@ This action is irreversible and may result in data loss!</source>
         <source xml:lang="en">Whether breadcrumbs are currently visible</source>
         <target>Чи хлібні крихти наразі видимі</target>
       </trans-unit>
+      <trans-unit id="cmd.copyPath">
+        <source xml:lang="en">Copy Breadcrumbs Path</source>
+        <target>Скопіювати шлях хлібних крихт</target>
+      </trans-unit>
       <trans-unit id="cmd.focus">
         <source xml:lang="en">Focus Breadcrumbs</source>
         <target>Хлібні крихти фокусу</target>
@@ -2809,9 +2908,13 @@ This action is irreversible and may result in data loss!</source>
         <source xml:lang="en">Toggle Breadcrumbs</source>
         <target>Перемикати хлібні крихти</target>
       </trans-unit>
+      <trans-unit id="cmd.toggle.short">
+        <source xml:lang="en">Breadcrumbs</source>
+        <target>Хлібні крихти</target>
+      </trans-unit>
       <trans-unit id="cmd.toggle2">
-        <source xml:lang="en">Toggle Breadcrumbs</source>
-        <target>Перемикати хлібні крихти</target>
+        <source xml:lang="en">Breadcrumbs</source>
+        <target>Хлібні крихти</target>
       </trans-unit>
       <trans-unit id="empty">
         <source xml:lang="en">no elements</source>
@@ -3710,6 +3813,10 @@ This action is irreversible and may result in data loss!</source>
         <source xml:lang="en">Move Editor into Group Below</source>
         <target>Перемістити редактор у групу нижче</target>
       </trans-unit>
+      <trans-unit id="moveEditorToEnd">
+        <source xml:lang="en">Move Editor to End</source>
+        <target>Перемістити редактор в кінець</target>
+      </trans-unit>
       <trans-unit id="moveEditorToFirstGroup">
         <source xml:lang="en">Move Editor into First Group</source>
         <target>Перемістити редактор у першу групу</target>
@@ -3737,6 +3844,10 @@ This action is irreversible and may result in data loss!</source>
       <trans-unit id="moveEditorToRightGroup">
         <source xml:lang="en">Move Editor into Right Group</source>
         <target>Перемістити редактор у праву групу</target>
+      </trans-unit>
+      <trans-unit id="moveEditorToStart">
+        <source xml:lang="en">Move Editor to Start</source>
+        <target>Перемістити редактор на початок</target>
       </trans-unit>
       <trans-unit id="navigateBack">
         <source xml:lang="en">Go Back</source>
@@ -3970,6 +4081,10 @@ This action is irreversible and may result in data loss!</source>
   </file>
   <file original="src/vs/workbench/browser/parts/editor/editorCommands" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="closeModalEditor">
+        <source xml:lang="en">Close Modal Editor</source>
+        <target>Закрити модальний редактор</target>
+      </trans-unit>
       <trans-unit id="editorCommand.activeEditorCopy.arg.description">
         <source xml:lang="en">Argument Properties:
 	* 'to': String value providing where to copy.
@@ -4032,6 +4147,26 @@ This action is irreversible and may result in data loss!</source>
         <source xml:lang="en">Lock Editor Group</source>
         <target>Група блокування</target>
       </trans-unit>
+      <trans-unit id="moveModalEditorToWindow">
+        <source xml:lang="en">Open Modal Editor in New Window</source>
+        <target>Відкрити редактор модальних вікон у новому вікні</target>
+      </trans-unit>
+      <trans-unit id="moveToMainWindow">
+        <source xml:lang="en">Open Modal Editor in Main Window</source>
+        <target>Відкрити редактор модального вікна в основному вікні</target>
+      </trans-unit>
+      <trans-unit id="navigateModalEditorNext">
+        <source xml:lang="en">Navigate to Next Item in Modal Editor</source>
+        <target>Перейдіть до наступного елемента в модальному редакторі</target>
+      </trans-unit>
+      <trans-unit id="navigateModalEditorPrevious">
+        <source xml:lang="en">Navigate to Previous Item in Modal Editor</source>
+        <target>Перейти до попереднього елемента в модальному редакторі</target>
+      </trans-unit>
+      <trans-unit id="restoreModalEditorSize">
+        <source xml:lang="en">Restore Modal Editor</source>
+        <target>Відновити модальний редактор</target>
+      </trans-unit>
       <trans-unit id="splitEditorInGroup">
         <source xml:lang="en">Split Editor in Group</source>
         <target>Розділити редактор у групі</target>
@@ -4043,6 +4178,14 @@ This action is irreversible and may result in data loss!</source>
       <trans-unit id="toggleJoinEditorInGroup">
         <source xml:lang="en">Toggle Split Editor in Group</source>
         <target>Перемикання розділеного редактора в групі</target>
+      </trans-unit>
+      <trans-unit id="toggleModalEditorMaximized">
+        <source xml:lang="en">Maximize Modal Editor</source>
+        <target>Максимізувати редактор модалей</target>
+      </trans-unit>
+      <trans-unit id="toggleModalEditorSidebar">
+        <source xml:lang="en">Toggle Modal Editor Sidebar</source>
+        <target>Перемикати бічну панель редактора модального вікна</target>
       </trans-unit>
       <trans-unit id="toggleSplitEditorInGroupLayout">
         <source xml:lang="en">Toggle Layout of Split Editor in Group</source>
@@ -4132,10 +4275,6 @@ This action is irreversible and may result in data loss!</source>
   </file>
   <file original="src/vs/workbench/browser/parts/editor/editorGroupWatermark" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="editorLineHighlight">
-        <source xml:lang="en">Foreground color for the labels in the editor watermark.</source>
-        <target>Колір переднього плану для міток у водяному знаку редактора.</target>
-      </trans-unit>
       <trans-unit id="watermark.findInFiles">
         <source xml:lang="en">Find in Files</source>
         <target>Знайти у файлах</target>
@@ -4527,9 +4666,37 @@ This action is irreversible and may result in data loss!</source>
         <source xml:lang="en">Editor actions</source>
         <target>Дії редактора</target>
       </trans-unit>
+      <trans-unit id="ariaLabelEditorActionsLayout">
+        <source xml:lang="en">Editor layout actions</source>
+        <target>Дії макета редактора</target>
+      </trans-unit>
       <trans-unit id="draggedEditorGroup">
         <source xml:lang="en">{0} (+{1})</source>
         <target>{0} (+{1})</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/browser/parts/editor/modalEditorPart" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="modalEditorPart">
+        <source xml:lang="en">Modal Editor Area</source>
+        <target>Модальна область редактора</target>
+      </trans-unit>
+      <trans-unit id="navigationCounter">
+        <source xml:lang="en">{0} of {1}</source>
+        <target>{0} з {1}</target>
+      </trans-unit>
+      <trans-unit id="nextItem">
+        <source xml:lang="en">Next</source>
+        <target>Далі</target>
+      </trans-unit>
+      <trans-unit id="previousItem">
+        <source xml:lang="en">Previous</source>
+        <target>Попередній</target>
+      </trans-unit>
+      <trans-unit id="toggleSidebar">
+        <source xml:lang="en">Toggle Sidebar</source>
+        <target>Перемикання видимості основної бокової панелі</target>
       </trans-unit>
     </body>
   </file>
@@ -4667,6 +4834,10 @@ This action is irreversible and may result in data loss!</source>
         <source xml:lang="en">Collapse Notification</source>
         <target>Сповіщення про згортання</target>
       </trans-unit>
+      <trans-unit id="collapseUpIcon">
+        <source xml:lang="en">Icon for the collapse action in notifications when the notification center is at the top.</source>
+        <target>Іконка для дії згортання в сповіщеннях, коли центр сповіщень знаходиться вгорі.</target>
+      </trans-unit>
       <trans-unit id="configureDoNotDisturbMode">
         <source xml:lang="en">Configure Do Not Disturb...</source>
         <target>Налаштувати режим Не турбувати...</target>
@@ -4679,6 +4850,10 @@ This action is irreversible and may result in data loss!</source>
         <source xml:lang="en">More Actions...</source>
         <target>Більше дій...</target>
       </trans-unit>
+      <trans-unit id="configureNotificationsPosition">
+        <source xml:lang="en">Configure Notifications Position...</source>
+        <target>Налаштувати позицію сповіщень...</target>
+      </trans-unit>
       <trans-unit id="copyNotification">
         <source xml:lang="en">Copy Text</source>
         <target>Копіювати текст</target>
@@ -4686,6 +4861,10 @@ This action is irreversible and may result in data loss!</source>
       <trans-unit id="doNotDisturbIcon">
         <source xml:lang="en">Icon for the mute all action in notifications.</source>
         <target>Іконка для дії вимкнення всіх сповіщень.</target>
+      </trans-unit>
+      <trans-unit id="expandDownIcon">
+        <source xml:lang="en">Icon for the expand action in notifications when the notification center is at the top.</source>
+        <target>Іконка для дії розгортання в сповіщеннях, коли центр сповіщень знаходиться вгорі.</target>
       </trans-unit>
       <trans-unit id="expandIcon">
         <source xml:lang="en">Icon for the expand action in notifications.</source>
@@ -4702,6 +4881,14 @@ This action is irreversible and may result in data loss!</source>
       <trans-unit id="hideNotificationsCenter">
         <source xml:lang="en">Hide Notifications</source>
         <target>Сховати сповіщення</target>
+      </trans-unit>
+      <trans-unit id="hideUpIcon">
+        <source xml:lang="en">Icon for the hide action in notifications when positioned at the top.</source>
+        <target>Іконка для дії приховування в сповіщеннях, коли розташована вгорі.</target>
+      </trans-unit>
+      <trans-unit id="positionIcon">
+        <source xml:lang="en">Icon for the position action in notifications.</source>
+        <target>Іконка для дії позиції в сповіщеннях.</target>
       </trans-unit>
       <trans-unit id="toggleDoNotDisturbMode">
         <source xml:lang="en">Toggle Do Not Disturb Mode</source>
@@ -4783,6 +4970,18 @@ This action is irreversible and may result in data loss!</source>
         <source xml:lang="en">Notifications</source>
         <target>Сповіщення</target>
       </trans-unit>
+      <trans-unit id="positionBottomLeft">
+        <source xml:lang="en">Bottom Left</source>
+        <target>Нижній лівий</target>
+      </trans-unit>
+      <trans-unit id="positionBottomRight">
+        <source xml:lang="en">Bottom Right</source>
+        <target>Нижній правий</target>
+      </trans-unit>
+      <trans-unit id="positionTopRight">
+        <source xml:lang="en">Top Right</source>
+        <target>Верхній правий</target>
+      </trans-unit>
       <trans-unit id="selectSources">
         <source xml:lang="en">Select sources to enable all notifications from</source>
         <target>Виберіть джерела, щоб увімкнути всі сповіщення від</target>
@@ -4798,6 +4997,10 @@ This action is irreversible and may result in data loss!</source>
       <trans-unit id="toggleDoNotDisturbModeBySource">
         <source xml:lang="en">Toggle Do Not Disturb Mode By Source...</source>
         <target>Перемикати режим 'Не турбувати' за джерелом...</target>
+      </trans-unit>
+      <trans-unit id="toggleNotifications">
+        <source xml:lang="en">Toggle Notifications</source>
+        <target>Переключити сповіщення</target>
       </trans-unit>
     </body>
   </file>
@@ -5020,8 +5223,8 @@ This action is irreversible and may result in data loss!</source>
         <target>Іконка для розгортання вторинної бокової панелі.</target>
       </trans-unit>
       <trans-unit id="maximizePanel">
-        <source xml:lang="en">Maximize Panel Size</source>
-        <target>Максимізувати розмір панелі</target>
+        <source xml:lang="en">Maximize Panel</source>
+        <target>Максимізувати панель</target>
       </trans-unit>
       <trans-unit id="miTogglePanelMnemonic">
         <source xml:lang="en">&amp;&amp;Panel</source>
@@ -5029,8 +5232,8 @@ This action is irreversible and may result in data loss!</source>
         <target>&amp;&amp;Панель</target>
       </trans-unit>
       <trans-unit id="minimizePanel">
-        <source xml:lang="en">Restore Panel Size</source>
-        <target>Відновити розмір панелі</target>
+        <source xml:lang="en">Restore Panel</source>
+        <target>Відновити панель</target>
       </trans-unit>
       <trans-unit id="movePanelToSecondarySideBar">
         <source xml:lang="en">Move Panel Views To Secondary Side Bar</source>
@@ -5210,6 +5413,50 @@ This action is irreversible and may result in data loss!</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/browser/parts/titlebar/menubar.contribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="mEdit">
+        <source xml:lang="en">&amp;&amp;Edit</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Редагувати</target>
+      </trans-unit>
+      <trans-unit id="mFile">
+        <source xml:lang="en">&amp;&amp;File</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Файл</target>
+      </trans-unit>
+      <trans-unit id="mGoto">
+        <source xml:lang="en">&amp;&amp;Go</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Перейти</target>
+      </trans-unit>
+      <trans-unit id="mHelp">
+        <source xml:lang="en">&amp;&amp;Help</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Допомога</target>
+      </trans-unit>
+      <trans-unit id="mPreferences">
+        <source xml:lang="en">&amp;&amp;Preferences</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Налаштування</target>
+      </trans-unit>
+      <trans-unit id="mSelection">
+        <source xml:lang="en">&amp;&amp;Selection</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Вибір</target>
+      </trans-unit>
+      <trans-unit id="mTerminal">
+        <source xml:lang="en">&amp;&amp;Terminal</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Термінал</target>
+      </trans-unit>
+      <trans-unit id="mView">
+        <source xml:lang="en">&amp;&amp;View</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Переглянути</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/browser/parts/titlebar/menubarControl" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="DownloadingUpdate">
@@ -5246,46 +5493,6 @@ This action is irreversible and may result in data loss!</source>
       <trans-unit id="installingUpdate">
         <source xml:lang="en">Installing Update...</source>
         <target>Встановлення оновлення...</target>
-      </trans-unit>
-      <trans-unit id="mEdit">
-        <source xml:lang="en">&amp;&amp;Edit</source>
-        <note>&amp;&amp; denotes a mnemonic</note>
-        <target>&amp;&amp;Редагувати</target>
-      </trans-unit>
-      <trans-unit id="mFile">
-        <source xml:lang="en">&amp;&amp;File</source>
-        <note>&amp;&amp; denotes a mnemonic</note>
-        <target>&amp;&amp;Файл</target>
-      </trans-unit>
-      <trans-unit id="mGoto">
-        <source xml:lang="en">&amp;&amp;Go</source>
-        <note>&amp;&amp; denotes a mnemonic</note>
-        <target>&amp;&amp;Перейти</target>
-      </trans-unit>
-      <trans-unit id="mHelp">
-        <source xml:lang="en">&amp;&amp;Help</source>
-        <note>&amp;&amp; denotes a mnemonic</note>
-        <target>&amp;&amp;Допомога</target>
-      </trans-unit>
-      <trans-unit id="mPreferences">
-        <source xml:lang="en">Preferences</source>
-        <note>&amp;&amp; denotes a mnemonic</note>
-        <target>Налаштування</target>
-      </trans-unit>
-      <trans-unit id="mSelection">
-        <source xml:lang="en">&amp;&amp;Selection</source>
-        <note>&amp;&amp; denotes a mnemonic</note>
-        <target>&amp;&amp;Вибір</target>
-      </trans-unit>
-      <trans-unit id="mTerminal">
-        <source xml:lang="en">&amp;&amp;Terminal</source>
-        <note>&amp;&amp; denotes a mnemonic</note>
-        <target>&amp;&amp;Термінал</target>
-      </trans-unit>
-      <trans-unit id="mView">
-        <source xml:lang="en">&amp;&amp;View</source>
-        <note>&amp;&amp; denotes a mnemonic</note>
-        <target>&amp;&amp;Перегляд</target>
       </trans-unit>
       <trans-unit id="menubar.customTitlebarAccessibilityNotification">
         <source xml:lang="en">Accessibility support is enabled for you. For the most accessible experience, we recommend the custom menu style.</source>
@@ -5359,6 +5566,14 @@ This action is irreversible and may result in data loss!</source>
       <trans-unit id="toggle.navigationDescription">
         <source xml:lang="en">Toggle visibility of the Navigation Controls in title bar</source>
         <target>Перемикати видимість елементів керування навігацією в заголовку</target>
+      </trans-unit>
+      <trans-unit id="toggle.notifications">
+        <source xml:lang="en">Notifications</source>
+        <target>Сповіщення</target>
+      </trans-unit>
+      <trans-unit id="toggle.notificationsDescription">
+        <source xml:lang="en">Toggle visibility of the Notifications button in title bar</source>
+        <target>Переключити видимість кнопки Сповіщень у заголовку</target>
       </trans-unit>
     </body>
   </file>
@@ -5436,9 +5651,17 @@ This action is irreversible and may result in data loss!</source>
   </file>
   <file original="src/vs/workbench/browser/parts/views/viewFilter" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="accessibilityHelpHintInLabel">
+        <source xml:lang="en">Press {0} for accessibility help</source>
+        <target>Натисніть {0} для отримання допомоги з доступністю</target>
+      </trans-unit>
       <trans-unit id="more filters">
         <source xml:lang="en">More Filters...</source>
         <target>Більше фільтрів...</target>
+      </trans-unit>
+      <trans-unit id="viewFilter">
+        <source xml:lang="en">Filter</source>
+        <target>Фільтр</target>
       </trans-unit>
     </body>
   </file>
@@ -5459,6 +5682,10 @@ This action is irreversible and may result in data loss!</source>
       <trans-unit id="viewToolbarAriaLabel">
         <source xml:lang="en">{0} actions</source>
         <target>{0} дій</target>
+      </trans-unit>
+      <trans-unit id="welcomeViewAriaLabel">
+        <source xml:lang="en">Welcome</source>
+        <target>Ласкаво просимо</target>
       </trans-unit>
     </body>
   </file>
@@ -5495,18 +5722,6 @@ This action is irreversible and may result in data loss!</source>
       <trans-unit id="inQuickOpen">
         <source xml:lang="en">Whether keyboard focus is inside the quick open control</source>
         <target>Чи знаходиться фокус клавіатури всередині елемента швидкого відкриття</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/workbench/browser/web.main" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="reset">
-        <source xml:lang="en">Reset User Data</source>
-        <target>Скинути дані користувача</target>
-      </trans-unit>
-      <trans-unit id="reset user data message">
-        <source xml:lang="en">Would you like to reset your data (settings, keybindings, extensions, snippets and UI State) and reload?</source>
-        <target>Ви хочете скинути свої дані (налаштування, прив'язки клавіш, розширення, фрагменти та стан інтерфейсу) і перезавантажити?</target>
       </trans-unit>
     </body>
   </file>
@@ -5603,6 +5818,10 @@ If {1} did not launch, try again below.</source>
   </file>
   <file original="src/vs/workbench/browser/workbench.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="activeEditorLanguageId">
+        <source xml:lang="en">`${activeEditorLanguageId}`: the language identifier of the active editor (e.g. typescript).</source>
+        <target>`${activeEditorLanguageId}`: ідентифікатор мови активного редактора (наприклад, typescript).</target>
+      </trans-unit>
       <trans-unit id="activeEditorLong">
         <source xml:lang="en">`${activeEditorLong}`: the full path of the file (e.g. /Users/Development/myFolder/myFileFolder/myFile.txt).</source>
         <target>`${activeEditorLong}`: повний шлях до файлу (наприклад, /Users/Development/myFolder/myFileFolder/myFile.txt).</target>
@@ -5639,6 +5858,16 @@ If {1} did not launch, try again below.</source>
         <source xml:lang="en">`${activeRepositoryName}`: the name of the active repository (e.g. vscode).</source>
         <target>`${activeRepositoryName}`: назва активного репозиторію (наприклад, vscode).</target>
       </trans-unit>
+      <trans-unit id="activityBarAutoHide">
+        <source xml:lang="en">Controls whether the Activity Bar is automatically hidden when there is only one view container to show. This applies to the Primary and Secondary Side Bars when {0} is set to {1} or {2}.</source>
+        <note>This is the description for a setting</note>
+        <target>Контролює, чи буде Панель активності автоматично прихована, коли є лише один контейнер перегляду для відображення. Це стосується Основної та Додаткової бічних панелей, коли {0} встановлено на {1} або {2}.</target>
+      </trans-unit>
+      <trans-unit id="activityBarCompact">
+        <source xml:lang="en">Controls whether the Activity Bar uses a compact layout with smaller icons and reduced width. This setting only applies when {0} is set to {1}.</source>
+        <note>This is the description for a setting</note>
+        <target>Контролює, чи використовує Панель активності компактне оформлення з меншими значками та зменшеною шириною. Цей параметр застосовується лише тоді, коли {0} встановлено на {1}.</target>
+      </trans-unit>
       <trans-unit id="activityBarIconClickBehavior">
         <source xml:lang="en">Controls the behavior of clicking an Activity Bar icon in the workbench. This value is ignored when {0} is not set to {1}.</source>
         <note>{0}, {1} will be a setting name rendered as a link</note>
@@ -5648,6 +5877,10 @@ If {1} did not launch, try again below.</source>
         <source xml:lang="en">Controls the location of the Activity Bar relative to the Primary and Secondary Side Bars.</source>
         <note>This is the description for a setting</note>
         <target>Контролює розташування Панелі активностей відносно Основної та Вторинної бічних панелей.</target>
+      </trans-unit>
+      <trans-unit id="alwaysShowAdvancedSettings">
+        <source xml:lang="en">Controls whether advanced settings are always shown in the settings editor without requiring the `@tag:advanced` filter.</source>
+        <target>Контролює, чи завжди відображаються розширені налаштування в редакторі налаштувань без необхідності використовувати фільтр `@tag:advanced`.</target>
       </trans-unit>
       <trans-unit id="alwaysShowEditorActions">
         <source xml:lang="en">Controls whether to always show the editor actions, even when the editor group is not active.</source>
@@ -5872,6 +6105,14 @@ If {1} did not launch, try again below.</source>
         <source xml:lang="en">Controls the scope of history navigation in editors for commands such as 'Go Back' and 'Go Forward'.</source>
         <target>Контролює обсяг навігації історії в редакторах для команд, таких як 'Назад' та 'Вперед'.</target>
       </trans-unit>
+      <trans-unit id="notificationsButton">
+        <source xml:lang="en">Controls the visibility of the Notifications button in the title bar. Only applies when notifications are positioned at the top right.</source>
+        <target>Контролює видимість кнопки Сповіщення в заголовку. Застосовується лише тоді, коли сповіщення розташовані у верхньому правому куті.</target>
+      </trans-unit>
+      <trans-unit id="notificationsPosition">
+        <source xml:lang="en">Controls the position of the notification toasts and notification center.</source>
+        <target>Контролює позицію сповіщень та центру сповіщень.</target>
+      </trans-unit>
       <trans-unit id="openDefaultKeybindings">
         <source xml:lang="en">Controls whether opening keybinding settings also opens an editor showing all default keybindings.</source>
         <target>Контролює, чи відкриття налаштувань клавіш також відкриває редактор, що показує всі стандартні клавіші.</target>
@@ -5932,6 +6173,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">`${remoteName}`: e.g. SSH</source>
         <target>`${remoteName}`: наприклад, SSH</target>
       </trans-unit>
+      <trans-unit id="restoreOnStartup">
+        <source xml:lang="en">Controls whether editors are restored on startup. When disabled, only dirty editors will be restored from the previous session.</source>
+        <target>Контролює, чи редактори відновлюються під час запуску. Коли вимкнено, лише незбережені редактори будуть відновлені з попередньої сесії.</target>
+      </trans-unit>
       <trans-unit id="restoreViewState">
         <source xml:lang="en">Restores the last editor view state (such as scroll position) when re-opening editors after they have been closed. Editor view state is stored per editor group and discarded when a group closes. Use the {0} setting to use the last known view state across all editor groups in case no previous view state was found for a editor group.</source>
         <target>Відновлює останній стан перегляду редактора (такий як позиція прокрутки) при повторному відкритті редакторів після їх закриття. Стан перегляду редактора зберігається для кожної групи редакторів і скидається, коли група закривається. Використовуйте налаштування {0}, щоб використовувати останній відомий стан перегляду для всіх груп редакторів у разі, якщо для групи редакторів не було знайдено попередній стан перегляду.</target>
@@ -5958,8 +6203,12 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <target>Контролює, чи відкриватимуться вкладки при прокручуванні, чи ні. За замовчуванням вкладки лише з'являтимуться при прокручуванні, але не відкриватимуться. Ви можете натиснути і утримувати клавішу Shift під час прокручування, щоб змінити цю поведінку на цей час. Це значення ігнорується, коли {0} не встановлено на {1}.</target>
       </trans-unit>
       <trans-unit id="secondarySideBarDefaultVisibility">
-        <source xml:lang="en">Controls the default visibility of the secondary side bar in workspaces or empty windows that are opened for the first time.</source>
-        <target>Контролює стандартну видимість вторинної бічної панелі в робочих просторах або порожніх вікнах, які відкриваються вперше.</target>
+        <source xml:lang="en">Controls the default visibility of the secondary side bar in workspaces or empty windows that are opened for the first time. Can be overridden by the agent sessions startup editor setting.</source>
+        <target>Контролює стандартну видимість вторинної бічної панелі в робочих просторах або порожніх вікнах, які відкриваються вперше. Може бути переопределено налаштуванням редактора запуску сесій агента.</target>
+      </trans-unit>
+      <trans-unit id="secondarySideBarForceMaximized">
+        <source xml:lang="en">Controls whether the secondary side bar is enforced to always show maximized on startup and when there are no open editors, in layouts that support a maximized secondary side bar.</source>
+        <target>Контролює, чи вторинна бокова панель завжди відображається в розгорнутому вигляді під час запуску та коли немає відкритих редакторів у макетах, які підтримують розгорнуту вторинну бокову панель.</target>
       </trans-unit>
       <trans-unit id="secondarySideBarShowLabels">
         <source xml:lang="en">Controls whether activity items in the secondary side bar title are shown as label or icon. This setting only has an effect when {0} is not set to {1}.</source>
@@ -5984,6 +6233,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="settings.showAISearchToggle">
         <source xml:lang="en">Controls whether the AI search results toggle is shown in the search bar in the Settings editor after doing a search and once AI search results are available.</source>
         <target>Контролює, чи перемикач результатів пошуку AI відображається в рядку пошуку в редакторі налаштувань після виконання пошуку та коли результати пошуку AI доступні.</target>
+      </trans-unit>
+      <trans-unit id="shadows">
+        <source xml:lang="en">Controls whether shadow effects are shown around the side panels and other workbench elements.</source>
+        <target>Контролює, чи відображаються ефекти тіні навколо бічних панелей та інших елементів робочого столу.</target>
       </trans-unit>
       <trans-unit id="sharedViewState">
         <source xml:lang="en">Preserves the most recent editor view state (such as scroll position) across all editor groups and restores that if no specific editor view state is found for the editor group.</source>
@@ -6034,6 +6287,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Controls whether the command palette should have a list of commonly used commands.</source>
         <target>Контролює, чи має палітра команд список часто використовуваних команд.</target>
       </trans-unit>
+      <trans-unit id="swipeToNavigate">
+        <source xml:lang="en">Navigate between open files using three-finger swipe horizontally. Note that System Preferences &gt; Trackpad &gt; More Gestures &gt; 'Swipe between pages' must be set to 'Swipe with two or three fingers'.</source>
+        <target>Переміщуйтеся між відкритими файлами, проводячи трьома пальцями горизонтально. Зверніть увагу, що в Системних налаштуваннях &gt; Трекпад &gt; Інші жести &gt; 'Провести між сторінками' має бути встановлено на 'Провести двома або трьома пальцями'.</target>
+      </trans-unit>
       <trans-unit id="tabActionLocation">
         <source xml:lang="en">Controls the position of the editor's tabs action buttons (close, unpin). This value is ignored when {0} is not set to {1}.</source>
         <note>{0} will be a setting name rendered as a link</note>
@@ -6063,6 +6320,22 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="untitledLabelFormat">
         <source xml:lang="en">Controls the format of the label for an untitled editor.</source>
         <target>Контролює формат етикетки для неназваного редактора.</target>
+      </trans-unit>
+      <trans-unit id="useModal">
+        <source xml:lang="en">Controls whether editors open in a modal overlay.</source>
+        <target>Контролює, чи відкриваються редактори у модальному накладенні.</target>
+      </trans-unit>
+      <trans-unit id="useModal.all">
+        <source xml:lang="en">All editors open in a centered modal overlay.</source>
+        <target>Усі редактори відкриваються в центрованому модальному накладенні.</target>
+      </trans-unit>
+      <trans-unit id="useModal.off">
+        <source xml:lang="en">Editors never open in a modal overlay.</source>
+        <target>Редактори ніколи не відкриваються в модальному перекритті.</target>
+      </trans-unit>
+      <trans-unit id="useModal.some">
+        <source xml:lang="en">Certain editors such as Settings and Keyboard Shortcuts may open in a centered modal overlay.</source>
+        <target>Деякі редактори, такі як Налаштування та Гарячі клавіші, можуть відкриватися в центрованому модальному накладенні.</target>
       </trans-unit>
       <trans-unit id="useSplitJSON">
         <source xml:lang="en">Controls whether to use the split JSON editor when editing settings as JSON.</source>
@@ -6334,8 +6607,8 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <target>Запобігти закриттю закріпленого редактора при використанні середнього клацання миші.</target>
       </trans-unit>
       <trans-unit id="workbench.editor.showLanguageDetectionHints">
-        <source xml:lang="en">When enabled, shows a Status bar Quick Fix when the editor language doesn't match detected content language.</source>
-        <target>Коли увімкнено, показує швидке виправлення на панелі стану, коли мова редактора не відповідає виявленій мові вмісту.</target>
+        <source xml:lang="en">When enabled, shows a status bar Quick Fix when the editor language doesn't match detected content language.</source>
+        <target>Коли увімкнено, показує рядок стану Quick Fix, коли мова редактора не відповідає виявленій мові вмісту.</target>
       </trans-unit>
       <trans-unit id="workbench.editor.showLanguageDetectionHints.editors">
         <source xml:lang="en">Show in untitled text editors</source>
@@ -6460,6 +6733,22 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Controls the delay in milliseconds after which the hover is shown for workbench items (ex. some extension provided tree view items). Already visible items may require a refresh before reflecting this setting change.</source>
         <target>Контролює затримку в мілісекундах, після якої відображається підказка для елементів робочого столу (наприклад, деякі елементи дерева, надані розширенням). Вже видимі елементи можуть вимагати оновлення перед відображенням зміни цього налаштування.</target>
       </trans-unit>
+      <trans-unit id="workbench.hover.reducedDelay">
+        <source xml:lang="en">Controls the reduced delay in milliseconds used for showing hovers in specific contexts where faster feedback is beneficial.</source>
+        <target>Контролює зменшену затримку в мілісекундах, що використовується для відображення наведених курсором елементів у специфічних контекстах, де швидший зворотний зв'язок є корисним.</target>
+      </trans-unit>
+      <trans-unit id="workbench.notifications.position.bottom-left">
+        <source xml:lang="en">Show notifications in the bottom left corner.</source>
+        <target>Показувати сповіщення в нижньому лівому куті.</target>
+      </trans-unit>
+      <trans-unit id="workbench.notifications.position.bottom-right">
+        <source xml:lang="en">Show notifications in the bottom right corner.</source>
+        <target>Показувати сповіщення в правому нижньому куті.</target>
+      </trans-unit>
+      <trans-unit id="workbench.notifications.position.top-right">
+        <source xml:lang="en">Show notifications in the top right corner, similar to OS-level notifications.</source>
+        <target>Показувати сповіщення у верхньому правому куті, подібно до сповіщень на рівні ОС.</target>
+      </trans-unit>
       <trans-unit id="workbench.panel.opensMaximized.always">
         <source xml:lang="en">Always maximize the panel when opening it.</source>
         <target>Завжди розгортайте панель на повний екран при її відкритті.</target>
@@ -6480,10 +6769,6 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Controls whether the last typed input to Quick Open should be restored when opening it the next time.</source>
         <target>Контролює, чи слід відновити останній введений текст у Quick Open при наступному його відкритті.</target>
       </trans-unit>
-      <trans-unit id="workbench.quickOpen.useZeroBasedOffset">
-        <source xml:lang="en">Controls whether 'Go To' character offset in Quick Open will use zero-based offset (default is one-based).</source>
-        <target>Контролює, чи буде 'Перейти до' зсув символів у Швидкому відкритті використовувати нульовий зсув (за замовчуванням - зсув на основі одиниці).</target>
-      </trans-unit>
       <trans-unit id="workbench.reduceMotion">
         <source xml:lang="en">Controls whether the workbench should render with fewer animations.</source>
         <target>Контролює, чи повинна робоча панель відображатися з меншою кількістю анімацій.</target>
@@ -6499,6 +6784,22 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="workbench.reduceMotion.on">
         <source xml:lang="en">Always render with reduced motion.</source>
         <target>Завжди відображати з зменшеною анімацією.</target>
+      </trans-unit>
+      <trans-unit id="workbench.reduceTransparency">
+        <source xml:lang="en">Controls whether the workbench should render with fewer transparency and blur effects for improved performance.</source>
+        <target>Контролює, чи має робоча область відображатися з меншими ефектами прозорості та розмиття для покращення продуктивності.</target>
+      </trans-unit>
+      <trans-unit id="workbench.reduceTransparency.auto">
+        <source xml:lang="en">Reduce transparency and blur effects based on OS configuration.</source>
+        <target>Зменшити прозорість та ефекти розмиття на основі конфігурації ОС.</target>
+      </trans-unit>
+      <trans-unit id="workbench.reduceTransparency.off">
+        <source xml:lang="en">Do not reduce transparency and blur effects.</source>
+        <target>Не зменшуйте ефекти прозорості та розмиття.</target>
+      </trans-unit>
+      <trans-unit id="workbench.reduceTransparency.on">
+        <source xml:lang="en">Always render without transparency and blur effects.</source>
+        <target>Завжди рендерити без ефектів прозорості та розмиття.</target>
       </trans-unit>
       <trans-unit id="workbench.secondarySideBar.defaultVisibility.hidden">
         <source xml:lang="en">The secondary side bar is hidden by default.</source>
@@ -6729,6 +7030,26 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Editor Part has a maximized group</source>
         <target>Частина редактора має розгорнуту групу</target>
       </trans-unit>
+      <trans-unit id="editorPartModal">
+        <source xml:lang="en">Whether focus is in a modal editor part</source>
+        <target>Чи фокус знаходиться в частині модального редактора</target>
+      </trans-unit>
+      <trans-unit id="editorPartModalMaximized">
+        <source xml:lang="en">Whether the modal editor part is maximized</source>
+        <target>Чи максимізована частина модального редактора</target>
+      </trans-unit>
+      <trans-unit id="editorPartModalNavigation">
+        <source xml:lang="en">Whether the modal editor part has navigation context</source>
+        <target>Чи має частина модального редактора контекст навігації</target>
+      </trans-unit>
+      <trans-unit id="editorPartModalSidebar">
+        <source xml:lang="en">Whether the modal editor part has a sidebar</source>
+        <target>Чи має частина модального редактора бокову панель</target>
+      </trans-unit>
+      <trans-unit id="editorPartModalSidebarVisible">
+        <source xml:lang="en">Whether the modal editor part sidebar is visible</source>
+        <target>Чи видима бічна панель частини модального редактора</target>
+      </trans-unit>
       <trans-unit id="editorPartMultipleEditorGroups">
         <source xml:lang="en">Whether there are multiple editor groups opened in an editor part</source>
         <target>Чи відкрито кілька груп редакторів у частині редактора</target>
@@ -6780,6 +7101,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="isMainEditorCenteredLayout">
         <source xml:lang="en">Whether centered layout is enabled for the main editor</source>
         <target>Чи увімкнено центровану розкладку для основного редактора</target>
+      </trans-unit>
+      <trans-unit id="isSessionsWindow">
+        <source xml:lang="en">Whether the current window is a agent sessions window.</source>
+        <target>Чи є поточне вікно вікном сесій агента.</target>
       </trans-unit>
       <trans-unit id="isWindowAlwaysOnTop">
         <source xml:lang="en">Whether the window is always on top</source>
@@ -7044,6 +7369,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="banner.iconForeground">
         <source xml:lang="en">Banner icon color. The banner is shown under the title bar of the window.</source>
         <target>Колір значка банера. Банер відображається під заголовком вікна.</target>
+      </trans-unit>
+      <trans-unit id="browserBorder">
+        <source xml:lang="en">Border color for integrated browser pages.</source>
+        <target>Колір рамки для інтегрованих сторінок браузера.</target>
       </trans-unit>
       <trans-unit id="commandCenter-activeBackground">
         <source xml:lang="en">Active background color of the command center</source>
@@ -7645,9 +7974,33 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Reveal User Data Folder</source>
         <target>Відкрити папку даних користувача</target>
       </trans-unit>
+      <trans-unit id="showContentTracing">
+        <source xml:lang="en">Show Content Tracing</source>
+        <target>Показати трасування вмісту</target>
+      </trans-unit>
       <trans-unit id="showGPUInfo">
         <source xml:lang="en">Show GPU Info</source>
         <target>Показати інформацію про GPU</target>
+      </trans-unit>
+      <trans-unit id="startTracing">
+        <source xml:lang="en">Start Tracing</source>
+        <target>Почати трасування</target>
+      </trans-unit>
+      <trans-unit id="startTracing.ariaLabel">
+        <source xml:lang="en">Recording performance trace. Click to stop recording.</source>
+        <target>Запис продуктивності. Натисніть, щоб зупинити запис.</target>
+      </trans-unit>
+      <trans-unit id="startTracing.name">
+        <source xml:lang="en">Performance Trace</source>
+        <target>Відстеження продуктивності</target>
+      </trans-unit>
+      <trans-unit id="startTracing.recording">
+        <source xml:lang="en">Recording trace (click to stop)</source>
+        <target>Запис сліду (натисніть, щоб зупинити)</target>
+      </trans-unit>
+      <trans-unit id="startTracing.tooltip">
+        <source xml:lang="en">Click to stop recording</source>
+        <target>Натисніть, щоб зупинити запис</target>
       </trans-unit>
       <trans-unit id="stopTracing">
         <source xml:lang="en">Stop Tracing</source>
@@ -7663,8 +8016,8 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <target>Це може зайняти до однієї хвилини для завершення.</target>
       </trans-unit>
       <trans-unit id="stopTracing.message">
-        <source xml:lang="en">Tracing requires to launch with a '--trace' argument</source>
-        <target>Відстеження вимагає запуску з аргументом '--trace'</target>
+        <source xml:lang="en">No tracing session is in progress. Use 'Developer: Start Tracing' or launch with a '--trace' argument to begin tracing.</source>
+        <target>Немає активної сесії трасування. Використайте 'Розробник: Розпочати трасування' або запустіть з аргументом '--trace', щоб почати трасування.</target>
       </trans-unit>
       <trans-unit id="stopTracing.title">
         <source xml:lang="en">Creating trace file...</source>
@@ -7706,6 +8059,14 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Close Window</source>
         <target>Закрити</target>
       </trans-unit>
+      <trans-unit id="closeActive">
+        <source xml:lang="en">Close Active Window</source>
+        <target>Закрити активне вікно</target>
+      </trans-unit>
+      <trans-unit id="closeOtherWindows">
+        <source xml:lang="en">Close Other Windows</source>
+        <target>Закрити інші вікна</target>
+      </trans-unit>
       <trans-unit id="closeWindow">
         <source xml:lang="en">Close Window</source>
         <target>Закрити вікно</target>
@@ -7745,6 +8106,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="quickSwitchWindow">
         <source xml:lang="en">Quick Switch Window...</source>
         <target>Швидкий перемикач вікон...</target>
+      </trans-unit>
+      <trans-unit id="switchToMainWindow">
+        <source xml:lang="en">Switch to Main Window</source>
+        <target>Перейти до Головного Вікна</target>
       </trans-unit>
       <trans-unit id="switchWindow">
         <source xml:lang="en">Switch Window...</source>
@@ -7821,6 +8186,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="argv.forceColorProfile">
         <source xml:lang="en">Allows to override the color profile to use. If you experience colors appear badly, try to set this to `srgb` and restart.</source>
         <target>Дозволяє перевизначити профіль кольору для використання. Якщо ви помічаєте, що кольори виглядають неправильно, спробуйте встановити це значення на `srgb` і перезапустити.</target>
+      </trans-unit>
+      <trans-unit id="argv.jsFlags">
+        <source xml:lang="en">Specifies V8 JavaScript engine flags to pass (e.g. "--max-old-space-size=4096"). These flags are applied to the main process, renderer and utility processes.</source>
+        <target>Вказує прапори двигуна V8 JavaScript для передачі (наприклад, "--max-old-space-size=4096"). Ці прапори застосовуються до основного процесу, процесу рендерингу та допоміжних процесів.</target>
       </trans-unit>
       <trans-unit id="argv.locale">
         <source xml:lang="en">The display Language to use. Picking a different language requires the associated language pack to be installed.</source>
@@ -8278,10 +8647,6 @@ This option requires restart to take effect.</source>
       <trans-unit id="zoomReset">
         <source xml:lang="en">Reset</source>
         <target>Скинути масштаб</target>
-      </trans-unit>
-      <trans-unit id="zoomResetLabel">
-        <source xml:lang="en">{0} ({1})</source>
-        <target>{0} ({1})</target>
       </trans-unit>
       <trans-unit id="zoomSettings">
         <source xml:lang="en">Settings</source>
