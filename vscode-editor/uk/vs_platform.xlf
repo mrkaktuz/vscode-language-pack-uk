@@ -434,19 +434,11 @@ A keybinding</note>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/platform/agentHost/node/agentHostMain" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="agentHost">
-        <source xml:lang="en">Agent Host</source>
-        <target>Агент Хост</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/platform/agentHost/node/copilot/copilotAgent" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/platform/agentHost/common/agentHostSchema" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHost.sessionConfig.autoApprove">
         <source xml:lang="en">Approvals</source>
-        <target>Затвердження</target>
+        <target>Схвалення</target>
       </trans-unit>
       <trans-unit id="agentHost.sessionConfig.autoApprove.autopilot">
         <source xml:lang="en">Autopilot (Preview)</source>
@@ -466,16 +458,48 @@ A keybinding</note>
       </trans-unit>
       <trans-unit id="agentHost.sessionConfig.autoApprove.default">
         <source xml:lang="en">Default Approvals</source>
-        <target>За замовчуванням затвердження</target>
+        <target>Типові затвердження</target>
       </trans-unit>
       <trans-unit id="agentHost.sessionConfig.autoApprove.defaultDescription">
         <source xml:lang="en">Copilot uses your configured settings</source>
-        <target>Copilot використовує ваші налаштовані параметри</target>
+        <target>Copilot використовує ваші налаштовані параметри.</target>
       </trans-unit>
       <trans-unit id="agentHost.sessionConfig.autoApproveDescription">
         <source xml:lang="en">Tool approval behavior for this session</source>
         <target>Поведінка затвердження інструментів для цієї сесії</target>
       </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.permissions">
+        <source xml:lang="en">Permissions</source>
+        <target>Дозволи</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.permissions.allow">
+        <source xml:lang="en">Allowed tools</source>
+        <target>Дозволені інструменти</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.permissions.deny">
+        <source xml:lang="en">Denied tools</source>
+        <target>Відхилені інструменти</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.permissions.toolName">
+        <source xml:lang="en">Tool name</source>
+        <target>Назва інструменту</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.permissionsDescription">
+        <source xml:lang="en">Per-tool session permissions. Updated automatically when approving a tool "in this Session".</source>
+        <target>Дозволи сесії для кожного інструмента. Оновлюються автоматично при затвердженні інструмента "в цій сесії".</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/agentHostMain" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHost">
+        <source xml:lang="en">Agent Host</source>
+        <target>Агент Хост</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotAgent" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
       <trans-unit id="agentHost.sessionConfig.branch">
         <source xml:lang="en">Branch</source>
         <target>Гілка</target>
@@ -507,26 +531,6 @@ A keybinding</note>
       <trans-unit id="agentHost.sessionConfig.isolationDescription">
         <source xml:lang="en">Where the agent should make changes</source>
         <target>Де агент повинен внести зміни</target>
-      </trans-unit>
-      <trans-unit id="agentHost.sessionConfig.permissions">
-        <source xml:lang="en">Permissions</source>
-        <target>Дозволи</target>
-      </trans-unit>
-      <trans-unit id="agentHost.sessionConfig.permissions.allow">
-        <source xml:lang="en">Allowed tools</source>
-        <target>Дозволені інструменти</target>
-      </trans-unit>
-      <trans-unit id="agentHost.sessionConfig.permissions.deny">
-        <source xml:lang="en">Denied tools</source>
-        <target>Відмовлені інструменти</target>
-      </trans-unit>
-      <trans-unit id="agentHost.sessionConfig.permissions.toolName">
-        <source xml:lang="en">Tool name</source>
-        <target>Назва інструменту</target>
-      </trans-unit>
-      <trans-unit id="agentHost.sessionConfig.permissionsDescription">
-        <source xml:lang="en">Per-tool session permissions. Updated automatically when approving a tool "in this Session".</source>
-        <target>Дозволи сесії для кожного інструмента. Оновлюються автоматично при затвердженні інструмента "в цій сесії".</target>
       </trans-unit>
       <trans-unit id="copilot.modelThinkingLevel.description">
         <source xml:lang="en">Controls how much reasoning effort the model uses.</source>
@@ -636,6 +640,10 @@ A keybinding</note>
         <source xml:lang="en">Searched for {0}</source>
         <target>Шукали {0}</target>
       </trans-unit>
+      <trans-unit id="toolComplete.readShell">
+        <source xml:lang="en">Read shell output</source>
+        <target>Читати вихідні дані оболонки</target>
+      </trans-unit>
       <trans-unit id="toolComplete.shell">
         <source xml:lang="en">Ran {0} command</source>
         <target>Виконано команду {0}</target>
@@ -663,6 +671,14 @@ A keybinding</note>
       <trans-unit id="toolComplete.viewFileRange">
         <source xml:lang="en">Read {0}, lines {1} to {2}</source>
         <target>Читати {0}, рядки {1} до {2}</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.writeShell">
+        <source xml:lang="en">Sent input to shell</source>
+        <target>Відправлено введення в оболонку</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.writeShellCmd">
+        <source xml:lang="en">Sent {0} to shell</source>
+        <target>Відправлено {0} до оболонки</target>
       </trans-unit>
       <trans-unit id="toolInvoke.create">
         <source xml:lang="en">Creating file</source>
@@ -700,6 +716,10 @@ A keybinding</note>
         <source xml:lang="en">Searching for {0}</source>
         <target>Шукаю {0}</target>
       </trans-unit>
+      <trans-unit id="toolInvoke.readShell">
+        <source xml:lang="en">Reading shell output</source>
+        <target>Читання виходу оболонки</target>
+      </trans-unit>
       <trans-unit id="toolInvoke.shell">
         <source xml:lang="en">Running {0} command</source>
         <target>Виконання команди {0}</target>
@@ -727,6 +747,14 @@ A keybinding</note>
       <trans-unit id="toolInvoke.viewFileRange">
         <source xml:lang="en">Reading {0}, lines {1} to {2}</source>
         <target>Читання {0}, рядки {1} до {2}</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.writeShell">
+        <source xml:lang="en">Sending input to shell</source>
+        <target>Відправка введення в оболонку</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.writeShellCmd">
+        <source xml:lang="en">Sending {0} to shell</source>
+        <target>Відправка {0} до оболонки</target>
       </trans-unit>
       <trans-unit id="toolName.askUser">
         <source xml:lang="en">Ask User</source>
@@ -808,6 +836,14 @@ A keybinding</note>
   </file>
   <file original="src/vs/platform/agentHost/node/sshRemoteAgentHostService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="ssh.failedToReadPrivateKey">
+        <source xml:lang="en">Failed to read private key file: {0}</source>
+        <target>Не вдалося прочитати файл приватного ключа: {0}</target>
+      </trans-unit>
+      <trans-unit id="ssh.keyFileAuthRequiresPath">
+        <source xml:lang="en">Key file authentication requires a private key path.</source>
+        <target>Аутентифікація за допомогою ключового файлу вимагає шляху до приватного ключа.</target>
+      </trans-unit>
       <trans-unit id="sshProgressCheckingAgent">
         <source xml:lang="en">Checking for existing agent host...</source>
         <target>Перевірка наявності існуючого хоста агента...</target>

@@ -194,6 +194,18 @@ To make this the starting permission level for new chat sessions, change the [{1
         <source xml:lang="en">Ask a follow-up question or start a new topic within this session...</source>
         <target>Задайте уточнююче питання або почніть нову тему в цій сесії...</target>
       </trans-unit>
+      <trans-unit id="subSessionTip.ariaLabel">
+        <source xml:lang="en">Sub-session tip</source>
+        <target>Порада підсесії</target>
+      </trans-unit>
+      <trans-unit id="subSessionTip.dismiss">
+        <source xml:lang="en">Dismiss tip</source>
+        <target>Відхилити підказку</target>
+      </trans-unit>
+      <trans-unit id="subSessionTip.message">
+        <source xml:lang="en">This is a sub-session, a new chat in the same workspace. Use it to ask questions, run tasks, or explore ideas with fresh context.</source>
+        <target>Це підсесія, новий чат в тому ж робочому просторі. Використовуйте його, щоб ставити запитання, виконувати завдання або досліджувати ідеї з новим контекстом.</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/sessions/contrib/chat/browser/newChatInput" source-language="en" datatype="plaintext" target-language="uk">
@@ -297,6 +309,14 @@ To make this the starting permission level for new chat sessions, change the [{1
       <trans-unit id="trustFolderMessage">
         <source xml:lang="en">An agent session will be able to read files, run commands, and make changes in this folder.</source>
         <target>Сесія агента зможе читати файли, виконувати команди та вносити зміни в цю папку.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/chat/browser/openInVSCodeWidget" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="openInVSCodeLabel">
+        <source xml:lang="en">Open in VS Code</source>
+        <target>Відкрити в VS Code</target>
       </trans-unit>
     </body>
   </file>
@@ -570,14 +590,6 @@ To make this the starting permission level for new chat sessions, change the [{1
         <source xml:lang="en">Workspace Picker</source>
         <target>Вибір робочого простору</target>
       </trans-unit>
-      <trans-unit id="workspacePicker.browseAction">
-        <source xml:lang="en">{0}...</source>
-        <target>{0}...</target>
-      </trans-unit>
-      <trans-unit id="workspacePicker.browseSelect">
-        <source xml:lang="en">Select...</source>
-        <target>Виберіть...</target>
-      </trans-unit>
       <trans-unit id="workspacePicker.browseSelectAction">
         <source xml:lang="en">Select {0}...</source>
         <target>Виберіть {0}...</target>
@@ -589,14 +601,6 @@ To make this the starting permission level for new chat sessions, change the [{1
       <trans-unit id="workspacePicker.filter">
         <source xml:lang="en">Search Workspaces...</source>
         <target>Шукати робочі простори...</target>
-      </trans-unit>
-      <trans-unit id="workspacePicker.groupConnecting">
-        <source xml:lang="en">{0} (Connecting)</source>
-        <target>{0} (Підключення)</target>
-      </trans-unit>
-      <trans-unit id="workspacePicker.groupOffline">
-        <source xml:lang="en">{0} (Offline)</source>
-        <target>{0} (Офлайн)</target>
       </trans-unit>
       <trans-unit id="workspacePicker.hoverConnected">
         <source xml:lang="en">Remote agent host is connected and ready.</source>
@@ -623,16 +627,20 @@ Address: {0}</source>
 Адреса: {0}</target>
       </trans-unit>
       <trans-unit id="workspacePicker.hoverDisconnected">
-        <source xml:lang="en">Remote agent host is disconnected. Click the gear icon for options.</source>
-        <target>Віддалений агент відключено. Натисніть на значок шестерні для налаштувань.</target>
+        <source xml:lang="en">Remote agent host is disconnected.</source>
+        <target>Віддалений агент-хост відключений.</target>
       </trans-unit>
       <trans-unit id="workspacePicker.hoverDisconnectedAddr">
-        <source xml:lang="en">Remote agent host is disconnected. Click the gear icon for options.
+        <source xml:lang="en">Remote agent host is disconnected.
 
 Address: {0}</source>
-        <target>Віддалений агент відключено. Натисніть на значок шестерні для налаштувань.
+        <target>Віддалений агент відключений.
 
 Адреса: {0}</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.manage">
+        <source xml:lang="en">Manage...</source>
+        <target>Керувати...</target>
       </trans-unit>
       <trans-unit id="workspacePicker.openSettings">
         <source xml:lang="en">Open Settings</source>
@@ -645,14 +653,6 @@ Address: {0}</source>
       <trans-unit id="workspacePicker.reconnect">
         <source xml:lang="en">Reconnect</source>
         <target>Перепідключитися</target>
-      </trans-unit>
-      <trans-unit id="workspacePicker.refreshTunnel">
-        <source xml:lang="en">Attempt to Connect</source>
-        <target>Спроба підключення</target>
-      </trans-unit>
-      <trans-unit id="workspacePicker.remoteOptions">
-        <source xml:lang="en">Options</source>
-        <target>Опції</target>
       </trans-unit>
       <trans-unit id="workspacePicker.remoteOptionsTitle">
         <source xml:lang="en">Options for {0}</source>
@@ -670,10 +670,6 @@ Address: {0}</source>
         <source xml:lang="en">Show Output</source>
         <target>Показати вихідні дані</target>
       </trans-unit>
-      <trans-unit id="workspacePicker.ssh">
-        <source xml:lang="en">SSH...</source>
-        <target>SSH...</target>
-      </trans-unit>
       <trans-unit id="workspacePicker.statusConnecting">
         <source xml:lang="en">Connecting</source>
         <target>Підключення</target>
@@ -685,10 +681,6 @@ Address: {0}</source>
       <trans-unit id="workspacePicker.statusOnline">
         <source xml:lang="en">Online</source>
         <target>Онлайн</target>
-      </trans-unit>
-      <trans-unit id="workspacePicker.tunnels">
-        <source xml:lang="en">Tunnels...</source>
-        <target>Тунелі...</target>
       </trans-unit>
     </body>
   </file>

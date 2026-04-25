@@ -968,6 +968,10 @@ Reason for leaving the sandbox: {2}</source>
         <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Controls file system access in sandbox on Linux. Paths do not support glob patterns, only literal paths (ex: ./src/, ~/.ssh, .env). **bubblewrap** and **socat** should be installed for this setting to work.</source>
         <target>Примітка: ця настройка застосовується лише коли {0} увімкнено. Контролює доступ до файлової системи в пісочниці на Linux. Шляхи не підтримують шаблони glob, лише літеральні шляхи (наприклад: ./src/, ~/.ssh, .env). **bubblewrap** і **socat** повинні бути встановлені для роботи цієї настройки.</target>
       </trans-unit>
+      <trans-unit id="agentSandbox.linuxFileSystemSetting.allowRead">
+        <source xml:lang="en">Array of paths to re-allow read access within denied regions. Takes precedence over denyRead.</source>
+        <target>Масив шляхів для повторного дозволу доступу на читання в заборонених регіонах. Має пріоритет над denyRead.</target>
+      </trans-unit>
       <trans-unit id="agentSandbox.linuxFileSystemSetting.allowWrite">
         <source xml:lang="en">Array of paths to allow write access. Leave empty to disallow all writes.</source>
         <target>Масив шляхів для дозволу на запис. Залиште порожнім, щоб заборонити всі записи.</target>
@@ -983,6 +987,10 @@ Reason for leaving the sandbox: {2}</source>
       <trans-unit id="agentSandbox.macFileSystemSetting">
         <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Controls file system access in sandbox on macOS. Paths also support git-style glob patterns(ex: *.ts, ./src, ./src/**/*.ts, file?.txt).</source>
         <target>Примітка: це налаштування застосовується лише тоді, коли {0} увімкнено. Контролює доступ до файлової системи в пісочниці на macOS. Шляхи також підтримують шаблони glob у стилі git (наприклад: *.ts, ./src, ./src/**/*.ts, file?.txt).</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.macFileSystemSetting.allowRead">
+        <source xml:lang="en">Array of paths to re-allow read access within denied regions. Takes precedence over denyRead.</source>
+        <target>Масив шляхів для повторного дозволу на читання в заборонених регіонах. Має пріоритет над denyRead.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.macFileSystemSetting.allowWrite">
         <source xml:lang="en">Array of paths to allow write access. Leave empty to disallow all writes.</source>
