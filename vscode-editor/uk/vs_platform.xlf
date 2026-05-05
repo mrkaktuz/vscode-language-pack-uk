@@ -434,6 +434,42 @@ A keybinding</note>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/platform/agentHost/common/agentHostCustomizationConfig" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHost.config.customizations.description">
+        <source xml:lang="en">Plugins configured on this agent host and available to remote sessions.</source>
+        <target>Плагіни, налаштовані на цьому хості агента і доступні для віддалених сеансів.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.customizations.descriptionField">
+        <source xml:lang="en">Description</source>
+        <target>Опис</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.customizations.displayName">
+        <source xml:lang="en">Name</source>
+        <target>Ім'я</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.customizations.itemTitle">
+        <source xml:lang="en">Plugin</source>
+        <target>Плагін</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.customizations.title">
+        <source xml:lang="en">Plugins</source>
+        <target>Плагіни</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.customizations.uri">
+        <source xml:lang="en">Plugin URI</source>
+        <target>URI плагіна</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.defaultShell.description">
+        <source xml:lang="en">Absolute path to the shell executable used by host-managed terminals. Normally pushed by the connected VS Code client from `terminal.integrated.agentHostProfile.&lt;os&gt;` (falling back to `terminal.integrated.defaultProfile.&lt;os&gt;`); when unset, the agent host falls back to the system shell. Only the path is supported; `args` and `env` from the workbench profile are not piped through yet. The workbench only pushes this for the local agent host — remote agent host operators should set this directly in the remote machine's `agent-host-config.json`.</source>
+        <target>Абсолютний шлях до виконуваного файлу оболонки, що використовується терміналами, керованими хостом. Зазвичай передається підключеним клієнтом VS Code з `terminal.integrated.agentHostProfile.&lt;os&gt;` (з поверненням до `terminal.integrated.defaultProfile.&lt;os&gt;`); коли не встановлено, хост агента повертається до системної оболонки. Підтримується лише шлях; `args` та `env` з профілю робочої області ще не передаються. Робоча область передає це лише для локального хоста агента — оператори віддаленого хоста агента повинні встановити це безпосередньо в `agent-host-config.json` віддаленої машини.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.defaultShell.title">
+        <source xml:lang="en">Default Shell</source>
+        <target>Типова оболонка</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/platform/agentHost/common/agentHostSchema" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHost.sessionConfig.autoApprove">
@@ -468,6 +504,30 @@ A keybinding</note>
         <source xml:lang="en">Tool approval behavior for this session</source>
         <target>Поведінка затвердження інструментів для цієї сесії</target>
       </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.mode">
+        <source xml:lang="en">Agent Mode</source>
+        <target>Режим агента</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.mode.interactive">
+        <source xml:lang="en">Interactive</source>
+        <target>Інтерактивний</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.mode.interactiveDescription">
+        <source xml:lang="en">Ask for input and approval for each action</source>
+        <target>Запитайте вхідні дані та затвердження для кожної дії</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.mode.plan">
+        <source xml:lang="en">Plan</source>
+        <target>План</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.mode.planDescription">
+        <source xml:lang="en">Generate a plan first, then choose how to execute it</source>
+        <target>Спочатку створіть план, а потім виберіть, як його реалізувати.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.modeDescription">
+        <source xml:lang="en">How the agent should approach this turn</source>
+        <target>Як агенту слід підійти до цього повороту</target>
+      </trans-unit>
       <trans-unit id="agentHost.sessionConfig.permissions">
         <source xml:lang="en">Permissions</source>
         <target>Дозволи</target>
@@ -495,6 +555,58 @@ A keybinding</note>
       <trans-unit id="agentHost">
         <source xml:lang="en">Agent Host</source>
         <target>Агент Хост</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/claude/claudeAgent" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="claude.sessionConfig.permissionMode">
+        <source xml:lang="en">Approvals</source>
+        <target>Схвалення</target>
+      </trans-unit>
+      <trans-unit id="claude.sessionConfig.permissionMode.acceptEdits">
+        <source xml:lang="en">Auto-Approve Edits</source>
+        <target>Авто-схвалення редагувань</target>
+      </trans-unit>
+      <trans-unit id="claude.sessionConfig.permissionMode.acceptEditsDescription">
+        <source xml:lang="en">Auto-approve file edits; prompt for shell and other tools.</source>
+        <target>Автоматичне схвалення редагувань файлів; запит на оболонку та інші інструменти.</target>
+      </trans-unit>
+      <trans-unit id="claude.sessionConfig.permissionMode.bypassPermissions">
+        <source xml:lang="en">Bypass Approvals</source>
+        <target>Обійти затвердження</target>
+      </trans-unit>
+      <trans-unit id="claude.sessionConfig.permissionMode.bypassPermissionsDescription">
+        <source xml:lang="en">Auto-approve every tool call.</source>
+        <target>Автоматично затверджувати кожен виклик інструменту.</target>
+      </trans-unit>
+      <trans-unit id="claude.sessionConfig.permissionMode.default">
+        <source xml:lang="en">Ask Each Time</source>
+        <target>Запитувати щоразу</target>
+      </trans-unit>
+      <trans-unit id="claude.sessionConfig.permissionMode.defaultDescription">
+        <source xml:lang="en">Prompt for every tool call.</source>
+        <target>Запит на кожен виклик інструменту.</target>
+      </trans-unit>
+      <trans-unit id="claude.sessionConfig.permissionMode.plan">
+        <source xml:lang="en">Plan Only (Read-Only)</source>
+        <target>Тільки план (Тільки для читання)</target>
+      </trans-unit>
+      <trans-unit id="claude.sessionConfig.permissionMode.planDescription">
+        <source xml:lang="en">Read-only research mode; no tool calls executed.</source>
+        <target>Режим дослідження тільки для читання; жодні виклики інструментів не виконані.</target>
+      </trans-unit>
+      <trans-unit id="claude.sessionConfig.permissionModeDescription">
+        <source xml:lang="en">How Claude handles tool approvals.</source>
+        <target>Як Клод обробляє затвердження інструментів.</target>
+      </trans-unit>
+      <trans-unit id="claudeAgent.description">
+        <source xml:lang="en">Claude agent backed by the Anthropic Claude Agent SDK</source>
+        <target>Агент Claude, підтримуваний SDK агента Anthropic Claude</target>
+      </trans-unit>
+      <trans-unit id="claudeAgent.displayName">
+        <source xml:lang="en">Claude</source>
+        <target>Клод</target>
       </trans-unit>
     </body>
   </file>
@@ -556,9 +668,65 @@ A keybinding</note>
         <source xml:lang="en">Extra High</source>
         <target>Додатково високо</target>
       </trans-unit>
+      <trans-unit id="copilotAgent.pluginParseError">
+        <source xml:lang="en">Error parsing plugin.</source>
+        <target>Помилка парсингу плагіна.</target>
+      </trans-unit>
       <trans-unit id="copilotAgent.worktreeCreated">
         <source xml:lang="en">Created isolated worktree for branch {0}</source>
         <target>Створено ізольоване робоче дерево для гілки {0}</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotAgentSession" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHost.planReview.autopilot.description">
+        <source xml:lang="en">Auto-approve all tool calls and continue until done.</source>
+        <target>Автоматично затверджувати всі виклики інструментів і продовжувати до завершення.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.planReview.autopilot.label">
+        <source xml:lang="en">Implement with Autopilot</source>
+        <target>Впровадити з Autopilot</target>
+      </trans-unit>
+      <trans-unit id="agentHost.planReview.autopilotFleet.description">
+        <source xml:lang="en">Auto-approve all tool calls, including fleet management actions, and continue until done.</source>
+        <target>Автоматично затверджуйте всі виклики інструментів, включаючи дії з управління флотом, і продовжуйте до завершення.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.planReview.autopilotFleet.label">
+        <source xml:lang="en">Implement with Autopilot Fleet</source>
+        <target>Впровадити з Autopilot Fleet</target>
+      </trans-unit>
+      <trans-unit id="agentHost.planReview.exitOnly.description">
+        <source xml:lang="en">Approve the plan without executing it. I will implement it myself.</source>
+        <target>Схвалити план без його виконання. Я реалізую його самостійно.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.planReview.exitOnly.label">
+        <source xml:lang="en">Approve Plan Only</source>
+        <target>Схвалити лише план</target>
+      </trans-unit>
+      <trans-unit id="agentHost.planReview.fallbackSummary">
+        <source xml:lang="en">A plan is ready for review.</source>
+        <target>План готовий до перегляду.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.planReview.interactive.description">
+        <source xml:lang="en">Implement the plan, asking for input and approval for each action.</source>
+        <target>Впроваджуйте план, запитуючи відгуки та затвердження для кожної дії.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.planReview.interactive.label">
+        <source xml:lang="en">Implement Plan</source>
+        <target>Впровадити план</target>
+      </trans-unit>
+      <trans-unit id="agentHost.planReview.questionMessage">
+        <source xml:lang="en">How would you like to proceed?</source>
+        <target>Як би ви хотіли продовжити?</target>
+      </trans-unit>
+      <trans-unit id="agentHost.planReview.title">
+        <source xml:lang="en">Review Plan</source>
+        <target>Перегляд плану</target>
+      </trans-unit>
+      <trans-unit id="agentHost.planReview.viewPlanLink">
+        <source xml:lang="en">View full plan</source>
+        <target>Переглянути повний план</target>
       </trans-unit>
     </body>
   </file>
@@ -616,6 +784,10 @@ A keybinding</note>
         <source xml:lang="en">Edited {0}</source>
         <target>Відредаговано {0}</target>
       </trans-unit>
+      <trans-unit id="toolComplete.exitPlanMode">
+        <source xml:lang="en">Exited plan mode</source>
+        <target>Вийшли з режиму плану</target>
+      </trans-unit>
       <trans-unit id="toolComplete.failed">
         <source xml:lang="en">"{0}" failed</source>
         <target>"{0}" не вдалося</target>
@@ -651,6 +823,14 @@ A keybinding</note>
       <trans-unit id="toolComplete.shellCmd">
         <source xml:lang="en">Ran {0}</source>
         <target>Запущено {0}</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.skill">
+        <source xml:lang="en">Read skill {0}</source>
+        <target>Читати навичку {0}</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.skillName">
+        <source xml:lang="en">Read skill {0}</source>
+        <target>Читати навичку {0}</target>
       </trans-unit>
       <trans-unit id="toolComplete.view">
         <source xml:lang="en">Read file</source>
@@ -696,6 +876,10 @@ A keybinding</note>
         <source xml:lang="en">Editing {0}</source>
         <target>Редагування {0}</target>
       </trans-unit>
+      <trans-unit id="toolInvoke.exitPlanMode">
+        <source xml:lang="en">Presenting plan</source>
+        <target>Представлення плану</target>
+      </trans-unit>
       <trans-unit id="toolInvoke.generic">
         <source xml:lang="en">Using "{0}"</source>
         <target>Використовуючи "{0}"</target>
@@ -727,6 +911,14 @@ A keybinding</note>
       <trans-unit id="toolInvoke.shellCmd">
         <source xml:lang="en">Running {0}</source>
         <target>Виконання {0}</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.skill">
+        <source xml:lang="en">Reading skill {0}</source>
+        <target>Навичка читання {0}</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.skillName">
+        <source xml:lang="en">Reading skill {0}</source>
+        <target>Навичка читання {0}</target>
       </trans-unit>
       <trans-unit id="toolInvoke.view">
         <source xml:lang="en">Reading file</source>
@@ -776,6 +968,10 @@ A keybinding</note>
         <source xml:lang="en">Edit File</source>
         <target>Редагувати файл</target>
       </trans-unit>
+      <trans-unit id="toolName.exitPlanMode">
+        <source xml:lang="en">Plan</source>
+        <target>План</target>
+      </trans-unit>
       <trans-unit id="toolName.glob">
         <source xml:lang="en">Find Files</source>
         <target>Знайти файли</target>
@@ -799,6 +995,10 @@ A keybinding</note>
       <trans-unit id="toolName.readShell">
         <source xml:lang="en">Read Shell Output</source>
         <target>Читати вихідні дані оболонки</target>
+      </trans-unit>
+      <trans-unit id="toolName.skill">
+        <source xml:lang="en">Read Skill</source>
+        <target>Читати навичку</target>
       </trans-unit>
       <trans-unit id="toolName.view">
         <source xml:lang="en">View File</source>
@@ -3158,6 +3358,18 @@ A keybinding label</note>
   </file>
   <file original="src/vs/platform/terminal/common/terminalPlatformConfiguration" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="terminal.integrated.agentHostProfile.linux">
+        <source xml:lang="en">The terminal profile to use on Linux for agent host terminals, including shells launched by AI agent tools. Accepts either a profile name from {0} or an inline profile object. When unset, falls back to {1}. Currently applies to the local agent host. Only the executable `path` is honored today; `args` and `env` from the profile are ignored. Remote agent hosts need remote-side shell configuration because local resolved paths may be invalid on the remote.</source>
+        <target>Профіль терміналу, який слід використовувати на Linux для терміналів хостів агентів, включаючи оболонки, запущені інструментами агентів ШІ. Приймає або ім'я профілю з {0}, або об'єкт профілю в рядку. Якщо не встановлено, повертається до {1}. Наразі застосовується до локального хоста агента. Сьогодні враховується лише виконуваний `path`; `args` та `env` з профілю ігноруються. Віддалені хости агентів потребують конфігурації оболонки на віддаленій стороні, оскільки локально розв'язані шляхи можуть бути недійсними на віддаленій стороні.</target>
+      </trans-unit>
+      <trans-unit id="terminal.integrated.agentHostProfile.osx">
+        <source xml:lang="en">The terminal profile to use on macOS for agent host terminals, including shells launched by AI agent tools. Accepts either a profile name from {0} or an inline profile object. When unset, falls back to {1}. Currently applies to the local agent host. Only the executable `path` is honored today; `args` and `env` from the profile are ignored. Remote agent hosts need remote-side shell configuration because local resolved paths may be invalid on the remote.</source>
+        <target>Профіль терміналу, який слід використовувати на macOS для терміналів хостів агентів, включаючи оболонки, запущені інструментами агентів ШІ. Приймає або ім'я профілю з {0}, або об'єкт профілю в рядку. Якщо не встановлено, повертається до {1}. Наразі застосовується до локального хоста агента. Сьогодні враховується лише виконуваний `path`; `args` та `env` з профілю ігноруються. Віддалені хости агентів потребують конфігурації оболонки на віддаленій стороні, оскільки локально вирішені шляхи можуть бути недійсними на віддаленій стороні.</target>
+      </trans-unit>
+      <trans-unit id="terminal.integrated.agentHostProfile.windows">
+        <source xml:lang="en">The terminal profile to use on Windows for agent host terminals, including shells launched by AI agent tools. Accepts either a profile name from {0} or an inline profile object. When unset, falls back to {1}. Currently applies to the local agent host. Only the executable `path` is honored today; `args` and `env` from the profile are ignored. Remote agent hosts need remote-side shell configuration because local resolved paths may be invalid on the remote.</source>
+        <target>Профіль терміналу, який потрібно використовувати на Windows для терміналів хостів агентів, включаючи оболонки, запущені інструментами агентів ШІ. Приймає або ім'я профілю з {0}, або об'єкт профілю в рядку. Якщо не встановлено, повертається до {1}. Наразі застосовується до локального хоста агента. Сьогодні враховується лише виконуваний `path`; `args` та `env` з профілю ігноруються. Віддалені хости агентів потребують конфігурації оболонки на віддаленій стороні, оскільки локально вирішені шляхи можуть бути недійсними на віддаленій стороні.</target>
+      </trans-unit>
       <trans-unit id="terminal.integrated.automationProfile.linux">
         <source xml:lang="en">The terminal profile to use on Linux for automation-related terminal usage like tasks and debug.</source>
         <target>Профіль терміналу, який слід використовувати на Linux для автоматизації, пов'язаної з використанням терміналу, як-от завдання та налагодження.</target>
@@ -3390,6 +3602,10 @@ To override an existing profile use its profile name as the key, for example:
       <trans-unit id="selectionBackground">
         <source xml:lang="en">The background color of text selections in the workbench (e.g. for input fields or text areas). Note that this does not apply to selections within the editor.</source>
         <target>Колір фону вибраних текстів у робочій області (наприклад, для полів введення або текстових областей). Зверніть увагу, що це не стосується виборів у редакторі.</target>
+      </trans-unit>
+      <trans-unit id="strongForeground">
+        <source xml:lang="en">Highest-contrast foreground color, intended for text or icons that need maximum legibility across various backgrounds. This color is only used if not overridden by a component.</source>
+        <target>Найвищий контраст кольору переднього плану, призначений для тексту або іконок, які потребують максимальної читабельності на різних фонах. Цей колір використовується лише в тому випадку, якщо не переопределений компонентом.</target>
       </trans-unit>
       <trans-unit id="textBlockQuoteBackground">
         <source xml:lang="en">Background color for block quotes in text.</source>
@@ -4371,6 +4587,10 @@ To override an existing profile use its profile name as the key, for example:
         <source xml:lang="en">Quick picker foreground color for the focused item.</source>
         <target>Швидкий вибір кольору переднього плану для вибраного елемента.</target>
       </trans-unit>
+      <trans-unit id="quickInput.listFocusHighlightForeground">
+        <source xml:lang="en">Quick picker foreground color of the match highlights on the focused item.</source>
+        <target>Швидкий вибір кольору переднього плану підсвічування матчів на виділеному елементі.</target>
+      </trans-unit>
       <trans-unit id="quickInput.listFocusIconForeground">
         <source xml:lang="en">Quick picker icon foreground color for the focused item.</source>
         <target>Колір переднього плану значка швидкого вибору для виділеного елемента.</target>
@@ -4777,6 +4997,18 @@ To override an existing profile use its profile name as the key, for example:
       <trans-unit id="updateMode">
         <source xml:lang="en">Configure whether you receive automatic updates. Requires a restart after change. The updates are fetched from a Microsoft online service.</source>
         <target>Налаштуйте, чи отримувати автоматичні оновлення. Після зміни потрібен перезапуск. Оновлення завантажуються з онлайн-сервісу Microsoft.</target>
+      </trans-unit>
+      <trans-unit id="updateTitleBar">
+        <source xml:lang="en">Show the update indicator in the title bar.</source>
+        <target>Показати індикатор оновлення в рядку заголовка.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/update/electron-main/notAvailableUpdateDialog" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="noUpdatesAvailable">
+        <source xml:lang="en">There are currently no updates available.</source>
+        <target>Наразі немає доступних оновлень.</target>
       </trans-unit>
     </body>
   </file>

@@ -1,10 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/sessions/contrib/remoteAgentHost/browser/manageRemoteAgentHosts" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="manageHosts.actionsHeader">
+        <source xml:lang="en">Add or Manage</source>
+        <target>Додати або Керувати</target>
+      </trans-unit>
+      <trans-unit id="manageHosts.placeholder">
+        <source xml:lang="en">Select a remote to manage or pick an action</source>
+        <target>Виберіть пульт для управління або виберіть дію</target>
+      </trans-unit>
+      <trans-unit id="manageHosts.remoteHostsHeader">
+        <source xml:lang="en">Remote Agent Hosts</source>
+        <target>Віддалені агенти хостів</target>
+      </trans-unit>
+      <trans-unit id="manageHosts.removeTooltip">
+        <source xml:lang="en">Remove</source>
+        <target>Видалити</target>
+      </trans-unit>
+      <trans-unit id="manageHosts.title">
+        <source xml:lang="en">Manage Remote Agent Hosts</source>
+        <target>Керувати віддаленими агентами хостів</target>
+      </trans-unit>
+      <trans-unit id="manageRemoteAgentHosts">
+        <source xml:lang="en">Manage Remote Agent Hosts...</source>
+        <target>Керувати віддаленими агентами...</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/remoteAgentHost/browser/remoteAgentHost.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="chat.agentHost.forwardSSHAgent">
         <source xml:lang="en">When enabled, forwards the local SSH agent to the remote machine during SSH agent host connections to hosts whose SSH config has `ForwardAgent yes`. Only enable this for trusted hosts. The remote agent host process must be restarted for this setting to take effect.</source>
         <target>Коли увімкнено, пересилає локальний SSH-агент на віддалену машину під час з'єднань SSH-агента з хостами, чий SSH-конфіг має `ForwardAgent yes`. Увімкніть це лише для надійних хостів. Процес віддаленого агента хоста повинен бути перезапущений, щоб це налаштування набуло чинності.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.localFilePermissions">
+        <source xml:lang="en">Per-host filesystem grants for remote agent hosts. Maps a remote agent host address to URI strings and the access mode the host has been granted (`r` for read, `rw` for read and write). Hosts cannot read or write any files outside the granted URIs without prompting; a URI grant covers descendants. This setting is normally maintained by the agent-host permission prompts and rarely edited by hand.</source>
+        <target>Персоналізовані файлові системи для віддалених агентських хостів. Відображає адресу віддаленого агентського хоста на URI рядки та режим доступу, який був наданий хосту (`r` для читання, `rw` для читання та запису). Хости не можуть читати або записувати жодні файли поза межами наданих URI без підтвердження; надання URI охоплює нащадків. Цей параметр зазвичай підтримується запитами дозволів агентського хоста і рідко редагується вручну.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.localFilePermissions.read">
+        <source xml:lang="en">Read-only access.</source>
+        <target>Доступ лише для читання.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.localFilePermissions.readWrite">
+        <source xml:lang="en">Read and write access.</source>
+        <target>Доступ на читання та запис.</target>
       </trans-unit>
       <trans-unit id="chat.remoteAgentHosts">
         <source xml:lang="en">A list of remote agent host addresses to connect to (e.g. "localhost:3000").</source>
@@ -46,6 +86,10 @@
   </file>
   <file original="src/vs/sessions/contrib/remoteAgentHost/browser/remoteAgentHostActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="addNewSSHHost">
+        <source xml:lang="en">Add New SSH Host...</source>
+        <target>Додати новий SSH хост...</target>
+      </trans-unit>
       <trans-unit id="addRemoteAgentHost">
         <source xml:lang="en">Add Remote Agent Host...</source>
         <target>Додати хост віддаленого агента...</target>
@@ -69,6 +113,10 @@
       <trans-unit id="addRemoteValidationInvalid">
         <source xml:lang="en">Enter a valid host, host:port, or WebSocket URL.</source>
         <target>Введіть дійсний хост, хост:порт або URL WebSocket.</target>
+      </trans-unit>
+      <trans-unit id="configureSSHHosts">
+        <source xml:lang="en">Configure SSH Hosts...</source>
+        <target>Налаштувати SSH хости...</target>
       </trans-unit>
       <trans-unit id="connectViaSSH">
         <source xml:lang="en">Connect to Remote Agent Host via SSH</source>
@@ -102,6 +150,10 @@
         <source xml:lang="en">Enter a name for this remote agent host.</source>
         <target>Введіть ім'я для цього віддаленого агента.</target>
       </trans-unit>
+      <trans-unit id="sshAddNewHost">
+        <source xml:lang="en">Add New SSH Host...</source>
+        <target>Додати новий SSH-хост...</target>
+      </trans-unit>
       <trans-unit id="sshAuthAgent">
         <source xml:lang="en">SSH Agent</source>
         <target>SSH Агент</target>
@@ -134,6 +186,30 @@
         <source xml:lang="en">Authentication Method</source>
         <target>Метод автентифікації</target>
       </trans-unit>
+      <trans-unit id="sshConfigCreateFailed">
+        <source xml:lang="en">Failed to create SSH config file: {0}</source>
+        <target>Не вдалося створити файл конфігурації SSH: {0}</target>
+      </trans-unit>
+      <trans-unit id="sshConfigListFailed">
+        <source xml:lang="en">Failed to list SSH config files: {0}</source>
+        <target>Не вдалося перерахувати файли конфігурації SSH: {0}</target>
+      </trans-unit>
+      <trans-unit id="sshConfigOpenFailed">
+        <source xml:lang="en">Failed to open SSH config file: {0}</source>
+        <target>Не вдалося відкрити файл конфігурації SSH: {0}</target>
+      </trans-unit>
+      <trans-unit id="sshConfigPickPlaceholder">
+        <source xml:lang="en">Select an SSH configuration file</source>
+        <target>Виберіть файл конфігурації SSH</target>
+      </trans-unit>
+      <trans-unit id="sshConfigPickTitle">
+        <source xml:lang="en">Select SSH configuration file to edit</source>
+        <target>Виберіть файл конфігурації SSH для редагування</target>
+      </trans-unit>
+      <trans-unit id="sshConfigureHosts">
+        <source xml:lang="en">Configure SSH Hosts...</source>
+        <target>Налаштувати SSH хости...</target>
+      </trans-unit>
       <trans-unit id="sshConnectFailed">
         <source xml:lang="en">Failed to connect via SSH to {0}: {1}</source>
         <target>Не вдалося підключитися через SSH до {0}: {1}</target>
@@ -142,17 +218,13 @@
         <source xml:lang="en">Connecting to {0} via SSH...</source>
         <target>Підключення до {0} через SSH...</target>
       </trans-unit>
-      <trans-unit id="sshEnterManually">
-        <source xml:lang="en">Enter Manually...</source>
-        <target>Введіть вручну...</target>
-      </trans-unit>
-      <trans-unit id="sshEnterManuallyDesc">
-        <source xml:lang="en">Type in host, username, and port</source>
-        <target>Введіть хост, ім'я користувача та порт</target>
-      </trans-unit>
       <trans-unit id="sshHostEmpty">
         <source xml:lang="en">Enter an SSH host.</source>
         <target>Введіть SSH-хост.</target>
+      </trans-unit>
+      <trans-unit id="sshHostInvalid">
+        <source xml:lang="en">Invalid SSH host.</source>
+        <target>Недійсний SSH хост.</target>
       </trans-unit>
       <trans-unit id="sshHostInvalidPort">
         <source xml:lang="en">Enter a valid port number.</source>
@@ -162,9 +234,9 @@
         <source xml:lang="en">Enter a host name after '@'.</source>
         <target>Введіть ім'я хоста після '@'.</target>
       </trans-unit>
-      <trans-unit id="sshHostPrompt">
-        <source xml:lang="en">Enter the SSH host (e.g. user@hostname or user@hostname:port).</source>
-        <target>Введіть SSH-хост (наприклад, user@hostname або user@hostname:port).</target>
+      <trans-unit id="sshHostPickerPlaceholder">
+        <source xml:lang="en">Select configured SSH host or enter user@host</source>
+        <target>Виберіть налаштований SSH хост або введіть user@host</target>
       </trans-unit>
       <trans-unit id="sshHostTitle">
         <source xml:lang="en">Connect via SSH</source>
@@ -181,10 +253,6 @@
       <trans-unit id="sshKeyTitle">
         <source xml:lang="en">Private Key Path</source>
         <target>Шлях до приватного ключа</target>
-      </trans-unit>
-      <trans-unit id="sshManualHostTitle">
-        <source xml:lang="en">Connect via SSH</source>
-        <target>Підключитися через SSH</target>
       </trans-unit>
       <trans-unit id="sshNameEmpty">
         <source xml:lang="en">Enter a name.</source>
@@ -213,10 +281,6 @@
       <trans-unit id="sshPasswordTitle">
         <source xml:lang="en">SSH Password</source>
         <target>SSH Пароль</target>
-      </trans-unit>
-      <trans-unit id="sshPickHostPlaceholder">
-        <source xml:lang="en">Select an SSH host or enter manually</source>
-        <target>Виберіть SSH-хост або введіть вручну</target>
       </trans-unit>
       <trans-unit id="sshResolveConfigFailed">
         <source xml:lang="en">Failed to resolve SSH config for {0}: {1}</source>
@@ -292,6 +356,30 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/contrib/remoteAgentHost/browser/remoteAgentHostCustomizationHarness" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="remoteAgentHost.addPlugin">
+        <source xml:lang="en">Add Remote Plugin</source>
+        <target>Додати віддалений плагін</target>
+      </trans-unit>
+      <trans-unit id="remoteAgentHost.addPluginTooltip">
+        <source xml:lang="en">Add a plugin folder that already exists on this remote agent host.</source>
+        <target>Додайте папку плагіна, яка вже існує на цьому віддаленому агенті.</target>
+      </trans-unit>
+      <trans-unit id="remoteAgentHost.pluginAlreadyConfigured">
+        <source xml:lang="en">'{0}' is already configured on {1}.</source>
+        <target>'{0}' вже налаштовано на {1}.</target>
+      </trans-unit>
+      <trans-unit id="remoteAgentHost.removeConfiguredPlugin">
+        <source xml:lang="en">Remove from Remote Host</source>
+        <target>Видалити з віддаленого хоста</target>
+      </trans-unit>
+      <trans-unit id="remoteAgentHost.selectPluginFolder">
+        <source xml:lang="en">Select Plugin Folder on {0}</source>
+        <target>Виберіть папку плагіна на {0}</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/remoteAgentHost/browser/remoteAgentHostSessionsProvider" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="connectFailed">
@@ -329,6 +417,118 @@
       <trans-unit id="agentHostTerminal.channelRemote">
         <source xml:lang="en">Agent Host Terminal ({0})</source>
         <target>Агентський хост термінал ({0})</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/remoteAgentHost/browser/remoteHostOptions" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="workspacePicker.copyAddress">
+        <source xml:lang="en">Copy Address</source>
+        <target>Скопіювати адресу</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.hoverConnected">
+        <source xml:lang="en">Remote agent host is connected and ready.</source>
+        <target>Віддалений агент-хост підключено і готово.</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.hoverConnectedAddr">
+        <source xml:lang="en">Remote agent host is connected and ready.
+
+Address: {0}</source>
+        <target>Віддалений агент підключено та готово.
+
+Адреса: {0}</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.hoverConnecting">
+        <source xml:lang="en">Attempting to connect to remote agent host...</source>
+        <target>Спроба підключитися до віддаленого хоста агента...</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.hoverConnectingAddr">
+        <source xml:lang="en">Attempting to connect to remote agent host...
+
+Address: {0}</source>
+        <target>Спроба підключитися до віддаленого агента-хоста...
+
+Адреса: {0}</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.hoverDisconnected">
+        <source xml:lang="en">Remote agent host is disconnected.</source>
+        <target>Віддалений агент не підключений.</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.hoverDisconnectedAddr">
+        <source xml:lang="en">Remote agent host is disconnected.
+
+Address: {0}</source>
+        <target>Віддалений агент хоста відключений.
+
+Адреса: {0}</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.hoverIncompatible">
+        <source xml:lang="en">Cannot connect to remote agent host: {0}
+
+This client speaks protocol version {1}.</source>
+        <target>Не вдається підключитися до віддаленого агента хоста: {0}
+
+Цей клієнт використовує версію протоколу {1}.</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.hoverIncompatibleAddr">
+        <source xml:lang="en">Cannot connect to remote agent host: {0}
+
+This client speaks protocol version {1}.
+
+Address: {2}</source>
+        <target>Не вдається підключитися до віддаленого агента: {0}
+
+Цей клієнт використовує версію протоколу {1}.
+
+Адреса: {2}</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.incompatibleValidationClient">
+        <source xml:lang="en">Incompatible protocol version. We speak {0}. Error from {1}: {2}
+
+ Ensure {3} and {1} are both up to date.</source>
+        <target>Несумісна версія протоколу. Ми говоримо {0}. Помилка від {1}: {2}
+
+Переконайтеся, що {3} та {1} обидва оновлені.</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.incompatibleValidationServer">
+        <source xml:lang="en">Incompatible protocol version. We speak {0}, but {1} speaks {2}. Ensure {3} and {1} are both up to date.</source>
+        <target>Несумісна версія протоколу. Ми говоримо {0}, але {1} говорить {2}. Переконайтеся, що {3} та {1} обидва оновлені.</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.openSettings">
+        <source xml:lang="en">Open Settings</source>
+        <target>Відкрити Налаштування</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.reconnect">
+        <source xml:lang="en">Reconnect</source>
+        <target>Перепідключитися</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.remoteOptionsTitle">
+        <source xml:lang="en">Options for {0}</source>
+        <target>Опції для {0}</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.removeRemote">
+        <source xml:lang="en">Remove Remote</source>
+        <target>Видалити віддалене</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.showOutput">
+        <source xml:lang="en">Show Output</source>
+        <target>Показати вихідні дані</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.statusConnecting">
+        <source xml:lang="en">Connecting</source>
+        <target>Підключення</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.statusIncompatible">
+        <source xml:lang="en">Incompatible</source>
+        <target>Несумісний</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.statusOffline">
+        <source xml:lang="en">Offline</source>
+        <target>Офлайн</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.statusOnline">
+        <source xml:lang="en">Online</source>
+        <target>Онлайн</target>
       </trans-unit>
     </body>
   </file>

@@ -736,13 +736,17 @@ Reason for leaving the sandbox: {2}</source>
         <source xml:lang="en">Skip</source>
         <target>Пропустити</target>
       </trans-unit>
+      <trans-unit id="terminalAssessingOutput">
+        <source xml:lang="en">`{0}` may need input</source>
+        <target>`{0}` може потребувати введення</target>
+      </trans-unit>
       <trans-unit id="terminalCommandCompleted">
         <source xml:lang="en">`{0}` completed</source>
         <target>`{0}` завершено</target>
       </trans-unit>
-      <trans-unit id="terminalNeedsInput">
-        <source xml:lang="en">`{0}` needs input</source>
-        <target>`{0}` потребує введення</target>
+      <trans-unit id="terminalProcessExited">
+        <source xml:lang="en">`{0}` terminal exited</source>
+        <target>`{0}` термінал вийшов</target>
       </trans-unit>
     </body>
   </file>
@@ -948,6 +952,10 @@ Reason for leaving the sandbox: {2}</source>
         <source xml:lang="en">Controls whether agent mode uses sandboxing to restrict what tools can do. When enabled, tools like the terminal are run in a sandboxed environment to limit access to the system.</source>
         <target>Контролює, чи режим агента використовує пісочницю для обмеження можливостей інструментів. Коли увімкнено, такі інструменти, як термінал, виконуються в середовищі пісочниці для обмеження доступу до системи.</target>
       </trans-unit>
+      <trans-unit id="agentSandbox.enabledSetting.allowNetworkDescription">
+        <source xml:lang="en">Enable sandboxing for agent mode tools, but do not block commands based on configured network domains.</source>
+        <target>Увімкніть пісочницю для інструментів режиму агента, але не блокуйте команди на основі налаштованих мережевих доменів.</target>
+      </trans-unit>
       <trans-unit id="agentSandbox.enabledSetting.offDescription">
         <source xml:lang="en">Disable sandboxing for agent mode tools.</source>
         <target>Вимкніть пісочницю для інструментів режиму агента.</target>
@@ -973,8 +981,8 @@ Reason for leaving the sandbox: {2}</source>
         <target>Масив шляхів для повторного дозволу доступу на читання в заборонених регіонах. Має пріоритет над denyRead.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.linuxFileSystemSetting.allowWrite">
-        <source xml:lang="en">Array of paths to allow write access. Leave empty to disallow all writes.</source>
-        <target>Масив шляхів для дозволу на запис. Залиште порожнім, щоб заборонити всі записи.</target>
+        <source xml:lang="en">Array of additional paths to allow write access. Leave empty to disallow writes outside the workspace folders and sandbox temp directory.</source>
+        <target>Масив додаткових шляхів для дозволу на запис. Залиште порожнім, щоб заборонити записи за межами папок робочого простору та тимчасового каталогу пісочниці.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.linuxFileSystemSetting.denyRead">
         <source xml:lang="en">Array of paths to deny read access. Leave empty to allow reading all paths.</source>

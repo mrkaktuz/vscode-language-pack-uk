@@ -302,6 +302,10 @@
         <source xml:lang="en">Console Logs</source>
         <target>Консольні журнали</target>
       </trans-unit>
+      <trans-unit id="workbench.browser.agentHostChatToolsEnabled">
+        <source xml:lang="en">When enabled, integrated browser tools are exposed as client-provided tools to agent host sessions in the Sessions window. Requires {0} and {1}.</source>
+        <target>Коли увімкнено, інтегровані інструменти браузера надаються як інструменти, надані клієнтом, для сесій хоста агента у вікні Сесії. Потребує {0} та {1}.</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserEditorFindFeature" source-language="en" datatype="plaintext" target-language="uk">
@@ -710,13 +714,49 @@ Localhost links automatically open in the integrated browser.</source>
         <source xml:lang="en">Opening browser page at {0}</source>
         <target>Відкриття веб-сторінки в браузері за адресою {0}</target>
       </trans-unit>
+      <trans-unit id="browser.open.newPageOption">
+        <source xml:lang="en">No, open a new page at {0}</source>
+        <target>Ні, відкрийте нову сторінку за {0}</target>
+      </trans-unit>
+      <trans-unit id="browser.open.noPagesOption">
+        <source xml:lang="en">No - Do not share any tabs with the agent</source>
+        <note>{Locked=" - "}</note>
+        <target>{Locked=" - Не діліться жодними вкладками з агентом"}</target>
+      </trans-unit>
       <trans-unit id="browser.open.past">
         <source xml:lang="en">Opened browser page at {0}</source>
         <target>Відкрита сторінка браузера за адресою {0}</target>
       </trans-unit>
+      <trans-unit id="browser.open.prompt.invocation">
+        <source xml:lang="en">Prompting user to share a browser tab</source>
+        <target>Запит користувача на спільний доступ до вкладки браузера</target>
+      </trans-unit>
+      <trans-unit id="browser.open.prompt.past">
+        <source xml:lang="en">Prompted user to share a browser tab</source>
+        <target>Запрошено користувача поділитися вкладкою браузера</target>
+      </trans-unit>
       <trans-unit id="browser.open.result">
         <source xml:lang="en">Opened {0}</source>
         <target>Відкрито {0}</target>
+      </trans-unit>
+      <trans-unit id="browser.open.shareExistingOption">
+        <source xml:lang="en">Yes, share "{0}" - {1}</source>
+        <note>{Locked=" - "}&#xD;
+{0} is the editor title&#xD;
+{1} is the truncated URL</note>
+        <target>Так, поділіться "{0}" - {1}</target>
+      </trans-unit>
+      <trans-unit id="browser.open.shareQuestion.message">
+        <source xml:lang="en">Share an existing browser tab?</source>
+        <target>Поділитися існуючою вкладкою браузера?</target>
+      </trans-unit>
+      <trans-unit id="browser.open.shareQuestion.title">
+        <source xml:lang="en">Share Browser Tab</source>
+        <target>Поділитися вкладкою браузера</target>
+      </trans-unit>
+      <trans-unit id="browser.open.sharedResult">
+        <source xml:lang="en">User shared {0}</source>
+        <target>Користувач поділився {0}</target>
       </trans-unit>
       <trans-unit id="openBrowserTool.displayName">
         <source xml:lang="en">Open Browser Page</source>

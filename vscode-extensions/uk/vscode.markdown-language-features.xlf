@@ -186,6 +186,10 @@
         <source xml:lang="en">Link to '{0}'</source>
         <target>Посилання на '{0}'</target>
       </trans-unit>
+      <trans-unit id="++CODE++05cec8ec13cd25a59358c03984a524abc21b21a116f79f78148bfa7cfbe96d92">
+        <source xml:lang="en">Link to HTML id '{0}'</source>
+        <target>Посилання на HTML id '{0}'</target>
+      </trans-unit>
       <trans-unit id="++CODE++997ca95a484dc4ff449238f0f85348de5975ced6e575aa2c1bf37563793f7ebc">
         <source xml:lang="en">Markdown Language Server</source>
         <target>Сервер мови Markdown</target>
@@ -295,8 +299,12 @@
   <file original="extensions/vscode.markdown-language-features/package" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="markdown.styles.dec">
-        <source xml:lang="en">A list of URLs or local paths to CSS style sheets to use from the Markdown preview. Relative paths are interpreted relative to the folder open in the Explorer. If there is no open folder, they are interpreted relative to the location of the Markdown file. All '\' need to be written as '\\'.</source>
-        <target>Список URL-адрес або локальних шляхів до CSS стилів, які використовуються з попереднім переглядом Markdown. Відносні шляхи інтерпретуються відносно папки, відкритої в Провіднику. Якщо немає відкритої папки, вони інтерпретуються відносно місця розташування файлу Markdown. Усі '\' потрібно писати як '\\'.</target>
+        <source xml:lang="en">A list of URLs or local paths to CSS style sheets to use from the Markdown preview. Relative paths are interpreted relative to the folder open in the Explorer. If there is no open folder, they are interpreted relative to the location of the Markdown file. All `\` need to be written as `\\`.</source>
+        <target>Список URL-адрес або локальних шляхів до CSS стилів, які використовуються в попередньому перегляді Markdown. Відносні шляхи інтерпретуються відносно папки, відкритої в Провіднику. Якщо папка не відкрита, вони інтерпретуються відносно місця розташування файлу Markdown. Усі `\` потрібно записувати як `\\`.</target>
+      </trans-unit>
+      <trans-unit id="configuration.advanced">
+        <source xml:lang="en">Advanced</source>
+        <target>Розширений</target>
       </trans-unit>
       <trans-unit id="configuration.pasteUrlAsFormattedLink.always">
         <source xml:lang="en">Always insert Markdown links.</source>
@@ -415,6 +423,38 @@ Use `#markdown.copyFiles.destination#` to configure where copied files should be
         <source xml:lang="en">Controls where links in Markdown files should be opened.</source>
         <target>Контролює, де повинні відкриватися посилання в файлах Markdown.</target>
       </trans-unit>
+      <trans-unit id="configuration.markdown.editor.drop.enabled">
+        <source xml:lang="en">Controls whether dropping files into a Markdown editor while holding Shift inserts Markdown links. Requires enabling `#editor.dropIntoEditor.enabled#`.</source>
+        <target>Контролює, чи вставляються Markdown посилання при перетягуванні файлів у редактор Markdown з утримуванням Shift. Потрібно активувати `#editor.dropIntoEditor.enabled#`.</target>
+      </trans-unit>
+      <trans-unit id="configuration.markdown.validate.enabled.description">
+        <source xml:lang="en">Controls whether error reporting is enabled in Markdown files.</source>
+        <target>Контролює, чи увімкнено звітування про помилки у файлах Markdown.</target>
+      </trans-unit>
+      <trans-unit id="configuration.markdown.validate.fragmentLinks.enabled.description">
+        <source xml:lang="en">Controls whether fragment links to headers in the current Markdown file are validated, for example: `[link](#header)`. Requires enabling `#markdown.validate.enabled#`.</source>
+        <target>Контролює, чи перевіряються фрагментні посилання на заголовки в поточному файлі Markdown, наприклад: `[link](#header)`. Потребує увімкнення `#markdown.validate.enabled#`.</target>
+      </trans-unit>
+      <trans-unit id="configuration.markdown.occurrencesHighlight.enabled">
+        <source xml:lang="en">Controls whether link occurrences in the current document are highlighted.</source>
+        <target>Контролює, чи підсвічуються посилання в поточному документі.</target>
+      </trans-unit>
+      <trans-unit id="configuration.markdown.validate.fileLinks.enabled.description">
+        <source xml:lang="en">Controls whether links to other files in Markdown files are validated, for example `[link](/path/to/file.md)`. This checks that the target files exist. Requires enabling `#markdown.validate.enabled#`.</source>
+        <target>Контролює, чи перевіряються посилання на інші файли в Markdown-файлах, наприклад `[link](/path/to/file.md)`. Це перевіряє, чи існують цільові файли. Потребує активації `#markdown.validate.enabled#`.</target>
+      </trans-unit>
+      <trans-unit id="configuration.markdown.editor.filePaste.enabled">
+        <source xml:lang="en">Controls whether pasting files into a Markdown editor creates Markdown links. Requires enabling `#editor.pasteAs.enabled#`.</source>
+        <target>Контролює, чи вставка файлів у редактор Markdown створює посилання Markdown. Потребує активації `#editor.pasteAs.enabled#`.</target>
+      </trans-unit>
+      <trans-unit id="configuration.markdown.suggest.paths.enabled.description">
+        <source xml:lang="en">Controls whether path suggestions are shown while writing links in Markdown files.</source>
+        <target>Контролює, чи показуються пропозиції шляхів під час написання посилань у файлах Markdown.</target>
+      </trans-unit>
+      <trans-unit id="configuration.markdown.validate.referenceLinks.enabled.description">
+        <source xml:lang="en">Controls whether reference links in Markdown files are validated, for example: `[link][ref]`. Requires enabling `#markdown.validate.enabled#`.</source>
+        <target>Контролює, чи перевіряються посилання на довідки у файлах Markdown, наприклад: `[link][ref]`. Потребує активації `#markdown.validate.enabled#`.</target>
+      </trans-unit>
       <trans-unit id="markdown.preview.linkify">
         <source xml:lang="en">Convert URL-like text to links in the Markdown preview.</source>
         <target>Перетворіть текст, схожий на URL, на посилання у попередньому перегляді Markdown.</target>
@@ -435,29 +475,9 @@ Use `#markdown.copyFiles.destination#` to configure where copied files should be
         <source xml:lang="en">Double-click in the Markdown preview to switch to the editor.</source>
         <target>Двічі клацніть у попередньому перегляді Markdown, щоб перейти до редактора.</target>
       </trans-unit>
-      <trans-unit id="configuration.markdown.validate.enabled.description">
-        <source xml:lang="en">Enable all error reporting in Markdown files.</source>
-        <target>Увімкніть усю звітність про помилки у файлах Markdown.</target>
-      </trans-unit>
       <trans-unit id="markdown.trace.extension.desc">
         <source xml:lang="en">Enable debug logging for the Markdown extension.</source>
         <target>Увімкніть журналювання налагодження для розширення Markdown.</target>
-      </trans-unit>
-      <trans-unit id="configuration.markdown.editor.drop.enabled">
-        <source xml:lang="en">Enable dropping files into a Markdown editor while holding Shift. Requires enabling `#editor.dropIntoEditor.enabled#`.</source>
-        <target>Увімкніть перетягування файлів у редактор Markdown, утримуючи Shift. Потрібно увімкнути `#editor.dropIntoEditor.enabled#`.</target>
-      </trans-unit>
-      <trans-unit id="configuration.markdown.occurrencesHighlight.enabled">
-        <source xml:lang="en">Enable highlighting link occurrences in the current document.</source>
-        <target>Увімкнути підсвічування посилань у поточному документі.</target>
-      </trans-unit>
-      <trans-unit id="configuration.markdown.editor.filePaste.enabled">
-        <source xml:lang="en">Enable pasting files into a Markdown editor to create Markdown links. Requires enabling `#editor.pasteAs.enabled#`.</source>
-        <target>Увімкніть вставку файлів у редактор Markdown для створення посилань Markdown. Потрібно увімкнути `#editor.pasteAs.enabled#`.</target>
-      </trans-unit>
-      <trans-unit id="configuration.markdown.suggest.paths.enabled.description">
-        <source xml:lang="en">Enable path suggestions while writing links in Markdown files.</source>
-        <target>Увімкніть пропозиції шляхів під час написання посилань у файлах Markdown.</target>
       </trans-unit>
       <trans-unit id="markdown.preview.typographer">
         <source xml:lang="en">Enable some language-neutral replacement and quotes beautification in the Markdown preview.</source>
@@ -515,6 +535,10 @@ To use this feature, after pasting text that contains updatable links, just clic
         <source xml:lang="en">Insert Link to File in Workspace</source>
         <target>Вставити посилання на файл у робочій області</target>
       </trans-unit>
+      <trans-unit id="configuration.editor">
+        <source xml:lang="en">Language Features</source>
+        <target>Мовні особливості</target>
+      </trans-unit>
       <trans-unit id="markdown.preview.markEditorSelection.desc">
         <source xml:lang="en">Mark the current editor selection in the Markdown preview.</source>
         <target>Позначте вибір поточного редактора в попередньому перегляді Markdown.</target>
@@ -570,6 +594,10 @@ To use this feature, after pasting text that contains updatable links, just clic
       <trans-unit id="configuration.markdown.preferredMdPathExtensionStyle.removeExtension">
         <source xml:lang="en">Prefer removing the file extension. For example, path completions to a file named `file.md` will insert `file` without the `.md`.</source>
         <target>Виберіть видалення розширення файлу. Наприклад, завершення шляху до файлу з назвою `file.md` вставить `file` без `.md`.</target>
+      </trans-unit>
+      <trans-unit id="configuration.preview">
+        <source xml:lang="en">Preview</source>
+        <target>Попередній перегляд</target>
       </trans-unit>
       <trans-unit id="configuration.markdown.updateLinksOnFileMove.enabled.prompt">
         <source xml:lang="en">Prompt on each file move.</source>
@@ -627,6 +655,14 @@ To use this feature, after pasting text that contains updatable links, just clic
 - `${src}` — Вирішений шлях до відеофайлу.
 - `${title}` — Назва, що використовується для відео. Для цієї змінної автоматично буде створено плейсхолдер фрагмента.</target>
       </trans-unit>
+      <trans-unit id="markdown.reopenAsSource.title">
+        <source xml:lang="en">Switch to Editor View</source>
+        <target>Переключитися на режим редагування</target>
+      </trans-unit>
+      <trans-unit id="markdown.reopenAsPreview.title">
+        <source xml:lang="en">Switch to Preview View</source>
+        <target>Переключитися на режим попереднього перегляду</target>
+      </trans-unit>
       <trans-unit id="configuration.markdown.updateLinksOnFileMove.include.property">
         <source xml:lang="en">The glob pattern to match file paths against. Set to true to enable the pattern.</source>
         <target>Шаблон glob для порівняння з шляхами до файлів. Встановіть в true, щоб увімкнути шаблон.</target>
@@ -634,6 +670,10 @@ To use this feature, after pasting text that contains updatable links, just clic
       <trans-unit id="markdown.preview.toggleLock.title">
         <source xml:lang="en">Toggle Preview Locking</source>
         <target>Перемикання блокування попереднього перегляду</target>
+      </trans-unit>
+      <trans-unit id="markdown.togglePreview.title">
+        <source xml:lang="en">Toggle Preview View</source>
+        <target>Перемкнути перегляд ескізу</target>
       </trans-unit>
       <trans-unit id="markdown.trace.server.desc">
         <source xml:lang="en">Traces the communication between VS Code and the Markdown language server.</source>
@@ -659,25 +699,17 @@ To use this feature, after pasting text that contains updatable links, just clic
         <source xml:lang="en">Validate duplicated definitions in the current file.</source>
         <target>Перевірте наявність дублікатів визначень у поточному файлі.</target>
       </trans-unit>
-      <trans-unit id="configuration.markdown.validate.fragmentLinks.enabled.description">
-        <source xml:lang="en">Validate fragment links to headers in the current Markdown file, for example: `[link](#header)`. Requires enabling `#markdown.validate.enabled#`.</source>
-        <target>Перевірте фрагменти посилань на заголовки в поточному Markdown файлі, наприклад: `[link](#header)`. Потрібно увімкнути `#markdown.validate.enabled#`.</target>
-      </trans-unit>
       <trans-unit id="configuration.markdown.validate.unusedLinkDefinitions.description">
         <source xml:lang="en">Validate link definitions that are unused in the current file.</source>
         <target>Перевірте визначення посилань, які не використовуються в поточному файлі.</target>
       </trans-unit>
-      <trans-unit id="configuration.markdown.validate.fileLinks.enabled.description">
-        <source xml:lang="en">Validate links to other files in Markdown files, for example `[link](/path/to/file.md)`. This checks that the target files exists. Requires enabling `#markdown.validate.enabled#`.</source>
-        <target>Перевірте посилання на інші файли в Markdown-файлах, наприклад `[link](/path/to/file.md)`. Це перевіряє, що цільові файли існують. Потрібно увімкнути `#markdown.validate.enabled#`.</target>
-      </trans-unit>
-      <trans-unit id="configuration.markdown.validate.referenceLinks.enabled.description">
-        <source xml:lang="en">Validate reference links in Markdown files, for example: `[link][ref]`. Requires enabling `#markdown.validate.enabled#`.</source>
-        <target>Перевірте посилання на довідки у файлах Markdown, наприклад: `[link][ref]`. Потрібно увімкнути `#markdown.validate.enabled#`.</target>
-      </trans-unit>
       <trans-unit id="configuration.markdown.validate.fileLinks.markdownFragmentLinks.description">
         <source xml:lang="en">Validate the fragment part of links to headers in other files in Markdown files, for example: `[link](/path/to/file.md#header)`. Inherits the setting value from `#markdown.validate.fragmentLinks.enabled#` by default.</source>
         <target>Перевірте фрагментну частину посилань на заголовки в інших файлах у Markdown файлах, наприклад: `[link](/path/to/file.md#header)`. За замовчуванням успадковує значення налаштування з `#markdown.validate.fragmentLinks.enabled#`.</target>
+      </trans-unit>
+      <trans-unit id="configuration.validation">
+        <source xml:lang="en">Validation</source>
+        <target>Валідація</target>
       </trans-unit>
       <trans-unit id="markdown.preview.scrollPreviewWithEditor.desc">
         <source xml:lang="en">When a Markdown editor is scrolled, update the view of the preview.</source>

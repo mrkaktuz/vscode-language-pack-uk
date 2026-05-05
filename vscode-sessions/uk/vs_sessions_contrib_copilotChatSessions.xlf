@@ -110,14 +110,6 @@
         <source xml:lang="en">Copilot Chat</source>
         <target>Copilot Chat</target>
       </trans-unit>
-      <trans-unit id="copilotProvider.workspaceGroupFolders">
-        <source xml:lang="en">Folders</source>
-        <target>Папки</target>
-      </trans-unit>
-      <trans-unit id="copilotProvider.workspaceGroupRepositories">
-        <source xml:lang="en">Repositories</source>
-        <target>Репозиторії</target>
-      </trans-unit>
       <trans-unit id="deleteChat.confirm">
         <source xml:lang="en">Are you sure you want to delete this chat?</source>
         <target>Ви впевнені, що хочете видалити цей чат?</target>
@@ -146,18 +138,6 @@
         <source xml:lang="en">This will delete all {0} chats in this session. This action cannot be undone.</source>
         <target>Це видалить всі {0} чати в цій сесії. Цю дію не можна скасувати.</target>
       </trans-unit>
-      <trans-unit id="folders">
-        <source xml:lang="en">Folders</source>
-        <target>Папки</target>
-      </trans-unit>
-      <trans-unit id="github">
-        <source xml:lang="en">GitHub</source>
-        <target>GitHub</target>
-      </trans-unit>
-      <trans-unit id="local">
-        <source xml:lang="en">Local</source>
-        <target>Місцевий</target>
-      </trans-unit>
       <trans-unit id="new chat">
         <source xml:lang="en">New Chat</source>
         <target>Новий чат</target>
@@ -169,6 +149,10 @@
       <trans-unit id="repositories">
         <source xml:lang="en">Repositories</source>
         <target>Репозиторії</target>
+      </trans-unit>
+      <trans-unit id="sessionWorkspaceGroup.github">
+        <source xml:lang="en">GitHub</source>
+        <target>GitHub</target>
       </trans-unit>
     </body>
   </file>
@@ -189,6 +173,42 @@
       <trans-unit id="isolationPicker.triggerAriaLabel">
         <source xml:lang="en">Pick Isolation Mode, {0}</source>
         <target>Виберіть режим ізоляції, {0}</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/copilotChatSessions/browser/mobilePermissionPicker" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="permissionPicker.title">
+        <source xml:lang="en">Approvals</source>
+        <target>Схвалення</target>
+      </trans-unit>
+      <trans-unit id="permissions.autoApprove">
+        <source xml:lang="en">Bypass Approvals</source>
+        <target>Обійти затвердження</target>
+      </trans-unit>
+      <trans-unit id="permissions.autoApprove.subtext">
+        <source xml:lang="en">All tool calls are auto-approved</source>
+        <target>Усі виклики інструментів автоматично затверджуються.</target>
+      </trans-unit>
+      <trans-unit id="permissions.autopilot">
+        <source xml:lang="en">Autopilot (Preview)</source>
+        <target>Автопілот (Попередній перегляд)</target>
+      </trans-unit>
+      <trans-unit id="permissions.autopilot.subtext">
+        <source xml:lang="en">Autonomously iterates from start to finish</source>
+        <target>Автономно ітерує від початку до кінця</target>
+      </trans-unit>
+      <trans-unit id="permissions.default">
+        <source xml:lang="en">Default Approvals</source>
+        <target>За замовчуванням схвалення</target>
+      </trans-unit>
+      <trans-unit id="permissions.default.subtext">
+        <source xml:lang="en">Copilot uses your configured settings</source>
+        <target>Copilot використовує ваші налаштовані параметри</target>
+      </trans-unit>
+      <trans-unit id="permissions.learnMore">
+        <source xml:lang="en">Learn more about permissions</source>
+        <target>Дізнайтеся більше про дозволи</target>
       </trans-unit>
     </body>
   </file>
@@ -308,7 +328,7 @@ To make this the starting permission level for new chat sessions, change the [{0
       </trans-unit>
       <trans-unit id="permissions.default">
         <source xml:lang="en">Default Approvals</source>
-        <target>Типові затвердження</target>
+        <target>За замовчуванням схвалення</target>
       </trans-unit>
       <trans-unit id="permissions.default.label">
         <source xml:lang="en">Default Approvals</source>

@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/sessions/contrib/chat/browser/agentHost/agentHostModePicker" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHostModePicker.ariaLabel">
+        <source xml:lang="en">Agent Mode Picker</source>
+        <target>Вибір режиму агента</target>
+      </trans-unit>
+      <trans-unit id="agentHostModePicker.triggerAriaLabel">
+        <source xml:lang="en">Pick Agent Mode, {0}</source>
+        <target>Виберіть режим агента, {0}</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/chat/browser/agentHost/agentHostModelPicker" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHostModelPicker">
@@ -50,9 +62,17 @@ To make this the starting permission level for new chat sessions, change the [{1
         <source xml:lang="en">Session Approvals</source>
         <target>Сесійні затвердження</target>
       </trans-unit>
+      <trans-unit id="agentHostNewSessionModePicker">
+        <source xml:lang="en">Agent Mode</source>
+        <target>Режим агента</target>
+      </trans-unit>
       <trans-unit id="agentHostRunningSessionConfigPicker">
         <source xml:lang="en">Session Approvals</source>
         <target>Сесійні затвердження</target>
+      </trans-unit>
+      <trans-unit id="agentHostRunningSessionModePicker">
+        <source xml:lang="en">Agent Mode</source>
+        <target>Режим агента</target>
       </trans-unit>
       <trans-unit id="agentHostSessionConfig.ariaLabel">
         <source xml:lang="en">{0} Picker</source>
@@ -73,6 +93,30 @@ To make this the starting permission level for new chat sessions, change the [{1
       <trans-unit id="agentHostSessionConfigPicker">
         <source xml:lang="en">Session Configuration</source>
         <target>Конфігурація сесії</target>
+      </trans-unit>
+      <trans-unit id="mobileAgentHostSessionConfig.repoSheet.branchSearchAria">
+        <source xml:lang="en">Search base branches</source>
+        <target>Шукати базові гілки</target>
+      </trans-unit>
+      <trans-unit id="mobileAgentHostSessionConfig.repoSheet.branchSearchEmpty">
+        <source xml:lang="en">No matching branches.</source>
+        <target>Немає відповідних гілок.</target>
+      </trans-unit>
+      <trans-unit id="mobileAgentHostSessionConfig.repoSheet.branchSearchPlaceholder">
+        <source xml:lang="en">Search branches</source>
+        <target>Шукати філії</target>
+      </trans-unit>
+      <trans-unit id="mobileAgentHostSessionConfig.repoSheet.branchSection">
+        <source xml:lang="en">Base Branch</source>
+        <target>Базова гілка</target>
+      </trans-unit>
+      <trans-unit id="mobileAgentHostSessionConfig.repoSheet.isolationSection">
+        <source xml:lang="en">Isolation</source>
+        <target>Ізоляція</target>
+      </trans-unit>
+      <trans-unit id="mobileAgentHostSessionConfig.repoSheet.title">
+        <source xml:lang="en">Worktree</source>
+        <target>Робоче дерево</target>
       </trans-unit>
       <trans-unit id="selected">
         <source xml:lang="en">(Selected)</source>
@@ -153,6 +197,38 @@ To make this the starting permission level for new chat sessions, change the [{1
       <trans-unit id="sessions.newChatInSession.view">
         <source xml:lang="en">New Chat</source>
         <target>Новий чат</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/chat/browser/mobileSessionTypePicker" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="mobileSessionTypePicker.title">
+        <source xml:lang="en">Session Type</source>
+        <target>Тип сесії</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/chat/browser/mobileWorkspacePickerSheet" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="mobileWorkspacePicker.caption">
+        <source xml:lang="en">Search to browse folders on the host</source>
+        <target>Шукати, щоб переглядати папки на хості</target>
+      </trans-unit>
+      <trans-unit id="mobileWorkspacePicker.foldersSection">
+        <source xml:lang="en">Folders</source>
+        <target>Папки</target>
+      </trans-unit>
+      <trans-unit id="mobileWorkspacePicker.noFolders">
+        <source xml:lang="en">No folders match</source>
+        <target>Немає відповідних папок</target>
+      </trans-unit>
+      <trans-unit id="mobileWorkspacePicker.searchFolders">
+        <source xml:lang="en">Search folders…</source>
+        <target>Шукати папки…</target>
+      </trans-unit>
+      <trans-unit id="mobileWorkspacePicker.title">
+        <source xml:lang="en">Choose Workspace</source>
+        <target>Виберіть робочу область</target>
       </trans-unit>
     </body>
   </file>
@@ -560,14 +636,6 @@ To make this the starting permission level for new chat sessions, change the [{1
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/sessions/contrib/chat/browser/scopedWorkspacePicker" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="scopedWorkspacePicker.selectFolder">
-        <source xml:lang="en">Select Folder...</source>
-        <target>Вибрати папку...</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/sessions/contrib/chat/browser/sessionTypePicker" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="sessionTypePicker.ariaLabel">
@@ -582,6 +650,10 @@ To make this the starting permission level for new chat sessions, change the [{1
   </file>
   <file original="src/vs/sessions/contrib/chat/browser/sessionWorkspacePicker" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="pickLocalProvider">
+        <source xml:lang="en">Select a provider</source>
+        <target>Виберіть постачальника</target>
+      </trans-unit>
       <trans-unit id="pickWorkspace">
         <source xml:lang="en">workspace</source>
         <target>робоча область</target>
@@ -591,96 +663,24 @@ To make this the starting permission level for new chat sessions, change the [{1
         <target>Вибір робочого простору</target>
       </trans-unit>
       <trans-unit id="workspacePicker.browseSelectAction">
-        <source xml:lang="en">Select {0}...</source>
-        <target>Виберіть {0}...</target>
+        <source xml:lang="en">Select...</source>
+        <target>Виберіть...</target>
       </trans-unit>
-      <trans-unit id="workspacePicker.copyAddress">
-        <source xml:lang="en">Copy Address</source>
-        <target>Скопіювати адресу</target>
+      <trans-unit id="workspacePicker.browseSelectLocal">
+        <source xml:lang="en">Select...</source>
+        <target>Вибрати...</target>
       </trans-unit>
       <trans-unit id="workspacePicker.filter">
         <source xml:lang="en">Search Workspaces...</source>
         <target>Шукати робочі простори...</target>
       </trans-unit>
-      <trans-unit id="workspacePicker.hoverConnected">
-        <source xml:lang="en">Remote agent host is connected and ready.</source>
-        <target>Віддалений агент підключено та готово.</target>
-      </trans-unit>
-      <trans-unit id="workspacePicker.hoverConnectedAddr">
-        <source xml:lang="en">Remote agent host is connected and ready.
-
-Address: {0}</source>
-        <target>Віддалений агент підключено та готово.
-
-Адреса: {0}</target>
-      </trans-unit>
-      <trans-unit id="workspacePicker.hoverConnecting">
-        <source xml:lang="en">Attempting to connect to remote agent host...</source>
-        <target>Спроба підключитися до віддаленого хоста агента...</target>
-      </trans-unit>
-      <trans-unit id="workspacePicker.hoverConnectingAddr">
-        <source xml:lang="en">Attempting to connect to remote agent host...
-
-Address: {0}</source>
-        <target>Спроба підключитися до віддаленого агента...
-
-Адреса: {0}</target>
-      </trans-unit>
-      <trans-unit id="workspacePicker.hoverDisconnected">
-        <source xml:lang="en">Remote agent host is disconnected.</source>
-        <target>Віддалений агент-хост відключений.</target>
-      </trans-unit>
-      <trans-unit id="workspacePicker.hoverDisconnectedAddr">
-        <source xml:lang="en">Remote agent host is disconnected.
-
-Address: {0}</source>
-        <target>Віддалений агент відключений.
-
-Адреса: {0}</target>
-      </trans-unit>
-      <trans-unit id="workspacePicker.manage">
-        <source xml:lang="en">Manage...</source>
-        <target>Керувати...</target>
-      </trans-unit>
-      <trans-unit id="workspacePicker.openSettings">
-        <source xml:lang="en">Open Settings</source>
-        <target>Відкрити Налаштування</target>
-      </trans-unit>
       <trans-unit id="workspacePicker.pickAriaLabel">
         <source xml:lang="en">Start by picking a workspace</source>
         <target>Почніть з вибору робочого простору</target>
       </trans-unit>
-      <trans-unit id="workspacePicker.reconnect">
-        <source xml:lang="en">Reconnect</source>
-        <target>Перепідключитися</target>
-      </trans-unit>
-      <trans-unit id="workspacePicker.remoteOptionsTitle">
-        <source xml:lang="en">Options for {0}</source>
-        <target>Опції для {0}</target>
-      </trans-unit>
-      <trans-unit id="workspacePicker.removeRemote">
-        <source xml:lang="en">Remove Remote</source>
-        <target>Видалити віддалений</target>
-      </trans-unit>
       <trans-unit id="workspacePicker.selectedAriaLabel">
         <source xml:lang="en">New session in {0}</source>
         <target>Нова сесія в {0}</target>
-      </trans-unit>
-      <trans-unit id="workspacePicker.showOutput">
-        <source xml:lang="en">Show Output</source>
-        <target>Показати вихідні дані</target>
-      </trans-unit>
-      <trans-unit id="workspacePicker.statusConnecting">
-        <source xml:lang="en">Connecting</source>
-        <target>Підключення</target>
-      </trans-unit>
-      <trans-unit id="workspacePicker.statusOffline">
-        <source xml:lang="en">Offline</source>
-        <target>Офлайн</target>
-      </trans-unit>
-      <trans-unit id="workspacePicker.statusOnline">
-        <source xml:lang="en">Online</source>
-        <target>Онлайн</target>
       </trans-unit>
     </body>
   </file>
@@ -705,6 +705,10 @@ Address: {0}</source>
       <trans-unit id="sessionsChat.input">
         <source xml:lang="en">You are in the chat input. Type a message and press Enter to send it.</source>
         <target>Ви в полі введення чату. Введіть повідомлення та натисніть Enter, щоб надіслати його.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.mobileConfig">
+        <source xml:lang="en">On mobile, the mode and model pickers appear as tappable chips below the input. Tap a chip to open a bottom sheet where you can change the selection.</source>
+        <target>На мобільних пристроях вибір режиму та моделі з'являється у вигляді натискабельних чіпів під полем вводу. Торкніться чіпа, щоб відкрити нижній аркуш, де ви можете змінити вибір.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.overview">
         <source xml:lang="en">You are in the Agents app. The Agents app is a dedicated workspace for working with AI agents. It provides a chat interface, a changes view for reviewing agent-generated changes, a file explorer, and customization options.</source>
@@ -749,6 +753,14 @@ Address: {0}</source>
       <trans-unit id="fileEntryDescription">
         <source xml:lang="en">{0} ({1})</source>
         <target>{0} ({1})</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/chat/browser/webWorkspacePicker" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="scopedWorkspacePicker.selectFolder">
+        <source xml:lang="en">Select Folder...</source>
+        <target>Вибрати папку...</target>
       </trans-unit>
     </body>
   </file>
