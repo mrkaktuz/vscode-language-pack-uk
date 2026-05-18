@@ -90,6 +90,10 @@
         <source xml:lang="en">Extract to link definition</source>
         <target>Витягти до визначення посилання</target>
       </trans-unit>
+      <trans-unit id="++CODE++e3d0ad62a6b379dca2cb4a81f22b1c12f9b78eacb51b2302e0f528494d2ab404">
+        <source xml:lang="en">Failed to parse frontmatter</source>
+        <target>Не вдалося розібрати frontmatter</target>
+      </trans-unit>
       <trans-unit id="++CODE++9d17a1a4f2804303bd4c14ad38314cb0d0e866309c659b137d1065df191cd3a5">
         <source xml:lang="en">File does not exist at path: {0}</source>
         <target>Файл не існує за шляхом: {0}</target>
@@ -105,6 +109,10 @@
       <trans-unit id="++CODE++773c6c3aafa8c9f58eea260fe7d5dedc52b3068c2e947a47683a088bd23a03d4">
         <source xml:lang="en">Follow link</source>
         <target>Слідувати за посиланням</target>
+      </trans-unit>
+      <trans-unit id="++CODE++323d638f6497063aee8978ec2d264a193091e965e622d3ae2985cfd09af52e82">
+        <source xml:lang="en">Frontmatter</source>
+        <target>Передмова</target>
       </trans-unit>
       <trans-unit id="++CODE++3b3f85e6622ccac289a6bc88240712b7a1dfd0fcf85cf7d0a43ac63e487af10c">
         <source xml:lang="en">Go to link definition</source>
@@ -326,6 +334,10 @@
         <source xml:lang="en">Change Preview Security Settings</source>
         <target>Змінити налаштування безпеки попереднього перегляду</target>
       </trans-unit>
+      <trans-unit id="markdown.openFrontMatterSettings.title">
+        <source xml:lang="en">Configure Frontmatter Visibility</source>
+        <target>Налаштувати видимість Frontmatter</target>
+      </trans-unit>
       <trans-unit id="configuration.markdown.validate.ignoredLinks.description">
         <source xml:lang="en">Configure links that should not be validated. For example adding `/about` would not validate the link `[about](/about)`, while the glob `/assets/**/*.svg` would let you skip validation for any link to `.svg` files under the `assets` directory.</source>
         <target>Налаштуйте посилання, які не повинні перевірятися. Наприклад, додавання `/about` не перевірить посилання `[about](/about)`, тоді як шаблон `/assets/**/*.svg` дозволить вам пропустити перевірку для будь-якого посилання на файли `.svg` у каталозі `assets`.</target>
@@ -370,6 +382,10 @@ The left hand side ('docs/*.md') is a glob that matches against a markdown docum
 - `${fileExtName}` — Розширення перетягнутого файлу, наприклад, `png`.
 - `${unixTime}` — Поточна Unix мітка часу в мілісекундах.
 - `${isoTime}` — Поточний час у форматі ISO 8601, наприклад, '2025-06-06T08:40:32.123Z'.</target>
+      </trans-unit>
+      <trans-unit id="configuration.markdown.preview.frontMatter.description">
+        <source xml:lang="en">Controls how YAML frontmatter (delimited by `---`) at the start of a Markdown file is rendered in the preview.</source>
+        <target>Контролює, як YAML frontmatter (обмежений `---`) на початку Markdown файлу відображається в попередньому перегляді.</target>
       </trans-unit>
       <trans-unit id="configuration.markdown.preview.openMarkdownLinks.description">
         <source xml:lang="en">Controls how links to other Markdown files in the Markdown preview should be opened.</source>
@@ -470,6 +486,10 @@ Use `#markdown.copyFiles.destination#` to configure where copied files should be
       <trans-unit id="configuration.copyIntoWorkspace.never">
         <source xml:lang="en">Do not copy external files into the workspace.</source>
         <target>Не копіюйте зовнішні файли в робочий простір.</target>
+      </trans-unit>
+      <trans-unit id="configuration.markdown.preview.frontMatter.hide">
+        <source xml:lang="en">Do not render frontmatter.</source>
+        <target>Не рендерити frontmatter.</target>
       </trans-unit>
       <trans-unit id="markdown.preview.doubleClickToSwitchToEditor.desc">
         <source xml:lang="en">Double-click in the Markdown preview to switch to the editor.</source>
@@ -579,6 +599,14 @@ To use this feature, after pasting text that contains updatable links, just clic
         <source xml:lang="en">Open Preview to the Side</source>
         <target>Відкрити попередній перегляд збоку</target>
       </trans-unit>
+      <trans-unit id="markdown.showSource.title">
+        <source xml:lang="en">Open Source File</source>
+        <target>Відкрити файл джерельного коду</target>
+      </trans-unit>
+      <trans-unit id="markdown.reopenAsPreview.title">
+        <source xml:lang="en">Open as Preview</source>
+        <target>Відкрити як Попередній перегляд</target>
+      </trans-unit>
       <trans-unit id="configuration.markdown.links.openLocation.beside">
         <source xml:lang="en">Open links beside the active editor.</source>
         <target>Відкрийте посилання поруч з активним редактором.</target>
@@ -611,6 +639,18 @@ To use this feature, after pasting text that contains updatable links, just clic
         <source xml:lang="en">Refresh Preview</source>
         <target>Оновити попередній перегляд</target>
       </trans-unit>
+      <trans-unit id="configuration.markdown.preview.frontMatter.codeBlock">
+        <source xml:lang="en">Render frontmatter as a code block.</source>
+        <target>Відобразити frontmatter як блок коду.</target>
+      </trans-unit>
+      <trans-unit id="configuration.markdown.preview.frontMatter.table">
+        <source xml:lang="en">Render frontmatter as a table of keys and values.</source>
+        <target>Відобразити frontmatter у вигляді таблиці ключів та значень.</target>
+      </trans-unit>
+      <trans-unit id="markdown.reopenAsSource.title">
+        <source xml:lang="en">Reopen as source file</source>
+        <target>Відкрити знову як файл джерела</target>
+      </trans-unit>
       <trans-unit id="workspaceTrust">
         <source xml:lang="en">Required for loading styles configured in the workspace.</source>
         <target>Необхідно для завантаження стилів, налаштованих у робочому просторі.</target>
@@ -618,10 +658,6 @@ To use this feature, after pasting text that contains updatable links, just clic
       <trans-unit id="markdown.preview.breaks.desc">
         <source xml:lang="en">Sets how line-breaks are rendered in the Markdown preview. Setting it to `true` creates a `&lt;br&gt;` for newlines inside paragraphs.</source>
         <target>Встановлює, як перенос рядків відображається в попередньому перегляді Markdown. Встановлення значення `true` створює `&lt;br&gt;` для нових рядків всередині абзаців.</target>
-      </trans-unit>
-      <trans-unit id="markdown.showSource.title">
-        <source xml:lang="en">Show Source</source>
-        <target>Показати джерело</target>
       </trans-unit>
       <trans-unit id="configuration.markdown.editor.drop.enabled.smart">
         <source xml:lang="en">Smartly create Markdown links by default when not dropping into a code block or other special element. Use the drop widget to switch between pasting as plain text or as Markdown links.</source>
@@ -655,25 +691,17 @@ To use this feature, after pasting text that contains updatable links, just clic
 - `${src}` — Вирішений шлях до відеофайлу.
 - `${title}` — Назва, що використовується для відео. Для цієї змінної автоматично буде створено плейсхолдер фрагмента.</target>
       </trans-unit>
-      <trans-unit id="markdown.reopenAsSource.title">
-        <source xml:lang="en">Switch to Editor View</source>
-        <target>Переключитися на режим редагування</target>
-      </trans-unit>
-      <trans-unit id="markdown.reopenAsPreview.title">
-        <source xml:lang="en">Switch to Preview View</source>
-        <target>Переключитися на режим попереднього перегляду</target>
-      </trans-unit>
       <trans-unit id="configuration.markdown.updateLinksOnFileMove.include.property">
         <source xml:lang="en">The glob pattern to match file paths against. Set to true to enable the pattern.</source>
         <target>Шаблон glob для порівняння з шляхами до файлів. Встановіть в true, щоб увімкнути шаблон.</target>
       </trans-unit>
+      <trans-unit id="markdown.togglePreview.title">
+        <source xml:lang="en">Toggle Preview</source>
+        <target>Перемкнути попередній перегляд</target>
+      </trans-unit>
       <trans-unit id="markdown.preview.toggleLock.title">
         <source xml:lang="en">Toggle Preview Locking</source>
         <target>Перемикання блокування попереднього перегляду</target>
-      </trans-unit>
-      <trans-unit id="markdown.togglePreview.title">
-        <source xml:lang="en">Toggle Preview View</source>
-        <target>Перемкнути перегляд ескізу</target>
       </trans-unit>
       <trans-unit id="markdown.trace.server.desc">
         <source xml:lang="en">Traces the communication between VS Code and the Markdown language server.</source>

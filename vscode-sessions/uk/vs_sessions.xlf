@@ -164,6 +164,11 @@
         <note>&amp;&amp; denotes a mnemonic</note>
         <target>&amp;&amp;Файл</target>
       </trans-unit>
+      <trans-unit id="mGo">
+        <source xml:lang="en">&amp;&amp;Go</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Перейти</target>
+      </trans-unit>
       <trans-unit id="mHelp">
         <source xml:lang="en">&amp;&amp;Help</source>
         <note>&amp;&amp; denotes a mnemonic</note>
@@ -186,6 +191,66 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/browser/parts/mobile/contributions/mobileChangesView" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="changesView.back">
+        <source xml:lang="en">Back</source>
+        <target>Назад</target>
+      </trans-unit>
+      <trans-unit id="changesView.backLabel">
+        <source xml:lang="en">Back</source>
+        <target>Назад</target>
+      </trans-unit>
+      <trans-unit id="changesView.changeAdded">
+        <source xml:lang="en">added</source>
+        <target>додано</target>
+      </trans-unit>
+      <trans-unit id="changesView.changeDeleted">
+        <source xml:lang="en">deleted</source>
+        <target>видалено</target>
+      </trans-unit>
+      <trans-unit id="changesView.changeModified">
+        <source xml:lang="en">modified</source>
+        <target>модифікований</target>
+      </trans-unit>
+      <trans-unit id="changesView.empty">
+        <source xml:lang="en">No changes in this session yet.</source>
+        <target>У цій сесії поки що немає змін.</target>
+      </trans-unit>
+      <trans-unit id="changesView.rowAria">
+        <source xml:lang="en">{0}, {1}, +{2} -{3}</source>
+        <target>{0}, {1}, +{2} -{3}</target>
+      </trans-unit>
+      <trans-unit id="changesView.subtitleFilePlural">
+        <source xml:lang="en">{0} files</source>
+        <target>{0} файлів</target>
+      </trans-unit>
+      <trans-unit id="changesView.subtitleFileSingular">
+        <source xml:lang="en">1 file</source>
+        <target>1 файл</target>
+      </trans-unit>
+      <trans-unit id="changesView.title">
+        <source xml:lang="en">Session Changes</source>
+        <target>Зміни сеансу</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/browser/parts/mobile/contributions/mobileDiffColors" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentsMobileDiff.addedForeground">
+        <source xml:lang="en">Foreground color used for added files / lines in the mobile changes-list and diff overlay in the agent sessions window.</source>
+        <target>Колір переднього плану, що використовується для доданих файлів / рядків у списку змін для мобільних пристроїв та накладенні відмінностей у вікні сесій агента.</target>
+      </trans-unit>
+      <trans-unit id="agentsMobileDiff.deletedForeground">
+        <source xml:lang="en">Foreground color used for deleted files / removed lines in the mobile changes-list and diff overlay in the agent sessions window.</source>
+        <target>Колір переднього плану, що використовується для видалених файлів / видалених рядків у списку змін на мобільному пристрої та накладенні відмінностей у вікні сесій агента.</target>
+      </trans-unit>
+      <trans-unit id="agentsMobileDiff.modifiedForeground">
+        <source xml:lang="en">Foreground color used for modified files in the mobile changes-list in the agent sessions window.</source>
+        <target>Колір переднього плану, що використовується для змінених файлів у списку змін мобільного додатку в вікні сесій агента.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/browser/parts/mobile/contributions/mobileDiffView" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="diffView.back">
@@ -200,9 +265,21 @@
         <source xml:lang="en">Loading…</source>
         <target>Завантаження…</target>
       </trans-unit>
+      <trans-unit id="diffView.nextFile">
+        <source xml:lang="en">Next file</source>
+        <target>Наступний файл</target>
+      </trans-unit>
       <trans-unit id="diffView.noChanges">
         <source xml:lang="en">No changes in this file.</source>
         <target>Немає змін у цьому файлі.</target>
+      </trans-unit>
+      <trans-unit id="diffView.position">
+        <source xml:lang="en">{0} / {1}</source>
+        <target>{0} / {1}</target>
+      </trans-unit>
+      <trans-unit id="diffView.prevFile">
+        <source xml:lang="en">Previous file</source>
+        <target>Попередній файл</target>
       </trans-unit>
     </body>
   </file>
@@ -292,14 +369,6 @@
         <source xml:lang="en">View changes</source>
         <target>Переглянути зміни</target>
       </trans-unit>
-      <trans-unit id="mobileTopBar.changesPickerPlaceholder">
-        <source xml:lang="en">Select a file to view its diff</source>
-        <target>Виберіть файл, щоб переглянути його різницю</target>
-      </trans-unit>
-      <trans-unit id="mobileTopBar.changesPickerTitle">
-        <source xml:lang="en">Session Changes</source>
-        <target>Зміни сесії</target>
-      </trans-unit>
       <trans-unit id="mobileTopBar.changesTooltip">
         <source xml:lang="en">{0} files changed (+{1} -{2})</source>
         <target>{0} файлів змінено (+{1} -{2})</target>
@@ -322,6 +391,67 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/browser/sessionsSetUpService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="loading">
+        <source xml:lang="en">Loading</source>
+        <target>Завантаження</target>
+      </trans-unit>
+      <trans-unit id="sessions.aiDisabled.detail">
+        <source xml:lang="en">Enable AI features to continue using Agents.</source>
+        <target>Увімкніть функції ШІ, щоб продовжити використання Агентів.</target>
+      </trans-unit>
+      <trans-unit id="sessions.aiDisabled.enable">
+        <source xml:lang="en">Enable AI Features</source>
+        <target>Увімкнути функції ШІ</target>
+      </trans-unit>
+      <trans-unit id="sessions.signIn">
+        <source xml:lang="en">Sign in to use Agents</source>
+        <target>Увійдіть, щоб використовувати Агентів</target>
+      </trans-unit>
+      <trans-unit id="sessions.signingIn">
+        <source xml:lang="en">Signing in…</source>
+        <target>Увійти…</target>
+      </trans-unit>
+      <trans-unit id="sessions.signingIn.detail">
+        <source xml:lang="en">Please complete sign-in in the browser.</source>
+        <target>Будь ласка, завершіть вхід у браузері.</target>
+      </trans-unit>
+      <trans-unit id="sessions.welcome.detail">
+        <source xml:lang="en">Your AI-powered coding experience where agents explore, build, and iterate with you.</source>
+        <target>Ваш досвід кодування з підтримкою ШІ, де агенти досліджують, створюють і ітеративно працюють з вами.</target>
+      </trans-unit>
+      <trans-unit id="sessions.welcome.getStarted">
+        <source xml:lang="en">Get Started</source>
+        <target>Розпочати</target>
+      </trans-unit>
+      <trans-unit id="sessions.welcome.title">
+        <source xml:lang="en">Welcome to {0}</source>
+        <target>Ласкаво просимо до {0}</target>
+      </trans-unit>
+      <trans-unit id="walkthrough.productName">
+        <source xml:lang="en">{0} - Agents</source>
+        <target>{0} - Агенти</target>
+      </trans-unit>
+      <trans-unit id="welcomeFooter">
+        <source xml:lang="en">By continuing, you agree to {0}'s [Terms]({1}) and [Privacy Statement]({2}). {3} Copilot may show [public code]({4}) suggestions and use your data to improve the product. You can change these [settings]({5}) anytime.</source>
+        <note>{Locked="["}&#xD;
+{Locked="]({1})"}&#xD;
+{Locked="]({2})"}&#xD;
+{Locked="]({4})"}&#xD;
+{Locked="]({5})"}</note>
+        <target>Продовжуючи, ви погоджуєтеся з [Умовами]({1}) та [Заявою про конфіденційність]({2}) {0}. {3} Copilot може показувати пропозиції [публічного коду]({4}) та використовувати ваші дані для покращення продукту. Ви можете змінити ці [налаштування]({5}) в будь-який час.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/browser/widget/openInVSCodeWidget" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="openInVSCodeHover">
+        <source xml:lang="en">Open in VS Code Editor Window</source>
+        <target>Відкрити у вікні редактора VS Code</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/common/categories" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agents">
@@ -340,6 +470,10 @@
         <source xml:lang="en">Whether the active session has an associated git repository</source>
         <target>Чи має активна сесія асоційований git-репозиторій</target>
       </trans-unit>
+      <trans-unit id="activeSessionHasGitSyncActionRunning">
+        <source xml:lang="en">Whether the active session has a git sync action currently running</source>
+        <target>Чи має активна сесія в даний момент дію синхронізації git</target>
+      </trans-unit>
       <trans-unit id="activeSessionProviderId">
         <source xml:lang="en">The provider ID of the active session</source>
         <target>Ідентифікатор постачальника активної сесії</target>
@@ -347,6 +481,10 @@
       <trans-unit id="activeSessionType">
         <source xml:lang="en">The session type of the active session</source>
         <target>Тип сесії активної сесії</target>
+      </trans-unit>
+      <trans-unit id="activeSessionWorkspaceIsVirtual">
+        <source xml:lang="en">Whether the active session's workspace is virtual</source>
+        <target>Чи є робоче середовище активної сесії віртуальним</target>
       </trans-unit>
       <trans-unit id="chatBarFocus">
         <source xml:lang="en">Whether the chat bar has keyboard focus</source>
@@ -368,10 +506,6 @@
         <source xml:lang="en">Whether the active session is archived (marked as done)</source>
         <target>Чи активна сесія архівована (позначена як завершена)</target>
       </trans-unit>
-      <trans-unit id="isActiveSessionBackgroundProvider">
-        <source xml:lang="en">Whether the active session uses the background agent provider</source>
-        <target>Чи використовує активна сесія постачальника фонових агентів</target>
-      </trans-unit>
       <trans-unit id="isNewChatInSession">
         <source xml:lang="en">Whether the user is composing a new chat within the active session</source>
         <target>Чи користувач складає новий чат у межах активної сесії</target>
@@ -384,6 +518,14 @@
         <source xml:lang="en">Whether the sessions aquarium overlay is active</source>
         <target>Чи активний накладний шар акваріума сесій?</target>
       </trans-unit>
+      <trans-unit id="sessionsCanGoBack">
+        <source xml:lang="en">Whether there is a previous session in the navigation history</source>
+        <target>Чи є попередня сесія в історії навігації</target>
+      </trans-unit>
+      <trans-unit id="sessionsCanGoForward">
+        <source xml:lang="en">Whether there is a next session in the navigation history</source>
+        <target>Чи є наступна сесія в історії навігації</target>
+      </trans-unit>
       <trans-unit id="sessionsIsPhoneLayout">
         <source xml:lang="en">Whether the current layout is the phone layout</source>
         <target>Чи є поточне макетування макетом для телефону</target>
@@ -395,6 +537,58 @@
       <trans-unit id="sessionsWelcomeVisible">
         <source xml:lang="en">Whether the sessions welcome overlay is visible</source>
         <target>Чи видимий вітальний оверлей сесій</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/common/sizes" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agents.fontSize.body1">
+        <source xml:lang="en">Primary body font size for the agents window.</source>
+        <target>Основний розмір шрифту тіла для вікна агентів.</target>
+      </trans-unit>
+      <trans-unit id="agents.fontSize.body2">
+        <source xml:lang="en">Secondary body font size for the agents window.</source>
+        <target>Розмір шрифту другого рівня для вікна агентів.</target>
+      </trans-unit>
+      <trans-unit id="agents.fontSize.heading1">
+        <source xml:lang="en">Heading 1 font size for the agents window (welcome screen title).</source>
+        <target>Розмір шрифту заголовка 1 для вікна агентів (назва екрану вітання).</target>
+      </trans-unit>
+      <trans-unit id="agents.fontSize.heading2">
+        <source xml:lang="en">Heading 2 font size for the agents window (title).</source>
+        <target>Розмір шрифту заголовка 2 для вікна агентів (назва).</target>
+      </trans-unit>
+      <trans-unit id="agents.fontSize.heading3">
+        <source xml:lang="en">Heading 3 font size for the agents window (subtitle).</source>
+        <target>Розмір шрифту заголовка 3 для вікна агентів (підзаголовок).</target>
+      </trans-unit>
+      <trans-unit id="agents.fontSize.label1">
+        <source xml:lang="en">Label 1 font size for the agents window (interactive tabs).</source>
+        <target>Розмір шрифту мітки 1 для вікна агентів (інтерактивні вкладки).</target>
+      </trans-unit>
+      <trans-unit id="agents.fontSize.label2">
+        <source xml:lang="en">Label 2 font size for the agents window (metadata emphasis).</source>
+        <target>Розмір шрифту мітки 2 для вікна агентів (акцент на метаданих).</target>
+      </trans-unit>
+      <trans-unit id="agents.fontSize.label3">
+        <source xml:lang="en">Label 3 font size for the agents window (metadata primary).</source>
+        <target>Розмір шрифту мітки 3 для вікна агентів (основні метадані).</target>
+      </trans-unit>
+      <trans-unit id="agents.fontSize.label4">
+        <source xml:lang="en">Label 4 font size for the agents window (badge).</source>
+        <target>Розмір шрифту мітки 4 для вікна агентів (значок).</target>
+      </trans-unit>
+      <trans-unit id="agents.fontWeight.medium">
+        <source xml:lang="en">Medium font weight (500) for the agents window.</source>
+        <target>Середня вага шрифту (500) для вікна агентів.</target>
+      </trans-unit>
+      <trans-unit id="agents.fontWeight.regular">
+        <source xml:lang="en">Regular font weight (400) for the agents window.</source>
+        <target>Регулярна товщина шрифту (400) для вікна агентів.</target>
+      </trans-unit>
+      <trans-unit id="agents.fontWeight.semiBold">
+        <source xml:lang="en">SemiBold font weight (600) for the agents window.</source>
+        <target>Напівжирний шрифт (600) для вікна агентів.</target>
       </trans-unit>
     </body>
   </file>
@@ -486,6 +680,26 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/electron-browser/actions/vscodeActions" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="openInVSCode">
+        <source xml:lang="en">Open in Editor</source>
+        <target>Відкрити в редакторі</target>
+      </trans-unit>
+      <trans-unit id="openVSCodeWindow">
+        <source xml:lang="en">Open VS Code Window</source>
+        <target>Відкрити вікно VS Code</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/electron-browser/parts/titlebarPart" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentsWindowTitle">
+        <source xml:lang="en">Agents</source>
+        <target>Агенти</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/electron-browser/sessions.main" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="join.closeStorage">
@@ -496,18 +710,6 @@
   </file>
   <file original="src/vs/sessions/services/sessions/common/session" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="claudeCode">
-        <source xml:lang="en">Claude</source>
-        <target>Клод</target>
-      </trans-unit>
-      <trans-unit id="copilotCLI">
-        <source xml:lang="en">Copilot CLI</source>
-        <target>Copilot CLI</target>
-      </trans-unit>
-      <trans-unit id="copilotCloud">
-        <source xml:lang="en">Cloud</source>
-        <target>Хмара</target>
-      </trans-unit>
       <trans-unit id="sessionWorkspaceGroup.local">
         <source xml:lang="en">Local</source>
         <target>Локальний</target>
@@ -523,6 +725,14 @@
       <trans-unit id="activeSessionSupportsMultiChat">
         <source xml:lang="en">Whether the active session supports multiple chats</source>
         <target>Чи активна сесія підтримує кілька чатів</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/services/workspace/browser/workspaceContextService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentsWindow">
+        <source xml:lang="en">Agents Window</source>
+        <target>Вікно агентів</target>
       </trans-unit>
     </body>
   </file>

@@ -106,6 +106,18 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/search/browser/search.common.contribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="search.searchOnType">
+        <source xml:lang="en">Search all files as you type.</source>
+        <target>Шукайте всі файли під час введення.</target>
+      </trans-unit>
+      <trans-unit id="search.searchOnTypeDebouncePeriod">
+        <source xml:lang="en">When {0} is enabled, controls the timeout in milliseconds between a character being typed and the search starting. Has no effect when {0} is disabled.</source>
+        <target>Коли {0} увімкнено, контролює тайм-аут у мілісекундах між введенням символу та початком пошуку. Не має жодного ефекту, коли {0} вимкнено.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/search/browser/search.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="exclude">
@@ -190,6 +202,10 @@
         <source xml:lang="en">Show notebook editor rich content results for closed notebooks. Please refresh your search results after changing this setting.</source>
         <target>Показати результати багатого контенту редактора блокнота для закритих блокнотів. Будь ласка, оновіть результати пошуку після зміни цього налаштування.</target>
       </trans-unit>
+      <trans-unit id="search.experimental.useIgnoreFilesInFindFiles">
+        <source xml:lang="en">When enabled, the legacy `findFiles` extension API honors the user's `#search.useIgnoreFiles#` setting instead of always ignoring `.gitignore`. Extensions that explicitly pass `null` as the `exclude` argument still get unfiltered results. Telemetry is emitted regardless of this setting to help decide future defaults.</source>
+        <target>Коли увімкнено, застарілий API розширення `findFiles` враховує налаштування користувача `#search.useIgnoreFiles#` замість того, щоб завжди ігнорувати `.gitignore`. Розширення, які явно передають `null` як аргумент `exclude`, все ще отримують нефільтровані результати. Телеметрія надсилається незалежно від цього налаштування, щоб допомогти визначити майбутні значення за замовчуванням.</target>
+      </trans-unit>
       <trans-unit id="search.followSymlinks">
         <source xml:lang="en">Controls whether to follow symlinks while searching.</source>
         <target>Контролює, чи слідувати символічним посиланням під час пошуку.</target>
@@ -246,55 +262,6 @@
         <source xml:lang="en">Number of threads to use for searching. When set to 0, the engine automatically determines this value.</source>
         <target>Кількість потоків, які використовувати для пошуку. Коли встановлено 0, движок автоматично визначає це значення.</target>
       </trans-unit>
-      <trans-unit id="search.searchEditor.defaultNumberOfContextLines">
-        <source xml:lang="en">The default number of surrounding context lines to use when creating new Search Editors. If using `#search.searchEditor.reusePriorSearchConfiguration#`, this can be set to `null` (empty) to use the prior Search Editor's configuration.</source>
-        <target>Типове число рядків контексту навколо, які використовуються при створенні нових редакторів пошуку. Якщо використовується `#search.searchEditor.reusePriorSearchConfiguration#`, це можна встановити на `null` (порожнє), щоб використовувати конфігурацію попереднього редактора пошуку.</target>
-      </trans-unit>
-      <trans-unit id="search.searchEditor.doubleClickBehaviour">
-        <source xml:lang="en">Configure effect of double-clicking a result in a search editor.</source>
-        <target>Налаштуйте ефект подвійного клацання на результат у редакторі пошуку.</target>
-      </trans-unit>
-      <trans-unit id="search.searchEditor.doubleClickBehaviour.goToLocation">
-        <source xml:lang="en">Double-clicking opens the result in the active editor group.</source>
-        <target>Подвійне клацання відкриває результат у активній групі редакторів.</target>
-      </trans-unit>
-      <trans-unit id="search.searchEditor.doubleClickBehaviour.openLocationToSide">
-        <source xml:lang="en">Double-clicking opens the result in the editor group to the side, creating one if it does not yet exist.</source>
-        <target>Двоклік відкриває результат у групі редактора збоку, створюючи її, якщо вона ще не існує.</target>
-      </trans-unit>
-      <trans-unit id="search.searchEditor.doubleClickBehaviour.selectWord">
-        <source xml:lang="en">Double-clicking selects the word under the cursor.</source>
-        <target>Подвійний клік вибирає слово під курсором.</target>
-      </trans-unit>
-      <trans-unit id="search.searchEditor.focusResultsOnSearch">
-        <source xml:lang="en">When a search is triggered, focus the Search Editor results instead of the Search Editor input.</source>
-        <target>Коли виконується пошук, зосередьте увагу на результатах Редактора пошуку замість введення в Редакторі пошуку.</target>
-      </trans-unit>
-      <trans-unit id="search.searchEditor.reusePriorSearchConfiguration">
-        <source xml:lang="en">When enabled, new Search Editors will reuse the includes, excludes, and flags of the previously opened Search Editor.</source>
-        <note>"Search Editor" is a type of editor that can display search results. "includes, excludes, and flags" refers to the "files to include" and "files to exclude" input boxes, and the flags that control whether a query is case-sensitive or a regex.</note>
-        <target>Коли увімкнено, нові Редактори Пошуку повторно використовуватимуть параметри включення, виключення та прапорці попередньо відкритого Редактора Пошуку.</target>
-      </trans-unit>
-      <trans-unit id="search.searchEditor.singleClickBehaviour">
-        <source xml:lang="en">Configure effect of single-clicking a result in a search editor.</source>
-        <target>Налаштуйте ефект одиничного клацання на результат у редакторі пошуку.</target>
-      </trans-unit>
-      <trans-unit id="search.searchEditor.singleClickBehaviour.default">
-        <source xml:lang="en">Single-clicking does nothing.</source>
-        <target>Одноклікове натискання нічого не робить.</target>
-      </trans-unit>
-      <trans-unit id="search.searchEditor.singleClickBehaviour.peekDefinition">
-        <source xml:lang="en">Single-clicking opens a Peek Definition window.</source>
-        <target>Однокліком відкривається вікно Попереднього перегляду визначення.</target>
-      </trans-unit>
-      <trans-unit id="search.searchOnType">
-        <source xml:lang="en">Search all files as you type.</source>
-        <target>Шукайте всі файли під час введення.</target>
-      </trans-unit>
-      <trans-unit id="search.searchOnTypeDebouncePeriod">
-        <source xml:lang="en">When {0} is enabled, controls the timeout in milliseconds between a character being typed and the search starting. Has no effect when {0} is disabled.</source>
-        <target>Коли {0} увімкнено, контролює тайм-аут у мілісекундах між введенням символу та початком пошуку. Не має жодного ефекту, коли {0} вимкнено.</target>
-      </trans-unit>
       <trans-unit id="search.searchView.keywordSuggestions">
         <source xml:lang="en">Enable keyword suggestions in the Search view.</source>
         <target>Увімкніть пропозиції ключових слів у вигляді пошуку.</target>
@@ -342,10 +309,6 @@
       <trans-unit id="search.useReplacePreview">
         <source xml:lang="en">Controls whether to open Replace Preview when selecting or replacing a match.</source>
         <target>Контролює, чи відкривати Попередній перегляд заміни при виборі або заміні збігу.</target>
-      </trans-unit>
-      <trans-unit id="searchConfigurationTitle">
-        <source xml:lang="en">Search</source>
-        <target>Пошук</target>
       </trans-unit>
       <trans-unit id="searchSortOrder.countAscending">
         <source xml:lang="en">Results are sorted by count per file, in ascending order.</source>
@@ -1358,6 +1321,14 @@
       <trans-unit id="openToSide">
         <source xml:lang="en">Open to the Side</source>
         <target>Відкрити збоку</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/search/common/search" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="searchConfigurationTitle">
+        <source xml:lang="en">Search</source>
+        <target>Пошук</target>
       </trans-unit>
     </body>
   </file>

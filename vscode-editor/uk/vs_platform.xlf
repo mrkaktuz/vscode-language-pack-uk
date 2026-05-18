@@ -468,10 +468,26 @@ A keybinding</note>
         <source xml:lang="en">Default Shell</source>
         <target>Типова оболонка</target>
       </trans-unit>
+      <trans-unit id="agentHost.config.disableCustomTerminalTool.description">
+        <source xml:lang="en">When enabled, Copilot SDK sessions use the SDK's default terminal behavior instead of Agent Host's terminal tool override.</source>
+        <target>Коли увімкнено, сесії Copilot SDK використовують стандартну поведінку терміналу SDK замість перевизначення інструмента терміналу Agent Host.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.disableCustomTerminalTool.title">
+        <source xml:lang="en">Use SDK Terminal Tool</source>
+        <target>Використовуйте інструмент терміналу SDK</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/platform/agentHost/common/agentHostSchema" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="agentHost.config.telemetryLevel.description">
+        <source xml:lang="en">Most restrictive telemetry level requested by connected clients.</source>
+        <target>Найбільш обмежувальний рівень телеметрії, запитуваний підключеними клієнтами.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.telemetryLevel.title">
+        <source xml:lang="en">Telemetry Level</source>
+        <target>Рівень телеметрії</target>
+      </trans-unit>
       <trans-unit id="agentHost.sessionConfig.autoApprove">
         <source xml:lang="en">Approvals</source>
         <target>Схвалення</target>
@@ -550,6 +566,46 @@ A keybinding</note>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/platform/agentHost/common/claudeModelConfig" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="claude.modelThinkingLevel.description">
+        <source xml:lang="en">Controls how much reasoning effort Claude uses.</source>
+        <target>Контролює, скільки зусиль на розумування використовує Claude.</target>
+      </trans-unit>
+      <trans-unit id="claude.modelThinkingLevel.high">
+        <source xml:lang="en">High</source>
+        <target>Високий</target>
+      </trans-unit>
+      <trans-unit id="claude.modelThinkingLevel.low">
+        <source xml:lang="en">Low</source>
+        <target>Низький</target>
+      </trans-unit>
+      <trans-unit id="claude.modelThinkingLevel.max">
+        <source xml:lang="en">Max</source>
+        <target>Макс</target>
+      </trans-unit>
+      <trans-unit id="claude.modelThinkingLevel.medium">
+        <source xml:lang="en">Medium</source>
+        <target>Середній</target>
+      </trans-unit>
+      <trans-unit id="claude.modelThinkingLevel.title">
+        <source xml:lang="en">Thinking Level</source>
+        <target>Рівень мислення</target>
+      </trans-unit>
+      <trans-unit id="claude.modelThinkingLevel.xhigh">
+        <source xml:lang="en">Extra High</source>
+        <target>Додатково високо</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/electron-browser/sshRemoteAgentHostServiceImpl" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="sshKbiDefaultPrompt">
+        <source xml:lang="en">Authentication required for {0}@{1}</source>
+        <target>Необхідна аутентифікація для {0}@{1}</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/platform/agentHost/node/agentHostMain" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHost">
@@ -572,6 +628,14 @@ A keybinding</note>
         <source xml:lang="en">Auto-approve file edits; prompt for shell and other tools.</source>
         <target>Автоматичне схвалення редагувань файлів; запит на оболонку та інші інструменти.</target>
       </trans-unit>
+      <trans-unit id="claude.sessionConfig.permissionMode.auto">
+        <source xml:lang="en">Auto</source>
+        <target>Авто</target>
+      </trans-unit>
+      <trans-unit id="claude.sessionConfig.permissionMode.autoDescription">
+        <source xml:lang="en">Let the model classifier choose between approve and prompt per call.</source>
+        <target>Нехай класифікатор моделі вибирає між затвердженням та запитом за викликом.</target>
+      </trans-unit>
       <trans-unit id="claude.sessionConfig.permissionMode.bypassPermissions">
         <source xml:lang="en">Bypass Approvals</source>
         <target>Обійти затвердження</target>
@@ -587,6 +651,14 @@ A keybinding</note>
       <trans-unit id="claude.sessionConfig.permissionMode.defaultDescription">
         <source xml:lang="en">Prompt for every tool call.</source>
         <target>Запит на кожен виклик інструменту.</target>
+      </trans-unit>
+      <trans-unit id="claude.sessionConfig.permissionMode.dontAsk">
+        <source xml:lang="en">Don't Ask</source>
+        <target>Не питай</target>
+      </trans-unit>
+      <trans-unit id="claude.sessionConfig.permissionMode.dontAskDescription">
+        <source xml:lang="en">Auto-approve every tool call without prompting.</source>
+        <target>Автоматично затверджувати кожен виклик інструменту без запиту.</target>
       </trans-unit>
       <trans-unit id="claude.sessionConfig.permissionMode.plan">
         <source xml:lang="en">Plan Only (Read-Only)</source>
@@ -607,6 +679,122 @@ A keybinding</note>
       <trans-unit id="claudeAgent.displayName">
         <source xml:lang="en">Claude</source>
         <target>Клод</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/claude/claudeInteractiveTools" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="claude.exitPlanMode.approve">
+        <source xml:lang="en">Approve</source>
+        <target>Схвалити</target>
+      </trans-unit>
+      <trans-unit id="claude.exitPlanMode.deny">
+        <source xml:lang="en">Deny</source>
+        <target>Відмовити</target>
+      </trans-unit>
+      <trans-unit id="claude.exitPlanMode.title">
+        <source xml:lang="en">Ready to code?</source>
+        <target>Готові кодувати?</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/claude/claudeToolDisplay" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="claude.permission.default.title">
+        <source xml:lang="en">Allow tool call?</source>
+        <target>Дозволити виклик інструмента?</target>
+      </trans-unit>
+      <trans-unit id="claude.permission.mcp.title">
+        <source xml:lang="en">Allow tool from {0}?</source>
+        <target>Дозволити інструмент з {0}?</target>
+      </trans-unit>
+      <trans-unit id="claude.permission.read.title">
+        <source xml:lang="en">Read file?</source>
+        <target>Прочитати файл?</target>
+      </trans-unit>
+      <trans-unit id="claude.permission.shell.title">
+        <source xml:lang="en">Run in terminal?</source>
+        <target>Запустити в терміналі?</target>
+      </trans-unit>
+      <trans-unit id="claude.permission.url.title">
+        <source xml:lang="en">Fetch URL?</source>
+        <target>Отримати URL?</target>
+      </trans-unit>
+      <trans-unit id="claude.permission.write.title">
+        <source xml:lang="en">Edit file?</source>
+        <target>Редагувати файл?</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.askUserQuestion">
+        <source xml:lang="en">Ask user a question</source>
+        <target>Запитайте користувача питання</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.bash">
+        <source xml:lang="en">Run shell command</source>
+        <target>Запустити команду оболонки</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.bashOutput">
+        <source xml:lang="en">Read shell output</source>
+        <target>Читати вивід оболонки</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.edit">
+        <source xml:lang="en">Edit file</source>
+        <target>Редагувати файл</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.exitPlanMode">
+        <source xml:lang="en">Ready to code?</source>
+        <target>Готові до кодування?</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.glob">
+        <source xml:lang="en">Find files</source>
+        <target>Знайти файли</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.grep">
+        <source xml:lang="en">Search files</source>
+        <target>Шукати файли</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.killBash">
+        <source xml:lang="en">Kill shell command</source>
+        <target>Вбити команду оболонки</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.ls">
+        <source xml:lang="en">List directory</source>
+        <target>Список директорій</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.mcp">
+        <source xml:lang="en">Run MCP tool {0}</source>
+        <target>Запустіть інструмент MCP {0}</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.multiEdit">
+        <source xml:lang="en">Edit file</source>
+        <target>Редагувати файл</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.notebookEdit">
+        <source xml:lang="en">Edit notebook</source>
+        <target>Редагувати блокнот</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.notebookRead">
+        <source xml:lang="en">Read notebook</source>
+        <target>Читати блокнот</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.read">
+        <source xml:lang="en">Read file</source>
+        <target>Читати файл</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.task">
+        <source xml:lang="en">Run subagent task</source>
+        <target>Запустити підагентське завдання</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.todoWrite">
+        <source xml:lang="en">Update todo list</source>
+        <target>Оновити список справ</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.webFetch">
+        <source xml:lang="en">Fetch URL</source>
+        <target>Отримати URL</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.write">
+        <source xml:lang="en">Write file</source>
+        <target>Записати файл</target>
       </trans-unit>
     </body>
   </file>
@@ -730,6 +918,18 @@ A keybinding</note>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotSlashCommandCompletionProvider" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="copilotSlashCommand.compact.description">
+        <source xml:lang="en">Free up context by compacting the conversation history</source>
+        <target>Звільніть контекст, стиснувши історію розмови.</target>
+      </trans-unit>
+      <trans-unit id="copilotSlashCommand.plan.description">
+        <source xml:lang="en">Create an implementation plan before coding</source>
+        <target>Створіть план реалізації перед програмуванням.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotToolDisplay" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="copilot.permission.default.message">
@@ -812,9 +1012,21 @@ A keybinding</note>
         <source xml:lang="en">Searched for {0}</source>
         <target>Шукали {0}</target>
       </trans-unit>
-      <trans-unit id="toolComplete.readShell">
-        <source xml:lang="en">Read shell output</source>
-        <target>Читати вихідні дані оболонки</target>
+      <trans-unit id="toolComplete.patch">
+        <source xml:lang="en">Edited files</source>
+        <target>Відредаговані файли</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.patchFile">
+        <source xml:lang="en">Edited {0}</source>
+        <target>Відредаговано {0}</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.patchFiles">
+        <source xml:lang="en">Edited {0}</source>
+        <target>Відредаговано {0}</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.readTerminal">
+        <source xml:lang="en">Read Terminal</source>
+        <target>Читати термінал</target>
       </trans-unit>
       <trans-unit id="toolComplete.shell">
         <source xml:lang="en">Ran {0} command</source>
@@ -831,6 +1043,10 @@ A keybinding</note>
       <trans-unit id="toolComplete.skillName">
         <source xml:lang="en">Read skill {0}</source>
         <target>Читати навичку {0}</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.sql">
+        <source xml:lang="en">Executed SQL query</source>
+        <target>Виконаний SQL запит</target>
       </trans-unit>
       <trans-unit id="toolComplete.view">
         <source xml:lang="en">Read file</source>
@@ -900,9 +1116,21 @@ A keybinding</note>
         <source xml:lang="en">Searching for {0}</source>
         <target>Шукаю {0}</target>
       </trans-unit>
-      <trans-unit id="toolInvoke.readShell">
-        <source xml:lang="en">Reading shell output</source>
-        <target>Читання виходу оболонки</target>
+      <trans-unit id="toolInvoke.patch">
+        <source xml:lang="en">Editing files</source>
+        <target>Редагування файлів</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.patchFile">
+        <source xml:lang="en">Editing {0}</source>
+        <target>Редагування {0}</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.patchFiles">
+        <source xml:lang="en">Editing {0}</source>
+        <target>Редагування {0}</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.readTerminal">
+        <source xml:lang="en">Reading Terminal</source>
+        <target>Читальний термінал</target>
       </trans-unit>
       <trans-unit id="toolInvoke.shell">
         <source xml:lang="en">Running {0} command</source>
@@ -919,6 +1147,10 @@ A keybinding</note>
       <trans-unit id="toolInvoke.skillName">
         <source xml:lang="en">Reading skill {0}</source>
         <target>Навичка читання {0}</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.sql">
+        <source xml:lang="en">Executing SQL query</source>
+        <target>Виконання SQL запиту</target>
       </trans-unit>
       <trans-unit id="toolInvoke.view">
         <source xml:lang="en">Reading file</source>
@@ -948,73 +1180,177 @@ A keybinding</note>
         <source xml:lang="en">Sending {0} to shell</source>
         <target>Відправка {0} до оболонки</target>
       </trans-unit>
+      <trans-unit id="toolName.applyPatch">
+        <source xml:lang="en">Apply Patch</source>
+        <target>Застосувати патч</target>
+      </trans-unit>
       <trans-unit id="toolName.askUser">
         <source xml:lang="en">Ask User</source>
         <target>Запитайте користувача</target>
       </trans-unit>
-      <trans-unit id="toolName.bash">
-        <source xml:lang="en">Bash</source>
-        <target>Bash</target>
+      <trans-unit id="toolName.codeReview">
+        <source xml:lang="en">Code Review</source>
+        <target>Перегляд коду</target>
       </trans-unit>
-      <trans-unit id="toolName.bashShutdown">
-        <source xml:lang="en">Stop Shell</source>
-        <target>Зупинити оболонку</target>
+      <trans-unit id="toolName.codeqlChecker">
+        <source xml:lang="en">CodeQL Security Scan</source>
+        <target>CodeQL Сканування безпеки</target>
       </trans-unit>
       <trans-unit id="toolName.create">
         <source xml:lang="en">Create File</source>
         <target>Створити файл</target>
       </trans-unit>
+      <trans-unit id="toolName.createPullRequest">
+        <source xml:lang="en">Create Pull Request</source>
+        <target>Створити Pull Request</target>
+      </trans-unit>
       <trans-unit id="toolName.edit">
         <source xml:lang="en">Edit File</source>
         <target>Редагувати файл</target>
       </trans-unit>
-      <trans-unit id="toolName.exitPlanMode">
-        <source xml:lang="en">Plan</source>
-        <target>План</target>
+      <trans-unit id="toolName.exitPlanModeFull">
+        <source xml:lang="en">Exit Plan Mode</source>
+        <target>Режим плану виходу</target>
       </trans-unit>
-      <trans-unit id="toolName.glob">
-        <source xml:lang="en">Find Files</source>
-        <target>Знайти файли</target>
+      <trans-unit id="toolName.fetchCopilotCliDocumentation">
+        <source xml:lang="en">Fetch Documentation</source>
+        <target>Отримати документацію</target>
       </trans-unit>
-      <trans-unit id="toolName.grep">
-        <source xml:lang="en">Search</source>
-        <target>Пошук</target>
+      <trans-unit id="toolName.fetchWebContent">
+        <source xml:lang="en">Fetch Web Content</source>
+        <target>Отримати веб-контент</target>
       </trans-unit>
-      <trans-unit id="toolName.listShells">
-        <source xml:lang="en">List Shells</source>
-        <target>Список оболонок</target>
+      <trans-unit id="toolName.ghAdvisoryDatabase">
+        <source xml:lang="en">Check Dependencies</source>
+        <target>Перевірити залежності</target>
+      </trans-unit>
+      <trans-unit id="toolName.invokeSkill">
+        <source xml:lang="en">Invoke Skill</source>
+        <target>Викликати навичку</target>
+      </trans-unit>
+      <trans-unit id="toolName.listAgents">
+        <source xml:lang="en">List Agents</source>
+        <target>Список агентів</target>
+      </trans-unit>
+      <trans-unit id="toolName.listShellSessions">
+        <source xml:lang="en">List Shell Sessions</source>
+        <target>Список оболонкових сесій</target>
+      </trans-unit>
+      <trans-unit id="toolName.lsp">
+        <source xml:lang="en">Language Server</source>
+        <target>Сервер мови</target>
+      </trans-unit>
+      <trans-unit id="toolName.mcpReload">
+        <source xml:lang="en">Reload MCP Config</source>
+        <target>Перезавантажити конфігурацію MCP</target>
+      </trans-unit>
+      <trans-unit id="toolName.mcpValidate">
+        <source xml:lang="en">Validate MCP Config</source>
+        <target>Перевірити конфігурацію MCP</target>
+      </trans-unit>
+      <trans-unit id="toolName.parallelValidation">
+        <source xml:lang="en">Validate Changes</source>
+        <target>Перевірити зміни</target>
       </trans-unit>
       <trans-unit id="toolName.patch">
         <source xml:lang="en">Patch</source>
         <target>Патч</target>
       </trans-unit>
-      <trans-unit id="toolName.powershell">
-        <source xml:lang="en">PowerShell</source>
-        <target>PowerShell</target>
+      <trans-unit id="toolName.proposeWork">
+        <source xml:lang="en">Propose Work</source>
+        <target>Пропозиція роботи</target>
       </trans-unit>
-      <trans-unit id="toolName.readShell">
-        <source xml:lang="en">Read Shell Output</source>
-        <target>Читати вихідні дані оболонки</target>
+      <trans-unit id="toolName.read">
+        <source xml:lang="en">Read</source>
+        <target>Читати</target>
+      </trans-unit>
+      <trans-unit id="toolName.readAgent">
+        <source xml:lang="en">Read Agent</source>
+        <target>Читати агент</target>
+      </trans-unit>
+      <trans-unit id="toolName.readTerminal">
+        <source xml:lang="en">Read Terminal</source>
+        <target>Читати термінал</target>
+      </trans-unit>
+      <trans-unit id="toolName.replyToComment">
+        <source xml:lang="en">Reply to Comment</source>
+        <target>Відповісти на коментар</target>
+      </trans-unit>
+      <trans-unit id="toolName.reportIntent">
+        <source xml:lang="en">Report Intent</source>
+        <target>Повідомити намір</target>
+      </trans-unit>
+      <trans-unit id="toolName.reportProgress">
+        <source xml:lang="en">Progress update</source>
+        <target>Оновлення прогресу</target>
+      </trans-unit>
+      <trans-unit id="toolName.search">
+        <source xml:lang="en">Search</source>
+        <target>Пошук</target>
+      </trans-unit>
+      <trans-unit id="toolName.searchCode">
+        <source xml:lang="en">Search Code</source>
+        <target>Пошук коду</target>
+      </trans-unit>
+      <trans-unit id="toolName.shell">
+        <source xml:lang="en">Run Shell Command</source>
+        <target>Виконати команду Shell</target>
+      </trans-unit>
+      <trans-unit id="toolName.showFile">
+        <source xml:lang="en">Show File</source>
+        <target>Показати файл</target>
       </trans-unit>
       <trans-unit id="toolName.skill">
         <source xml:lang="en">Read Skill</source>
         <target>Читати навичку</target>
       </trans-unit>
-      <trans-unit id="toolName.view">
-        <source xml:lang="en">View File</source>
-        <target>Переглянути файл</target>
+      <trans-unit id="toolName.sql">
+        <source xml:lang="en">Execute SQL</source>
+        <target>Виконати SQL</target>
       </trans-unit>
-      <trans-unit id="toolName.webFetch">
-        <source xml:lang="en">Web Fetch</source>
-        <target>Веб-запит</target>
+      <trans-unit id="toolName.stopShell">
+        <source xml:lang="en">Stop Terminal Session</source>
+        <target>Зупинити сеанс терміналу</target>
+      </trans-unit>
+      <trans-unit id="toolName.storeMemory">
+        <source xml:lang="en">Store Memory</source>
+        <target>Зберегти пам'ять</target>
+      </trans-unit>
+      <trans-unit id="toolName.task">
+        <source xml:lang="en">Delegate Task</source>
+        <target>Делегувати завдання</target>
+      </trans-unit>
+      <trans-unit id="toolName.taskComplete">
+        <source xml:lang="en">Task Complete</source>
+        <target>Завдання виконано</target>
+      </trans-unit>
+      <trans-unit id="toolName.think">
+        <source xml:lang="en">Thinking</source>
+        <target>Думки</target>
+      </trans-unit>
+      <trans-unit id="toolName.toolSearchToolRegex">
+        <source xml:lang="en">Search Tools</source>
+        <target>Інструменти пошуку</target>
+      </trans-unit>
+      <trans-unit id="toolName.updateTodo">
+        <source xml:lang="en">Update Todo</source>
+        <target>Оновити Todo</target>
       </trans-unit>
       <trans-unit id="toolName.webSearch">
         <source xml:lang="en">Web Search</source>
         <target>Веб-пошук</target>
       </trans-unit>
-      <trans-unit id="toolName.writeShell">
-        <source xml:lang="en">Write Shell Input</source>
-        <target>Напишіть введення Shell</target>
+      <trans-unit id="toolName.writeAgent">
+        <source xml:lang="en">Write to Agent</source>
+        <target>Написати агенту</target>
+      </trans-unit>
+      <trans-unit id="toolName.writeBash">
+        <source xml:lang="en">Write to Bash</source>
+        <target>Напишіть до Bash</target>
+      </trans-unit>
+      <trans-unit id="toolName.writePowerShell">
+        <source xml:lang="en">Write to PowerShell</source>
+        <target>Напишіть до PowerShell</target>
       </trans-unit>
     </body>
   </file>
@@ -1092,6 +1428,10 @@ A keybinding</note>
   </file>
   <file original="src/vs/platform/browserView/electron-main/browserViewMainService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="browser.contextMenu.addElementToChat">
+        <source xml:lang="en">Add Element to Chat</source>
+        <target>Додати елемент до чату</target>
+      </trans-unit>
       <trans-unit id="browser.contextMenu.back">
         <source xml:lang="en">Back</source>
         <target>Назад</target>

@@ -422,6 +422,10 @@
         <source xml:lang="en">- Undo Edits{0}.</source>
         <target>- Скасувати зміни{0}.</target>
       </trans-unit>
+      <trans-unit id="workbench.action.openAgentsWindow">
+        <source xml:lang="en">To open the Agents Window, invoke the Open Agents Window command{0}. In screen reader mode, this keybinding includes Alt to avoid conflicts with screen reader shortcuts.</source>
+        <target>Щоб відкрити вікно агентів, виконайте команду Відкрити вікно агентів{0}. У режимі екранного зчитувача це сполучення клавіш включає Alt, щоб уникнути конфліктів з ярликами екранного зчитувача.</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatActions" source-language="en" datatype="plaintext" target-language="uk">
@@ -1027,6 +1031,10 @@
       <trans-unit id="interactive.switchToNextModel.label">
         <source xml:lang="en">Switch to Next Model</source>
         <target>Перемкнути на наступну модель</target>
+      </trans-unit>
+      <trans-unit id="interactive.switchToNextPinnedModel.label">
+        <source xml:lang="en">Switch to Next Pinned Model</source>
+        <target>Переключитися на наступну закріплену модель</target>
       </trans-unit>
       <trans-unit id="interactive.toggleAgent.label">
         <source xml:lang="en">Switch to Next Agent</source>
@@ -1702,6 +1710,54 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/exportAgentHostDebugLogsAction" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="exportAgentHostDebugLogs">
+        <source xml:lang="en">Export Agent Host Debug Logs...</source>
+        <target>Експорт агентських хостів журналів налагодження...</target>
+      </trans-unit>
+      <trans-unit id="exportDebugLogs.folderDialogTitle">
+        <source xml:lang="en">Select Folder for Agent Host Debug Logs</source>
+        <target>Виберіть папку для журналів налагодження хоста агента</target>
+      </trans-unit>
+      <trans-unit id="exportDebugLogs.noFiles.activeSession">
+        <source xml:lang="en">No log files were found for the active Agent Host session.</source>
+        <target>Не було знайдено жодних файлів журналу для активної сесії Agent Host.</target>
+      </trans-unit>
+      <trans-unit id="exportDebugLogs.noFiles.currentWindow">
+        <source xml:lang="en">No Agent Host log files were found for the current window.</source>
+        <target>Не було знайдено файлів журналу Agent Host для поточного вікна.</target>
+      </trans-unit>
+      <trans-unit id="exportDebugLogs.saveError">
+        <source xml:lang="en">Failed to save debug logs: {0}</source>
+        <target>Не вдалося зберегти журнали налагодження: {0}</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/browser/actions/openCopilotCliStateFileAction" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="openSessionEventsFile">
+        <source xml:lang="en">Open Copilot CLI State File</source>
+        <target>Відкрити файл стану Copilot CLI</target>
+      </trans-unit>
+      <trans-unit id="openSessionEventsFile.noHome">
+        <source xml:lang="en">Remote agent host '{0}' did not report a home directory.</source>
+        <target>Віддалений агент-хост '{0}' не повідомив про домашній каталог.</target>
+      </trans-unit>
+      <trans-unit id="openSessionEventsFile.noSession">
+        <source xml:lang="en">No Copilot CLI session is active.</source>
+        <target>Жодна сесія Copilot CLI не активна.</target>
+      </trans-unit>
+      <trans-unit id="openSessionEventsFile.notConnected">
+        <source xml:lang="en">No active connection found for remote agent host '{0}'.</source>
+        <target>Не знайдено активного з'єднання для віддаленого агента хоста '{0}'.</target>
+      </trans-unit>
+      <trans-unit id="openSessionEventsFile.unsupported">
+        <source xml:lang="en">The active chat session is not a Copilot CLI session.</source>
+        <target>Активна сесія чату не є сесією Copilot CLI.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/chat/browser/agentPluginActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="disable">
@@ -1850,6 +1906,58 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostChatInputPicker" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHostChatInputPicker.ariaLabel">
+        <source xml:lang="en">{0} Picker</source>
+        <target>{0} Вибірник</target>
+      </trans-unit>
+      <trans-unit id="agentHostChatInputPicker.filter">
+        <source xml:lang="en">Filter...</source>
+        <target>Фільтр...</target>
+      </trans-unit>
+      <trans-unit id="agentHostChatInputPicker.learnMorePermissions">
+        <source xml:lang="en">Learn more about permissions</source>
+        <target>Дізнайтеся більше про дозволи</target>
+      </trans-unit>
+      <trans-unit id="agentHostChatInputPicker.triggerAria">
+        <source xml:lang="en">{0}: {1}</source>
+        <target>{0}: {1}</target>
+      </trans-unit>
+      <trans-unit id="agentHostChatInputPicker.triggerAriaReadOnly">
+        <source xml:lang="en">{0}: {1}, Read-Only</source>
+        <target>{0}: {1}, Тільки для читання</target>
+      </trans-unit>
+      <trans-unit id="selected">
+        <source xml:lang="en">(Selected)</source>
+        <target>(Вибрано)</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostChatInputPicker.contribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHost.autoApprovePicker">
+        <source xml:lang="en">Auto-Approve</source>
+        <target>Авто-схвалення</target>
+      </trans-unit>
+      <trans-unit id="agentHost.branchPicker">
+        <source xml:lang="en">Branch</source>
+        <target>Гілка</target>
+      </trans-unit>
+      <trans-unit id="agentHost.isolationPicker">
+        <source xml:lang="en">Isolation</source>
+        <target>Ізоляція</target>
+      </trans-unit>
+      <trans-unit id="agentHost.modePicker">
+        <source xml:lang="en">Agent Mode</source>
+        <target>Режим агента</target>
+      </trans-unit>
+      <trans-unit id="agentHost.permissionModePicker">
+        <source xml:lang="en">Approvals</source>
+        <target>Схвалення</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostEditingSession" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="multiDiffEditorInput.name">
@@ -1895,6 +2003,30 @@
       <trans-unit id="agentHost.authRequired">
         <source xml:lang="en">Authentication is required to start a session. Please sign in and try again.</source>
         <target>Для початку сеансу потрібна аутентифікація. Будь ласка, увійдіть у систему та спробуйте ще раз.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.elicit.url.cancel">
+        <source xml:lang="en">Cancel</source>
+        <target>Скасувати</target>
+      </trans-unit>
+      <trans-unit id="agentHost.elicit.url.instruction">
+        <source xml:lang="en">Open this URL?</source>
+        <target>Відкрити це URL?</target>
+      </trans-unit>
+      <trans-unit id="agentHost.elicit.url.open">
+        <source xml:lang="en">Open {0}</source>
+        <target>Відкрити {0}</target>
+      </trans-unit>
+      <trans-unit id="agentHost.elicit.url.title">
+        <source xml:lang="en">Authorization Required</source>
+        <target>Необхідна авторизація</target>
+      </trans-unit>
+      <trans-unit id="agentHost.responseDetails.credit">
+        <source xml:lang="en">{0} credit</source>
+        <target>{0} кредит</target>
+      </trans-unit>
+      <trans-unit id="agentHost.responseDetails.credits">
+        <source xml:lang="en">{0} credits</source>
+        <target>{0} кредити</target>
       </trans-unit>
       <trans-unit id="chat.forked.fallbackTitle">
         <source xml:lang="en">Forked Session</source>
@@ -2128,10 +2260,6 @@
         <source xml:lang="en">Collapse All</source>
         <target>Згорнути все</target>
       </trans-unit>
-      <trans-unit id="del">
-        <source xml:lang="en">Del</source>
-        <target>Del</target>
-      </trans-unit>
       <trans-unit id="delete">
         <source xml:lang="en">Delete...</source>
         <target>Видалити...</target>
@@ -2245,8 +2373,8 @@
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentSessionsBanner" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentsBanner.tryAgentsAppLabel">
-        <source xml:lang="en">Try out the new Agents app</source>
-        <target>Спробуйте новий додаток Agents</target>
+        <source xml:lang="en">Try out the new Agents window</source>
+        <target>Спробуйте нове вікно Агентів</target>
       </trans-unit>
     </body>
   </file>
@@ -2592,10 +2720,6 @@
         <source xml:lang="en">Open Quick Access</source>
         <target>Відкрити швидкий доступ</target>
       </trans-unit>
-      <trans-unit id="chatQuotaExceededButton">
-        <source xml:lang="en">GitHub Copilot Free plan chat messages quota reached. Click for details.</source>
-        <target>Досягнуто ліміту повідомлень чату безкоштовного плану GitHub Copilot. Натисніть для деталей.</target>
-      </trans-unit>
       <trans-unit id="enterAgentSessionProjection">
         <source xml:lang="en">Enter Agent Session Projection</source>
         <target>Введіть проекцію сесії агента</target>
@@ -2848,6 +2972,10 @@
         <source xml:lang="en">Instruction files automatically loaded for all agent interactions (e.g. AGENTS.md, CLAUDE.md, copilot-instructions.md).</source>
         <target>Файли інструкцій автоматично завантажуються для всіх взаємодій з агентами (наприклад, AGENTS.md, CLAUDE.md, copilot-instructions.md).</target>
       </trans-unit>
+      <trans-unit id="agents">
+        <source xml:lang="en">Agents</source>
+        <target>Агенти</target>
+      </trans-unit>
       <trans-unit id="agentsDescription">
         <source xml:lang="en">Configure the AI to adopt different personas tailored to specific development tasks. Each agent has its own instructions, tools, and behavior.</source>
         <target>Налаштуйте ШІ для прийняття різних персон, адаптованих до конкретних завдань розробки. Кожен агент має свої власні інструкції, інструменти та поведінку.</target>
@@ -3060,6 +3188,10 @@
         <source xml:lang="en">Hook</source>
         <target>Гачок</target>
       </trans-unit>
+      <trans-unit id="hooks">
+        <source xml:lang="en">Hooks</source>
+        <target>Гачки</target>
+      </trans-unit>
       <trans-unit id="hooksDescription">
         <source xml:lang="en">Prompts executed at specific points during an agentic lifecycle.</source>
         <target>Запити виконуються в конкретні моменти під час агентного життєвого циклу.</target>
@@ -3073,8 +3205,8 @@
         <target>Визначте загальні настанови та правила, які автоматично впливають на те, як ШІ генерує код і виконує завдання з розробки.</target>
       </trans-unit>
       <trans-unit id="itemAriaLabel">
-        <source xml:lang="en">{0}, {1}</source>
-        <target>{0}, {1}</target>
+        <source xml:lang="en">{0}. {1}</source>
+        <target>{0}. {1}</target>
       </trans-unit>
       <trans-unit id="itemAriaLabelDisabled">
         <source xml:lang="en">{0}, disabled</source>
@@ -3148,6 +3280,10 @@
         <source xml:lang="en">Prompt</source>
         <target>Запит</target>
       </trans-unit>
+      <trans-unit id="prompts">
+        <source xml:lang="en">Prompts</source>
+        <target>Запити</target>
+      </trans-unit>
       <trans-unit id="promptsDescription">
         <source xml:lang="en">Reusable prompts for common development tasks like generating code, performing reviews, or scaffolding components.</source>
         <target>Повторно використовувані запити для загальних завдань розробки, таких як генерування коду, проведення оглядів або створення компонентів.</target>
@@ -3167,6 +3303,10 @@
       <trans-unit id="skill">
         <source xml:lang="en">Skill</source>
         <target>Навичка</target>
+      </trans-unit>
+      <trans-unit id="skills">
+        <source xml:lang="en">Skills</source>
+        <target>Навички</target>
       </trans-unit>
       <trans-unit id="skillsDescription">
         <source xml:lang="en">Folders of instructions, scripts, and resources that Copilot loads when relevant to perform specialized tasks.</source>
@@ -3212,6 +3352,10 @@
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/aiCustomizationManagement.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="Install Chat Customization Extension">
+        <source xml:lang="en">Install Chat Customization Extension</source>
+        <target>Встановіть розширення налаштування чату</target>
+      </trans-unit>
       <trans-unit id="aiCustomizationManagementEditor">
         <source xml:lang="en">Agent Customizations Editor</source>
         <target>Редактор налаштувань агента</target>
@@ -3287,6 +3431,10 @@
       <trans-unit id="generateDebugReport">
         <source xml:lang="en">Generate Customization Debug Report</source>
         <target>Згенерувати звіт про налагодження налаштувань</target>
+      </trans-unit>
+      <trans-unit id="installChatCustomizationExtension">
+        <source xml:lang="en">Install Chat Customization Extension</source>
+        <target>Встановіть розширення налаштування чату</target>
       </trans-unit>
       <trans-unit id="open">
         <source xml:lang="en">Open</source>
@@ -3756,14 +3904,6 @@
         <source xml:lang="en">Add Server</source>
         <target>Додати сервер</target>
       </trans-unit>
-      <trans-unit id="bridged">
-        <source xml:lang="en">Bridged</source>
-        <target>З'єднано</target>
-      </trans-unit>
-      <trans-unit id="bridgedHover">
-        <source xml:lang="en">This server is managed by VS Code and forwarded to all compatible agent sessions.</source>
-        <target>Цей сервер керується VS Code і пересилається до всіх сумісних сесій агентів.</target>
-      </trans-unit>
       <trans-unit id="browseMarketplace">
         <source xml:lang="en">Browse Marketplace</source>
         <target>Перегляд ринку</target>
@@ -3860,9 +4000,9 @@
         <source xml:lang="en">{0}, {1} items, {2}</source>
         <target>{0}, {1} предметів, {2}</target>
       </trans-unit>
-      <trans-unit id="mcpServerBridgedAriaLabel">
-        <source xml:lang="en">{0}, {1}</source>
-        <target>{0}, {1}</target>
+      <trans-unit id="mcpServers">
+        <source xml:lang="en">MCP Servers</source>
+        <target>MCP Сервери</target>
       </trans-unit>
       <trans-unit id="mcpServersDescription">
         <source xml:lang="en">An open standard that lets AI use external tools and services. MCP servers provide tools for file operations, databases, APIs, and more.</source>
@@ -3952,6 +4092,10 @@
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/aiCustomization/pluginListWidget" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="addPlugin">
+        <source xml:lang="en">Add Plugin</source>
+        <target>Додати плагін</target>
+      </trans-unit>
       <trans-unit id="addRemotePlugins">
         <source xml:lang="en">Use the toolbar to add remote plugins or install plugins from a source.</source>
         <target>Використовуйте панель інструментів, щоб додати віддалені плагіни або встановити плагіни з джерела.</target>
@@ -3984,10 +4128,6 @@
         <source xml:lang="en">Disable {0} from sync</source>
         <target>Вимкнути {0} від синхронізації</target>
       </trans-unit>
-      <trans-unit id="disabled">
-        <source xml:lang="en">Disabled</source>
-        <target>Вимкнено</target>
-      </trans-unit>
       <trans-unit id="disabledGroup">
         <source xml:lang="en">Disabled Locally</source>
         <target>Вимкнено локально</target>
@@ -4003,10 +4143,6 @@
       <trans-unit id="enablePlugin">
         <source xml:lang="en">Enable {0} for sync</source>
         <target>Увімкніть {0} для синхронізації</target>
-      </trans-unit>
-      <trans-unit id="enabled">
-        <source xml:lang="en">Enabled</source>
-        <target>Увімкнено</target>
       </trans-unit>
       <trans-unit id="enabledGroup">
         <source xml:lang="en">Enabled Locally</source>
@@ -4071,6 +4207,22 @@
       <trans-unit id="pluginGroupAriaLabel">
         <source xml:lang="en">{0}, {1} items, {2}</source>
         <target>{0}, {1} предметів, {2}</target>
+      </trans-unit>
+      <trans-unit id="pluginInstalledItemAriaLabelDisabled">
+        <source xml:lang="en">{0}. Disabled</source>
+        <target>{0}. Вимкнено</target>
+      </trans-unit>
+      <trans-unit id="pluginInstalledItemAriaLabelEnabled">
+        <source xml:lang="en">{0}. Enabled</source>
+        <target>{0}. Увімкнено</target>
+      </trans-unit>
+      <trans-unit id="pluginItemAriaLabel">
+        <source xml:lang="en">{0}. {1}</source>
+        <target>{0}. {1}</target>
+      </trans-unit>
+      <trans-unit id="plugins">
+        <source xml:lang="en">Plugins</source>
+        <target>Плагіни</target>
       </trans-unit>
       <trans-unit id="pluginsDescription">
         <source xml:lang="en">Extend your AI agent with plugins that add commands, skills, agents, hooks, and MCP servers from reusable packages.</source>
@@ -4485,12 +4637,12 @@ Note: This setting only controls tool approval and does not prevent the agent fr
         <target>Чат</target>
       </trans-unit>
       <trans-unit id="chat.agent.allowedNetworkDomains">
-        <source xml:lang="en">Allowed domains for network access by agent tools (fetch tool, integrated browser). Applies when {0} or {1} is enabled. When {1} is enabled, this also configures terminal sandbox networking. Supports wildcards like {2}. When both allowed and denied lists are empty, all domains are blocked. Denied domains (see {3}) take precedence.</source>
-        <target>Дозволені домени для мережевого доступу агентських інструментів (інструмент отримання, інтегрований браузер). Застосовується, коли {0} або {1} увімкнено. Коли {1} увімкнено, це також налаштовує мережеве середовище термінала. Підтримує символи підстановки, такі як {2}. Коли обидва списки дозволених і заборонених є порожніми, всі домени блокуються. Заборонені домени (див. {3}) мають пріоритет.</target>
+        <source xml:lang="en">Allowed domains for network access by agent tools (fetch tool, integrated browser). Applies when {0} or {1} is enabled. When {1} is set to {2}, all domains are allowed. Supports wildcards like {3}. When both allowed and denied lists are empty, all domains are blocked. Denied domains (see {4}) take precedence.</source>
+        <target>Дозволені домени для мережевого доступу агентських інструментів (інструмент отримання, інтегрований браузер). Застосовується, коли {0} або {1} увімкнено. Коли {1} встановлено на {2}, всі домени дозволені. Підтримує підстановочні знаки, такі як {3}. Коли обидва списки дозволених і заборонених порожні, всі домени заблоковані. Заборонені домени (див. {4}) мають пріоритет.</target>
       </trans-unit>
       <trans-unit id="chat.agent.deniedNetworkDomains">
-        <source xml:lang="en">Denied domains for network access by agent tools (fetch tool, integrated browser). Applies when {0} or {1} is enabled. When {1} is enabled, this also configures terminal sandbox networking. Takes precedence over {2}. Supports wildcards like {3}.</source>
-        <target>Відмовлені домени для мережевого доступу агентських інструментів (інструмент отримання, інтегрований браузер). Застосовується, коли {0} або {1} увімкнено. Коли {1} увімкнено, це також налаштовує мережеву пісочницю термінала. Має пріоритет над {2}. Підтримує символи підстановки, такі як {3}.</target>
+        <source xml:lang="en">Denied domains for network access by agent tools (fetch tool, integrated browser). Applies when {0} or {1} is enabled. This does not apply when {1} is set to {2}. Takes precedence over {3}. Supports wildcards like {4}.</source>
+        <target>Відмовлені домени для доступу до мережі інструментами агента (інструмент отримання, інтегрований браузер). Застосовується, коли {0} або {1} увімкнено. Це не застосовується, коли {1} встановлено на {2}. Має пріоритет над {3}. Підтримує підстановочні знаки, такі як {4}.</target>
       </trans-unit>
       <trans-unit id="chat.agent.enabled.description">
         <source xml:lang="en">When enabled, agent mode can be activated from chat and tools in agentic contexts with side effects can be used.</source>
@@ -4556,13 +4708,21 @@ Note: This setting only controls tool approval and does not prevent the agent fr
         <source xml:lang="en">Controls how thinking is rendered.</source>
         <target>Контролює, як відображається мислення.</target>
       </trans-unit>
-      <trans-unit id="chat.agentHost.claudeAgent.enabled">
-        <source xml:lang="en">When enabled, the Claude agent provider is registered inside the agent host. Requires `#chat.agentHost.enabled#`. The agent host process must be restarted for changes to this setting to take effect.</source>
-        <target>Коли увімкнено, постачальник агента Claude реєструється всередині хоста агента. Потрібно `#chat.agentHost.enabled#`. Процес хоста агента повинен бути перезапущений, щоб зміни в цьому налаштуванні набрали чинності.</target>
+      <trans-unit id="chat.agentHost.ahpJsonlLogging">
+        <source xml:lang="en">When enabled, logs all AHP transport messages for agent host connections to JSONL files under the window's log directory.</source>
+        <target>Коли увімкнено, записує всі транспортні повідомлення AHP для з'єднань хостів агентів у файли JSONL у каталозі журналів вікна.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.claudeAgent.path">
+        <source xml:lang="en">Experimental, for local testing only. Absolute path to a locally-installed `@anthropic-ai/claude-agent-sdk` package. When set, the Claude agent provider is registered inside the agent host and the SDK is loaded from this path. Requires `#chat.agentHost.enabled#`. The agent host process must be restarted for changes to take effect. This setting will be removed once the SDK is delivered through the Extension Marketplace.</source>
+        <target>Експериментальний, лише для локального тестування. Абсолютний шлях до локально встановленого пакету `@anthropic-ai/claude-agent-sdk`. Коли встановлено, провайдер агента Claude реєструється всередині хоста агента, і SDK завантажується з цього шляху. Потребує `#chat.agentHost.enabled#`. Процес хоста агента повинен бути перезапущений, щоб зміни набрали чинності. Цю налаштування буде видалено, як тільки SDK буде доставлено через Ринок розширень.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.clientTools">
         <source xml:lang="en">Tool reference names to expose as client-provided tools in agent host sessions.</source>
         <target>Імена посилань на інструменти, які потрібно відкрити як інструменти, надані клієнтом, у сесіях хостів агентів.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.customTerminalTool.enabled">
+        <source xml:lang="en">When enabled, Copilot SDK sessions use the Agent Host terminal tool override instead of the SDK's default terminal behavior.</source>
+        <target>Коли увімкнено, сесії Copilot SDK використовують перевагу інструмента терміналу Agent Host замість стандартної поведінки терміналу SDK.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.enabled">
         <source xml:lang="en">When enabled, some agents run in a separate agent host process.</source>
@@ -4571,6 +4731,30 @@ Note: This setting only controls tool approval and does not prevent the agent fr
       <trans-unit id="chat.agentHost.ipcLogging">
         <source xml:lang="en">When enabled, logs all IPC traffic for each agent host to a dedicated output channel.</source>
         <target>Коли увімкнено, веде облік всього IPC-трафіку для кожного хоста агента в спеціальний вихідний канал.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.otel.captureContent">
+        <source xml:lang="en">When enabled, includes prompt and response content in OTel span attributes. Sets `OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT`. Privacy-sensitive: do not enable in environments that ship spans to shared sinks.</source>
+        <target>Коли ввімкнено, включає вміст запиту та відповіді в атрибути OTel span. Встановлює `OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT`. Чутливі до конфіденційності: не ввімкнено в середовищах, які передають спани до спільних сховищ.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.otel.dbSpanExporter.enabled">
+        <source xml:lang="en">When enabled, the agent host persists every emitted OTel span to a local SQLite database. Spans can be inspected via the `Export Agent Host Traces Database` command. Compatible with external exporters: spans are written to SQLite *and* forwarded to the user-configured sink.</source>
+        <target>Коли увімкнено, хост агента зберігає кожен виведений OTel span у локальній базі даних SQLite. Спани можна перевірити за допомогою команди `Експорт бази даних трас агента хоста`. Сумісно з зовнішніми експортерами: спани записуються в SQLite *та* пересилаються до налаштованого користувачем приймача.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.otel.enabled">
+        <source xml:lang="en">When enabled, the agent host emits OpenTelemetry traces from the Copilot SDK. Requires `#chat.agentHost.enabled#`. Either configure `#chat.agentHost.otel.otlpEndpoint#` to ship traces to an external collector or enable `#chat.agentHost.otel.dbSpanExporter.enabled#` to capture them locally.</source>
+        <target>Коли увімкнено, хост агента випромінює OpenTelemetry трасування з Copilot SDK. Потрібно `#chat.agentHost.enabled#`. Або налаштуйте `#chat.agentHost.otel.otlpEndpoint#`, щоб відправляти трасування до зовнішнього колектора, або увімкніть `#chat.agentHost.otel.dbSpanExporter.enabled#`, щоб захоплювати їх локально.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.otel.exporterType">
+        <source xml:lang="en">Exporter backend used by the Copilot SDK when `#chat.agentHost.otel.enabled#` is on. `otlp-grpc` is downgraded to `otlp-http` transparently in the CLI runtime.</source>
+        <target>Експортер бекенду, що використовується SDK Copilot, коли `#chat.agentHost.otel.enabled#` увімкнено. `otlp-grpc` автоматично знижується до `otlp-http` під час виконання в CLI.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.otel.otlpEndpoint">
+        <source xml:lang="en">OTLP endpoint URL when exporter type is `otlp-http` or `otlp-grpc`. Sets `OTEL_EXPORTER_OTLP_ENDPOINT` inside the agent host process.</source>
+        <target>URL кінцевої точки OTLP, коли тип експортеру - `otlp-http` або `otlp-grpc`. Встановлює `OTEL_EXPORTER_OTLP_ENDPOINT` всередині процесу хоста агента.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.otel.outfile">
+        <source xml:lang="en">Output path for span JSON lines when exporter type is `file`. Sets `COPILOT_OTEL_FILE_EXPORTER_PATH`.</source>
+        <target>Шлях виводу для JSON рядків спану, коли тип експорту є `file`. Встановлює `COPILOT_OTEL_FILE_EXPORTER_PATH`.</target>
       </trans-unit>
       <trans-unit id="chat.agentLocations.invalidPath">
         <source xml:lang="en">Paths must be relative or start with '~/'. Absolute paths and '\' separators are not supported.</source>
@@ -4704,6 +4888,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">Controls whether the harness selector is shown in the Chat Customizations editor sidebar. When disabled, the editor always shows all customizations without filtering.</source>
         <target>Контролює, чи показується селектор ременя у бічній панелі редактора налаштувань чату. Коли вимкнено, редактор завжди показує всі налаштування без фільтрації.</target>
       </trans-unit>
+      <trans-unit id="chat.customizations.structuredPreview.enabled">
+        <source xml:lang="en">Controls whether the Chat Customizations editor shows a structured preview for markdown customization files (agents, skills, instructions, prompts). When disabled, the editor always opens the raw markdown in the embedded code editor.</source>
+        <target>Контролює, чи редактор налаштувань чату показує структурований попередній перегляд для файлів налаштувань markdown (агенти, навички, інструкції, запити). Коли вимкнено, редактор завжди відкриває сирий markdown у вбудованому редакторі коду.</target>
+      </trans-unit>
       <trans-unit id="chat.customizations.useChatSessionCustomizationsForCustomAgents">
         <source xml:lang="en">When enabled, custom agents shown in the chat mode picker are sourced from the customization harness service (scoped per session type) instead of the prompts service.</source>
         <target>Коли увімкнено, користувацькі агенти, що відображаються в виборі режиму чату, отримуються з сервісу налаштування (обмеженого за типом сесії) замість сервісу підказок.</target>
@@ -4811,10 +4999,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <trans-unit id="chat.experimental.incrementalRendering.enabled">
         <source xml:lang="en">Enables incremental rendering with optional block-level animation when streaming chat responses.</source>
         <target>Дозволяє інкрементальне рендеринг з необов'язковою анімацією на рівні блоку під час трансляції відповідей чату.</target>
-      </trans-unit>
-      <trans-unit id="chat.experimental.symbolTools.cacheStable">
-        <source xml:lang="en">When enabled, the rename and list-code-usages tools are always registered with a static description (no per-language list). Stabilizes the tools-array bytes across requests so prompt caches survive language-extension activations mid-turn. Tool behavior is unchanged: unsupported languages still produce an error at invocation time.</source>
-        <target>Коли увімкнено, інструменти перейменування та list-code-usages завжди реєструються зі статичним описом (без списку для кожної мови). Стабілізує байти масиву інструментів між запитами, щоб кеші запитів пережили активацію мовних розширень під час виконання. Поведінка інструментів не змінюється: непідтримувані мови все ще викликають помилку під час виклику.</target>
       </trans-unit>
       <trans-unit id="chat.experimentalSessionsWindowOverride">
         <source xml:lang="en">When true, enables sessions-window-specific behavior for extensions.</source>
@@ -5060,6 +5244,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">Show OS notifications for responses when the window is not focused.</source>
         <target>Показувати сповіщення ОС для відповідей, коли вікно не сфокусовано.</target>
       </trans-unit>
+      <trans-unit id="chat.offlineByok">
+        <source xml:lang="en">Experimental: enable BYOK chat features without GitHub sign-in.</source>
+        <target>Експериментально: увімкніть функції чату BYOK без входу в GitHub.</target>
+      </trans-unit>
       <trans-unit id="chat.permissions.default.autoApprove.description">
         <source xml:lang="en">Start new chat sessions in Bypass Approvals mode.</source>
         <target>Почніть нові сеанси чату в режимі обходу затверджень.</target>
@@ -5095,6 +5283,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <trans-unit id="chat.planAgent.defaultModel.description">
         <source xml:lang="en">Select the default language model to use for the Plan agent from the available providers.</source>
         <target>Виберіть мовну модель за замовчуванням, яку слід використовувати для агента Плану з доступних постачальників.</target>
+      </trans-unit>
+      <trans-unit id="chat.planReview.inlineEditor.enabled">
+        <source xml:lang="en">When enabled, the plan review widget mounts an editor inline, as opposed to in a separate editor tab.</source>
+        <target>Коли увімкнено, віджет перегляду плану вмонтовує редактор в рядку, на відміну від окремої вкладки редактора.</target>
       </trans-unit>
       <trans-unit id="chat.pluginLocations">
         <source xml:lang="en">Plugin directories to discover. Each key is a path that points directly to a plugin folder, and the value enables (`true`) or disables (`false`) it. Paths can be absolute, relative to the workspace root, or start with `~/` for the user's home directory.</source>
@@ -5157,8 +5349,8 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <target>Контролює, чи буде скріншот вибраного елемента додано до чату.</target>
       </trans-unit>
       <trans-unit id="chat.sessionSync.enabled">
-        <source xml:lang="en">Enable session sync to GitHub.com. When enabled, Copilot session data is synced to your GitHub account for cross-device access and richer insights. Requires local session tracking to also be enabled.</source>
-        <target>Увімкніть синхронізацію сесій з GitHub.com. Коли вона увімкнена, дані сесії Copilot синхронізуються з вашим обліковим записом GitHub для доступу з різних пристроїв та отримання більш детальної інформації. Потрібно також увімкнути локальне відстеження сесій.</target>
+        <source xml:lang="en">Enable session sync to GitHub.com. When enabled, Copilot session data is synced to your GitHub account for cross-device access and richer insights. Requires `#github.copilot.chat.localIndex.enabled#` to also be enabled.</source>
+        <target>Увімкніть синхронізацію сесій з GitHub.com. Коли вона увімкнена, дані сесії Copilot синхронізуються з вашим обліковим записом GitHub для доступу з різних пристроїв та отримання більш детальної інформації. Потрібно також увімкнути `#github.copilot.chat.localIndex.enabled#`.</target>
       </trans-unit>
       <trans-unit id="chat.sessionSync.enabled.policy">
         <source xml:lang="en">Enable session sync to GitHub.com for cross-device Copilot session history. When disabled by organization policy, session data is kept local only.</source>
@@ -5180,6 +5372,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">Controls whether tips are shown above user messages in chat. New tips are added frequently, so this is a helpful way to stay up to date with the latest features.</source>
         <target>Контролює, чи відображаються підказки над повідомленнями користувачів у чаті. Нові підказки додаються часто, тому це корисний спосіб залишатися в курсі останніх функцій.</target>
       </trans-unit>
+      <trans-unit id="chat.titleBar.signIn.enabled">
+        <source xml:lang="en">Controls whether the Copilot Sign In button is shown in the title bar when signed out. When disabled, the Sign In affordance falls back to the status bar.</source>
+        <target>Контролює, чи кнопка входу Copilot відображається в заголовку, коли ви вийшли з системи. Коли вимкнено, можливість входу переходить до рядка стану.</target>
+      </trans-unit>
       <trans-unit id="chat.toolReferenceName.description">
         <source xml:lang="en">{0} - {1}</source>
         <target>{0} - {1}</target>
@@ -5195,6 +5391,10 @@ Set to `true` to automatically approve edits to matching files, `false` to alway
       <trans-unit id="chat.tools.autoExpandFailures">
         <source xml:lang="en">When enabled, tool failures are automatically expanded in the chat UI to show error details.</source>
         <target>Коли увімкнено, збої інструментів автоматично розгортаються в інтерфейсі чату, щоб показати деталі помилки.</target>
+      </trans-unit>
+      <trans-unit id="chat.tools.compressOutput.enabled">
+        <source xml:lang="en">Post-process tool output (for example `git diff`, `ls -l`, or `npm install`) to reduce token usage before it is sent to the model.</source>
+        <target>Обробіть вихідні дані інструмента постобробки (наприклад, `git diff`, `ls -l` або `npm install`), щоб зменшити використання токенів перед їх відправкою до моделі.</target>
       </trans-unit>
       <trans-unit id="chat.tools.confirmationCarousel">
         <source xml:lang="en">When enabled, multiple tool confirmations are batched into a carousel above the input.</source>
@@ -5218,10 +5418,6 @@ Examples:
 - `"https://*.example.com": true` - Затвердити всі запити до будь-якого піддомену example.com
 - `"https://example.com/api/*": { "approveRequest": true, "approveResponse": false }` - Затвердити запити, але не відповіді для шляхів example.com/api</target>
       </trans-unit>
-      <trans-unit id="chat.tools.renameTool.enabled">
-        <source xml:lang="en">Controls whether the rename tool is available for renaming code symbols across the workspace.</source>
-        <target>Контролює, чи доступний інструмент перейменування для перейменування кодових символів у межах робочого простору.</target>
-      </trans-unit>
       <trans-unit id="chat.tools.riskAssessment.enabled">
         <source xml:lang="en">When enabled, terminal tool confirmations show an LLM-generated risk level (Safe / Caution / Review carefully) and a short explanation.</source>
         <target>Коли ввімкнено, підтвердження інструментів терміналу показують рівень ризику, згенерований LLM (Безпечно / Обережно / Розгляньте уважно), та коротке пояснення.</target>
@@ -5237,10 +5433,6 @@ Examples:
       <trans-unit id="chat.tools.todos.showWidget">
         <source xml:lang="en">Controls whether to show the todo list widget above the chat input. When enabled, the widget displays todo items created by the agent and updates as progress is made.</source>
         <target>Контролює, чи показувати віджет списку справ над полем введення чату. Коли увімкнено, віджет відображає елементи списку справ, створені агентом, і оновлюється в міру досягнення прогресу.</target>
-      </trans-unit>
-      <trans-unit id="chat.tools.usagesTool.enabled">
-        <source xml:lang="en">Controls whether the usages tool is available for finding references, definitions, and implementations of code symbols.</source>
-        <target>Контролює, чи доступний інструмент використання для знаходження посилань, визначень та реалізацій кодових символів.</target>
       </trans-unit>
       <trans-unit id="chat.undoRequests.restoreInput">
         <source xml:lang="en">Controls whether the input of the chat should be restored when an undo request is made. The input will be filled with the text of the request that was restored.</source>
@@ -5337,6 +5529,14 @@ Examples:
       <trans-unit id="chat.useSkillAdherencePrompt.title">
         <source xml:lang="en">Use Skill Adherence Prompt</source>
         <target>Використовуйте підказку дотримання навичок</target>
+      </trans-unit>
+      <trans-unit id="chat.utilityModel.description">
+        <source xml:lang="en">Override the language model used by built-in utility flows (titles, summaries, fallback responses, etc.). Leave empty to use the default model.</source>
+        <target>Перекрийте мовну модель, що використовується вбудованими утилітами (назви, резюме, резервні відповіді тощо). Залиште порожнім, щоб використовувати модель за замовчуванням.</target>
+      </trans-unit>
+      <trans-unit id="chat.utilitySmallModel.description">
+        <source xml:lang="en">Override the language model used by built-in small/fast utility flows (commit messages, intent detection, inline-chat progress, etc.). A fast and inexpensive model is recommended. Leave empty to use the default model.</source>
+        <target>Перезапишіть мовну модель, що використовується вбудованими малими/швидкими утилітами (повідомлення про коміти, виявлення намірів, прогрес в інтерактивному чаті тощо). Рекомендується швидка та недорога модель. Залиште порожнім, щоб використовувати модель за замовчуванням.</target>
       </trans-unit>
       <trans-unit id="chat.viewProgressBadge.enabled">
         <source xml:lang="en">Show a progress badge on the chat view when an agent session is in progress that is opened in that view.</source>
@@ -5578,9 +5778,29 @@ Examples:
         <source xml:lang="en">{0} chars</source>
         <target>{0} символів</target>
       </trans-unit>
+      <trans-unit id="chatDebug.cache.componentSizes">
+        <source xml:lang="en">{0} → {1} chars</source>
+        <target>{0} → {1} символів</target>
+      </trans-unit>
       <trans-unit id="chatDebug.cache.componentsHeading">
         <source xml:lang="en">Components</source>
         <target>Компоненти</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.continuationComponentsNote">
+        <source xml:lang="en">This request uses previous_response_id, so input messages are not positionally diffed against the previous request. Components below show cache-key shape changes; the current continuation delta is shown separately.</source>
+        <target>Цей запит використовує previous_response_id, тому вхідні повідомлення не порівнюються позиційно з попереднім запитом. Компоненти нижче показують зміни форми cache-key; поточний дельта-продовження показано окремо.</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.continuationDeltaAlsoChanged">
+        <source xml:lang="en">The visible wire delta also changed at {0}. That is expected when comparing consecutive continuation requests of different kinds, such as tool_search_output followed by a new user input.</source>
+        <target>Видимий дротовий дельта також змінився в {0}. Це очікується при порівнянні послідовних запитів на продовження різних видів, таких як tool_search_output, за яким слідує новий ввід користувача.</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.continuationDeltaBreak">
+        <source xml:lang="en">The captured wire delta changed at {0} — {1}. This is a delta-to-delta comparison between consecutive Responses API requests, not the full reconstructed prompt prefix.</source>
+        <target>Захоплений дельта-кабель змінився на {0} — {1}. Це порівняння дельта-до-дельта між послідовними запитами API Responses, а не повний відновлений префікс запиту.</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.continuationNoDeltaBreak">
+        <source xml:lang="en">No divergence detected in the captured wire delta. The full reconstructed prompt prefix is provider-side for this continuation request.</source>
+        <target>Не виявлено жодної дивергенції в захопленому дельта-кабелі. Повний відновлений префікс запиту знаходиться на стороні постачальника для цього запиту на продовження.</target>
       </trans-unit>
       <trans-unit id="chatDebug.cache.diffSideA">
         <source xml:lang="en">Previous · {0} chars</source>
@@ -5674,6 +5894,14 @@ Examples:
         <source xml:lang="en">Previous</source>
         <target>Попередній</target>
       </trans-unit>
+      <trans-unit id="chatDebug.cache.legend.toolSearch">
+        <source xml:lang="en">tool search</source>
+        <target>пошук інструментів</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.legend.tools">
+        <source xml:lang="en">tools (catalog)</source>
+        <target>інструменти (каталог)</target>
+      </trans-unit>
       <trans-unit id="chatDebug.cache.lossLine">
         <source xml:lang="en">Lost: {0} tokens ({1}% of this request)</source>
         <target>Втрачені: {0} токенів ({1}% від цього запиту)</target>
@@ -5742,6 +5970,50 @@ Examples:
         <source xml:lang="en">Request Options</source>
         <target>Запит параметрів</target>
       </trans-unit>
+      <trans-unit id="chatDebug.cache.requestShape">
+        <source xml:lang="en">shape</source>
+        <target>форма</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.requestShape.continuation">
+        <source xml:lang="en">Responses API continuation</source>
+        <target>Продовження API відповідей</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.requestShape.continuationDescription">
+        <source xml:lang="en">Responses API continuation: the displayed input is only the delta sent over the wire. The provider reconstructs prior context from the previous response id.</source>
+        <target>Продовження API відповідей: відображений ввід є лише дельтою, надісланою через мережу. Постачальник відновлює попередній контекст з ідентифікатора попередньої відповіді.</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.requestShape.fullInput">
+        <source xml:lang="en">full input request</source>
+        <target>повний запит на введення</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.requestShape.toolOutput">
+        <source xml:lang="en">tool output continuation</source>
+        <target>продовження виходу інструмента</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.requestShape.toolOutputDescription">
+        <source xml:lang="en">Responses API continuation: the displayed input is only the tool-output delta sent over the wire. The provider reconstructs prior context from the previous response id.</source>
+        <target>Продовження API відповідей: відображений ввід є лише дельтою виходу інструменту, що передається через мережу. Постачальник відновлює попередній контекст з ідентифікатора попередньої відповіді.</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.requestShape.toolOutputRequest">
+        <source xml:lang="en">tool output request</source>
+        <target>запит на вивід інструменту</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.requestShape.toolSearch">
+        <source xml:lang="en">tool_search_output continuation</source>
+        <target>tool_search_output продовження</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.requestShape.toolSearchDescription">
+        <source xml:lang="en">Responses API continuation: the displayed input is only the tool-search delta sent over the wire. The provider reconstructs prior context from the previous response id.</source>
+        <target>Продовження API відповідей: відображений ввід є лише дельта пошуку інструментів, надіслана через мережу. Постачальник відновлює попередній контекст з ідентифікатора попередньої відповіді.</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.requestShape.toolSearchRequest">
+        <source xml:lang="en">tool_search_output request</source>
+        <target>tool_search_output запит</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.requestShape.toolSearchRequestDescription">
+        <source xml:lang="en">This request contains a Responses API tool_search_output item. No previous-response continuation marker was captured, so the displayed input may be a full or history-sliced request rather than only a continuation delta.</source>
+        <target>Цей запит містить елемент tool_search_output з API відповідей. Жоден маркер продовження попередньої відповіді не був зафіксований, тому відображений ввід може бути повним запитом або запитом з історії, а не лише дельтою продовження.</target>
+      </trans-unit>
       <trans-unit id="chatDebug.cache.requestTitle">
         <source xml:lang="en">Request</source>
         <target>Запит</target>
@@ -5750,9 +6022,9 @@ Examples:
         <source xml:lang="en">Prompt Signature</source>
         <target>Підпис запиту</target>
       </trans-unit>
-      <trans-unit id="chatDebug.cache.signatureSummaryBreak">
-        <source xml:lang="en">{0} of {1} chars reused · break at messages[{2}]</source>
-        <target>{0} з {1} символів повторно використано · зупинка на messages[{2}]</target>
+      <trans-unit id="chatDebug.cache.signatureSummaryBreakComponent">
+        <source xml:lang="en">{0} of {1} chars reused · break at {2}</source>
+        <target>{0} з {1} символів повторно використано · перервати на {2}</target>
       </trans-unit>
       <trans-unit id="chatDebug.cache.signatureSummaryClean">
         <source xml:lang="en">{0} of {1} chars reused · no divergence detected</source>
@@ -5778,6 +6050,14 @@ Examples:
         <source xml:lang="en">{0} identical</source>
         <target>{0} ідентичний</target>
       </trans-unit>
+      <trans-unit id="chatDebug.cache.systemBroke">
+        <source xml:lang="en">System instructions changed — the cache was invalidated even though the message prefix matches.</source>
+        <target>Інструкції системи змінено — кеш було скинуто, хоча префікс повідомлення збігається.</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.systemComponent">
+        <source xml:lang="en">system</source>
+        <target>система</target>
+      </trans-unit>
       <trans-unit id="chatDebug.cache.toggleGroup">
         <source xml:lang="en">Toggle group</source>
         <target>Перемикач групи</target>
@@ -5785,6 +6065,30 @@ Examples:
       <trans-unit id="chatDebug.cache.tokensReused">
         <source xml:lang="en">{0} of {1} input tokens reused</source>
         <target>{0} з {1} вхідних токенів повторно використано</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.toolsBroke">
+        <source xml:lang="en">Tool definitions changed — the catalog of available tools differs between requests, which invalidates the cache even though the message prefix matches.</source>
+        <target>Визначення інструментів змінено — каталог доступних інструментів відрізняється між запитами, що робить кеш недійсним, навіть якщо префікс повідомлення збігається.</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.toolsComponent">
+        <source xml:lang="en">tools catalog</source>
+        <target>каталог інструментів</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.truncatedBoth">
+        <source xml:lang="en">Both sides truncated by the OTel attribute cap (originals were {0} and {1} chars) — diff may be partial.</source>
+        <target>Обидві сторони обрізані атрибутом OTel cap (оригінали були {0} і {1} символів) — різниця може бути частковою.</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.truncatedOne">
+        <source xml:lang="en">{0} side truncated by the OTel attribute cap (original was {1} chars) — diff may be partial.</source>
+        <target>{0} сторона обрізана через обмеження атрибута OTel (оригінал був {1} символів) — різниця може бути частковою.</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.truncatedSideCurr">
+        <source xml:lang="en">Current</source>
+        <target>Поточний</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.truncatedSidePrev">
+        <source xml:lang="en">Previous</source>
+        <target>Попередній</target>
       </trans-unit>
       <trans-unit id="chatDebug.cache.ttft">
         <source xml:lang="en">timeToFirstToken</source>
@@ -5798,9 +6102,33 @@ Examples:
         <source xml:lang="en">Click to compare this request against the previous one</source>
         <target>Натисніть, щоб порівняти цей запит з попереднім.</target>
       </trans-unit>
+      <trans-unit id="chatDebug.cache.uncachedLine">
+        <source xml:lang="en">Uncached in this request: {0} tokens ({1}% of this request)</source>
+        <target>Не кешовано в цьому запиті: {0} токенів ({1}% цього запиту)</target>
+      </trans-unit>
       <trans-unit id="chatDebug.cache.unknownPrompt">
         <source xml:lang="en">(no prompt captured)</source>
         <target>(жодного запиту не зафіксовано)</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.visibleSignatureHeading">
+        <source xml:lang="en">Visible Request Signature</source>
+        <target>Видима підпис запиту</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.visibleSignatureNote">
+        <source xml:lang="en">For Responses API continuations, this shows the captured request inputs: system instructions, tools sent on this request, and the visible input delta. Earlier conversation state is referenced by previous response id and is not expanded here.</source>
+        <target>Для продовжень API відповідей це показує захоплені вхідні дані запиту: інструкції системи, інструменти, надіслані з цим запитом, та видиму різницю у вхідних даних. Раніше стан розмови посилається на ідентифікатор попередньої відповіді і тут не розширюється.</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.visibleSignatureSummaryBreak">
+        <source xml:lang="en">{0} of {1} captured request chars match before first captured drift: {2}</source>
+        <target>{0} з {1} захоплених символів запиту збігаються перед першим захопленим дрейфом: {2}</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.visibleSignatureSummaryClean">
+        <source xml:lang="en">{0} of {1} captured request chars match · no captured divergence detected</source>
+        <target>{0} з {1} захоплених символів запиту збігаються · жодних захоплених відхилень не виявлено</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.visibleWireInput">
+        <source xml:lang="en">Visible wire input</source>
+        <target>Видимий вхід для дроту</target>
       </trans-unit>
       <trans-unit id="chatDebug.cache.whereBroke">
         <source xml:lang="en">Where the cache broke</source>
@@ -6502,6 +6830,10 @@ Examples:
         <source xml:lang="en">Terminal</source>
         <target>Термінал</target>
       </trans-unit>
+      <trans-unit id="chatDebug.metric.copilotUsage">
+        <source xml:lang="en">Copilot Usage (AIC)</source>
+        <target>Використання Copilot (AIC)</target>
+      </trans-unit>
       <trans-unit id="chatDebug.metric.errors">
         <source xml:lang="en">Errors</source>
         <target>Помилки</target>
@@ -7054,6 +7386,14 @@ Examples:
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/chatManagement/chatManagement.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="enableChatForByok">
+        <source xml:lang="en">Enabling AI features…</source>
+        <target>Увімкнення функцій ШІ…</target>
+      </trans-unit>
+      <trans-unit id="enableChatForByokReason">
+        <source xml:lang="en">Enabling AI features</source>
+        <target>Увімкнення функцій ШІ</target>
+      </trans-unit>
       <trans-unit id="languageModelsOpenSettings">
         <source xml:lang="en">Icon for open language models settings commands.</source>
         <target>Іконка для команд налаштувань відкритих мовних моделей.</target>
@@ -7085,18 +7425,6 @@ Examples:
       <trans-unit id="modelsManagementEditorLabelIcon">
         <source xml:lang="en">Icon of the Models Management editor label.</source>
         <target>Іконка етикетки редактора Models Management.</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/workbench/contrib/chat/browser/chatManagement/chatModelsViewModel" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="hidden">
-        <source xml:lang="en">Hidden</source>
-        <target>Схований</target>
-      </trans-unit>
-      <trans-unit id="visible">
-        <source xml:lang="en">Visible</source>
-        <target>Видимий</target>
       </trans-unit>
     </body>
   </file>
@@ -7190,14 +7518,6 @@ Examples:
         <source xml:lang="en">Filter</source>
         <target>Фільтр</target>
       </trans-unit>
-      <trans-unit id="filter.hidden">
-        <source xml:lang="en">Hidden in Chat Model Picker</source>
-        <target>Сховано в виборі моделі чату</target>
-      </trans-unit>
-      <trans-unit id="filter.visible">
-        <source xml:lang="en">Visible in Chat Model Picker</source>
-        <target>Видимий у виборі моделі чату</target>
-      </trans-unit>
       <trans-unit id="filterByCapability">
         <source xml:lang="en">Filter by {0}</source>
         <target>Фільтрувати за {0}</target>
@@ -7205,26 +7525,6 @@ Examples:
       <trans-unit id="filterByProvider">
         <source xml:lang="en">Filter by {0}</source>
         <target>Фільтрувати за {0}</target>
-      </trans-unit>
-      <trans-unit id="filterByVisible">
-        <source xml:lang="en">Filter by {0}</source>
-        <target>Фільтрувати за {0}</target>
-      </trans-unit>
-      <trans-unit id="groupBy">
-        <source xml:lang="en">Group By</source>
-        <target>Групувати за</target>
-      </trans-unit>
-      <trans-unit id="groupBy.provider">
-        <source xml:lang="en">Provider</source>
-        <target>Постачальник</target>
-      </trans-unit>
-      <trans-unit id="groupBy.visibility">
-        <source xml:lang="en">Visibility (Chat Model Picker)</source>
-        <target>Видимість (Вибір моделі чату)</target>
-      </trans-unit>
-      <trans-unit id="groupByTooltip">
-        <source xml:lang="en">Group by {0}</source>
-        <target>Групувати за {0}</target>
       </trans-unit>
       <trans-unit id="hidden.ariaLabel">
         <source xml:lang="en">Hidden Models</source>
@@ -7246,17 +7546,9 @@ Examples:
         <source xml:lang="en">Context size: {0} tokens</source>
         <target>Розмір контексту: {0} токенів</target>
       </trans-unit>
-      <trans-unit id="model.hidden">
-        <source xml:lang="en">This model is hidden in the chat model picker</source>
-        <target>Ця модель прихована в виборі моделі чату.</target>
-      </trans-unit>
       <trans-unit id="model.name">
         <source xml:lang="en">{0} from {1}</source>
         <target>{0} з {1}</target>
-      </trans-unit>
-      <trans-unit id="model.visible">
-        <source xml:lang="en">This model is visible in the chat model picker</source>
-        <target>Ця модель видима в виборі моделі чату.</target>
       </trans-unit>
       <trans-unit id="modelName">
         <source xml:lang="en">Name</source>
@@ -7306,22 +7598,6 @@ Examples:
         <source xml:lang="en">Add Models...</source>
         <target>Додати моделі...</target>
       </trans-unit>
-      <trans-unit id="models.hidden">
-        <source xml:lang="en">Show in the chat model picker</source>
-        <target>Показати в виборі моделі чату</target>
-      </trans-unit>
-      <trans-unit id="models.hide">
-        <source xml:lang="en">Hide</source>
-        <target>Сховати</target>
-      </trans-unit>
-      <trans-unit id="models.hideAll">
-        <source xml:lang="en">Hide in the Chat Model Picker</source>
-        <target>Сховати в виборі моделі чату</target>
-      </trans-unit>
-      <trans-unit id="models.hideSelected">
-        <source xml:lang="en">Hide in the Chat Model Picker</source>
-        <target>Сховати в виборі моделі чату</target>
-      </trans-unit>
       <trans-unit id="models.inputCost.plural">
         <source xml:lang="en">Input Cost: {0} credits per 1M tokens</source>
         <target>Вартість введення: {0} кредитів за 1M токенів</target>
@@ -7346,21 +7622,13 @@ Examples:
         <source xml:lang="en">Output Cost: {0} credit per 1M tokens</source>
         <target>Вартість виводу: {0} кредитів за 1M токенів</target>
       </trans-unit>
+      <trans-unit id="models.pinModel">
+        <source xml:lang="en">Pin Model</source>
+        <target>Модель PIN</target>
+      </trans-unit>
       <trans-unit id="models.pricing">
         <source xml:lang="en">Pricing</source>
         <target>Ціни</target>
-      </trans-unit>
-      <trans-unit id="models.show">
-        <source xml:lang="en">Show</source>
-        <target>Показати</target>
-      </trans-unit>
-      <trans-unit id="models.showAll">
-        <source xml:lang="en">Show in the Chat Model Picker</source>
-        <target>Показати в виборі моделі чату</target>
-      </trans-unit>
-      <trans-unit id="models.showSelected">
-        <source xml:lang="en">Show in the Chat Model Picker</source>
-        <target>Показати в виборі моделі чату</target>
       </trans-unit>
       <trans-unit id="models.toolCalling">
         <source xml:lang="en">Tools</source>
@@ -7370,13 +7638,9 @@ Examples:
         <source xml:lang="en">Tools</source>
         <target>Інструменти</target>
       </trans-unit>
-      <trans-unit id="models.userSelectable">
-        <source xml:lang="en">This model is hidden in the chat model picker</source>
-        <target>Ця модель прихована в виборі моделі чату.</target>
-      </trans-unit>
-      <trans-unit id="models.visible">
-        <source xml:lang="en">Hide in the chat model picker</source>
-        <target>Сховати в виборі моделі чату</target>
+      <trans-unit id="models.unpinModel">
+        <source xml:lang="en">Unpin Model</source>
+        <target>Відкріпити модель</target>
       </trans-unit>
       <trans-unit id="models.vision">
         <source xml:lang="en">Vision</source>
@@ -7406,10 +7670,6 @@ Examples:
         <source xml:lang="en">Pricing: {0}</source>
         <target>Ціни: {0}</target>
       </trans-unit>
-      <trans-unit id="provider">
-        <source xml:lang="en">Provider</source>
-        <target>Постачальник</target>
-      </trans-unit>
       <trans-unit id="status.ariaLabel">
         <source xml:lang="en">Status: {0}</source>
         <target>Статус: {0}</target>
@@ -7430,6 +7690,10 @@ Examples:
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/chatOutputItemRenderer" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="chatOutputRenderer.codeBlockLanguageIdentifiers">
+        <source xml:lang="en">Code block language identifiers that this renderer can handle</source>
+        <target>Ідентифікатори мов блоків коду, які може обробляти цей рендерер</target>
+      </trans-unit>
       <trans-unit id="chatOutputRenderer.mimeTypes">
         <source xml:lang="en">MIME types that this renderer can handle</source>
         <target>Типи MIME, які може обробляти цей рендерер</target>
@@ -7439,8 +7703,8 @@ Examples:
         <target>Унікальний ідентифікатор для рендерера.</target>
       </trans-unit>
       <trans-unit id="vscode.extension.contributes.chatOutputRenderer">
-        <source xml:lang="en">Contributes a renderer for specific MIME types in chat outputs</source>
-        <target>Вносить рендерер для специфічних MIME-типів у виходах чату</target>
+        <source xml:lang="en">Contributes a renderer for specific MIME types and code block language identifiers in chat outputs</source>
+        <target>Вносить рендерер для специфічних MIME-типів та ідентифікаторів мов кодових блоків у виходах чату.</target>
       </trans-unit>
     </body>
   </file>
@@ -7812,8 +8076,8 @@ Examples:
         <target>Дізнайтеся, як приховати функції ШІ</target>
       </trans-unit>
       <trans-unit id="manageAdditionalSpend">
-        <source xml:lang="en">Manage GitHub Copilot Additional Spend</source>
-        <target>Керувати додатковими витратами GitHub Copilot</target>
+        <source xml:lang="en">Manage GitHub Copilot Budget</source>
+        <target>Керувати бюджетом GitHub Copilot</target>
       </trans-unit>
       <trans-unit id="managePlan">
         <source xml:lang="en">Upgrade to GitHub Copilot Pro</source>
@@ -7842,6 +8106,14 @@ Examples:
       <trans-unit id="signInIndicatorTitleBarAction">
         <source xml:lang="en">Sign In</source>
         <target>Увійти</target>
+      </trans-unit>
+      <trans-unit id="toggle.chatSignIn">
+        <source xml:lang="en">Copilot Sign In</source>
+        <target>Увійти в Copilot</target>
+      </trans-unit>
+      <trans-unit id="toggle.chatSignInDescription">
+        <source xml:lang="en">Toggle visibility of the Copilot Sign In button in title bar</source>
+        <target>Переключити видимість кнопки входу Copilot у заголовку.</target>
       </trans-unit>
       <trans-unit id="triggerChatSetup">
         <source xml:lang="en">Use AI Features with Copilot for free...</source>
@@ -8201,9 +8473,9 @@ Type anything below to get started!</source>
         <source xml:lang="en">Inline Suggestions</source>
         <target>Вбудовані пропозиції</target>
       </trans-unit>
-      <trans-unit id="configureAdditionalSpend">
-        <source xml:lang="en">Configure Additional Spend</source>
-        <target>Налаштувати додаткові витрати</target>
+      <trans-unit id="creditsLabel">
+        <source xml:lang="en">Credits</source>
+        <target>Кредити</target>
       </trans-unit>
       <trans-unit id="enableAIFeatures">
         <source xml:lang="en">Use AI Features</source>
@@ -8234,8 +8506,8 @@ Type anything below to get started!</source>
         <target>Преміум запити</target>
       </trans-unit>
       <trans-unit id="includedTitleTBB">
-        <source xml:lang="en">Monthly Limit</source>
-        <target>Щомісячний ліміт</target>
+        <source xml:lang="en">Credits</source>
+        <target>Кредити</target>
       </trans-unit>
       <trans-unit id="inlineSuggestionsDisabled">
         <source xml:lang="en">Disabled</source>
@@ -8253,17 +8525,13 @@ Type anything below to get started!</source>
         <source xml:lang="en">Learn More</source>
         <target>Дізнатися більше</target>
       </trans-unit>
-      <trans-unit id="manageAdditionalSpend">
-        <source xml:lang="en">Manage Additional Spend</source>
-        <target>Керувати додатковими витратами GitHub Copilot</target>
+      <trans-unit id="manageBudget">
+        <source xml:lang="en">Manage Budget</source>
+        <target>Керувати бюджетом</target>
       </trans-unit>
       <trans-unit id="modelLabel">
         <source xml:lang="en">Model</source>
         <target>Модель</target>
-      </trans-unit>
-      <trans-unit id="monthlyLimitLabel">
-        <source xml:lang="en">Monthly Limit</source>
-        <target>Щомісячний ліміт</target>
       </trans-unit>
       <trans-unit id="premiumChatsLabel">
         <source xml:lang="en">Premium requests</source>
@@ -8273,13 +8541,33 @@ Type anything below to get started!</source>
         <source xml:lang="en">Included with your organization's plan.</source>
         <target>Включено в план вашої організації.</target>
       </trans-unit>
+      <trans-unit id="premiumIncludedCompact">
+        <source xml:lang="en">{0} included with your organization's plan.</source>
+        <target>{0} включено у план вашої організації.</target>
+      </trans-unit>
+      <trans-unit id="premiumLimitReached">
+        <source xml:lang="en">Organization limit reached.</source>
+        <target>Досягнуто межі організації.</target>
+      </trans-unit>
+      <trans-unit id="premiumLimitReachedCompact">
+        <source xml:lang="en">{0} limit reached.</source>
+        <target>{0} досягнуто ліміту.</target>
+      </trans-unit>
       <trans-unit id="quotaAdditionalUsageActive">
-        <source xml:lang="en">Additional spend is configured. Usage will continue until limits reset.</source>
-        <target>Додаткові витрати налаштовані. Використання триватиме, поки ліміти не будуть скинуті.</target>
+        <source xml:lang="en">Additional budget is configured. Usage will continue until limits reset.</source>
+        <target>Додатковий бюджет налаштовано. Використання триватиме до скидання лімітів.</target>
       </trans-unit>
       <trans-unit id="quotaAdditionalUsageApproaching">
-        <source xml:lang="en">Once the limit is reached, additional spend will be used.</source>
-        <target>Якщо буде досягнуто ліміт, буде використано додаткові витрати.</target>
+        <source xml:lang="en">Once the limit is reached, additional budget will be used.</source>
+        <target>Якщо буде досягнуто ліміт, буде використано додатковий бюджет.</target>
+      </trans-unit>
+      <trans-unit id="quotaBudgetActive">
+        <source xml:lang="en">Premium request budget is configured. Usage will continue until limits reset.</source>
+        <target>Бюджет запиту преміум-класу налаштовано. Використання триватиме до скидання лімітів.</target>
+      </trans-unit>
+      <trans-unit id="quotaBudgetApproaching">
+        <source xml:lang="en">Once the limit is reached, premium request budget will be used.</source>
+        <target>Якщо буде досягнуто ліміт, буде використано бюджет запиту преміум.</target>
       </trans-unit>
       <trans-unit id="quotaCreditsDisplay">
         <source xml:lang="en">{0} / {1}</source>
@@ -8292,6 +8580,10 @@ Type anything below to get started!</source>
       <trans-unit id="quotaLabel">
         <source xml:lang="en">Manage Copilot Settings</source>
         <target>Керувати налаштуваннями Copilot</target>
+      </trans-unit>
+      <trans-unit id="quotaLabelUsed">
+        <source xml:lang="en">{0} used</source>
+        <target>{0} використано</target>
       </trans-unit>
       <trans-unit id="quotaLimited">
         <source xml:lang="en">Limited</source>
@@ -8417,10 +8709,6 @@ Type anything below to get started!</source>
         <source xml:lang="en">Sign In</source>
         <target>Увійдіть, щоб використовувати функції ШІ</target>
       </trans-unit>
-      <trans-unit id="signInSetup">
-        <source xml:lang="en">Sign In</source>
-        <target>Увійти</target>
-      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/chatTipCatalog" source-language="en" datatype="plaintext" target-language="uk">
@@ -8476,10 +8764,6 @@ Type anything below to get started!</source>
       <trans-unit id="tip.messageQueueing">
         <source xml:lang="en">Steer the agent mid-task by sending follow-up messages. They queue and apply in order.</source>
         <target>Керуйте агентом під час виконання завдання, надсилаючи повідомлення з подальшими вказівками. Вони ставляться в чергу та застосовуються в порядку.</target>
-      </trans-unit>
-      <trans-unit id="tip.openAgentsWindow">
-        <source xml:lang="en">Try the [Agents Application](command:{0} "Open Agents Application") to run multiple agents simultaneously and manage your coding sessions.</source>
-        <target>Спробуйте [Agents Application](command:{0} "Відкрити Agents Application"), щоб запускати кілька агентів одночасно та керувати своїми сесіями кодування.</target>
       </trans-unit>
       <trans-unit id="tip.planMode">
         <source xml:lang="en">Try the [{0}](command:workbench.action.chat.openPlan "Start Plan Mode"){1} to research and plan before implementing changes.</source>
@@ -8592,6 +8876,10 @@ Type anything below to get started!</source>
       <trans-unit id="defaultModelDescription">
         <source xml:lang="en">Use the vendor's default model</source>
         <target>Використовуйте стандартну модель постачальника</target>
+      </trans-unit>
+      <trans-unit id="modelLabelWithVendor">
+        <source xml:lang="en">{0} ({1})</source>
+        <target>{0} ({1})</target>
       </trans-unit>
     </body>
   </file>
@@ -9949,10 +10237,6 @@ Note: This setting only controls tool approval and does not prevent the agent fr
         <source xml:lang="en">Rename a symbol across the workspace</source>
         <target>Перейменувати символ у всьому робочому просторі</target>
       </trans-unit>
-      <trans-unit id="tool.rename.userDescriptionWithLanguages">
-        <source xml:lang="en">Rename a symbol across the workspace ({0})</source>
-        <target>Перейменувати символ у всьому робочому просторі ({0})</target>
-      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/tools/toolSetsContribution" source-language="en" datatype="plaintext" target-language="uk">
@@ -10041,9 +10325,17 @@ Note: This setting only controls tool approval and does not prevent the agent fr
         <source xml:lang="en">Find references, definitions, and implementations of a symbol</source>
         <target>Знайдіть посилання, визначення та реалізації символу</target>
       </trans-unit>
-      <trans-unit id="tool.usages.userDescriptionWithLanguages">
-        <source xml:lang="en">Find references, definitions, and implementations of a symbol ({0})</source>
-        <target>Знайдіть посилання, визначення та реалізації символу ({0})</target>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/browser/utilityModelContribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="chat.utilityModel.defaultEntry.description">
+        <source xml:lang="en">Use the built-in default utility model</source>
+        <target>Використовуйте вбудовану модель утиліти за замовчуванням.</target>
+      </trans-unit>
+      <trans-unit id="chat.utilityModel.defaultEntry.label">
+        <source xml:lang="en">Default</source>
+        <target>За замовчуванням</target>
       </trans-unit>
     </body>
   </file>
@@ -10189,7 +10481,7 @@ Note: This setting only controls tool approval and does not prevent the agent fr
         <source xml:lang="en">Chat Confirmation Dialog {0} {1}</source>
         <target>Діалог підтвердження чату {0} {1}</target>
       </trans-unit>
-      <trans-unit id="chat.confirmationWidget.ariaLabelWithBanner">
+      <trans-unit id="chat.confirmationWidget.ariaLabelWithBannerTitleMessageBanner">
         <source xml:lang="en">Chat Confirmation Dialog {0} {1} {2}</source>
         <target>Діалог підтвердження чату {0} {1} {2}</target>
       </trans-unit>
@@ -10301,6 +10593,14 @@ Note: This setting only controls tool approval and does not prevent the agent fr
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/chatMarkdownContentPart" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="chat.codeBlockOutputError">
+        <source xml:lang="en">Error rendering the code block</source>
+        <target>Помилка при відображенні блоку коду</target>
+      </trans-unit>
+      <trans-unit id="chat.codeBlockOutputRendering">
+        <source xml:lang="en">Rendering code block...</source>
+        <target>Відображення блоку коду...</target>
+      </trans-unit>
       <trans-unit id="chat.codeblock.applyingEdits">
         <source xml:lang="en">Applying edits</source>
         <target>Застосування змін</target>
@@ -10332,6 +10632,10 @@ Note: This setting only controls tool approval and does not prevent the agent fr
       <trans-unit id="chat.codeblock.insertions.one">
         <source xml:lang="en">1 insertion</source>
         <target>1 вставка</target>
+      </trans-unit>
+      <trans-unit id="chat.renderedCodeBlockLabel">
+        <source xml:lang="en">Rendered code block {0}</source>
+        <target>Відрендерений кодовий блок {0}</target>
       </trans-unit>
       <trans-unit id="summary">
         <source xml:lang="en">Edited {0}, {1}, {2}</source>
@@ -10425,9 +10729,13 @@ You can stop the agent at any time by clicking the stop button. This applies to 
         <source xml:lang="en">Enable Autopilot?</source>
         <target>Увімкнути автопілот?</target>
       </trans-unit>
-      <trans-unit id="chat.planReview.back">
-        <source xml:lang="en">Back</source>
-        <target>Назад</target>
+      <trans-unit id="chat.planReview.cancelButtonLabel">
+        <source xml:lang="en">Cancel</source>
+        <target>Скасувати</target>
+      </trans-unit>
+      <trans-unit id="chat.planReview.cancelTooltip">
+        <source xml:lang="en">Exit feedback mode</source>
+        <target>Вийти з режиму зворотного зв'язку</target>
       </trans-unit>
       <trans-unit id="chat.planReview.clearAll">
         <source xml:lang="en">Clear All</source>
@@ -10444,6 +10752,10 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <trans-unit id="chat.planReview.clearAllDetail">
         <source xml:lang="en">These comments will be removed from the plan file and not sent to the agent.</source>
         <target>Ці коментарі будуть видалені з файлу плану і не будуть надіслані агенту.</target>
+      </trans-unit>
+      <trans-unit id="chat.planReview.close">
+        <source xml:lang="en">Close</source>
+        <target>Закрити</target>
       </trans-unit>
       <trans-unit id="chat.planReview.collapse">
         <source xml:lang="en">Collapse</source>
@@ -10705,9 +11017,13 @@ You can stop the agent at any time by clicking the stop button. This applies to 
         <source xml:lang="en">Click to Retry</source>
         <target>Натисніть, щоб спробувати ще раз</target>
       </trans-unit>
+      <trans-unit id="configureBudget">
+        <source xml:lang="en">Configure Budget</source>
+        <target>Налаштувати бюджет</target>
+      </trans-unit>
       <trans-unit id="enableAdditionalUsage">
-        <source xml:lang="en">Configure Additional Spend</source>
-        <target>Налаштувати додаткові витрати</target>
+        <source xml:lang="en">Configure Budget</source>
+        <target>Налаштувати бюджет</target>
       </trans-unit>
       <trans-unit id="upgradeToCopilotPro">
         <source xml:lang="en">Upgrade to GitHub Copilot Pro</source>
@@ -11021,10 +11337,6 @@ You can stop the agent at any time by clicking the stop button. This applies to 
         <source xml:lang="en">Untangling the spaghetti</source>
         <target>Розплутування спагетті</target>
       </trans-unit>
-      <trans-unit id="chat.working.fun.halo.1">
-        <source xml:lang="en">Activating Cortana</source>
-        <target>Активація Кортани</target>
-      </trans-unit>
       <trans-unit id="chat.working.fun.minecraft.1">
         <source xml:lang="en">Mining diamonds</source>
         <target>Добування діамантів</target>
@@ -11337,6 +11649,14 @@ You can stop the agent at any time by clicking the stop button. This applies to 
         <source xml:lang="en">Enable terminal auto approve?</source>
         <target>Увімкнути автоматичне підтвердження терміналу?</target>
       </trans-unit>
+      <trans-unit id="chat.terminal.detail.approvalNeeded">
+        <source xml:lang="en">Approval needed:</source>
+        <target>Потрібно затвердження:</target>
+      </trans-unit>
+      <trans-unit id="chat.terminal.detail.sandboxInsufficient">
+        <source xml:lang="en">Sandbox insufficient:</source>
+        <target>Недостатньо пісочниці:</target>
+      </trans-unit>
       <trans-unit id="chat.terminal.unsandboxedExecution.defaultReason">
         <source xml:lang="en">The model did not provide a reason for requesting unsandboxed execution.</source>
         <target>Модель не надала причину для запиту на виконання без пісочниці.</target>
@@ -11393,6 +11713,10 @@ You can stop the agent at any time by clicking the stop button. This applies to 
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/toolInvocationParts/chatTerminalToolProgressPart" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="chat.terminal.backgroundSuffix">
+        <source xml:lang="en"> in background</source>
+        <target>в фоні</target>
+      </trans-unit>
       <trans-unit id="chat.terminal.ran.plain">
         <source xml:lang="en">Ran {0}</source>
         <target>Запущено {0}</target>
@@ -11413,13 +11737,37 @@ You can stop the agent at any time by clicking the stop button. This applies to 
         <source xml:lang="en">Running </source>
         <target>Запуск</target>
       </trans-unit>
+      <trans-unit id="chat.terminal.runningInBackground.plain">
+        <source xml:lang="en">Running {0} in background</source>
+        <target>Виконання {0} у фоновому режимі</target>
+      </trans-unit>
       <trans-unit id="chat.terminal.runningInSandbox.prefix">
         <source xml:lang="en">Running </source>
         <target>Запуск</target>
       </trans-unit>
+      <trans-unit id="chat.terminal.sandbox.backgroundSuffix">
+        <source xml:lang="en"> in sandbox (background)</source>
+        <target>в пісочниці (фон)</target>
+      </trans-unit>
       <trans-unit id="chat.terminal.sandbox.suffix">
         <source xml:lang="en"> in sandbox</source>
         <target>в пісочниці</target>
+      </trans-unit>
+      <trans-unit id="chat.terminal.showTerminal">
+        <source xml:lang="en">Show</source>
+        <target>Показати</target>
+      </trans-unit>
+      <trans-unit id="chat.terminal.skipped.plain">
+        <source xml:lang="en">Skipped {0}</source>
+        <target>Пропущено {0}</target>
+      </trans-unit>
+      <trans-unit id="chat.terminal.skipped.prefix">
+        <source xml:lang="en">Skipped </source>
+        <target>Пропущено</target>
+      </trans-unit>
+      <trans-unit id="chat.terminal.skippedInSandbox.prefix">
+        <source xml:lang="en">Skipped </source>
+        <target>Пропущено</target>
       </trans-unit>
       <trans-unit id="chat.terminalOutputCommandMissing">
         <source xml:lang="en">Command information is not available.</source>
@@ -11621,6 +11969,10 @@ You can stop the agent at any time by clicking the stop button. This applies to 
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/toolInvocationParts/toolRiskBadgeWidget" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="toolRisk.aiGenerated">
+        <source xml:lang="en">Risk assessments are AI-generated and may be inaccurate.</source>
+        <target>Оцінки ризиків генеруються ШІ і можуть бути неточними.</target>
+      </trans-unit>
       <trans-unit id="toolRisk.assessing">
         <source xml:lang="en">Assessing risk…</source>
         <target>Оцінка ризику…</target>
@@ -11628,6 +11980,10 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <trans-unit id="toolRisk.assessingHover">
         <source xml:lang="en">Generating a risk assessment for this tool call.</source>
         <target>Генерація оцінки ризику для цього виклику інструмента.</target>
+      </trans-unit>
+      <trans-unit id="toolRisk.detailsIconLabel">
+        <source xml:lang="en">Risk assessment details</source>
+        <target>Деталі оцінки ризиків</target>
       </trans-unit>
     </body>
   </file>
@@ -11935,6 +12291,14 @@ You can stop the agent at any time by clicking the stop button. This applies to 
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/input/chatModelPicker" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="chat.effort.costHint">
+        <source xml:lang="en">Higher levels of thinking may increase costs</source>
+        <target>Вищі рівні мислення можуть збільшити витрати.</target>
+      </trans-unit>
+      <trans-unit id="chat.effort.header">
+        <source xml:lang="en">Thinking Effort</source>
+        <target>Думкові зусилля</target>
+      </trans-unit>
       <trans-unit id="chat.manageModels">
         <source xml:lang="en">Manage Models...</source>
         <target>Керувати моделями...</target>
@@ -11975,9 +12339,21 @@ You can stop the agent at any time by clicking the stop button. This applies to 
         <source xml:lang="en">Thinking Effort: {0}</source>
         <target>Thinking Effort: {0}</target>
       </trans-unit>
+      <trans-unit id="chat.modelPicker.effortTooltip">
+        <source xml:lang="en">Set Thinking Effort</source>
+        <target>Встановити зусилля мислення</target>
+      </trans-unit>
       <trans-unit id="chat.modelPicker.otherModels">
         <source xml:lang="en">Other Models</source>
         <target>Інші моделі</target>
+      </trans-unit>
+      <trans-unit id="chat.modelPicker.pin">
+        <source xml:lang="en">Pin Model</source>
+        <target>Модель PIN</target>
+      </trans-unit>
+      <trans-unit id="chat.modelPicker.pinned">
+        <source xml:lang="en">Pinned</source>
+        <target>Закріплено</target>
       </trans-unit>
       <trans-unit id="chat.modelPicker.restartUpdateHover">
         <source xml:lang="en">This model requires a newer version of VS Code. [Restart to Update](command:update.restartToUpdate) to access it.</source>
@@ -11988,8 +12364,16 @@ You can stop the agent at any time by clicking the stop button. This applies to 
         <target>Шукати моделі</target>
       </trans-unit>
       <trans-unit id="chat.modelPicker.tokensAriaLabel">
-        <source xml:lang="en">Max Tokens: {0}</source>
-        <target>Максимальна кількість токенів: {0}</target>
+        <source xml:lang="en">Context Size: {0}</source>
+        <target>Розмір контексту: {0}</target>
+      </trans-unit>
+      <trans-unit id="chat.modelPicker.tokensTooltip">
+        <source xml:lang="en">Set Context Size</source>
+        <target>Встановити розмір контексту</target>
+      </trans-unit>
+      <trans-unit id="chat.modelPicker.unpin">
+        <source xml:lang="en">Unpin Model</source>
+        <target>Відкріпити модель</target>
       </trans-unit>
       <trans-unit id="chat.modelPicker.updateDescription">
         <source xml:lang="en">Update VS Code</source>
@@ -12007,17 +12391,93 @@ You can stop the agent at any time by clicking the stop button. This applies to 
         <source xml:lang="en">[Upgrade](command:workbench.action.chat.upgradePlan " ")</source>
         <target>[Оновити](command:workbench.action.chat.upgradePlan " ")</target>
       </trans-unit>
-      <trans-unit id="models.contextSize">
+      <trans-unit id="chat.priceCategory.high">
+        <source xml:lang="en">High cost</source>
+        <target>Висока вартість</target>
+      </trans-unit>
+      <trans-unit id="chat.priceCategory.low">
+        <source xml:lang="en">Low cost</source>
+        <target>Низька вартість</target>
+      </trans-unit>
+      <trans-unit id="chat.priceCategory.medium">
+        <source xml:lang="en">Medium cost</source>
+        <target>Середня вартість</target>
+      </trans-unit>
+      <trans-unit id="chat.priceCategory.unknown">
+        <source xml:lang="en">{0} cost</source>
+        <target>{0} вартість</target>
+      </trans-unit>
+      <trans-unit id="chat.priceCategory.veryHigh">
+        <source xml:lang="en">Very high cost</source>
+        <target>Дуже висока вартість</target>
+      </trans-unit>
+      <trans-unit id="chat.tokens.costHint">
+        <source xml:lang="en">Larger size may increase cost in longer sessions</source>
+        <target>Більший розмір може збільшити вартість у довших сесіях.</target>
+      </trans-unit>
+      <trans-unit id="chat.tokens.header">
         <source xml:lang="en">Context Size</source>
+        <target>Розмір контексту</target>
+      </trans-unit>
+      <trans-unit id="models.cacheCostLabel">
+        <source xml:lang="en">Cached input</source>
+        <target>Кешоване введення</target>
+      </trans-unit>
+      <trans-unit id="models.configurable">
+        <source xml:lang="en">Configurable:</source>
+        <target>Конфігурований:</target>
+      </trans-unit>
+      <trans-unit id="models.contextSize">
+        <source xml:lang="en">Max context</source>
         <target>Розмір контексту</target>
       </trans-unit>
       <trans-unit id="models.cost">
         <source xml:lang="en">Cost: {0}</source>
         <target>Вартість: {0}</target>
       </trans-unit>
+      <trans-unit id="models.costValuePlural">
+        <source xml:lang="en">{0} credits</source>
+        <target>{0} кредити</target>
+      </trans-unit>
+      <trans-unit id="models.costValueSingular">
+        <source xml:lang="en">{0} credit</source>
+        <target>{0} кредит</target>
+      </trans-unit>
       <trans-unit id="models.effortDefault">
         <source xml:lang="en">{0} (default)</source>
         <target>{0} (за замовчуванням)</target>
+      </trans-unit>
+      <trans-unit id="models.inputCostLabel">
+        <source xml:lang="en">Input</source>
+        <target>Введення</target>
+      </trans-unit>
+      <trans-unit id="models.outputCostLabel">
+        <source xml:lang="en">Output</source>
+        <target>Вихід</target>
+      </trans-unit>
+      <trans-unit id="models.priceCategoryTitle">
+        <source xml:lang="en">Cost</source>
+        <target>Вартість</target>
+      </trans-unit>
+      <trans-unit id="models.priceTitle">
+        <source xml:lang="en">Cost (per 1M tokens)</source>
+        <target>Вартість (за 1M токенів)</target>
+      </trans-unit>
+      <trans-unit id="models.tokensDefault">
+        <source xml:lang="en">{0} (default)</source>
+        <target>{0} (за замовчуванням)</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/browser/widget/input/chatPhoneInputPresenter" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="chatPhoneInput.autoLabel">
+        <source xml:lang="en">Auto</source>
+        <target>Авто</target>
+      </trans-unit>
+      <trans-unit id="chatPhoneInput.triggerAriaLabel">
+        <source xml:lang="en">Pick Mode and Model, {0}</source>
+        <target>Виберіть Режим та Модель, {0}</target>
       </trans-unit>
     </body>
   </file>
@@ -12231,26 +12691,6 @@ You can stop the agent at any time by clicking the stop button. This applies to 
         <source xml:lang="en">All tool calls are auto-approved</source>
         <target>Усі виклики інструментів автоматично затверджуються.</target>
       </trans-unit>
-      <trans-unit id="permissions.autoApprove.warning.cancel">
-        <source xml:lang="en">Cancel</source>
-        <target>Скасувати</target>
-      </trans-unit>
-      <trans-unit id="permissions.autoApprove.warning.confirm">
-        <source xml:lang="en">Enable</source>
-        <target>Увімкнути</target>
-      </trans-unit>
-      <trans-unit id="permissions.autoApprove.warning.detail">
-        <source xml:lang="en">Bypass Approvals will auto-approve all tool calls without asking for confirmation. This includes file edits, terminal commands, and external tool calls.
-
-To make this the starting permission level for new chat sessions, change the [{0}](command:workbench.action.openSettings?%5B%22{0}%22%5D) setting.</source>
-        <target>Обхід затверджень автоматично затвердить всі виклики інструментів без запиту підтвердження. Це включає редагування файлів, команди терміналу та виклики зовнішніх інструментів.
-
-Щоб зробити це початковим рівнем дозволів для нових сеансів чату, змініть налаштування [{0}](command:workbench.action.openSettings?%5B%22{0}%22%5D).</target>
-      </trans-unit>
-      <trans-unit id="permissions.autoApprove.warning.title">
-        <source xml:lang="en">Enable Bypass Approvals?</source>
-        <target>Увімкнути обхід затверджень?</target>
-      </trans-unit>
       <trans-unit id="permissions.autopilot">
         <source xml:lang="en">Autopilot (Preview)</source>
         <target>Автопілот (Попередній перегляд)</target>
@@ -12275,30 +12715,6 @@ To make this the starting permission level for new chat sessions, change the [{0
         <source xml:lang="en">Autonomously iterates from start to finish</source>
         <target>Автономно ітерує від початку до кінця</target>
       </trans-unit>
-      <trans-unit id="permissions.autopilot.warning.cancel">
-        <source xml:lang="en">Cancel</source>
-        <target>Скасувати</target>
-      </trans-unit>
-      <trans-unit id="permissions.autopilot.warning.confirm">
-        <source xml:lang="en">Enable</source>
-        <target>Увімкнути</target>
-      </trans-unit>
-      <trans-unit id="permissions.autopilot.warning.detail">
-        <source xml:lang="en">Autopilot will auto-approve all tool calls and continue working autonomously until the task is complete. This includes terminal commands, file edits, and external tool calls. The agent will make decisions on your behalf without asking for confirmation.
-
-You can stop the agent at any time by clicking the stop button. This applies to the current session only.
-
-To make this the starting permission level for new chat sessions, change the [{0}](command:workbench.action.openSettings?%5B%22{0}%22%5D) setting.</source>
-        <target>Автопілот автоматично затвердить всі виклики інструментів і продовжить працювати автономно, поки завдання не буде виконано. Це включає термінальні команди, редагування файлів та виклики зовнішніх інструментів. Агент прийматиме рішення від вашого імені без запиту на підтвердження.
-
-Ви можете зупинити агента в будь-який час, натиснувши кнопку зупинки. Це стосується лише поточної сесії.
-
-Щоб зробити це початковим рівнем дозволів для нових чат-сесій, змініть налаштування [{0}](command:workbench.action.openSettings?%5B%22{0}%22%5D).</target>
-      </trans-unit>
-      <trans-unit id="permissions.autopilot.warning.title">
-        <source xml:lang="en">Enable Autopilot?</source>
-        <target>Увімкнути автопілот?</target>
-      </trans-unit>
       <trans-unit id="permissions.default">
         <source xml:lang="en">Default Approvals</source>
         <target>Типові затвердження</target>
@@ -12322,10 +12738,6 @@ To make this the starting permission level for new chat sessions, change the [{0
       <trans-unit id="permissions.learnMore">
         <source xml:lang="en">Learn more about permissions</source>
         <target>Дізнайтеся більше про дозволи</target>
-      </trans-unit>
-      <trans-unit id="permissions.warning.dontShowAgain">
-        <source xml:lang="en">Don't show again</source>
-        <target>Не показувати знову</target>
       </trans-unit>
     </body>
   </file>
@@ -12649,6 +13061,10 @@ To make this the starting permission level for new chat sessions, change the [{0
         <source xml:lang="en">The icon variant for the new chat button, controlled by experiment. Values: 'copilot', 'new-session', 'comment', or empty for default.</source>
         <target>Іконка варіанту для кнопки нового чату, контрольована експериментом. Значення: 'copilot', 'new-session', 'comment' або порожнє для значення за замовчуванням.</target>
       </trans-unit>
+      <trans-unit id="chatNonCopilotModelsAreUserSelectable">
+        <source xml:lang="en">True when a user-selectable chat model from a non-Copilot vendor is available.</source>
+        <target>Істина, коли доступна модель чату, яку можна вибрати користувачеві, від постачальника, що не є Copilot.</target>
+      </trans-unit>
       <trans-unit id="chatPanelExtensionParticipantRegistered">
         <source xml:lang="en">True when a default chat participant is registered for the panel from an extension.</source>
         <target>Істинно, коли стандартний учасник чату зареєстрований для панелі з розширення.</target>
@@ -12895,6 +13311,58 @@ To make this the starting permission level for new chat sessions, change the [{0
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/chat/common/chatPermissionWarnings" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="permissions.autoApprove.warning.cancel">
+        <source xml:lang="en">Cancel</source>
+        <target>Скасувати</target>
+      </trans-unit>
+      <trans-unit id="permissions.autoApprove.warning.confirm">
+        <source xml:lang="en">Enable</source>
+        <target>Увімкнути</target>
+      </trans-unit>
+      <trans-unit id="permissions.autoApprove.warning.detail">
+        <source xml:lang="en">Bypass Approvals will auto-approve all tool calls without asking for confirmation. This includes file edits, terminal commands, and external tool calls.
+
+To make this the starting permission level for new chat sessions, change the [{0}](command:workbench.action.openSettings?%5B%22{0}%22%5D) setting.</source>
+        <target>Обхід затверджень автоматично затверджуватиме всі виклики інструментів без запиту на підтвердження. Це включає редагування файлів, команди терміналу та виклики зовнішніх інструментів.
+
+Щоб зробити це початковим рівнем дозволів для нових сеансів чату, змініть налаштування [{0}](command:workbench.action.openSettings?%5B%22{0}%22%5D).</target>
+      </trans-unit>
+      <trans-unit id="permissions.autoApprove.warning.title">
+        <source xml:lang="en">Enable Bypass Approvals?</source>
+        <target>Увімкнути обхід затверджень?</target>
+      </trans-unit>
+      <trans-unit id="permissions.autopilot.warning.cancel">
+        <source xml:lang="en">Cancel</source>
+        <target>Скасувати</target>
+      </trans-unit>
+      <trans-unit id="permissions.autopilot.warning.confirm">
+        <source xml:lang="en">Enable</source>
+        <target>Увімкнути</target>
+      </trans-unit>
+      <trans-unit id="permissions.autopilot.warning.detail">
+        <source xml:lang="en">Autopilot will auto-approve all tool calls and continue working autonomously until the task is complete. This includes terminal commands, file edits, and external tool calls. The agent will make decisions on your behalf without asking for confirmation.
+
+You can stop the agent at any time by clicking the stop button. This applies to the current session only.
+
+To make this the starting permission level for new chat sessions, change the [{0}](command:workbench.action.openSettings?%5B%22{0}%22%5D) setting.</source>
+        <target>Автопілот автоматично затвердить всі виклики інструментів і продовжить працювати автономно, поки завдання не буде виконано. Це включає термінальні команди, редагування файлів і виклики зовнішніх інструментів. Агент прийматиме рішення від вашого імені без запиту на підтвердження.
+
+Ви можете зупинити агента в будь-який час, натиснувши кнопку зупинки. Це стосується лише поточної сесії.
+
+Щоб зробити це початковим рівнем дозволів для нових чат-сесій, змініть налаштування [{0}](command:workbench.action.openSettings?%5B%22{0}%22%5D).</target>
+      </trans-unit>
+      <trans-unit id="permissions.autopilot.warning.title">
+        <source xml:lang="en">Enable Autopilot?</source>
+        <target>Увімкнути автопілот?</target>
+      </trans-unit>
+      <trans-unit id="permissions.warning.dontShowAgain">
+        <source xml:lang="en">Don't show again</source>
+        <target>Не показувати знову</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/chat/common/chatService/chatServiceImpl" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentDebugLog.troubleshootDisabled">
@@ -12957,10 +13425,6 @@ To make this the starting permission level for new chat sessions, change the [{0
   </file>
   <file original="src/vs/workbench/contrib/chat/common/languageModels" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="booleanRequired">
-        <source xml:lang="en">Please enter true or false</source>
-        <target>Будь ласка, введіть true або false</target>
-      </trans-unit>
       <trans-unit id="configureLanguageModelGroup">
         <source xml:lang="en">Group Name</source>
         <target>Назва групи</target>
@@ -12984,10 +13448,6 @@ To make this the starting permission level for new chat sessions, change the [{0
       <trans-unit id="nameExists">
         <source xml:lang="en">A language models group with this name already exists</source>
         <target>Група мовних моделей з цією назвою вже існує.</target>
-      </trans-unit>
-      <trans-unit id="numberRequired">
-        <source xml:lang="en">Please enter a number</source>
-        <target>Будь ласка, введіть число</target>
       </trans-unit>
       <trans-unit id="selectValue">
         <source xml:lang="en">Select value for {0}</source>
@@ -13140,6 +13600,18 @@ To make this the starting permission level for new chat sessions, change the [{0
       <trans-unit id="chatPluginsWhen">
         <source xml:lang="en">When</source>
         <target>Коли</target>
+      </trans-unit>
+      <trans-unit id="copilotCliPlugin.remove.confirm">
+        <source xml:lang="en">This plugin was installed by the Copilot CLI. Remove it from disk?</source>
+        <target>Цей плагін був встановлений за допомогою Copilot CLI. Видалити його з диска?</target>
+      </trans-unit>
+      <trans-unit id="copilotCliPlugin.remove.detail">
+        <source xml:lang="en">The plugin directory '{0}' will be moved to the trash. You can reinstall it later via the Copilot CLI.</source>
+        <target>Директорія плагіна '{0}' буде переміщена до кошика. Ви зможете перевстановити її пізніше через Copilot CLI.</target>
+      </trans-unit>
+      <trans-unit id="copilotCliPlugin.remove.primary">
+        <source xml:lang="en">Remove</source>
+        <target>Видалити</target>
       </trans-unit>
       <trans-unit id="extension.plugin.invalid.path">
         <source xml:lang="en">Extension '{0}' chatPlugins entry '{1}' resolves outside the extension.</source>
@@ -15164,14 +15636,6 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/chat/common/widget/input/modelPickerWidget" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="chat.modelPicker.other">
-        <source xml:lang="en">Other Models</source>
-        <target>Інші моделі</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/workbench/contrib/chat/electron-browser/actions/chatDeveloperActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="workbench.action.chat.openStorageFolder.label">
@@ -15205,6 +15669,34 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
       <trans-unit id="debugAgentHostInDevTools">
         <source xml:lang="en">Debug Local Agent Host Process In Dev Tools</source>
         <target>Налагодження процесу локального агента хоста в інструментах розробника</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/electron-browser/actions/exportAgentHostDebugLogsService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="exportDebugLogs.saveDialogTitle">
+        <source xml:lang="en">Export Agent Host Debug Logs</source>
+        <target>Експорт агентських хост-дебаг логів</target>
+      </trans-unit>
+      <trans-unit id="exportDebugLogs.zipFilter">
+        <source xml:lang="en">Zip Archive</source>
+        <target>Zip архів</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/electron-browser/actions/exportAgentTracesDb" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="exportAgentTracesDB.error">
+        <source xml:lang="en">Failed to export agent host traces database: {0}</source>
+        <target>Не вдалося експортувати базу даних трас агентів хостів: {0}</target>
+      </trans-unit>
+      <trans-unit id="exportAgentTracesDB.label">
+        <source xml:lang="en">Export Agent Host Traces Database...</source>
+        <target>Експорт агентських трас бази даних...</target>
+      </trans-unit>
+      <trans-unit id="exportAgentTracesDB.notFound">
+        <source xml:lang="en">No agent host trace database found yet. Run an agent session with `#chat.agentHost.otel.dbSpanExporter.enabled#` turned on to populate it.</source>
+        <target>Не знайдено жодної бази даних трас агентів. Запустіть сесію агента з увімкненим `#chat.agentHost.otel.dbSpanExporter.enabled#`, щоб заповнити її.</target>
       </trans-unit>
     </body>
   </file>
@@ -15307,10 +15799,14 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
   <file original="src/vs/workbench/contrib/chat/electron-browser/agentSessions/agentSessionsActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="openAgentsWindow">
-        <source xml:lang="en">Open Agents Application</source>
-        <target>Відкрити додаток Агентів</target>
+        <source xml:lang="en">Open Agents Window</source>
+        <target>Відкрити вікно агентів</target>
       </trans-unit>
-      <trans-unit id="openInAgentsLabel">
+      <trans-unit id="openInAgentsHover">
+        <source xml:lang="en">Open in Agents Window</source>
+        <target>Відкрити в вікні агентів</target>
+      </trans-unit>
+      <trans-unit id="openWorkspaceInAgentsWindow">
         <source xml:lang="en">Open in Agents</source>
         <target>Відкрити в Агентів</target>
       </trans-unit>

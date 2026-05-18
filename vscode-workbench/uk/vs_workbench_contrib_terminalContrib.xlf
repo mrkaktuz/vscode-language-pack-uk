@@ -640,6 +640,34 @@ Goal: {1}</source>
         <source xml:lang="en">Run command in `{0}`?</source>
         <target>Запустити команду в `{0}`?</target>
       </trans-unit>
+      <trans-unit id="runInTerminal.sensitiveInput.autoCancelMessage">
+        <source xml:lang="en">The terminal command was prompting for a password or other secret. Auto-approve / autopilot mode cannot safely supply secrets, so the command was cancelled. Run the command interactively if you want to provide the secret.</source>
+        <target>Команда терміналу запитувала пароль або інший секрет. Режим автоматичного схвалення / автопілота не може безпечно надати секрети, тому команда була скасована. Запустіть команду інтерактивно, якщо ви хочете надати секрет.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.sensitiveInput.autoCancelTitle">
+        <source xml:lang="en">Terminal command cancelled — sensitive input required</source>
+        <target>Команду терміналу скасовано — потрібен чутливий ввід</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.sensitiveInput.cancel">
+        <source xml:lang="en">Cancel Command</source>
+        <target>Скасувати команду</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.sensitiveInput.dismiss">
+        <source xml:lang="en">Dismiss</source>
+        <target>Відхилити</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.sensitiveInput.focus">
+        <source xml:lang="en">Focus Terminal</source>
+        <target>Фокус Терминал</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.sensitiveInput.message">
+        <source xml:lang="en">The terminal command appears to be prompting for a password or other sensitive value. Focus the terminal to type it directly — secrets must not be sent through chat.</source>
+        <target>Команда терміналу, здається, запитує пароль або інше чутливе значення. Сфокусуйте термінал, щоб ввести його безпосередньо — секрети не повинні надсилатися через чат.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.sensitiveInput.title">
+        <source xml:lang="en">Terminal is waiting for sensitive input</source>
+        <target>Термінал чекає на чутливий ввід</target>
+      </trans-unit>
       <trans-unit id="runInTerminal.streaming">
         <source xml:lang="en">Running `{0}`</source>
         <target>Виконання `{0}`</target>
@@ -687,6 +715,14 @@ Reason for leaving the sandbox: {2}</source>
       <trans-unit id="runInTerminal.unsandboxed.confirmationMessage.defaultReason">
         <source xml:lang="en">The model indicated that this command needs unsandboxed access.</source>
         <target>Модель вказала, що ця команда потребує доступу без обмежень.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.unsandboxed.disabled.invocation">
+        <source xml:lang="en">Not running `{0}` because unsandboxed execution is disabled</source>
+        <target>Не виконується `{0}`, оскільки виконання без пісочниці вимкнено.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.unsandboxed.disabled.result">
+        <source xml:lang="en">The command was not executed because it requested to run outside the terminal sandbox, but running commands outside the sandbox is disabled by chat.agent.sandbox.allowUnsandboxedCommands. Run the command in the sandbox instead, or enable the setting to allow unsandboxed execution.</source>
+        <target>Команда не була виконана, оскільки вона намагалася запуститися поза пісочницею терміналу, але виконання команд поза пісочницею вимкнено параметром chat.agent.sandbox.allowUnsandboxedCommands. Запустіть команду в пісочниці, або увімкніть налаштування, щоб дозволити виконання без пісочниці.</target>
       </trans-unit>
       <trans-unit id="runInTerminal.unsandboxed.domain">
         <source xml:lang="en">Run `{0}` command outside the [sandbox]({1}) to access {2}?</source>
@@ -944,6 +980,18 @@ Reason for leaving the sandbox: {2}</source>
   </file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/common/terminalChatAgentToolsConfiguration" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="agentSandbox.allowAutoApprove">
+        <source xml:lang="en">Controls whether agent mode terminal commands that run inside the sandbox are auto-approved. When disabled, the run in terminal tool uses the existing approval flow. This applies only when {0} is enabled.</source>
+        <target>Контролює, чи команди терміналу режиму агента, які виконуються всередині пісочниці, автоматично затверджуються. Коли вимкнено, інструмент виконання в терміналі використовує існуючий процес затвердження. Це застосовується лише тоді, коли {0} увімкнено.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.allowUnsandboxedCommands">
+        <source xml:lang="en">Controls whether agent mode terminal commands can run outside the sandbox after user confirmation when a sandboxed command fails or when sandbox restrictions would block the command. This applies only when {0} is enabled.</source>
+        <target>Контролює, чи можуть термінальні команди режиму агента виконуватися поза пісочницею після підтвердження користувача, коли команда в пісочниці не вдалася або коли обмеження пісочниці блокують команду. Це застосовується лише тоді, коли {0} увімкнено.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.autoApproveUnsandboxedCommands">
+        <source xml:lang="en">Controls whether agent mode terminal commands that run outside the sandbox are auto-approved. This applies only when both {0} and {1} are enabled.</source>
+        <target>Контролює, чи команди терміналу режиму агента, які виконуються поза пісочницею, автоматично затверджуються. Це застосовується лише тоді, коли обидва {0} та {1} увімкнені.</target>
+      </trans-unit>
       <trans-unit id="agentSandbox.enabled.deprecated">
         <source xml:lang="en">Use {0} instead</source>
         <target>Використовуйте {0} замість цього.</target>
@@ -953,8 +1001,8 @@ Reason for leaving the sandbox: {2}</source>
         <target>Контролює, чи режим агента використовує пісочницю для обмеження можливостей інструментів. Коли увімкнено, такі інструменти, як термінал, виконуються в середовищі пісочниці для обмеження доступу до системи.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.enabledSetting.allowNetworkDescription">
-        <source xml:lang="en">Enable sandboxing for agent mode tools, but do not block commands based on configured network domains.</source>
-        <target>Увімкніть пісочницю для інструментів режиму агента, але не блокуйте команди на основі налаштованих мережевих доменів.</target>
+        <source xml:lang="en">Enable sandboxing for agent mode tools and allow all network domains.</source>
+        <target>Увімкніть пісочницю для інструментів режиму агента та дозвольте всі мережеві домени.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.enabledSetting.offDescription">
         <source xml:lang="en">Disable sandboxing for agent mode tools.</source>
@@ -1001,8 +1049,8 @@ Reason for leaving the sandbox: {2}</source>
         <target>Масив шляхів для повторного дозволу на читання в заборонених регіонах. Має пріоритет над denyRead.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.macFileSystemSetting.allowWrite">
-        <source xml:lang="en">Array of paths to allow write access. Leave empty to disallow all writes.</source>
-        <target>Масив шляхів для дозволу на запис. Залиште порожнім, щоб заборонити всі записи.</target>
+        <source xml:lang="en">Array of additional paths to allow write access. Leave empty to disallow writes outside the workspace folders and sandbox temp directory.</source>
+        <target>Масив додаткових шляхів для дозволу на запис. Залиште порожнім, щоб заборонити записи поза папками робочого простору та тимчасовим каталогом пісочниці.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.macFileSystemSetting.denyRead">
         <source xml:lang="en">Array of paths to deny read access. Leave empty to allow reading all paths.</source>
@@ -1166,9 +1214,17 @@ Reason for leaving the sandbox: {2}</source>
         <source xml:lang="en">Configures the idle poll interval in milliseconds used by the run in terminal tool to detect when commands have finished executing. Lower values make command detection faster but may cause false positives on slow systems. This primarily affects terminals without shell integration where idle detection is used instead of shell integration events.</source>
         <target>Налаштовує інтервал опитування в мілісекундах, який використовується інструментом запуску в терміналі для виявлення завершення виконання команд. Нижчі значення прискорюють виявлення команд, але можуть призвести до хибнопозитивних результатів на повільних системах. Це в основному впливає на термінали без інтеграції оболонки, де використовується виявлення бездіяльності замість подій інтеграції оболонки.</target>
       </trans-unit>
+      <trans-unit id="idleSilenceTimeoutMs.description">
+        <source xml:lang="en">Number of milliseconds the run in terminal tool will wait for new output from a synchronous command before moving it to a background terminal and returning what was collected so far. The process is not killed — the tool returns the terminal ID so the model can poll, send input, or kill it. Set to {0} to disable.</source>
+        <target>Кількість мілісекунд, протягом яких інструмент виконання в терміналі буде чекати новий вихід від синхронної команди, перш ніж перемістити його в фоновий термінал і повернути те, що було зібрано до цього часу. Процес не буде завершено — інструмент повертає ідентифікатор терміналу, щоб модель могла опитувати, надсилати введення або завершити його. Встановіть на {0}, щоб вимкнути.</target>
+      </trans-unit>
       <trans-unit id="ignoreDefaultAutoApproveRules.description">
         <source xml:lang="en">Whether to ignore the built-in default auto-approve rules used by the run in terminal tool as defined in {0}. When this setting is enabled, the run in terminal tool will ignore any rule that comes from the default set but still follow rules defined in the user, remote and workspace settings. Use this setting at your own risk; the default auto-approve rules are designed to protect you against running dangerous commands.</source>
         <target>Чи ігнорувати вбудовані правила автоматичного затвердження за замовчуванням, що використовуються інструментом запуску в терміналі, як визначено в {0}. Коли ця настройка увімкнена, інструмент запуску в терміналі ігноруватиме будь-яке правило, що походить з набору за замовчуванням, але все ще дотримуватиметься правил, визначених у налаштуваннях користувача, віддалених та робочого простору. Використовуйте цю настройку на свій власний ризик; правила автоматичного затвердження за замовчуванням розроблені для захисту вас від виконання небезпечних команд.</target>
+      </trans-unit>
+      <trans-unit id="outputDeltas.description">
+        <source xml:lang="en">When enabled, repeated get terminal output tool calls return only output added since the previous poll for the same terminal execution, or a short unchanged-output message when there is no new output.</source>
+        <target>Коли увімкнено, повторні виклики інструмента отримання виходу терміналу повертають лише вихід, доданий з моменту попереднього опитування для того ж виконання терміналу, або коротке повідомлення про незмінний вихід, коли немає нового виходу.</target>
       </trans-unit>
       <trans-unit id="outputLocation.chat">
         <source xml:lang="en">Reveal the terminal output within chat only.</source>

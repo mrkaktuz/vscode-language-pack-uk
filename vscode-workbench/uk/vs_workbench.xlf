@@ -735,6 +735,10 @@ To complete authentication, navigate to {1} and enter the code above.</source>
         <source xml:lang="en">Advanced settings are hidden by default in the Settings editor unless the user chooses to show advanced settings.</source>
         <target>Розширені налаштування за замовчуванням приховані в редакторі налаштувань, якщо користувач не вибере показати розширені налаштування.</target>
       </trans-unit>
+      <trans-unit id="config.property.agentsWindow.proposed">
+        <source xml:lang="en">Extension '{0}' CANNOT use 'agentsWindow' property on configuration '{1}' without enabling the 'agentsWindowConfiguration' API proposal.</source>
+        <target>Розширення '{0}' НЕ МОЖЕ використовувати властивість 'agentsWindow' у конфігурації '{1}', не активувавши пропозицію API 'agentsWindowConfiguration'.</target>
+      </trans-unit>
       <trans-unit id="config.property.defaultConfiguration.warning">
         <source xml:lang="en">Cannot register configuration defaults for '{0}'. Only defaults for machine-overridable, window, resource and language overridable scoped settings are supported.</source>
         <target>Не вдалося зареєструвати значення за замовчуванням конфігурації для '{0}'. Підтримуються лише значення за замовчуванням для налаштувань, які можна перекривати на рівні машини, вікна, ресурсу та мови.</target>
@@ -786,6 +790,22 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       <trans-unit id="preview">
         <source xml:lang="en">Preview settings can be used to try out new features before they are finalized.</source>
         <target>Показати &amp;&amp;Попередній перегляд</target>
+      </trans-unit>
+      <trans-unit id="scope.agentsWindow">
+        <source xml:lang="en">Configuration overrides for the Agents window. Allows specifying a different default value and read-only behavior for this setting when running in the Agents window.
+
+**Note**: This is a proposed API. To use it, extensions must include `agentsWindowConfiguration` in their `enabledApiProposals`.</source>
+        <target>Налаштування переваг для вікна Агентів. Дозволяє вказати інше значення за замовчуванням та режим тільки для читання для цього налаштування під час роботи у вікні Агентів.
+
+**Примітка**: Це запропоноване API. Щоб його використовувати, розширення повинні включати `agentsWindowConfiguration` у свої `enabledApiProposals`.</target>
+      </trans-unit>
+      <trans-unit id="scope.agentsWindow.default">
+        <source xml:lang="en">The default value for this setting in the Agents window.</source>
+        <target>Значення за замовчуванням для цього налаштування у вікні Агентів.</target>
+      </trans-unit>
+      <trans-unit id="scope.agentsWindow.readOnly">
+        <source xml:lang="en">When true, this setting cannot be changed by the user in the Agents window.</source>
+        <target>Коли це значення істинне, цей параметр не може бути змінений користувачем у вікні Агентів.</target>
       </trans-unit>
       <trans-unit id="scope.application.description">
         <source xml:lang="en">Configuration that can be configured only in the user settings.</source>
@@ -1634,11 +1654,6 @@ This action is irreversible and may result in data loss!</source>
         <note>&amp;&amp; denotes a mnemonic</note>
         <target>&amp;&amp;Центрований макет</target>
       </trans-unit>
-      <trans-unit id="miToggleZenMode">
-        <source xml:lang="en">Zen Mode</source>
-        <note>&amp;&amp; denotes a mnemonic</note>
-        <target>Режим Зен</target>
-      </trans-unit>
       <trans-unit id="move second sidebar left">
         <source xml:lang="en">Move Secondary Side Bar Left</source>
         <target>Перемістити бокову панель праворуч</target>
@@ -1949,10 +1964,6 @@ This action is irreversible and may result in data loss!</source>
       <trans-unit id="toggleVisibility">
         <source xml:lang="en">Visibility</source>
         <target>Видимість</target>
-      </trans-unit>
-      <trans-unit id="toggleZenMode">
-        <source xml:lang="en">Toggle Zen Mode</source>
-        <target>Перемкнути режим Зен</target>
       </trans-unit>
       <trans-unit id="top">
         <source xml:lang="en">Top</source>
@@ -6838,17 +6849,34 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <note>{0}, {1} will be a setting name rendered as a link</note>
         <target>Контролює, чи повинні вкладки обгортатися на кілька рядків при перевищенні доступного простору, або чи повинен з'явитися прокрутка замість цього. Це значення ігнорується, коли {0} не встановлено на '{1}'.</target>
       </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/browser/workbench.zenMode.contribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="miToggleZenMode">
+        <source xml:lang="en">Zen Mode</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>Режим Зен</target>
+      </trans-unit>
+      <trans-unit id="tabBar">
+        <source xml:lang="en">Tab Bar</source>
+        <target>Панель вкладок</target>
+      </trans-unit>
+      <trans-unit id="toggleZenMode">
+        <source xml:lang="en">Toggle Zen Mode</source>
+        <target>Переключити режим Зен</target>
+      </trans-unit>
       <trans-unit id="zenMode.centerLayout">
         <source xml:lang="en">Controls whether turning on Zen Mode also centers the layout.</source>
-        <target>Контролює, чи ввімкнення режиму Zen також центрирує макет.</target>
+        <target>Контролює, чи ввімкнення режиму Zen також центрує макет.</target>
       </trans-unit>
       <trans-unit id="zenMode.fullScreen">
         <source xml:lang="en">Controls whether turning on Zen Mode also puts the workbench into full screen mode.</source>
-        <target>Контролює, чи ввімкнення режиму Zen також переводить верстак у повноекранний режим.</target>
+        <target>Контролює, чи ввімкнення режиму Zen також переводить робочий стіл у повноекранний режим.</target>
       </trans-unit>
       <trans-unit id="zenMode.hideActivityBar">
         <source xml:lang="en">Controls whether turning on Zen Mode also hides the activity bar either at the left or right of the workbench.</source>
-        <target>Контролює, чи ввімкнення режиму Zen також приховує панель активності зліва чи справа від робочого столу.</target>
+        <target>Контролює, чи ввімкнення режиму Zen також приховує панель активності зліва або справа від робочої області.</target>
       </trans-unit>
       <trans-unit id="zenMode.hideLineNumbers">
         <source xml:lang="en">Controls whether turning on Zen Mode also hides the editor line numbers.</source>
@@ -6856,15 +6884,15 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       </trans-unit>
       <trans-unit id="zenMode.hideStatusBar">
         <source xml:lang="en">Controls whether turning on Zen Mode also hides the status bar at the bottom of the workbench.</source>
-        <target>Контролює, чи ввімкнення режиму Zen також приховує панель стану внизу робочої області.</target>
+        <target>Контролює, чи ввімкнення режиму Zen також приховує панель стану внизу робочого столу.</target>
       </trans-unit>
       <trans-unit id="zenMode.restore">
         <source xml:lang="en">Controls whether a window should restore to Zen Mode if it was exited in Zen Mode.</source>
-        <target>Контролює, чи вікно повинно відновитися в режимі Zen, якщо його було закрито в режимі Zen.</target>
+        <target>Контролює, чи вікно повинно відновитися в режимі Zen, якщо воно було закрито в режимі Zen.</target>
       </trans-unit>
       <trans-unit id="zenMode.showTabs">
         <source xml:lang="en">Controls whether turning on Zen Mode should show multiple editor tabs, a single editor tab, or hide the editor title area completely.</source>
-        <target>Контролює, чи має увімкнення режиму Zen показувати кілька вкладок редактора, одну вкладку редактора або повністю приховувати область заголовка редактора.</target>
+        <target>Контролює, чи має ввімкнення режиму Zen показувати кілька вкладок редактора, одну вкладку редактора або повністю приховувати область заголовка редактора.</target>
       </trans-unit>
       <trans-unit id="zenMode.showTabs.multiple">
         <source xml:lang="en">Each editor is displayed as a tab in the editor title area.</source>
@@ -6880,7 +6908,7 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       </trans-unit>
       <trans-unit id="zenMode.silentNotifications">
         <source xml:lang="en">Controls whether notifications do not disturb mode should be enabled while in Zen Mode. If true, only error notifications will pop out.</source>
-        <target>Контролює, чи має бути увімкнено режим не турбувати під час Zen Mode. Якщо так, з'являтимуться лише сповіщення про помилки.</target>
+        <target>Контролює, чи має бути увімкнено режим "Не турбувати" для сповіщень під час Zen Mode. Якщо так, то з'являтимуться лише сповіщення про помилки.</target>
       </trans-unit>
       <trans-unit id="zenModeConfigurationTitle">
         <source xml:lang="en">Zen Mode</source>
@@ -7121,6 +7149,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="isSessionsWindow">
         <source xml:lang="en">Whether the current window is a agent sessions window.</source>
         <target>Чи є поточне вікно вікном сесій агента.</target>
+      </trans-unit>
+      <trans-unit id="isTopRightEditorGroup">
+        <source xml:lang="en">Whether the editor group is the top right editor group in the editor part</source>
+        <target>Чи є група редакторів групою редакторів у верхньому правому куті частини редактора</target>
       </trans-unit>
       <trans-unit id="isWindowAlwaysOnTop">
         <source xml:lang="en">Whether the window is always on top</source>
