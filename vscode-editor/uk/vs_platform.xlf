@@ -480,6 +480,14 @@ A keybinding</note>
   </file>
   <file original="src/vs/platform/agentHost/common/agentHostSchema" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="agentHost.config.sessionSyncEnabled.description">
+        <source xml:lang="en">Whether remote session sync is enabled for the copilot-sdk CLI.</source>
+        <target>Чи увімкнено синхронізацію віддаленої сесії для copilot-sdk CLI.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.sessionSyncEnabled.title">
+        <source xml:lang="en">Session Sync</source>
+        <target>Синхронізація сесії</target>
+      </trans-unit>
       <trans-unit id="agentHost.config.telemetryLevel.description">
         <source xml:lang="en">Most restrictive telemetry level requested by connected clients.</source>
         <target>Найбільш обмежувальний рівень телеметрії, запитуваний підключеними клієнтами.</target>
@@ -566,6 +574,26 @@ A keybinding</note>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/platform/agentHost/common/changesetUri" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="branchChangeset.label">
+        <source xml:lang="en">Branch Changes</source>
+        <target>Зміни гілки</target>
+      </trans-unit>
+      <trans-unit id="thisTurnChangeset.label">
+        <source xml:lang="en">This Turn</source>
+        <target>Цей хід</target>
+      </trans-unit>
+      <trans-unit id="uncommittedChangeset.description">
+        <source xml:lang="en">Show uncommitted changes in this session</source>
+        <target>Показати незакріплені зміни в цій сесії</target>
+      </trans-unit>
+      <trans-unit id="uncommittedChangeset.label">
+        <source xml:lang="en">Uncommitted Changes</source>
+        <target>Незбережені зміни</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/platform/agentHost/common/claudeModelConfig" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="claude.modelThinkingLevel.description">
@@ -595,6 +623,62 @@ A keybinding</note>
       <trans-unit id="claude.modelThinkingLevel.xhigh">
         <source xml:lang="en">Extra High</source>
         <target>Додатково високо</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/common/sandboxConfigSchema" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHost.config.sandbox.advancedRuntime.title">
+        <source xml:lang="en">Advanced Sandbox Runtime</source>
+        <target>Розширене середовище виконання Sandbox</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.sandbox.allowUnsandboxedCommands.title">
+        <source xml:lang="en">Allow Unsandboxed Commands</source>
+        <target>Дозволити команди без пісочниці</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.sandbox.allowedDomains.item.title">
+        <source xml:lang="en">Domain</source>
+        <target>Домен</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.sandbox.allowedDomains.title">
+        <source xml:lang="en">Allowed Network Domains</source>
+        <target>Дозволені мережеві домени</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.sandbox.autoApproveUnsandboxedCommands.title">
+        <source xml:lang="en">Auto-Approve Unsandboxed Commands</source>
+        <target>Авто-схвалення незахищених команд</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.sandbox.deniedDomains.item.title">
+        <source xml:lang="en">Domain</source>
+        <target>Домен</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.sandbox.deniedDomains.title">
+        <source xml:lang="en">Denied Network Domains</source>
+        <target>Відхилені мережеві домени</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.sandbox.enabled.title">
+        <source xml:lang="en">Sandbox Enabled</source>
+        <target>Пісочниця увімкнена</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.sandbox.linuxFileSystem.title">
+        <source xml:lang="en">Linux Sandbox Filesystem</source>
+        <target>Linux Sandbox Файлова система</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.sandbox.macFileSystem.title">
+        <source xml:lang="en">macOS Sandbox Filesystem</source>
+        <target>macOS Пісочниця Файлова Система</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.sandbox.title">
+        <source xml:lang="en">Agent Sandbox</source>
+        <target>Агентський пісочниця</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.sandbox.windowsEnabled.title">
+        <source xml:lang="en">Sandbox Enabled (Windows)</source>
+        <target>Пісочниця увімкнена (Windows)</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.sandbox.windowsFileSystem.title">
+        <source xml:lang="en">Windows Sandbox Filesystem</source>
+        <target>Файлова система Windows Sandbox</target>
       </trans-unit>
     </body>
   </file>
@@ -796,6 +880,154 @@ A keybinding</note>
         <source xml:lang="en">Write file</source>
         <target>Записати файл</target>
       </trans-unit>
+      <trans-unit id="claude.toolComplete.bash">
+        <source xml:lang="en">Ran shell command</source>
+        <target>Виконав команду оболонки</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.bashCmd">
+        <source xml:lang="en">Ran {0}</source>
+        <target>Запущено {0}</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.bashOutput">
+        <source xml:lang="en">Read shell output</source>
+        <target>Читати вивід оболонки</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.edit">
+        <source xml:lang="en">Edited file</source>
+        <target>Редагований файл</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.editFile">
+        <source xml:lang="en">Edited {0}</source>
+        <target>Відредаговано {0}</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.failed">
+        <source xml:lang="en">"{0}" failed</source>
+        <target>"{0}" не вдалося</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.generic">
+        <source xml:lang="en">Used "{0}"</source>
+        <target>Використано "{0}"</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.glob">
+        <source xml:lang="en">Found files</source>
+        <target>Знайдені файли</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.globPattern">
+        <source xml:lang="en">Found files matching {0}</source>
+        <target>Знайдено файли, що відповідають {0}</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.grep">
+        <source xml:lang="en">Searched files</source>
+        <target>Шукані файли</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.grepPattern">
+        <source xml:lang="en">Searched for {0}</source>
+        <target>Шукали {0}</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.killBash">
+        <source xml:lang="en">Killed shell command</source>
+        <target>Вбито команду оболонки</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.ls">
+        <source xml:lang="en">Listed directory</source>
+        <target>Перелік директорій</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.lsPath">
+        <source xml:lang="en">Listed {0}</source>
+        <target>Перераховано {0}</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.read">
+        <source xml:lang="en">Read file</source>
+        <target>Читати файл</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.readFile">
+        <source xml:lang="en">Read {0}</source>
+        <target>Читати {0}</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.task">
+        <source xml:lang="en">Ran subagent</source>
+        <target>Запустити підагента</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.todoWrite">
+        <source xml:lang="en">Updated todo list</source>
+        <target>Оновлений список справ</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.webFetch">
+        <source xml:lang="en">Fetched {0}</source>
+        <target>Отримано {0}</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.webFetchGeneric">
+        <source xml:lang="en">Fetched URL</source>
+        <target>Отримане URL</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.bash">
+        <source xml:lang="en">Running shell command</source>
+        <target>Виконання команди оболонки</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.bashCmd">
+        <source xml:lang="en">Running {0}</source>
+        <target>Запуск {0}</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.bashOutput">
+        <source xml:lang="en">Reading shell output</source>
+        <target>Читання виходу оболонки</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.edit">
+        <source xml:lang="en">Editing file</source>
+        <target>Редагування файлу</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.editFile">
+        <source xml:lang="en">Editing {0}</source>
+        <target>Редагування {0}</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.glob">
+        <source xml:lang="en">Finding files</source>
+        <target>Знайти файли</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.globPattern">
+        <source xml:lang="en">Finding files matching {0}</source>
+        <target>Знаходження файлів, що відповідають {0}</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.grep">
+        <source xml:lang="en">Searching files</source>
+        <target>Пошук файлів</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.grepPattern">
+        <source xml:lang="en">Searching for {0}</source>
+        <target>Шукаю {0}</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.killBash">
+        <source xml:lang="en">Killing shell command</source>
+        <target>Вбивство команди оболонки</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.ls">
+        <source xml:lang="en">Listing directory</source>
+        <target>Список каталогів</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.lsPath">
+        <source xml:lang="en">Listing {0}</source>
+        <target>Список {0}</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.read">
+        <source xml:lang="en">Reading file</source>
+        <target>Читання файлу</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.readFile">
+        <source xml:lang="en">Reading {0}</source>
+        <target>Читання {0}</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.todoWrite">
+        <source xml:lang="en">Updating todo list</source>
+        <target>Оновлення списку справ</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.webFetch">
+        <source xml:lang="en">Fetching {0}</source>
+        <target>Отримання {0}</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.webFetchGeneric">
+        <source xml:lang="en">Fetching URL</source>
+        <target>Отримання URL</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotAgent" source-language="en" datatype="plaintext" target-language="uk">
@@ -915,6 +1147,26 @@ A keybinding</note>
       <trans-unit id="agentHost.planReview.viewPlanLink">
         <source xml:lang="en">View full plan</source>
         <target>Переглянути повний план</target>
+      </trans-unit>
+      <trans-unit id="agentHost.unsandboxedCommandConfirmation.blockedDomains">
+        <source xml:lang="en">This command needs to access blocked network domain(s): {0}.</source>
+        <target>Ця команда потребує доступу до заблокованих мережевих доменів: {0}.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.unsandboxedCommandConfirmation.generic">
+        <source xml:lang="en">This command needs to run outside the sandbox.</source>
+        <target>Ця команда повинна виконуватись поза пісочницею.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.unsandboxedCommandConfirmation.reason">
+        <source xml:lang="en">Reason for leaving the sandbox: {0}</source>
+        <target>Причина виходу з пісочниці: {0}</target>
+      </trans-unit>
+      <trans-unit id="agentHost.unsandboxedCommandConfirmation.title.blockedDomains">
+        <source xml:lang="en">Run Command Outside the Sandbox to Access {0}?</source>
+        <target>Запустити команду поза пісочницею для доступу до {0}?</target>
+      </trans-unit>
+      <trans-unit id="agentHost.unsandboxedCommandConfirmation.title.generic">
+        <source xml:lang="en">Run Command Outside the Sandbox?</source>
+        <target>Запустити команду поза пісочницею?</target>
       </trans-unit>
     </body>
   </file>
@@ -4998,6 +5250,10 @@ To override an existing profile use its profile name as the key, for example:
       <trans-unit id="codiconFontSize">
         <source xml:lang="en">Base font size for codicons.</source>
         <target>Базовий розмір шрифту для codicons.</target>
+      </trans-unit>
+      <trans-unit id="codiconFontSizeCompact">
+        <source xml:lang="en">Compact font size for codicons.</source>
+        <target>Компактний розмір шрифту для кодиконів.</target>
       </trans-unit>
       <trans-unit id="cornerRadiusCircle">
         <source xml:lang="en">Circular corner radius for fully rounded UI elements.</source>

@@ -1064,6 +1064,34 @@ Reason for leaving the sandbox: {2}</source>
         <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Key/value pairs are passed through to the root of the sandbox runtime configuration.</source>
         <target>Примітка: це налаштування застосовується тільки коли {0} увімкнено. Параметри ключ/значення передаються до кореня конфігурації середовища пісочниці.</target>
       </trans-unit>
+      <trans-unit id="agentSandbox.windowsEnabledSetting">
+        <source xml:lang="en">Controls whether agent mode uses sandboxing on Windows.</source>
+        <target>Контролює, чи режим агента використовує пісочницю на Windows.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.windowsEnabledSetting.allowNetworkDescription">
+        <source xml:lang="en">Enable sandboxing for agent mode tools on Windows and allow all network domains.</source>
+        <target>Увімкніть пісочницю для інструментів режиму агента на Windows та дозволте всі мережеві домени.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.windowsEnabledSetting.offDescription">
+        <source xml:lang="en">Disable sandboxing for agent mode tools on Windows.</source>
+        <target>Вимкніть пісочницю для інструментів режиму агента на Windows.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.windowsFileSystemSetting">
+        <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Controls file system access in sandbox on Windows. Paths do not support glob patterns, only literal paths (ex: C:\src, C:\Users\me\.ssh, .env).</source>
+        <target>Примітка: це налаштування застосовується лише коли {0} увімкнено. Контролює доступ до файлової системи в пісочниці на Windows. Шляхи не підтримують шаблони глобусів, лише літеральні шляхи (наприклад: C:\src, C:\Users\me\.ssh, .env).</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.windowsFileSystemSetting.allowRead">
+        <source xml:lang="en">Array of additional paths to allow read-only access. Takes precedence over denyRead.</source>
+        <target>Масив додаткових шляхів для надання доступу тільки для читання. Має пріоритет над denyRead.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.windowsFileSystemSetting.allowWrite">
+        <source xml:lang="en">Array of additional paths to allow read/write access. Leave empty to disallow writes outside the workspace folders and sandbox temp directory.</source>
+        <target>Масив додаткових шляхів для дозволу на читання/запис. Залиште порожнім, щоб заборонити записи поза папками робочого простору та тимчасовим каталогом пісочниці.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.windowsFileSystemSetting.denyRead">
+        <source xml:lang="en">Array of paths to deny access. Leave empty to allow reading all paths.</source>
+        <target>Масив шляхів для заборони доступу. Залиште порожнім, щоб дозволити читання всіх шляхів.</target>
+      </trans-unit>
       <trans-unit id="autoApprove.defaults">
         <source xml:lang="en">Note that there's a default set of rules to allow and also deny commands. Consider setting {0} to {1} to ignore all default rules to ensure there are no conflicts with your own rules. Do this at your own risk, the default denial rules are designed to protect you against running dangerous commands.</source>
         <target>Зверніть увагу, що існує набір правил за замовчуванням, які дозволяють і також забороняють команди. Розгляньте можливість встановлення {0} на {1}, щоб ігнорувати всі правила за замовчуванням, щоб забезпечити відсутність конфліктів з вашими власними правилами. Робіть це на свій ризик, правила заборони за замовчуванням призначені для захисту вас від виконання небезпечних команд.</target>

@@ -1944,6 +1944,10 @@
         <source xml:lang="en">Branch</source>
         <target>Гілка</target>
       </trans-unit>
+      <trans-unit id="agentHost.customAgentPicker">
+        <source xml:lang="en">Agent</source>
+        <target>Агент</target>
+      </trans-unit>
       <trans-unit id="agentHost.isolationPicker">
         <source xml:lang="en">Isolation</source>
         <target>Ізоляція</target>
@@ -1958,11 +1962,31 @@
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostEditingSession" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostCustomAgentPicker" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="multiDiffEditorInput.name">
-        <source xml:lang="en">Suggested Edits</source>
-        <target>Пропоновані зміни</target>
+      <trans-unit id="agentPickerCustomCategory">
+        <source xml:lang="en">Custom Agents</source>
+        <target>Користувацькі агенти</target>
+      </trans-unit>
+      <trans-unit id="agentPickerDefault">
+        <source xml:lang="en">Agent</source>
+        <target>Агент</target>
+      </trans-unit>
+      <trans-unit id="agentPickerDefaultCategory">
+        <source xml:lang="en">Default</source>
+        <target>За замовчуванням</target>
+      </trans-unit>
+      <trans-unit id="agentPickerDefaultHover">
+        <source xml:lang="en">Use the default agent.</source>
+        <target>Використовуйте агента за замовчуванням.</target>
+      </trans-unit>
+      <trans-unit id="configureCustomAgents">
+        <source xml:lang="en">Configure Custom Agents...</source>
+        <target>Налаштувати користувацькі агенти...</target>
+      </trans-unit>
+      <trans-unit id="viewAgent">
+        <source xml:lang="en">View {0} agent</source>
+        <target>Переглянути агента {0}</target>
       </trans-unit>
     </body>
   </file>
@@ -4598,7 +4622,7 @@
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/chat/browser/chat.contribution" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/contrib/chat/browser/chat.shared.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentPlugin">
         <source xml:lang="en">Agent Plugin</source>
@@ -4606,7 +4630,7 @@
       </trans-unit>
       <trans-unit id="agentSandbox.allowedNetworkDomains.deprecated">
         <source xml:lang="en">Use {0} instead</source>
-        <target>Використовуйте {0} замість цього.</target>
+        <target>Використовуйте {0} натомість</target>
       </trans-unit>
       <trans-unit id="agentSandbox.allowedNetworkDomains2.deprecated">
         <source xml:lang="en">Use {0} instead</source>
@@ -4614,7 +4638,7 @@
       </trans-unit>
       <trans-unit id="agentSandbox.deniedNetworkDomains.deprecated">
         <source xml:lang="en">Use {0} instead</source>
-        <target>Використовуйте {0} замість цього</target>
+        <target>Використовуйте {0} замість цього.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.deniedNetworkDomains2.deprecated">
         <source xml:lang="en">Use {0} instead</source>
@@ -4626,11 +4650,11 @@
 This feature disables critical security protections and makes it much easier for an attacker to compromise the machine.
 
 Note: This setting only controls tool approval and does not prevent the agent from asking questions. To automatically answer agent questions, use the `#chat.autoReply#` setting.</source>
-        <target>Глобальне автоматичне схвалення, також відоме як "YOLO режим", повністю відключає ручне схвалення для всіх інструментів у всіх робочих просторах, дозволяючи агенту діяти повністю автономно. Це надзвичайно небезпечно і *ніколи* не рекомендується, навіть контейнеризовані середовища, такі як Codespaces та Dev Containers, мають ключі користувачів, передані в контейнер, які можуть бути скомпрометовані.
+        <target>Глобальне автоматичне схвалення, також відоме як "YOLO режим", повністю відключає ручне схвалення для всіх інструментів у всіх робочих просторах, дозволяючи агенту діяти повністю автономно. Це надзвичайно небезпечно і *ніколи* не рекомендується, навіть контейнеризовані середовища, такі як Codespaces і Dev Containers, мають ключі користувачів, які передаються в контейнер і можуть бути скомпрометовані.
 
 Ця функція відключає критично важливі засоби безпеки і значно полегшує зловмиснику компрометацію машини.
 
-Примітка: Ця настройка контролює лише схвалення інструментів і не заважає агенту ставити запитання. Щоб автоматично відповідати на запитання агента, використовуйте настройку `#chat.autoReply#`.</target>
+Примітка: Ця настройка контролює лише схвалення інструментів і не заважає агенту ставити запитання. Щоб автоматично відповідати на запитання агента, використовуйте налаштування `#chat.autoReply#`.</target>
       </trans-unit>
       <trans-unit id="chat">
         <source xml:lang="en">Chat</source>
@@ -4638,19 +4662,19 @@ Note: This setting only controls tool approval and does not prevent the agent fr
       </trans-unit>
       <trans-unit id="chat.agent.allowedNetworkDomains">
         <source xml:lang="en">Allowed domains for network access by agent tools (fetch tool, integrated browser). Applies when {0} or {1} is enabled. When {1} is set to {2}, all domains are allowed. Supports wildcards like {3}. When both allowed and denied lists are empty, all domains are blocked. Denied domains (see {4}) take precedence.</source>
-        <target>Дозволені домени для мережевого доступу агентських інструментів (інструмент отримання, інтегрований браузер). Застосовується, коли {0} або {1} увімкнено. Коли {1} встановлено на {2}, всі домени дозволені. Підтримує підстановочні знаки, такі як {3}. Коли обидва списки дозволених і заборонених порожні, всі домени заблоковані. Заборонені домени (див. {4}) мають пріоритет.</target>
+        <target>Дозволені домени для мережевого доступу агентських інструментів (інструмент отримання, інтегрований браузер). Застосовується, коли {0} або {1} увімкнено. Коли {1} встановлено на {2}, всі домени дозволені. Підтримує шаблони, такі як {3}. Коли обидва списки дозволених і заборонених порожні, всі домени заблоковані. Заборонені домени (див. {4}) мають пріоритет.</target>
       </trans-unit>
       <trans-unit id="chat.agent.deniedNetworkDomains">
         <source xml:lang="en">Denied domains for network access by agent tools (fetch tool, integrated browser). Applies when {0} or {1} is enabled. This does not apply when {1} is set to {2}. Takes precedence over {3}. Supports wildcards like {4}.</source>
-        <target>Відмовлені домени для доступу до мережі інструментами агента (інструмент отримання, інтегрований браузер). Застосовується, коли {0} або {1} увімкнено. Це не застосовується, коли {1} встановлено на {2}. Має пріоритет над {3}. Підтримує підстановочні знаки, такі як {4}.</target>
+        <target>Відмовлені домени для доступу до мережі інструментами агента (інструмент отримання, інтегрований браузер). Застосовується, коли {0} або {1} увімкнено. Це не застосовується, коли {1} встановлено на {2}. Має пріоритет над {3}. Підтримує символи підстановки, такі як {4}.</target>
       </trans-unit>
       <trans-unit id="chat.agent.enabled.description">
         <source xml:lang="en">When enabled, agent mode can be activated from chat and tools in agentic contexts with side effects can be used.</source>
-        <target>Коли увімкнено, режим агента може бути активовано з чату, а інструменти в агентних контекстах з побічними ефектами можуть бути використані.</target>
+        <target>Коли увімкнено, режим агента може бути активований з чату, а інструменти в агентних контекстах з побічними ефектами можуть бути використані.</target>
       </trans-unit>
       <trans-unit id="chat.agent.maxRequests">
         <source xml:lang="en">The maximum number of requests to allow per-turn when using an agent. When the limit is reached, will ask to confirm to continue.</source>
-        <target>Максимальна кількість запитів, яку дозволено на один хід при використанні агента. Коли ліміт буде досягнуто, буде запропоновано підтвердити продовження.</target>
+        <target>Максимальна кількість запитів, дозволених за один хід при використанні агента. Коли ліміт буде досягнуто, буде запропоновано підтвердити продовження.</target>
       </trans-unit>
       <trans-unit id="chat.agent.networkFilter">
         <source xml:lang="en">When enabled, network access by agent tools (fetch tool, integrated browser) is restricted according to {0} and {1}. Domain filtering is also applied to those tools when {2} is enabled.</source>
@@ -4666,11 +4690,11 @@ Note: This setting only controls tool approval and does not prevent the agent fr
       </trans-unit>
       <trans-unit id="chat.agent.thinking.collapsedTools.off">
         <source xml:lang="en">Tool calls are shown separately, not collapsed into thinking.</source>
-        <target>Виклики інструментів показані окремо, не згорнуті в роздуми.</target>
+        <target>Виклики інструментів показані окремо, не згруповані в роздуми.</target>
       </trans-unit>
       <trans-unit id="chat.agent.thinking.collapsedTools.withThinking">
         <source xml:lang="en">Tool calls are collapsed into thinking sections when thinking is present.</source>
-        <target>Виклики інструментів згруповані в секції роздумів, коли присутнє роздумування.</target>
+        <target>Виклики інструментів згруповані в секції мислення, коли присутнє мислення.</target>
       </trans-unit>
       <trans-unit id="chat.agent.thinking.generateTitles">
         <source xml:lang="en">Controls whether to use an LLM to generate summary titles for thinking sections.</source>
@@ -4678,7 +4702,7 @@ Note: This setting only controls tool approval and does not prevent the agent fr
       </trans-unit>
       <trans-unit id="chat.agent.thinking.phrases">
         <source xml:lang="en">Customize the loading messages shown during agent thinking and progress indicators. Use `"mode": "replace"` to use only your phrases, or `"mode": "append"` to add them to the defaults.</source>
-        <target>Налаштуйте повідомлення про завантаження, які відображаються під час роздумів агента та індикаторів прогресу. Використовуйте `"mode": "replace"`, щоб використовувати лише ваші фрази, або `"mode": "append"`, щоб додати їх до стандартних.</target>
+        <target>Налаштуйте повідомлення про завантаження, що відображаються під час роздумів агента та індикаторів прогресу. Використовуйте `"mode": "replace"`, щоб використовувати лише ваші фрази, або `"mode": "append"`, щоб додати їх до стандартних.</target>
       </trans-unit>
       <trans-unit id="chat.agent.thinking.phrases.mode">
         <source xml:lang="en">'replace' replaces all default phrases entirely; 'append' adds your phrases to all default categories.</source>
@@ -4698,11 +4722,11 @@ Note: This setting only controls tool approval and does not prevent the agent fr
       </trans-unit>
       <trans-unit id="chat.agent.thinkingMode.collapsedPreview">
         <source xml:lang="en">Thinking parts will be expanded first, then collapse once we reach a part that is not thinking.</source>
-        <target>Частини, що думають, спочатку будуть розширені, а потім згорнуться, коли ми досягнемо частини, яка не є мислячою.</target>
+        <target>Частини, що думають, спочатку будуть розширені, а потім згорнуться, коли ми досягнемо частини, яка не думає.</target>
       </trans-unit>
       <trans-unit id="chat.agent.thinkingMode.fixedScrolling">
         <source xml:lang="en">Show thinking in a fixed-height streaming panel that auto-scrolls; click header to expand to full height.</source>
-        <target>Показати думки у панелі потокового відео з фіксованою висотою, яка автоматично прокручується; натисніть заголовок, щоб розгорнути до повної висоти.</target>
+        <target>Показати думки в панелі потокового відео фіксованої висоти, яка автоматично прокручується; натисніть заголовок, щоб розгорнути до повної висоти.</target>
       </trans-unit>
       <trans-unit id="chat.agent.thinkingStyle">
         <source xml:lang="en">Controls how thinking is rendered.</source>
@@ -4710,15 +4734,15 @@ Note: This setting only controls tool approval and does not prevent the agent fr
       </trans-unit>
       <trans-unit id="chat.agentHost.ahpJsonlLogging">
         <source xml:lang="en">When enabled, logs all AHP transport messages for agent host connections to JSONL files under the window's log directory.</source>
-        <target>Коли увімкнено, записує всі транспортні повідомлення AHP для з'єднань хостів агентів у файли JSONL у каталозі журналів вікна.</target>
+        <target>Коли увімкнено, веде журнал усіх повідомлень транспорту AHP для з'єднань хостів агентів у файли JSONL у каталозі журналів вікна.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.claudeAgent.path">
         <source xml:lang="en">Experimental, for local testing only. Absolute path to a locally-installed `@anthropic-ai/claude-agent-sdk` package. When set, the Claude agent provider is registered inside the agent host and the SDK is loaded from this path. Requires `#chat.agentHost.enabled#`. The agent host process must be restarted for changes to take effect. This setting will be removed once the SDK is delivered through the Extension Marketplace.</source>
-        <target>Експериментальний, лише для локального тестування. Абсолютний шлях до локально встановленого пакету `@anthropic-ai/claude-agent-sdk`. Коли встановлено, провайдер агента Claude реєструється всередині хоста агента, і SDK завантажується з цього шляху. Потребує `#chat.agentHost.enabled#`. Процес хоста агента повинен бути перезапущений, щоб зміни набрали чинності. Цю налаштування буде видалено, як тільки SDK буде доставлено через Ринок розширень.</target>
+        <target>Експериментальний, лише для локального тестування. Абсолютний шлях до локально встановленого пакету `@anthropic-ai/claude-agent-sdk`. Коли встановлено, провайдер агента Claude реєструється всередині хоста агента, і SDK завантажується з цього шляху. Потрібно `#chat.agentHost.enabled#`. Процес хоста агента повинен бути перезапущений, щоб зміни набрали чинності. Цю налаштування буде видалено, як тільки SDK буде доставлено через Extension Marketplace.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.clientTools">
         <source xml:lang="en">Tool reference names to expose as client-provided tools in agent host sessions.</source>
-        <target>Імена посилань на інструменти, які потрібно відкрити як інструменти, надані клієнтом, у сесіях хостів агентів.</target>
+        <target>Імена посилань на інструменти для відображення як інструменти, надані клієнтом, у сесіях хостів агентів.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.customTerminalTool.enabled">
         <source xml:lang="en">When enabled, Copilot SDK sessions use the Agent Host terminal tool override instead of the SDK's default terminal behavior.</source>
@@ -4730,15 +4754,15 @@ Note: This setting only controls tool approval and does not prevent the agent fr
       </trans-unit>
       <trans-unit id="chat.agentHost.ipcLogging">
         <source xml:lang="en">When enabled, logs all IPC traffic for each agent host to a dedicated output channel.</source>
-        <target>Коли увімкнено, веде облік всього IPC-трафіку для кожного хоста агента в спеціальний вихідний канал.</target>
+        <target>Коли увімкнено, веде журнал всього IPC-трафіку для кожного хоста агента в спеціальний вихідний канал.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.otel.captureContent">
         <source xml:lang="en">When enabled, includes prompt and response content in OTel span attributes. Sets `OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT`. Privacy-sensitive: do not enable in environments that ship spans to shared sinks.</source>
-        <target>Коли ввімкнено, включає вміст запиту та відповіді в атрибути OTel span. Встановлює `OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT`. Чутливі до конфіденційності: не ввімкнено в середовищах, які передають спани до спільних сховищ.</target>
+        <target>Коли увімкнено, включає вміст запиту та відповіді в атрибути спанів OTel. Встановлює `OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT`. Чутливі до конфіденційності: не вмикайте в середовищах, які відправляють спани до спільних місць зберігання.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.otel.dbSpanExporter.enabled">
         <source xml:lang="en">When enabled, the agent host persists every emitted OTel span to a local SQLite database. Spans can be inspected via the `Export Agent Host Traces Database` command. Compatible with external exporters: spans are written to SQLite *and* forwarded to the user-configured sink.</source>
-        <target>Коли увімкнено, хост агента зберігає кожен виведений OTel span у локальній базі даних SQLite. Спани можна перевірити за допомогою команди `Експорт бази даних трас агента хоста`. Сумісно з зовнішніми експортерами: спани записуються в SQLite *та* пересилаються до налаштованого користувачем приймача.</target>
+        <target>Коли увімкнено, хост агента зберігає кожен випущений OTel span у локальній базі даних SQLite. Спани можна перевірити за допомогою команди `Експорт бази даних трас агента хоста`. Сумісно з зовнішніми експортерами: спани записуються в SQLite *та* пересилаються до налаштованого користувачем приймача.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.otel.enabled">
         <source xml:lang="en">When enabled, the agent host emits OpenTelemetry traces from the Copilot SDK. Requires `#chat.agentHost.enabled#`. Either configure `#chat.agentHost.otel.otlpEndpoint#` to ship traces to an external collector or enable `#chat.agentHost.otel.dbSpanExporter.enabled#` to capture them locally.</source>
@@ -4746,7 +4770,7 @@ Note: This setting only controls tool approval and does not prevent the agent fr
       </trans-unit>
       <trans-unit id="chat.agentHost.otel.exporterType">
         <source xml:lang="en">Exporter backend used by the Copilot SDK when `#chat.agentHost.otel.enabled#` is on. `otlp-grpc` is downgraded to `otlp-http` transparently in the CLI runtime.</source>
-        <target>Експортер бекенду, що використовується SDK Copilot, коли `#chat.agentHost.otel.enabled#` увімкнено. `otlp-grpc` автоматично знижується до `otlp-http` під час виконання в CLI.</target>
+        <target>Експортер бекенду, який використовується SDK Copilot, коли `#chat.agentHost.otel.enabled#` увімкнено. `otlp-grpc` автоматично знижується до `otlp-http` під час виконання в CLI.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.otel.otlpEndpoint">
         <source xml:lang="en">OTLP endpoint URL when exporter type is `otlp-http` or `otlp-grpc`. Sets `OTEL_EXPORTER_OTLP_ENDPOINT` inside the agent host process.</source>
@@ -4754,7 +4778,7 @@ Note: This setting only controls tool approval and does not prevent the agent fr
       </trans-unit>
       <trans-unit id="chat.agentHost.otel.outfile">
         <source xml:lang="en">Output path for span JSON lines when exporter type is `file`. Sets `COPILOT_OTEL_FILE_EXPORTER_PATH`.</source>
-        <target>Шлях виводу для JSON рядків спану, коли тип експорту є `file`. Встановлює `COPILOT_OTEL_FILE_EXPORTER_PATH`.</target>
+        <target>Шлях виводу для JSON рядків спанів, коли тип експортеру - `file`. Встановлює `COPILOT_OTEL_FILE_EXPORTER_PATH`.</target>
       </trans-unit>
       <trans-unit id="chat.agentLocations.invalidPath">
         <source xml:lang="en">Paths must be relative or start with '~/'. Absolute paths and '\' separators are not supported.</source>
@@ -4798,11 +4822,11 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.agentsControl.compact">
         <source xml:lang="en">Replaces the command center search box with a compact agent status indicator and unified chat widget.</source>
-        <target>Замінює поле пошуку командного центру на компактний індикатор статусу агента та об'єднаний віджет чату.</target>
+        <target>Замінює поле пошуку командного центру на компактний індикатор статусу агента та єдиний віджет чату.</target>
       </trans-unit>
       <trans-unit id="chat.agentsControl.enabled">
         <source xml:lang="en">Controls how the 'Agent Status' indicator appears in the title bar command center. When set to `hidden`, the indicator is not shown. Other values show the indicator and automatically enable {0}. The unread and in-progress session indicators require {1} to be enabled.</source>
-        <target>Контролює, як індикатор 'Статус агента' з'являється в командному центрі заголовка. Коли встановлено на `hidden`, індикатор не відображається. Інші значення показують індикатор і автоматично активують {0}. Індикатори непрочитаних та у процесі сесій вимагають, щоб {1} було активовано.</target>
+        <target>Контролює, як індикатор 'Статус агента' з'являється в командному центрі заголовка. Коли встановлено на `hidden`, індикатор не відображається. Інші значення показують індикатор і автоматично активують {0}. Індикатори непрочитаних та активних сесій вимагають, щоб {1} було активовано.</target>
       </trans-unit>
       <trans-unit id="chat.agentsControl.hidden">
         <source xml:lang="en">The agent status indicator is hidden from the title bar.</source>
@@ -4814,7 +4838,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.approvedAccountOrganizations">
         <source xml:lang="en">List of GitHub organization logins whose members are permitted to use AI features. When set to a non-empty list, AI features are disabled until the user signs into a GitHub account that belongs to one of the specified organizations and account-level policy data has been resolved. Set to '*' to allow any authenticated GitHub or GitHub Enterprise account.</source>
-        <target>Список логінів організацій GitHub, члени яких мають право використовувати функції ШІ. Коли встановлено ненульовий список, функції ШІ вимкнені, поки користувач не увійде в обліковий запис GitHub, що належить до однієї з вказаних організацій, і дані політики на рівні облікового запису не будуть вирішені. Встановіть на '*' для дозволу будь-якому автентифікованому обліковому запису GitHub або GitHub Enterprise.</target>
+        <target>Список логінів організацій GitHub, члени яких мають право використовувати функції ШІ. Коли встановлено ненульовий список, функції ШІ вимкнені, поки користувач не увійде в обліковий запис GitHub, який належить до однієї з вказаних організацій, і дані політики на рівні облікового запису не будуть вирішені. Встановіть на '*' для дозволу будь-якому автентифікованому обліковому запису GitHub або GitHub Enterprise.</target>
       </trans-unit>
       <trans-unit id="chat.approvedAccountOrganizations.policy.description">
         <source xml:lang="en">Setting this policy to a non-empty list activates the Approved Account gate: all AI features are disabled until the user signs into a GitHub account whose organizations intersect this list AND the account-side policy data has resolved. Comparison is case-insensitive. Use '*' as a wildcard to accept any signed-in GitHub or GHE account (use this for GHE deployments where the organization list is not surfaced).</source>
@@ -4838,7 +4862,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.artifacts.rules.byMemoryFilePath">
         <source xml:lang="en">Rules for extracting artifacts from memory tool calls by memory file path pattern. Maps glob patterns to group configuration.</source>
-        <target>Правила для витягування артефактів з викликів інструментів пам'яті за шаблоном шляху до файлу пам'яті. Відображає шаблони glob на конфігурацію групи.</target>
+        <target>Правила для вилучення артефактів з викликів інструментів пам'яті за шаблоном шляху до файлу пам'яті. Відображає шаблони glob на конфігурацію групи.</target>
       </trans-unit>
       <trans-unit id="chat.artifacts.rules.byMemoryFilePath.groupName">
         <source xml:lang="en">Display name for the artifact group.</source>
@@ -4850,23 +4874,23 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.artifacts.rules.byMimeType">
         <source xml:lang="en">Rules for extracting artifacts from tool results by MIME type. Maps MIME type patterns (e.g. 'image/*') to group configuration.</source>
-        <target>Правила для витягування артефактів з результатів інструментів за типом MIME. Відображає шаблони типів MIME (наприклад, 'image/*') на конфігурацію групи.</target>
+        <target>Правила для вилучення артефактів з результатів інструментів за типом MIME. Відображає шаблони типів MIME (наприклад, 'image/*') на конфігурацію групи.</target>
       </trans-unit>
       <trans-unit id="chat.artifacts.rules.groupName">
         <source xml:lang="en">Display name for the artifact group.</source>
-        <target>Відображуване ім'я для групи артефактів.</target>
+        <target>Ім'я для відображення групи артефактів.</target>
       </trans-unit>
       <trans-unit id="chat.artifacts.rules.onlyShowGroup">
         <source xml:lang="en">When true, show only the group header instead of individual items.</source>
-        <target>Коли істина, показувати лише заголовок групи замість окремих елементів.</target>
+        <target>Коли істинно, показувати лише заголовок групи замість окремих елементів.</target>
       </trans-unit>
       <trans-unit id="chat.autoReply.description">
         <source xml:lang="en">Automatically skip question carousels by telling the agent that the user is not available and to use its best judgment. This is an advanced setting and can lead to unintended choices or actions based on incomplete context.</source>
-        <target>Автоматично пропускати каруселі запитань, повідомляючи агента, що користувач недоступний, і щоб він використовував своє найкраще судження. Це розширене налаштування і може призвести до непередбачених виборів або дій на основі неповного контексту.</target>
+        <target>Автоматично пропускати каруселі запитань, повідомляючи агента, що користувач недоступний, і використовувати його найкраще судження. Це розширене налаштування і може призвести до ненавмисних виборів або дій на основі неповного контексту.</target>
       </trans-unit>
       <trans-unit id="chat.autopilot.enabled">
         <source xml:lang="en">Controls whether the Autopilot mode is available in the permissions picker. When enabled, Autopilot auto-approves all tool calls and continues until the task is done.</source>
-        <target>Контролює, чи доступний режим Автопілота в виборі дозволів. Коли увімкнено, Автопілот автоматично затверджує всі виклики інструментів і продовжує, поки завдання не буде виконано.</target>
+        <target>Контролює, чи доступний режим Автопілота у виборі дозволів. Коли увімкнено, Автопілот автоматично затверджує всі виклики інструментів і продовжує, поки завдання не буде виконано.</target>
       </trans-unit>
       <trans-unit id="chat.checkpoints.enabled">
         <source xml:lang="en">Enables checkpoints in chat. Checkpoints allow you to restore the chat to a previous state.</source>
@@ -4878,11 +4902,11 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.codeBlock.showProgressAnimation.description">
         <source xml:lang="en">When applying edits, show a progress animation in the code block pill. If disabled, shows the progress percentage instead.</source>
-        <target>При застосуванні редагувань відображайте анімацію прогресу в блоці коду. Якщо вимкнено, відображає відсоток прогресу замість цього.</target>
+        <target>При застосуванні редагувань, відображайте анімацію прогресу в блоці коду pill. Якщо вимкнено, відображає відсоток прогресу замість цього.</target>
       </trans-unit>
       <trans-unit id="chat.contextUsage.enabled">
         <source xml:lang="en">Show the context window usage indicator in the chat input.</source>
-        <target>Показати індикатор використання вікна контексту у полі вводу чату.</target>
+        <target>Показати індикатор використання контекстного вікна у полі вводу чату.</target>
       </trans-unit>
       <trans-unit id="chat.customizations.harnessSelector.enabled">
         <source xml:lang="en">Controls whether the harness selector is shown in the Chat Customizations editor sidebar. When disabled, the editor always shows all customizations without filtering.</source>
@@ -4892,21 +4916,17 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">Controls whether the Chat Customizations editor shows a structured preview for markdown customization files (agents, skills, instructions, prompts). When disabled, the editor always opens the raw markdown in the embedded code editor.</source>
         <target>Контролює, чи редактор налаштувань чату показує структурований попередній перегляд для файлів налаштувань markdown (агенти, навички, інструкції, запити). Коли вимкнено, редактор завжди відкриває сирий markdown у вбудованому редакторі коду.</target>
       </trans-unit>
-      <trans-unit id="chat.customizations.useChatSessionCustomizationsForCustomAgents">
-        <source xml:lang="en">When enabled, custom agents shown in the chat mode picker are sourced from the customization harness service (scoped per session type) instead of the prompts service.</source>
-        <target>Коли увімкнено, користувацькі агенти, що відображаються в виборі режиму чату, отримуються з сервісу налаштування (обмеженого за типом сесії) замість сервісу підказок.</target>
-      </trans-unit>
       <trans-unit id="chat.detectParticipant.enabled">
         <source xml:lang="en">Enables chat participant autodetection for panel chat.</source>
-        <target>Увімкнення автодетекції учасників чату для панельного чату.</target>
+        <target>Увімкнення автоматичного виявлення учасників чату для панельного чату.</target>
       </trans-unit>
       <trans-unit id="chat.disableAIFeatures">
         <source xml:lang="en">Disable and hide built-in AI features provided by GitHub Copilot, including chat and inline suggestions.</source>
-        <target>Вимкніть та приховайте вбудовані функції ШІ, надані GitHub Copilot, включаючи чат та вбудовані пропозиції.</target>
+        <target>Вимкніть і сховайте вбудовані функції ШІ, надані GitHub Copilot, включаючи чат і вбудовані підказки.</target>
       </trans-unit>
       <trans-unit id="chat.editMode.hidden">
         <source xml:lang="en">When enabled, hides the Edit mode from the chat mode picker.</source>
-        <target>Коли увімкнено, приховує режим редагування з вибору режиму чату.</target>
+        <target>Коли ввімкнено, приховує режим редагування з вибору режиму чату.</target>
       </trans-unit>
       <trans-unit id="chat.editRequests">
         <source xml:lang="en">Enables editing of requests in the chat. This allows you to change the request content and resubmit it to the model.</source>
@@ -4914,23 +4934,23 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.editing.autoAcceptDelay">
         <source xml:lang="en">Delay after which changes made by chat are automatically accepted. Values are in seconds, `0` means disabled and `100` seconds is the maximum.</source>
-        <target>Затримка, після якої зміни, внесені чатом, автоматично приймаються. Значення в секундах, `0` означає вимкнено, а `100` секунд - це максимум.</target>
+        <target>Затримка, після якої зміни, внесені чатом, автоматично приймаються. Значення в секундах, `0` означає вимкнено, а `100` секунд - максимальне.</target>
       </trans-unit>
       <trans-unit id="chat.editing.confirmEditRequestRemoval">
         <source xml:lang="en">Whether to show a confirmation before removing a request and its associated edits.</source>
-        <target>Чи показувати підтвердження перед видаленням запиту та його асоційованих редагувань.</target>
+        <target>Чи показувати підтвердження перед видаленням запиту та його пов'язаних редагувань.</target>
       </trans-unit>
       <trans-unit id="chat.editing.confirmEditRequestRetry">
         <source xml:lang="en">Whether to show a confirmation before retrying a request and its associated edits.</source>
-        <target>Чи показувати підтвердження перед повторною спробою запиту та його супутніх редагувань.</target>
+        <target>Чи показувати підтвердження перед повторною спробою запиту та його супутніх змін.</target>
       </trans-unit>
       <trans-unit id="chat.editing.explainChanges.enabled">
         <source xml:lang="en">Controls whether the Explain button in the Chat panel and the Explain Changes context menu in the SCM view are shown. This is an experimental feature.</source>
-        <target>Контролює, чи відображається кнопка Пояснити в панелі чату та контекстне меню Пояснити зміни в режимі SCM. Це експериментальна функція.</target>
+        <target>Контролює, чи показується кнопка Пояснити в панелі чату та контекстне меню Пояснити зміни в перегляді SCM. Це експериментальна функція.</target>
       </trans-unit>
       <trans-unit id="chat.editing.revealNextChangeOnResolve">
         <source xml:lang="en">Controls whether the editor automatically reveals the next change after keeping or undoing a chat edit.</source>
-        <target>Контролює, чи редактор автоматично відкриває наступну зміну після збереження або скасування редагування чату.</target>
+        <target>Контролює, чи редактор автоматично показує наступну зміну після збереження або скасування редагування чату.</target>
       </trans-unit>
       <trans-unit id="chat.editorAssociations">
         <source xml:lang="en">Configure [glob patterns](https://aka.ms/vscode-glob-patterns) to editors for opening files from chat (for example `"*.md": "vscode.markdown.preview.editor"`).</source>
@@ -4942,7 +4962,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.experimental.detectParticipant.enabled">
         <source xml:lang="en">Enables chat participant autodetection for panel chat.</source>
-        <target>Увімкнення автоматичного виявлення учасників чату для панельного чату.</target>
+        <target>Дозволяє автоматичне виявлення учасників чату для панельного чату.</target>
       </trans-unit>
       <trans-unit id="chat.experimental.detectParticipant.enabled.deprecated">
         <source xml:lang="en">This setting is deprecated. Please use `chat.detectParticipant.enabled` instead.</source>
@@ -4958,7 +4978,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.experimental.incrementalRendering.animationStyle.fade">
         <source xml:lang="en">Simple opacity fade from 0 to 1.</source>
-        <target>Просте затемнення непрозорості від 0 до 1.</target>
+        <target>Просте затемнення непрозорості з 0 до 1.</target>
       </trans-unit>
       <trans-unit id="chat.experimental.incrementalRendering.animationStyle.none">
         <source xml:lang="en">No animation. Content appears instantly.</source>
@@ -4990,7 +5010,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.experimental.incrementalRendering.buffering.paragraph">
         <source xml:lang="en">Buffers content until a paragraph break before rendering.</source>
-        <target>Буферизує вміст до розриву абзацу перед рендерингом.</target>
+        <target>Буферизує вміст до розриву абзацу перед відображенням.</target>
       </trans-unit>
       <trans-unit id="chat.experimental.incrementalRendering.buffering.word">
         <source xml:lang="en">Reveals content word by word.</source>
@@ -4998,15 +5018,15 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.experimental.incrementalRendering.enabled">
         <source xml:lang="en">Enables incremental rendering with optional block-level animation when streaming chat responses.</source>
-        <target>Дозволяє інкрементальне рендеринг з необов'язковою анімацією на рівні блоку під час трансляції відповідей чату.</target>
+        <target>Дозволяє інкрементальне рендеринг з необов'язковою анімацією на рівні блоку під час потокової передачі відповідей чату.</target>
       </trans-unit>
       <trans-unit id="chat.experimentalSessionsWindowOverride">
         <source xml:lang="en">When true, enables sessions-window-specific behavior for extensions.</source>
-        <target>Коли вірно, активує поведінку, специфічну для вікна сесії, для розширень.</target>
+        <target>Коли істинно, дозволяє поведінку, специфічну для вікна сесій, для розширень.</target>
       </trans-unit>
       <trans-unit id="chat.exploreAgent.defaultModel.description">
         <source xml:lang="en">Select the default language model to use for the Explore subagent from the available providers.</source>
-        <target>Виберіть модель мови за замовчуванням, яку слід використовувати для підагента Explore, з доступних постачальників.</target>
+        <target>Виберіть мовну модель за замовчуванням, яку слід використовувати для підагента Explore, з доступних постачальників.</target>
       </trans-unit>
       <trans-unit id="chat.extensionToolsEnabled">
         <source xml:lang="en">Enable using tools contributed by third-party extensions.</source>
@@ -5014,7 +5034,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.extensionUnification.enabled">
         <source xml:lang="en">Enables the unification of GitHub Copilot extensions. When enabled, all GitHub Copilot functionality is served from the GitHub Copilot Chat extension. When disabled, the GitHub Copilot and GitHub Copilot Chat extensions operate independently.</source>
-        <target>Увімкнення об'єднання розширень GitHub Copilot. Коли увімкнено, вся функціональність GitHub Copilot надається з розширення GitHub Copilot Chat. Коли вимкнено, розширення GitHub Copilot і GitHub Copilot Chat працюють незалежно.</target>
+        <target>Увімкнення уніфікації розширень GitHub Copilot. Коли увімкнено, вся функціональність GitHub Copilot надається з розширення GitHub Copilot Chat. Коли вимкнено, розширення GitHub Copilot і GitHub Copilot Chat працюють незалежно.</target>
       </trans-unit>
       <trans-unit id="chat.fontFamily">
         <source xml:lang="en">Controls the font family in chat messages.</source>
@@ -5054,11 +5074,11 @@ Relative paths are resolved from the root folder(s) of your workspace. Supports 
       </trans-unit>
       <trans-unit id="chat.implicitContext.suggestedContext">
         <source xml:lang="en">Controls whether the new implicit context flow is shown. In Ask and Edit modes, the context will automatically be included. When using an agent, context will be suggested as an attachment. Selections are always included as context.</source>
-        <target>Контролює, чи буде показано новий імпліцитний потік контексту. У режимах Запитання та Редагування контекст буде автоматично включено. При використанні агента контекст буде запропоновано як вкладення. Вибори завжди включаються як контекст.</target>
+        <target>Контролює, чи показується новий імпліцитний потік контексту. У режимах Запит та Редагування контекст буде автоматично включено. При використанні агента контекст буде запропоновано як вкладення. Вибори завжди включаються як контекст.</target>
       </trans-unit>
       <trans-unit id="chat.implicitContext.value">
         <source xml:lang="en">The value for the implicit context.</source>
-        <target>Значення для імпліцитного контексту.</target>
+        <target>Значення для неявного контексту.</target>
       </trans-unit>
       <trans-unit id="chat.implicitContext.value.always">
         <source xml:lang="en">Implicit context is always enabled.</source>
@@ -5070,7 +5090,7 @@ Relative paths are resolved from the root folder(s) of your workspace. Supports 
       </trans-unit>
       <trans-unit id="chat.implicitContext.value.never">
         <source xml:lang="en">Implicit context is never enabled.</source>
-        <target>Неявний контекст ніколи не ввімкнено.</target>
+        <target>Неявний контекст ніколи не ввімкнений.</target>
       </trans-unit>
       <trans-unit id="chat.includeApplyingInstructions.description">
         <source xml:lang="en">Controls whether instructions with a matching 'applyTo' attribute are automatically included in chat requests.</source>
@@ -5078,11 +5098,11 @@ Relative paths are resolved from the root folder(s) of your workspace. Supports 
       </trans-unit>
       <trans-unit id="chat.includeApplyingInstructions.title">
         <source xml:lang="en">Include Applying Instructions</source>
-        <target>Включити інструкції для подання заявки</target>
+        <target>Включити інструкції з подання заявки</target>
       </trans-unit>
       <trans-unit id="chat.includeReferencedInstructions.description">
         <source xml:lang="en">Controls whether referenced instructions are automatically included in chat requests.</source>
-        <target>Контролює, чи будуть згадані інструкції автоматично включені в запити чату.</target>
+        <target>Контролює, чи будуть посилання на інструкції автоматично включені в запити чату.</target>
       </trans-unit>
       <trans-unit id="chat.includeReferencedInstructions.title">
         <source xml:lang="en">Include Referenced Instructions</source>
@@ -5104,13 +5124,13 @@ Relative paths are resolved from the root folder(s) of your workspace. Supports 
         <source xml:lang="en">Specify location(s) of instructions files (`*{0}`) that can be attached in Chat sessions. [Learn More]({1}).
 
 Relative paths are resolved from the root folder(s) of your workspace.</source>
-        <target>Вкажіть місцезнаходження файлів інструкцій (`*{0}`), які можна прикріпити в чат-сесіях. [Дізнатися більше]({1}).
+        <target>Вкажіть місце розташування файлів інструкцій (`*{0}`), які можна прикріпити в чат-сесіях. [Дізнатися більше]({1}).
 
 Відносні шляхи визначаються від кореневих папок вашого робочого простору.</target>
       </trans-unit>
       <trans-unit id="chat.instructions.config.locations.title">
         <source xml:lang="en">Instructions File Locations</source>
-        <target>Інструкції Розташування файлів</target>
+        <target>Файли інструкцій</target>
       </trans-unit>
       <trans-unit id="chat.instructionsLocations.invalidPath">
         <source xml:lang="en">Paths must be relative or start with '~/'. Absolute paths and '\' separators are not supported. Glob patterns are deprecated and will be removed in future versions.</source>
@@ -5122,7 +5142,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.mcp.access">
         <source xml:lang="en">Controls access to installed Model Context Protocol servers.</source>
-        <target>Контролює доступ до встановлених серверів Model Context Protocol.</target>
+        <target>Контролює доступ до встановлених серверів протоколу контексту моделі.</target>
       </trans-unit>
       <trans-unit id="chat.mcp.access.any">
         <source xml:lang="en">Allow access to any installed MCP server.</source>
@@ -5138,15 +5158,15 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.mcp.assisted.nuget.enabled.description">
         <source xml:lang="en">Enables NuGet packages for AI-assisted MCP server installation. Used to install MCP servers by name from the central registry for .NET packages (NuGet.org).</source>
-        <target>Увімкнення пакетів NuGet для встановлення сервера MCP з підтримкою ШІ. Використовується для встановлення серверів MCP за назвою з центрального реєстру для пакетів .NET (NuGet.org).</target>
+        <target>Увімкнення пакетів NuGet для установки сервера MCP з підтримкою ШІ. Використовується для установки серверів MCP за назвою з центрального реєстру для пакетів .NET (NuGet.org).</target>
       </trans-unit>
       <trans-unit id="chat.mcp.autostart">
         <source xml:lang="en">Controls whether MCP servers should be automatically started when the chat messages are submitted.</source>
-        <target>Контролює, чи повинні сервери MCP автоматично запускатися, коли надсилаються повідомлення чату.</target>
+        <target>Контролює, чи слід автоматично запускати сервери MCP, коли надсилаються повідомлення чату.</target>
       </trans-unit>
       <trans-unit id="chat.mcp.autostart.never">
         <source xml:lang="en">Never automatically start MCP servers.</source>
-        <target>Ніколи не запускайте сервери MCP автоматично.</target>
+        <target>Ніколи автоматично не запускайте сервери MCP.</target>
       </trans-unit>
       <trans-unit id="chat.mcp.autostart.newAndOutdated">
         <source xml:lang="en">Automatically start new and outdated MCP servers that are not yet running.</source>
@@ -5174,7 +5194,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.mcp.serverSampling">
         <source xml:lang="en">Configures which models are exposed to MCP servers for sampling (making model requests in the background). This setting can be edited in a graphical way under the `{0}` command.</source>
-        <target>Налаштовує, які моделі доступні серверам MCP для вибірки (виконання запитів моделей у фоновому режимі). Цю налаштування можна редагувати графічно за допомогою команди `{0}`.</target>
+        <target>Налаштовує, які моделі доступні для серверів MCP для вибірки (виконання запитів до моделей у фоновому режимі). Цю настройку можна редагувати графічно за допомогою команди `{0}`.</target>
       </trans-unit>
       <trans-unit id="chat.mcp.serverSampling.allowedDuringChat">
         <source xml:lang="en">Whether this server is allowed to make sampling requests during its tool calls in a chat session.</source>
@@ -5194,15 +5214,15 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.mode.config.locations.deprecated">
         <source xml:lang="en">This setting is deprecated and will be removed in future releases. Chat modes are now called custom agents and are located in `.github/agents`</source>
-        <target>Це налаштування застаріле і буде видалене в майбутніх версіях. Режими чату тепер називаються користувацькими агентами і знаходяться в `.github/agents`</target>
+        <target>Це налаштування застаріле і буде видалене в майбутніх випусках. Режими чату тепер називаються користувацькими агентами і знаходяться в `.github/agents`</target>
       </trans-unit>
       <trans-unit id="chat.mode.config.locations.description">
         <source xml:lang="en">Specify location(s) of custom chat mode files (`*{0}`). [Learn More]({1}).
 
 Relative paths are resolved from the root folder(s) of your workspace.</source>
-        <target>Вкажіть місце розташування файлів режиму чату користувача (`*{0}`). [Дізнатися більше]({1}).
+        <target>Вкажіть місцезнаходження файлів режиму чату користувача (`*{0}`). [Дізнатися більше]({1}).
 
-Відносні шляхи вирішуються від кореневих папок вашого робочого простору.</target>
+Відносні шляхи визначаються від кореневих папок вашого робочого простору.</target>
       </trans-unit>
       <trans-unit id="chat.mode.config.locations.title">
         <source xml:lang="en">Mode File Locations</source>
@@ -5214,11 +5234,11 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.notifyWindowOnConfirmation">
         <source xml:lang="en">Controls whether a chat session should present the user with an OS notification when a confirmation or question needs input. This includes a window badge as well as notification toast.</source>
-        <target>Контролює, чи повинна чат-сесія показувати користувачу сповіщення ОС, коли потрібне підтвердження або питання для введення. Це включає значок вікна, а також сповіщення у вигляді тосту.</target>
+        <target>Контролює, чи повинна сесія чату показувати користувачеві сповіщення ОС, коли потрібне підтвердження або запит на введення. Це включає значок вікна, а також сповіщення у вигляді тосту.</target>
       </trans-unit>
       <trans-unit id="chat.notifyWindowOnConfirmation.always">
         <source xml:lang="en">Always show OS notifications for confirmations, even when the window is focused.</source>
-        <target>Завжди показувати сповіщення ОС для підтверджень, навіть коли вікно є активним.</target>
+        <target>Завжди показувати сповіщення ОС для підтверджень, навіть коли вікно зосереджене.</target>
       </trans-unit>
       <trans-unit id="chat.notifyWindowOnConfirmation.off">
         <source xml:lang="en">Never show OS notifications for confirmations.</source>
@@ -5226,15 +5246,15 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.notifyWindowOnConfirmation.windowNotFocused">
         <source xml:lang="en">Show OS notifications for confirmations when the window is not focused.</source>
-        <target>Показувати сповіщення ОС для підтверджень, коли вікно не є активним.</target>
+        <target>Показувати сповіщення ОС для підтверджень, коли вікно не сфокусовано.</target>
       </trans-unit>
       <trans-unit id="chat.notifyWindowOnResponseReceived">
         <source xml:lang="en">Controls whether a chat session should present the user with an OS notification when a response is received. This includes a window badge as well as notification toast.</source>
-        <target>Контролює, чи повинна чат-сесія показувати користувачу сповіщення ОС, коли отримується відповідь. Це включає значок вікна, а також сповіщення-тост.</target>
+        <target>Контролює, чи повинна сесія чату показувати користувачу сповіщення ОС, коли отримується відповідь. Це включає значок вікна, а також сповіщення у вигляді тосту.</target>
       </trans-unit>
       <trans-unit id="chat.notifyWindowOnResponseReceived.always">
         <source xml:lang="en">Always show OS notifications for responses, even when the window is focused.</source>
-        <target>Завжди показувати сповіщення ОС для відповідей, навіть коли вікно зосереджене.</target>
+        <target>Завжди показувати сповіщення ОС для відповідей, навіть коли вікно сфокусоване.</target>
       </trans-unit>
       <trans-unit id="chat.notifyWindowOnResponseReceived.off">
         <source xml:lang="en">Never show OS notifications for responses.</source>
@@ -5242,11 +5262,11 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.notifyWindowOnResponseReceived.windowNotFocused">
         <source xml:lang="en">Show OS notifications for responses when the window is not focused.</source>
-        <target>Показувати сповіщення ОС для відповідей, коли вікно не сфокусовано.</target>
+        <target>Показувати сповіщення ОС для відповідей, коли вікно не є активним.</target>
       </trans-unit>
       <trans-unit id="chat.offlineByok">
         <source xml:lang="en">Experimental: enable BYOK chat features without GitHub sign-in.</source>
-        <target>Експериментально: увімкніть функції чату BYOK без входу в GitHub.</target>
+        <target>Експериментально: увімкніть функції чату BYOK без входу через GitHub.</target>
       </trans-unit>
       <trans-unit id="chat.permissions.default.autoApprove.description">
         <source xml:lang="en">Start new chat sessions in Bypass Approvals mode.</source>
@@ -5274,7 +5294,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.permissions.default.settingDescription">
         <source xml:lang="en">Controls the default permissions picker mode for new chat sessions. You can still change the permission mode per session, and each session remembers the permission mode that was used. If enterprise policy disables auto approval, new sessions use Default Approvals.</source>
-        <target>Контролює режим вибору дозволів за замовчуванням для нових чат-сесій. Ви все ще можете змінити режим дозволів для кожної сесії, і кожна сесія запам'ятовує режим дозволів, який був використаний. Якщо політика підприємства вимикає автоматичне схвалення, нові сесії використовують Дозволи за замовчуванням.</target>
+        <target>Контролює режим вибору дозволів за замовчуванням для нових чат-сесій. Ви все ще можете змінити режим дозволів для кожної сесії, і кожна сесія запам'ятовує використаний режим дозволів. Якщо політика підприємства вимикає автоматичне схвалення, нові сесії використовують Дозволи за замовчуванням.</target>
       </trans-unit>
       <trans-unit id="chat.persistentProgress.enabled">
         <source xml:lang="en">Always show progress in chat.</source>
@@ -5286,11 +5306,11 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.planReview.inlineEditor.enabled">
         <source xml:lang="en">When enabled, the plan review widget mounts an editor inline, as opposed to in a separate editor tab.</source>
-        <target>Коли увімкнено, віджет перегляду плану вмонтовує редактор в рядку, на відміну від окремої вкладки редактора.</target>
+        <target>Коли увімкнено, віджет перегляду плану вмонтовує редактор в рядок, на відміну від окремої вкладки редактора.</target>
       </trans-unit>
       <trans-unit id="chat.pluginLocations">
         <source xml:lang="en">Plugin directories to discover. Each key is a path that points directly to a plugin folder, and the value enables (`true`) or disables (`false`) it. Paths can be absolute, relative to the workspace root, or start with `~/` for the user's home directory.</source>
-        <target>Довідники плагінів для виявлення. Кожен ключ є шляхом, який безпосередньо вказує на папку плагіна, а значення дозволяє (`true`) або забороняє (`false`) його. Шляхи можуть бути абсолютними, відносними до кореня робочого простору або починатися з `~/` для домашнього каталогу користувача.</target>
+        <target>Каталоги плагінів для виявлення. Кожен ключ є шляхом, який безпосередньо вказує на папку плагіна, а значення дозволяє (`true`) або забороняє (`false`) його. Шляхи можуть бути абсолютними, відносними до кореня робочого простору або починатися з `~/` для домашнього каталогу користувача.</target>
       </trans-unit>
       <trans-unit id="chat.plugins.enabled">
         <source xml:lang="en">Enable agent plugin integration in chat.</source>
@@ -5298,11 +5318,11 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.plugins.marketplaces">
         <source xml:lang="en">Plugin marketplaces to query. Entries may be GitHub shorthand (`owner/repo`), direct Git repository URIs (`https://...git`, `ssh://...git`, or `git@host:path.git`), or local repository URIs (`file:///...`). Equivalent GitHub shorthand and URI entries are deduplicated.</source>
-        <target>Маркетплейси плагінів для запитів. Записи можуть бути у форматі GitHub shorthand (`owner/repo`), прямі URI Git-репозиторіїв (`https://...git`, `ssh://...git` або `git@host:path.git`), або локальні URI репозиторіїв (`file:///...`). Еквівалентні записи у форматі GitHub shorthand та URI дезактивуються.</target>
+        <target>Маркетплейси плагінів для запитів. Записи можуть бути у форматі GitHub shorthand (`owner/repo`), прямих URI Git-репозиторіїв (`https://...git`, `ssh://...git` або `git@host:path.git`), або локальних URI репозиторіїв (`file:///...`). Еквівалентні записи GitHub shorthand та URI дезодоруються.</target>
       </trans-unit>
       <trans-unit id="chat.progressBorder.enabled">
         <source xml:lang="en">Show an animated gradient border around the chat input while the agent is working or thinking. When enabled and reduced motion is not enabled, this overrides {0} to be off. Has no effect when reduced motion is enabled.</source>
-        <target>Показати анімовану градієнтну рамку навколо поля вводу чату, поки агент працює або думає. Коли це ввімкнено і зменшений рух не ввімкнено, це перевизначає {0} на вимкнено. Не має жодного ефекту, коли зменшений рух увімкнено.</target>
+        <target>Показати анімовану градієнтну рамку навколо поля вводу чату, поки агент працює або думає. Коли це увімкнено і зменшена анімація не активована, це переважає {0}, щоб бути вимкненим. Не має жодного ефекту, коли зменшена анімація активована.</target>
       </trans-unit>
       <trans-unit id="chat.promptFileLocations.invalidPath">
         <source xml:lang="en">Paths must be relative or start with '~/'. Absolute paths and '\' separators are not supported. Glob patterns are deprecated and will be removed in future versions.</source>
@@ -5310,7 +5330,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.promptFilesRecommendations.description">
         <source xml:lang="en">Configure which prompt files to recommend in the chat welcome view. Each key is a prompt file name, and the value can be `true` to always recommend, `false` to never recommend, or a [when clause](https://aka.ms/vscode-when-clause) expression like `resourceExtname == .js` or `resourceLangId == markdown`.</source>
-        <target>Налаштуйте, які файли підказок рекомендувати у вітальному вигляді чату. Кожен ключ - це назва файлу підказки, а значення може бути `true`, щоб завжди рекомендувати, `false`, щоб ніколи не рекомендувати, або виразом [умовного виразу](https://aka.ms/vscode-when-clause), таким як `resourceExtname == .js` або `resourceLangId == markdown`.</target>
+        <target>Налаштуйте, які файли підказок рекомендувати у вітальному вигляді чату. Кожен ключ - це назва файлу підказки, а значення може бути `true`, щоб завжди рекомендувати, `false`, щоб ніколи не рекомендувати, або виразом [умовного виразу](https://aka.ms/vscode-when-clause) на кшталт `resourceExtname == .js` або `resourceLangId == markdown`.</target>
       </trans-unit>
       <trans-unit id="chat.promptFilesRecommendations.title">
         <source xml:lang="en">Prompt File Recommendations</source>
@@ -5326,7 +5346,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.requestQueuing.defaultAction.steer">
         <source xml:lang="en">Steer the current request by sending the message immediately, signaling the current request to yield.</source>
-        <target>Керуйте поточним запитом, надіславши повідомлення негайно, сигналізуючи поточному запиту про завершення.</target>
+        <target>Скеруйте поточний запит, надіславши повідомлення негайно, сигналізуючи поточному запиту про завершення.</target>
       </trans-unit>
       <trans-unit id="chat.restoreLastPanelSession">
         <source xml:lang="en">Controls whether the last session is restored in panel after restart.</source>
@@ -5336,7 +5356,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">Specify location(s) of reusable prompt files (`*{0}`) that can be run in Chat sessions. [Learn More]({1}).
 
 Relative paths are resolved from the root folder(s) of your workspace.</source>
-        <target>Вкажіть місцезнаходження повторно використовуваних файлів запитів (`*{0}`), які можна запускати в сеансах чату. [Дізнатися більше]({1}).
+        <target>Вкажіть місцезнаходження повторно використовуваних файлів запитів (`*{0}`), які можна запускати в сеансах Chat. [Дізнатися більше]({1}).
 
 Відносні шляхи вирішуються від кореневих папок вашого робочого простору.</target>
       </trans-unit>
@@ -5350,7 +5370,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.sessionSync.enabled">
         <source xml:lang="en">Enable session sync to GitHub.com. When enabled, Copilot session data is synced to your GitHub account for cross-device access and richer insights. Requires `#github.copilot.chat.localIndex.enabled#` to also be enabled.</source>
-        <target>Увімкніть синхронізацію сесій з GitHub.com. Коли вона увімкнена, дані сесії Copilot синхронізуються з вашим обліковим записом GitHub для доступу з різних пристроїв та отримання більш детальної інформації. Потрібно також увімкнути `#github.copilot.chat.localIndex.enabled#`.</target>
+        <target>Увімкніть синхронізацію сеансу з GitHub.com. Коли вона увімкнена, дані сеансу Copilot синхронізуються з вашим обліковим записом GitHub для доступу з різних пристроїв та отримання більш детальної інформації. Потрібно також увімкнути `#github.copilot.chat.localIndex.enabled#`.</target>
       </trans-unit>
       <trans-unit id="chat.sessionSync.enabled.policy">
         <source xml:lang="en">Enable session sync to GitHub.com for cross-device Copilot session history. When disabled by organization policy, session data is kept local only.</source>
@@ -5358,7 +5378,7 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.sessionSync.excludeRepositories">
         <source xml:lang="en">Repository patterns to exclude from session sync. Use exact `owner/repo` names or glob patterns like `my-org/*`. Sessions from matching repositories will only be stored locally.</source>
-        <target>Шаблони репозиторіїв для виключення з синхронізації сесій. Використовуйте точні назви `owner/repo` або шаблони glob, такі як `my-org/*`. Сесії з відповідних репозиторіїв будуть зберігатися лише локально.</target>
+        <target>Шаблони репозиторіїв для виключення з синхронізації сесій. Використовуйте точні назви `owner/repo` або шаблони з підстановкою, такі як `my-org/*`. Сесії з відповідних репозиторіїв будуть зберігатися лише локально.</target>
       </trans-unit>
       <trans-unit id="chat.subagents.allowInvocationsFromSubagents">
         <source xml:lang="en">Allow subagents to invoke subagents.</source>
@@ -5366,15 +5386,15 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       </trans-unit>
       <trans-unit id="chat.subagents.allowInvocationsFromSubagents.md">
         <source xml:lang="en">Controls whether subagents can invoke other subagents. When enabled, nesting is limited to a maximum depth of 5.</source>
-        <target>Контролює, чи можуть субагенти викликати інших субагентів. Коли це ввімкнено, вкладеність обмежена максимальною глибиною 5.</target>
+        <target>Контролює, чи можуть підагенти викликати інших підагентів. Коли увімкнено, вкладеність обмежена максимальною глибиною 5.</target>
       </trans-unit>
       <trans-unit id="chat.tips.enabled">
         <source xml:lang="en">Controls whether tips are shown above user messages in chat. New tips are added frequently, so this is a helpful way to stay up to date with the latest features.</source>
-        <target>Контролює, чи відображаються підказки над повідомленнями користувачів у чаті. Нові підказки додаються часто, тому це корисний спосіб залишатися в курсі останніх функцій.</target>
+        <target>Контролює, чи відображаються підказки над повідомленнями користувачів у чаті. Нові підказки додаються часто, тому це корисний спосіб бути в курсі останніх функцій.</target>
       </trans-unit>
       <trans-unit id="chat.titleBar.signIn.enabled">
         <source xml:lang="en">Controls whether the Copilot Sign In button is shown in the title bar when signed out. When disabled, the Sign In affordance falls back to the status bar.</source>
-        <target>Контролює, чи кнопка входу Copilot відображається в заголовку, коли ви вийшли з системи. Коли вимкнено, можливість входу переходить до рядка стану.</target>
+        <target>Контролює, чи кнопка входу в Copilot відображається на панелі заголовка, коли ви вийшли з системи. Коли вимкнено, можливість входу переходить на панель стану.</target>
       </trans-unit>
       <trans-unit id="chat.toolReferenceName.description">
         <source xml:lang="en">{0} - {1}</source>
@@ -5384,9 +5404,9 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">Controls whether edits made by the agent are automatically approved. The default is to approve all edits except those made to certain files which have the potential to cause immediate unintended side-effects, such as `**/.vscode/*.json`.
 
 Set to `true` to automatically approve edits to matching files, `false` to always require explicit approval. The last pattern matching a given file will determine whether the edit is automatically approved.</source>
-        <target>Контролює, чи редагування, зроблені агентом, автоматично затверджуються. За замовчуванням затверджуються всі редагування, крім тих, що зроблені в певних файлах, які можуть викликати негайні непередбачені побічні ефекти, таких як `**/.vscode/*.json`.
+        <target>Контролює, чи редагування, зроблені агентом, автоматично затверджуються. За замовчуванням затверджуються всі редагування, крім тих, що зроблені в певних файлах, які можуть спричинити негайні небажані побічні ефекти, такі як `**/.vscode/*.json`.
 
-Встановіть `true`, щоб автоматично затверджувати редагування відповідних файлів, `false`, щоб завжди вимагати явного затвердження. Останній шаблон, що відповідає даному файлу, визначатиме, чи буде редагування автоматично затверджено.</target>
+Встановіть `true`, щоб автоматично затверджувати редагування відповідних файлів, `false`, щоб завжди вимагати явного затвердження. Останній шаблон, що відповідає даному файлу, визначатиме, чи редагування автоматично затверджується.</target>
       </trans-unit>
       <trans-unit id="chat.tools.autoExpandFailures">
         <source xml:lang="en">When enabled, tool failures are automatically expanded in the chat UI to show error details.</source>
@@ -5402,7 +5422,7 @@ Set to `true` to automatically approve edits to matching files, `false` to alway
       </trans-unit>
       <trans-unit id="chat.tools.eligibleForAutoApproval">
         <source xml:lang="en">Controls which tools are eligible for automatic approval. Tools set to 'false' will always present a confirmation and will never offer the option to auto-approve. The default behavior (or setting a tool to 'true') may result in the tool offering auto-approval options.</source>
-        <target>Контролює, які інструменти підлягають автоматичному затвердженню. Інструменти, встановлені на 'false', завжди будуть вимагати підтвердження і ніколи не запропонують опцію автоматичного затвердження. За замовчуванням (або при встановленні інструмента на 'true') інструмент може запропонувати опції автоматичного затвердження.</target>
+        <target>Контролює, які інструменти підлягають автоматичному затвердженню. Інструменти, встановлені на 'false', завжди вимагатимуть підтвердження і ніколи не пропонуватимуть можливість автоматичного затвердження. За замовчуванням (або при встановленні інструмента на 'true') інструмент може пропонувати варіанти автоматичного затвердження.</target>
       </trans-unit>
       <trans-unit id="chat.tools.fetchPage.approvedUrls">
         <source xml:lang="en">Controls which URLs are automatically approved when requested by chat tools. Keys are URL patterns and values can be `true` to approve both requests and responses, `false` to deny, or an object with `approveRequest` and `approveResponse` properties for granular control.
@@ -5411,20 +5431,20 @@ Examples:
 - `"https://example.com": true` - Approve all requests to example.com
 - `"https://*.example.com": true` - Approve all requests to any subdomain of example.com
 - `"https://example.com/api/*": { "approveRequest": true, "approveResponse": false }` - Approve requests but not responses for example.com/api paths</source>
-        <target>Контролює, які URL-адреси автоматично затверджуються при запитах від чат-інструментів. Ключі - це шаблони URL, а значення можуть бути `true` для затвердження як запитів, так і відповідей, `false` для відмови, або об'єкт з властивостями `approveRequest` та `approveResponse` для детального контролю.
+        <target>Контролює, які URL-адреси автоматично схвалюються при запитах від чат-інструментів. Ключі - це шаблони URL, а значення можуть бути `true` для схвалення як запитів, так і відповідей, `false` для відмови, або об'єктом з властивостями `approveRequest` та `approveResponse` для детального контролю.
 
 Приклади:
-- `"https://example.com": true` - Затвердити всі запити до example.com
-- `"https://*.example.com": true` - Затвердити всі запити до будь-якого піддомену example.com
-- `"https://example.com/api/*": { "approveRequest": true, "approveResponse": false }` - Затвердити запити, але не відповіді для шляхів example.com/api</target>
+- `"https://example.com": true` - Схвалити всі запити до example.com
+- `"https://*.example.com": true` - Схвалити всі запити до будь-якого піддомену example.com
+- `"https://example.com/api/*": { "approveRequest": true, "approveResponse": false }` - Схвалити запити, але не відповіді для шляхів example.com/api</target>
       </trans-unit>
       <trans-unit id="chat.tools.riskAssessment.enabled">
         <source xml:lang="en">When enabled, terminal tool confirmations show an LLM-generated risk level (Safe / Caution / Review carefully) and a short explanation.</source>
-        <target>Коли ввімкнено, підтвердження інструментів терміналу показують рівень ризику, згенерований LLM (Безпечно / Обережно / Розгляньте уважно), та коротке пояснення.</target>
+        <target>Коли увімкнено, підтвердження інструментів терміналу показують рівень ризику, згенерований LLM (Безпечно / Обережно / Розгляньте уважно), та коротке пояснення.</target>
       </trans-unit>
       <trans-unit id="chat.tools.riskAssessment.model">
         <source xml:lang="en">The language model id used to generate tool risk assessments. Should be a small, fast model.</source>
-        <target>Ідентифікатор мовної моделі, що використовується для генерації оцінок ризику інструментів. Повинен бути маленькою, швидкою моделлю.</target>
+        <target>Ідентифікатор мовної моделі, що використовується для генерації оцінок ризиків інструментів. Має бути маленькою, швидкою моделлю.</target>
       </trans-unit>
       <trans-unit id="chat.tools.terminal.simpleCollapsible">
         <source xml:lang="en">When enabled, terminal tool calls are always displayed in a collapsible container with a simplified view.</source>
@@ -5440,7 +5460,7 @@ Examples:
       </trans-unit>
       <trans-unit id="chat.unifiedAgentsBar.enabled">
         <source xml:lang="en">Replaces the command center search box with a unified chat and search widget.</source>
-        <target>Замінює поле пошуку командного центру на єдиний віджет чату та пошуку.</target>
+        <target>Замінює поле пошуку командного центру на об'єднаний віджет чату та пошуку.</target>
       </trans-unit>
       <trans-unit id="chat.upvoteAnimation">
         <source xml:lang="en">Controls whether an animation is shown when clicking the thumbs up button on a chat response.</source>
@@ -5460,7 +5480,7 @@ Examples:
       </trans-unit>
       <trans-unit id="chat.upvoteAnimation.pulseWave">
         <source xml:lang="en">Shows expanding pulse rings from the button.</source>
-        <target>Показує розширюючіся пульсуючі кільця з кнопки.</target>
+        <target>Показує розширювальні пульсуючі кільця з кнопки.</target>
       </trans-unit>
       <trans-unit id="chat.upvoteAnimation.radiantLines">
         <source xml:lang="en">Shows radiant lines emanating from the button.</source>
@@ -5476,7 +5496,7 @@ Examples:
       </trans-unit>
       <trans-unit id="chat.useAgentSkills.description">
         <source xml:lang="en">Controls whether skills are provided as specialized capabilities to the chat requests. Skills are loaded from the folders configured in `#chat.agentSkillsLocations#`. The language model can load these skills on-demand if the `read` tool is available. Learn more about [Agent Skills](https://aka.ms/vscode-agent-skills).</source>
-        <target>Контролює, чи навички надаються як спеціалізовані можливості для запитів чату. Навички завантажуються з папок, налаштованих у `#chat.agentSkillsLocations#`. Мовна модель може завантажувати ці навички за запитом, якщо доступний інструмент `read`. Дізнайтеся більше про [Навички агента](https://aka.ms/vscode-agent-skills).</target>
+        <target>Контролює, чи надаються навички як спеціалізовані можливості для запитів чату. Навички завантажуються з папок, налаштованих у `#chat.agentSkillsLocations#`. Мовна модель може завантажувати ці навички за запитом, якщо доступний інструмент `read`. Дізнайтеся більше про [Навички агента](https://aka.ms/vscode-agent-skills).</target>
       </trans-unit>
       <trans-unit id="chat.useAgentSkills.title">
         <source xml:lang="en">Use Agent skills</source>
@@ -5484,7 +5504,7 @@ Examples:
       </trans-unit>
       <trans-unit id="chat.useClaudeHooks.description">
         <source xml:lang="en">Controls whether hooks from Claude configuration files can execute. When disabled, only Copilot-format hooks are used. Hooks are loaded from the files configured in `#chat.hookFilesLocations#`.</source>
-        <target>Контролює, чи можуть виконуватися хуки з конфігураційних файлів Claude. Коли вимкнено, використовуються лише хуки формату Copilot. Хуки завантажуються з файлів, налаштованих у `#chat.hookFilesLocations#`.</target>
+        <target>Контролює, чи можуть виконуватись хуки з конфігураційних файлів Claude. Коли вимкнено, використовуються лише хуки формату Copilot. Хуки завантажуються з файлів, налаштованих у `#chat.hookFilesLocations#`.</target>
       </trans-unit>
       <trans-unit id="chat.useClaudeHooks.title">
         <source xml:lang="en">Use Claude Hooks</source>
@@ -5492,7 +5512,7 @@ Examples:
       </trans-unit>
       <trans-unit id="chat.useClaudeMd.description">
         <source xml:lang="en">Controls whether instructions from `CLAUDE.md` file found in workspace roots, .claude and ~/.claude folder are attached to all chat requests.</source>
-        <target>Контролює, чи інструкції з файлу `CLAUDE.md`, знайденого в коренях робочого простору, папках .claude та ~/.claude, додаються до всіх запитів чату.</target>
+        <target>Контролює, чи інструкції з файлу `CLAUDE.md`, що знаходиться в коренях робочого простору, у папках .claude та ~/.claude, додаються до всіх запитів чату.</target>
       </trans-unit>
       <trans-unit id="chat.useClaudeMd.title">
         <source xml:lang="en">Use CLAUDE.md file</source>
@@ -5508,7 +5528,7 @@ Examples:
       </trans-unit>
       <trans-unit id="chat.useHooks.description">
         <source xml:lang="en">Controls whether chat hooks are executed at strategic points during an agent's workflow. Hooks are loaded from the files configured in `#chat.hookFilesLocations#`.</source>
-        <target>Контролює, чи виконуються чат-хуки в стратегічних точках під час роботи агента. Хуки завантажуються з файлів, налаштованих у `#chat.hookFilesLocations#`.</target>
+        <target>Контролює, чи виконуються чат-хуки в стратегічних точках під час робочого процесу агента. Хуки завантажуються з файлів, налаштованих у `#chat.hookFilesLocations#`.</target>
       </trans-unit>
       <trans-unit id="chat.useHooks.title">
         <source xml:lang="en">Use Chat Hooks</source>
@@ -5516,7 +5536,7 @@ Examples:
       </trans-unit>
       <trans-unit id="chat.useNestedAgentMd.description">
         <source xml:lang="en">Controls whether instructions from nested `AGENTS.md` files found in the workspace are listed in all chat requests. The language model can load these skills on-demand if the `read` tool is available.</source>
-        <target>Контролює, чи інструкції з вкладених файлів `AGENTS.md`, знайдених у робочому просторі, відображаються у всіх запитах чату. Мовна модель може завантажувати ці навички за запитом, якщо доступний інструмент `read`.</target>
+        <target>Контролює, чи інструкції з вкладених файлів `AGENTS.md`, знайдених у робочій області, відображаються у всіх запитах чату. Мовна модель може завантажувати ці навички за запитом, якщо доступний інструмент `read`.</target>
       </trans-unit>
       <trans-unit id="chat.useNestedAgentMd.title">
         <source xml:lang="en">Use nested AGENTS.md files</source>
@@ -5524,19 +5544,19 @@ Examples:
       </trans-unit>
       <trans-unit id="chat.useSkillAdherencePrompt.description">
         <source xml:lang="en">Controls whether a stronger skill adherence prompt is used that encourages the model to immediately invoke skills when relevant rather than just announcing them.</source>
-        <target>Контролює, чи використовується більш сильний запит на дотримання навичок, який заохочує модель негайно застосовувати навички, коли це доречно, а не просто оголошувати їх.</target>
+        <target>Контролює, чи використовується більш сильний запит на дотримання навичок, який заохочує модель негайно активувати навички, коли це доречно, а не просто оголошувати їх.</target>
       </trans-unit>
       <trans-unit id="chat.useSkillAdherencePrompt.title">
         <source xml:lang="en">Use Skill Adherence Prompt</source>
-        <target>Використовуйте підказку дотримання навичок</target>
+        <target>Використовуйте запит на дотримання навичок</target>
       </trans-unit>
       <trans-unit id="chat.utilityModel.description">
-        <source xml:lang="en">Override the language model used by built-in utility flows (titles, summaries, fallback responses, etc.). Leave empty to use the default model.</source>
-        <target>Перекрийте мовну модель, що використовується вбудованими утилітами (назви, резюме, резервні відповіді тощо). Залиште порожнім, щоб використовувати модель за замовчуванням.</target>
+        <source xml:lang="en">Override the language model used by built-in utility flows. Leave empty to use the default model.</source>
+        <target>Перезапишіть мовну модель, що використовується вбудованими утилітами. Залиште порожнім, щоб використовувати модель за замовчуванням.</target>
       </trans-unit>
       <trans-unit id="chat.utilitySmallModel.description">
-        <source xml:lang="en">Override the language model used by built-in small/fast utility flows (commit messages, intent detection, inline-chat progress, etc.). A fast and inexpensive model is recommended. Leave empty to use the default model.</source>
-        <target>Перезапишіть мовну модель, що використовується вбудованими малими/швидкими утилітами (повідомлення про коміти, виявлення намірів, прогрес в інтерактивному чаті тощо). Рекомендується швидка та недорога модель. Залиште порожнім, щоб використовувати модель за замовчуванням.</target>
+        <source xml:lang="en">Override the language model used by built-in small/fast utility flows. A fast and inexpensive model is recommended. Leave empty to use the default model.</source>
+        <target>Перезапишіть мовну модель, що використовується вбудованими малими/швидкими утилітними потоками. Рекомендується швидка та недорога модель. Залиште порожнім, щоб використовувати модель за замовчуванням.</target>
       </trans-unit>
       <trans-unit id="chat.viewProgressBadge.enabled">
         <source xml:lang="en">Show a progress badge on the chat view when an agent session is in progress that is opened in that view.</source>
@@ -5544,19 +5564,19 @@ Examples:
       </trans-unit>
       <trans-unit id="chat.viewSessions.enabled">
         <source xml:lang="en">Show chat agent sessions when chat is empty or to the side when chat view is wide enough.</source>
-        <target>Показувати сесії чат-агента, коли чат порожній, або збоку, коли вигляд чату достатньо широкий.</target>
+        <target>Показувати сесії чат-агента, коли чат порожній, або збоку, коли перегляд чату достатньо широкий.</target>
       </trans-unit>
       <trans-unit id="chat.viewSessions.orientation">
         <source xml:lang="en">Controls the orientation of the chat agent sessions view when it is shown alongside the chat.</source>
-        <target>Контролює орієнтацію перегляду сесій чат-агента, коли він відображається поряд з чатом.</target>
+        <target>Контролює орієнтацію вигляду сесій чат-агента, коли він відображається поряд з чатом.</target>
       </trans-unit>
       <trans-unit id="chat.viewSessions.orientation.sideBySide">
         <source xml:lang="en">Display chat sessions side by side if space is sufficient, otherwise fallback to stacked above the chat input unless a chat session is visible.</source>
-        <target>Відображайте сесії чату поруч, якщо є достатньо місця, в іншому випадку переходьте до розташування над полем введення чату, якщо сесія чату не видима.</target>
+        <target>Відображайте чат-сесії поруч, якщо є достатньо місця, в іншому випадку поверніться до розташування над полем введення чату, якщо чат-сесія не видима.</target>
       </trans-unit>
       <trans-unit id="chat.viewSessions.orientation.stacked">
         <source xml:lang="en">Display chat sessions vertically stacked above the chat input unless a chat session is visible.</source>
-        <target>Відображати чат-сесії вертикально, складеними над полем вводу чату, якщо чат-сесія не видима.</target>
+        <target>Відображати чат-сесії вертикально, складеними над полем введення чату, якщо чат-сесія не видима.</target>
       </trans-unit>
       <trans-unit id="chatDebug">
         <source xml:lang="en">Debug View</source>
@@ -5564,7 +5584,7 @@ Examples:
       </trans-unit>
       <trans-unit id="interactiveSession.editor.fontFamily">
         <source xml:lang="en">Controls the font family in chat codeblocks.</source>
-        <target>Керує сім'єю шрифтів у кодових блоках чату.</target>
+        <target>Контролює сімейство шрифтів у кодових блоках чату.</target>
       </trans-unit>
       <trans-unit id="interactiveSession.editor.fontSize">
         <source xml:lang="en">Controls the font size in pixels in chat codeblocks.</source>
@@ -5588,7 +5608,7 @@ Examples:
       </trans-unit>
       <trans-unit id="mcp.discovery.enabled">
         <source xml:lang="en">Configures discovery of Model Context Protocol servers from configuration from various other applications.</source>
-        <target>Налаштовує виявлення серверів протоколу контексту моделі з конфігурації з різних інших застосунків.</target>
+        <target>Налаштовує виявлення серверів протоколу контексту моделі з конфігурації з різних інших додатків.</target>
       </trans-unit>
       <trans-unit id="mcp.gallery.serviceUrl">
         <source xml:lang="en">Configure the MCP Gallery service URL to connect to</source>
@@ -7550,9 +7570,17 @@ Examples:
         <source xml:lang="en">{0} from {1}</source>
         <target>{0} з {1}</target>
       </trans-unit>
+      <trans-unit id="model.name.hidden">
+        <source xml:lang="en">{0} from {1} (hidden)</source>
+        <target>{0} з {1} (сховано)</target>
+      </trans-unit>
       <trans-unit id="modelName">
         <source xml:lang="en">Name</source>
         <target>Ім'я</target>
+      </trans-unit>
+      <trans-unit id="models.addModel">
+        <source xml:lang="en">Add Model</source>
+        <target>Додати модель</target>
       </trans-unit>
       <trans-unit id="models.agentMode">
         <source xml:lang="en">Agent Mode</source>
@@ -7569,14 +7597,6 @@ Examples:
       <trans-unit id="models.capabilities">
         <source xml:lang="en">Capabilities</source>
         <target>Можливості</target>
-      </trans-unit>
-      <trans-unit id="models.configure">
-        <source xml:lang="en">Configure...</source>
-        <target>Налаштувати...</target>
-      </trans-unit>
-      <trans-unit id="models.configureContextMenu">
-        <source xml:lang="en">Configure</source>
-        <target>Налаштувати</target>
       </trans-unit>
       <trans-unit id="models.configureModel">
         <source xml:lang="en">Configure...</source>
@@ -7598,6 +7618,22 @@ Examples:
         <source xml:lang="en">Add Models...</source>
         <target>Додати моделі...</target>
       </trans-unit>
+      <trans-unit id="models.goToSettings">
+        <source xml:lang="en">Open in Language Models (JSON)</source>
+        <target>Відкрити в Мовних Моделях (JSON)</target>
+      </trans-unit>
+      <trans-unit id="models.hideGroup">
+        <source xml:lang="en">Hide All Models</source>
+        <target>Сховати всі моделі</target>
+      </trans-unit>
+      <trans-unit id="models.hideModel">
+        <source xml:lang="en">Hide Model</source>
+        <target>Сховати модель</target>
+      </trans-unit>
+      <trans-unit id="models.hideModelsPlural">
+        <source xml:lang="en">Hide Models</source>
+        <target>Сховати моделі</target>
+      </trans-unit>
       <trans-unit id="models.inputCost.plural">
         <source xml:lang="en">Input Cost: {0} credits per 1M tokens</source>
         <target>Вартість введення: {0} кредитів за 1M токенів</target>
@@ -7605,6 +7641,34 @@ Examples:
       <trans-unit id="models.inputCost.singular">
         <source xml:lang="en">Input Cost: {0} credit per 1M tokens</source>
         <target>Вартість введення: {0} кредитів за 1M токенів</target>
+      </trans-unit>
+      <trans-unit id="models.longContextCacheCost.plural">
+        <source xml:lang="en">Cache Cost: {0} credits per 1M tokens</source>
+        <target>Вартість кешу: {0} кредитів за 1M токенів</target>
+      </trans-unit>
+      <trans-unit id="models.longContextCacheCost.singular">
+        <source xml:lang="en">Cache Cost: {0} credit per 1M tokens</source>
+        <target>Вартість кешу: {0} кредитів за 1M токенів</target>
+      </trans-unit>
+      <trans-unit id="models.longContextInputCost.plural">
+        <source xml:lang="en">Input Cost: {0} credits per 1M tokens</source>
+        <target>Вартість введення: {0} кредитів за 1M токенів</target>
+      </trans-unit>
+      <trans-unit id="models.longContextInputCost.singular">
+        <source xml:lang="en">Input Cost: {0} credit per 1M tokens</source>
+        <target>Вартість введення: {0} кредитів за 1M токенів</target>
+      </trans-unit>
+      <trans-unit id="models.longContextOutputCost.plural">
+        <source xml:lang="en">Output Cost: {0} credits per 1M tokens</source>
+        <target>Вартість виводу: {0} кредитів за 1M токенів</target>
+      </trans-unit>
+      <trans-unit id="models.longContextOutputCost.singular">
+        <source xml:lang="en">Output Cost: {0} credit per 1M tokens</source>
+        <target>Вартість виводу: {0} кредитів за 1M токенів</target>
+      </trans-unit>
+      <trans-unit id="models.longContextPricing">
+        <source xml:lang="en">Long Context Pricing</source>
+        <target>Довгострокове ціноутворення</target>
       </trans-unit>
       <trans-unit id="models.manageProvider">
         <source xml:lang="en">Manage {0}...</source>
@@ -7630,6 +7694,22 @@ Examples:
         <source xml:lang="en">Pricing</source>
         <target>Ціни</target>
       </trans-unit>
+      <trans-unit id="models.renameGroup">
+        <source xml:lang="en">Rename Group</source>
+        <target>Перейменувати групу</target>
+      </trans-unit>
+      <trans-unit id="models.showGroup">
+        <source xml:lang="en">Show All Models</source>
+        <target>Показати всі моделі</target>
+      </trans-unit>
+      <trans-unit id="models.showModel">
+        <source xml:lang="en">Show Model</source>
+        <target>Показати модель</target>
+      </trans-unit>
+      <trans-unit id="models.showModelsPlural">
+        <source xml:lang="en">Show Models</source>
+        <target>Показати моделі</target>
+      </trans-unit>
       <trans-unit id="models.toolCalling">
         <source xml:lang="en">Tools</source>
         <target>Інструменти</target>
@@ -7641,6 +7721,10 @@ Examples:
       <trans-unit id="models.unpinModel">
         <source xml:lang="en">Unpin Model</source>
         <target>Відкріпити модель</target>
+      </trans-unit>
+      <trans-unit id="models.updateApiKey">
+        <source xml:lang="en">Update API Key</source>
+        <target>Оновити API ключ</target>
       </trans-unit>
       <trans-unit id="models.vision">
         <source xml:lang="en">Vision</source>
@@ -7681,6 +7765,10 @@ Examples:
       <trans-unit id="vendor.ariaLabel">
         <source xml:lang="en">{0} Models</source>
         <target>{0} Моделі</target>
+      </trans-unit>
+      <trans-unit id="vendor.hidden.ariaLabel">
+        <source xml:lang="en">{0} Models (hidden)</source>
+        <target>{0} Моделі (приховані)</target>
       </trans-unit>
       <trans-unit id="visible.ariaLabel">
         <source xml:lang="en">Visible Models</source>
@@ -8120,8 +8208,16 @@ Examples:
         <target>Використовуйте функції ШІ з Copilot безкоштовно...</target>
       </trans-unit>
       <trans-unit id="triggerChatSetupFromAccounts">
-        <source xml:lang="en">Sign in to use AI features...</source>
-        <target>Увійдіть, щоб використовувати функції ШІ...</target>
+        <source xml:lang="en">Sign in to use GitHub Copilot...</source>
+        <target>Увійдіть, щоб використовувати GitHub Copilot...</target>
+      </trans-unit>
+      <trans-unit id="upgradeSuccess">
+        <source xml:lang="en">Upgrade Successful</source>
+        <target>Оновлення успішне</target>
+      </trans-unit>
+      <trans-unit id="upgradeSuccessDescription">
+        <source xml:lang="en">Please wait up to 10 minutes for your new plan to apply.</source>
+        <target>Будь ласка, зачекайте до 10 хвилин, поки ваш новий план буде застосовано.</target>
       </trans-unit>
     </body>
   </file>
@@ -8650,12 +8746,12 @@ Type anything below to get started!</source>
         <target>Снуз</target>
       </trans-unit>
       <trans-unit id="signInDescription">
-        <source xml:lang="en">Sign in to use Copilot AI features.</source>
-        <target>Увійдіть, щоб використовувати функції Copilot AI.</target>
+        <source xml:lang="en">Sign in to use GitHub Copilot AI features.</source>
+        <target>Увійдіть, щоб використовувати функції штучного інтелекту GitHub Copilot.</target>
       </trans-unit>
       <trans-unit id="signInToUseAIFeatures">
-        <source xml:lang="en">Sign in to use AI Features</source>
-        <target>Увійдіть, щоб використовувати функції ШІ</target>
+        <source xml:lang="en">Sign in to use GitHub Copilot</source>
+        <target>Увійдіть, щоб використовувати GitHub Copilot</target>
       </trans-unit>
       <trans-unit id="upgrade">
         <source xml:lang="en">Upgrade</source>
@@ -8716,6 +8812,10 @@ Type anything below to get started!</source>
       <trans-unit id="tip.agenticBrowser">
         <source xml:lang="en">Enable [{0}](command:workbench.action.openSettings?%5B%22workbench.browser.enableChatTools%22%5D "Open Settings") to let the agent open and interact with pages in the Integrated Browser.</source>
         <target>Увімкніть [{0}](command:workbench.action.openSettings?%5B%22workbench.browser.enableChatTools%22%5D "Відкрити налаштування"), щоб дозволити агенту відкривати та взаємодіяти зі сторінками в Інтегрованому браузері.</target>
+      </trans-unit>
+      <trans-unit id="tip.agentsWindow">
+        <source xml:lang="en">Work across multiple projects at once in the [Agents window](command:{0} "Open Agents Window").</source>
+        <target>Працюйте над кількома проектами одночасно у вікні [Агенти](command:{0} "Відкрити вікно Агенти").</target>
       </trans-unit>
       <trans-unit id="tip.attachFiles">
         <source xml:lang="en">Reference files or folders with # to give the agent more context about the task.</source>
@@ -9179,6 +9279,10 @@ Source: {0}</source>
         <target>Зовнішній додаток хоче встановити плагін з цього джерела. Плагіни можуть виконувати код на вашій машині. Встановлюйте плагіни лише з джерел, яким ви довіряєте.
 
 Джерело: {0}</target>
+      </trans-unit>
+      <trans-unit id="confirmInstallTargetedPlugin">
+        <source xml:lang="en">Install Plugin '{0}' from '{1}'?</source>
+        <target>Встановити плагін '{0}' з '{1}'?</target>
       </trans-unit>
       <trans-unit id="installButton">
         <source xml:lang="en">&amp;&amp;Install</source>
@@ -10511,6 +10615,46 @@ Note: This setting only controls tool approval and does not prevent the agent fr
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/chatExternalEditContentPart" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="chat.codeblock.deletions">
+        <source xml:lang="en">{0} deletions</source>
+        <target>{0} видалень</target>
+      </trans-unit>
+      <trans-unit id="chat.codeblock.deletions.one">
+        <source xml:lang="en">1 deletion</source>
+        <target>1 видалення</target>
+      </trans-unit>
+      <trans-unit id="chat.codeblock.edited">
+        <source xml:lang="en">Edited</source>
+        <target>Редаговано</target>
+      </trans-unit>
+      <trans-unit id="chat.codeblock.insertions">
+        <source xml:lang="en">{0} insertions</source>
+        <target>{0} вставок</target>
+      </trans-unit>
+      <trans-unit id="chat.codeblock.insertions.one">
+        <source xml:lang="en">1 insertion</source>
+        <target>1 вставка</target>
+      </trans-unit>
+      <trans-unit id="chat.externalEdit.created">
+        <source xml:lang="en">Created</source>
+        <target>Створено</target>
+      </trans-unit>
+      <trans-unit id="chat.externalEdit.deleted">
+        <source xml:lang="en">Deleted</source>
+        <target>Видалено</target>
+      </trans-unit>
+      <trans-unit id="chat.externalEdit.renamed">
+        <source xml:lang="en">Renamed</source>
+        <target>Перейменовано</target>
+      </trans-unit>
+      <trans-unit id="summary">
+        <source xml:lang="en">Edited {0}, {1}, {2}</source>
+        <target>Відредаговано {0}, {1}, {2}</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/chatHookContentPart" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="hook.title.stopped">
@@ -10619,7 +10763,7 @@ Note: This setting only controls tool approval and does not prevent the agent fr
       </trans-unit>
       <trans-unit id="chat.codeblock.edited">
         <source xml:lang="en">Edited</source>
-        <target>Відредаговано</target>
+        <target>Редаговано</target>
       </trans-unit>
       <trans-unit id="chat.codeblock.generating">
         <source xml:lang="en">Generating edits...</source>
@@ -10639,7 +10783,7 @@ Note: This setting only controls tool approval and does not prevent the agent fr
       </trans-unit>
       <trans-unit id="summary">
         <source xml:lang="en">Edited {0}, {1}, {2}</source>
-        <target>Редаговано {0}, {1}, {2}</target>
+        <target>Відредаговано {0}, {1}, {2}</target>
       </trans-unit>
     </body>
   </file>
@@ -11017,13 +11161,9 @@ You can stop the agent at any time by clicking the stop button. This applies to 
         <source xml:lang="en">Click to Retry</source>
         <target>Натисніть, щоб спробувати ще раз</target>
       </trans-unit>
-      <trans-unit id="configureBudget">
-        <source xml:lang="en">Configure Budget</source>
-        <target>Налаштувати бюджет</target>
-      </trans-unit>
-      <trans-unit id="enableAdditionalUsage">
-        <source xml:lang="en">Configure Budget</source>
-        <target>Налаштувати бюджет</target>
+      <trans-unit id="manageBudget">
+        <source xml:lang="en">Manage Budget</source>
+        <target>Керувати бюджетом</target>
       </trans-unit>
       <trans-unit id="upgradeToCopilotPro">
         <source xml:lang="en">Upgrade to GitHub Copilot Pro</source>
@@ -11201,6 +11341,14 @@ You can stop the agent at any time by clicking the stop button. This applies to 
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/chatThinkingContentPart" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="chat.thinking.createdFile">
+        <source xml:lang="en">Created {0}</source>
+        <target>Створено {0}</target>
+      </trans-unit>
+      <trans-unit id="chat.thinking.deletedFile">
+        <source xml:lang="en">Deleted {0}</source>
+        <target>Видалено {0}</target>
+      </trans-unit>
       <trans-unit id="chat.thinking.deletions">
         <source xml:lang="en">{0} deletions</source>
         <target>{0} видалень</target>
@@ -11256,6 +11404,10 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <trans-unit id="chat.thinking.label">
         <source xml:lang="en">{0}: {1}</source>
         <target>{0}: {1}</target>
+      </trans-unit>
+      <trans-unit id="chat.thinking.renamedFile">
+        <source xml:lang="en">Renamed {0}</source>
+        <target>Перейменовано {0}</target>
       </trans-unit>
       <trans-unit id="chat.thinking.shimmer">
         <source xml:lang="en">{0}: </source>
@@ -12403,17 +12555,13 @@ You can stop the agent at any time by clicking the stop button. This applies to 
         <source xml:lang="en">Medium cost</source>
         <target>Середня вартість</target>
       </trans-unit>
-      <trans-unit id="chat.priceCategory.unknown">
-        <source xml:lang="en">{0} cost</source>
-        <target>{0} вартість</target>
-      </trans-unit>
       <trans-unit id="chat.priceCategory.veryHigh">
         <source xml:lang="en">Very high cost</source>
         <target>Дуже висока вартість</target>
       </trans-unit>
       <trans-unit id="chat.tokens.costHint">
-        <source xml:lang="en">Larger size may increase cost in longer sessions</source>
-        <target>Більший розмір може збільшити вартість у довших сесіях.</target>
+        <source xml:lang="en">Larger context may increase cost</source>
+        <target>Більший контекст може збільшити вартість</target>
       </trans-unit>
       <trans-unit id="chat.tokens.header">
         <source xml:lang="en">Context Size</source>
@@ -12450,6 +12598,10 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <trans-unit id="models.inputCostLabel">
         <source xml:lang="en">Input</source>
         <target>Введення</target>
+      </trans-unit>
+      <trans-unit id="models.longContextPriceTitle">
+        <source xml:lang="en">Long context cost (per 1M tokens)</source>
+        <target>Довгострокова вартість контексту (за 1M токенів)</target>
       </trans-unit>
       <trans-unit id="models.outputCostLabel">
         <source xml:lang="en">Output</source>
@@ -12594,6 +12746,10 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <trans-unit id="chat.pastedImageAttached">
         <source xml:lang="en">Attached image</source>
         <target>Прикріплене зображення</target>
+      </trans-unit>
+      <trans-unit id="pasteHtmlAsMarkdown">
+        <source xml:lang="en">Paste as Markdown</source>
+        <target>Вставити як Markdown</target>
       </trans-unit>
       <trans-unit id="pastedAttachment.multiple">
         <source xml:lang="en">{0} and {1} more</source>

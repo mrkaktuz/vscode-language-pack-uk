@@ -158,6 +158,10 @@
   </file>
   <file original="src/vs/workbench/contrib/issue/browser/issueFormService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="additionalIssueData">
+        <source xml:lang="en">Additional Issue Data</source>
+        <target>Додаткові дані про проблему</target>
+      </trans-unit>
       <trans-unit id="cancel">
         <source xml:lang="en">Cancel</source>
         <target>Скасувати</target>
@@ -165,6 +169,18 @@
       <trans-unit id="confirmCloseIssueReporter">
         <source xml:lang="en">Your input will not be saved. Are you sure you want to close this window?</source>
         <target>Ваші дані не будуть збережені. Ви впевнені, що хочете закрити це вікно?</target>
+      </trans-unit>
+      <trans-unit id="issueData">
+        <source xml:lang="en">Issue Data</source>
+        <target>Дані випуску</target>
+      </trans-unit>
+      <trans-unit id="issueReporter.attachmentsHeading">
+        <source xml:lang="en">Attachments</source>
+        <target>Вкладення</target>
+      </trans-unit>
+      <trans-unit id="issueReporter.attachmentsUploadFailed">
+        <source xml:lang="en">Upload failed. Please drag and drop attachments manually.</source>
+        <target>Завантаження не вдалося. Будь ласка, перетягніть вкладення вручну.</target>
       </trans-unit>
       <trans-unit id="issueReporterWriteToClipboard">
         <source xml:lang="en">There is too much data to send to GitHub directly. The data will be copied to the clipboard, please paste it into the GitHub issue page that is opened.</source>
@@ -174,6 +190,10 @@
         <source xml:lang="en">&amp;&amp;OK</source>
         <note>&amp;&amp; denotes a mnemonic</note>
         <target>&amp;&amp;Гаразд</target>
+      </trans-unit>
+      <trans-unit id="pasteData">
+        <source xml:lang="en">We have written the needed data into your clipboard because it was too large to send. Please paste.</source>
+        <target>Ми скопіювали необхідні дані у ваш буфер обміну, оскільки вони були занадто великими для відправки. Будь ласка, вставте.</target>
       </trans-unit>
       <trans-unit id="yes">
         <source xml:lang="en">&amp;&amp;Yes</source>
@@ -195,6 +215,490 @@
       <trans-unit id="reportExtensionMarketplace">
         <source xml:lang="en">Extension Marketplace</source>
         <target>Маркетплейс розширень</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/issue/browser/issueReporterEditorInput" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="discard">
+        <source xml:lang="en">Discard</source>
+        <target>Видалити</target>
+      </trans-unit>
+      <trans-unit id="discardIssue">
+        <source xml:lang="en">Discard issue report?</source>
+        <target>Видалити звіт про проблему?</target>
+      </trans-unit>
+      <trans-unit id="discardIssueDetail">
+        <source xml:lang="en">Your issue report has unsaved changes that will be lost.</source>
+        <target>Ваш звіт про проблему має незбережені зміни, які будуть втрачені.</target>
+      </trans-unit>
+      <trans-unit id="issueReporterEditorInputName">
+        <source xml:lang="en">Report Issue</source>
+        <target>Повідомити про проблему</target>
+      </trans-unit>
+      <trans-unit id="issueReporterIcon">
+        <source xml:lang="en">Icon for the issue reporter editor.</source>
+        <target>Іконка для редактора звітів про проблеми.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/issue/browser/issueReporterEditorPane" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="noData">
+        <source xml:lang="en">No issue reporter data available.</source>
+        <target>Дані про репортерів проблем недоступні.</target>
+      </trans-unit>
+      <trans-unit id="noExperiments">
+        <source xml:lang="en">No current experiments.</source>
+        <target>Немає поточних експериментів.</target>
+      </trans-unit>
+      <trans-unit id="openSystemSettings">
+        <source xml:lang="en">Open System Settings</source>
+        <target>Відкрити Налаштування системи</target>
+      </trans-unit>
+      <trans-unit id="recordingTooLarge">
+        <source xml:lang="en">Recording stopped automatically: the 100 MB upload limit was reached.</source>
+        <target>Запис автоматично зупинено: досягнуто ліміту завантаження 100 МБ.</target>
+      </trans-unit>
+      <trans-unit id="screenRecordingPermissionDenied">
+        <source xml:lang="en">{0} needs Screen Recording permission to record videos. Grant access in System Settings, then click Record again.</source>
+        <target>{0} потрібен дозвіл на запис екрану, щоб записувати відео. Надати доступ у Налаштуваннях системи, а потім знову натисніть Запис.</target>
+      </trans-unit>
+      <trans-unit id="screenRecordingPermissionDeniedGeneric">
+        <source xml:lang="en">Screen recording permission was denied. Allow {0} to record the screen and try again.</source>
+        <target>Дозвіл на запис екрану був відхилений. Дозвольте {0} записувати екран і спробуйте ще раз.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/issue/browser/issueReporterOverlay" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="abExperiments">
+        <source xml:lang="en">A/B Experiments</source>
+        <target>A/B експерименти</target>
+      </trans-unit>
+      <trans-unit id="additionalInformation">
+        <source xml:lang="en">Additional Information</source>
+        <target>Додаткова інформація</target>
+      </trans-unit>
+      <trans-unit id="additionalPerformanceData">
+        <source xml:lang="en">Additional Performance Data</source>
+        <target>Додаткові дані про продуктивність</target>
+      </trans-unit>
+      <trans-unit id="additionalPerformanceDataDescription">
+        <source xml:lang="en">Optionally include currently running processes and workspace metadata to help diagnose performance issues.</source>
+        <target>Додатково включіть поточні запущені процеси та метадані робочого простору, щоб допомогти діагностувати проблеми з продуктивністю.</target>
+      </trans-unit>
+      <trans-unit id="attachments">
+        <source xml:lang="en">Attachments ({0})</source>
+        <target>Вкладення ({0})</target>
+      </trans-unit>
+      <trans-unit id="back">
+        <source xml:lang="en">Back</source>
+        <target>Назад</target>
+      </trans-unit>
+      <trans-unit id="bug">
+        <source xml:lang="en">Bug</source>
+        <target>Помилка</target>
+      </trans-unit>
+      <trans-unit id="bugGuidance">
+        <source xml:lang="en">Describe what happened, the steps to reproduce, what you expected, and what you observed instead.</source>
+        <target>Опишіть, що сталося, кроки для відтворення, що ви очікували та що ви спостерігали натомість.</target>
+      </trans-unit>
+      <trans-unit id="captureOptions">
+        <source xml:lang="en">Capture options</source>
+        <target>Опції захоплення</target>
+      </trans-unit>
+      <trans-unit id="category">
+        <source xml:lang="en">Category</source>
+        <target>Категорія</target>
+      </trans-unit>
+      <trans-unit id="categoryRequired">
+        <source xml:lang="en">Select a category to continue.</source>
+        <target>Виберіть категорію, щоб продовжити.</target>
+      </trans-unit>
+      <trans-unit id="closeTab">
+        <source xml:lang="en">Close</source>
+        <target>Закрити</target>
+      </trans-unit>
+      <trans-unit id="composeMessage">
+        <source xml:lang="en">Describe</source>
+        <target>Описати</target>
+      </trans-unit>
+      <trans-unit id="defaultGuidance">
+        <source xml:lang="en">Select a category above, then describe your feedback in detail.</source>
+        <target>Виберіть категорію вище, а потім детально опишіть свій відгук.</target>
+      </trans-unit>
+      <trans-unit id="deleteRecording">
+        <source xml:lang="en">Remove recording</source>
+        <target>Видалити запис</target>
+      </trans-unit>
+      <trans-unit id="deleteScreenshot">
+        <source xml:lang="en">Delete screenshot</source>
+        <target>Видалити скріншот</target>
+      </trans-unit>
+      <trans-unit id="describeHeading">
+        <source xml:lang="en">Describe your feedback</source>
+        <target>Опишіть ваш відгук</target>
+      </trans-unit>
+      <trans-unit id="description">
+        <source xml:lang="en">Description</source>
+        <target>Опис</target>
+      </trans-unit>
+      <trans-unit id="descriptionPlaceholder">
+        <source xml:lang="en">Describe the issue in detail...</source>
+        <target>Опишіть проблему детально...</target>
+      </trans-unit>
+      <trans-unit id="descriptionRequired">
+        <source xml:lang="en">Enter a description to continue.</source>
+        <target>Введіть опис, щоб продовжити.</target>
+      </trans-unit>
+      <trans-unit id="editScreenshot">
+        <source xml:lang="en">Click to edit screenshot</source>
+        <target>Натисніть, щоб редагувати скріншот</target>
+      </trans-unit>
+      <trans-unit id="excludeAllExtraAttachments">
+        <source xml:lang="en">Exclude All</source>
+        <target>Виключити всі</target>
+      </trans-unit>
+      <trans-unit id="excludeAllExtraAttachmentsAria">
+        <source xml:lang="en">Exclude all additional issue data from this issue</source>
+        <target>Виключити всі додаткові дані про випуск з цього випуску</target>
+      </trans-unit>
+      <trans-unit id="expand">
+        <source xml:lang="en">Expand</source>
+        <target>Розгорнути</target>
+      </trans-unit>
+      <trans-unit id="extension">
+        <source xml:lang="en">Extension</source>
+        <target>Розширення для VS Code</target>
+      </trans-unit>
+      <trans-unit id="extensionData">
+        <source xml:lang="en">Extension Data</source>
+        <target>Дані розширення</target>
+      </trans-unit>
+      <trans-unit id="extensionExternalIssueUrl">
+        <source xml:lang="en">This extension uses an external issue reporter. Preview will open that issue reporter.</source>
+        <target>Ця розширення використовує зовнішній репортер проблем. Попередній перегляд відкриє цього репортера проблем.</target>
+      </trans-unit>
+      <trans-unit id="extensionNoIssueUrl">
+        <source xml:lang="en">This extension does not provide an issue reporting URL.</source>
+        <target>Ця розширення не надає URL для повідомлення про проблеми.</target>
+      </trans-unit>
+      <trans-unit id="extensionPlaceholder">
+        <source xml:lang="en">E.g. Missing alt text on extension readme image</source>
+        <target>Наприклад, відсутній альтернативний текст на зображенні README розширення</target>
+      </trans-unit>
+      <trans-unit id="extensionRequired">
+        <source xml:lang="en">Select an extension to continue.</source>
+        <target>Виберіть розширення, щоб продовжити.</target>
+      </trans-unit>
+      <trans-unit id="extensionSource">
+        <source xml:lang="en">A VS Code extension</source>
+        <target>Розширення для VS Code</target>
+      </trans-unit>
+      <trans-unit id="extensions">
+        <source xml:lang="en">Extensions ({0})</source>
+        <target>Розширення</target>
+      </trans-unit>
+      <trans-unit id="featureGuidance">
+        <source xml:lang="en">Describe the feature you'd like to see, what problem it would solve, and any alternatives you've considered.</source>
+        <target>Опишіть функцію, яку ви хотіли б бачити, яку проблему вона вирішить і які альтернативи ви розглядали.</target>
+      </trans-unit>
+      <trans-unit id="featureRequest">
+        <source xml:lang="en">Feature Request</source>
+        <target>Запит на функцію</target>
+      </trans-unit>
+      <trans-unit id="feedbackCategory">
+        <source xml:lang="en">Category</source>
+        <target>Категорія</target>
+      </trans-unit>
+      <trans-unit id="fiveSeconds">
+        <source xml:lang="en">5 seconds</source>
+        <target>5 секунд</target>
+      </trans-unit>
+      <trans-unit id="generateTitle">
+        <source xml:lang="en">Generate title from description</source>
+        <target>Згенерувати заголовок з опису</target>
+      </trans-unit>
+      <trans-unit id="generateTitleBtn">
+        <source xml:lang="en">Generate from description</source>
+        <target>Генерувати з опису</target>
+      </trans-unit>
+      <trans-unit id="generatingTitle">
+        <source xml:lang="en">Generating...</source>
+        <target>Генерація...</target>
+      </trans-unit>
+      <trans-unit id="hideToolbarInScreenshots">
+        <source xml:lang="en">Hide Toolbar in Screenshots</source>
+        <target>Сховати панель інструментів у знімках екрану</target>
+      </trans-unit>
+      <trans-unit id="includeAllExtraAttachments">
+        <source xml:lang="en">Include All</source>
+        <target>Включити все</target>
+      </trans-unit>
+      <trans-unit id="includeAllExtraAttachmentsAria">
+        <source xml:lang="en">Include all additional issue data in this issue</source>
+        <target>Включіть усі додаткові дані про проблему в цю проблему.</target>
+      </trans-unit>
+      <trans-unit id="includeInIssue">
+        <source xml:lang="en">Include in issue</source>
+        <target>Включити в проблему</target>
+      </trans-unit>
+      <trans-unit id="issueTargetRepo">
+        <source xml:lang="en">Issue will be created in {0}/{1}.</source>
+        <target>Проблема буде створена в {0}/{1}.</target>
+      </trans-unit>
+      <trans-unit id="issueTitle">
+        <source xml:lang="en">Title</source>
+        <target>Назва</target>
+      </trans-unit>
+      <trans-unit id="issueTitlePlaceholder">
+        <source xml:lang="en">Brief summary of the issue</source>
+        <target>Короткий виклад проблеми</target>
+      </trans-unit>
+      <trans-unit id="loadingDiagnostics">
+        <source xml:lang="en">Loading diagnostics...</source>
+        <target>Завантаження діагностики...</target>
+      </trans-unit>
+      <trans-unit id="loadingExtensionData">
+        <source xml:lang="en">Loading extension issue data...</source>
+        <target>Завантаження даних проблеми розширення...</target>
+      </trans-unit>
+      <trans-unit id="loadingProcessInfo">
+        <source xml:lang="en">Loading currently running processes...</source>
+        <target>Завантаження поточних запущених процесів...</target>
+      </trans-unit>
+      <trans-unit id="loadingSystemInfo">
+        <source xml:lang="en">Loading system information...</source>
+        <target>Завантаження інформації про систему...</target>
+      </trans-unit>
+      <trans-unit id="loadingWorkspaceInfo">
+        <source xml:lang="en">Loading workspace metadata...</source>
+        <target>Завантаження метаданих робочого простору...</target>
+      </trans-unit>
+      <trans-unit id="markdownSupported">
+        <source xml:lang="en">Markdown formatting is supported.</source>
+        <target>Підтримується форматування Markdown.</target>
+      </trans-unit>
+      <trans-unit id="marketplace">
+        <source xml:lang="en">Extensions Marketplace</source>
+        <target>Маркетплейс розширень</target>
+      </trans-unit>
+      <trans-unit id="marketplacePlaceholder">
+        <source xml:lang="en">E.g. Cannot disable installed extension</source>
+        <target>Наприклад, не можна вимкнути встановлене розширення.</target>
+      </trans-unit>
+      <trans-unit id="maxAttachmentsReached">
+        <source xml:lang="en">Max attachments reached</source>
+        <target>Досягнуто максимальної кількості вкладень</target>
+      </trans-unit>
+      <trans-unit id="minimize">
+        <source xml:lang="en">Minimize</source>
+        <target>Зменшити</target>
+      </trans-unit>
+      <trans-unit id="next">
+        <source xml:lang="en">Next</source>
+        <target>Далі</target>
+      </trans-unit>
+      <trans-unit id="noDelay">
+        <source xml:lang="en">No delay</source>
+        <target>Без затримки</target>
+      </trans-unit>
+      <trans-unit id="noDescription">
+        <source xml:lang="en">(no description)</source>
+        <target>(немає опису)</target>
+      </trans-unit>
+      <trans-unit id="noSimilarIssues">
+        <source xml:lang="en">No similar issues found.</source>
+        <target>Схожих проблем не знайдено.</target>
+      </trans-unit>
+      <trans-unit id="noTitle">
+        <source xml:lang="en">(no title)</source>
+        <target>(без заголовка)</target>
+      </trans-unit>
+      <trans-unit id="openExternalIssueReporter">
+        <source xml:lang="en">Open External Issue Reporter</source>
+        <target>Відкрити зовнішній репортер проблем</target>
+      </trans-unit>
+      <trans-unit id="or">
+        <source xml:lang="en">or</source>
+        <target>або</target>
+      </trans-unit>
+      <trans-unit id="perfGuidance">
+        <source xml:lang="en">Describe what is slow, when it happens, whether it's consistent or intermittent, and any patterns you've noticed.</source>
+        <target>Опишіть, що є повільним, коли це відбувається, чи є це постійним або періодичним, а також будь-які візерунки, які ви помітили.</target>
+      </trans-unit>
+      <trans-unit id="performanceIssue">
+        <source xml:lang="en">Performance Issue</source>
+        <target>Проблема продуктивності (зависання, повільна робота, аварія)</target>
+      </trans-unit>
+      <trans-unit id="previewOnGitHub">
+        <source xml:lang="en">Preview on GitHub</source>
+        <target>Попередній перегляд на GitHub</target>
+      </trans-unit>
+      <trans-unit id="recordVideo">
+        <source xml:lang="en">Record video</source>
+        <target>Записати відео</target>
+      </trans-unit>
+      <trans-unit id="recordingActive">
+        <source xml:lang="en">Recording active</source>
+        <target>Запис активний</target>
+      </trans-unit>
+      <trans-unit id="recordingThumbnailAlt">
+        <source xml:lang="en">Recording {0}</source>
+        <target>Запис {0}</target>
+      </trans-unit>
+      <trans-unit id="refresh">
+        <source xml:lang="en">Refresh</source>
+        <target>Оновити</target>
+      </trans-unit>
+      <trans-unit id="refreshPerformanceData">
+        <source xml:lang="en">Reload running processes and workspace metadata</source>
+        <target>Перезавантажити запущені процеси та метадані робочого простору</target>
+      </trans-unit>
+      <trans-unit id="reportIssue">
+        <source xml:lang="en">Report Issue</source>
+        <target>Повідомити про проблему</target>
+      </trans-unit>
+      <trans-unit id="reviewSubmit">
+        <source xml:lang="en">Review and submit</source>
+        <target>Переглянути та надіслати</target>
+      </trans-unit>
+      <trans-unit id="runningProcesses">
+        <source xml:lang="en">Running Processes</source>
+        <target>Запущені процеси</target>
+      </trans-unit>
+      <trans-unit id="screenshot">
+        <source xml:lang="en">Screenshot</source>
+        <target>Знімок екрану</target>
+      </trans-unit>
+      <trans-unit id="screenshotAlt">
+        <source xml:lang="en">Screenshot {0}</source>
+        <target>Скріншот {0}</target>
+      </trans-unit>
+      <trans-unit id="screenshots">
+        <source xml:lang="en">Attachments</source>
+        <target>Вкладення</target>
+      </trans-unit>
+      <trans-unit id="screenshotsHeading">
+        <source xml:lang="en">Add attachments for better context</source>
+        <target>Додайте вкладення для кращого контексту</target>
+      </trans-unit>
+      <trans-unit id="screenshotsSubtitle">
+        <source xml:lang="en">You can add up to {0} screenshots or videos. Navigate VS Code and choose when to capture.</source>
+        <target>Ви можете додати до {0} скріншотів або відео. Перейдіть до VS Code і виберіть, коли захопити.</target>
+      </trans-unit>
+      <trans-unit id="searchingSimilarIssues">
+        <source xml:lang="en">Searching similar issues...</source>
+        <target>Шукаю подібні проблеми...</target>
+      </trans-unit>
+      <trans-unit id="selectExtension">
+        <source xml:lang="en">Select extension</source>
+        <target>Виберіть розширення</target>
+      </trans-unit>
+      <trans-unit id="settings">
+        <source xml:lang="en">Settings</source>
+        <target>Налаштування</target>
+      </trans-unit>
+      <trans-unit id="shortcutHintIntro">
+        <source xml:lang="en">Use the floating capture bar, or press</source>
+        <target>Використовуйте плаваючу панель захоплення або натисніть</target>
+      </trans-unit>
+      <trans-unit id="similarIssues">
+        <source xml:lang="en">Similar Issues</source>
+        <target>Схожі проблеми</target>
+      </trans-unit>
+      <trans-unit id="similarIssuesNeedsTitle">
+        <source xml:lang="en">Enter a title to search for similar issues.</source>
+        <target>Введіть заголовок для пошуку схожих проблем.</target>
+      </trans-unit>
+      <trans-unit id="similarIssuesSearchFailed">
+        <source xml:lang="en">Unable to search for similar issues.</source>
+        <target>Неможливо знайти подібні проблеми.</target>
+      </trans-unit>
+      <trans-unit id="skip">
+        <source xml:lang="en">Skip</source>
+        <target>Пропустити</target>
+      </trans-unit>
+      <trans-unit id="stepOf">
+        <source xml:lang="en">Step {0} of {1}</source>
+        <target>Крок {0} з {1}</target>
+      </trans-unit>
+      <trans-unit id="stopRecording">
+        <source xml:lang="en">Stop recording</source>
+        <target>Зупинити запис</target>
+      </trans-unit>
+      <trans-unit id="submit">
+        <source xml:lang="en">Review</source>
+        <target>Огляд</target>
+      </trans-unit>
+      <trans-unit id="systemInformation">
+        <source xml:lang="en">System Information</source>
+        <target>Інформація про систему</target>
+      </trans-unit>
+      <trans-unit id="target">
+        <source xml:lang="en">Target</source>
+        <target>Ціль</target>
+      </trans-unit>
+      <trans-unit id="targetRequired">
+        <source xml:lang="en">Select a target to continue.</source>
+        <target>Виберіть ціль, щоб продовжити.</target>
+      </trans-unit>
+      <trans-unit id="tenSeconds">
+        <source xml:lang="en">10 seconds</source>
+        <target>10 секунд</target>
+      </trans-unit>
+      <trans-unit id="threeSeconds">
+        <source xml:lang="en">3 seconds</source>
+        <target>3 секунди</target>
+      </trans-unit>
+      <trans-unit id="titleRequired">
+        <source xml:lang="en">Enter a title to continue.</source>
+        <target>Введіть заголовок, щоб продовжити.</target>
+      </trans-unit>
+      <trans-unit id="toCapture">
+        <source xml:lang="en">to capture a screenshot</source>
+        <target>зробити скріншот</target>
+      </trans-unit>
+      <trans-unit id="toRecord">
+        <source xml:lang="en">to start or stop recording</source>
+        <target>почати або зупинити запис</target>
+      </trans-unit>
+      <trans-unit id="unknown">
+        <source xml:lang="en">Unknown</source>
+        <target>Не знаю</target>
+      </trans-unit>
+      <trans-unit id="unknownSource">
+        <source xml:lang="en">Don't know</source>
+        <target>Не знаю</target>
+      </trans-unit>
+      <trans-unit id="updateAvailable">
+        <source xml:lang="en">A new version of {0} is available.</source>
+        <target>Доступна нова версія {0}.</target>
+      </trans-unit>
+      <trans-unit id="uploading">
+        <source xml:lang="en">Uploading...</source>
+        <target>Завантаження...</target>
+      </trans-unit>
+      <trans-unit id="userSettings">
+        <source xml:lang="en">User Settings</source>
+        <target>Налаштування користувача</target>
+      </trans-unit>
+      <trans-unit id="vscode">
+        <source xml:lang="en">Visual Studio Code</source>
+        <target>Visual Studio Code</target>
+      </trans-unit>
+      <trans-unit id="vscodePlaceholder">
+        <source xml:lang="en">E.g. Workbench is missing problems panel</source>
+        <target>Наприклад, панель проблем у робочій області відсутня</target>
+      </trans-unit>
+      <trans-unit id="waitingForDiagnostics">
+        <source xml:lang="en">Waiting for performance diagnostics to finish loading</source>
+        <target>Очікування завершення завантаження діагностики продуктивності</target>
+      </trans-unit>
+      <trans-unit id="workspaceMetadata">
+        <source xml:lang="en">Workspace Metadata</source>
+        <target>Метадані робочого простору</target>
       </trans-unit>
     </body>
   </file>
@@ -238,7 +742,7 @@
       </trans-unit>
       <trans-unit id="extensionData">
         <source xml:lang="en">Extension does not have additional data to include.</source>
-        <target>Розширення не має додаткових даних для включення.</target>
+        <target>Дані розширення</target>
       </trans-unit>
       <trans-unit id="extensionWithNoBugsUrl">
         <source xml:lang="en">The issue reporter is unable to create issues for this extension, as it does not specify a URL for reporting issues. Please check the marketplace page of this extension to see if other instructions are available.</source>
@@ -409,6 +913,138 @@ During the process the window reloads repeatedly. Each time you must confirm if 
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/issue/browser/screenshotAnnotation" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="annotationHint">
+        <source xml:lang="en">Edit screenshot to highlight the problem</source>
+        <target>Редагуйте скріншот, щоб підкреслити проблему.</target>
+      </trans-unit>
+      <trans-unit id="apply">
+        <source xml:lang="en">Apply</source>
+        <target>Застосувати</target>
+      </trans-unit>
+      <trans-unit id="arrow">
+        <source xml:lang="en">Arrow</source>
+        <target>Стрілка</target>
+      </trans-unit>
+      <trans-unit id="cancel">
+        <source xml:lang="en">Cancel</source>
+        <target>Скасувати</target>
+      </trans-unit>
+      <trans-unit id="colorValue">
+        <source xml:lang="en">{0}: {1}</source>
+        <target>{0}: {1}</target>
+      </trans-unit>
+      <trans-unit id="crop">
+        <source xml:lang="en">Crop</source>
+        <target>Збір урожаю</target>
+      </trans-unit>
+      <trans-unit id="discard">
+        <source xml:lang="en">Discard</source>
+        <target>Видалити</target>
+      </trans-unit>
+      <trans-unit id="ellipse">
+        <source xml:lang="en">Ellipse</source>
+        <target>Еліпс</target>
+      </trans-unit>
+      <trans-unit id="eraser">
+        <source xml:lang="en">Eraser</source>
+        <target>Стирательна гумка</target>
+      </trans-unit>
+      <trans-unit id="fillColor">
+        <source xml:lang="en">Fill Color</source>
+        <target>Заповнити колір</target>
+      </trans-unit>
+      <trans-unit id="freehand">
+        <source xml:lang="en">Draw</source>
+        <target>Намалювати</target>
+      </trans-unit>
+      <trans-unit id="opacity">
+        <source xml:lang="en">Opacity</source>
+        <target>Непрозорість</target>
+      </trans-unit>
+      <trans-unit id="pan">
+        <source xml:lang="en">Pan</source>
+        <target>Сковорода</target>
+      </trans-unit>
+      <trans-unit id="rectangle">
+        <source xml:lang="en">Rectangle</source>
+        <target>Прямокутник</target>
+      </trans-unit>
+      <trans-unit id="redo">
+        <source xml:lang="en">Redo</source>
+        <target>Переробити</target>
+      </trans-unit>
+      <trans-unit id="save">
+        <source xml:lang="en">Save</source>
+        <target>Зберегти</target>
+      </trans-unit>
+      <trans-unit id="select">
+        <source xml:lang="en">Select / Move</source>
+        <target>Вибрати / Перемістити</target>
+      </trans-unit>
+      <trans-unit id="setFillColor">
+        <source xml:lang="en">Set Fill Color</source>
+        <target>Встановити колір заливки</target>
+      </trans-unit>
+      <trans-unit id="setOpacity">
+        <source xml:lang="en">Set Opacity</source>
+        <target>Встановити непрозорість</target>
+      </trans-unit>
+      <trans-unit id="setStrokeColor">
+        <source xml:lang="en">Set Stroke Color</source>
+        <target>Встановити колір обводки</target>
+      </trans-unit>
+      <trans-unit id="setStrokeWidth">
+        <source xml:lang="en">Set Stroke Width to {0}px</source>
+        <target>Встановіть ширину обводки на {0}px</target>
+      </trans-unit>
+      <trans-unit id="setTextSize">
+        <source xml:lang="en">Set Text Size to {0}px</source>
+        <target>Встановити розмір тексту на {0}px</target>
+      </trans-unit>
+      <trans-unit id="strokeColor">
+        <source xml:lang="en">Stroke Color</source>
+        <target>Колір обводки</target>
+      </trans-unit>
+      <trans-unit id="strokeWidth">
+        <source xml:lang="en">Stroke Width</source>
+        <target>Товщина штриха</target>
+      </trans-unit>
+      <trans-unit id="text">
+        <source xml:lang="en">Text</source>
+        <target>Текст</target>
+      </trans-unit>
+      <trans-unit id="textBackgroundColor">
+        <source xml:lang="en">Background Color</source>
+        <target>Колір фону</target>
+      </trans-unit>
+      <trans-unit id="textColor">
+        <source xml:lang="en">Text Color</source>
+        <target>Колір тексту</target>
+      </trans-unit>
+      <trans-unit id="textSize">
+        <source xml:lang="en">Text Size</source>
+        <target>Розмір тексту</target>
+      </trans-unit>
+      <trans-unit id="toolOptions">
+        <source xml:lang="en">Tool Options</source>
+        <target>Опції інструментів</target>
+      </trans-unit>
+      <trans-unit id="transparentColor">
+        <source xml:lang="en">{0}: Transparent</source>
+        <target>{0}: Прозорий</target>
+      </trans-unit>
+      <trans-unit id="typeText">
+        <source xml:lang="en">Type text</source>
+        <target>Введіть текст</target>
+      </trans-unit>
+      <trans-unit id="undo">
+        <source xml:lang="en">Undo</source>
+        <target>Скасувати</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/issue/common/issue.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="miReportIssue">
@@ -426,6 +1062,22 @@ Translate this to "Report Issue in English" in all languages please!</note>
   </file>
   <file original="src/vs/workbench/contrib/issue/electron-browser/issue.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="issueReporter.wizard.enabled">
+        <source xml:lang="en">Enable the new issue reporter wizard instead of the classic issue reporter.</source>
+        <target>Увімкніть новий майстер звіту про проблеми замість класичного звіту про проблеми.</target>
+      </trans-unit>
+      <trans-unit id="issueReporter.wizard.fullWorkspaceScan">
+        <source xml:lang="en">When auto-collecting performance diagnostics for the issue reporter wizard, walk the full workspace instead of stopping at the default 20,000-file cap. Set to false on very large workspaces if the scan slows the initial wizard render.</source>
+        <target>При автоматичному зборі діагностики продуктивності для майстра звіту про проблеми пройдіть повний робочий простір, а не зупиняйтеся на стандартному обмеженні в 20,000 файлів. Встановіть значення false для дуже великих робочих просторів, якщо сканування уповільнює початкове відображення майстра.</target>
+      </trans-unit>
+      <trans-unit id="issueReporterConfigurationTitle">
+        <source xml:lang="en">Issue Reporter</source>
+        <target>Доповідач проблем</target>
+      </trans-unit>
+      <trans-unit id="issueReporterEditorPaneTitle">
+        <source xml:lang="en">Issue Reporter</source>
+        <target>Доповідач проблем</target>
+      </trans-unit>
       <trans-unit id="openIssueReporter">
         <source xml:lang="en">Open Issue Reporter</source>
         <target>Відкрити зовнішній репортер проблем</target>

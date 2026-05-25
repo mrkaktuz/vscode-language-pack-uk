@@ -238,6 +238,42 @@
         <source xml:lang="en">MCP Servers</source>
         <target>MCP Сервери</target>
       </trans-unit>
+      <trans-unit id="mcp.setOAuthClientSecret">
+        <source xml:lang="en">Set OAuth Client Secret</source>
+        <target>Встановити секретний ключ клієнта OAuth</target>
+      </trans-unit>
+      <trans-unit id="mcp.setOAuthClientSecret.delete">
+        <source xml:lang="en">Delete stored client secret</source>
+        <target>Видалити збережений секрет клієнта</target>
+      </trans-unit>
+      <trans-unit id="mcp.setOAuthClientSecret.hide">
+        <source xml:lang="en">Hide client secret</source>
+        <target>Сховати секрет клієнта</target>
+      </trans-unit>
+      <trans-unit id="mcp.setOAuthClientSecret.placeholder.replace">
+        <source xml:lang="en">Enter a new client secret to replace the stored value</source>
+        <target>Введіть новий секрет клієнта, щоб замінити збережене значення.</target>
+      </trans-unit>
+      <trans-unit id="mcp.setOAuthClientSecret.placeholder.set">
+        <source xml:lang="en">Enter client secret</source>
+        <target>Введіть секрет клієнта</target>
+      </trans-unit>
+      <trans-unit id="mcp.setOAuthClientSecret.prompt">
+        <source xml:lang="en">Enter the client secret for OAuth client '{0}'.</source>
+        <target>Введіть секрет клієнта для OAuth клієнта '{0}'.</target>
+      </trans-unit>
+      <trans-unit id="mcp.setOAuthClientSecret.reveal">
+        <source xml:lang="en">Show client secret</source>
+        <target>Показати секрет клієнта</target>
+      </trans-unit>
+      <trans-unit id="mcp.setOAuthClientSecret.title.replace">
+        <source xml:lang="en">Replace Client Secret for {0}</source>
+        <target>Замініть секрет клієнта для {0}</target>
+      </trans-unit>
+      <trans-unit id="mcp.setOAuthClientSecret.title.set">
+        <source xml:lang="en">Set Client Secret for {0}</source>
+        <target>Встановити секрет клієнта для {0}</target>
+      </trans-unit>
       <trans-unit id="mcp.showOutput">
         <source xml:lang="en">Show Output</source>
         <target>Показати вихідні дані</target>
@@ -675,6 +711,10 @@
         <source xml:lang="en">Debug</source>
         <target>Виправлення помилок</target>
       </trans-unit>
+      <trans-unit id="mcp.replaceClientSecret">
+        <source xml:lang="en">Replace Client Secret</source>
+        <target>Замініть секрет клієнта</target>
+      </trans-unit>
       <trans-unit id="mcp.restart">
         <source xml:lang="en">Restart</source>
         <target>Перезапустити сервер</target>
@@ -682,6 +722,10 @@
       <trans-unit id="mcp.server.more">
         <source xml:lang="en">More...</source>
         <target>Більше...</target>
+      </trans-unit>
+      <trans-unit id="mcp.setClientSecret">
+        <source xml:lang="en">Set Client Secret</source>
+        <target>Встановити секрет клієнта</target>
       </trans-unit>
       <trans-unit id="mcp.start">
         <source xml:lang="en">Start</source>
@@ -1352,8 +1396,8 @@
         <target>Конфігурація OAuth для автентифікації з сервером.</target>
       </trans-unit>
       <trans-unit id="app.mcp.json.oauth.clientId">
-        <source xml:lang="en">The OAuth client ID to use when authenticating with the server.</source>
-        <target>Ідентифікатор клієнта OAuth, який слід використовувати під час аутентифікації з сервером.</target>
+        <source xml:lang="en">The OAuth client ID to use when authenticating with the server. To set the matching client secret securely, use the *Set Client Secret* code lens above this field — secrets are stored in the OS secret store, not in this file.</source>
+        <target>OAuth клієнтський ID, який потрібно використовувати при автентифікації з сервером. Щоб безпечно встановити відповідний клієнтський секрет, використовуйте кодове посилання *Встановити клієнтський секрет* над цим полем — секрети зберігаються в сховищі секретів ОС, а не в цьому файлі.</target>
       </trans-unit>
       <trans-unit id="app.mcp.json.sandbox">
         <source xml:lang="en">Sandbox config that determines file system and network access. Sandboxing is enabled when sandboxEnabled property is set at the server level on Mac OS and Linux only.</source>

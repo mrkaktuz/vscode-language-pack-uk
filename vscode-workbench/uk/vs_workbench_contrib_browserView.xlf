@@ -175,8 +175,8 @@
         <target>Відкрити в зовнішньому браузері</target>
       </trans-unit>
       <trans-unit id="browser.openSettingsAction">
-        <source xml:lang="en">Open Browser Settings</source>
-        <target>Відкрити налаштування браузера</target>
+        <source xml:lang="en">Browser Settings</source>
+        <target>Налаштування браузера</target>
       </trans-unit>
       <trans-unit id="browser.reloadAction">
         <source xml:lang="en">Reload</source>
@@ -254,6 +254,10 @@
         <source xml:lang="en">Add Element to Chat</source>
         <target>Додати елемент до чату</target>
       </trans-unit>
+      <trans-unit id="browser.addScreenshotToChatAction">
+        <source xml:lang="en">Add Screenshot to Chat</source>
+        <target>Додати скріншот до чату</target>
+      </trans-unit>
       <trans-unit id="browser.agentSharingContentWarning.detail">
         <source xml:lang="en">Pages may contain hidden prompts that can influence agent behavior. Double-check the attached contents before sending.</source>
         <target>Сторінки можуть містити приховані підказки, які можуть вплинути на поведінку агента. Подвійно перевірте прикріплені вмісти перед відправленням.</target>
@@ -269,6 +273,10 @@
       <trans-unit id="browser.agentSharingContentWarning.ok">
         <source xml:lang="en">&amp;&amp;OK</source>
         <target>&amp;&amp;Гаразд</target>
+      </trans-unit>
+      <trans-unit id="browser.chatActionsSubmenu">
+        <source xml:lang="en">Add to Chat</source>
+        <target>Додати до чату</target>
       </trans-unit>
       <trans-unit id="browser.elementSelectionActive">
         <source xml:lang="en">Whether element selection is currently active</source>
@@ -294,6 +302,10 @@
         <source xml:lang="en">Browser</source>
         <target>Браузер</target>
       </trans-unit>
+      <trans-unit id="browserScreenshot">
+        <source xml:lang="en">Browser Screenshot</source>
+        <target>Скріншот браузера</target>
+      </trans-unit>
       <trans-unit id="consoleLogs">
         <source xml:lang="en">Console Logs</source>
         <target>Консольні журнали</target>
@@ -301,6 +313,122 @@
       <trans-unit id="workbench.browser.agentHostChatToolsEnabled">
         <source xml:lang="en">When enabled, integrated browser tools are exposed as client-provided tools to agent host sessions in the Sessions window. Requires {0} and {1}.</source>
         <target>Коли увімкнено, інтегровані інструменти браузера надаються як інструменти, надані клієнтом, для сесій хоста агента у вікні Сесії. Потребує {0} та {1}.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserEditorEmulationFeatures" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="browser.device.dimensionsLabel">
+        <source xml:lang="en">Dimensions:</source>
+        <target>Розміри:</target>
+      </trans-unit>
+      <trans-unit id="browser.device.dprAriaLabel">
+        <source xml:lang="en">Device pixel ratio</source>
+        <target>Співвідношення пікселів пристрою</target>
+      </trans-unit>
+      <trans-unit id="browser.device.dprLabel">
+        <source xml:lang="en">DPR:</source>
+        <target>DPR:</target>
+      </trans-unit>
+      <trans-unit id="browser.device.dprTitle">
+        <source xml:lang="en">Device pixel ratio (blank = system default)</source>
+        <target>Співвідношення пікселів пристрою (пусто = системне значення за замовчуванням)</target>
+      </trans-unit>
+      <trans-unit id="browser.device.heightAriaLabel">
+        <source xml:lang="en">Viewport height</source>
+        <target>Висота вікна перегляду</target>
+      </trans-unit>
+      <trans-unit id="browser.device.inputPlaceholderAuto">
+        <source xml:lang="en">auto</source>
+        <target>авто</target>
+      </trans-unit>
+      <trans-unit id="browser.device.scaleLabel">
+        <source xml:lang="en">Scale:</source>
+        <target>Масштаб:</target>
+      </trans-unit>
+      <trans-unit id="browser.device.swapDimensionsTitle">
+        <source xml:lang="en">Swap Dimensions</source>
+        <target>Поміняти виміри</target>
+      </trans-unit>
+      <trans-unit id="browser.device.widthAriaLabel">
+        <source xml:lang="en">Viewport width</source>
+        <target>Ширина вікна перегляду</target>
+      </trans-unit>
+      <trans-unit id="browser.device.zoomAriaLabel">
+        <source xml:lang="en">Zoom factor</source>
+        <target>Фактор масштабування</target>
+      </trans-unit>
+      <trans-unit id="browser.device.zoomAuto">
+        <source xml:lang="en">Auto ({0}%)</source>
+        <target>Авто ({0}%)</target>
+      </trans-unit>
+      <trans-unit id="browser.devicePresets.mobileTag">
+        <source xml:lang="en">mobile</source>
+        <target>мобільний</target>
+      </trans-unit>
+      <trans-unit id="browser.devicePresets.placeholder">
+        <source xml:lang="en">Select a device preset</source>
+        <target>Виберіть пресет пристрою</target>
+      </trans-unit>
+      <trans-unit id="browser.emulationHasUserAgent">
+        <source xml:lang="en">Whether the browser emulation has a custom user agent</source>
+        <target>Чи має емуляція браузера користувацький агент?</target>
+      </trans-unit>
+      <trans-unit id="browser.emulationIsMobile">
+        <source xml:lang="en">Whether the browser emulation is in mobile mode</source>
+        <target>Чи знаходиться емуляція браузера в мобільному режимі</target>
+      </trans-unit>
+      <trans-unit id="browser.emulationToolbar.close">
+        <source xml:lang="en">Close</source>
+        <target>Закрити</target>
+      </trans-unit>
+      <trans-unit id="browser.emulationToolbar.mobile">
+        <source xml:lang="en">Mobile Emulation</source>
+        <target>Мобільна еймуляція</target>
+      </trans-unit>
+      <trans-unit id="browser.emulationToolbar.presets">
+        <source xml:lang="en">Apply Preset...</source>
+        <target>Застосувати пресет...</target>
+      </trans-unit>
+      <trans-unit id="browser.emulationToolbar.reset">
+        <source xml:lang="en">Reset</source>
+        <target>Скинути</target>
+      </trans-unit>
+      <trans-unit id="browser.emulationToolbar.userAgent">
+        <source xml:lang="en">Set User Agent...</source>
+        <target>Встановити User Agent...</target>
+      </trans-unit>
+      <trans-unit id="browser.emulationToolbarVisible">
+        <source xml:lang="en">Whether the browser emulation toolbar is visible</source>
+        <target>Чи видима панель інструментів емуляції браузера</target>
+      </trans-unit>
+      <trans-unit id="browser.hideEmulationToolbar">
+        <source xml:lang="en">Hide Emulation Toolbar</source>
+        <target>Сховати панель інструментів емуляції</target>
+      </trans-unit>
+      <trans-unit id="browser.pickDevicePreset">
+        <source xml:lang="en">Emulate Device...</source>
+        <target>Емуляція пристрою...</target>
+      </trans-unit>
+      <trans-unit id="browser.resetEmulation">
+        <source xml:lang="en">Reset Emulation</source>
+        <target>Скинути емуляцію</target>
+      </trans-unit>
+      <trans-unit id="browser.setUserAgent">
+        <source xml:lang="en">Emulate User Agent...</source>
+        <target>Емітувати User Agent...</target>
+      </trans-unit>
+      <trans-unit id="browser.showEmulationToolbar">
+        <source xml:lang="en">Show Emulation Toolbar</source>
+        <target>Показати панель інструментів емуляції</target>
+      </trans-unit>
+      <trans-unit id="browser.toggleMobileEmulation">
+        <source xml:lang="en">Toggle Mobile Emulation</source>
+        <target>Перемкнути емуляцію мобільного пристрою</target>
+      </trans-unit>
+      <trans-unit id="browser.userAgent.prompt">
+        <source xml:lang="en">User agent string (leave empty for VS Code default)</source>
+        <target>Рядок агента користувача (залиште порожнім для значення за замовчуванням VS Code)</target>
       </trans-unit>
     </body>
   </file>
