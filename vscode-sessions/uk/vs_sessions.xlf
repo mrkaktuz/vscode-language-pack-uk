@@ -138,6 +138,10 @@
   </file>
   <file original="src/vs/sessions/browser/parts/chatCompositeBar" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="chatTabsAriaLabel">
+        <source xml:lang="en">Chats</source>
+        <target>Чати</target>
+      </trans-unit>
       <trans-unit id="closeChat">
         <source xml:lang="en">Close</source>
         <target>Закрити</target>
@@ -257,10 +261,6 @@
         <source xml:lang="en">Back</source>
         <target>Назад</target>
       </trans-unit>
-      <trans-unit id="diffView.backLabel">
-        <source xml:lang="en">Back</source>
-        <target>Назад</target>
-      </trans-unit>
       <trans-unit id="diffView.loading">
         <source xml:lang="en">Loading…</source>
         <target>Завантаження…</target>
@@ -280,6 +280,46 @@
       <trans-unit id="diffView.prevFile">
         <source xml:lang="en">Previous file</source>
         <target>Попередній файл</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/browser/parts/mobile/contributions/mobileMultiDiffView" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="multiDiffView.back">
+        <source xml:lang="en">Back</source>
+        <target>Назад</target>
+      </trans-unit>
+      <trans-unit id="multiDiffView.file">
+        <source xml:lang="en">file</source>
+        <target>файл</target>
+      </trans-unit>
+      <trans-unit id="multiDiffView.fileCount">
+        <source xml:lang="en">{0} {1}</source>
+        <target>{0} {1}</target>
+      </trans-unit>
+      <trans-unit id="multiDiffView.fileFallback">
+        <source xml:lang="en">file</source>
+        <target>файл</target>
+      </trans-unit>
+      <trans-unit id="multiDiffView.files">
+        <source xml:lang="en">files</source>
+        <target>файли</target>
+      </trans-unit>
+      <trans-unit id="multiDiffView.loadError">
+        <source xml:lang="en">Unable to load changes in this file.</source>
+        <target>Неможливо завантажити зміни в цьому файлі.</target>
+      </trans-unit>
+      <trans-unit id="multiDiffView.loading">
+        <source xml:lang="en">Loading…</source>
+        <target>Завантаження…</target>
+      </trans-unit>
+      <trans-unit id="multiDiffView.noChanges">
+        <source xml:lang="en">No changes in this file.</source>
+        <target>Немає змін у цьому файлі.</target>
+      </trans-unit>
+      <trans-unit id="multiDiffView.toggleFile">
+        <source xml:lang="en">Toggle {0}</source>
+        <target>Перемикач {0}</target>
       </trans-unit>
     </body>
   </file>
@@ -377,6 +417,14 @@
         <source xml:lang="en">Close sessions</source>
         <target>Закрити сесії</target>
       </trans-unit>
+      <trans-unit id="mobileTopBar.filesChangedCount">
+        <source xml:lang="en">{0} files</source>
+        <target>{0} файлів</target>
+      </trans-unit>
+      <trans-unit id="mobileTopBar.filesChangedTooltip">
+        <source xml:lang="en">{0} files changed</source>
+        <target>{0} файлів змінено</target>
+      </trans-unit>
       <trans-unit id="mobileTopBar.newSession">
         <source xml:lang="en">New Session</source>
         <target>Нова сесія</target>
@@ -388,6 +436,26 @@
       <trans-unit id="mobileTopBar.openSessions">
         <source xml:lang="en">Open sessions</source>
         <target>Відкриті сесії</target>
+      </trans-unit>
+      <trans-unit id="mobileTopBar.singleFileChanged">
+        <source xml:lang="en">1 file</source>
+        <target>1 файл</target>
+      </trans-unit>
+      <trans-unit id="mobileTopBar.singleFileChangedTooltip">
+        <source xml:lang="en">1 file changed</source>
+        <target>1 файл змінено</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/browser/parts/sessionHeader" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentSessions.newSession">
+        <source xml:lang="en">New Session</source>
+        <target>Нова сесія</target>
+      </trans-unit>
+      <trans-unit id="renameSession.aria">
+        <source xml:lang="en">Rename session</source>
+        <target>Перейменувати сесію</target>
       </trans-unit>
     </body>
   </file>
@@ -462,10 +530,6 @@
   </file>
   <file original="src/vs/sessions/common/contextkeys" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="activeChatBar">
-        <source xml:lang="en">The identifier of the active chat bar panel</source>
-        <target>Ідентифікатор активної панелі чату</target>
-      </trans-unit>
       <trans-unit id="activeSessionHasGitRepository">
         <source xml:lang="en">Whether the active session has an associated git repository</source>
         <target>Чи має активна сесія асоційований git-репозиторій</target>
@@ -482,21 +546,25 @@
         <source xml:lang="en">The session type of the active session</source>
         <target>Тип сесії активної сесії</target>
       </trans-unit>
+      <trans-unit id="activeSessionUsesCombinedConfigPicker">
+        <source xml:lang="en">Whether the active session's provider offers a combined mode and model configuration picker (used on phone layouts in place of the standalone pickers)</source>
+        <target>Чи пропонує постачальник активної сесії комбінований режим і вибір конфігурації моделі (використовується на телефонних макетах замість окремих вибірників)</target>
+      </trans-unit>
       <trans-unit id="activeSessionWorkspaceIsVirtual">
         <source xml:lang="en">Whether the active session's workspace is virtual</source>
         <target>Чи є робоче середовище активної сесії віртуальним</target>
       </trans-unit>
-      <trans-unit id="chatBarFocus">
-        <source xml:lang="en">Whether the chat bar has keyboard focus</source>
-        <target>Чи має чат-бар фокус клавіатури</target>
-      </trans-unit>
-      <trans-unit id="chatBarVisible">
-        <source xml:lang="en">Whether the chat bar is visible</source>
-        <target>Чи видима панель чату</target>
+      <trans-unit id="activeSessions">
+        <source xml:lang="en">The identifier of the active sessions panel</source>
+        <target>Ідентифікатор панелі активних сесій</target>
       </trans-unit>
       <trans-unit id="chatSessionProviderId">
         <source xml:lang="en">The provider ID of a session in context menu overlays</source>
         <target>ID постачальника сеансу в спливаючих меню контексту</target>
+      </trans-unit>
+      <trans-unit id="chatSessionType">
+        <source xml:lang="en">The session type of a session in context menu overlays</source>
+        <target>Тип сесії в контекстному меню накладок</target>
       </trans-unit>
       <trans-unit id="editorMaximized">
         <source xml:lang="en">Whether the editor area is maximized</source>
@@ -506,9 +574,33 @@
         <source xml:lang="en">Whether the active session is archived (marked as done)</source>
         <target>Чи активна сесія архівована (позначена як завершена)</target>
       </trans-unit>
-      <trans-unit id="isNewChatInSession">
-        <source xml:lang="en">Whether the user is composing a new chat within the active session</source>
-        <target>Чи користувач складає новий чат у межах активної сесії</target>
+      <trans-unit id="multipleSessionsVisible">
+        <source xml:lang="en">Whether more than one session is visible in the sessions part's grid</source>
+        <target>Чи більше ніж одна сесія видима в сітці частини сесій</target>
+      </trans-unit>
+      <trans-unit id="sessionIsArchived">
+        <source xml:lang="en">Whether the session is archived (marked as done)</source>
+        <target>Чи сесія архівована (позначена як завершена)</target>
+      </trans-unit>
+      <trans-unit id="sessionIsCreated">
+        <source xml:lang="en">Whether the session view's session has been created (chat view shown, not new-session view)</source>
+        <target>Чи була створена сесія в режимі перегляду сесії (показується перегляд чату, а не перегляд нової сесії)</target>
+      </trans-unit>
+      <trans-unit id="sessionIsMaximized">
+        <source xml:lang="en">Whether the session view is currently maximized in the sessions part's grid</source>
+        <target>Чи є перегляд сесії наразі розгорнутим у сітці частини сесій</target>
+      </trans-unit>
+      <trans-unit id="sessionIsRead">
+        <source xml:lang="en">Whether the session has been marked as read</source>
+        <target>Чи була сесія позначена як прочитана</target>
+      </trans-unit>
+      <trans-unit id="sessionIsSticky">
+        <source xml:lang="en">Whether the session view's session is sticky in the grid</source>
+        <target>Чи є сесія в режимі перегляду сесії фіксованою в сітці</target>
+      </trans-unit>
+      <trans-unit id="sessionSupportsMultipleChats">
+        <source xml:lang="en">Whether the session view's session supports multiple chats</source>
+        <target>Чи підтримує перегляд сесії кілька чатів</target>
       </trans-unit>
       <trans-unit id="sessionWorkspacePickerGroup">
         <source xml:lang="en">The currently active group tab in the session workspace picker</source>
@@ -526,6 +618,10 @@
         <source xml:lang="en">Whether there is a next session in the navigation history</source>
         <target>Чи є наступна сесія в історії навігації</target>
       </trans-unit>
+      <trans-unit id="sessionsFocus">
+        <source xml:lang="en">Whether the sessions part has keyboard focus</source>
+        <target>Чи має частина сесій фокус клавіатури</target>
+      </trans-unit>
       <trans-unit id="sessionsIsPhoneLayout">
         <source xml:lang="en">Whether the current layout is the phone layout</source>
         <target>Чи є поточне макетування макетом для телефону</target>
@@ -533,6 +629,10 @@
       <trans-unit id="sessionsKeyboardVisible">
         <source xml:lang="en">Whether the virtual keyboard is visible</source>
         <target>Чи видима віртуальна клавіатура</target>
+      </trans-unit>
+      <trans-unit id="sessionsVisible">
+        <source xml:lang="en">Whether the sessions part is visible</source>
+        <target>Чи видима частина сесій</target>
       </trans-unit>
       <trans-unit id="sessionsWelcomeVisible">
         <source xml:lang="en">Whether the sessions welcome overlay is visible</source>
@@ -563,24 +663,16 @@
         <target>Розмір шрифту заголовка 3 для вікна агентів (підзаголовок).</target>
       </trans-unit>
       <trans-unit id="agents.fontSize.label1">
-        <source xml:lang="en">Label 1 font size for the agents window (interactive tabs).</source>
-        <target>Розмір шрифту мітки 1 для вікна агентів (інтерактивні вкладки).</target>
+        <source xml:lang="en">Label 1 font size for the agents window (section title, tabs).</source>
+        <target>Розмір шрифту мітки 1 для вікна агентів (назва секції, вкладки).</target>
       </trans-unit>
       <trans-unit id="agents.fontSize.label2">
-        <source xml:lang="en">Label 2 font size for the agents window (metadata emphasis).</source>
-        <target>Розмір шрифту мітки 2 для вікна агентів (акцент на метаданих).</target>
+        <source xml:lang="en">Label 2 font size for the agents window (metadata).</source>
+        <target>Розмір шрифту мітки 2 для вікна агентів (метадані).</target>
       </trans-unit>
       <trans-unit id="agents.fontSize.label3">
-        <source xml:lang="en">Label 3 font size for the agents window (metadata primary).</source>
-        <target>Розмір шрифту мітки 3 для вікна агентів (основні метадані).</target>
-      </trans-unit>
-      <trans-unit id="agents.fontSize.label4">
-        <source xml:lang="en">Label 4 font size for the agents window (badge).</source>
-        <target>Розмір шрифту мітки 4 для вікна агентів (значок).</target>
-      </trans-unit>
-      <trans-unit id="agents.fontWeight.medium">
-        <source xml:lang="en">Medium font weight (500) for the agents window.</source>
-        <target>Середня вага шрифту (500) для вікна агентів.</target>
+        <source xml:lang="en">Label 3 font size for the agents window (badge).</source>
+        <target>Розмір шрифту мітки 3 для вікна агентів (значок).</target>
       </trans-unit>
       <trans-unit id="agents.fontWeight.regular">
         <source xml:lang="en">Regular font weight (400) for the agents window.</source>
@@ -594,6 +686,14 @@
   </file>
   <file original="src/vs/sessions/common/theme" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="activeSessionView.background">
+        <source xml:lang="en">Background color of an active session view in the agent sessions window.</source>
+        <target>Колір фону активного сеансу вікна сеансів агента.</target>
+      </trans-unit>
+      <trans-unit id="activeSessionView.foreground">
+        <source xml:lang="en">Foreground color of an active session view in the agent sessions window.</source>
+        <target>Колір переднього плану активного сеансу вікна сеансів агента.</target>
+      </trans-unit>
       <trans-unit id="agentFeedbackInputWidget.border">
         <source xml:lang="en">Border color of the agent feedback input widget shown in the editor.</source>
         <target>Колір рамки віджета введення відгуків агента, що відображається в редакторі.</target>
@@ -677,6 +777,14 @@
       <trans-unit id="agentsUpdateButton.downloadingBackground">
         <source xml:lang="en">Background color of the update button to show download progress in the agent sessions window.</source>
         <target>Колір фону кнопки оновлення для відображення прогресу завантаження у вікні сесій агента.</target>
+      </trans-unit>
+      <trans-unit id="inactiveSessionView.background">
+        <source xml:lang="en">Background color of an inactive session view in the agent sessions window.</source>
+        <target>Колір фону неактивного сеансу вікна сеансів агента.</target>
+      </trans-unit>
+      <trans-unit id="inactiveSessionView.foreground">
+        <source xml:lang="en">Foreground color of an inactive session view in the agent sessions window.</source>
+        <target>Колір переднього плану неактивного сеансу вікна сеансів агента.</target>
       </trans-unit>
     </body>
   </file>

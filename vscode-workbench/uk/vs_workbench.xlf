@@ -109,6 +109,18 @@ To complete authentication, navigate to {1} and enter the code above.</source>
         <source xml:lang="en">No</source>
         <target>Ні</target>
       </trans-unit>
+      <trans-unit id="xaaResourceSecretPlaceholder">
+        <source xml:lang="en">Resource client secret</source>
+        <target>Секрет клієнта ресурсу</target>
+      </trans-unit>
+      <trans-unit id="xaaResourceSecretPrompt">
+        <source xml:lang="en">The resource at '{0}' uses a per-resource client identifier '{1}'. Enter the matching client secret (leave blank if none). The value is saved in OS secret storage; manage it later via the 'Set Client Secret' code lens in mcp.json.</source>
+        <target>Ресурс за '{0}' використовує ідентифікатор клієнта для кожного ресурсу '{1}'. Введіть відповідний секрет клієнта (залиште порожнім, якщо його немає). Значення зберігається в сховищі секретів ОС; керуйте ним пізніше за допомогою коду 'Set Client Secret' у mcp.json.</target>
+      </trans-unit>
+      <trans-unit id="xaaResourceSecretTitle">
+        <source xml:lang="en">Resource Client Secret Required</source>
+        <target>Необхідний секрет клієнта ресурсу</target>
+      </trans-unit>
       <trans-unit id="yes">
         <source xml:lang="en">Yes</source>
         <target>Так</target>
@@ -335,6 +347,26 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       <trans-unit id="loginWith">
         <source xml:lang="en">Login with {0}</source>
         <target>Увійти з {0}</target>
+      </trans-unit>
+      <trans-unit id="mcp.enterpriseManaged.issuerInvalid">
+        <source xml:lang="en">Enterprise-managed MCP authentication requires `mcp.enterpriseManagedAuth.idp.issuer` to be a valid URL; got '{0}'.</source>
+        <target>Аутентифікація MCP, що керується підприємством, вимагає, щоб `mcp.enterpriseManagedAuth.idp.issuer` був дійсним URL; отримано '{0}'.</target>
+      </trans-unit>
+      <trans-unit id="mcp.enterpriseManaged.issuerMissing">
+        <source xml:lang="en">Enterprise-managed MCP authentication requires `mcp.enterpriseManagedAuth.idp.issuer` to be configured. Set it via enterprise policy (Windows Group Policy / macOS managed preferences / Linux `/etc/vscode/policy.json`) or, for local testing, by hand-editing `settings.json`.</source>
+        <target>Аутентифікація MCP, що керується підприємством, вимагає налаштування `mcp.enterpriseManagedAuth.idp.issuer`. Налаштуйте це через політику підприємства (Групова політика Windows / керовані налаштування macOS / Linux `/etc/vscode/policy.json`) або, для локального тестування, редагуючи `settings.json` вручну.</target>
+      </trans-unit>
+      <trans-unit id="mcp.enterpriseManaged.issuerNotHttp">
+        <source xml:lang="en">Enterprise-managed MCP authentication requires `mcp.enterpriseManagedAuth.idp.issuer` to use the `https` or `http` scheme; got '{0}'.</source>
+        <target>Аутентифікація MCP, що керується підприємством, вимагає, щоб `mcp.enterpriseManagedAuth.idp.issuer` використовував схему `https` або `http`; отримано '{0}'.</target>
+      </trans-unit>
+      <trans-unit id="mcp.enterpriseManaged.missingAS">
+        <source xml:lang="en">The enterprise-managed MCP server '{0}' did not advertise an `authorization_servers` entry in its protected-resource metadata.</source>
+        <target>Сервер MCP, керований підприємством '{0}', не оголосив запис `authorization_servers` у своїх метаданих захищених ресурсів.</target>
+      </trans-unit>
+      <trans-unit id="mcp.enterpriseManaged.missingResource">
+        <source xml:lang="en">The enterprise-managed MCP server '{0}' did not advertise a protected-resource metadata document with a 'resource' identifier.</source>
+        <target>Сервер MCP, керований підприємством '{0}', не оголосив документ метаданих захищеного ресурсу з ідентифікатором 'resource'.</target>
       </trans-unit>
       <trans-unit id="mcpAuthSessionRemoved">
         <source xml:lang="en">Authentication session for {0} removed, stopping server</source>
@@ -2894,6 +2926,10 @@ Browser: {3}</source>
       <trans-unit id="breadcrumbsActive">
         <source xml:lang="en">Whether breadcrumbs have focus</source>
         <target>Чи мають хлібні крихти фокус</target>
+      </trans-unit>
+      <trans-unit id="breadcrumbsHasSymbols">
+        <source xml:lang="en">Whether breadcrumbs contain symbol items</source>
+        <target>Чи містять хлібні крихти символи предметів</target>
       </trans-unit>
       <trans-unit id="breadcrumbsPossible">
         <source xml:lang="en">Whether the editor can show breadcrumbs</source>
@@ -7065,6 +7101,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="dirtyWorkingCopies">
         <source xml:lang="en">Whether there are any working copies with unsaved changes</source>
         <target>Чи є якісь робочі копії з незбереженими змінами</target>
+      </trans-unit>
+      <trans-unit id="editorAreaFocus">
+        <source xml:lang="en">Whether the editor area (any editor part) has keyboard focus</source>
+        <target>Чи має область редактора (будь-яка частина редактора) фокус клавіатури</target>
       </trans-unit>
       <trans-unit id="editorIsOpen">
         <source xml:lang="en">Whether an editor is open</source>

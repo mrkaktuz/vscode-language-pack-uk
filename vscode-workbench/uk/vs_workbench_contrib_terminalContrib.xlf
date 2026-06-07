@@ -568,6 +568,54 @@ Remarks:
         <source xml:lang="en">Run `{0}` command?</source>
         <target>Запустити команду `{0}`?</target>
       </trans-unit>
+      <trans-unit id="runInTerminal.allowNetwork">
+        <source xml:lang="en">Allow the sandbox to run `{0}` command with unrestricted network access.</source>
+        <target>Дозвольте пісочниці виконувати команду `{0}` з необмеженим доступом до мережі.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.allowNetwork.autoRetry">
+        <source xml:lang="en">Retry `{0}` command in the sandbox by allowing network access?</source>
+        <target>Спробувати команду `{0}` у пісочниці, дозволивши доступ до мережі?</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.allowNetwork.autoRetry.confirmationMessage">
+        <source xml:lang="en">`{0}`</source>
+        <target>`{0}`</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.allowNetwork.autoRetry.domain">
+        <source xml:lang="en">Retry `{0}` command in the sandbox by allowing network access to {1}?</source>
+        <target>Спробувати команду `{0}` у пісочниці, дозволивши доступ до мережі {1}?</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.allowNetwork.autoRetry.invocation">
+        <source xml:lang="en">Running `{0}` in the sandbox with unrestricted network access</source>
+        <target>Запуск `{0}` у пісочниці з необмеженим доступом до мережі</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.allowNetwork.autoRetry.reason">
+        <source xml:lang="en">The sandboxed execution output indicated the sandbox blocked required network access.</source>
+        <target>Вихідні дані виконання в пісочниці вказали, що пісочниця заблокувала необхідний доступ до мережі.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.allowNetwork.confirmationMessage">
+        <source xml:lang="en">Explanation: {0}
+
+Goal: {1}
+
+Reason for allowing unrestricted network access in the sandbox: {2}</source>
+        <target>Пояснення: {0}
+
+Мета: {1}
+
+Причина дозволу необмеженого доступу до мережі в пісочниці: {2}</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.allowNetwork.confirmationMessage.defaultReason">
+        <source xml:lang="en">The model indicated that this sandboxed command needs unrestricted network access.</source>
+        <target>Модель вказала, що ця командна оболонка потребує необмеженого доступу до мережі.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.allowNetwork.disabled.invocation">
+        <source xml:lang="en">Not running `{0}` because unrestricted network access in the sandbox is disabled</source>
+        <target>Не виконується `{0}`, оскільки необмежений доступ до мережі в пісочниці вимкнено.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.allowNetwork.disabled.result">
+        <source xml:lang="en">The command was not executed because it requested unrestricted network access in the terminal sandbox, but per-command network access is disabled by chat.agent.sandbox.retryWithAllowNetworkRequests. Run the command with restricted network access instead, or enable the setting to allow network access requests.</source>
+        <target>Команда не була виконана, оскільки вона вимагала необмеженого доступу до мережі в пісочниці терміналу, але доступ до мережі за командою вимкнено параметром chat.agent.sandbox.retryWithAllowNetworkRequests. Виконайте команду з обмеженим доступом до мережі, або увімкніть налаштування для дозволу запитів на доступ до мережі.</target>
+      </trans-unit>
       <trans-unit id="runInTerminal.confirmationMessage">
         <source xml:lang="en">Explanation: {0}
 
@@ -773,16 +821,16 @@ Reason for leaving the sandbox: {2}</source>
         <target>Пропустити</target>
       </trans-unit>
       <trans-unit id="terminalAssessingOutput">
-        <source xml:lang="en">`{0}` may need input</source>
-        <target>`{0}` може потребувати введення</target>
+        <source xml:lang="en">{0} may need input</source>
+        <target>{0} може потребувати вводу</target>
       </trans-unit>
       <trans-unit id="terminalCommandCompleted">
-        <source xml:lang="en">`{0}` completed</source>
-        <target>`{0}` завершено</target>
+        <source xml:lang="en">{0} completed</source>
+        <target>{0} завершено</target>
       </trans-unit>
       <trans-unit id="terminalProcessExited">
-        <source xml:lang="en">`{0}` terminal exited</source>
-        <target>`{0}` термінал вийшов</target>
+        <source xml:lang="en">{0} terminal exited</source>
+        <target>{0} термінал вийшов</target>
       </trans-unit>
     </body>
   </file>
@@ -1060,6 +1108,10 @@ Reason for leaving the sandbox: {2}</source>
         <source xml:lang="en">Array of paths to deny write access within allowed paths (takes precedence over allowWrite).</source>
         <target>Масив шляхів для заборони запису в межах дозволених шляхів (має пріоритет над allowWrite).</target>
       </trans-unit>
+      <trans-unit id="agentSandbox.retryWithAllowNetworkRequests">
+        <source xml:lang="en">Controls whether agent mode terminal commands can retry in the sandbox with unrestricted network access after user confirmation. This applies only when {0} is set to `on` and preserves file system sandboxing while relaxing network restrictions for an approved command.</source>
+        <target>Контролює, чи можуть термінальні команди режиму агента повторюватися в пісочниці з необмеженим доступом до мережі після підтвердження користувача. Це застосовується лише тоді, коли {0} встановлено на `on` і зберігає пісочницю файлової системи, одночасно послаблюючи мережеві обмеження для затвердженої команди.</target>
+      </trans-unit>
       <trans-unit id="agentSandbox.runtimeSetting">
         <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Key/value pairs are passed through to the root of the sandbox runtime configuration.</source>
         <target>Примітка: це налаштування застосовується тільки коли {0} увімкнено. Параметри ключ/значення передаються до кореня конфігурації середовища пісочниці.</target>
@@ -1085,8 +1137,8 @@ Reason for leaving the sandbox: {2}</source>
         <target>Масив додаткових шляхів для надання доступу тільки для читання. Має пріоритет над denyRead.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.windowsFileSystemSetting.allowWrite">
-        <source xml:lang="en">Array of additional paths to allow read/write access. Leave empty to disallow writes outside the workspace folders and sandbox temp directory.</source>
-        <target>Масив додаткових шляхів для дозволу на читання/запис. Залиште порожнім, щоб заборонити записи поза папками робочого простору та тимчасовим каталогом пісочниці.</target>
+        <source xml:lang="en">Array of additional paths to allow read/write access. Leave empty to disallow writes outside the workspace folders, workspace storage folder, and sandbox temp directory.</source>
+        <target>Масив додаткових шляхів для дозволу на читання/запис. Залиште порожнім, щоб заборонити записи за межами папок робочого простору, папки зберігання робочого простору та тимчасового каталогу пісочниці.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.windowsFileSystemSetting.denyRead">
         <source xml:lang="en">Array of paths to deny access. Leave empty to allow reading all paths.</source>

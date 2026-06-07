@@ -54,23 +54,15 @@
   </file>
   <file original="src/vs/sessions/contrib/chat/browser/chat.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="chat.agentHost.runWorktreeCreatedTasks">
+        <source xml:lang="en">Whether to automatically run tasks tagged with `"runOptions": { "runOn": "worktreeCreated" }` when a new agent host session worktree is created. Manual `Run Task` invocations are unaffected.</source>
+        <target>Чи автоматично виконувати завдання, позначені `"runOptions": { "runOn": "worktreeCreated" }`, коли створюється новий робочий простір сесії агента. Ручні виклики `Run Task` не підлягають змінам.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentSessions.scopedInputHistory">
+        <source xml:lang="en">Controls whether chat input history in the Agents Window is scoped to the current session. Disable this to use shared input history across sessions.</source>
+        <target>Контролює, чи історія введення чату у вікні агентів обмежена поточною сесією. Вимкніть це, щоб використовувати спільну історію введення між сесіями.</target>
+      </trans-unit>
       <trans-unit id="chat.newEdits.label">
-        <source xml:lang="en">New Chat</source>
-        <target>Новий чат</target>
-      </trans-unit>
-      <trans-unit id="chat.viewContainer.label">
-        <source xml:lang="en">Chat</source>
-        <target>Чат</target>
-      </trans-unit>
-      <trans-unit id="chatViewIcon">
-        <source xml:lang="en">View icon of the chat view.</source>
-        <target>Переглянути значок перегляду чату.</target>
-      </trans-unit>
-      <trans-unit id="sessions.newChat.view">
-        <source xml:lang="en">New Session</source>
-        <target>Нова сесія</target>
-      </trans-unit>
-      <trans-unit id="sessions.newChatInSession.view">
         <source xml:lang="en">New Chat</source>
         <target>Новий чат</target>
       </trans-unit>
@@ -108,6 +100,14 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/contrib/chat/browser/modelPicker" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="sessionsModelPicker">
+        <source xml:lang="en">Model</source>
+        <target>Модель</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/chat/browser/newChatContextAttachments" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="attachAsContext">
@@ -140,11 +140,11 @@
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/sessions/contrib/chat/browser/newChatInSessionViewPane" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/sessions/contrib/chat/browser/newChatInSessionWidget" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="newChatInSessionPlaceholder">
         <source xml:lang="en">Ask a follow-up question or start a new topic within this session...</source>
-        <target>Задайте уточнююче питання або почніть нову тему в цій сесії...</target>
+        <target>Задайте додаткове запитання або розпочніть нову тему в цій сесії...</target>
       </trans-unit>
       <trans-unit id="subSessionTip.ariaLabel">
         <source xml:lang="en">Sub-session tip</source>
@@ -152,11 +152,11 @@
       </trans-unit>
       <trans-unit id="subSessionTip.dismiss">
         <source xml:lang="en">Dismiss tip</source>
-        <target>Відхилити підказку</target>
+        <target>Приховати підказку</target>
       </trans-unit>
       <trans-unit id="subSessionTip.message">
         <source xml:lang="en">This is a sub-session, a new chat in the same workspace. Use it to ask questions, run tasks, or explore ideas with fresh context.</source>
-        <target>Це підсесія, новий чат в тому ж робочому просторі. Використовуйте його, щоб ставити запитання, виконувати завдання або досліджувати ідеї з новим контекстом.</target>
+        <target>Це підсесія, новий чат у тій же робочій області. Використовуйте його, щоб ставити запитання, виконувати завдання або досліджувати ідеї з новим контекстом.</target>
       </trans-unit>
     </body>
   </file>
@@ -185,6 +185,10 @@
       <trans-unit id="send">
         <source xml:lang="en">Send</source>
         <target>Надіслати</target>
+      </trans-unit>
+      <trans-unit id="sendWithBackgroundHint">
+        <source xml:lang="en">Send (Alt-click to start in the background)</source>
+        <target>Відправити (Alt-клік, щоб запустити у фоновому режимі)</target>
       </trans-unit>
       <trans-unit id="sessionsChatInput.placeholder.describeTheOutcome">
         <source xml:lang="en">Describe the outcome you want</source>
@@ -248,7 +252,7 @@
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/sessions/contrib/chat/browser/newChatViewPane" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/sessions/contrib/chat/browser/newChatWidget" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="newSessionChooseWorkspace">
         <source xml:lang="en">Start by picking a</source>
@@ -641,6 +645,10 @@
       <trans-unit id="sessionsChat.input">
         <source xml:lang="en">You are in the chat input. Type a message and press Enter to send it.</source>
         <target>Ви в полі введення чату. Введіть повідомлення та натисніть Enter, щоб надіслати його.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.inputBackground">
+        <source xml:lang="en">Press Alt+Enter to start the session in the background without navigating into it. The started session appears in the Chat Sessions view.</source>
+        <target>Натисніть Alt+Enter, щоб розпочати сесію у фоновому режимі без переходу до неї. Розпочата сесія з'являється у вигляді чат-сесій.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.mobileConfig">
         <source xml:lang="en">On mobile, the mode and model pickers appear as tappable chips below the input. Tap a chip to open a bottom sheet where you can change the selection.</source>

@@ -1009,10 +1009,6 @@
         <source xml:lang="en">Install the given extension</source>
         <target>Встановіть вказане розширення</target>
       </trans-unit>
-      <trans-unit id="workbench.extensions.installExtension.option.context">
-        <source xml:lang="en">Context for the installation. This is a JSON object that can be used to pass any information to the installation handlers. i.e. `{skipWalkthrough: true}` will skip opening the walkthrough upon install.</source>
-        <target>Контекст для встановлення. Це об'єкт JSON, який можна використовувати для передачі будь-якої інформації обробникам встановлення. Тобто, `{skipWalkthrough: true}` пропустить відкриття посібника під час встановлення.</target>
-      </trans-unit>
       <trans-unit id="workbench.extensions.installExtension.option.donotSync">
         <source xml:lang="en">When enabled, VS Code do not sync this extension when Settings Sync is on.</source>
         <target>Коли увімкнено, VS Code не синхронізує цей розширення, коли синхронізація налаштувань увімкнена.</target>
@@ -1101,6 +1097,10 @@
       <trans-unit id="auto update message">
         <source xml:lang="en">Please [review the extension]({0}) and update it manually.</source>
         <target>Будь ласка, [перегляньте розширення]({0}) та оновіть його вручну.</target>
+      </trans-unit>
+      <trans-unit id="autoUpdateDelayed">
+        <source xml:lang="en">This extension is not updated yet because new versions are auto updated 2 hours after they are published. It will be auto updated {0}.</source>
+        <target>Ця розширення ще не оновлено, оскільки нові версії автоматично оновлюються через 2 години після їх публікації. Воно буде автоматично оновлено {0}.</target>
       </trans-unit>
       <trans-unit id="cancel">
         <source xml:lang="en">Cancel</source>
@@ -2375,12 +2375,12 @@ Would you like to update the extension?</source>
         <target>Розширення '{0}' не знайдено.</target>
       </trans-unit>
       <trans-unit id="extensions need reload">
-        <source xml:lang="en">Extensions require a window reload to take effect.</source>
-        <target>Розширення потребують перезавантаження вікна, щоб набрати чинності.</target>
+        <source xml:lang="en">Extensions require a window reload to apply updates.</source>
+        <target>Розширення вимагають перезавантаження вікна для застосування оновлень.</target>
       </trans-unit>
       <trans-unit id="extensions need restart">
-        <source xml:lang="en">Extensions require a restart to take effect.</source>
-        <target>Розширення потребують перезавантаження для набуття чинності.</target>
+        <source xml:lang="en">All extensions require a restart to apply updates.</source>
+        <target>Усі розширення потребують перезавантаження для застосування оновлень.</target>
       </trans-unit>
       <trans-unit id="extensionsAutoRestart">
         <source xml:lang="en">Extensions were auto restarted to enable updates.</source>

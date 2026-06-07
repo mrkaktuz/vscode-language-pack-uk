@@ -6,30 +6,6 @@
         <source xml:lang="en">Agent</source>
         <target>Агент</target>
       </trans-unit>
-      <trans-unit id="agentPickerCustomCategory">
-        <source xml:lang="en">Custom Agents</source>
-        <target>Користувацькі агенти</target>
-      </trans-unit>
-      <trans-unit id="agentPickerDefault">
-        <source xml:lang="en">Agent</source>
-        <target>Агент</target>
-      </trans-unit>
-      <trans-unit id="agentPickerDefaultCategory">
-        <source xml:lang="en">Default</source>
-        <target>За замовчуванням</target>
-      </trans-unit>
-      <trans-unit id="agentPickerDefaultHover">
-        <source xml:lang="en">Use the default agent.</source>
-        <target>Використовуйте агент за замовчуванням.</target>
-      </trans-unit>
-      <trans-unit id="configureCustomAgents">
-        <source xml:lang="en">Configure Custom Agents...</source>
-        <target>Налаштувати користувацьких агентів...</target>
-      </trans-unit>
-      <trans-unit id="viewAgent">
-        <source xml:lang="en">View {0} agent</source>
-        <target>Переглянути агента {0}</target>
-      </trans-unit>
     </body>
   </file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostClaudePermissionModePicker" source-language="en" datatype="plaintext" target-language="uk">
@@ -60,19 +36,31 @@
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostModelPicker" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="agentHostModelPicker">
-        <source xml:lang="en">Model</source>
-        <target>Модель</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostSessionBranchActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="copySessionBranchName">
         <source xml:lang="en">Copy Session Branch Name</source>
         <target>Скопіювати назву гілки сесії</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostSessionChangesets" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="allChanges">
+        <source xml:lang="en">All Changes</source>
+        <target>Усі зміни</target>
+      </trans-unit>
+      <trans-unit id="allChangesDescription">
+        <source xml:lang="en">Show all changes made in this session</source>
+        <target>Показати всі зміни, внесені в цій сесії</target>
+      </trans-unit>
+      <trans-unit id="lastTurnChanges">
+        <source xml:lang="en">Last Turn Changes</source>
+        <target>Останні зміни ходу</target>
+      </trans-unit>
+      <trans-unit id="lastTurnChangesDescription">
+        <source xml:lang="en">Show only changes made in the last turn</source>
+        <target>Показати лише зміни, внесені в останньому ході</target>
       </trans-unit>
     </body>
   </file>
@@ -137,6 +125,22 @@ To make this the starting permission level for new chat sessions, change the [{1
       <trans-unit id="agentHostSessionConfig.ariaLabel">
         <source xml:lang="en">{0} Picker</source>
         <target>{0} Вибірник</target>
+      </trans-unit>
+      <trans-unit id="agentHostSessionConfig.boolean.false">
+        <source xml:lang="en">Off</source>
+        <target>Вимкнено</target>
+      </trans-unit>
+      <trans-unit id="agentHostSessionConfig.boolean.offLabel">
+        <source xml:lang="en">Off</source>
+        <target>Вимкнено</target>
+      </trans-unit>
+      <trans-unit id="agentHostSessionConfig.boolean.onLabel">
+        <source xml:lang="en">On</source>
+        <target>На</target>
+      </trans-unit>
+      <trans-unit id="agentHostSessionConfig.boolean.true">
+        <source xml:lang="en">On</source>
+        <target>На</target>
       </trans-unit>
       <trans-unit id="agentHostSessionConfig.filter">
         <source xml:lang="en">Filter options...</source>
@@ -274,6 +278,10 @@ To make this the starting permission level for new chat sessions, change the [{1
         <source xml:lang="en">Copilot CLI</source>
         <target>Copilot CLI</target>
       </trans-unit>
+      <trans-unit id="new session">
+        <source xml:lang="en">New Session</source>
+        <target>Нова сесія</target>
+      </trans-unit>
       <trans-unit id="noAgents">
         <source xml:lang="en">Agent host has not advertised any agents yet.</source>
         <target>Агент-хост ще не оголосив жодних агентів.</target>
@@ -292,15 +300,19 @@ To make this the starting permission level for new chat sessions, change the [{1
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/localAgentHost.contribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="sessions.chat.agentHost.defaultSessionsProvider">
+        <source xml:lang="en">When enabled, the local agent host is used as the default sessions provider and its session types are shown first in the Agents window. Requires `#{0}#`.</source>
+        <target>Коли увімкнено, локальний агент-хост використовується як постачальник сесій за замовчуванням, і його типи сесій відображаються першими у вікні Агентів. Потрібно `#{0}#`.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/localAgentHostSessionsProvider" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="localAgentHostLabel">
         <source xml:lang="en">Local Agent Host</source>
         <target>Локальний агент-хост</target>
-      </trans-unit>
-      <trans-unit id="localAgentHostSessionTypeLocation">
-        <source xml:lang="en">Local</source>
-        <target>Місцевий</target>
       </trans-unit>
     </body>
   </file>
@@ -350,6 +362,14 @@ To make this the starting permission level for new chat sessions, change the [{1
         <source xml:lang="en">A model classifier approves or denies tool operations automatically</source>
         <target>Модельний класифікатор автоматично схвалює або відхиляє операції з інструментами.</target>
       </trans-unit>
+      <trans-unit id="claude.permissionMode.bypass">
+        <source xml:lang="en">Bypass Permissions</source>
+        <target>Обійти дозволи</target>
+      </trans-unit>
+      <trans-unit id="claude.permissionMode.bypass.description">
+        <source xml:lang="en">All tools run without any confirmation</source>
+        <target>Усі інструменти працюють без жодного підтвердження.</target>
+      </trans-unit>
       <trans-unit id="claude.permissionMode.default">
         <source xml:lang="en">Ask Before Edits</source>
         <target>Запитувати перед редагуванням</target>
@@ -398,10 +418,6 @@ To make this the starting permission level for new chat sessions, change the [{1
         <source xml:lang="en">Permission Mode</source>
         <target>Режим дозволів</target>
       </trans-unit>
-      <trans-unit id="cloudModelPicker">
-        <source xml:lang="en">Model</source>
-        <target>Модель</target>
-      </trans-unit>
       <trans-unit id="deleteSession">
         <source xml:lang="en">Delete...</source>
         <target>Видалити...</target>
@@ -409,10 +425,6 @@ To make this the starting permission level for new chat sessions, change the [{1
       <trans-unit id="isolationPicker">
         <source xml:lang="en">Isolation Mode</source>
         <target>Режим ізоляції</target>
-      </trans-unit>
-      <trans-unit id="localModelPicker">
-        <source xml:lang="en">Model</source>
-        <target>Модель</target>
       </trans-unit>
       <trans-unit id="modePicker">
         <source xml:lang="en">Mode</source>
@@ -596,26 +608,6 @@ To make this the starting permission level for new chat sessions, change the [{1
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/modelPicker" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="modelPicker.ariaLabel">
-        <source xml:lang="en">Model Picker</source>
-        <target>Вибір моделі</target>
-      </trans-unit>
-      <trans-unit id="modelPicker.auto">
-        <source xml:lang="en">Auto</source>
-        <target>Авто</target>
-      </trans-unit>
-      <trans-unit id="modelPicker.filter">
-        <source xml:lang="en">Filter models...</source>
-        <target>Фільтрувати моделі...</target>
-      </trans-unit>
-      <trans-unit id="modelPicker.triggerAriaLabel">
-        <source xml:lang="en">Pick Model, {0}</source>
-        <target>Виберіть модель, {0}</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/permissionPicker" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="permissionPicker.ariaLabel">
@@ -678,6 +670,18 @@ To make this the starting permission level for new chat sessions, change the [{1
   </file>
   <file original="src/vs/sessions/contrib/providers/localChatSessions/browser/localChatSessionsProvider" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="deleteChat.confirm">
+        <source xml:lang="en">Are you sure you want to delete this chat?</source>
+        <target>Ви впевнені, що хочете видалити цей чат?</target>
+      </trans-unit>
+      <trans-unit id="deleteChat.delete">
+        <source xml:lang="en">Delete</source>
+        <target>Видалити</target>
+      </trans-unit>
+      <trans-unit id="deleteChat.detail">
+        <source xml:lang="en">This action cannot be undone.</source>
+        <target>Цю дію не можна скасувати.</target>
+      </trans-unit>
       <trans-unit id="localChatSessionsProvider">
         <source xml:lang="en">Local Chat</source>
         <target>Локальний чат</target>
@@ -685,6 +689,10 @@ To make this the starting permission level for new chat sessions, change the [{1
       <trans-unit id="localSession">
         <source xml:lang="en">Local</source>
         <target>Місцевий</target>
+      </trans-unit>
+      <trans-unit id="newChat">
+        <source xml:lang="en">New Chat</source>
+        <target>Новий чат</target>
       </trans-unit>
       <trans-unit id="newSession">
         <source xml:lang="en">New Session</source>
@@ -770,6 +778,10 @@ To make this the starting permission level for new chat sessions, change the [{1
         <source xml:lang="en">For development: Override the command used to start the remote agent host over SSH. When set, skips automatic CLI installation and runs this command instead. The command must print a WebSocket URL matching ws://127.0.0.1:PORT (optionally with ?tkn=TOKEN) to stdout or stderr./</source>
         <target>Для розробки: Перезапишіть команду, що використовується для запуску віддаленого агента хоста через SSH. Якщо встановлено, пропускає автоматичну установку CLI і замість цього виконує цю команду. Команда повинна виводити URL WebSocket, що відповідає ws://127.0.0.1:PORT (опціонально з ?tkn=TOKEN) на stdout або stderr.</target>
       </trans-unit>
+      <trans-unit id="remoteAgentHost.removeConfiguredPlugin">
+        <source xml:lang="en">Remove from Remote Host</source>
+        <target>Видалити з віддаленого хоста</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/remoteAgentHostActions" source-language="en" datatype="plaintext" target-language="uk">
@@ -821,6 +833,14 @@ To make this the starting permission level for new chat sessions, change the [{1
       <trans-unit id="connectViaTunnelShort">
         <source xml:lang="en">Tunnels...</source>
         <target>Тунелі...</target>
+      </trans-unit>
+      <trans-unit id="connectViaWSL">
+        <source xml:lang="en">Connect to Remote Agent Host via WSL</source>
+        <target>Підключитися до віддаленого агента хоста через WSL</target>
+      </trans-unit>
+      <trans-unit id="connectViaWSLShort">
+        <source xml:lang="en">WSL...</source>
+        <target>WSL...</target>
       </trans-unit>
       <trans-unit id="nameRemotePlaceholder">
         <source xml:lang="en">My Remote</source>
@@ -1018,6 +1038,50 @@ To make this the starting permission level for new chat sessions, change the [{1
         <source xml:lang="en">Connect via Dev Tunnel</source>
         <target>Підключитися через Dev Tunnel</target>
       </trans-unit>
+      <trans-unit id="wslConnectFailed">
+        <source xml:lang="en">Failed to connect to WSL distribution '{0}': {1}</source>
+        <target>Не вдалося підключитися до дистрибутива WSL '{0}': {1}</target>
+      </trans-unit>
+      <trans-unit id="wslConnecting">
+        <source xml:lang="en">Connecting to WSL distribution '{0}'...</source>
+        <target>Підключення до дистрибутива WSL '{0}'...</target>
+      </trans-unit>
+      <trans-unit id="wslDistroDefault">
+        <source xml:lang="en">Default distribution</source>
+        <target>Типове розподілення</target>
+      </trans-unit>
+      <trans-unit id="wslDistroRunning">
+        <source xml:lang="en">Running</source>
+        <target>Запуск</target>
+      </trans-unit>
+      <trans-unit id="wslDistroStopped">
+        <source xml:lang="en">Stopped</source>
+        <target>Зупинено</target>
+      </trans-unit>
+      <trans-unit id="wslInstallDocsAction">
+        <source xml:lang="en">Install WSL</source>
+        <target>Встановіть WSL</target>
+      </trans-unit>
+      <trans-unit id="wslListFailed">
+        <source xml:lang="en">Failed to list WSL distributions: {0}</source>
+        <target>Не вдалося перерахувати дистрибутиви WSL: {0}</target>
+      </trans-unit>
+      <trans-unit id="wslNoDistros">
+        <source xml:lang="en">No WSL 2 distributions are installed.</source>
+        <target>Не встановлено жодних дистрибутивів WSL 2.</target>
+      </trans-unit>
+      <trans-unit id="wslNotInstalled">
+        <source xml:lang="en">Windows Subsystem for Linux is not installed or not enabled.</source>
+        <target>Windows Subsystem for Linux не встановлено або не активовано.</target>
+      </trans-unit>
+      <trans-unit id="wslPickPlaceholder">
+        <source xml:lang="en">Select a WSL distribution to connect to</source>
+        <target>Виберіть дистрибутив WSL, до якого потрібно підключитися</target>
+      </trans-unit>
+      <trans-unit id="wslPickTitle">
+        <source xml:lang="en">Connect via WSL</source>
+        <target>Підключитися через WSL</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/remoteAgentHostCustomizationHarness" source-language="en" datatype="plaintext" target-language="uk">
@@ -1033,10 +1097,6 @@ To make this the starting permission level for new chat sessions, change the [{1
       <trans-unit id="remoteAgentHost.pluginAlreadyConfigured">
         <source xml:lang="en">'{0}' is already configured on {1}.</source>
         <target>'{0}' вже налаштовано на {1}.</target>
-      </trans-unit>
-      <trans-unit id="remoteAgentHost.removeConfiguredPlugin">
-        <source xml:lang="en">Remove from Remote Host</source>
-        <target>Видалити з віддаленого хоста</target>
       </trans-unit>
       <trans-unit id="remoteAgentHost.selectPluginFolder">
         <source xml:lang="en">Select Plugin Folder on {0}</source>
@@ -1073,14 +1133,6 @@ To make this the starting permission level for new chat sessions, change the [{1
       <trans-unit id="selectRemoteFolder">
         <source xml:lang="en">Select Folder on {0}</source>
         <target>Виберіть папку на {0}</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/remoteAgentHostTerminal.contribution" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="agentHostTerminal.channelRemote">
-        <source xml:lang="en">Agent Host Terminal ({0})</source>
-        <target>Агент Хост Терминал ({0})</target>
       </trans-unit>
     </body>
   </file>
@@ -1185,10 +1237,6 @@ Address: {2}</source>
       <trans-unit id="workspacePicker.removeRemote">
         <source xml:lang="en">Remove Remote</source>
         <target>Видалити віддалений</target>
-      </trans-unit>
-      <trans-unit id="workspacePicker.showOutput">
-        <source xml:lang="en">Show Output</source>
-        <target>Показати вихідні дані</target>
       </trans-unit>
       <trans-unit id="workspacePicker.statusConnecting">
         <source xml:lang="en">Connecting</source>

@@ -58,6 +58,10 @@
   </file>
   <file original="src/vs/sessions/contrib/sessions/browser/mobile/mobileOverlayContribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="mobileChangesNotAvailable">
+        <source xml:lang="en">File-level changes are not available for this session yet.</source>
+        <target>Зміни на рівні файлу поки що недоступні для цієї сесії.</target>
+      </trans-unit>
       <trans-unit id="mobileOpenFileDiff">
         <source xml:lang="en">Open File Diff</source>
         <target>Відкрити порівняння файлів</target>
@@ -103,6 +107,50 @@
   </file>
   <file original="src/vs/sessions/contrib/sessions/browser/sessionsActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="chatCompositeBar.addChat">
+        <source xml:lang="en">New Chat</source>
+        <target>Новий чат</target>
+      </trans-unit>
+      <trans-unit id="chatCompositeBar.close">
+        <source xml:lang="en">Close</source>
+        <target>Закрити</target>
+      </trans-unit>
+      <trans-unit id="chatCompositeBar.maximize">
+        <source xml:lang="en">Maximize Session</source>
+        <target>Максимізувати сесію</target>
+      </trans-unit>
+      <trans-unit id="chatCompositeBar.pin">
+        <source xml:lang="en">Pin Session</source>
+        <target>Закріпити сесію</target>
+      </trans-unit>
+      <trans-unit id="chatCompositeBar.pinView">
+        <source xml:lang="en">Pin View</source>
+        <target>Перегляд заколки</target>
+      </trans-unit>
+      <trans-unit id="chatCompositeBar.unmaximize">
+        <source xml:lang="en">Restore Session</source>
+        <target>Відновити сесію</target>
+      </trans-unit>
+      <trans-unit id="chatCompositeBar.unpin">
+        <source xml:lang="en">Unpin Session</source>
+        <target>Відкріпити сесію</target>
+      </trans-unit>
+      <trans-unit id="chatCompositeBar.unpinView">
+        <source xml:lang="en">Unpin View</source>
+        <target>Відкріпити перегляд</target>
+      </trans-unit>
+      <trans-unit id="closeAllSessions">
+        <source xml:lang="en">Close All Sessions</source>
+        <target>Закрити всі сесії</target>
+      </trans-unit>
+      <trans-unit id="focusActiveSession">
+        <source xml:lang="en">Focus Active Session</source>
+        <target>Зосередити активну сесію</target>
+      </trans-unit>
+      <trans-unit id="focusSessionInGrid">
+        <source xml:lang="en">Focus Session {0} in Grid</source>
+        <target>Сесія фокусу {0} у сітці</target>
+      </trans-unit>
       <trans-unit id="miSessionsBack">
         <source xml:lang="en">&amp;&amp;Back</source>
         <note>&amp;&amp; denotes a mnemonic</note>
@@ -117,13 +165,21 @@
         <source xml:lang="en">New Session</source>
         <target>Нова сесія</target>
       </trans-unit>
-      <trans-unit id="recentSessions">
-        <source xml:lang="en">Recent Sessions</source>
-        <target>Останні сесії</target>
+      <trans-unit id="otherSessions">
+        <source xml:lang="en">other sessions</source>
+        <target>інші сесії</target>
+      </trans-unit>
+      <trans-unit id="recentlyOpened">
+        <source xml:lang="en">recently opened</source>
+        <target>недавно відкритий</target>
+      </trans-unit>
+      <trans-unit id="renameSessionHeader">
+        <source xml:lang="en">Rename...</source>
+        <target>Перейменувати...</target>
       </trans-unit>
       <trans-unit id="searchSessions">
-        <source xml:lang="en">Search sessions by name</source>
-        <target>Шукати сесії за назвою</target>
+        <source xml:lang="en">Search sessions by name or folder</source>
+        <target>Шукати сесії за назвою або папкою</target>
       </trans-unit>
       <trans-unit id="sessionsGoBack">
         <source xml:lang="en">Go Back</source>
@@ -145,10 +201,6 @@
   </file>
   <file original="src/vs/sessions/contrib/sessions/browser/sessionsTitleBarWidget" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="agentSessions.newSession">
-        <source xml:lang="en">New Session</source>
-        <target>Нова сесія</target>
-      </trans-unit>
       <trans-unit id="agentSessionsControl">
         <source xml:lang="en">Agent Sessions</source>
         <target>Сесії агентів</target>
@@ -156,6 +208,10 @@
       <trans-unit id="agentSessionsShowSessions">
         <source xml:lang="en">Show Sessions</source>
         <target>Показати сесії</target>
+      </trans-unit>
+      <trans-unit id="newSession">
+        <source xml:lang="en">New Session</source>
+        <target>Нова сесія</target>
       </trans-unit>
       <trans-unit id="showSessions">
         <source xml:lang="en">Show Sessions</source>
@@ -205,6 +261,10 @@
         <source xml:lang="en">{0}, created {1}</source>
         <target>{0}, створено {1}</target>
       </trans-unit>
+      <trans-unit id="sessions.dragLabel">
+        <source xml:lang="en">{0} sessions</source>
+        <target>{0} сесій</target>
+      </trans-unit>
       <trans-unit id="sessionsList">
         <source xml:lang="en">Sessions</source>
         <target>Сесії</target>
@@ -238,16 +298,16 @@
         <target>Показати {0} додаткових робочих просторів</target>
       </trans-unit>
       <trans-unit id="showMoreWorkspaceCompact">
-        <source xml:lang="en">+{0} workspace</source>
-        <target>+{0} робочий простір</target>
+        <source xml:lang="en">+{0} more workspace</source>
+        <target>+{0} додаткових робочих просторів</target>
       </trans-unit>
       <trans-unit id="showMoreWorkspacesAria">
         <source xml:lang="en">Show {0} more workspaces</source>
         <target>Показати {0} додаткових робочих просторів</target>
       </trans-unit>
       <trans-unit id="showMoreWorkspacesCompact">
-        <source xml:lang="en">+{0} workspaces</source>
-        <target>+{0} робочих просторів</target>
+        <source xml:lang="en">+{0} more workspaces</source>
+        <target>+{0} додаткових робочих просторів</target>
       </trans-unit>
       <trans-unit id="today">
         <source xml:lang="en">Today</source>
@@ -353,10 +413,6 @@
   </file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsViewActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="addChat">
-        <source xml:lang="en">New Sub-Session</source>
-        <target>Нова підсесія</target>
-      </trans-unit>
       <trans-unit id="archivePinnedSectionSessions.confirm">
         <source xml:lang="en">Are you sure you want to mark {0} pinned sessions as done?</source>
         <target>Ви впевнені, що хочете позначити {0} закріплених сесій як завершені?</target>
@@ -445,9 +501,9 @@
         <source xml:lang="en">New Session</source>
         <target>Нова сесія</target>
       </trans-unit>
-      <trans-unit id="openInNewWindow">
-        <source xml:lang="en">Open in New Window</source>
-        <target>Відкрити в новому вікні</target>
+      <trans-unit id="openToTheSide">
+        <source xml:lang="en">Open to the Side</source>
+        <target>Відкрити вбік</target>
       </trans-unit>
       <trans-unit id="pinSession">
         <source xml:lang="en">Pin</source>
