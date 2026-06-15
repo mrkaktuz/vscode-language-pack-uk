@@ -8,6 +8,26 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/browserView/common/browserSearch" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="browser.search.engine.bing">
+        <source xml:lang="en">Bing</source>
+        <target>Bing</target>
+      </trans-unit>
+      <trans-unit id="browser.search.engine.duckduckgo">
+        <source xml:lang="en">DuckDuckGo</source>
+        <target>DuckDuckGo</target>
+      </trans-unit>
+      <trans-unit id="browser.search.engine.google">
+        <source xml:lang="en">Google</source>
+        <target>Google</target>
+      </trans-unit>
+      <trans-unit id="browser.search.engine.yahoo">
+        <source xml:lang="en">Yahoo!</source>
+        <target>Yahoo!</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/browserView/common/browserView" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="browserView.shareBlocked.title">
@@ -91,15 +111,20 @@
 
 **Примітка**: У ненадійних робочих просторах ця настройка ігнорується, і завжди використовується `ephemeral` сховище.</target>
       </trans-unit>
+      <trans-unit id="browser.dataStorage.default">
+        <source xml:lang="en">`global` for local workspaces, `workspace` for remote workspaces.</source>
+        <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
+        <target>`global` для локальних робочих просторів, `workspace` для віддалених робочих просторів.</target>
+      </trans-unit>
       <trans-unit id="browser.dataStorage.ephemeral">
         <source xml:lang="en">Each browser view has its own session that is cleaned up when closed.</source>
         <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
         <target>Кожен перегляд браузера має свою власну сесію, яка очищається при закритті.</target>
       </trans-unit>
       <trans-unit id="browser.dataStorage.global">
-        <source xml:lang="en">All browser views share a single persistent session across all workspaces.</source>
+        <source xml:lang="en">All browser views share a single persistent session across all workspaces. Incompatible with remote sessions.</source>
         <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
-        <target>Усі браузерні перегляди ділять одну постійну сесію між усіма робочими просторами.</target>
+        <target>Усі перегляди браузера ділять одну постійну сесію між усіма робочими просторами. Несумісно з віддаленими сесіями.</target>
       </trans-unit>
       <trans-unit id="browser.dataStorage.workspace">
         <source xml:lang="en">Browser views within the same workspace share a persistent session. If no workspace is opened, `ephemeral` storage is used.</source>
@@ -411,6 +436,10 @@
         <source xml:lang="en">Not Secure</source>
         <target>Не безпечний</target>
       </trans-unit>
+      <trans-unit id="browser.remoteErrorExtraWarning">
+        <source xml:lang="en">This usually means the host is not available or could not be reached from the remote.</source>
+        <target>Це зазвичай означає, що хост недоступний або не вдалося до нього дістатися з віддаленого місця.</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserEditorFindFeature" source-language="en" datatype="plaintext" target-language="uk">
@@ -561,6 +590,10 @@
         <source xml:lang="en">Whether the browser can go forward</source>
         <target>Чи може браузер перейти вперед</target>
       </trans-unit>
+      <trans-unit id="browser.configureSearchEngine">
+        <source xml:lang="en">Configure Search Engine</source>
+        <target>Налаштувати пошукову систему</target>
+      </trans-unit>
       <trans-unit id="browser.focusUrlInputAction">
         <source xml:lang="en">Focus URL Input</source>
         <target>Фокус URL Введення</target>
@@ -588,6 +621,51 @@
       <trans-unit id="browser.reloadAction">
         <source xml:lang="en">Reload</source>
         <target>Перезавантажити</target>
+      </trans-unit>
+      <trans-unit id="browser.searchFor">
+        <source xml:lang="en">{0} - {1} Search</source>
+        <target>{0} - {1} Пошук</target>
+      </trans-unit>
+      <trans-unit id="browser.urlOrSearchPlaceholder">
+        <source xml:lang="en">Search or enter URL</source>
+        <note>Placeholder text shown in the integrated browser's address (URL) bar when it is empty. The user can either type a search query to search the web, or type a URL to navigate to it.</note>
+        <target>Шукати або ввести URL</target>
+      </trans-unit>
+      <trans-unit id="browser.urlPlaceholder">
+        <source xml:lang="en">Enter a URL</source>
+        <target>Введіть URL</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserRemoteFeatures" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="browser.connectedLocally.file">
+        <source xml:lang="en">File URLs are served locally, not over the remote connection.</source>
+        <target>URL-адреси файлів обслуговуються локально, а не через віддалене з'єднання.</target>
+      </trans-unit>
+      <trans-unit id="browser.connectedLocally.generic">
+        <source xml:lang="en">Connected locally</source>
+        <target>Підключено локально</target>
+      </trans-unit>
+      <trans-unit id="browser.connectedRemotely">
+        <source xml:lang="en">Connected via remote</source>
+        <target>Підключено через віддалене з'єднання</target>
+      </trans-unit>
+      <trans-unit id="browser.enableRemoteProxy">
+        <source xml:lang="en">When enabled, browser requests in remote workspaces are proxied through the remote connection. This allows web pages to access resources available on the remote host.</source>
+        <target>Коли увімкнено, запити браузера в віддалених робочих просторах проксіруються через віддалене з'єднання. Це дозволяє веб-сторінкам отримувати доступ до ресурсів, доступних на віддаленому хості.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserSearchFeatures" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="browser.search.engine.none">
+        <source xml:lang="en">None</source>
+        <target>Немає</target>
+      </trans-unit>
+      <trans-unit id="browser.searchEngine">
+        <source xml:lang="en">Controls the search engine used to search the web from the address bar of the integrated browser. Select 'None' to disable search.</source>
+        <target>Контролює пошукову систему, яка використовується для пошуку в Інтернеті з адресного рядка інтегрованого браузера. Виберіть 'Ні', щоб вимкнути пошук.</target>
       </trans-unit>
     </body>
   </file>

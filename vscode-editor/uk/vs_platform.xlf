@@ -440,6 +440,30 @@ A keybinding</note>
         <source xml:lang="en">When enabled, some agents run in a separate agent host process.</source>
         <target>Коли увімкнено, деякі агенти працюють у окремому процесі хоста агента.</target>
       </trans-unit>
+      <trans-unit id="chat.agents.copilotCli.hideExtensionHost">
+        <source xml:lang="en">When enabled, hides the Extension Host Copilot CLI entry from the Agents window picker.</source>
+        <target>Коли увімкнено, приховує запис CLI Copilot розширення з вибору вікна агентів.</target>
+      </trans-unit>
+      <trans-unit id="chat.editor.copilotCli.hideExtensionHost">
+        <source xml:lang="en">When enabled, hides the Extension Host Copilot CLI entry from the editor window chat picker.</source>
+        <target>Коли увімкнено, приховує запис CLI Copilot розширення з вибору чату вікна редактора.</target>
+      </trans-unit>
+      <trans-unit id="chat.editor.defaultProvider">
+        <source xml:lang="en">Controls which provider is used as the default for new editor chat sessions.</source>
+        <target>Контролює, який постачальник використовується за замовчуванням для нових сеансів чату редактора.</target>
+      </trans-unit>
+      <trans-unit id="chat.editor.defaultProvider.copilotAh">
+        <source xml:lang="en">Use the Agent Host Copilot CLI</source>
+        <target>Використовуйте CLI Copilot для хоста агента</target>
+      </trans-unit>
+      <trans-unit id="chat.editor.defaultProvider.copilotEh">
+        <source xml:lang="en">Use the Extension Host Copilot CLI</source>
+        <target>Використовуйте CLI розширення Host Copilot</target>
+      </trans-unit>
+      <trans-unit id="chat.editor.defaultProvider.local">
+        <source xml:lang="en">Use the built-in VS Code local chat harness</source>
+        <target>Використовуйте вбудовану локальну чат-систему VS Code.</target>
+      </trans-unit>
       <trans-unit id="chatAgentHostConfigurationTitle">
         <source xml:lang="en">Chat Agent Host</source>
         <target>Агент чату хост</target>
@@ -557,16 +581,16 @@ A keybinding</note>
         <target>Інтерактивний</target>
       </trans-unit>
       <trans-unit id="agentHost.sessionConfig.mode.interactiveDescription">
-        <source xml:lang="en">Ask for input and approval for each action</source>
-        <target>Запитайте вхідні дані та затвердження для кожної дії</target>
+        <source xml:lang="en">Step-by-step collaboration</source>
+        <target>Покрокова співпраця</target>
       </trans-unit>
       <trans-unit id="agentHost.sessionConfig.mode.plan">
         <source xml:lang="en">Plan</source>
         <target>План</target>
       </trans-unit>
       <trans-unit id="agentHost.sessionConfig.mode.planDescription">
-        <source xml:lang="en">Generate a plan first, then choose how to execute it</source>
-        <target>Спочатку створіть план, а потім виберіть, як його реалізувати.</target>
+        <source xml:lang="en">Plan first, execute when ready</source>
+        <target>Спочатку плануйте, виконуйте, коли будете готові.</target>
       </trans-unit>
       <trans-unit id="agentHost.sessionConfig.modeDescription">
         <source xml:lang="en">How the agent should approach this turn</source>
@@ -596,9 +620,9 @@ A keybinding</note>
   </file>
   <file original="src/vs/platform/agentHost/common/agentHostStarter.config.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="chat.agentHost.claudeAgent.path">
-        <source xml:lang="en">Experimental, for local testing only. Absolute path to a locally-installed `@anthropic-ai/claude-agent-sdk` package. When set, the Claude agent provider is registered inside the agent host and the SDK is loaded from this path. Requires `#chat.agentHost.enabled#`. The agent host process must be restarted for changes to take effect. This setting will be removed once the SDK is delivered through the Extension Marketplace.</source>
-        <target>Експериментальний, лише для локального тестування. Абсолютний шлях до локально встановленого пакету `@anthropic-ai/claude-agent-sdk`. Коли встановлено, провайдер агента Claude реєструється всередині хоста агента, і SDK завантажується з цього шляху. Потрібно `#chat.agentHost.enabled#`. Процес хоста агента повинен бути перезапущений, щоб зміни набрали чинності. Цю настройку буде видалено, як тільки SDK буде доставлено через Extension Marketplace.</target>
+      <trans-unit id="chat.agentHost.claudeAgent.enabled">
+        <source xml:lang="en">When enabled, the agent host registers the Claude provider (subject to the Claude SDK being reachable). Independent of `#chat.agents.claude.preferAgentHost#` and `#chat.editor.claude.preferAgentHost#`, which choose which integration surfaces Claude. Requires `#chat.agentHost.enabled#`. The agent host process must be restarted for changes to take effect.</source>
+        <target>Коли увімкнено, хост агента реєструє постачальника Claude (за умови, що SDK Claude доступний). Незалежно від `#chat.agents.claude.preferAgentHost#` та `#chat.editor.claude.preferAgentHost#`, які вибирають, які інтеграційні поверхні використовують Claude. Потрібно `#chat.agentHost.enabled#`. Процес хоста агента повинен бути перезапущений, щоб зміни набрали чинності.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.codexAgent.binaryArgs">
         <source xml:lang="en">Additional command-line arguments passed to `codex app-server`. Primarily useful for debugging (for example, `--log-level=debug`).</source>
@@ -608,9 +632,13 @@ A keybinding</note>
         <source xml:lang="en">Optional override for `$CODEX_HOME`. Controls where the codex binary reads config and writes rollouts. When empty, codex uses its default (`~/.codex`).</source>
         <target>Необов'язкове перевизначення для `$CODEX_HOME`. Контролює, звідки бінарний файл codex читає конфігурацію та записує розгортання. Коли порожньо, codex використовує своє значення за замовчуванням (`~/.codex`).</target>
       </trans-unit>
-      <trans-unit id="chat.agentHost.codexAgent.path">
-        <source xml:lang="en">Experimental, for local testing only. Absolute path to a locally-installed `codex` binary. When set, the Codex agent provider is registered inside the agent host and `codex app-server` is spawned from this path. Requires `#chat.agentHost.enabled#`. The agent host process must be restarted for changes to take effect.</source>
-        <target>Експериментальний, лише для локального тестування. Абсолютний шлях до локально встановленого бінарного файлу `codex`. Коли встановлено, провайдер агента Codex реєструється всередині хоста агента, і `codex app-server` запускається з цього шляху. Потрібно `#chat.agentHost.enabled#`. Процес хоста агента повинен бути перезапущений, щоб зміни набрали чинності.</target>
+      <trans-unit id="chat.agentHost.codexAgent.enabled">
+        <source xml:lang="en">When enabled, the agent host registers the Codex provider (subject to the Codex SDK being reachable). Requires `#chat.agentHost.enabled#`. The agent host process must be restarted for changes to take effect.</source>
+        <target>Коли увімкнено, хост агента реєструє постачальника Codex (за умови, що SDK Codex доступний). Потрібно `#chat.agentHost.enabled#`. Процес хоста агента повинен бути перезапущений, щоб зміни набрали чинності.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.codexAgent.sdkRoot">
+        <source xml:lang="en">Experimental, for local SDK development only. Absolute path to a directory containing `node_modules/@openai/codex`. When set, the agent host spawns the Codex binary from this tree instead of downloading the SDK. Empty (the default) falls through to the SDK distribution shipped with this build. Requires `#chat.agentHost.enabled#`. The agent host process must be restarted for changes to take effect.</source>
+        <target>Експериментальний, тільки для локальної розробки SDK. Абсолютний шлях до каталогу, що містить `node_modules/@openai/codex`. Коли встановлено, хост агента запускає бінарний файл Codex з цього дерева замість завантаження SDK. Порожній (за замовчуванням) переходить до розподілу SDK, що постачається з цією збіркою. Потрібно `#chat.agentHost.enabled#`. Процес хоста агента повинен бути перезапущений, щоб зміни набрали чинності.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.otel.captureContent">
         <source xml:lang="en">When enabled, includes prompt and response content in OTel span attributes. Sets `OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT`. Privacy-sensitive: do not enable in environments that ship spans to shared sinks.</source>
@@ -647,6 +675,30 @@ A keybinding</note>
       <trans-unit id="branchChangeset.label">
         <source xml:lang="en">Branch Changes</source>
         <target>Зміни гілки</target>
+      </trans-unit>
+      <trans-unit id="compareTurnsChangeset.description">
+        <source xml:lang="en">Show changes made between different turns</source>
+        <target>Показати зміни, внесені між різними ходами</target>
+      </trans-unit>
+      <trans-unit id="compareTurnsChangeset.label">
+        <source xml:lang="en">Compare Turns</source>
+        <target>Порівняти ходи</target>
+      </trans-unit>
+      <trans-unit id="sessionChangeset.description">
+        <source xml:lang="en">Show all changes made in this session</source>
+        <target>Показати всі зміни, внесені в цій сесії</target>
+      </trans-unit>
+      <trans-unit id="sessionChangeset.label">
+        <source xml:lang="en">All Changes</source>
+        <target>Усі зміни</target>
+      </trans-unit>
+      <trans-unit id="thisTurnChangeset.description">
+        <source xml:lang="en">Show changes made in this turn</source>
+        <target>Показати зміни, внесені в цьому ході</target>
+      </trans-unit>
+      <trans-unit id="thisTurnChangeset.label">
+        <source xml:lang="en">This Turn</source>
+        <target>Цей хід</target>
       </trans-unit>
       <trans-unit id="uncommittedChangeset.description">
         <source xml:lang="en">Show uncommitted changes in this session</source>
@@ -751,6 +803,18 @@ A keybinding</note>
       <trans-unit id="sshKbiDefaultPrompt">
         <source xml:lang="en">Authentication required for {0}@{1}</source>
         <target>Необхідна аутентифікація для {0}@{1}</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/electron-browser/wslRemoteAgentHostServiceImpl" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="wslProgressFinalizing">
+        <source xml:lang="en">Provisioning agent host in {0}...</source>
+        <target>Налаштування хоста агента в {0}...</target>
+      </trans-unit>
+      <trans-unit id="wslProgressHandshake">
+        <source xml:lang="en">Establishing connection to {0}...</source>
+        <target>Встановлення з'єднання з {0}...</target>
       </trans-unit>
     </body>
   </file>
@@ -1427,6 +1491,26 @@ A keybinding</note>
       <trans-unit id="agentHost.sessionConfig.isolationDescription">
         <source xml:lang="en">Where the agent should make changes</source>
         <target>Де агент повинен внести зміни</target>
+      </trans-unit>
+      <trans-unit id="copilot.modelContextTier.default">
+        <source xml:lang="en">Default</source>
+        <target>За замовчуванням</target>
+      </trans-unit>
+      <trans-unit id="copilot.modelContextTier.description">
+        <source xml:lang="en">Selects the context window size for this model.</source>
+        <target>Вибирає розмір вікна контексту для цієї моделі.</target>
+      </trans-unit>
+      <trans-unit id="copilot.modelContextTier.longerSessions">
+        <source xml:lang="en">Longer sessions</source>
+        <target>Довші сесії</target>
+      </trans-unit>
+      <trans-unit id="copilot.modelContextTier.longerSessionsNoCompaction">
+        <source xml:lang="en">Longer sessions without compaction</source>
+        <target>Довші сесії без компакції</target>
+      </trans-unit>
+      <trans-unit id="copilot.modelContextTier.title">
+        <source xml:lang="en">Context Size</source>
+        <target>Розмір контексту</target>
       </trans-unit>
       <trans-unit id="copilot.modelThinkingLevel.description">
         <source xml:lang="en">Controls how much reasoning effort the model uses.</source>

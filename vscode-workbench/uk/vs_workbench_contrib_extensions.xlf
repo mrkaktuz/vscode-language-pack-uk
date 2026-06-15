@@ -462,10 +462,6 @@
         <source xml:lang="en">Completed installing extensions. Please restart extensions to enable them.</source>
         <target>Встановлення розширень завершено. Будь ласка, перезапустіть розширення, щоб активувати їх.</target>
       </trans-unit>
-      <trans-unit id="all">
-        <source xml:lang="en">All Extensions</source>
-        <target>Усі розширення</target>
-      </trans-unit>
       <trans-unit id="autoRestart">
         <source xml:lang="en">If activated, extensions will automatically restart following an update if the window is not in focus. There can be a data loss if you have open Notebooks or Custom Editors.</source>
         <target>Якщо активовано, розширення автоматично перезапустяться після оновлення, якщо вікно не в фокусі. Може статися втрата даних, якщо у вас відкриті Нотатники або Користувацькі Редактори.</target>
@@ -495,8 +491,8 @@
         <target>Вимкнути всі встановлені розширення для цього робочого простору</target>
       </trans-unit>
       <trans-unit id="disableAutoUpdate">
-        <source xml:lang="en">Disable Auto Update for All Extensions</source>
-        <target>Вимкнути автоматичне оновлення для всіх розширень</target>
+        <source xml:lang="en">Disable Auto Update for Extensions</source>
+        <target>Вимкнути автоматичне оновлення для розширень</target>
       </trans-unit>
       <trans-unit id="disablePreRleaseLabel">
         <source xml:lang="en">Switch to Release Version</source>
@@ -527,16 +523,12 @@
         <target>Увімкнути всі розширення для цього робочого простору</target>
       </trans-unit>
       <trans-unit id="enableAutoUpdate">
-        <source xml:lang="en">Enable Auto Update for All Extensions</source>
-        <target>Увімкнути автоматичне оновлення для всіх розширень</target>
+        <source xml:lang="en">Enable Auto Update for Extensions</source>
+        <target>Увімкнути автоматичне оновлення для розширень</target>
       </trans-unit>
       <trans-unit id="enablePreRleaseLabel">
         <source xml:lang="en">Switch to Pre-Release Version</source>
         <target>Перейти на версію попереднього випуску</target>
-      </trans-unit>
-      <trans-unit id="enabled">
-        <source xml:lang="en">Only Enabled Extensions</source>
-        <target>Тільки увімкнені розширення</target>
       </trans-unit>
       <trans-unit id="enabled filter">
         <source xml:lang="en">Enabled</source>
@@ -594,17 +586,17 @@
         <source xml:lang="en">Controls the automatic update behavior of extensions. The updates are fetched from a Microsoft online service.</source>
         <target>Контролює автоматичну поведінку оновлень розширень. Оновлення отримуються з онлайн-сервісу Microsoft.</target>
       </trans-unit>
-      <trans-unit id="extensions.autoUpdate.enabled">
-        <source xml:lang="en">Download and install updates automatically only for enabled extensions.</source>
-        <target>Завантажувати та встановлювати оновлення автоматично лише для увімкнених розширень.</target>
-      </trans-unit>
-      <trans-unit id="extensions.autoUpdate.false">
+      <trans-unit id="extensions.autoUpdate.off">
         <source xml:lang="en">Extensions are not automatically updated.</source>
         <target>Розширення не оновлюються автоматично.</target>
       </trans-unit>
-      <trans-unit id="extensions.autoUpdate.true">
-        <source xml:lang="en">Download and install updates automatically for all extensions.</source>
-        <target>Завантажувати та встановлювати оновлення автоматично для всіх розширень.</target>
+      <trans-unit id="extensions.autoUpdate.on">
+        <source xml:lang="en">Download and install updates automatically only for enabled extensions.</source>
+        <target>Завантажувати та встановлювати оновлення автоматично лише для активованих розширень.</target>
+      </trans-unit>
+      <trans-unit id="extensions.autoUpdateDelay">
+        <source xml:lang="en">Controls the delay in hours after an extension update is published before it is automatically installed. Only applies when `#extensions.autoUpdate#` is set to `on`. This delay helps avoid installing potentially problematic updates immediately after release.</source>
+        <target>Контролює затримку в годинах після публікації оновлення розширення, перш ніж воно буде автоматично встановлено. Застосовується лише коли `#extensions.autoUpdate#` встановлено на `on`. Ця затримка допомагає уникнути негайного встановлення потенційно проблемних оновлень після їх випуску.</target>
       </trans-unit>
       <trans-unit id="extensions.gallery.serviceUrl">
         <source xml:lang="en">Configure the Marketplace service URL to connect to</source>
@@ -821,10 +813,6 @@
         <source xml:lang="en">All extensions are up to date.</source>
         <target>Усі розширення оновлені.</target>
       </trans-unit>
-      <trans-unit id="none">
-        <source xml:lang="en">None</source>
-        <target>Ні</target>
-      </trans-unit>
       <trans-unit id="notFound">
         <source xml:lang="en">Extension '{0}' not found.</source>
         <target>Розширення '{0}' не знайдено.</target>
@@ -832,6 +820,14 @@
       <trans-unit id="notInstalled">
         <source xml:lang="en">Extension '{0}' is not installed. Make sure you use the full extension ID, including the publisher, e.g.: ms-dotnettools.csharp.</source>
         <target>Розширення '{0}' не встановлено. Переконайтеся, що ви використовуєте повний ідентифікатор розширення, включаючи видавця, наприклад: ms-dotnettools.csharp.</target>
+      </trans-unit>
+      <trans-unit id="off">
+        <source xml:lang="en">Off</source>
+        <target>Вимкнено</target>
+      </trans-unit>
+      <trans-unit id="on">
+        <source xml:lang="en">On</source>
+        <target>На</target>
       </trans-unit>
       <trans-unit id="recently published filter">
         <source xml:lang="en">Recently Published</source>
@@ -1181,7 +1177,7 @@
       </trans-unit>
       <trans-unit id="disableAutoUpdate">
         <source xml:lang="en">Disabled auto updates for</source>
-        <target>Вимкнути автоматичне оновлення для всіх розширень</target>
+        <target>Вимкнути автоматичне оновлення для розширень</target>
       </trans-unit>
       <trans-unit id="disableForWorkspaceAction">
         <source xml:lang="en">Disable (Workspace)</source>
@@ -1241,7 +1237,7 @@
       </trans-unit>
       <trans-unit id="enableAutoUpdate">
         <source xml:lang="en">Enabled auto updates for</source>
-        <target>Увімкнути автоматичне оновлення для всіх розширень</target>
+        <target>Увімкнути автоматичне оновлення для розширень</target>
       </trans-unit>
       <trans-unit id="enableAutoUpdateLabel">
         <source xml:lang="en">Auto Update</source>
@@ -1967,6 +1963,10 @@ Would you like to update the extension?</source>
         <source xml:lang="en">Disabled</source>
         <target>Вимкнено</target>
       </trans-unit>
+      <trans-unit id="dismiss notification">
+        <source xml:lang="en">Dismiss</source>
+        <target>Відхилити</target>
+      </trans-unit>
       <trans-unit id="enabled">
         <source xml:lang="en">Enabled</source>
         <target>Тільки увімкнені розширення</target>
@@ -2277,12 +2277,12 @@ Would you like to update the extension?</source>
         <target>Розширення '{0}' недоступне в {1}. Натисніть 'Додаткова інформація', щоб дізнатися більше.</target>
       </trans-unit>
       <trans-unit id="confirmDisableAutoUpdate">
-        <source xml:lang="en">Do you want to disable auto update for all extensions?</source>
-        <target>Ви хочете вимкнути автоматичне оновлення для всіх розширень?</target>
+        <source xml:lang="en">Do you want to disable auto update for extensions?</source>
+        <target>Ви хочете вимкнути автоматичне оновлення для розширень?</target>
       </trans-unit>
       <trans-unit id="confirmEnableAutoUpdate">
-        <source xml:lang="en">Do you want to enable auto update for all extensions?</source>
-        <target>Ви хочете увімкнути автоматичне оновлення для всіх розширень?</target>
+        <source xml:lang="en">Do you want to enable auto update for extensions?</source>
+        <target>Ви хочете увімкнути автоматичне оновлення для розширень?</target>
       </trans-unit>
       <trans-unit id="confirmEnableDisableAutoUpdate">
         <source xml:lang="en">Auto Update Extensions</source>
@@ -2499,6 +2499,10 @@ Would you like to update the extension?</source>
       <trans-unit id="pre-release">
         <source xml:lang="en">pre-release</source>
         <target>попередній реліз</target>
+      </trans-unit>
+      <trans-unit id="privateMarketplace">
+        <source xml:lang="en">This window is connected to a [private extension marketplace]({0}) managed by your organization.</source>
+        <target>Це вікно підключено до [приватного ринку розширень]({0}), що управляється вашою організацією.</target>
       </trans-unit>
       <trans-unit id="reload">
         <source xml:lang="en">reload window</source>

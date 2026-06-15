@@ -616,6 +616,42 @@ Reason for allowing unrestricted network access in the sandbox: {2}</source>
         <source xml:lang="en">The command was not executed because it requested unrestricted network access in the terminal sandbox, but per-command network access is disabled by chat.agent.sandbox.retryWithAllowNetworkRequests. Run the command with restricted network access instead, or enable the setting to allow network access requests.</source>
         <target>Команда не була виконана, оскільки вона вимагала необмеженого доступу до мережі в пісочниці терміналу, але доступ до мережі за командою вимкнено параметром chat.agent.sandbox.retryWithAllowNetworkRequests. Виконайте команду з обмеженим доступом до мережі, або увімкніть налаштування для дозволу запитів на доступ до мережі.</target>
       </trans-unit>
+      <trans-unit id="runInTerminal.bubblewrap.applyFix">
+        <source xml:lang="en">Apply Fix and Retry</source>
+        <target>Застосувати виправлення та повторити спробу</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.bubblewrap.cancel">
+        <source xml:lang="en">Cancel</source>
+        <target>Скасувати</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.bubblewrap.cancelled">
+        <source xml:lang="en">Bubblewrap sandbox repair was cancelled by the user.</source>
+        <target>Ремонт пісочниці з бульбашкової плівки був скасований користувачем.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.bubblewrap.message">
+        <source xml:lang="en">Bubblewrap cannot create the sandbox environment.</source>
+        <target>Bubblewrap не може створити середовище пісочниці.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.bubblewrap.repairFailed">
+        <source xml:lang="en">Bubblewrap repair failed (exit code {0}). The command was not executed.</source>
+        <target>Виправлення Bubblewrap не вдалося (код виходу {0}). Команда не була виконана.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.bubblewrap.repairUnknown">
+        <source xml:lang="en">Could not determine whether the bubblewrap repair succeeded. The command was not executed.</source>
+        <target>Не вдалося визначити, чи успішно завершився ремонт за допомогою пупирчастої упаковки. Команда не була виконана.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.bubblewrap.stillUnavailable">
+        <source xml:lang="en">Bubblewrap still cannot create the required sandbox namespace after remediation. The command was not executed.</source>
+        <target>Bubblewrap все ще не може створити необхідний простір імен пісочниці після виправлення. Команда не була виконана.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.bubblewrap.title">
+        <source xml:lang="en">Repair Bubblewrap Sandbox</source>
+        <target>Відремонтувати пісочницю з бульбашкової плівки</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.bubblewrap.unusable">
+        <source xml:lang="en">Bubblewrap is installed but cannot create the required sandbox namespace on this system. The command was not executed.</source>
+        <target>Bubblewrap встановлено, але не вдалося створити необхідний простір імен пісочниці на цій системі. Команда не була виконана.</target>
+      </trans-unit>
       <trans-unit id="runInTerminal.confirmationMessage">
         <source xml:lang="en">Explanation: {0}
 
@@ -644,6 +680,14 @@ Goal: {1}</source>
         <source xml:lang="en">Running `{0}` in sandbox</source>
         <target>Запуск `{0}` у пісочниці</target>
       </trans-unit>
+      <trans-unit id="runInTerminal.missingDeps.bubblewrapFailed">
+        <source xml:lang="en">Sandbox dependencies were installed, but bubblewrap cannot create the required sandbox namespace. Run the command again to choose an available repair option.</source>
+        <target>Залежності пісочниці були встановлені, але bubblewrap не може створити необхідний простір імен пісочниці. Запустіть команду ще раз, щоб вибрати доступний варіант ремонту.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.missingDeps.bubblewrapFailedNoRepair">
+        <source xml:lang="en">Sandbox dependencies were installed, but bubblewrap cannot create the required sandbox namespace on this system. The command was not executed.</source>
+        <target>Залежності пісочниці були встановлені, але bubblewrap не може створити необхідний простір імен пісочниці на цій системі. Команда не була виконана.</target>
+      </trans-unit>
       <trans-unit id="runInTerminal.missingDeps.cancel">
         <source xml:lang="en">Cancel</source>
         <target>Скасувати</target>
@@ -663,6 +707,10 @@ Goal: {1}</source>
       <trans-unit id="runInTerminal.missingDeps.message">
         <source xml:lang="en">The following dependencies required for sandboxed execution are not installed: {0}. Would you like to install them?</source>
         <target>Наступні залежності, необхідні для виконання в пісочниці, не встановлені: {0}. Бажаєте їх встановити?</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.missingDeps.recheckFailed">
+        <source xml:lang="en">Sandbox prerequisites are still not satisfied after installation. The command was not executed.</source>
+        <target>Передумови пісочниці все ще не виконані після встановлення. Команда не була виконана.</target>
       </trans-unit>
       <trans-unit id="runInTerminal.missingDeps.title">
         <source xml:lang="en">Missing Sandbox Dependencies</source>
@@ -1077,8 +1125,8 @@ Reason for leaving the sandbox: {2}</source>
         <target>Масив шляхів для повторного дозволу доступу на читання в заборонених регіонах. Має пріоритет над denyRead.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.linuxFileSystemSetting.allowWrite">
-        <source xml:lang="en">Array of additional paths to allow write access. Leave empty to disallow writes outside the workspace folders and sandbox temp directory.</source>
-        <target>Масив додаткових шляхів для дозволу на запис. Залиште порожнім, щоб заборонити записи за межами папок робочого простору та тимчасового каталогу пісочниці.</target>
+        <source xml:lang="en">Array of additional paths to allow write access. Leave empty to disallow writes outside the workspace folders, workspace storage folder, and sandbox temp directory.</source>
+        <target>Масив додаткових шляхів для дозволу на запис. Залиште порожнім, щоб заборонити записи поза папками робочого простору, папкою зберігання робочого простору та тимчасовим каталогом пісочниці.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.linuxFileSystemSetting.denyRead">
         <source xml:lang="en">Array of paths to deny read access. Leave empty to allow reading all paths.</source>
@@ -1097,8 +1145,8 @@ Reason for leaving the sandbox: {2}</source>
         <target>Масив шляхів для повторного дозволу на читання в заборонених регіонах. Має пріоритет над denyRead.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.macFileSystemSetting.allowWrite">
-        <source xml:lang="en">Array of additional paths to allow write access. Leave empty to disallow writes outside the workspace folders and sandbox temp directory.</source>
-        <target>Масив додаткових шляхів для дозволу на запис. Залиште порожнім, щоб заборонити записи поза папками робочого простору та тимчасовим каталогом пісочниці.</target>
+        <source xml:lang="en">Array of additional paths to allow write access. Leave empty to disallow writes outside the workspace folders, workspace storage folder, and sandbox temp directory.</source>
+        <target>Масив додаткових шляхів для дозволу на запис. Залиште порожнім, щоб заборонити записи поза папками робочого простору, папкою зберігання робочого простору та тимчасовим каталогом пісочниці.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.macFileSystemSetting.denyRead">
         <source xml:lang="en">Array of paths to deny read access. Leave empty to allow reading all paths.</source>
@@ -1375,8 +1423,8 @@ Reason for leaving the sandbox: {2}</source>
         <target>Фокус Термінал</target>
       </trans-unit>
       <trans-unit id="runInTerminal.missingDeps.passwordPromptMessage">
-        <source xml:lang="en">Installing missing sandbox dependencies may prompt for your sudo password. Select Focus Terminal to type it in the terminal.</source>
-        <target>Встановлення відсутніх залежностей пісочниці може вимагати введення вашого пароля sudo. Виберіть Focus Terminal, щоб ввести його в терміналі.</target>
+        <source xml:lang="en">Applying sandbox prerequisites may prompt for your sudo password. Select Focus Terminal to type it in the terminal.</source>
+        <target>ЗастосуванняPrerequisites для пісочниці може вимагати введення вашого пароля sudo. Виберіть Focus Terminal, щоб ввести його в терміналі.</target>
       </trans-unit>
       <trans-unit id="runInTerminal.missingDeps.passwordPromptTitle">
         <source xml:lang="en">The terminal is awaiting input.</source>
