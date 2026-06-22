@@ -608,6 +608,10 @@ Reason for allowing unrestricted network access in the sandbox: {2}</source>
         <source xml:lang="en">The model indicated that this sandboxed command needs unrestricted network access.</source>
         <target>Модель вказала, що ця командна оболонка потребує необмеженого доступу до мережі.</target>
       </trans-unit>
+      <trans-unit id="runInTerminal.allowNetwork.deferredRetry.reason">
+        <source xml:lang="en">The model requested unrestricted network access in the sandbox.</source>
+        <target>Модель запросила необмежений доступ до мережі в пісочниці.</target>
+      </trans-unit>
       <trans-unit id="runInTerminal.allowNetwork.disabled.invocation">
         <source xml:lang="en">Not running `{0}` because unrestricted network access in the sandbox is disabled</source>
         <target>Не виконується `{0}`, оскільки необмежений доступ до мережі в пісочниці вимкнено.</target>
@@ -736,6 +740,11 @@ Goal: {1}</source>
         <source xml:lang="en">Run command in `{0}`?</source>
         <target>Запустити команду в `{0}`?</target>
       </trans-unit>
+      <trans-unit id="runInTerminal.sandbox.fileAccessDenied">
+        <source xml:lang="en">Access Denied: The command was not executed because the terminal sandbox does not allow access to the requested file paths:
+{0}</source>
+        <target>Доступ заборонено: Команда не була виконана, оскільки пісочниця терміналу не дозволяє доступ до запитуваних шляхів файлів: {0}</target>
+      </trans-unit>
       <trans-unit id="runInTerminal.sensitiveInput.autoCancelMessage">
         <source xml:lang="en">The terminal command was prompting for a password or other secret. Auto-approve / autopilot mode cannot safely supply secrets, so the command was cancelled. Run the command interactively if you want to provide the secret.</source>
         <target>Команда терміналу запитувала пароль або інший секрет. Режим автоматичного схвалення / автопілота не може безпечно надати секрети, тому команда була скасована. Запустіть команду інтерактивно, якщо ви хочете надати секрет.</target>
@@ -811,6 +820,10 @@ Reason for leaving the sandbox: {2}</source>
       <trans-unit id="runInTerminal.unsandboxed.confirmationMessage.defaultReason">
         <source xml:lang="en">The model indicated that this command needs unsandboxed access.</source>
         <target>Модель вказала, що ця команда потребує доступу без обмежень.</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.unsandboxed.deferredRetry.reason">
+        <source xml:lang="en">The model requested unsandboxed execution.</source>
+        <target>Модель запитала виконання без пісочниці.</target>
       </trans-unit>
       <trans-unit id="runInTerminal.unsandboxed.disabled.invocation">
         <source xml:lang="en">Not running `{0}` because unsandboxed execution is disabled</source>
@@ -1084,10 +1097,6 @@ Reason for leaving the sandbox: {2}</source>
         <source xml:lang="en">Controls whether agent mode terminal commands can run outside the sandbox after user confirmation when a sandboxed command fails or when sandbox restrictions would block the command. This applies only when {0} is enabled.</source>
         <target>Контролює, чи можуть термінальні команди режиму агента виконуватися поза пісочницею після підтвердження користувача, коли команда в пісочниці не вдалася або коли обмеження пісочниці блокують команду. Це застосовується лише тоді, коли {0} увімкнено.</target>
       </trans-unit>
-      <trans-unit id="agentSandbox.autoApproveUnsandboxedCommands">
-        <source xml:lang="en">Controls whether agent mode terminal commands that run outside the sandbox are auto-approved. This applies only when both {0} and {1} are enabled.</source>
-        <target>Контролює, чи команди терміналу режиму агента, які виконуються поза пісочницею, автоматично затверджуються. Це застосовується лише тоді, коли обидва {0} та {1} увімкнені.</target>
-      </trans-unit>
       <trans-unit id="agentSandbox.enabled.deprecated">
         <source xml:lang="en">Use {0} instead</source>
         <target>Використовуйте {0} замість цього.</target>
@@ -1115,6 +1124,10 @@ Reason for leaving the sandbox: {2}</source>
       <trans-unit id="agentSandbox.fileSystemMac.deprecated">
         <source xml:lang="en">Use {0} instead</source>
         <target>Використовуйте {0} замість цього.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.forceFirstExecutionInSandbox">
+        <source xml:lang="en">Controls whether agent mode terminal commands first run with the sandbox's configured restrictions before honoring a request for execution outside the sandbox or unrestricted network access. The user is prompted to approve the requested additional access only if that sandboxed command fails. This applies only when {0} is enabled.</source>
+        <target>Контролює, чи команди терміналу в режимі агента спочатку виконуються з обмеженнями, налаштованими в пісочниці, перш ніж виконати запит на виконання поза пісочницею або без обмеженого доступу до мережі. Користувачеві пропонується затвердити запитуваний додатковий доступ лише у випадку, якщо ця команду в пісочниці не вдається виконати. Це застосовується лише тоді, коли {0} увімкнено.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.linuxFileSystemSetting">
         <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Controls file system access in sandbox on Linux. Paths do not support glob patterns, only literal paths (ex: ./src/, ~/.ssh, .env). **bubblewrap** and **socat** should be installed for this setting to work.</source>

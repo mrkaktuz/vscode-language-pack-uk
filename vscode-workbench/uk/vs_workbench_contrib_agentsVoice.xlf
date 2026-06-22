@@ -14,9 +14,33 @@
         <source xml:lang="en">Enable the Voice Mode panel in the chat view for voice-driven coding conversations.</source>
         <target>Увімкніть панель режиму голосу у вікні чату для розмов про кодування з використанням голосу.</target>
       </trans-unit>
+      <trans-unit id="agents.voice.showTranscript">
+        <source xml:lang="en">Show the voice transcript overlay in the chat input area while voice mode is active.</source>
+        <target>Показати накладку транскрипції голосу в області введення чату, поки активний голосовий режим.</target>
+      </trans-unit>
       <trans-unit id="agents.voice.textToSpeech">
         <source xml:lang="en">When enabled, the assistant reads responses aloud. When disabled, responses appear as text transcripts only.</source>
         <target>Коли увімкнено, асистент читає відповіді вголос. Коли вимкнено, відповіді з'являються лише у вигляді текстових транскриптів.</target>
+      </trans-unit>
+      <trans-unit id="agentsVoice.connecting">
+        <source xml:lang="en">Connecting...</source>
+        <target>Підключення...</target>
+      </trans-unit>
+      <trans-unit id="agentsVoice.disconnect">
+        <source xml:lang="en">Disconnect Voice Mode</source>
+        <target>Вимкнути голосовий режим</target>
+      </trans-unit>
+      <trans-unit id="agentsVoice.pttStopInChat">
+        <source xml:lang="en">Voice Mode: Stop Recording</source>
+        <target>Режим голосу: Зупинити запис</target>
+      </trans-unit>
+      <trans-unit id="agentsVoice.simulateConnection">
+        <source xml:lang="en">Voice: Simulate Connection (Dev)</source>
+        <target>Голос: Симулювати з'єднання (Розробка)</target>
+      </trans-unit>
+      <trans-unit id="agentsVoice.startVoiceInChat">
+        <source xml:lang="en">Voice Mode</source>
+        <target>Режим голосу</target>
       </trans-unit>
       <trans-unit id="agentsVoiceConfigurationTitle">
         <source xml:lang="en">Voice Mode</source>
@@ -36,11 +60,71 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/agentsVoice/browser/agentsVoiceSessionsPicker" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="voiceSessions.placeholder">
+        <source xml:lang="en">Select a session for voice input</source>
+        <target>Виберіть сеанс для голосового вводу</target>
+      </trans-unit>
+      <trans-unit id="voiceSessions.setTarget">
+        <source xml:lang="en">Set as voice target</source>
+        <target>Встановити як голосову ціль</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/agentsVoice/browser/agentsVoiceWidget" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="agentsVoice.clickMicToTalk">
+        <source xml:lang="en">Click mic to talk</source>
+        <target>Натисніть мікрофон, щоб говорити</target>
+      </trans-unit>
+      <trans-unit id="agentsVoice.collapseSessions">
+        <source xml:lang="en">Collapse sessions</source>
+        <target>Згорнути сесії</target>
+      </trans-unit>
+      <trans-unit id="agentsVoice.configureKeybinding">
+        <source xml:lang="en">Configure keybinding</source>
+        <target>Налаштувати комбінацію клавіш</target>
+      </trans-unit>
+      <trans-unit id="agentsVoice.disconnect">
+        <source xml:lang="en">Disconnect</source>
+        <target>Вимкнути голосовий режим</target>
+      </trans-unit>
       <trans-unit id="agentsVoice.feedbackError">
         <source xml:lang="en">Failed to submit</source>
         <target>Не вдалося надіслати</target>
+      </trans-unit>
+      <trans-unit id="agentsVoice.holdToTalk">
+        <source xml:lang="en">Hold {0} to talk</source>
+        <target>Утримуйте {0}, щоб говорити</target>
+      </trans-unit>
+      <trans-unit id="agentsVoice.listening">
+        <source xml:lang="en">Listening</source>
+        <target>Слухання</target>
+      </trans-unit>
+      <trans-unit id="agentsVoice.minimize">
+        <source xml:lang="en">Minimize</source>
+        <target>Зменшити</target>
+      </trans-unit>
+      <trans-unit id="agentsVoice.pushToTalk">
+        <source xml:lang="en">Push to talk</source>
+        <target>Натисніть, щоб говорити</target>
+      </trans-unit>
+      <trans-unit id="agentsVoice.pushToTalkKey">
+        <source xml:lang="en">Push to talk ({0})</source>
+        <target>Натисніть, щоб говорити ({0})</target>
+      </trans-unit>
+      <trans-unit id="agentsVoice.pushToTalkSpace">
+        <source xml:lang="en">Push to talk (Space)</source>
+        <target>Натисніть, щоб говорити (Пробіл)</target>
+      </trans-unit>
+      <trans-unit id="agentsVoice.sendFeedback">
+        <source xml:lang="en">Send feedback</source>
+        <target>Надіслати відгук</target>
+      </trans-unit>
+      <trans-unit id="agentsVoice.sessions">
+        <source xml:lang="en">Sessions</source>
+        <target>Сесії</target>
       </trans-unit>
     </body>
   </file>
@@ -114,13 +198,21 @@
   </file>
   <file original="src/vs/workbench/contrib/agentsVoice/browser/components/headerComponent" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="agentsVoice.clickMicToTalk">
+        <source xml:lang="en">Click mic to talk</source>
+        <target>Натисніть мікрофон, щоб говорити</target>
+      </trans-unit>
       <trans-unit id="agentsVoice.configureKeybinding">
         <source xml:lang="en">Configure keybinding</source>
         <target>Налаштувати комбінацію клавіш</target>
       </trans-unit>
       <trans-unit id="agentsVoice.disconnect">
         <source xml:lang="en">Disconnect</source>
-        <target>Відключити</target>
+        <target>Вимкнути голосовий режим</target>
+      </trans-unit>
+      <trans-unit id="agentsVoice.holdToTalk">
+        <source xml:lang="en">Hold {0} to talk</source>
+        <target>Утримуйте {0}, щоб говорити</target>
       </trans-unit>
       <trans-unit id="agentsVoice.minimize">
         <source xml:lang="en">Minimize</source>
@@ -156,7 +248,7 @@
       </trans-unit>
       <trans-unit id="agentsVoice.connecting">
         <source xml:lang="en">Connecting…</source>
-        <target>Підключення…</target>
+        <target>Підключення...</target>
       </trans-unit>
       <trans-unit id="agentsVoice.feedbackDesc">
         <source xml:lang="en">Use the feedback icon to help us improve your experience.</source>
@@ -214,10 +306,6 @@
         <source xml:lang="en">Open in VS Code</source>
         <target>Відкрити у VS Code</target>
       </trans-unit>
-      <trans-unit id="agentsVoice.openSessionAction">
-        <source xml:lang="en">Open session</source>
-        <target>Відкрити сесію</target>
-      </trans-unit>
       <trans-unit id="agentsVoice.sendTo">
         <source xml:lang="en">Send to</source>
         <target>Відправити на</target>
@@ -242,6 +330,10 @@
         <source xml:lang="en">done</source>
         <target>зроблено</target>
       </trans-unit>
+      <trans-unit id="agentsVoice.jumpToSession">
+        <source xml:lang="en">Jump to session</source>
+        <target>Перейти до сесії</target>
+      </trans-unit>
       <trans-unit id="agentsVoice.needsInput">
         <source xml:lang="en">needs input</source>
         <target>потрібен ввід</target>
@@ -253,6 +345,22 @@
       <trans-unit id="agentsVoice.working">
         <source xml:lang="en">working</source>
         <target>працюючий</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/agentsVoice/browser/components/voiceBarComponent" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentsVoice.listening">
+        <source xml:lang="en">Listening</source>
+        <target>Слухання</target>
+      </trans-unit>
+      <trans-unit id="agentsVoice.speaking">
+        <source xml:lang="en">Speaking...</source>
+        <target>Говорячи...</target>
+      </trans-unit>
+      <trans-unit id="agentsVoice.stopSpeech">
+        <source xml:lang="en">Stop speech</source>
+        <target>Зупинити мовлення</target>
       </trans-unit>
     </body>
   </file>
