@@ -552,6 +552,22 @@ Remarks:
         <source xml:lang="en">Confirm Terminal Command</source>
         <target>Підтвердити команду терміналу</target>
       </trans-unit>
+      <trans-unit id="confirmTerminalCommandTool.sandboxBypass.message">
+        <source xml:lang="en">This command will run outside the sandbox.</source>
+        <target>Ця команда буде виконуватись поза пісочницею.</target>
+      </trans-unit>
+      <trans-unit id="confirmTerminalCommandTool.sandboxBypass.message.reason">
+        <source xml:lang="en">This command will run outside the sandbox.
+
+Reason: {0}</source>
+        <target>Ця команда буде виконуватись поза пісочницею.
+
+Причина: {0}</target>
+      </trans-unit>
+      <trans-unit id="confirmTerminalCommandTool.sandboxBypass.title">
+        <source xml:lang="en">Run in terminal outside the sandbox?</source>
+        <target>Запустити в терміналі поза пісочницею?</target>
+      </trans-unit>
       <trans-unit id="confirmTerminalCommandTool.userDescription">
         <source xml:lang="en">Tool for confirming terminal commands</source>
         <target>Інструмент для підтвердження команд терміналу</target>
@@ -607,10 +623,6 @@ Reason for allowing unrestricted network access in the sandbox: {2}</source>
       <trans-unit id="runInTerminal.allowNetwork.confirmationMessage.defaultReason">
         <source xml:lang="en">The model indicated that this sandboxed command needs unrestricted network access.</source>
         <target>Модель вказала, що ця командна оболонка потребує необмеженого доступу до мережі.</target>
-      </trans-unit>
-      <trans-unit id="runInTerminal.allowNetwork.deferredRetry.reason">
-        <source xml:lang="en">The model requested unrestricted network access in the sandbox.</source>
-        <target>Модель запросила необмежений доступ до мережі в пісочниці.</target>
       </trans-unit>
       <trans-unit id="runInTerminal.allowNetwork.disabled.invocation">
         <source xml:lang="en">Not running `{0}` because unrestricted network access in the sandbox is disabled</source>
@@ -820,10 +832,6 @@ Reason for leaving the sandbox: {2}</source>
       <trans-unit id="runInTerminal.unsandboxed.confirmationMessage.defaultReason">
         <source xml:lang="en">The model indicated that this command needs unsandboxed access.</source>
         <target>Модель вказала, що ця команда потребує доступу без обмежень.</target>
-      </trans-unit>
-      <trans-unit id="runInTerminal.unsandboxed.deferredRetry.reason">
-        <source xml:lang="en">The model requested unsandboxed execution.</source>
-        <target>Модель запитала виконання без пісочниці.</target>
       </trans-unit>
       <trans-unit id="runInTerminal.unsandboxed.disabled.invocation">
         <source xml:lang="en">Not running `{0}` because unsandboxed execution is disabled</source>
@@ -1093,6 +1101,10 @@ Reason for leaving the sandbox: {2}</source>
         <source xml:lang="en">Controls whether agent mode terminal commands that run inside the sandbox are auto-approved. When disabled, the run in terminal tool uses the existing approval flow. This applies only when {0} is enabled.</source>
         <target>Контролює, чи команди терміналу режиму агента, які виконуються всередині пісочниці, автоматично затверджуються. Коли вимкнено, інструмент виконання в терміналі використовує існуючий процес затвердження. Це застосовується лише тоді, коли {0} увімкнено.</target>
       </trans-unit>
+      <trans-unit id="agentSandbox.allowNetwork">
+        <source xml:lang="en">When {0} is enabled, controls whether to allow all network domains in the sandbox. When enabled, the sandbox preserves file system restrictions while relaxing all network restrictions.</source>
+        <target>Коли {0} увімкнено, контролює, чи дозволяти всі мережеві домени в пісочниці. Коли увімкнено, пісочниця зберігає обмеження файлової системи, одночасно послаблюючи всі мережеві обмеження.</target>
+      </trans-unit>
       <trans-unit id="agentSandbox.allowUnsandboxedCommands">
         <source xml:lang="en">Controls whether agent mode terminal commands can run outside the sandbox after user confirmation when a sandboxed command fails or when sandbox restrictions would block the command. This applies only when {0} is enabled.</source>
         <target>Контролює, чи можуть термінальні команди режиму агента виконуватися поза пісочницею після підтвердження користувача, коли команда в пісочниці не вдалася або коли обмеження пісочниці блокують команду. Це застосовується лише тоді, коли {0} увімкнено.</target>
@@ -1102,12 +1114,8 @@ Reason for leaving the sandbox: {2}</source>
         <target>Використовуйте {0} замість цього.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.enabledSetting">
-        <source xml:lang="en">Controls whether agent mode uses sandboxing to restrict what tools can do. When enabled, tools like the terminal are run in a sandboxed environment to limit access to the system.</source>
-        <target>Контролює, чи режим агента використовує пісочницю для обмеження можливостей інструментів. Коли увімкнено, такі інструменти, як термінал, виконуються в середовищі пісочниці для обмеження доступу до системи.</target>
-      </trans-unit>
-      <trans-unit id="agentSandbox.enabledSetting.allowNetworkDescription">
-        <source xml:lang="en">Enable sandboxing for agent mode tools and allow all network domains.</source>
-        <target>Увімкніть пісочницю для інструментів режиму агента та дозвольте всі мережеві домени.</target>
+        <source xml:lang="en">Controls whether agent mode uses sandboxing to restrict what tools can do. When enabled, tools like the terminal are run in a sandboxed environment to limit access to the system. Use {0} to allow all network domains.</source>
+        <target>Контролює, чи режим агента використовує пісочницю для обмеження того, що можуть робити інструменти. Коли увімкнено, такі інструменти, як термінал, виконуються в середовищі пісочниці, щоб обмежити доступ до системи. Використовуйте {0}, щоб дозволити всі мережеві домени.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.enabledSetting.offDescription">
         <source xml:lang="en">Disable sandboxing for agent mode tools.</source>
@@ -1124,10 +1132,6 @@ Reason for leaving the sandbox: {2}</source>
       <trans-unit id="agentSandbox.fileSystemMac.deprecated">
         <source xml:lang="en">Use {0} instead</source>
         <target>Використовуйте {0} замість цього.</target>
-      </trans-unit>
-      <trans-unit id="agentSandbox.forceFirstExecutionInSandbox">
-        <source xml:lang="en">Controls whether agent mode terminal commands first run with the sandbox's configured restrictions before honoring a request for execution outside the sandbox or unrestricted network access. The user is prompted to approve the requested additional access only if that sandboxed command fails. This applies only when {0} is enabled.</source>
-        <target>Контролює, чи команди терміналу в режимі агента спочатку виконуються з обмеженнями, налаштованими в пісочниці, перш ніж виконати запит на виконання поза пісочницею або без обмеженого доступу до мережі. Користувачеві пропонується затвердити запитуваний додатковий доступ лише у випадку, якщо ця команду в пісочниці не вдається виконати. Це застосовується лише тоді, коли {0} увімкнено.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.linuxFileSystemSetting">
         <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Controls file system access in sandbox on Linux. Paths do not support glob patterns, only literal paths (ex: ./src/, ~/.ssh, .env). **bubblewrap** and **socat** should be installed for this setting to work.</source>
@@ -1170,24 +1174,24 @@ Reason for leaving the sandbox: {2}</source>
         <target>Масив шляхів для заборони запису в межах дозволених шляхів (має пріоритет над allowWrite).</target>
       </trans-unit>
       <trans-unit id="agentSandbox.retryWithAllowNetworkRequests">
-        <source xml:lang="en">Controls whether agent mode terminal commands can retry in the sandbox with unrestricted network access after user confirmation. This applies only when {0} is set to `on` and preserves file system sandboxing while relaxing network restrictions for an approved command.</source>
-        <target>Контролює, чи можуть термінальні команди режиму агента повторюватися в пісочниці з необмеженим доступом до мережі після підтвердження користувача. Це застосовується лише тоді, коли {0} встановлено на `on` і зберігає пісочницю файлової системи, одночасно послаблюючи мережеві обмеження для затвердженої команди.</target>
+        <source xml:lang="en">Controls whether agent mode terminal commands can retry in the sandbox with unrestricted network access after user confirmation. This applies only when {0} is enabled and preserves file system sandboxing while relaxing network restrictions for an approved command.</source>
+        <target>Контролює, чи можуть термінальні команди режиму агента повторюватися в пісочниці з необмеженим доступом до мережі після підтвердження користувача. Це застосовується лише тоді, коли {0} увімкнено, і зберігає пісочницю файлової системи, одночасно послаблюючи мережеві обмеження для затвердженої команди.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.runtimeSetting">
         <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Key/value pairs are passed through to the root of the sandbox runtime configuration.</source>
         <target>Примітка: це налаштування застосовується тільки коли {0} увімкнено. Параметри ключ/значення передаються до кореня конфігурації середовища пісочниці.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.windowsEnabledSetting">
-        <source xml:lang="en">Controls whether agent mode uses sandboxing on Windows.</source>
-        <target>Контролює, чи режим агента використовує пісочницю на Windows.</target>
-      </trans-unit>
-      <trans-unit id="agentSandbox.windowsEnabledSetting.allowNetworkDescription">
-        <source xml:lang="en">Enable sandboxing for agent mode tools on Windows and allow all network domains.</source>
-        <target>Увімкніть пісочницю для інструментів режиму агента на Windows та дозволте всі мережеві домени.</target>
+        <source xml:lang="en">Controls whether agent mode uses sandboxing on Windows. Use {0} to allow all network domains.</source>
+        <target>Контролює, чи режим агента використовує пісочницю на Windows. Використовуйте {0}, щоб дозволити всі мережеві домени.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.windowsEnabledSetting.offDescription">
         <source xml:lang="en">Disable sandboxing for agent mode tools on Windows.</source>
         <target>Вимкніть пісочницю для інструментів режиму агента на Windows.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.windowsEnabledSetting.onDescription">
+        <source xml:lang="en">Enable sandboxing for agent mode tools on Windows.</source>
+        <target>Увімкніть пісочницю для інструментів режиму агента на Windows.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.windowsFileSystemSetting">
         <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Controls file system access in sandbox on Windows. Paths do not support glob patterns, only literal paths (ex: C:\src, C:\Users\me\.ssh, .env).</source>

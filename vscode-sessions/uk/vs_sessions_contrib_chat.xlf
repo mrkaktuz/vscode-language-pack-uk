@@ -70,9 +70,9 @@
         <source xml:lang="en">Controls whether chat input history in the Agents Window is scoped to the current session. Disable this to use shared input history across sessions.</source>
         <target>Контролює, чи історія введення чату у вікні агентів обмежена поточною сесією. Вимкніть це, щоб використовувати спільну історію введення між сесіями.</target>
       </trans-unit>
-      <trans-unit id="chat.newEdits.label">
-        <source xml:lang="en">New Chat</source>
-        <target>Новий чат</target>
+      <trans-unit id="sessions.newSession.label">
+        <source xml:lang="en">New Session</source>
+        <target>Нова сесія</target>
       </trans-unit>
     </body>
   </file>
@@ -86,6 +86,10 @@
   </file>
   <file original="src/vs/sessions/contrib/chat/browser/mobile/mobileWorkspacePickerSheet" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="mobileWorkspacePicker.cancel">
+        <source xml:lang="en">Cancel</source>
+        <target>Скасувати</target>
+      </trans-unit>
       <trans-unit id="mobileWorkspacePicker.caption">
         <source xml:lang="en">Search to browse folders on the host</source>
         <target>Пошук для перегляду папок на хості</target>
@@ -101,6 +105,10 @@
       <trans-unit id="mobileWorkspacePicker.searchFolders">
         <source xml:lang="en">Search folders…</source>
         <target>Шукати папки…</target>
+      </trans-unit>
+      <trans-unit id="mobileWorkspacePicker.selectCurrentFolder">
+        <source xml:lang="en">Select '{0}'</source>
+        <target>Виберіть '{0}'</target>
       </trans-unit>
       <trans-unit id="mobileWorkspacePicker.title">
         <source xml:lang="en">Choose Workspace</source>
@@ -274,6 +282,10 @@
   </file>
   <file original="src/vs/sessions/contrib/chat/browser/newChatWidget" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="newChatHeader">
+        <source xml:lang="en">New Chat</source>
+        <target>Новий чат</target>
+      </trans-unit>
       <trans-unit id="newSessionChooseWorkspace">
         <source xml:lang="en">Start by picking a</source>
         <target>Почніть з вибору a</target>
@@ -596,6 +608,38 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionReferenceCompletions" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="currentSessionLabel">
+        <source xml:lang="en">{0} (current)</source>
+        <target>{0} (поточний)</target>
+      </trans-unit>
+      <trans-unit id="untitledSession">
+        <source xml:lang="en">Untitled session</source>
+        <target>Безіменна сесія</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionRunningSubagentsControl" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="runningSubagents.running">
+        <source xml:lang="en">{0} subagents running</source>
+        <target>{0} субагентів працює</target>
+      </trans-unit>
+      <trans-unit id="runningSubagents.single">
+        <source xml:lang="en">Running subagent: {0}</source>
+        <target>Запуск підагента: {0}</target>
+      </trans-unit>
+      <trans-unit id="runningSubagents.singleWithStep">
+        <source xml:lang="en">Running subagent: {0} — {1}</source>
+        <target>Запуск підагента: {0} — {1}</target>
+      </trans-unit>
+      <trans-unit id="runningSubagents.untitled">
+        <source xml:lang="en">Subagent</source>
+        <target>Субагент</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/chat/browser/sessionTypePicker" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="sessionTypePicker.ariaLabel">
@@ -662,9 +706,25 @@
         <source xml:lang="en">Focus the Changes view{0}.</source>
         <target>Сфокусуйтеся на перегляді змін{0}.</target>
       </trans-unit>
+      <trans-unit id="sessionsChat.closeChat">
+        <source xml:lang="en">Activate a chat tab's close button to close (hide) that chat from the tab strip without deleting it; reopen it later from the Conversations menu. The session's main chat cannot be closed.</source>
+        <target>Активуйте кнопку закриття вкладки чату, щоб закрити (сховати) цей чат з панелі вкладок без його видалення; відкрийте його пізніше з меню Бесіди. Основний чат сесії не можна закрити.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.contextReferences">
+        <source xml:lang="en">Type # in the chat input to attach context. Use #file to reference a file or folder, or #session to reference another agent session. Referencing a session together with the /troubleshoot command analyzes that session's logs instead of the current one. Accept a suggestion with Tab or Enter; the reference appears as a pill above the input that you can remove.</source>
+        <target>Введіть # у полі чату, щоб додати контекст. Використовуйте #file, щоб посилатися на файл або папку, або #session, щоб посилатися на іншу сесію агента. Посилання на сесію разом з командою /troubleshoot аналізує журнали цієї сесії замість поточної. Прийміть пропозицію за допомогою Tab або Enter; посилання з'явиться у вигляді пігулки над полем введення, яку ви можете видалити.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.conversations">
+        <source xml:lang="en">When a session supports multiple chats, a New Chat button is always shown: as a labeled button in the session header while the session has a single open chat, and as a compact button at the end of the chat tab strip once the session has more than one open chat. Activate it to start a new chat. Once the session has more than one committed chat, a Conversations menu is also shown: in the session header while the tab strip is hidden, and at the end of the chat tab strip once it is shown. Open it to reopen a closed chat: each chat is listed with a checkbox, where checked chats are shown as tabs and unchecked chats are closed (hidden).</source>
+        <target>Коли сесія підтримує кілька чатів, кнопка Новий чат завжди відображається: як кнопка з написом у заголовку сесії, коли сесія має один відкритий чат, і як компактна кнопка в кінці смуги вкладок чатів, коли сесія має більше одного відкритого чату. Активуйте її, щоб почати новий чат. Коли в сесії є більше одного підтвердженого чату, також відображається меню Розмови: у заголовку сесії, коли смуга вкладок прихована, і в кінці смуги вкладок чатів, коли вона відображається. Відкрийте його, щоб повторно відкрити закритий чат: кожен чат перерахований з прапорцем, де чати з прапорцем відображаються як вкладки, а чати без прапорця закриті (приховані).</target>
+      </trans-unit>
       <trans-unit id="sessionsChat.customizations">
         <source xml:lang="en">Focus the Chat Customizations view{0}.</source>
         <target>Сфокусуйтеся на перегляді налаштувань чату{0}.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.deleteChat">
+        <source xml:lang="en">To permanently delete a chat, open the chat tab's context menu and choose Delete Chat. This is destructive and cannot be undone.</source>
+        <target>Щоб назавжди видалити чат, відкрийте контекстне меню вкладки чату та виберіть Видалити чат. Це є руйнівним і не може бути скасовано.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.filesView">
         <source xml:lang="en">Focus the Files Explorer view{0}.</source>
@@ -694,9 +754,17 @@
         <source xml:lang="en">Navigate to the previous session in the list{0}.</source>
         <target>Перейдіть до попередньої сесії в списку{0}.</target>
       </trans-unit>
+      <trans-unit id="sessionsChat.openPullRequest">
+        <source xml:lang="en">When the session is associated with a GitHub pull request, the session header shows the pull request number as a button. Activate it to open the pull request on GitHub{0}.</source>
+        <target>Коли сесія пов'язана з запитом на злиття GitHub, заголовок сесії показує номер запиту на злиття у вигляді кнопки. Активуйте його, щоб відкрити запит на злиття на GitHub{0}.</target>
+      </trans-unit>
       <trans-unit id="sessionsChat.overview">
         <source xml:lang="en">You are in the Agents window. The Agents window is a dedicated workspace for working with AI agents. It provides a chat interface, a changes view for reviewing agent-generated changes, a file explorer, and customization options.</source>
         <target>Ви знаходитесь у вікні Агентів. Вікно Агентів є спеціалізованим робочим простором для роботи з AI-агентами. Воно надає інтерфейс чату, перегляд змін для перегляду змін, створених агентом, файловий провідник та можливості налаштування.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.quickChat">
+        <source xml:lang="en">To start a workspace-less quick chat, use the New Quick Chat command{0} or the plus button on the Chats section in the sessions list. A quick chat has no workspace, so the workspace picker does not apply and the Toggle Side Panel command is disabled.</source>
+        <target>Щоб розпочати швидкий чат без робочого простору, використовуйте команду New Quick Chat{0} або кнопку плюс у розділі Чати в списку сесій. Швидкий чат не має робочого простору, тому вибір робочого простору не застосовується, а команда Toggle Side Panel вимкнена.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.sessionsView">
         <source xml:lang="en">Focus the Chat Sessions view{0}.</source>

@@ -15,6 +15,10 @@
         <note>&amp;&amp; denotes a mnemonic</note>
         <target>Chan&amp;&amp;ges</target>
       </trans-unit>
+      <trans-unit id="sessionChangesEditor.label">
+        <source xml:lang="en">Changes</source>
+        <target>Зміни</target>
+      </trans-unit>
       <trans-unit id="sessions.changes.openSingleFileDiff">
         <source xml:lang="en">Controls whether clicking a file in the Changes view opens a single file diff editor instead of the multi file diff editor.</source>
         <target>Контролює, чи відкриває клік на файл у вигляді змін редактор порівняння одного файлу замість редактора порівняння кількох файлів.</target>
@@ -23,17 +27,29 @@
   </file>
   <file original="src/vs/sessions/contrib/changes/browser/changesActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="agentSessions.viewChanges">
-        <source xml:lang="en">View All Changes</source>
-        <target>Переглянути всі зміни</target>
+      <trans-unit id="agentSessions.changes">
+        <source xml:lang="en">Changes</source>
+        <target>Зміни</target>
+      </trans-unit>
+      <trans-unit id="agentSessions.changes.file">
+        <source xml:lang="en">{0} file</source>
+        <target>{0} файл</target>
+      </trans-unit>
+      <trans-unit id="agentSessions.changes.files">
+        <source xml:lang="en">{0} files</source>
+        <target>{0} файлів</target>
+      </trans-unit>
+      <trans-unit id="agentSessions.viewChanges.ariaLabel">
+        <source xml:lang="en">{0}: {1}, +{2}, -{3}</source>
+        <target>{0}: {1}, +{2}, -{3}</target>
       </trans-unit>
       <trans-unit id="agentSessions.viewChanges.tooltip">
-        <source xml:lang="en">View All Changes</source>
-        <target>Переглянути всі зміни</target>
+        <source xml:lang="en">View Changes</source>
+        <target>Переглянути зміни</target>
       </trans-unit>
-      <trans-unit id="sessions.changes.title">
-        <source xml:lang="en">Session Changes</source>
-        <target>Зміни сесії</target>
+      <trans-unit id="agentSessions.viewChanges.tooltip.branch">
+        <source xml:lang="en">View Changes ({0})</source>
+        <target>Переглянути зміни ({0})</target>
       </trans-unit>
     </body>
   </file>
@@ -42,6 +58,14 @@
       <trans-unit id="changes">
         <source xml:lang="en">Changes</source>
         <target>Зміни</target>
+      </trans-unit>
+      <trans-unit id="changesView.diffStats.file">
+        <source xml:lang="en">1 file</source>
+        <target>1 файл</target>
+      </trans-unit>
+      <trans-unit id="changesView.diffStats.files">
+        <source xml:lang="en">{0} files</source>
+        <target>{0} файлів</target>
       </trans-unit>
       <trans-unit id="changesView.diffStats.label">
         <source xml:lang="en">{0} files, {1} additions, {2} deletions</source>
@@ -63,9 +87,9 @@
         <source xml:lang="en">Versions</source>
         <target>Версії</target>
       </trans-unit>
-      <trans-unit id="sessions.changes.title">
-        <source xml:lang="en">Session Changes</source>
-        <target>Зміни сесії</target>
+      <trans-unit id="revealChecks">
+        <source xml:lang="en">Reveal Checks</source>
+        <target>Розкрити перевірки</target>
       </trans-unit>
       <trans-unit id="setListViewMode">
         <source xml:lang="en">View as List</source>
@@ -79,6 +103,10 @@
   </file>
   <file original="src/vs/sessions/contrib/changes/browser/changesViewActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="agentSessions.collapseAllDiffs">
+        <source xml:lang="en">Collapse All Diffs</source>
+        <target>Сховати всі відмінності</target>
+      </trans-unit>
       <trans-unit id="openChanges">
         <source xml:lang="en">Open Changes</source>
         <target>Відкрити зміни</target>
@@ -139,10 +167,6 @@
         <source xml:lang="en">Checks</source>
         <target>Перевірки</target>
       </trans-unit>
-      <trans-unit id="ci.fixChecks">
-        <source xml:lang="en">Fix Checks</source>
-        <target>Виправити перевірки</target>
-      </trans-unit>
       <trans-unit id="ci.openOnGitHub">
         <source xml:lang="en">Open on GitHub</source>
         <target>Відкрити на GitHub</target>
@@ -154,6 +178,98 @@
       <trans-unit id="ci.toggleChecks">
         <source xml:lang="en">Toggle Checks</source>
         <target>Перемикання перевірок</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/changes/browser/sessionChangesEditorInput" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="sessionChangesEditor.name">
+        <source xml:lang="en">Changes</source>
+        <target>Зміни</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/changes/browser/sessionChangesService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="sessions.changes.title">
+        <source xml:lang="en">Session Changes</source>
+        <target>Зміни сесії</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/changes/browser/sessionFilesWidget" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="sessionFiles.created">
+        <source xml:lang="en">Created</source>
+        <target>Створено</target>
+      </trans-unit>
+      <trans-unit id="sessionFiles.deleted">
+        <source xml:lang="en">Deleted</source>
+        <target>Видалено</target>
+      </trans-unit>
+      <trans-unit id="sessionFiles.diffLabel">
+        <source xml:lang="en">{0} (Session Changes)</source>
+        <target>{0} (Зміни сесії)</target>
+      </trans-unit>
+      <trans-unit id="sessionFiles.fileAriaLabel">
+        <source xml:lang="en">{0}, {1}</source>
+        <target>{0}, {1}</target>
+      </trans-unit>
+      <trans-unit id="sessionFiles.hover">
+        <source xml:lang="en">Files created, edited, or deleted outside the workspace during this session. These files are not part of the workspace and won't be committed.</source>
+        <target>Файли, створені, відредаговані або видалені поза робочим простором під час цієї сесії. Ці файли не є частиною робочого простору і не будуть закомічені.</target>
+      </trans-unit>
+      <trans-unit id="sessionFiles.label">
+        <source xml:lang="en">Other Files</source>
+        <target>Інші файли</target>
+      </trans-unit>
+      <trans-unit id="sessionFiles.listAriaLabel">
+        <source xml:lang="en">Other Files</source>
+        <target>Інші файли</target>
+      </trans-unit>
+      <trans-unit id="sessionFiles.modified">
+        <source xml:lang="en">Modified</source>
+        <target>Модифіковано</target>
+      </trans-unit>
+      <trans-unit id="sessionFiles.openFileAction">
+        <source xml:lang="en">Open File</source>
+        <target>Відкрити файл</target>
+      </trans-unit>
+      <trans-unit id="sessionFiles.title">
+        <source xml:lang="en">{0} ({1})</source>
+        <target>{0} ({1})</target>
+      </trans-unit>
+      <trans-unit id="sessionFiles.toggle">
+        <source xml:lang="en">Toggle Other Files</source>
+        <target>Перемкнути інші файли</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/changes/browser/sessionsChangesAccessibilityHelp" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="sessionsChanges.checks">
+        <source xml:lang="en">The Checks section lists the continuous integration checks for the session's pull request. Its header is a button: press Enter or Space to collapse or expand it{0}.</source>
+        <target>Розділ Перевірки містить перевірки безперервної інтеграції для запиту на злиття сесії. Його заголовок є кнопкою: натисніть Enter або Space, щоб згорнути або розгорнути його{0}.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChanges.overview">
+        <source xml:lang="en">You are in the Changes view. It shows the files changed by the current session as a tree, followed by two collapsible sections: Other Files and Checks.</source>
+        <target>Ви перебуваєте в режимі Зміни. Він показує файли, змінені в поточній сесії, у вигляді дерева, за яким йдуть два згортальні розділи: Інші файли та Перевірки.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChanges.sessionFiles">
+        <source xml:lang="en">The Other Files section lists files that were created, edited, or deleted outside the workspace during this session, such as configuration files in your home directory. These files are not part of the workspace and won't be committed.</source>
+        <target>Розділ Інші файли містить файли, які були створені, відредаговані або видалені поза робочою областю під час цієї сесії, такі як файли конфігурації у вашому домашньому каталозі. Ці файли не є частиною робочої області і не будуть зафіксовані.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChanges.sessionFilesToggle">
+        <source xml:lang="en">The Other Files header is a button. Press Enter or Space to collapse or expand the list. When expanded, use the arrow keys to move through the files and press Enter to open one: created or deleted files open in an editor, while edited files open as a diff against their pre-session content.</source>
+        <target>Заголовок "Інші файли" є кнопкою. Натисніть Enter або Space, щоб згорнути або розгорнути список. Коли список розгорнуто, використовуйте стрілки для переміщення між файлами та натискайте Enter, щоб відкрити один: створені або видалені файли відкриваються в редакторі, тоді як відредаговані файли відкриваються як різниця з їхнім вмістом до сесії.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChanges.tree">
+        <source xml:lang="en">Use the up and down arrow keys to move between changed files, and the left and right arrow keys to collapse or expand folders. Press Enter to open the selected file's diff.</source>
+        <target>Використовуйте клавіші стрілок вгору та вниз, щоб переміщатися між зміненими файлами, а клавіші стрілок вліво та вправо, щоб згортати або розгортати папки. Натисніть Enter, щоб відкрити різницю вибраного файлу.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChanges.viewMode">
+        <source xml:lang="en">The Changes view can show files as a tree or a flat list. Use the view's toolbar actions to switch between Tree and List modes.</source>
+        <target>Вигляд Змін може показувати файли у вигляді дерева або плоского списку. Використовуйте дії на панелі інструментів вигляду, щоб перемикатися між режимами Дерево та Список.</target>
       </trans-unit>
     </body>
   </file>

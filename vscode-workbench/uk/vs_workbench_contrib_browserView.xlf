@@ -240,9 +240,9 @@
         <source xml:lang="en">Console Logs</source>
         <target>Консольні журнали</target>
       </trans-unit>
-      <trans-unit id="workbench.browser.agentHostChatToolsEnabled">
-        <source xml:lang="en">When enabled, integrated browser tools are exposed as client-provided tools to agent host sessions in the Sessions window. Requires {0} and {1}.</source>
-        <target>Коли увімкнено, інтегровані інструменти браузера надаються як інструменти, надані клієнтом, для сесій хоста агента у вікні Сесії. Потребує {0} та {1}.</target>
+      <trans-unit id="workbench.browser.sendElementsToChat.attachImages">
+        <source xml:lang="en">Controls whether a screenshot of the selected element will be added to the chat.</source>
+        <target>Контролює, чи буде скріншот вибраного елемента додано до чату.</target>
       </trans-unit>
     </body>
   </file>
@@ -638,6 +638,86 @@ Ensure the URL is correct and the server is accessible from the remote machine.<
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserPermissionsFeature" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="browser.device.kind.bluetooth">
+        <source xml:lang="en">a Bluetooth device</source>
+        <target>Bluetooth-пристрій</target>
+      </trans-unit>
+      <trans-unit id="browser.device.kind.hid">
+        <source xml:lang="en">an HID device</source>
+        <target>пристрій HID</target>
+      </trans-unit>
+      <trans-unit id="browser.device.kind.serial">
+        <source xml:lang="en">a serial port</source>
+        <target>послідовний порт</target>
+      </trans-unit>
+      <trans-unit id="browser.device.kind.usb">
+        <source xml:lang="en">a USB device</source>
+        <target>USB-пристрій</target>
+      </trans-unit>
+      <trans-unit id="browser.device.placeholder">
+        <source xml:lang="en">Select a device to connect to</source>
+        <target>Виберіть пристрій для підключення</target>
+      </trans-unit>
+      <trans-unit id="browser.device.title">
+        <source xml:lang="en">{0} wants to connect to {1}</source>
+        <target>{0} хоче підключитися до {1}</target>
+      </trans-unit>
+      <trans-unit id="browser.managePermissions">
+        <source xml:lang="en">Site Permissions</source>
+        <target>Дозволи сайту</target>
+      </trans-unit>
+      <trans-unit id="browser.permissions.allow">
+        <source xml:lang="en">Allow</source>
+        <target>Дозволити</target>
+      </trans-unit>
+      <trans-unit id="browser.permissions.block">
+        <source xml:lang="en">Block</source>
+        <target>Блок</target>
+      </trans-unit>
+      <trans-unit id="browser.permissions.noOrigin">
+        <source xml:lang="en">Permissions can only be managed for web pages.</source>
+        <target>Дозволи можуть бути керовані лише для веб-сторінок.</target>
+      </trans-unit>
+      <trans-unit id="browser.permissions.placeholder">
+        <source xml:lang="en">Filter permissions</source>
+        <target>Фільтрувати дозволи</target>
+      </trans-unit>
+      <trans-unit id="browser.permissions.prompt">
+        <source xml:lang="en">{0} wants access to {1}</source>
+        <target>{0} хоче доступ до {1}</target>
+      </trans-unit>
+      <trans-unit id="browser.permissions.saveMany">
+        <source xml:lang="en">Save {0} Changes</source>
+        <target>Зберегти {0} зміни</target>
+      </trans-unit>
+      <trans-unit id="browser.permissions.saveOne">
+        <source xml:lang="en">Save 1 Change</source>
+        <target>Зберегти 1 зміна</target>
+      </trans-unit>
+      <trans-unit id="browser.permissions.state.allowed">
+        <source xml:lang="en">Allowed</source>
+        <target>Дозволено</target>
+      </trans-unit>
+      <trans-unit id="browser.permissions.state.ask">
+        <source xml:lang="en">Ask</source>
+        <target>Запитати</target>
+      </trans-unit>
+      <trans-unit id="browser.permissions.state.blocked">
+        <source xml:lang="en">Blocked</source>
+        <target>Заблоковано</target>
+      </trans-unit>
+      <trans-unit id="browser.permissions.state.default">
+        <source xml:lang="en">{0} (default)</source>
+        <target>{0} (за замовчуванням)</target>
+      </trans-unit>
+      <trans-unit id="browser.permissions.title">
+        <source xml:lang="en">Permissions for {0}</source>
+        <target>Дозволи для {0}</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserRemoteFeatures" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="browser.connectedLocally.file">
@@ -727,6 +807,26 @@ Localhost links automatically open in the integrated browser.</source>
       <trans-unit id="browser.newTabAction">
         <source xml:lang="en">New Tab</source>
         <target>Нова вкладка</target>
+      </trans-unit>
+      <trans-unit id="browser.newTabPlacement">
+        <source xml:lang="en">Controls where new Integrated Browser tabs are opened.</source>
+        <note>This is the description for a setting.</note>
+        <target>Контролює, де відкриваються нові вкладки Інтегрованого браузера.</target>
+      </trans-unit>
+      <trans-unit id="browser.newTabPlacement.activeGroup">
+        <source xml:lang="en">New browser tabs open in the currently active editor group.</source>
+        <note>This is the description for a setting.</note>
+        <target>Нові вкладки браузера відкриваються в активній групі редакторів.</target>
+      </trans-unit>
+      <trans-unit id="browser.newTabPlacement.sideGroup">
+        <source xml:lang="en">New browser tabs open in a dedicated editor group to the side that is reused for subsequent tabs. The group is locked so other editors are not opened into it.</source>
+        <note>This is the description for a setting.</note>
+        <target>Нові вкладки браузера відкриваються в спеціально відведеній групі редакторів збоку, яка повторно використовується для наступних вкладок. Група заблокована, щоб інші редактори не відкривалися в ній.</target>
+      </trans-unit>
+      <trans-unit id="browser.newTabPlacement.window">
+        <source xml:lang="en">New browser tabs open in a dedicated window that is reused for subsequent tabs. The window is locked so other editors are not opened into it.</source>
+        <note>This is the description for a setting.</note>
+        <target>Нові вкладки браузера відкриваються в окремому вікні, яке повторно використовується для наступних вкладок. Вікно заблоковане, тому інші редактори не відкриваються в ньому.</target>
       </trans-unit>
       <trans-unit id="browser.openAction">
         <source xml:lang="en">Open Integrated Browser</source>

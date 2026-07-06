@@ -291,6 +291,18 @@
         <source xml:lang="en">Search...</source>
         <target>Пошук...</target>
       </trans-unit>
+      <trans-unit id="actionList.header.dismiss">
+        <source xml:lang="en">Dismiss</source>
+        <target>Відхилити</target>
+      </trans-unit>
+      <trans-unit id="actionList.inlineToggle.off">
+        <source xml:lang="en">{0}, off</source>
+        <target>{0}, вимкнено</target>
+      </trans-unit>
+      <trans-unit id="actionList.inlineToggle.on">
+        <source xml:lang="en">{0}, on</source>
+        <target>{0}, ввімкнено</target>
+      </trans-unit>
       <trans-unit id="actionList.remove">
         <source xml:lang="en">Remove</source>
         <target>Видалити</target>
@@ -457,8 +469,8 @@ A keybinding</note>
         <target>Коли увімкнено, деякі агенти працюють у окремому процесі хоста агента.</target>
       </trans-unit>
       <trans-unit id="chat.agents.copilotCli.hideExtensionHost">
-        <source xml:lang="en">When enabled, hides the Extension Host Copilot CLI entry from the Agents window picker.</source>
-        <target>Коли увімкнено, приховує запис CLI Copilot розширення з вибору вікна агентів.</target>
+        <source xml:lang="en">When enabled, hides the Extension Host Copilot CLI entry from the Agents window picker. Requires `#{0}#`.</source>
+        <target>Коли увімкнено, приховує запис CLI Copilot розширення з вибору вікна агентів. Потрібен `#{0}#`.</target>
       </trans-unit>
       <trans-unit id="chat.editor.copilotCli.hideExtensionHost">
         <source xml:lang="en">When enabled, hides the Extension Host Copilot CLI entry from the editor window chat picker.</source>
@@ -492,6 +504,14 @@ A keybinding</note>
   </file>
   <file original="src/vs/platform/agentHost/common/agentHostCustomizationConfig" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="agentHost.config.claudeUseCopilotProxy.description">
+        <source xml:lang="en">When enabled (the default), the Claude agent routes all requests through GitHub Copilot. When disabled, Claude talks to Anthropic directly using your own credentials (API key or Claude subscription).</source>
+        <target>Коли увімкнено (за замовчуванням), агент Claude перенаправляє всі запити через GitHub Copilot. Коли вимкнено, Claude спілкується з Anthropic безпосередньо, використовуючи ваші власні облікові дані (API-ключ або підписку на Claude).</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.claudeUseCopilotProxy.title">
+        <source xml:lang="en">Route Claude Through Copilot</source>
+        <target>Маршрут Клода через Копілот</target>
+      </trans-unit>
       <trans-unit id="agentHost.config.customizations.description">
         <source xml:lang="en">Plugins configured on this agent host and available to remote sessions.</source>
         <target>Плагіни, налаштовані на цьому хості агента і доступні для віддалених сеансів.</target>
@@ -552,6 +572,30 @@ A keybinding</note>
   </file>
   <file original="src/vs/platform/agentHost/common/agentHostSchema" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="agentHost.config.autoReplyEnabled.description">
+        <source xml:lang="en">Whether VS Code's auto-reply setting is enabled. When `true`, `ask_user` questions are auto-answered instead of blocking on the user, mirroring autopilot mode.</source>
+        <target>Чи увімкнено налаштування автоматичної відповіді VS Code. Коли `true`, запитання `ask_user` автоматично відповідаються замість блокування користувача, відображаючи режим автопілота.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.autoReplyEnabled.title">
+        <source xml:lang="en">Auto Reply</source>
+        <target>Автовідповідь</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.codexAgentEnabled.description">
+        <source xml:lang="en">Whether the Codex provider is enabled.</source>
+        <target>Чи увімкнено постачальника Codex.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.codexAgentEnabled.title">
+        <source xml:lang="en">Codex Agent</source>
+        <target>Codex Агент</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.globalAutoApproveEnabled.description">
+        <source xml:lang="en">Whether VS Code's global auto-approve setting is enabled. When `true`, every tool call is auto-approved, equivalent to a session using Bypass Approvals.</source>
+        <target>Чи увімкнено глобальне налаштування автоматичного схвалення в VS Code. Коли `true`, кожен виклик інструменту автоматично схвалюється, що еквівалентно сеансу з використанням обхідних схвалень.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.globalAutoApproveEnabled.title">
+        <source xml:lang="en">Global Auto Approve</source>
+        <target>Глобальне автоматичне схвалення</target>
+      </trans-unit>
       <trans-unit id="agentHost.config.mcpServers.arg.title">
         <source xml:lang="en">Argument</source>
         <target>Аргумент</target>
@@ -644,6 +688,22 @@ A keybinding</note>
         <source xml:lang="en">Telemetry Level</source>
         <target>Рівень телеметрії</target>
       </trans-unit>
+      <trans-unit id="agentHost.config.terminalAutoApproveEnabled.description">
+        <source xml:lang="en">Whether terminal auto-approve rules forwarded by the connected client are allowed to apply to agent-host shell permission requests.</source>
+        <target>Чи дозволяється застосування правил автоматичного схвалення терміналу, надісланих підключеним клієнтом, до запитів на дозволи оболонки агента.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.terminalAutoApproveEnabled.title">
+        <source xml:lang="en">Terminal Auto Approve</source>
+        <target>Термінал Авто Підтвердження</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.terminalAutoApproveRules.description">
+        <source xml:lang="en">Terminal auto-approve rules forwarded by the connected client for agent-host shell permission checks.</source>
+        <target>Правила автоматичного схвалення терміналу, надіслані підключеним клієнтом для перевірки дозволів оболонки агента-хоста.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.terminalAutoApproveRules.title">
+        <source xml:lang="en">Terminal Auto Approve Rules</source>
+        <target>Правила автоматичного затвердження терміналу</target>
+      </trans-unit>
       <trans-unit id="agentHost.sessionConfig.autoApprove">
         <source xml:lang="en">Approvals</source>
         <target>Схвалення</target>
@@ -724,9 +784,17 @@ A keybinding</note>
   </file>
   <file original="src/vs/platform/agentHost/common/agentHostStarter.config.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="chat.agentHost.byokModels.enabled">
+        <source xml:lang="en">When enabled, the agent host wires up the BYOK ('bring your own key') language-model bridge so extension-provided BYOK models can run in agent-host sessions. Requires `#chat.agentHost.enabled#`. The agent host process must be restarted for changes to take effect.</source>
+        <target>Коли увімкнено, хост агента підключає міст мови BYOK ('принесіть свій власний ключ'), щоб моделі BYOK, надані розширенням, могли працювати в сесіях хоста агента. Потрібно `#chat.agentHost.enabled#`. Процес хоста агента повинен бути перезапущений, щоб зміни набрали чинності.</target>
+      </trans-unit>
       <trans-unit id="chat.agentHost.claudeAgent.enabled">
         <source xml:lang="en">When enabled, the agent host registers the Claude provider (subject to the Claude SDK being reachable). Independent of `#chat.agents.claude.preferAgentHost#` and `#chat.editor.claude.preferAgentHost#`, which choose which integration surfaces Claude. Requires `#chat.agentHost.enabled#`. The agent host process must be restarted for changes to take effect.</source>
         <target>Коли увімкнено, хост агента реєструє постачальника Claude (за умови, що SDK Claude доступний). Незалежно від `#chat.agents.claude.preferAgentHost#` та `#chat.editor.claude.preferAgentHost#`, які вибирають, які інтеграційні поверхні використовують Claude. Потрібно `#chat.agentHost.enabled#`. Процес хоста агента повинен бути перезапущений, щоб зміни набрали чинності.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.claudeAgent.enabled.policy">
+        <source xml:lang="en">Enable Claude Agent sessions in VS Code. Start and resume agentic coding sessions powered by Anthropic Claude Agent SDK directly in the editor. Uses your existing Copilot subscription.</source>
+        <target>Увімкніть сесії агента Claude у VS Code. Починайте та відновлюйте сесії агентного кодування, які працюють на базі Anthropic Claude Agent SDK, безпосередньо в редакторі. Використовує вашу існуючу підписку на Copilot.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.codexAgent.binaryArgs">
         <source xml:lang="en">Additional command-line arguments passed to `codex app-server`. Primarily useful for debugging (for example, `--log-level=debug`).</source>
@@ -752,6 +820,10 @@ A keybinding</note>
         <source xml:lang="en">When enabled, includes prompt and response content in OTel span attributes. Configurable in user settings only. Sets `OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT`. Privacy-sensitive: do not enable in environments that ship spans to shared sinks.</source>
         <target>Коли увімкнено, включає вміст запиту та відповіді в атрибути span OTel. Налаштовується лише в налаштуваннях користувача. Встановлює `OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT`. Чутливі до конфіденційності: не увімкнено в середовищах, які передають spans до спільних сховищ.</target>
       </trans-unit>
+      <trans-unit id="chat.agentHost.otel.captureContent.policy">
+        <source xml:lang="en">Controls whether Copilot OpenTelemetry export captures prompt, response, and tool content.</source>
+        <target>Контролює, чи експортує Copilot OpenTelemetry вміст запиту, відповіді та інструменту.</target>
+      </trans-unit>
       <trans-unit id="chat.agentHost.otel.dbSpanExporter.enabled">
         <source xml:lang="en">When enabled, the agent host persists every emitted OTel span to a local SQLite database. Configurable in user settings only. Spans can be inspected via the `Export Agent Host Traces Database` command. Compatible with external exporters: spans are written to SQLite *and* forwarded to the user-configured sink.</source>
         <target>Коли увімкнено, хост агента зберігає кожен випущений OTel span у локальній базі даних SQLite. Налаштовується лише в налаштуваннях користувача. Span можна перевірити за допомогою команди `Export Agent Host Traces Database`. Сумісний з зовнішніми експортерами: span записуються в SQLite *та* пересилаються до налаштованого користувачем приймача.</target>
@@ -760,17 +832,81 @@ A keybinding</note>
         <source xml:lang="en">When enabled, the agent host emits OpenTelemetry traces from the Copilot SDK. Configurable in user settings only. Requires `#chat.agentHost.enabled#`. Either configure `#chat.agentHost.otel.otlpEndpoint#` to ship traces to an external collector or enable `#chat.agentHost.otel.dbSpanExporter.enabled#` to capture them locally.</source>
         <target>Коли увімкнено, хост агента випромінює OpenTelemetry трасування з Copilot SDK. Налаштовується лише в налаштуваннях користувача. Потрібно `#chat.agentHost.enabled#`. Або налаштуйте `#chat.agentHost.otel.otlpEndpoint#`, щоб відправляти трасування до зовнішнього колектора, або увімкніть `#chat.agentHost.otel.dbSpanExporter.enabled#`, щоб захоплювати їх локально.</target>
       </trans-unit>
+      <trans-unit id="chat.agentHost.otel.enabled.policy">
+        <source xml:lang="en">Controls whether Copilot OpenTelemetry export is enabled. When managed, users cannot override the enterprise value.</source>
+        <target>Контролює, чи увімкнено експорт Copilot OpenTelemetry. Коли він керується, користувачі не можуть перевизначити значення підприємства.</target>
+      </trans-unit>
       <trans-unit id="chat.agentHost.otel.exporterType">
         <source xml:lang="en">Exporter backend used by the Copilot SDK when `#chat.agentHost.otel.enabled#` is on. Configurable in user settings only. `otlp-grpc` is downgraded to `otlp-http` transparently in the CLI runtime.</source>
         <target>Експортер бекенду, що використовується SDK Copilot, коли `#chat.agentHost.otel.enabled#` увімкнено. Налаштовується лише в налаштуваннях користувача. `otlp-grpc` автоматично знижено до `otlp-http` у середовищі виконання CLI.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.otel.headers">
+        <source xml:lang="en">Enterprise-managed OTLP exporter headers (e.g. auth tokens) for Copilot OpenTelemetry export. Policy-only and extension-only: applied directly to the Copilot Chat extension's OTLP exporter, never delivered to the agent host process.</source>
+        <target>Заголовки OTLP експортерів, що керуються підприємством (наприклад, токени автентифікації) для експорту OpenTelemetry Copilot. Тільки політика та тільки розширення: застосовуються безпосередньо до OTLP експортеру розширення Copilot Chat, ніколи не передаються до процесу хосту агента.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.otel.headers.policy">
+        <source xml:lang="en">Controls the enterprise-managed OTLP exporter headers for Copilot OpenTelemetry export.</source>
+        <target>Контролює заголовки експортерів OTLP, керованих підприємством, для експорту OpenTelemetry Copilot.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.otel.otlpEndpoint">
         <source xml:lang="en">OTLP endpoint URL when exporter type is `otlp-http` or `otlp-grpc`. Configurable in user settings only. Sets `OTEL_EXPORTER_OTLP_ENDPOINT` inside the agent host process.</source>
         <target>URL кінцевої точки OTLP, коли тип експортеру - `otlp-http` або `otlp-grpc`. Налаштовується лише в налаштуваннях користувача. Встановлює `OTEL_EXPORTER_OTLP_ENDPOINT` всередині процесу хоста агента.</target>
       </trans-unit>
+      <trans-unit id="chat.agentHost.otel.otlpEndpoint.policy">
+        <source xml:lang="en">Controls the enterprise-managed OTLP collector endpoint for Copilot OpenTelemetry export.</source>
+        <target>Контролює кінцеву точку колектора OTLP, керовану підприємством, для експорту OpenTelemetry Copilot.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.otel.otlpProtocol">
+        <source xml:lang="en">Enterprise-managed OTLP wire protocol (`http/json`, `http/protobuf`, or `grpc`) for Copilot OpenTelemetry export. Policy-only: there is no user-facing setting; it carries the managed `telemetry.protocol` so the agent host's `OTEL_EXPORTER_OTLP_PROTOCOL` distinguishes protobuf from json.</source>
+        <target>Управляємий підприємством OTLP провідний протокол (`http/json`, `http/protobuf` або `grpc`) для експорту OpenTelemetry Copilot. Лише політика: немає налаштування, доступного для користувача; він несе управляємий `telemetry.protocol`, тому `OTEL_EXPORTER_OTLP_PROTOCOL` хоста агента відрізняє protobuf від json.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.otel.otlpProtocol.policy">
+        <source xml:lang="en">Controls the enterprise-managed OTLP wire protocol (protobuf vs JSON) for Copilot OpenTelemetry export.</source>
+        <target>Контролює протокол OTLP, керований підприємством (protobuf проти JSON) для експорту OpenTelemetry Copilot.</target>
+      </trans-unit>
       <trans-unit id="chat.agentHost.otel.outfile">
         <source xml:lang="en">Output path for span JSON lines when exporter type is `file`. Configurable in user settings only. Sets `COPILOT_OTEL_FILE_EXPORTER_PATH`.</source>
         <target>Шлях виводу для JSON рядків спанів, коли тип експортеру - `file`. Налаштовується лише в налаштуваннях користувача. Встановлює `COPILOT_OTEL_FILE_EXPORTER_PATH`.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.otel.outfile.policy">
+        <source xml:lang="en">Prevents local file export when enterprise-managed Copilot OpenTelemetry export is configured.</source>
+        <target>Запобігає експортові локальних файлів, коли налаштовано експорт OpenTelemetry Copilot, керований підприємством.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.otel.protocol.policy">
+        <source xml:lang="en">Controls the enterprise-managed OTLP protocol for Copilot OpenTelemetry export.</source>
+        <target>Контролює підприємницький керований протокол OTLP для експорту OpenTelemetry Copilot.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.otel.protocol.policy.console">
+        <source xml:lang="en">Console exporter is not selected by enterprise managed settings.</source>
+        <target>Експортер консолі не вибрано через налаштування, керовані підприємством.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.otel.protocol.policy.file">
+        <source xml:lang="en">File exporter is not selected by enterprise managed settings.</source>
+        <target>Експортер файлів не вибрано через налаштування, керовані підприємством.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.otel.protocol.policy.otlpGrpc">
+        <source xml:lang="en">Use OTLP over gRPC.</source>
+        <target>Використовуйте OTLP через gRPC.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.otel.protocol.policy.otlpHttp">
+        <source xml:lang="en">Use OTLP over HTTP.</source>
+        <target>Використовуйте OTLP через HTTP.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.otel.resourceAttributes">
+        <source xml:lang="en">Enterprise-managed OTel resource attributes for Copilot OpenTelemetry export. Policy-only: there is no user-facing setting; it carries the managed `telemetry.resourceAttributes` map so the agent host's `OTEL_RESOURCE_ATTRIBUTES` includes the deployment's attributes.</source>
+        <target>Керовані підприємством атрибути ресурсів OTel для експорту OpenTelemetry Copilot. Тільки політика: немає налаштування, доступного для користувача; він містить керовану мапу `telemetry.resourceAttributes`, тому `OTEL_RESOURCE_ATTRIBUTES` хоста агента включає атрибути розгортання.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.otel.resourceAttributes.policy">
+        <source xml:lang="en">Controls the enterprise-managed OTel resource attributes for Copilot OpenTelemetry export.</source>
+        <target>Контролює атрибути ресурсів OTel, керовані підприємством, для експорту OpenTelemetry Copilot.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.otel.serviceName">
+        <source xml:lang="en">Enterprise-managed OTel `service.name` resource attribute for Copilot OpenTelemetry export. Policy-only: there is no user-facing setting; it carries the managed `telemetry.serviceName` so the agent host's `OTEL_SERVICE_NAME` identifies spans from this deployment.</source>
+        <target>Управляємий підприємством атрибут ресурсу OTel `service.name` для експорту OpenTelemetry Copilot. Тільки політика: немає налаштування, доступного для користувача; він містить кероване `telemetry.serviceName`, тому `OTEL_SERVICE_NAME` хоста агента ідентифікує спани з цього розгортання.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.otel.serviceName.policy">
+        <source xml:lang="en">Controls the enterprise-managed OTel `service.name` resource attribute for Copilot OpenTelemetry export.</source>
+        <target>Контролює атрибут ресурсу OTel `service.name`, керований підприємством, для експорту OpenTelemetry Copilot.</target>
       </trans-unit>
       <trans-unit id="chatAgentHostStarterConfigurationTitle">
         <source xml:lang="en">Chat Agent Host Starter</source>
@@ -895,6 +1031,10 @@ A keybinding</note>
       <trans-unit id="agentHost.config.sandbox.advancedRuntime.title">
         <source xml:lang="en">Advanced Sandbox Runtime</source>
         <target>Розширене середовище виконання Sandbox</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.sandbox.allowNetwork.title">
+        <source xml:lang="en">Allow Network</source>
+        <target>Дозволити мережу</target>
       </trans-unit>
       <trans-unit id="agentHost.config.sandbox.allowUnsandboxedCommands.title">
         <source xml:lang="en">Allow Unsandboxed Commands</source>
@@ -1040,6 +1180,22 @@ A keybinding</note>
         <source xml:lang="en">Sign in to GitHub with repository access to create a pull request.</source>
         <target>Увійдіть до GitHub з доступом до репозиторію, щоб створити pull request.</target>
       </trans-unit>
+      <trans-unit id="agentHost.changeset.pr.autoMerge.merge">
+        <source xml:lang="en">merge</source>
+        <target>злиття</target>
+      </trans-unit>
+      <trans-unit id="agentHost.changeset.pr.autoMerge.noNodeId">
+        <source xml:lang="en">the pull request identifier was not returned by GitHub.</source>
+        <target>ідентифікатор запиту на злиття не був повернутий GitHub.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.changeset.pr.autoMerge.rebase">
+        <source xml:lang="en">rebase</source>
+        <target>перебазування</target>
+      </trans-unit>
+      <trans-unit id="agentHost.changeset.pr.autoMerge.squash">
+        <source xml:lang="en">squash</source>
+        <target>сквош</target>
+      </trans-unit>
       <trans-unit id="agentHost.changeset.pr.body">
         <source xml:lang="en">Created from `{0}` targeting `{1}`.</source>
         <target>Створено з `{0}`, націлюючись на `{1}`.</target>
@@ -1060,6 +1216,14 @@ A keybinding</note>
         <source xml:lang="en">Created pull request [#{0}]({1}).</source>
         <target>Створено запит на злиття [#{0}]({1}).</target>
       </trans-unit>
+      <trans-unit id="agentHost.changeset.pr.created.autoMerge">
+        <source xml:lang="en">Created pull request [#{0}]({1}) with auto-merge ({2}) enabled.</source>
+        <target>Створено запит на злиття [#{0}]({1}) з увімкненим автоматичним злиттям ({2}).</target>
+      </trans-unit>
+      <trans-unit id="agentHost.changeset.pr.created.autoMergeFailed">
+        <source xml:lang="en">Created pull request [#{0}]({1}), but auto-merge could not be enabled: {2}</source>
+        <target>Створено запит на злиття [#{0}]({1}), але автоматичне злиття не вдалося увімкнути: {2}</target>
+      </trans-unit>
       <trans-unit id="agentHost.changeset.pr.createdDraft">
         <source xml:lang="en">Created draft pull request [#{0}]({1}).</source>
         <target>Створено чернетку запиту на злиття [#{0}]({1}).</target>
@@ -1067,6 +1231,14 @@ A keybinding</note>
       <trans-unit id="agentHost.changeset.pr.existing">
         <source xml:lang="en">Pull request [#{0}]({1}) already exists.</source>
         <target>Запит на злиття [#{0}]({1}) вже існує.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.changeset.pr.existing.autoMerge">
+        <source xml:lang="en">Pull request [#{0}]({1}) already exists; enabled auto-merge ({2}).</source>
+        <target>Запит на злиття [#{0}]({1}) вже існує; автоматичне злиття увімкнено ({2}).</target>
+      </trans-unit>
+      <trans-unit id="agentHost.changeset.pr.existing.autoMergeFailed">
+        <source xml:lang="en">Pull request [#{0}]({1}) already exists, but auto-merge could not be enabled: {2}</source>
+        <target>Запит на злиття [#{0}]({1}) вже існує, але автоматичне злиття не вдалося увімкнути: {2}</target>
       </trans-unit>
       <trans-unit id="agentHost.changeset.pr.noChanges">
         <source xml:lang="en">There are no branch changes to create a pull request for.</source>
@@ -1084,6 +1256,18 @@ A keybinding</note>
         <source xml:lang="en">Create Pull Request</source>
         <target>Створити Pull Request</target>
       </trans-unit>
+      <trans-unit id="agentHost.changeset.createPRAutoMerge">
+        <source xml:lang="en">Create Pull Request (Auto-Merge)</source>
+        <target>Створити Pull Request (Авто-Злиття)</target>
+      </trans-unit>
+      <trans-unit id="agentHost.changeset.createPRAutoRebase">
+        <source xml:lang="en">Create Pull Request (Auto-Rebase)</source>
+        <target>Створити Pull Request (Авто-реабазування)</target>
+      </trans-unit>
+      <trans-unit id="agentHost.changeset.createPRAutoSquash">
+        <source xml:lang="en">Create Pull Request (Auto-Squash)</source>
+        <target>Створити Pull Request (Авто-сквош)</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/platform/agentHost/node/agentHostRenameCommand" source-language="en" datatype="plaintext" target-language="uk">
@@ -1094,8 +1278,64 @@ A keybinding</note>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/platform/agentHost/node/agentHostReviewFileOperationHandler" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHost.changeset.reviewFile.cancelled">
+        <source xml:lang="en">Review file operation was cancelled.</source>
+        <target>Операцію перегляду файлу було скасовано.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.changeset.reviewFile.marked">
+        <source xml:lang="en">Marked `{0}` as reviewed.</source>
+        <target>Позначено `{0}` як перевірене.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.changeset.reviewFile.unmarked">
+        <source xml:lang="en">Removed the reviewed mark from `{0}`.</source>
+        <target>Видалено позначку перегляду з `{0}`.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/agentHostReviewOperationProvider" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHost.changeset.markAsReviewed">
+        <source xml:lang="en">Mark as Reviewed</source>
+        <target>Позначити як переглянуте</target>
+      </trans-unit>
+      <trans-unit id="agentHost.changeset.markAsUnreviewed">
+        <source xml:lang="en">Mark as Unreviewed</source>
+        <target>Позначити як Непереглянуте</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/agentHostSyncOperationHandler" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHost.changeset.sync.cancelled">
+        <source xml:lang="en">Sync operation was cancelled.</source>
+        <target>Операцію синхронізації було скасовано.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.changeset.sync.synced">
+        <source xml:lang="en">Synced changes.</source>
+        <target>Синхронізовані зміни.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/agentHostSyncOperationProvider" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHost.changeset.sync">
+        <source xml:lang="en">Sync Changes {0}↑</source>
+        <target>Синхронізувати зміни {0}↑</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/platform/agentHost/node/agentService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="agentHost.download.agentSdkTitle">
+        <source xml:lang="en">Downloading {0} agent…</source>
+        <target>Завантаження агента {0}…</target>
+      </trans-unit>
+      <trans-unit id="agentHost.forkedChatFallback">
+        <source xml:lang="en">Forked Chat</source>
+        <target>Розгалужений чат</target>
+      </trans-unit>
       <trans-unit id="agentHost.forkedSessionFallback">
         <source xml:lang="en">Forked Session</source>
         <target>Розгалужена сесія</target>
@@ -1103,14 +1343,6 @@ A keybinding</note>
       <trans-unit id="agentHost.forkedTitlePrefix">
         <source xml:lang="en">Forked: </source>
         <target>Розгалужено:</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/platform/agentHost/node/agentSideEffects" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="agentHostRename.renamed">
-        <source xml:lang="en">Renamed: {0}</source>
-        <target>Перейменовано: {0}</target>
       </trans-unit>
     </body>
   </file>
@@ -1312,10 +1544,6 @@ A keybinding</note>
         <source xml:lang="en">"{0}" failed</source>
         <target>"{0}" не вдалося</target>
       </trans-unit>
-      <trans-unit id="claude.toolComplete.generic">
-        <source xml:lang="en">Used "{0}"</source>
-        <target>Використано "{0}"</target>
-      </trans-unit>
       <trans-unit id="claude.toolComplete.glob">
         <source xml:lang="en">Found files</source>
         <target>Знайдені файли</target>
@@ -1438,11 +1666,79 @@ A keybinding</note>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/platform/agentHost/node/claude/customizations/claudeSdkCustomizationBundler" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/platform/agentHost/node/claude/customizations/claudeBuiltinCommands" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="claude.discovered.displayName">
-        <source xml:lang="en">Discovered in Claude</source>
-        <target>Відкрито в Claude</target>
+      <trans-unit id="claude.builtin.claudeApi">
+        <source xml:lang="en">(Built-In) Reference for the Claude API / Anthropic SDK: model IDs, pricing, params, streaming, tool use, MCP, agents, caching, token counting, migration.</source>
+        <target>(Вбудоване) посилання на API Claude / Anthropic SDK: ідентифікатори моделей, ціни, параметри, стрімінг, використання інструментів, MCP, агенти, кешування, підрахунок токенів, міграція.</target>
+      </trans-unit>
+      <trans-unit id="claude.builtin.codeReview">
+        <source xml:lang="en">(Built-In) Review the current diff for correctness bugs and reuse/simplification/efficiency cleanups at a chosen effort level (low→max). Pass `--comment` to post findings as inline PR comments, or `--fix` to apply them to the working tree.</source>
+        <target>(Вбудований) Перегляньте поточний диф на наявність помилок правильності та повторного використання/спрощення/оптимізації на обраному рівні зусиль (низький→максимум). Передайте `--comment`, щоб опублікувати висновки як коментарі до PR в рядку, або `--fix`, щоб застосувати їх до робочого дерева.</target>
+      </trans-unit>
+      <trans-unit id="claude.builtin.fewerPermissionPrompts">
+        <source xml:lang="en">(Built-In) Scan transcripts for common read-only Bash/MCP calls and add a prioritized allowlist to project `.claude/settings.json` to reduce permission prompts.</source>
+        <target>(Вбудоване) Скануйте транскрипти на наявність загальних викликів Bash/MCP лише для читання та додайте пріоритетний список дозволених до проекту `.claude/settings.json`, щоб зменшити запити на дозвіл.</target>
+      </trans-unit>
+      <trans-unit id="claude.builtin.init">
+        <source xml:lang="en">(Built-In) Scan the codebase and generate a `CLAUDE.md` file with project structure, conventions, and instructions for future sessions.</source>
+        <target>(Вбудований) Проскануйте кодову базу та згенеруйте файл `CLAUDE.md` зі структурою проєкту, конвенціями та інструкціями для майбутніх сесій.</target>
+      </trans-unit>
+      <trans-unit id="claude.builtin.keybindingsHelp">
+        <source xml:lang="en">(Built-In) Customize keyboard shortcuts, rebind keys, add chord bindings, or modify `~/.claude/keybindings.json`.</source>
+        <target>(Вбудовані) Налаштуйте клавіатурні скорочення, переназначте клавіші, додайте акордові прив'язки або змініть `~/.claude/keybindings.json`.</target>
+      </trans-unit>
+      <trans-unit id="claude.builtin.loop">
+        <source xml:lang="en">(Built-In) Run a prompt or slash command on a recurring interval (e.g. `/loop 5m /foo`, defaults to 10m). For recurring tasks or polling status — not one-off work.</source>
+        <target>(Вбудований) Запустіть запит або команду з косою рискою з регулярним інтервалом (наприклад, `/loop 5m /foo`, за замовчуванням 10m). Для повторюваних завдань або опитування статусу — не для одноразової роботи.</target>
+      </trans-unit>
+      <trans-unit id="claude.builtin.review">
+        <source xml:lang="en">(Built-In) Review a pull request or set of changes.</source>
+        <target>(Вбудований) Перегляньте запит на злиття або набір змін.</target>
+      </trans-unit>
+      <trans-unit id="claude.builtin.run">
+        <source xml:lang="en">(Built-In) Launch and drive the project's app to see a change working — run, start, or screenshot the app, or confirm a change works in the real app (not just tests).</source>
+        <target>(Вбудований) Запустіть і керуйте додатком проекту, щоб побачити, як працює зміна — запустіть, стартуйте або зробіть скріншот додатка, або підтвердіть, що зміна працює в реальному додатку (не лише в тестах).</target>
+      </trans-unit>
+      <trans-unit id="claude.builtin.securityReview">
+        <source xml:lang="en">(Built-In) Complete a security review of the pending changes on the current branch.</source>
+        <target>(Вбудований) Завершіть перевірку безпеки очікуваних змін на поточній гілці.</target>
+      </trans-unit>
+      <trans-unit id="claude.builtin.simplify">
+        <source xml:lang="en">(Built-In) Review changed code for reuse, simplification, efficiency, and altitude cleanups, then apply the fixes. Quality only — it doesn't hunt for bugs (use `/code-review` for that).</source>
+        <target>(Вбудований) Перегляньте змінений код на предмет повторного використання, спрощення, ефективності та очищення висоти, а потім застосуйте виправлення. Лише якість — він не шукає помилки (для цього використовуйте `/code-review`).</target>
+      </trans-unit>
+      <trans-unit id="claude.builtin.updateConfig">
+        <source xml:lang="en">(Built-In) Configure the Claude Code harness via `settings.json`: hooks for automated behaviors, permissions, env vars, and hook troubleshooting.</source>
+        <target>(Вбудований) Налаштуйте систему Claude Code через `settings.json`: хуки для автоматизованих поведінок, дозволи, змінні середовища та усунення неполадок хуків.</target>
+      </trans-unit>
+      <trans-unit id="claude.builtin.verify">
+        <source xml:lang="en">(Built-In) Run the app and observe behavior to confirm a code change actually does what it's supposed to. Use to verify a PR, confirm a fix, or validate local changes before pushing.</source>
+        <target>(Вбудований) Запустіть додаток і спостерігайте за поведінкою, щоб підтвердити, що зміна коду дійсно виконує те, що повинна. Використовуйте для перевірки PR, підтвердження виправлення або валідації локальних змін перед відправленням.</target>
+      </trans-unit>
+      <trans-unit id="claude.builtin.writeASkill">
+        <source xml:lang="en">(Built-In) Author a new skill.</source>
+        <target>(Вбудований) Автор нової навички.</target>
+      </trans-unit>
+      <trans-unit id="claude.builtinAgent.claude">
+        <source xml:lang="en">(Built-In) Catch-all for any task that doesn't fit a more specific agent — the default when no agent name is typed.</source>
+        <target>(Вбудований) Універсальний варіант для будь-якого завдання, яке не підходить під більш конкретного агента — за замовчуванням, коли не введено ім'я агента.</target>
+      </trans-unit>
+      <trans-unit id="claude.builtinAgent.claudeCodeGuide">
+        <source xml:lang="en">(Built-In) Answers questions about the Claude Agent SDK, and the Claude/Anthropic API — features, hooks, slash commands, MCP servers, settings, IDE integrations, SDK agent-building, and API usage. Model: Haiku.</source>
+        <target>(Вбудовані) Відповідає на запитання про Claude Agent SDK та API Claude/Anthropic — функції, хуки, слеш-команди, сервери MCP, налаштування, інтеграції IDE, створення агентів SDK та використання API. Модель: Haiku.</target>
+      </trans-unit>
+      <trans-unit id="claude.builtinAgent.explore">
+        <source xml:lang="en">(Built-In) Read-only search agent for broad fan-out searches across many files when you only need the conclusion; it locates code rather than reviewing it. Model: Haiku.</source>
+        <target>(Вбудований) Агент пошуку тільки для читання для широких пошуків по багатьох файлах, коли вам потрібен лише висновок; він знаходить код, а не переглядає його. Модель: Haiku.</target>
+      </trans-unit>
+      <trans-unit id="claude.builtinAgent.generalPurpose">
+        <source xml:lang="en">(Built-In) General-purpose agent for researching complex questions, searching for code, and executing multi-step tasks.</source>
+        <target>(Вбудований) Агент загального призначення для дослідження складних запитань, пошуку коду та виконання багатоступеневих завдань.</target>
+      </trans-unit>
+      <trans-unit id="claude.builtinAgent.plan">
+        <source xml:lang="en">(Built-In) Software architect agent for designing implementation plans — step-by-step plans, critical files, and architectural trade-offs.</source>
+        <target>(Вбудований) агент архітектора програмного забезпечення для розробки планів впровадження — покрокові плани, критичні файли та архітектурні компроміси.</target>
       </trans-unit>
     </body>
   </file>
@@ -1676,23 +1972,19 @@ A keybinding</note>
         <source xml:lang="en">Where the agent should make changes</source>
         <target>Де агент повинен внести зміни</target>
       </trans-unit>
-      <trans-unit id="copilot.modelContextTier.default">
+      <trans-unit id="copilot.modelContextSize.default">
         <source xml:lang="en">Default</source>
         <target>За замовчуванням</target>
       </trans-unit>
-      <trans-unit id="copilot.modelContextTier.description">
+      <trans-unit id="copilot.modelContextSize.description">
         <source xml:lang="en">Selects the context window size for this model.</source>
-        <target>Вибирає розмір вікна контексту для цієї моделі.</target>
+        <target>Вибирає розмір контекстного вікна для цієї моделі.</target>
       </trans-unit>
-      <trans-unit id="copilot.modelContextTier.longerSessions">
+      <trans-unit id="copilot.modelContextSize.longerSessions">
         <source xml:lang="en">Longer sessions</source>
         <target>Довші сесії</target>
       </trans-unit>
-      <trans-unit id="copilot.modelContextTier.longerSessionsNoCompaction">
-        <source xml:lang="en">Longer sessions without compaction</source>
-        <target>Довші сесії без компакції</target>
-      </trans-unit>
-      <trans-unit id="copilot.modelContextTier.title">
+      <trans-unit id="copilot.modelContextSize.title">
         <source xml:lang="en">Context Size</source>
         <target>Розмір контексту</target>
       </trans-unit>
@@ -1703,6 +1995,10 @@ A keybinding</note>
       <trans-unit id="copilot.modelThinkingLevel.title">
         <source xml:lang="en">Thinking Level</source>
         <target>Рівень мислення</target>
+      </trans-unit>
+      <trans-unit id="copilotAgent.description">
+        <source xml:lang="en">Copilot SDK agent running in the local agent host process</source>
+        <target>Агент Copilot SDK працює в процесі локального хоста агента.</target>
       </trans-unit>
       <trans-unit id="copilotAgent.pluginParseError">
         <source xml:lang="en">Error parsing plugin.</source>
@@ -1760,10 +2056,6 @@ A keybinding</note>
         <source xml:lang="en">Review Plan</source>
         <target>Перегляд плану</target>
       </trans-unit>
-      <trans-unit id="agentHost.planReview.viewPlanLink">
-        <source xml:lang="en">View full plan</source>
-        <target>Переглянути повний план</target>
-      </trans-unit>
       <trans-unit id="agentHost.unsandboxedCommandConfirmation.blockedDomains">
         <source xml:lang="en">This command needs to access blocked network domain(s): {0}.</source>
         <target>Ця команда потребує доступу до заблокованих мережевих доменів: {0}.</target>
@@ -1788,49 +2080,61 @@ A keybinding</note>
         <source xml:lang="en">Compaction completed</source>
         <target>Компактація завершена</target>
       </trans-unit>
-      <trans-unit id="copilotSlashCommand.unsupportedRuntimeResult">
-        <source xml:lang="en">The /{0} command returned an unsupported result.</source>
-        <target>Команда /{0} повернула непідтримуваний результат.</target>
+      <trans-unit id="copilotSlashCommand.selectSubcommandResult">
+        <source xml:lang="en">The /{0} command requires selecting a subcommand. Available options: {1}</source>
+        <target>Команда /{0} вимагає вибору підкоманди. Доступні варіанти: {1}</target>
       </trans-unit>
     </body>
   </file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotSlashCommandCompletionProvider" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="copilotSlashCommand.compact.description">
-        <source xml:lang="en">Free up context by compacting the conversation history</source>
-        <target>Звільніть контекст, стиснувши історію розмови.</target>
+      <trans-unit id="copilot.command.chronicle.cost.tips">
+        <source xml:lang="en">Get personalized tips to reduce token usage and Copilot cost</source>
+        <target>Отримайте персоналізовані поради для зменшення використання токенів та витрат на Copilot.</target>
       </trans-unit>
-      <trans-unit id="copilotSlashCommand.env.description">
-        <source xml:lang="en">Show loaded environment details</source>
-        <target>Показати завантажені деталі середовища</target>
+      <trans-unit id="copilot.command.chronicle.improve">
+        <source xml:lang="en">Get personalized tips to improve your chat session usage</source>
+        <target>Отримайте персоналізовані поради для покращення використання вашої сесії чату.</target>
       </trans-unit>
-      <trans-unit id="copilotSlashCommand.plan.description">
-        <source xml:lang="en">Create an implementation plan before coding</source>
-        <target>Створіть план реалізації перед програмуванням.</target>
+      <trans-unit id="copilot.command.chronicle.reindex">
+        <source xml:lang="en">Rebuild the local session index and sync to cloud</source>
+        <target>Перебудуйте локальний індекс сесій та синхронізуйте з хмарою</target>
       </trans-unit>
-      <trans-unit id="copilotSlashCommand.research.description">
-        <source xml:lang="en">Run deep research on a topic using search and web sources</source>
-        <target>Проведіть глибоке дослідження теми, використовуючи пошукові та веб-джерела.</target>
+      <trans-unit id="copilot.command.chronicle.search">
+        <source xml:lang="en">Search recent chat sessions by keyword, file path, or PR/issue ref</source>
+        <target>Шукайте недавні чат-сесії за ключовим словом, шляхом до файлу або посиланням на PR/проблему</target>
       </trans-unit>
-      <trans-unit id="copilotSlashCommand.review.description">
-        <source xml:lang="en">Run code review agent to analyze changes</source>
-        <target>Запустіть агент перевірки коду для аналізу змін.</target>
+      <trans-unit id="copilot.command.chronicle.standup">
+        <source xml:lang="en">Generate a standup report from recent chat sessions</source>
+        <target>Згенеруйте звіт про стендап з недавніх чат-сесій</target>
       </trans-unit>
-      <trans-unit id="copilotSlashCommand.rubberDuck.description">
-        <source xml:lang="en">Get an independent critique of the current approach</source>
-        <target>Отримайте незалежну критику поточного підходу.</target>
-      </trans-unit>
-      <trans-unit id="copilotSlashCommand.securityReview.description">
-        <source xml:lang="en">Analyze staged and unstaged changes for security vulnerabilities</source>
-        <target>Аналізуйте зафіксовані та незакріплені зміни на наявність вразливостей безпеки.</target>
+      <trans-unit id="copilot.command.chronicle.tips">
+        <source xml:lang="en">Get personalized tips based on your chat session usage patterns</source>
+        <target>Отримуйте персоналізовані поради на основі ваших шаблонів використання сеансів чату.</target>
       </trans-unit>
     </body>
   </file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotSystemNotification" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHost.copilot.systemNotification.agentCompleted">
-        <source xml:lang="en">Background agent completed</source>
-        <target>Фоновий агент завершено</target>
+        <source xml:lang="en">Background agent {0} completed</source>
+        <target>Фоновий агент {0} завершено</target>
+      </trans-unit>
+      <trans-unit id="agentHost.copilot.systemNotification.agentFailed">
+        <source xml:lang="en">Background agent {0} failed</source>
+        <target>Фоновий агент {0} не вдалося виконати</target>
+      </trans-unit>
+      <trans-unit id="agentHost.copilot.systemNotification.agentIdle">
+        <source xml:lang="en">Background agent {0} is complete</source>
+        <target>Фоновий агент {0} завершено</target>
+      </trans-unit>
+      <trans-unit id="agentHost.copilot.systemNotification.instructionDiscovered">
+        <source xml:lang="en">Instruction discovered: {0}</source>
+        <target>Інструкцію знайдено: {0}</target>
+      </trans-unit>
+      <trans-unit id="agentHost.copilot.systemNotification.newInboxMessage">
+        <source xml:lang="en">New inbox message from {0}</source>
+        <target>Новий вхідний лист від {0}</target>
       </trans-unit>
       <trans-unit id="agentHost.copilot.systemNotification.shellCompleted">
         <source xml:lang="en">Shell completed</source>
@@ -1867,6 +2171,10 @@ A keybinding</note>
       <trans-unit id="copilot.permission.read.title">
         <source xml:lang="en">Allow reading file outside of workspace?</source>
         <target>Дозволити читання файлу поза робочою областю?</target>
+      </trans-unit>
+      <trans-unit id="copilot.permission.shell.bypass.title">
+        <source xml:lang="en">Run in terminal outside the sandbox?</source>
+        <target>Запустити в терміналі поза пісочницею?</target>
       </trans-unit>
       <trans-unit id="copilot.permission.shell.title">
         <source xml:lang="en">Run in terminal?</source>
@@ -1908,10 +2216,6 @@ A keybinding</note>
         <source xml:lang="en">"{0}" failed</source>
         <target>"{0}" не вдалося</target>
       </trans-unit>
-      <trans-unit id="toolComplete.generic">
-        <source xml:lang="en">Used "{0}"</source>
-        <target>Використано "{0}"</target>
-      </trans-unit>
       <trans-unit id="toolComplete.glob">
         <source xml:lang="en">Found files</source>
         <target>Знайдені файли</target>
@@ -1928,6 +2232,10 @@ A keybinding</note>
         <source xml:lang="en">Searched for {0}</source>
         <target>Шукали {0}</target>
       </trans-unit>
+      <trans-unit id="toolComplete.listAgents">
+        <source xml:lang="en">Listed agents</source>
+        <target>Перераховані агенти</target>
+      </trans-unit>
       <trans-unit id="toolComplete.patch">
         <source xml:lang="en">Edited files</source>
         <target>Відредаговані файли</target>
@@ -1939,6 +2247,14 @@ A keybinding</note>
       <trans-unit id="toolComplete.patchFiles">
         <source xml:lang="en">Edited {0}</source>
         <target>Відредаговано {0}</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.readAgent">
+        <source xml:lang="en">Read agent {0}</source>
+        <target>Читати агента {0}</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.readAgentGeneric">
+        <source xml:lang="en">Read agent</source>
+        <target>Читати агента</target>
       </trans-unit>
       <trans-unit id="toolComplete.readTerminal">
         <source xml:lang="en">Read Terminal</source>
@@ -1963,6 +2279,10 @@ A keybinding</note>
       <trans-unit id="toolComplete.sql">
         <source xml:lang="en">Executed SQL query</source>
         <target>Виконаний SQL запит</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.task">
+        <source xml:lang="en">Delegated task</source>
+        <target>Делеговане завдання</target>
       </trans-unit>
       <trans-unit id="toolComplete.view">
         <source xml:lang="en">Read file</source>
@@ -1992,6 +2312,14 @@ A keybinding</note>
         <source xml:lang="en">Fetched URL</source>
         <target>Отримане URL</target>
       </trans-unit>
+      <trans-unit id="toolComplete.writeAgent">
+        <source xml:lang="en">Wrote to agent {0}</source>
+        <target>Написав агенту {0}</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.writeAgentGeneric">
+        <source xml:lang="en">Wrote to agent</source>
+        <target>Написав агенту</target>
+      </trans-unit>
       <trans-unit id="toolComplete.writeShell">
         <source xml:lang="en">Sent input to shell</source>
         <target>Відправлено введення в оболонку</target>
@@ -2019,10 +2347,6 @@ A keybinding</note>
       <trans-unit id="toolInvoke.exitPlanMode">
         <source xml:lang="en">Presenting plan</source>
         <target>Представлення плану</target>
-      </trans-unit>
-      <trans-unit id="toolInvoke.generic">
-        <source xml:lang="en">Using "{0}"</source>
-        <target>Використовуючи "{0}"</target>
       </trans-unit>
       <trans-unit id="toolInvoke.glob">
         <source xml:lang="en">Finding files</source>
@@ -2075,6 +2399,10 @@ A keybinding</note>
       <trans-unit id="toolInvoke.sql">
         <source xml:lang="en">Executing SQL query</source>
         <target>Виконання SQL запиту</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.task">
+        <source xml:lang="en">Delegating task</source>
+        <target>Делегування завдання</target>
       </trans-unit>
       <trans-unit id="toolInvoke.view">
         <source xml:lang="en">Reading file</source>
@@ -2290,6 +2618,50 @@ A keybinding</note>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/platform/agentHost/node/localCommands/bangLocalCommand" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHostBang.background">
+        <source xml:lang="en">Command is running in the background</source>
+        <target>Команда виконується у фоновому режимі.</target>
+      </trans-unit>
+      <trans-unit id="agentHostBang.exited">
+        <source xml:lang="en">Command exited with code {0}</source>
+        <target>Команда завершила роботу з кодом {0}</target>
+      </trans-unit>
+      <trans-unit id="agentHostBang.failed">
+        <source xml:lang="en">Failed to run command</source>
+        <target>Не вдалося виконати команду</target>
+      </trans-unit>
+      <trans-unit id="agentHostBang.interactive">
+        <source xml:lang="en">Command opened an interactive terminal</source>
+        <target>Команда відкрила інтерактивний термінал</target>
+      </trans-unit>
+      <trans-unit id="agentHostBang.ran">
+        <source xml:lang="en">Ran command</source>
+        <target>Виконано команду</target>
+      </trans-unit>
+      <trans-unit id="agentHostBang.shellExited">
+        <source xml:lang="en">Shell exited unexpectedly</source>
+        <target>Shell вийшов з програми несподівано</target>
+      </trans-unit>
+      <trans-unit id="agentHostBang.terminal">
+        <source xml:lang="en">Terminal</source>
+        <target>Термінал</target>
+      </trans-unit>
+      <trans-unit id="agentHostBang.timedOut">
+        <source xml:lang="en">Command timed out</source>
+        <target>Команда перевищила час очікування</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/localCommands/renameLocalCommand" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHostRename.renamed">
+        <source xml:lang="en">Renamed: {0}</source>
+        <target>Перейменовано: {0}</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/platform/agentHost/node/sessionPermissions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="sessionPermissions.allowOnce">
@@ -2303,6 +2675,78 @@ A keybinding</note>
       <trans-unit id="sessionPermissions.skip">
         <source xml:lang="en">Skip</source>
         <target>Пропустити</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/shared/agentFeedbackServerTools" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="toolComplete.addComment">
+        <source xml:lang="en">Added comment</source>
+        <target>Додано коментар</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.deleteComments">
+        <source xml:lang="en">Deleted comments</source>
+        <target>Видалені коментарі</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.listComments">
+        <source xml:lang="en">Checked comments</source>
+        <target>Перевірені коментарі</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.listComments.many">
+        <source xml:lang="en">Checked {0} comments</source>
+        <target>Перевірено {0} коментарів</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.listComments.one">
+        <source xml:lang="en">Checked 1 comment</source>
+        <target>Перевірено 1 коментар</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.resolveComments">
+        <source xml:lang="en">Resolved comments</source>
+        <target>Вирішені коментарі</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.viewUnreviewedComments">
+        <source xml:lang="en">Viewed comments</source>
+        <target>Переглянуті коментарі</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.addComment">
+        <source xml:lang="en">Adding comment</source>
+        <target>Додавання коментаря</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.deleteComments">
+        <source xml:lang="en">Deleting comments</source>
+        <target>Видалення коментарів</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.listComments">
+        <source xml:lang="en">Checking comments</source>
+        <target>Перевірка коментарів</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.resolveComments">
+        <source xml:lang="en">Resolving comments</source>
+        <target>Вирішення коментарів</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.viewUnreviewedComments">
+        <source xml:lang="en">Viewing comments</source>
+        <target>Перегляд коментарів</target>
+      </trans-unit>
+      <trans-unit id="toolName.addComment">
+        <source xml:lang="en">Add Comment</source>
+        <target>Додати коментар</target>
+      </trans-unit>
+      <trans-unit id="toolName.deleteComments">
+        <source xml:lang="en">Delete Comments</source>
+        <target>Видалити коментарі</target>
+      </trans-unit>
+      <trans-unit id="toolName.listComments">
+        <source xml:lang="en">List Comments</source>
+        <target>Список коментарів</target>
+      </trans-unit>
+      <trans-unit id="toolName.resolveComments">
+        <source xml:lang="en">Resolve Comments</source>
+        <target>Вирішити коментарі</target>
+      </trans-unit>
+      <trans-unit id="toolName.viewUnreviewedComments">
+        <source xml:lang="en">View Comments</source>
+        <target>Переглянути коментарі</target>
       </trans-unit>
     </body>
   </file>
@@ -2378,6 +2822,66 @@ A keybinding</note>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/platform/browserView/common/browserPermissions" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="browserPermission.camera.description">
+        <source xml:lang="en">Capture video from cameras</source>
+        <target>Захоплення відео з камер</target>
+      </trans-unit>
+      <trans-unit id="browserPermission.camera.label">
+        <source xml:lang="en">Camera</source>
+        <target>Камера</target>
+      </trans-unit>
+      <trans-unit id="browserPermission.clipboard.description">
+        <source xml:lang="en">Read from and write to the system clipboard</source>
+        <target>Читати з системного буфера обміну та записувати в нього</target>
+      </trans-unit>
+      <trans-unit id="browserPermission.clipboard.label">
+        <source xml:lang="en">Clipboard</source>
+        <target>Буфер обміну</target>
+      </trans-unit>
+      <trans-unit id="browserPermission.devices.description">
+        <source xml:lang="en">Request access to USB, serial, HID, and Bluetooth devices</source>
+        <target>Запросіть доступ до USB, послідовних, HID та Bluetooth пристроїв</target>
+      </trans-unit>
+      <trans-unit id="browserPermission.devices.label">
+        <source xml:lang="en">Devices</source>
+        <target>Пристрої</target>
+      </trans-unit>
+      <trans-unit id="browserPermission.location.description">
+        <source xml:lang="en">Access this device's geographic location</source>
+        <target>Отримати географічне місцезнаходження цього пристрою</target>
+      </trans-unit>
+      <trans-unit id="browserPermission.location.label">
+        <source xml:lang="en">Location</source>
+        <target>Місцезнаходження</target>
+      </trans-unit>
+      <trans-unit id="browserPermission.microphone.description">
+        <source xml:lang="en">Capture audio from microphones</source>
+        <target>Записувати аудіо з мікрофонів</target>
+      </trans-unit>
+      <trans-unit id="browserPermission.microphone.label">
+        <source xml:lang="en">Microphone</source>
+        <target>Мікрофон</target>
+      </trans-unit>
+      <trans-unit id="browserPermission.notifications.description">
+        <source xml:lang="en">Display desktop notifications</source>
+        <target>Відображати сповіщення на робочому столі</target>
+      </trans-unit>
+      <trans-unit id="browserPermission.notifications.label">
+        <source xml:lang="en">Notifications</source>
+        <target>Сповіщення</target>
+      </trans-unit>
+      <trans-unit id="browserPermission.sensors.description">
+        <source xml:lang="en">Read motion and environmental sensors</source>
+        <target>Читати датчики руху та навколишнього середовища</target>
+      </trans-unit>
+      <trans-unit id="browserPermission.sensors.label">
+        <source xml:lang="en">Sensors</source>
+        <target>Датчики</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/platform/browserView/common/browserView" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="browserZoomAccessibilityLabel">
@@ -2395,6 +2899,18 @@ A keybinding</note>
       <trans-unit id="browserSession.untrustedFile">
         <source xml:lang="en">Forbidden. File does not reside within a trusted folder.</source>
         <target>Заборонено. Файл не знаходиться в довіреній папці.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/browserView/electron-main/browserSessionPermissions" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="browser.device.hid">
+        <source xml:lang="en">HID Device {0}</source>
+        <target>HID пристрій {0}</target>
+      </trans-unit>
+      <trans-unit id="browser.device.usb">
+        <source xml:lang="en">USB Device {0}</source>
+        <target>USB-пристрій {0}</target>
       </trans-unit>
     </body>
   </file>
@@ -4052,6 +4568,10 @@ A keybinding label</note>
       <trans-unit id="mZoom">
         <source xml:lang="en">Zoom</source>
         <target>Zoom</target>
+      </trans-unit>
+      <trans-unit id="miCancellingUpdate">
+        <source xml:lang="en">Cancelling Update...</source>
+        <target>Скасування оновлення...</target>
       </trans-unit>
       <trans-unit id="miCheckForUpdates">
         <source xml:lang="en">Check for &amp;&amp;Updates...</source>
@@ -6359,8 +6879,8 @@ To override an existing profile use its profile name as the key, for example:
         <target>Оновити</target>
       </trans-unit>
       <trans-unit id="updateMode">
-        <source xml:lang="en">Configure whether you receive automatic updates. Requires a restart after change. The updates are fetched from a Microsoft online service.</source>
-        <target>Налаштуйте, чи отримувати автоматичні оновлення. Після зміни потрібен перезапуск. Оновлення завантажуються з онлайн-сервісу Microsoft.</target>
+        <source xml:lang="en">Configure whether you receive automatic updates. The updates are fetched from a Microsoft online service.</source>
+        <target>Налаштуйте, чи отримувати автоматичні оновлення. Оновлення завантажуються з онлайн-сервісу Microsoft.</target>
       </trans-unit>
       <trans-unit id="updateTitleBar">
         <source xml:lang="en">Show the update indicator in the title bar.</source>
