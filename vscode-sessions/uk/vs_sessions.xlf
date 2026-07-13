@@ -464,6 +464,22 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/browser/parts/sessionView" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="sessionReadOnlyBanner.archived">
+        <source xml:lang="en">Archived sessions are read-only.</source>
+        <target>Архівовані сесії доступні лише для читання.</target>
+      </trans-unit>
+      <trans-unit id="sessionReadOnlyBanner.message">
+        <source xml:lang="en">This chat is read-only</source>
+        <target>Цей чат тільки для читання</target>
+      </trans-unit>
+      <trans-unit id="sessionReadOnlyBanner.restore">
+        <source xml:lang="en">Restore</source>
+        <target>Відновити</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/browser/sessionsSetUpService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="loading">
@@ -539,9 +555,21 @@
         <source xml:lang="en">The identifier of the active sessions panel</source>
         <target>Ідентифікатор панелі активних сесій</target>
       </trans-unit>
-      <trans-unit id="agentSessionsSinglePaneDetailChangesOrFiles">
-        <source xml:lang="en">Whether the single-pane detail panel's active editor maps to the Changes or Files detail target</source>
-        <target>Чи активний редактор панелі деталей одного вікна відповідає цільовій деталі Змін або Файлів</target>
+      <trans-unit id="agentSessionsHasDockedDetails">
+        <source xml:lang="en">Whether the single-pane active editor has a docked detail panel (a managed Changes/Files tab or a text file editor)</source>
+        <target>Чи має активний редактор з одним вікном закріплену панель деталей (керовану вкладку Зміни/Файли або редактор текстових файлів)</target>
+      </trans-unit>
+      <trans-unit id="agentSessionsSinglePaneChangesTabMissing">
+        <source xml:lang="en">Whether the single-pane session supports a Changes editor but its tab is not currently open</source>
+        <target>Чи підтримує сесія з одного вікна редактор Змін, але його вкладка наразі не відкрита</target>
+      </trans-unit>
+      <trans-unit id="agentSessionsSinglePaneFilesTabMissing">
+        <source xml:lang="en">Whether the single-pane session supports a Files tab but its tab is not currently open</source>
+        <target>Чи підтримує сесія з одним вікном вкладку Файли, але ця вкладка наразі не відкрита</target>
+      </trans-unit>
+      <trans-unit id="agentSessionsSinglePaneLayoutEnabled">
+        <source xml:lang="en">Whether the Agents window is using the single-pane (docked detail panel) layout. Single source of truth for gating single-pane behaviour — set once by the workbench from the layout it was constructed with; features must read this instead of the underlying setting</source>
+        <target>Чи використовує вікно Агентів макет з одним панеллю (прикріплена детальна панель). Єдине джерело істини для контролю поведінки з однією панеллю — встановлюється один раз робочою панеллю з макету, з якого воно було створене; функції повинні читати це замість основного налаштування.</target>
       </trans-unit>
       <trans-unit id="editorMaximized">
         <source xml:lang="en">Whether the editor area is maximized</source>
@@ -682,6 +710,10 @@
       <trans-unit id="sessionsAquariumActive">
         <source xml:lang="en">Whether the sessions aquarium overlay is active</source>
         <target>Чи активний накладний шар акваріума сесій?</target>
+      </trans-unit>
+      <trans-unit id="sessionsBlockedSessionsVisible">
+        <source xml:lang="en">Whether the blocked-sessions dropdown (surfacing sessions that require input) is open in the sessions titlebar</source>
+        <target>Чи відкритий випадаючий список заблокованих сесій (які вимагають введення) у заголовку сесії</target>
       </trans-unit>
       <trans-unit id="sessionsCanGoBack">
         <source xml:lang="en">Whether there is a previous session in the navigation history</source>

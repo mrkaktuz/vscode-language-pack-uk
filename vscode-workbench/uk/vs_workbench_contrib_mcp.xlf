@@ -78,9 +78,17 @@
         <source xml:lang="en">This session does not expose any MCP servers</source>
         <target>Ця сесія не відкриває жодних серверів MCP.</target>
       </trans-unit>
+      <trans-unit id="mcp.agentHost.restartUnsupported">
+        <source xml:lang="en">Restarting MCP server '{0}' is not supported for agent-host servers. Stop and start the server instead.</source>
+        <target>Перезапуск сервера MCP '{0}' не підтримується для серверів агентів. Замість цього зупиніть і запустіть сервер.</target>
+      </trans-unit>
       <trans-unit id="mcp.agentHost.showLocal">
         <source xml:lang="en">Show locally configured servers...</source>
         <target>Показати локально налаштовані сервери...</target>
+      </trans-unit>
+      <trans-unit id="mcp.agentHost.startError">
+        <source xml:lang="en">Failed to start MCP server '{0}': {1}</source>
+        <target>Не вдалося запустити сервер MCP '{0}': {1}</target>
       </trans-unit>
       <trans-unit id="mcp.agentHost.status.authRequired">
         <source xml:lang="en">Authentication required</source>
@@ -101,6 +109,10 @@
       <trans-unit id="mcp.agentHost.status.stopped">
         <source xml:lang="en">Stopped</source>
         <target>Зупинено</target>
+      </trans-unit>
+      <trans-unit id="mcp.agentHost.stopError">
+        <source xml:lang="en">Failed to stop MCP server '{0}': {1}</source>
+        <target>Не вдалося зупинити сервер MCP '{0}': {1}</target>
       </trans-unit>
       <trans-unit id="mcp.agentHostOptions">
         <source xml:lang="en">Agent Host Server Options</source>
@@ -799,6 +811,10 @@
         <source xml:lang="en">Variable `{0}` not found, did you mean ${{1}}?</source>
         <target>Змінна `{0}` не знайдена, чи ви мали на увазі ${{1}}?</target>
       </trans-unit>
+      <trans-unit id="server.authRequired">
+        <source xml:lang="en">Authentication Required</source>
+        <target>Необхідна аутентифікація</target>
+      </trans-unit>
       <trans-unit id="server.disabled">
         <source xml:lang="en">Disabled</source>
         <target>Вимкнено</target>
@@ -814,6 +830,14 @@
       <trans-unit id="server.running">
         <source xml:lang="en">Running</source>
         <target>Запуск</target>
+      </trans-unit>
+      <trans-unit id="server.runningInOneOtherSession">
+        <source xml:lang="en">(Running in 1 session)</source>
+        <target>(Запуск в 1 сесії)</target>
+      </trans-unit>
+      <trans-unit id="server.runningInOtherSessions">
+        <source xml:lang="en">(Running in {0} sessions)</source>
+        <target>(Запуск у {0} сесіях)</target>
       </trans-unit>
       <trans-unit id="server.starting">
         <source xml:lang="en">Starting</source>

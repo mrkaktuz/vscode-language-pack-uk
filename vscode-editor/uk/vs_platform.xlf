@@ -446,14 +446,6 @@ A keybinding</note>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/platform/agentHost/browser/agentHost.config.contribution" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="chat.agentHost.enabled">
-        <source xml:lang="en">When enabled, some agents run in a separate agent host process.</source>
-        <target>Коли увімкнено, деякі агенти працюють у окремому процесі хоста агента.</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/platform/agentHost/browser/agentHostConnectionsService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHost.connection.ambient">
@@ -462,43 +454,11 @@ A keybinding</note>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/platform/agentHost/common/agentHost.config.contribution" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/platform/agentHost/browser/agentHostEnablementService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="chat.agentHost.enabled">
         <source xml:lang="en">When enabled, some agents run in a separate agent host process.</source>
-        <target>Коли увімкнено, деякі агенти працюють у окремому процесі хоста агента.</target>
-      </trans-unit>
-      <trans-unit id="chat.agents.copilotCli.hideExtensionHost">
-        <source xml:lang="en">When enabled, hides the Extension Host Copilot CLI entry from the Agents window picker. Requires `#{0}#`.</source>
-        <target>Коли увімкнено, приховує запис CLI Copilot розширення з вибору вікна агентів. Потрібен `#{0}#`.</target>
-      </trans-unit>
-      <trans-unit id="chat.editor.copilotCli.hideExtensionHost">
-        <source xml:lang="en">When enabled, hides the Extension Host Copilot CLI entry from the editor window chat picker.</source>
-        <target>Коли увімкнено, приховує запис CLI Copilot розширення з вибору чату вікна редактора.</target>
-      </trans-unit>
-      <trans-unit id="chat.editor.defaultProvider">
-        <source xml:lang="en">Controls which provider is used as the default for new editor chat sessions.</source>
-        <target>Контролює, який постачальник використовується за замовчуванням для нових сеансів чату редактора.</target>
-      </trans-unit>
-      <trans-unit id="chat.editor.defaultProvider.copilotAh">
-        <source xml:lang="en">Use the Agent Host Copilot CLI</source>
-        <target>Використовуйте CLI Copilot для хоста агента</target>
-      </trans-unit>
-      <trans-unit id="chat.editor.defaultProvider.copilotEh">
-        <source xml:lang="en">Use the Extension Host Copilot CLI</source>
-        <target>Використовуйте CLI розширення Host Copilot</target>
-      </trans-unit>
-      <trans-unit id="chat.editor.defaultProvider.local">
-        <source xml:lang="en">Use the built-in VS Code local chat harness</source>
-        <target>Використовуйте вбудовану локальну чат-систему VS Code.</target>
-      </trans-unit>
-      <trans-unit id="chat.editor.localAgent.enabled">
-        <source xml:lang="en">When enabled, shows the VS Code local chat harness in the chat picker.</source>
-        <target>Коли увімкнено, показує локальний чат VS Code у виборі чату.</target>
-      </trans-unit>
-      <trans-unit id="chatAgentHostConfigurationTitle">
-        <source xml:lang="en">Chat Agent Host</source>
-        <target>Агент чату хост</target>
+        <target>Коли ввімкнено, деякі агенти працюють у окремому процесі хоста агента.</target>
       </trans-unit>
     </body>
   </file>
@@ -544,29 +504,57 @@ A keybinding</note>
         <source xml:lang="en">Default Shell</source>
         <target>Типова оболонка</target>
       </trans-unit>
-      <trans-unit id="agentHost.config.enableCustomTerminalTool.description">
-        <source xml:lang="en">When enabled, Copilot SDK sessions use Agent Host's terminal tool override instead of the SDK's default terminal behavior.</source>
-        <target>Коли увімкнено, сесії Copilot SDK використовують перевагу термінального інструмента Agent Host замість стандартної поведінки терміналу SDK.</target>
+      <trans-unit id="agentHost.config.githubEnterpriseUri.description">
+        <source xml:lang="en">Optional base URI of a GitHub Enterprise instance (for example "https://ghe.example.com" for GitHub Enterprise Server, or "https://tenant.ghe.com" for GitHub Enterprise Cloud). When set, the agent host authenticates and makes GitHub API calls against this instance instead of github.com. Normally pushed by the connected VS Code client from the `github-enterprise.uri` setting; remote agent host operators can set it directly in the remote `agent-host-config.json`.</source>
+        <target>Необов'язковий базовий URI екземпляра GitHub Enterprise (наприклад, "https://ghe.example.com" для GitHub Enterprise Server або "https://tenant.ghe.com" для GitHub Enterprise Cloud). Коли встановлено, хост агента автентифікується та виконує виклики GitHub API до цього екземпляра замість github.com. Зазвичай передається підключеним клієнтом VS Code з налаштування `github-enterprise.uri`; оператори віддаленого хоста агента можуть встановити його безпосередньо в віддаленому `agent-host-config.json`.</target>
       </trans-unit>
-      <trans-unit id="agentHost.config.enableCustomTerminalTool.title">
-        <source xml:lang="en">Use Agent Host Terminal Tool</source>
-        <target>Використовуйте інструмент терміналу агентського хоста</target>
+      <trans-unit id="agentHost.config.githubEnterpriseUri.title">
+        <source xml:lang="en">GitHub Enterprise URI</source>
+        <target>GitHub Enterprise URI</target>
       </trans-unit>
-      <trans-unit id="agentHost.config.opus48Prompt.description">
-        <source xml:lang="en">When enabled, Copilot SDK sessions running a Claude Opus 4.8 model apply Opus 4.8-tuned system-prompt section overrides on top of the default system message.</source>
-        <target>Коли увімкнено, сесії Copilot SDK, що використовують модель Claude Opus 4.8, застосовують переваги секції системного запиту, налаштовані на Opus 4.8, поверх стандартного системного повідомлення.</target>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/common/agentHostEnablementService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHostEnabled">
+        <source xml:lang="en">Whether the local agent host process is enabled.</source>
+        <target>Чи увімкнено процес хосту локального агента.</target>
       </trans-unit>
-      <trans-unit id="agentHost.config.opus48Prompt.title">
-        <source xml:lang="en">Opus 4.8 Agent Prompt</source>
-        <target>Opus 4.8 Запит агента</target>
+      <trans-unit id="chat.agentHost.enabled">
+        <source xml:lang="en">When enabled, some agents run in a separate agent host process.</source>
+        <target>Коли ввімкнено, деякі агенти працюють у окремому процесі хоста агента.</target>
       </trans-unit>
-      <trans-unit id="agentHost.config.rubberDuck.description">
-        <source xml:lang="en">When enabled, the coding agent uses a rubber duck critic subagent to review code changes using a complementary model.</source>
-        <target>Коли увімкнено, агент кодування використовує субагента критика у вигляді гумової качки для перегляду змін коду, використовуючи доповнюючу модель.</target>
+      <trans-unit id="chat.agents.copilotCli.hideExtensionHost">
+        <source xml:lang="en">When enabled, hides the Extension Host Copilot CLI entry from the Agents window picker. Requires `#chat.agentHost.enabled#`.</source>
+        <target>Коли увімкнено, приховує запис CLI Copilot хоста розширення з вибору вікна агентів. Потрібно `#chat.agentHost.enabled#`.</target>
       </trans-unit>
-      <trans-unit id="agentHost.config.rubberDuck.title">
-        <source xml:lang="en">Rubber Duck Agent</source>
-        <target>Резиновий каченя Агент</target>
+      <trans-unit id="chat.editor.copilotCli.hideExtensionHost">
+        <source xml:lang="en">When enabled, hides the Extension Host Copilot CLI entry from the editor window chat picker.</source>
+        <target>Коли ввімкнено, приховує запис CLI Copilot розширення з вибору чату вікна редактора.</target>
+      </trans-unit>
+      <trans-unit id="chat.editor.defaultProvider">
+        <source xml:lang="en">Controls which provider is used as the default for new editor chat sessions.</source>
+        <target>Контролює, який постачальник використовується за замовчуванням для нових сеансів чату редактора.</target>
+      </trans-unit>
+      <trans-unit id="chat.editor.defaultProvider.copilotAh">
+        <source xml:lang="en">Use the Agent Host Copilot CLI</source>
+        <target>Використовуйте CLI Copilot для хоста агента</target>
+      </trans-unit>
+      <trans-unit id="chat.editor.defaultProvider.copilotEh">
+        <source xml:lang="en">Use the Extension Host Copilot CLI</source>
+        <target>Використовуйте CLI розширення Host Copilot</target>
+      </trans-unit>
+      <trans-unit id="chat.editor.defaultProvider.local">
+        <source xml:lang="en">Use the built-in VS Code local chat harness</source>
+        <target>Використовуйте вбудований локальний чат-харнес VS Code</target>
+      </trans-unit>
+      <trans-unit id="chat.editor.localAgent.enabled">
+        <source xml:lang="en">When enabled, shows the VS Code local chat harness in the chat picker.</source>
+        <target>Коли увімкнено, показує локальний чат VS Code у виборі чату.</target>
+      </trans-unit>
+      <trans-unit id="chatAgentHostConfigurationTitle">
+        <source xml:lang="en">Chat Agent Host</source>
+        <target>Чат-агент хост</target>
       </trans-unit>
     </body>
   </file>
@@ -671,6 +659,14 @@ A keybinding</note>
       <trans-unit id="agentHost.config.mcpServers.url.title">
         <source xml:lang="en">URL</source>
         <target>URL</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.preferLongContextEnabled.description">
+        <source xml:lang="en">Whether Copilot Chat's prefer-long-context setting is enabled. When `true`, models with a free long context window only show the long context option in the picker. When `false` (default), the smaller default context option stays selectable.</source>
+        <target>Чи увімкнено налаштування prefer-long-context для Copilot Chat. Коли `true`, моделі з безкоштовним довгим контекстом показують лише опцію довгого контексту в виборі. Коли `false` (за замовчуванням), менша опція стандартного контексту залишається вибірковою.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.preferLongContextEnabled.title">
+        <source xml:lang="en">Prefer Long Context</source>
+        <target>Вибрати довгий контекст</target>
       </trans-unit>
       <trans-unit id="agentHost.config.sessionSyncEnabled.description">
         <source xml:lang="en">Whether remote session sync is enabled for the copilot-sdk CLI.</source>
@@ -963,6 +959,66 @@ A keybinding</note>
       <trans-unit id="claude.modelThinkingLevel.title">
         <source xml:lang="en">Thinking Level</source>
         <target>Рівень мислення</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/common/copilotCliConfig" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHost.config.enableCustomTerminalTool.description">
+        <source xml:lang="en">When enabled, Copilot SDK sessions use Agent Host's terminal tool override instead of the SDK's default terminal behavior.</source>
+        <target>Коли увімкнено, сесії Copilot SDK використовують перевагу інструмента терміналу Agent Host замість стандартної поведінки терміналу SDK.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.enableCustomTerminalTool.title">
+        <source xml:lang="en">Use Agent Host Terminal Tool</source>
+        <target>Використовуйте інструмент терміналу хоста агента</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.modelCapabilityOverrides.description">
+        <source xml:lang="en">Per-model capability overrides for Copilot SDK sessions, keyed by model id. Aliasing a model id to a known `family` routes it to that family's tuned system prompt without changing the model id sent to the runtime. Only affects Copilot SDK sessions; intended for experimentation.</source>
+        <target>Перемикання можливостей за моделлю для сесій Copilot SDK, прив'язаних до ідентифікатора моделі. Прив'язка ідентифікатора моделі до відомого `family` перенаправляє його до налаштованого системного запиту цієї родини без зміни ідентифікатора моделі, надісланого в середовище виконання. Торкається лише сесій Copilot SDK; призначено для експериментів.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.modelCapabilityOverrides.entry.description">
+        <source xml:lang="en">A single capability override. The property key is the model id.</source>
+        <target>Один перевизначення можливості. Ключ властивості - це ідентифікатор моделі.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.modelCapabilityOverrides.entry.title">
+        <source xml:lang="en">Capability Override</source>
+        <target>Перевизначення можливостей</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.modelCapabilityOverrides.family.description">
+        <source xml:lang="en">Alias the model's family for prompt/capability routing (e.g. `claude-opus-4-8`).</source>
+        <target>Псевдонім сім'ї моделі для маршрутизації запитів/можливостей (наприклад, `claude-opus-4-8`).</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.modelCapabilityOverrides.family.title">
+        <source xml:lang="en">Family</source>
+        <target>Сім'я</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.modelCapabilityOverrides.title">
+        <source xml:lang="en">Model Capability Overrides</source>
+        <target>Перевизначення можливостей моделі</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.opus48Prompt.description">
+        <source xml:lang="en">When enabled, Copilot SDK sessions running a Claude Opus 4.8 model apply Opus 4.8-tuned system-prompt section overrides on top of the default system message.</source>
+        <target>Коли увімкнено, сесії Copilot SDK, що використовують модель Claude Opus 4.8, застосовують переваги секції системного запиту, налаштовані на Opus 4.8, поверх стандартного системного повідомлення.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.opus48Prompt.title">
+        <source xml:lang="en">Opus 4.8 Agent Prompt</source>
+        <target>Opus 4.8 Запит агента</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.reasoningEffortOverride.description">
+        <source xml:lang="en">Overrides the reasoning effort for Copilot SDK sessions regardless of the per-model picker value. Set it to a level the selected model supports (e.g. `low`, `medium`, `high`, `xhigh`); a value that isn't a recognized effort level is ignored and the session falls back to the picker value. Only affects Copilot SDK sessions; intended for experimentation.</source>
+        <target>Перезаписує зусилля розуміння для сесій Copilot SDK незалежно від значення вибору для кожної моделі. Встановіть його на рівень, який підтримує обрана модель (наприклад, `низький`, `середній`, `високий`, `дуже високий`); значення, яке не є визнаним рівнем зусилля, ігнорується, і сесія повертається до значення вибору. Торкається лише сесій Copilot SDK; призначено для експериментів.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.reasoningEffortOverride.title">
+        <source xml:lang="en">Reasoning Effort Override</source>
+        <target>Перевищення зусиль на міркування</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.rubberDuck.description">
+        <source xml:lang="en">When enabled, the coding agent uses a rubber duck critic subagent to review code changes using a complementary model.</source>
+        <target>Коли увімкнено, агент кодування використовує субагента критика у вигляді гумової качки для перегляду змін коду, використовуючи доповнюючу модель.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.rubberDuck.title">
+        <source xml:lang="en">Rubber Duck Agent</source>
+        <target>Резиновий каченя Агент</target>
       </trans-unit>
     </body>
   </file>
@@ -1278,34 +1334,6 @@ A keybinding</note>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/platform/agentHost/node/agentHostReviewFileOperationHandler" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="agentHost.changeset.reviewFile.cancelled">
-        <source xml:lang="en">Review file operation was cancelled.</source>
-        <target>Операцію перегляду файлу було скасовано.</target>
-      </trans-unit>
-      <trans-unit id="agentHost.changeset.reviewFile.marked">
-        <source xml:lang="en">Marked `{0}` as reviewed.</source>
-        <target>Позначено `{0}` як перевірене.</target>
-      </trans-unit>
-      <trans-unit id="agentHost.changeset.reviewFile.unmarked">
-        <source xml:lang="en">Removed the reviewed mark from `{0}`.</source>
-        <target>Видалено позначку перегляду з `{0}`.</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/platform/agentHost/node/agentHostReviewOperationProvider" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="agentHost.changeset.markAsReviewed">
-        <source xml:lang="en">Mark as Reviewed</source>
-        <target>Позначити як переглянуте</target>
-      </trans-unit>
-      <trans-unit id="agentHost.changeset.markAsUnreviewed">
-        <source xml:lang="en">Mark as Unreviewed</source>
-        <target>Позначити як Непереглянуте</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/platform/agentHost/node/agentHostSyncOperationHandler" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHost.changeset.sync.cancelled">
@@ -1329,8 +1357,8 @@ A keybinding</note>
   <file original="src/vs/platform/agentHost/node/agentService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHost.download.agentSdkTitle">
-        <source xml:lang="en">Downloading {0} agent…</source>
-        <target>Завантаження агента {0}…</target>
+        <source xml:lang="en">Downloading {0} agent</source>
+        <target>Завантаження агента {0}</target>
       </trans-unit>
       <trans-unit id="agentHost.forkedChatFallback">
         <source xml:lang="en">Forked Chat</source>
@@ -1343,6 +1371,10 @@ A keybinding</note>
       <trans-unit id="agentHost.forkedTitlePrefix">
         <source xml:lang="en">Forked: </source>
         <target>Розгалужено:</target>
+      </trans-unit>
+      <trans-unit id="agentHost.importedSessionFallback">
+        <source xml:lang="en">New Session</source>
+        <target>Нова сесія</target>
       </trans-unit>
     </body>
   </file>
@@ -1820,6 +1852,38 @@ A keybinding</note>
         <source xml:lang="en">Allow sandboxed tool calls to make outbound network requests. Only applies when Sandbox is Workspace Write.</source>
         <target>Дозволити виклики інструментів у пісочниці здійснювати вихідні мережеві запити. Застосовується лише тоді, коли Пісочниця є Записом Робочого Простору.</target>
       </trans-unit>
+      <trans-unit id="codex.sessionConfig.permissionsPreset">
+        <source xml:lang="en">Approvals</source>
+        <target>Схвалення</target>
+      </trans-unit>
+      <trans-unit id="codex.sessionConfig.permissionsPreset.autoReview">
+        <source xml:lang="en">Auto-Review</source>
+        <target>Авто-огляд</target>
+      </trans-unit>
+      <trans-unit id="codex.sessionConfig.permissionsPreset.autoReviewDescription">
+        <source xml:lang="en">Same workspace access as Default, but approval requests are routed through the auto-reviewer instead of prompting you.</source>
+        <target>Той самий доступ до робочого простору, що й за замовчуванням, але запити на затвердження надсилаються через авто-рецензента замість того, щоб запитувати вас.</target>
+      </trans-unit>
+      <trans-unit id="codex.sessionConfig.permissionsPreset.default">
+        <source xml:lang="en">Default Permissions</source>
+        <target>Типові дозволи</target>
+      </trans-unit>
+      <trans-unit id="codex.sessionConfig.permissionsPreset.defaultDescription">
+        <source xml:lang="en">Codex can read and edit files in the workspace and run routine local commands. It asks before using the internet or going beyond the workspace.</source>
+        <target>Codex може читати та редагувати файли в робочій області та виконувати рутинні локальні команди. Він запитує перед використанням інтернету або виходом за межі робочої області.</target>
+      </trans-unit>
+      <trans-unit id="codex.sessionConfig.permissionsPreset.fullAccess">
+        <source xml:lang="en">Full Access</source>
+        <target>Повний доступ</target>
+      </trans-unit>
+      <trans-unit id="codex.sessionConfig.permissionsPreset.fullAccessDescription">
+        <source xml:lang="en">Codex can edit files outside the workspace and use the internet without asking. Use only when you want full machine access.</source>
+        <target>Codex може редагувати файли поза робочим простором і використовувати інтернет без запиту. Використовуйте лише тоді, коли хочете повний доступ до машини.</target>
+      </trans-unit>
+      <trans-unit id="codex.sessionConfig.permissionsPresetDescription">
+        <source xml:lang="en">How much Codex can do on its own before asking for approval.</source>
+        <target>Скільки Codex може зробити самостійно перед тим, як попросити про затвердження.</target>
+      </trans-unit>
       <trans-unit id="codex.sessionConfig.personality">
         <source xml:lang="en">Personality</source>
         <target>Особистість</target>
@@ -1972,6 +2036,26 @@ A keybinding</note>
         <source xml:lang="en">Where the agent should make changes</source>
         <target>Де агент повинен внести зміни</target>
       </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.worktreeBranchPrefix">
+        <source xml:lang="en">Worktree Branch Prefix</source>
+        <target>Префікс гілки Worktree</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.worktreeBranchPrefixDescription">
+        <source xml:lang="en">Prefix applied to the branch created for an isolated worktree.</source>
+        <target>Префікс, застосований до гілки, створеної для ізольованого робочого дерева.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.worktreeIncludeFiles">
+        <source xml:lang="en">Worktree Include Files</source>
+        <target>Файли, що включаються в робочу деревину</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.worktreeIncludeFilesDescription">
+        <source xml:lang="en">Glob patterns for git-ignored files to copy into the isolated worktree.</source>
+        <target>Глобальні шаблони для файлів, ігнорованих git, які потрібно скопіювати в ізольоване робоче дерево.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.worktreeIncludeFilesItem">
+        <source xml:lang="en">Pattern</source>
+        <target>Шаблон</target>
+      </trans-unit>
       <trans-unit id="copilot.modelContextSize.default">
         <source xml:lang="en">Default</source>
         <target>За замовчуванням</target>
@@ -2007,6 +2091,18 @@ A keybinding</note>
       <trans-unit id="copilotAgent.worktreeCreated">
         <source xml:lang="en">Created isolated worktree for branch {0}</source>
         <target>Створено ізольоване робоче дерево для гілки {0}</target>
+      </trans-unit>
+      <trans-unit id="sessionWorkingDirectoryMissing">
+        <source xml:lang="en">This session couldn't be loaded because its working directory no longer exists: {0}</source>
+        <target>Цю сесію не вдалося завантажити, оскільки її робочий каталог більше не існує: {0}</target>
+      </trans-unit>
+      <trans-unit id="sessionWorkingDirectoryMissingWithReason">
+        <source xml:lang="en">This session couldn't be loaded because its worktree is missing and could not be recreated: {0}</source>
+        <target>Цю сесію не вдалося завантажити, оскільки її робоче дерево відсутнє і не може бути відтворене: {0}</target>
+      </trans-unit>
+      <trans-unit id="worktreeRecreateBranchMissing">
+        <source xml:lang="en">the branch '{0}' no longer exists</source>
+        <target>гілка '{0}' більше не існує</target>
       </trans-unit>
     </body>
   </file>
@@ -2086,34 +2182,6 @@ A keybinding</note>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/platform/agentHost/node/copilot/copilotSlashCommandCompletionProvider" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="copilot.command.chronicle.cost.tips">
-        <source xml:lang="en">Get personalized tips to reduce token usage and Copilot cost</source>
-        <target>Отримайте персоналізовані поради для зменшення використання токенів та витрат на Copilot.</target>
-      </trans-unit>
-      <trans-unit id="copilot.command.chronicle.improve">
-        <source xml:lang="en">Get personalized tips to improve your chat session usage</source>
-        <target>Отримайте персоналізовані поради для покращення використання вашої сесії чату.</target>
-      </trans-unit>
-      <trans-unit id="copilot.command.chronicle.reindex">
-        <source xml:lang="en">Rebuild the local session index and sync to cloud</source>
-        <target>Перебудуйте локальний індекс сесій та синхронізуйте з хмарою</target>
-      </trans-unit>
-      <trans-unit id="copilot.command.chronicle.search">
-        <source xml:lang="en">Search recent chat sessions by keyword, file path, or PR/issue ref</source>
-        <target>Шукайте недавні чат-сесії за ключовим словом, шляхом до файлу або посиланням на PR/проблему</target>
-      </trans-unit>
-      <trans-unit id="copilot.command.chronicle.standup">
-        <source xml:lang="en">Generate a standup report from recent chat sessions</source>
-        <target>Згенеруйте звіт про стендап з недавніх чат-сесій</target>
-      </trans-unit>
-      <trans-unit id="copilot.command.chronicle.tips">
-        <source xml:lang="en">Get personalized tips based on your chat session usage patterns</source>
-        <target>Отримуйте персоналізовані поради на основі ваших шаблонів використання сеансів чату.</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotSystemNotification" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHost.copilot.systemNotification.agentCompleted">
@@ -2144,14 +2212,14 @@ A keybinding</note>
         <source xml:lang="en">`{0}` completed</source>
         <target>`{0}` завершено</target>
       </trans-unit>
-      <trans-unit id="agentHost.copilot.systemNotification.shellIdCompleted">
-        <source xml:lang="en">Shell `{0}` completed</source>
-        <target>Shell `{0}` завершено</target>
-      </trans-unit>
     </body>
   </file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotToolDisplay" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="copilot.permission.create.title">
+        <source xml:lang="en">Create file?</source>
+        <target>Створити файл?</target>
+      </trans-unit>
       <trans-unit id="copilot.permission.default.message">
         <source xml:lang="en">Allow the model to call {0}?</source>
         <target>Дозволити моделі викликати {0}?</target>
@@ -2747,6 +2815,102 @@ A keybinding</note>
       <trans-unit id="toolName.viewUnreviewedComments">
         <source xml:lang="en">View Comments</source>
         <target>Переглянути коментарі</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/shared/sessionServerTools" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="toolComplete.createChat">
+        <source xml:lang="en">Created chat</source>
+        <target>Створений чат</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.createSession">
+        <source xml:lang="en">Created session</source>
+        <target>Створено сесію</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.deleteSession">
+        <source xml:lang="en">Deleted session</source>
+        <target>Видалена сесія</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.getCurrentSession">
+        <source xml:lang="en">Checked current session</source>
+        <target>Перевірена поточна сесія</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.getSessionContext">
+        <source xml:lang="en">Read session context</source>
+        <target>Читати контекст сесії</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.listSessions">
+        <source xml:lang="en">Checked sessions</source>
+        <target>Перевірені сесії</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.listSessions.many">
+        <source xml:lang="en">Checked {0} sessions</source>
+        <target>Перевірено {0} сесій</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.listSessions.one">
+        <source xml:lang="en">Checked 1 session</source>
+        <target>Перевірено 1 сесію</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.sendMessage">
+        <source xml:lang="en">Sent message</source>
+        <target>Надіслане повідомлення</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.createChat">
+        <source xml:lang="en">Creating chat</source>
+        <target>Створення чату</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.createSession">
+        <source xml:lang="en">Creating session</source>
+        <target>Створення сесії</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.deleteSession">
+        <source xml:lang="en">Deleting session</source>
+        <target>Видалення сесії</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.getCurrentSession">
+        <source xml:lang="en">Checking current session</source>
+        <target>Перевірка поточної сесії</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.getSessionContext">
+        <source xml:lang="en">Reading session context</source>
+        <target>Контекст сесії читання</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.listSessions">
+        <source xml:lang="en">Checking sessions</source>
+        <target>Перевірка сесій</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.sendMessage">
+        <source xml:lang="en">Sending message</source>
+        <target>Відправка повідомлення</target>
+      </trans-unit>
+      <trans-unit id="toolName.createChat">
+        <source xml:lang="en">Create Chat</source>
+        <target>Створити чат</target>
+      </trans-unit>
+      <trans-unit id="toolName.createSession">
+        <source xml:lang="en">Create Session</source>
+        <target>Створити сесію</target>
+      </trans-unit>
+      <trans-unit id="toolName.deleteSession">
+        <source xml:lang="en">Delete Session</source>
+        <target>Видалити сесію</target>
+      </trans-unit>
+      <trans-unit id="toolName.getCurrentSession">
+        <source xml:lang="en">Get Current Session</source>
+        <target>Отримати поточну сесію</target>
+      </trans-unit>
+      <trans-unit id="toolName.getSessionContext">
+        <source xml:lang="en">Get Session Context</source>
+        <target>Отримати контекст сесії</target>
+      </trans-unit>
+      <trans-unit id="toolName.listSessions">
+        <source xml:lang="en">List Sessions</source>
+        <target>Список сесій</target>
+      </trans-unit>
+      <trans-unit id="toolName.sendMessage">
+        <source xml:lang="en">Send Message</source>
+        <target>Надіслати повідомлення</target>
       </trans-unit>
     </body>
   </file>
@@ -6471,13 +6635,25 @@ To override an existing profile use its profile name as the key, for example:
         <source xml:lang="en">Base font size. This size is used if not overridden by a component.</source>
         <target>Розмір базового шрифту. Цей розмір використовується, якщо не переопреділений компонентом.</target>
       </trans-unit>
+      <trans-unit id="bodyFontSize.deprecated">
+        <source xml:lang="en">Deprecated: use `fontSize.body1` instead.</source>
+        <target>Застаріло: використовуйте `fontSize.body1` замість цього.</target>
+      </trans-unit>
       <trans-unit id="bodyFontSizeSmall">
         <source xml:lang="en">Small font size for secondary content.</source>
         <target>Маленький розмір шрифту для вторинного контенту.</target>
       </trans-unit>
+      <trans-unit id="bodyFontSizeSmall.deprecated">
+        <source xml:lang="en">Deprecated: use `fontSize.label1` instead.</source>
+        <target>Відмовлено: використовуйте `fontSize.label1` замість цього.</target>
+      </trans-unit>
       <trans-unit id="bodyFontSizeXSmall">
         <source xml:lang="en">Extra small font size for less prominent content.</source>
         <target>Додатковий малий розмір шрифту для менш помітного контенту.</target>
+      </trans-unit>
+      <trans-unit id="bodyFontSizeXSmall.deprecated">
+        <source xml:lang="en">Deprecated: use `fontSize.body2` instead.</source>
+        <target>Відкладено: використовуйте `fontSize.body2` замість цього.</target>
       </trans-unit>
       <trans-unit id="codiconFontSize">
         <source xml:lang="en">Base font size for codicons.</source>
@@ -6510,6 +6686,46 @@ To override an existing profile use its profile name as the key, for example:
       <trans-unit id="cornerRadiusXSmall">
         <source xml:lang="en">Extra small corner radius for very compact UI elements.</source>
         <target>Додатковий малий радіус кута для дуже компактних елементів інтерфейсу.</target>
+      </trans-unit>
+      <trans-unit id="fontSizeBody1">
+        <source xml:lang="en">Primary body font size.</source>
+        <target>Розмір шрифту основного тексту.</target>
+      </trans-unit>
+      <trans-unit id="fontSizeBody2">
+        <source xml:lang="en">Secondary body font size.</source>
+        <target>Розмір шрифту вторинного тексту.</target>
+      </trans-unit>
+      <trans-unit id="fontSizeHeading1">
+        <source xml:lang="en">Heading 1 font size (largest heading).</source>
+        <target>Розмір шрифту заголовка 1 (найбільший заголовок).</target>
+      </trans-unit>
+      <trans-unit id="fontSizeHeading2">
+        <source xml:lang="en">Heading 2 font size (title).</source>
+        <target>Розмір шрифту заголовка 2 (назва).</target>
+      </trans-unit>
+      <trans-unit id="fontSizeHeading3">
+        <source xml:lang="en">Heading 3 font size (subtitle).</source>
+        <target>Розмір шрифту заголовка 3 (підзаголовок).</target>
+      </trans-unit>
+      <trans-unit id="fontSizeLabel1">
+        <source xml:lang="en">Label 1 font size (section title, tabs).</source>
+        <target>Розмір шрифту мітки 1 (назва секції, вкладки).</target>
+      </trans-unit>
+      <trans-unit id="fontSizeLabel2">
+        <source xml:lang="en">Label 2 font size (metadata).</source>
+        <target>Розмір шрифту мітки 2 (метадані).</target>
+      </trans-unit>
+      <trans-unit id="fontSizeLabel3">
+        <source xml:lang="en">Label 3 font size (badge).</source>
+        <target>Розмір шрифту мітки 3 (значок).</target>
+      </trans-unit>
+      <trans-unit id="fontWeightRegular">
+        <source xml:lang="en">Regular font weight (400) for body, labels and metadata.</source>
+        <target>Регулярна вага шрифту (400) для основного тексту, міток та метаданих.</target>
+      </trans-unit>
+      <trans-unit id="fontWeightSemiBold">
+        <source xml:lang="en">SemiBold font weight (600) for headings and strong emphasis.</source>
+        <target>Напівжирний шрифт (600) для заголовків та сильного акценту.</target>
       </trans-unit>
       <trans-unit id="spacingNone">
         <source xml:lang="en">No spacing (0px).</source>

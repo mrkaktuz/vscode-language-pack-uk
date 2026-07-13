@@ -940,6 +940,10 @@ User: {2}</source>
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/actions/chatDeveloperActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="workbench.action.chat.agentHostNetworkDiagnostics.label">
+        <source xml:lang="en">Network Diagnostics</source>
+        <target>Діагностика мережі</target>
+      </trans-unit>
       <trans-unit id="workbench.action.chat.clearRecentlyUsedLanguageModels.label">
         <source xml:lang="en">Clear Recently Used Language Models</source>
         <target>Очистити нещодавно використані мовні моделі</target>
@@ -1048,10 +1052,6 @@ User: {2}</source>
         <source xml:lang="en">Change Model</source>
         <target>Змінити модель</target>
       </trans-unit>
-      <trans-unit id="interactive.openAutomationsWorkspacePicker.label">
-        <source xml:lang="en">Open Automations Workspace Picker</source>
-        <target>Відкрити вибір робочого простору автоматизацій</target>
-      </trans-unit>
       <trans-unit id="interactive.openChatSessionPrimaryPicker.label">
         <source xml:lang="en">Open Primary Session Picker</source>
         <target>Відкрити вибір сесії первинного сеансу</target>
@@ -1099,10 +1099,6 @@ User: {2}</source>
       <trans-unit id="interactive.toggleAgent.label">
         <source xml:lang="en">Switch to Next Agent</source>
         <target>Перейти до наступного агента</target>
-      </trans-unit>
-      <trans-unit id="selectAutomationsWorkspace">
-        <source xml:lang="en">Select Workspace Folder</source>
-        <target>Виберіть папку робочого простору</target>
       </trans-unit>
       <trans-unit id="selectWorkspace">
         <source xml:lang="en">Select Target Workspace</source>
@@ -2130,6 +2126,22 @@ User: {2}</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostDownloadProgress" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHost.download.megabytes">
+        <source xml:lang="en">{0} MB</source>
+        <target>{0} МБ</target>
+      </trans-unit>
+      <trans-unit id="agentHost.download.percent">
+        <source xml:lang="en">{0}%</source>
+        <target>{0}%</target>
+      </trans-unit>
+      <trans-unit id="agentHost.download.titleFallback">
+        <source xml:lang="en">Downloading</source>
+        <target>Завантаження</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostFolderPickerActionItem" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHost.selectFolder">
@@ -2204,6 +2216,18 @@ User: {2}</source>
         <source xml:lang="en">Forked Session</source>
         <target>Розгалужена сесія</target>
       </trans-unit>
+      <trans-unit id="agentHost.preparingSession">
+        <source xml:lang="en">Preparing session…</source>
+        <target>Підготовка сесії…</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionLoadFailed">
+        <source xml:lang="en">This session couldn't be loaded.</source>
+        <target>Цю сесію не вдалося завантажити.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionLoadFailedLabel">
+        <source xml:lang="en">Couldn't open session</source>
+        <target>Не вдалося відкрити сесію</target>
+      </trans-unit>
       <trans-unit id="agentHost.turnError">
         <source xml:lang="en">Error: ({0}) {1}</source>
         <target>Помилка: ({0}) {1}</target>
@@ -2214,11 +2238,87 @@ User: {2}</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostSettings.contribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHostSettings.label">
+        <source xml:lang="en">Host Settings</source>
+        <target>Налаштування хоста</target>
+      </trans-unit>
+      <trans-unit id="openAgentHostSettings">
+        <source xml:lang="en">Open Host Settings</source>
+        <target>Відкрити налаштування хоста</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostSettingsFileSystemProvider" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHostSettings.header">
+        <source xml:lang="en">Agent host settings.</source>
+        <target>Налаштування хоста агента.</target>
+      </trans-unit>
+      <trans-unit id="agentHostSettings.notObject">
+        <source xml:lang="en">Agent host settings must be a JSON object.</source>
+        <target>Налаштування хоста агента повинні бути об'єктом JSON.</target>
+      </trans-unit>
+      <trans-unit id="agentHostSettings.parseError">
+        <source xml:lang="en">Failed to parse agent host settings as JSON.</source>
+        <target>Не вдалося розібрати налаштування хоста агента як JSON.</target>
+      </trans-unit>
+      <trans-unit id="agentHostSettings.saveHint">
+        <source xml:lang="en">Edit values below and save to apply. Unknown properties are ignored.</source>
+        <target>Редагуйте значення нижче та збережіть, щоб застосувати. Невідомі властивості ігноруються.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostTerminalContribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHostTerminal.local">
         <source xml:lang="en">Local</source>
         <target>Локальний</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentSessionSettings.contribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentSessionSettings.label">
+        <source xml:lang="en">Session Settings</source>
+        <target>Налаштування сеансу</target>
+      </trans-unit>
+      <trans-unit id="openAgentSessionSettings">
+        <source xml:lang="en">Open Session Settings</source>
+        <target>Відкрити налаштування сеансу</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentSessionSettingsFileSystemProvider" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="chatAgentSessionSettings.header">
+        <source xml:lang="en">Session settings for this agent host session.</source>
+        <target>Налаштування сеансу для цього сеансу хоста агента.</target>
+      </trans-unit>
+      <trans-unit id="chatAgentSessionSettings.notObject">
+        <source xml:lang="en">Agent session settings must be a JSON object.</source>
+        <target>Налаштування сесії агента повинні бути об'єктом JSON.</target>
+      </trans-unit>
+      <trans-unit id="chatAgentSessionSettings.parseError">
+        <source xml:lang="en">Failed to parse agent session settings as JSON.</source>
+        <target>Не вдалося розібрати налаштування сесії агента як JSON.</target>
+      </trans-unit>
+      <trans-unit id="chatAgentSessionSettings.saveHint">
+        <source xml:lang="en">Edit values below and save to apply. Unknown or non-mutable properties are ignored.</source>
+        <target>Редагуйте значення нижче та збережіть, щоб застосувати. Невідомі або незмінні властивості ігноруються.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/importLocalConversationToAgentSession" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="chat.importConversation.subagent">
+        <source xml:lang="en">Subagent</source>
+        <target>Субагент</target>
+      </trans-unit>
+      <trans-unit id="chat.importConversation.toolFailed">
+        <source xml:lang="en">Tool failed.</source>
+        <target>Інструмент не вдалося запустити.</target>
       </trans-unit>
     </body>
   </file>
@@ -2255,6 +2355,42 @@ User: {2}</source>
       <trans-unit id="agentHost.responseDetails.resolvedModel">
         <source xml:lang="en">{0} ({1})</source>
         <target>{0} ({1})</target>
+      </trans-unit>
+      <trans-unit id="contextAttribution.category.system">
+        <source xml:lang="en">System</source>
+        <target>Система</target>
+      </trans-unit>
+      <trans-unit id="contextAttribution.category.userContext">
+        <source xml:lang="en">User Context</source>
+        <target>Контекст користувача</target>
+      </trans-unit>
+      <trans-unit id="contextAttribution.label.mcpTools">
+        <source xml:lang="en">MCP Tools</source>
+        <target>MCP Інструменти</target>
+      </trans-unit>
+      <trans-unit id="contextAttribution.label.messages">
+        <source xml:lang="en">Messages</source>
+        <target>Повідомлення</target>
+      </trans-unit>
+      <trans-unit id="contextAttribution.label.plugins">
+        <source xml:lang="en">Plugins</source>
+        <target>Плагіни</target>
+      </trans-unit>
+      <trans-unit id="contextAttribution.label.skills">
+        <source xml:lang="en">Skills</source>
+        <target>Навички</target>
+      </trans-unit>
+      <trans-unit id="contextAttribution.label.subAgents">
+        <source xml:lang="en">Sub-agents</source>
+        <target>Підагенти</target>
+      </trans-unit>
+      <trans-unit id="contextAttribution.label.toolDefinitions">
+        <source xml:lang="en">Tool Definitions</source>
+        <target>Визначення інструментів</target>
+      </trans-unit>
+      <trans-unit id="contextAttribution.label.toolResults">
+        <source xml:lang="en">Tool Results</source>
+        <target>Результати інструменту</target>
       </trans-unit>
     </body>
   </file>
@@ -2816,6 +2952,10 @@ User: {2}</source>
         <source xml:lang="en">1 day ago</source>
         <target>1 день тому</target>
       </trans-unit>
+      <trans-unit id="pendingVoiceResponse">
+        <source xml:lang="en">Voice response ready</source>
+        <target>Готовий голосовий відповідь</target>
+      </trans-unit>
       <trans-unit id="secondsDuration">
         <source xml:lang="en">now</source>
         <target>тепер</target>
@@ -3095,26 +3235,6 @@ User: {2}</source>
       <trans-unit id="showFilesQuickAccess">
         <source xml:lang="en">Show Files (Unified)</source>
         <target>Показати файли (уніфіковані)</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/workbench/contrib/chat/browser/agentSessions/localAgentDisabledInputTipContribution" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="chat.localAgentDisabled.continueInAgentHostCopilot.action">
-        <source xml:lang="en">Continue In Agent Host</source>
-        <target>Продовжити в агентському хості</target>
-      </trans-unit>
-      <trans-unit id="chat.localAgentDisabled.continueInAgentHostCopilot.description">
-        <source xml:lang="en">You can bring your local harness history into a new chat with the agent host. To keep using the local harness instead and hide this notification, set "chat.editor.localAgent.enabled" to true.</source>
-        <target>Ви можете перенести свою локальну історію використання в новий чат з агентом. Щоб продовжувати використовувати локальний хост і приховати це сповіщення, встановіть "chat.editor.localAgent.enabled" на true.</target>
-      </trans-unit>
-      <trans-unit id="chat.localAgentDisabled.continueInAgentHostCopilot.message">
-        <source xml:lang="en">Continue using the agent host.</source>
-        <target>Продовжуйте використовувати хост агента.</target>
-      </trans-unit>
-      <trans-unit id="chat.localAgentDisabled.continueInAgentHostCopilot.mute">
-        <source xml:lang="en">Don't Show Again</source>
-        <target>Не показувати знову</target>
       </trans-unit>
     </body>
   </file>
@@ -3808,6 +3928,14 @@ User: {2}</source>
         <source xml:lang="en">Back to plugins</source>
         <target>Назад до плагінів</target>
       </trans-unit>
+      <trans-unit id="backToPromptMigration">
+        <source xml:lang="en">Back to Migrate Prompt Files</source>
+        <target>Назад до файлів запиту міграції</target>
+      </trans-unit>
+      <trans-unit id="backToPromptMigrationTooltip">
+        <source xml:lang="en">Back to Migrate Prompt Files</source>
+        <target>Назад до файлів запиту міграції</target>
+      </trans-unit>
       <trans-unit id="backToToolsList">
         <source xml:lang="en">Back to tools</source>
         <target>Назад до інструментів</target>
@@ -3884,6 +4012,10 @@ User: {2}</source>
         <source xml:lang="en">Learn more about language models</source>
         <target>Дізнайтеся більше про мовні моделі</target>
       </trans-unit>
+      <trans-unit id="learnMoreSkills">
+        <source xml:lang="en">Learn more about agent skills</source>
+        <target>Дізнайтеся більше про навички агента</target>
+      </trans-unit>
       <trans-unit id="localHarnessLabel">
         <source xml:lang="en">Local</source>
         <target>Місцевий</target>
@@ -3895,6 +4027,22 @@ User: {2}</source>
       <trans-unit id="mcpServersDesc">
         <source xml:lang="en">Connect external tool servers that extend AI capabilities with custom tools and data sources.</source>
         <target>Підключіть зовнішні сервери інструментів, які розширюють можливості ШІ за допомогою користувацьких інструментів та джерел даних.</target>
+      </trans-unit>
+      <trans-unit id="migrationShortcutAriaLabel">
+        <source xml:lang="en">Migrate prompt files to skills</source>
+        <target>Міграція файлів підказок до навичок</target>
+      </trans-unit>
+      <trans-unit id="migrationShortcutAriaLabelWithCount">
+        <source xml:lang="en">Prompts, {0} deprecated prompt files need migration</source>
+        <target>Підказки, {0} застарілі файли підказок потребують міграції</target>
+      </trans-unit>
+      <trans-unit id="migrationShortcutLabel">
+        <source xml:lang="en">Migrate Prompts</source>
+        <target>Міграція запитів</target>
+      </trans-unit>
+      <trans-unit id="migrationShortcutTooltip">
+        <source xml:lang="en">Convert deprecated prompt files to skills</source>
+        <target>Перетворіть застарілі файли запитів на навички</target>
       </trans-unit>
       <trans-unit id="models">
         <source xml:lang="en">Models</source>
@@ -3940,6 +4088,118 @@ User: {2}</source>
         <source xml:lang="en">Custom metadata field `{0}`.</source>
         <target>Користувацьке поле метаданих `{0}`.</target>
       </trans-unit>
+      <trans-unit id="promptMigrationConfirmButton">
+        <source xml:lang="en">Convert to Skills</source>
+        <target>Перетворити на навички</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationConfirmDetailUser">
+        <source xml:lang="en">This converts {0} user prompt files into skills for the active harness.</source>
+        <target>Це перетворює {0} файлів запитів користувача на навички для активного хардверу.</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationConfirmDetailWorkspace">
+        <source xml:lang="en">This converts {0} workspace prompt files into skills for the active harness.</source>
+        <target>Це перетворює файли запитів {0} робочого простору на навички для активного хардверу.</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationConfirmDetailWorkspaceAndUser">
+        <source xml:lang="en">This converts {0} workspace prompt files and {1} user prompt files into skills for the active harness.</source>
+        <target>Це конвертує {0} файлів запитів робочого простору та {1} файлів запитів користувача в навички для активного хомуту.</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationConfirmMessage">
+        <source xml:lang="en">Convert prompt files to skills?</source>
+        <target>Перетворити файли запитів на навички?</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationConverted">
+        <source xml:lang="en">Converted {0} prompt files to skills.</source>
+        <target>Перетворено {0} файлів запитів на навички.</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationConvertedWithReview">
+        <source xml:lang="en">Converted {0} prompt files to skills. Review migrated skills that used unsupported prompt headers: {1}.</source>
+        <target>Перетворено {0} файлів запитів на навички. Перегляньте мігрувані навички, які використовували непідтримувані заголовки запитів: {1}.</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationDeletePromptFilesCheckbox">
+        <source xml:lang="en">Delete original prompt files after migration</source>
+        <target>Видалити оригінальні файли запитів після міграції</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationFilesFailed">
+        <source xml:lang="en">Failed to migrate {0} prompt files: {1}.</source>
+        <target>Не вдалося мігрувати {0} файлів запитів: {1}.</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationFilesFailedWithRemainder">
+        <source xml:lang="en">Failed to migrate {0} prompt files: {1}, and {2} more.</source>
+        <target>Не вдалося мігрувати {0} файлів запитів: {1} та ще {2}.</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationNoFilesConverted">
+        <source xml:lang="en">No prompt files were converted.</source>
+        <target>Не було конвертовано жодних файлів запитів.</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationNoSkillFolders">
+        <source xml:lang="en">No skill folders are configured for the active harness.</source>
+        <target>Не налаштовано жодних папок навичок для активного обладнання.</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationPageButton">
+        <source xml:lang="en">Migrate</source>
+        <target>Міграція</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationPageButtonTooltip">
+        <source xml:lang="en">Convert selected prompt files to skills</source>
+        <target>Перетворити вибрані файли запитів на навички</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationPageButtonWithCount">
+        <source xml:lang="en">Migrate ({0})</source>
+        <target>Міграція ({0})</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationPageDescription">
+        <source xml:lang="en">Select prompt files to convert into skills for the active harness.</source>
+        <target>Виберіть файли запитів для перетворення в навички для активного ременя.</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationPageDescriptionUser">
+        <source xml:lang="en">Prompt files are not supported for this harness. Found {0} user prompt files that local VS Code can still run, but {1} ignores. Convert them to skills to keep them available.</source>
+        <target>Файли запитів не підтримуються для цього пристрою. Знайдено {0} файлів запитів користувача, які локальний VS Code все ще може виконати, але {1} ігнорує. Перетворіть їх на навички, щоб зберегти їх доступними.</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationPageDescriptionWorkspace">
+        <source xml:lang="en">Prompt files are not supported for this harness. Found {0} workspace prompt files that local VS Code can still run, but {1} ignores. Convert them to skills to keep them available.</source>
+        <target>Файли запитів не підтримуються для цього інструменту. Знайдено {0} файлів запитів робочого простору, які локальний VS Code все ще може виконати, але {1} ігнорує. Перетворіть їх на навички, щоб зберегти їх доступними.</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationPageDescriptionWorkspaceAndUser">
+        <source xml:lang="en">Prompt files are not supported for this harness. Found {0} prompt files ({1} workspace, {2} user) that local VS Code can still run, but {3} ignores. Convert them to skills to keep them available.</source>
+        <target>Файли запитів не підтримуються для цього інструменту. Знайдено {0} файлів запитів ({1} робочий простір, {2} користувач), які локальний VS Code все ще може виконати, але {3} ігнорує. Перетворіть їх на навички, щоб зберегти їх доступними.</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationPageEmpty">
+        <source xml:lang="en">No prompt files are available to migrate.</source>
+        <target>Немає доступних файлів запитів для міграції.</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationPageTitle">
+        <source xml:lang="en">Migrate Prompt Files</source>
+        <target>Міграція файлів запитів</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationPickWorkspaceSkillFolder">
+        <source xml:lang="en">Select a workspace skill folder for migrated prompts</source>
+        <target>Виберіть папку навичок робочого простору для мігрованих запитів</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationSearchEmpty">
+        <source xml:lang="en">No prompt files match your search.</source>
+        <target>Немає файлів запитів, які відповідають вашому пошуку.</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationSearchPlaceholder">
+        <source xml:lang="en">Type to search...</source>
+        <target>Наберіть для пошуку...</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationSelectAriaLabel">
+        <source xml:lang="en">Select {0}</source>
+        <target>Виберіть {0}</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationSelectGroupAriaLabel">
+        <source xml:lang="en">Select all {0} prompt files</source>
+        <target>Виберіть всі {0} файли запитів</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationUserGroup">
+        <source xml:lang="en">User</source>
+        <target>Користувач</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationWorkspaceGroup">
+        <source xml:lang="en">Workspace</source>
+        <target>Робоча область</target>
+      </trans-unit>
       <trans-unit id="prompts">
         <source xml:lang="en">Prompts</source>
         <target>Запити</target>
@@ -3983,10 +4243,6 @@ User: {2}</source>
       <trans-unit id="sectionsAriaLabel">
         <source xml:lang="en">Agent Customization Sections</source>
         <target>Розділи налаштування агента</target>
-      </trans-unit>
-      <trans-unit id="selectTargetDirectory">
-        <source xml:lang="en">Select a directory for the new customization file</source>
-        <target>Виберіть каталог для нового файлу налаштувань</target>
       </trans-unit>
       <trans-unit id="skills">
         <source xml:lang="en">Skills</source>
@@ -4044,6 +4300,14 @@ User: {2}</source>
         <source xml:lang="en">Browse {0}...</source>
         <target>Переглянути {0}...</target>
       </trans-unit>
+      <trans-unit id="convertPromptFilesAriaLabel">
+        <source xml:lang="en">Convert prompt files to skills</source>
+        <target>Перетворіть файли запитів на навички</target>
+      </trans-unit>
+      <trans-unit id="convertToSkills">
+        <source xml:lang="en">Convert to Skills...</source>
+        <target>Перетворити на навички...</target>
+      </trans-unit>
       <trans-unit id="gettingStartedDesc">
         <source xml:lang="en">Describe your preferences and conventions to draft agents, skills, and instructions.</source>
         <target>Опишіть свої уподобання та звичаї для створення агентів, навичок і інструкцій.</target>
@@ -4076,6 +4340,10 @@ User: {2}</source>
         <source xml:lang="en">Connect external tool servers that extend AI capabilities with custom tools and data sources.</source>
         <target>Підключіть зовнішні сервери інструментів, які розширюють можливості ШІ за допомогою користувацьких інструментів та джерел даних.</target>
       </trans-unit>
+      <trans-unit id="migratePromptFiles">
+        <source xml:lang="en">Migrate</source>
+        <target>Міграція</target>
+      </trans-unit>
       <trans-unit id="new">
         <source xml:lang="en">New...</source>
         <target>Новий...</target>
@@ -4091,6 +4359,18 @@ User: {2}</source>
       <trans-unit id="pluginsDesc">
         <source xml:lang="en">Install and manage agent plugins that add additional tools, skills, and integrations.</source>
         <target>Встановлюйте та керуйте плагінами агентів, які додають додаткові інструменти, навички та інтеграції.</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationCardDescriptionUser">
+        <source xml:lang="en">Prompt files are deprecated for this harness. Found {0} global prompt files that local VS Code can still run, but {1} ignores. Convert them to skills to keep them available.</source>
+        <target>Файли запитів застаріли для цього інструменту. Знайдено {0} глобальних файлів запитів, які локальний VS Code все ще може виконати, але {1} ігнорує. Перетворіть їх на навички, щоб зберегти їх доступними.</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationCardDescriptionWorkspace">
+        <source xml:lang="en">Prompt files are deprecated for this harness. Found {0} workspace prompt files that local VS Code can still run, but {1} ignores. Convert them to skills to keep them available.</source>
+        <target>Файли запитів застаріли для цього інструмента. Знайдено {0} файлів запитів робочого простору, які локальний VS Code все ще може виконати, але {1} ігнорує. Перетворіть їх на навички, щоб зберегти їх доступними.</target>
+      </trans-unit>
+      <trans-unit id="promptMigrationCardDescriptionWorkspaceAndUser">
+        <source xml:lang="en">Prompt files are deprecated for this harness. Found {0} prompt files ({1} workspace, {2} global) that local VS Code can still run, but {3} ignores. Convert them to skills to keep them available.</source>
+        <target>Файли запитів застаріли для цього каркасу. Знайдено {0} файлів запитів ({1} робочий простір, {2} глобальний), які локальний VS Code все ще може виконати, але {3} ігнорує. Перетворіть їх на навички, щоб зберегти їх доступними.</target>
       </trans-unit>
       <trans-unit id="sentToChat">
         <source xml:lang="en">Sent to chat ✓</source>
@@ -4568,9 +4848,25 @@ User: {2}</source>
         <source xml:lang="en">MCP servers reported by the active session.</source>
         <target>Сервери MCP, про які повідомляє активна сесія.</target>
       </trans-unit>
+      <trans-unit id="activeSessionMcpServerDisable">
+        <source xml:lang="en">Disable Server</source>
+        <target>Вимкнути сервер</target>
+      </trans-unit>
+      <trans-unit id="activeSessionMcpServerEnable">
+        <source xml:lang="en">Enable Server</source>
+        <target>Увімкнути сервер</target>
+      </trans-unit>
       <trans-unit id="activeSessionMcpServerOptions">
         <source xml:lang="en">Server Options</source>
         <target>Параметри сервера</target>
+      </trans-unit>
+      <trans-unit id="activeSessionMcpServerStart">
+        <source xml:lang="en">Start Server</source>
+        <target>Запустити сервер</target>
+      </trans-unit>
+      <trans-unit id="activeSessionMcpServerStop">
+        <source xml:lang="en">Stop Server</source>
+        <target>Зупинити сервер</target>
       </trans-unit>
       <trans-unit id="addMcpServer">
         <source xml:lang="en">Add an MCP server configuration to get started</source>
@@ -5592,6 +5888,14 @@ Note: This setting only controls tool approval and does not prevent the agent fr
         <source xml:lang="en">Controls how thinking is rendered.</source>
         <target>Контролює, як відображається мислення.</target>
       </trans-unit>
+      <trans-unit id="chat.agentHost.agentDebugLog.enabled">
+        <source xml:lang="en">Enable agent debug logging for agent host sessions: surface their debug events in the agent debug panel. Takes effect immediately; only sessions that run while this is enabled are captured.</source>
+        <target>Увімкніть журнал налагодження агента для сеансів хостів агента: відображайте їхні події налагодження в панелі налагодження агента. Вступає в силу негайно; лише сеанси, які виконуються під час увімкнення цієї функції, захоплюються.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.agentDebugLog.maxEventsInMemory">
+        <source xml:lang="en">Maximum number of debug events kept in memory per agent host session for the agent debug panel. Older events beyond this limit are dropped from the in-memory buffer, which also lowers the totals (such as token usage) shown in the panel overview.</source>
+        <target>Максимальна кількість подій налагодження, що зберігаються в пам'яті для кожної сесії хоста агента на панелі налагодження агента. Старі події, що перевищують цей ліміт, видаляються з буфера в пам'яті, що також знижує загальні показники (наприклад, використання токенів), відображені в огляді панелі.</target>
+      </trans-unit>
       <trans-unit id="chat.agentHost.ahpJsonlLogging">
         <source xml:lang="en">When enabled, logs all AHP transport messages for agent host connections to JSONL files under the window's log directory.</source>
         <target>Коли увімкнено, веде журнал усіх повідомлень транспорту AHP для з'єднань хостів агентів у файли JSONL у каталозі журналів вікна.</target>
@@ -5600,9 +5904,29 @@ Note: This setting only controls tool approval and does not prevent the agent fr
         <source xml:lang="en">When enabled, Copilot SDK sessions use the Agent Host terminal tool override instead of the SDK's default terminal behavior.</source>
         <target>Коли увімкнено, сесії Copilot SDK використовують перевагу інструмента терміналу Agent Host замість стандартної поведінки терміналу SDK.</target>
       </trans-unit>
+      <trans-unit id="chat.agentHost.modelCapabilityOverrides">
+        <source xml:lang="en">Per-model capability overrides for Copilot SDK agent sessions, keyed by model id, intended for evaluating preview models against an existing model's profile. For each model id, declare an aliased `family` (for example `claude-opus-4-8`) to route the model to that family's tuned system prompt without a code change; the model id sent to the runtime is unaffected. Only affects Copilot CLI agent sessions.
+
+**Note**: This is an advanced setting for experimentation.</source>
+        <target>Перемикання можливостей за моделлю для сесій агента Copilot SDK, прив'язаних до ідентифікатора моделі, призначене для оцінки попередніх моделей у порівнянні з профілем існуючої моделі. Для кожного ідентифікатора моделі оголосіть псевдонім `family` (наприклад, `claude-opus-4-8`), щоб направити модель до налаштованого системного запиту цієї родини без зміни коду; ідентифікатор моделі, що надсилається в середовище виконання, не змінюється. Впливає лише на сесії агента Copilot CLI.
+
+**Примітка**: Це розширене налаштування для експериментів.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.modelCapabilityOverrides.family">
+        <source xml:lang="en">Alias the model's family for prompt/capability routing (e.g. `claude-opus-4-8`).</source>
+        <target>Псевдонім сім'ї моделі для маршрутизації запитів/можливостей (наприклад, `claude-opus-4-8`).</target>
+      </trans-unit>
       <trans-unit id="chat.agentHost.opus48Prompt.enabled">
         <source xml:lang="en">When enabled, Copilot SDK sessions running a Claude Opus 4.8 model apply Opus 4.8-tuned system-prompt section overrides on top of the default system message.</source>
         <target>Коли увімкнено, сесії Copilot SDK, що працюють з моделлю Claude Opus 4.8, застосовують переваги секції системного запиту, налаштовані на Opus 4.8, поверх стандартного системного повідомлення.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.reasoningEffortOverride">
+        <source xml:lang="en">Overrides the reasoning effort for Copilot SDK agent sessions regardless of the per-model picker value. Set it to a level the selected model supports (for example `low`, `medium`, `high`, or `xhigh`) — choosing a level the model does not support may be rejected by the model. A value that isn't a recognized effort level is ignored and the session falls back to the picker value. Applied when a session is created and when its model changes. Only affects Copilot CLI agent sessions.
+
+**Note**: This is an advanced setting for experimentation.</source>
+        <target>Перезаписує зусилля міркування для сесій агента Copilot SDK незалежно від значення вибору для кожної моделі. Встановіть його на рівень, який підтримує вибрана модель (наприклад, `low`, `medium`, `high` або `xhigh`) — вибір рівня, який модель не підтримує, може бути відхилений моделлю. Значення, яке не є визнаним рівнем зусилля, ігнорується, і сесія повертається до значення вибору. Застосовується під час створення сесії та коли змінюється її модель. Впливає лише на сесії агента Copilot CLI.
+
+**Примітка**: Це розширене налаштування для експериментів.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.sdkSandbox.enabled">
         <source xml:lang="en">Sandbox mode for the Copilot SDK's built-in shell tool. Only takes effect when `#chat.agentHost.customTerminalTool.enabled#` is `false`; when the Agent Host's own terminal tool is enabled, the engine sandbox is controlled by `#chat.agent.sandbox.enabled#`. The sandbox applies only to requests that run with default approvals — not when approvals are bypassed — and is not supported on Windows yet.</source>
@@ -5645,8 +5969,8 @@ Each path should contain skill subfolders with SKILL.md files (e.g., add `my-ski
         <target>Локації навичок агента</target>
       </trans-unit>
       <trans-unit id="chat.agents.claude.preferAgentHost">
-        <source xml:lang="en">When enabled, Claude sessions opened from the Agents Window run inside the agent host process instead of the GitHub Copilot Chat extension. Only one Claude implementation surfaces per window. Requires `#{0}#`.</source>
-        <target>Коли увімкнено, сесії Claude, відкриті з вікна агентів, виконуються всередині процесу хоста агента замість розширення GitHub Copilot Chat. У кожному вікні відображається лише одна реалізація Claude. Потрібно `#{0}#`.</target>
+        <source xml:lang="en">When enabled, Claude sessions opened from the Agents Window run inside the agent host process instead of the GitHub Copilot Chat extension. Only one Claude implementation surfaces per window. Requires `#chat.agentHost.enabled#`.</source>
+        <target>Коли увімкнено, сесії Claude, відкриті з вікна агентів, працюють всередині процесу хоста агента замість розширення GitHub Copilot Chat. У кожному вікні з'являється лише одна реалізація Claude. Потрібно `#chat.agentHost.enabled#`.</target>
       </trans-unit>
       <trans-unit id="chat.agents.config.locations.description">
         <source xml:lang="en">Specify location(s) of custom agent files (`*{0}`). [Learn More]({1}).
@@ -5752,6 +6076,34 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <source xml:lang="en">Enables **Advanced Autopilot**, a single switch that turns on all advanced Autopilot behaviors that delegate more of the loop to the agent. Currently, after each Autopilot turn a small, fast model evaluates whether your original request is complete; if not, Autopilot keeps working using that evaluation as guidance for the next turn, instead of relying on the agent to signal completion itself.</source>
         <target>Увімкнення **Розширеного Автопілота**, одного перемикача, який активує всі розширені функції Автопілота, що делегують більше частин циклу агенту. Наразі, після кожного ходу Автопілота, невелика, швидка модель оцінює, чи завершено ваше початкове запитання; якщо ні, Автопілот продовжує працювати, використовуючи цю оцінку як орієнтир для наступного ходу, замість того, щоб покладатися на агента для сигналізації про завершення.</target>
       </trans-unit>
+      <trans-unit id="chat.byokUtilityModelDefault.copilot.description">
+        <source xml:lang="en">Use the default GitHub Copilot utility models.</source>
+        <target>Використовуйте стандартні моделі утиліти GitHub Copilot.</target>
+      </trans-unit>
+      <trans-unit id="chat.byokUtilityModelDefault.copilot.label">
+        <source xml:lang="en">GitHub Copilot</source>
+        <target>GitHub Copilot</target>
+      </trans-unit>
+      <trans-unit id="chat.byokUtilityModelDefault.description">
+        <source xml:lang="en">Controls the default model used by built-in utility flows when the selected main agent model is a bring your own key (BYOK) model. This setting has no effect when the selected main agent model is provided by GitHub Copilot. A specific model configured in {0} or {1} takes precedence.</source>
+        <target>Контролює модель за замовчуванням, що використовується вбудованими утилітами, коли вибрана основна модель агента є моделлю "принеси свій ключ" (BYOK). Ця настройка не має жодного ефекту, коли вибрана основна модель агента надається GitHub Copilot. Конкретна модель, налаштована в {0} або {1}, має пріоритет.</target>
+      </trans-unit>
+      <trans-unit id="chat.byokUtilityModelDefault.mainAgent.description">
+        <source xml:lang="en">Use the selected BYOK main agent model.</source>
+        <target>Використовуйте вибрану модель основного агента BYOK.</target>
+      </trans-unit>
+      <trans-unit id="chat.byokUtilityModelDefault.mainAgent.label">
+        <source xml:lang="en">Main Agent Model</source>
+        <target>Головна модель агента</target>
+      </trans-unit>
+      <trans-unit id="chat.byokUtilityModelDefault.none.description">
+        <source xml:lang="en">Do not use a default utility model.</source>
+        <target>Не використовуйте модель утиліти за замовчуванням.</target>
+      </trans-unit>
+      <trans-unit id="chat.byokUtilityModelDefault.none.label">
+        <source xml:lang="en">None</source>
+        <target>Ні</target>
+      </trans-unit>
       <trans-unit id="chat.checkpoints.enabled">
         <source xml:lang="en">Enables checkpoints in chat. Checkpoints allow you to restore the chat to a previous state.</source>
         <target>Увімкнення контрольних точок у чаті. Контрольні точки дозволяють відновити чат до попереднього стану.</target>
@@ -5767,6 +6119,10 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <trans-unit id="chat.contextUsage.enabled">
         <source xml:lang="en">Show the context window usage indicator in the chat input.</source>
         <target>Показати індикатор використання контекстного вікна у полі вводу чату.</target>
+      </trans-unit>
+      <trans-unit id="chat.customizations.promptMigration.enabled">
+        <source xml:lang="en">Controls whether the Chat Customizations editor shows the prompt file migration affordances for agent-host harnesses. When disabled, the migration card and sidebar shortcut are hidden.</source>
+        <target>Контролює, чи редактор налаштувань чату показує можливості міграції файлів запитів для агентських хостингів. Коли вимкнено, картка міграції та ярлик у бічній панелі приховані.</target>
       </trans-unit>
       <trans-unit id="chat.customizations.structuredPreview.enabled">
         <source xml:lang="en">Controls whether the Chat Customizations editor shows a structured preview for markdown customization files (agents, skills, instructions, prompts). When disabled, the editor always opens the raw markdown in the embedded code editor.</source>
@@ -5951,10 +6307,6 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
       <trans-unit id="chat.fontSize">
         <source xml:lang="en">Controls the font size in pixels in chat messages.</source>
         <target>Контролює розмір шрифту в пікселях у повідомленнях чату.</target>
-      </trans-unit>
-      <trans-unit id="chat.generalPurposeAgent.enabled">
-        <source xml:lang="en">Controls whether the built-in General Purpose agent is available as a subagent.</source>
-        <target>Контролює, чи доступний вбудований агент загального призначення як підагент.</target>
       </trans-unit>
       <trans-unit id="chat.growthNotification">
         <source xml:lang="en">Controls whether to show a growth notification in the agent sessions view to encourage new users to try Copilot.</source>
@@ -6229,8 +6581,8 @@ Relative paths are resolved from the root folder(s) of your workspace.</source>
         <target>Увімкніть інтеграцію плагіна агента в чаті.</target>
       </trans-unit>
       <trans-unit id="chat.plugins.enabledPlugins">
-        <source xml:lang="en">Controls which [agent plugins](https://aka.ms/vscode-agent-plugins) are enabled or disabled. Keys are plugin IDs in `&lt;plugin&gt;@&lt;marketplace&gt;` form (where marketplace is defined in {1}); values enable (`true`) or disable (`false`) the plugin. Discovered alongside the path-keyed entries in {0}. When set by policy, only plugins mapped to `true` here are allowed to load.</source>
-        <target>Контролює, які [агентські плагіни](https://aka.ms/vscode-agent-plugins) увімкнені або вимкнені. Ключі - це ID плагінів у формі `&lt;plugin&gt;@&lt;marketplace&gt;` (де marketplace визначено в {1}); значення увімкнено (`true`) або вимкнено (`false`) плагін. Виявляється разом з записами, що мають ключі шляху в {0}. Коли встановлено політикою, лише плагіни, що відображаються на `true` тут, можуть бути завантажені.</target>
+        <source xml:lang="en">Controls which [agent plugins](https://aka.ms/vscode-agent-plugins) are enabled or disabled. Keys are plugin IDs in `&lt;plugin&gt;@&lt;marketplace&gt;` form (where marketplace is defined in {1}); values enable (`true`) or disable (`false`) the plugin. Discovered alongside the path-keyed entries in {0}. When set by policy, entries are additive: plugins mapped to `true` are enabled in addition to the user's own plugins, and only plugins mapped to `false` are blocked from loading.</source>
+        <target>Контролює, які [плагіни агента](https://aka.ms/vscode-agent-plugins) увімкнені або вимкнені. Ключі - це ідентифікатори плагінів у формі `&lt;plugin&gt;@&lt;marketplace&gt;` (де marketplace визначено в {1}); значення увімкнені (`true`) або вимкнені (`false`) для плагіна. Виявляються разом із записами, прив'язаними до шляху, у {0}. Коли встановлено політикою, записи є адитивними: плагіни, які відображаються на `true`, увімкнені на додаток до власних плагінів користувача, і лише плагіни, які відображаються на `false`, блокуються від завантаження.</target>
       </trans-unit>
       <trans-unit id="chat.plugins.enabledPlugins.policy">
         <source xml:lang="en">Plugin enablement. Keys are plugin IDs in `{plugin}@{marketplace}` form; values enable or disable the plugin.</source>
@@ -6394,6 +6746,10 @@ Examples:
         <source xml:lang="en">Controls which agent turn status pills are shown above the chat input while a turn is in progress and inside the completed response. Only applies to agent sessions.</source>
         <target>Контролює, які статусні пігулки агента відображаються над полем введення чату під час виконання ходу та всередині завершеної відповіді. Застосовується лише до сесій агента.</target>
       </trans-unit>
+      <trans-unit id="chat.turnStatusPills.browser">
+        <source xml:lang="en">Show a "Live Browser" pill to open the integrated browser at the last URL a browser tool opened in the turn.</source>
+        <target>Показати пігулку "Живий браузер", щоб відкрити інтегрований браузер за останньою URL-адресою, яку відкрив інструмент браузера в ході.</target>
+      </trans-unit>
       <trans-unit id="chat.turnStatusPills.changes">
         <source xml:lang="en">Show a pill summarizing the files changed and the lines added and removed in the turn.</source>
         <target>Показати пігулку, що підсумовує змінені файли та рядки, які були додані та видалені в ході.</target>
@@ -6466,10 +6822,6 @@ Examples:
         <source xml:lang="en">Use CLAUDE.md file</source>
         <target>Використовуйте файл CLAUDE.md</target>
       </trans-unit>
-      <trans-unit id="chat.useCopilotModelsForUtilityModels.description">
-        <source xml:lang="en">Use default GitHub Copilot models for built-in utility flows when the main chat model is a bring your own key (BYOK) model. Utility flows power background features such as generating chat titles and summaries. This setting does not apply when a specific model is configured in {0} or {1}.</source>
-        <target>Використовуйте стандартні моделі GitHub Copilot для вбудованих утилітних потоків, коли основна модель чату є моделлю "принеси свій ключ" (BYOK). Утилітні потоки забезпечують фонові функції, такі як генерація заголовків чатів і резюме. Цей параметр не застосовується, коли в {0} або {1} налаштовано конкретну модель.</target>
-      </trans-unit>
       <trans-unit id="chat.useCustomizationsInParentRepos.description">
         <source xml:lang="en">Controls whether to use chat customization files in parent repositories.</source>
         <target>Контролює, чи використовувати файли налаштування чату в батьківських репозиторіях.</target>
@@ -6503,12 +6855,12 @@ Examples:
         <target>Використовуйте запит на дотримання навичок</target>
       </trans-unit>
       <trans-unit id="chat.utilityModel.description">
-        <source xml:lang="en">Override the language model used by built-in utility flows. Leave empty to use the default model when the main chat model is provided by GitHub Copilot.</source>
-        <target>Перезапишіть мовну модель, що використовується вбудованими утилітами. Залиште порожнім, щоб використовувати модель за замовчуванням, коли основна модель чату надається GitHub Copilot.</target>
+        <source xml:lang="en">Override the language model used by built-in utility flows. Leave empty to use the configured default behavior.</source>
+        <target>Перезапишіть мовну модель, що використовується вбудованими утилітами. Залиште порожнім, щоб використовувати налаштовану поведінку за замовчуванням.</target>
       </trans-unit>
       <trans-unit id="chat.utilitySmallModel.description">
-        <source xml:lang="en">Override the language model used by built-in small/fast utility flows. A fast and inexpensive model is recommended. Leave empty to use the default model when the main chat model is provided by GitHub Copilot.</source>
-        <target>Перекрийте мовну модель, що використовується вбудованими малими/швидкими утилітами. Рекомендується швидка та недорога модель. Залиште порожнім, щоб використовувати модель за замовчуванням, коли основна модель чату надається GitHub Copilot.</target>
+        <source xml:lang="en">Override the language model used by built-in small/fast utility flows. A fast and inexpensive model is recommended. Leave empty to use the configured default behavior.</source>
+        <target>Перекрийте мовну модель, що використовується вбудованими малими/швидкими утилітами. Рекомендується швидка та недорога модель. Залиште порожнім, щоб використовувати налаштовану поведінку за замовчуванням.</target>
       </trans-unit>
       <trans-unit id="chat.viewProgressBadge.enabled">
         <source xml:lang="en">Show a progress badge on the chat view when an agent session is in progress that is opened in that view.</source>
@@ -6594,9 +6946,129 @@ Examples:
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/chatDebug/agentHostChatDebugProvider" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="agentHost.debug.aborted">
+        <source xml:lang="en">Aborted</source>
+        <target>Скасовано</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.agentDiscovery">
+        <source xml:lang="en">Agent Discovery</source>
+        <target>Виявлення агента</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.compaction">
+        <source xml:lang="en">Context Compaction</source>
+        <target>Контекстна компресія</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.compactionFailed">
+        <source xml:lang="en">Context Compaction Failed</source>
+        <target>Не вдалося стиснути контекст</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.compactionTokens">
+        <source xml:lang="en">system={0}, conversation={1}, tools={2} tokens</source>
+        <target>system={0}, conversation={1}, tools={2} токени</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.customizationDisabled">
+        <source xml:lang="en">disabled</source>
+        <target>вимкнено</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.customizationDiscovery">
+        <source xml:lang="en">Customization Discovery</source>
+        <target>Відкриття налаштування</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.customizationLoaded">
+        <source xml:lang="en">{0} loaded</source>
+        <target>{0} завантажено</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.customizationLoadedSkipped">
+        <source xml:lang="en">{0} loaded, {1} disabled</source>
+        <target>{0} завантажено, {1} вимкнено</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.customizationsResolved">
+        <source xml:lang="en">Resolve Customizations</source>
+        <target>Вирішити налаштування</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.customizationsResolvedDetails">
+        <source xml:lang="en">{0} skills, {1} agents, {2} hooks, {3} instructions</source>
+        <target>{0} навичок, {1} агентів, {2} хуків, {3} інструкцій</target>
+      </trans-unit>
       <trans-unit id="agentHost.debug.fullPrompt">
         <source xml:lang="en">Full Prompt</source>
         <target>Повний запит</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.hookDiscovery">
+        <source xml:lang="en">Hook Discovery</source>
+        <target>Виявлення хуків</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.hookError">
+        <source xml:lang="en">Error Occurred</source>
+        <target>Сталася помилка</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.hookErrorContext">
+        <source xml:lang="en">Error During {0}</source>
+        <target>Помилка під час {0}</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.hookFailed">
+        <source xml:lang="en">Hook Failed: {0}</source>
+        <target>Не вдалося підключити: {0}</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.hookRan">
+        <source xml:lang="en">Hook: {0}</source>
+        <target>Гачок: {0}</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.hookRecoverable">
+        <source xml:lang="en">Recoverable; retrying</source>
+        <target>Відновлювальний; повторна спроба</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.hookUnrecoverable">
+        <source xml:lang="en">Unrecoverable</source>
+        <target>Невідновлювальний</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.mcpDiscovery">
+        <source xml:lang="en">MCP Server Discovery</source>
+        <target>Відкриття сервера MCP</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.modelChangeEffort">
+        <source xml:lang="en">{0} (reasoningEffort={1})</source>
+        <target>{0} (reasoningEffort={1})</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.modelChangeFromTo">
+        <source xml:lang="en">{0} → {1}</source>
+        <target>{0} → {1}</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.modelChanged">
+        <source xml:lang="en">Model Changed</source>
+        <target>Модель змінено</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.permissionIntention">
+        <source xml:lang="en">intention: {0}</source>
+        <target>наміри: {0}</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.permissionKind">
+        <source xml:lang="en">kind: {0}</source>
+        <target>kind: {0}</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.permissionPath">
+        <source xml:lang="en">path: {0}</source>
+        <target>шлях: {0}</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.permissionPending">
+        <source xml:lang="en">Awaiting Permission: {0}</source>
+        <target>Очікування дозволу: {0}</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.permissionPendingValue">
+        <source xml:lang="en">pending</source>
+        <target>очікує</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.permissionResolved">
+        <source xml:lang="en">Permission {0}: {1}</source>
+        <target>Дозвіл {0}: {1}</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.permissionResult">
+        <source xml:lang="en">result: {0}</source>
+        <target>результат: {0}</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.promptDiscovery">
+        <source xml:lang="en">Prompt Discovery</source>
+        <target>Виявлення запитів</target>
       </trans-unit>
       <trans-unit id="agentHost.debug.reasoning">
         <source xml:lang="en">Reasoning</source>
@@ -6605,6 +7077,26 @@ Examples:
       <trans-unit id="agentHost.debug.response">
         <source xml:lang="en">Response</source>
         <target>Відповідь</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.ruleDiscovery">
+        <source xml:lang="en">Instructions Discovery</source>
+        <target>Інструкції Виявлення</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.sessionCliVersion">
+        <source xml:lang="en">CLI {0}</source>
+        <target>CLI {0}</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.sessionError">
+        <source xml:lang="en">Error</source>
+        <target>Помилка</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.sessionErrorTyped">
+        <source xml:lang="en">Error ({0})</source>
+        <target>Помилка ({0})</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.sessionRepoBranch">
+        <source xml:lang="en">{0}@{1}</source>
+        <target>{0}@{1}</target>
       </trans-unit>
       <trans-unit id="agentHost.debug.sessionStarted">
         <source xml:lang="en">Session Started</source>
@@ -6618,6 +7110,42 @@ Examples:
         <source xml:lang="en">model={0}</source>
         <target>model={0}</target>
       </trans-unit>
+      <trans-unit id="agentHost.debug.sessionWarning">
+        <source xml:lang="en">Warning</source>
+        <target>Попередження</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.sessionWarningTyped">
+        <source xml:lang="en">Warning ({0})</source>
+        <target>Попередження ({0})</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.skillDiscovery">
+        <source xml:lang="en">Skill Discovery</source>
+        <target>Відкриття навичок</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.skillInvoked">
+        <source xml:lang="en">Skill Invoked: {0}</source>
+        <target>Виклик навички: {0}</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.subagentModel">
+        <source xml:lang="en">model: {0}</source>
+        <target>модель: {0}</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.subagentName">
+        <source xml:lang="en">agent: {0}</source>
+        <target>агент: {0}</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.subagentTokens">
+        <source xml:lang="en">tokens: {0}</source>
+        <target>токени: {0}</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.subagentToolCalls">
+        <source xml:lang="en">tool calls: {0}</source>
+        <target>виклики інструменту: {0}</target>
+      </trans-unit>
+      <trans-unit id="agentHost.debug.unknownError">
+        <source xml:lang="en">Unknown error</source>
+        <target>Невідома помилка</target>
+      </trans-unit>
       <trans-unit id="agentHost.debug.untitledSession">
         <source xml:lang="en">Copilot CLI Session {0}</source>
         <target>Copilot CLI Сесія {0}</target>
@@ -6625,6 +7153,34 @@ Examples:
       <trans-unit id="agentHost.debug.userRequest">
         <source xml:lang="en">User Request</source>
         <target>Запит користувача</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatDebug/agentHostLogSources" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHostLogs.channel">
+        <source xml:lang="en">{0} (Log)</source>
+        <target>{0} (Журнал)</target>
+      </trans-unit>
+      <trans-unit id="agentHostLogs.cliLog">
+        <source xml:lang="en">Copilot CLI Logs</source>
+        <target>Журнали Copilot CLI</target>
+      </trans-unit>
+      <trans-unit id="agentHostLogs.events">
+        <source xml:lang="en">Session Events (events.jsonl)</source>
+        <target>Події сеансу (events.jsonl)</target>
+      </trans-unit>
+      <trans-unit id="agentHostLogs.remoteProcess">
+        <source xml:lang="en">Remote Agent Host Log (agenthost.log)</source>
+        <target>Журнал хоста віддаленого агента (agenthost.log)</target>
+      </trans-unit>
+      <trans-unit id="agentHostLogs.wire">
+        <source xml:lang="en">AHP Log</source>
+        <target>AHP Журнал</target>
+      </trans-unit>
+      <trans-unit id="agentHostLogs.wireN">
+        <source xml:lang="en">AHP Log — {0}</source>
+        <target>AHP Журнал — {0}</target>
       </trans-unit>
     </body>
   </file>
@@ -6949,6 +7505,10 @@ Examples:
       <trans-unit id="chatDebug.cache.noFindings">
         <source xml:lang="en">No findings for this request pair.</source>
         <target>Немає результатів для цієї пари запитів.</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.cache.noSignatureNote">
+        <source xml:lang="en">The request-side prompt (system instructions, tool catalog, and input messages) was not captured for this session, so the prompt-signature diff and root-cause findings are unavailable. The cache-hit numbers above come from reported token usage.</source>
+        <target>Запитна сторона підказки (інструкції системи, каталог інструментів та вхідні повідомлення) не були зафіксовані для цієї сесії, тому різниця підпису підказки та висновки про корінні причини недоступні. Числа кеш-хітів вище походять з повідомленого використання токенів.</target>
       </trans-unit>
       <trans-unit id="chatDebug.cache.noTurns">
         <source xml:lang="en">No model turns recorded for this session yet.</source>
@@ -7572,6 +8132,22 @@ Examples:
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatDebug/chatDebugEnablement" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="chatDebug.loggingDisabled">
+        <source xml:lang="en">Agent debug logging is turned off. Enable it to capture and view debug logs for this session.</source>
+        <target>Журналювання налагодження агента вимкнено. Увімкніть його, щоб захопити та переглянути журнали налагодження для цієї сесії.</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.openSetting">
+        <source xml:lang="en">Enable in Settings</source>
+        <target>Увімкнути в Налаштуваннях</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLogLoggingDisabled">
+        <source xml:lang="en">AHP logging is turned off. Enable it and reproduce the issue to capture and view client↔host protocol frames for this session.</source>
+        <target>AHP журналювання вимкнено. Увімкніть його та відтворіть проблему, щоб захопити та переглянути кадри протоколу клієнт↔хост для цієї сесії.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/chat/browser/chatDebug/chatDebugEventDetailRenderer" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="chatDebug.detail.agent">
@@ -8182,6 +8758,10 @@ Examples:
         <source xml:lang="en">Agent Flow Chart</source>
         <target>Діаграма потоку агента</target>
       </trans-unit>
+      <trans-unit id="chatDebug.ahpLog">
+        <source xml:lang="en">AHP Log</source>
+        <target>AHP Журнал</target>
+      </trans-unit>
       <trans-unit id="chatDebug.cacheExplorer">
         <source xml:lang="en">Cache Explorer</source>
         <target>Cache Explorer</target>
@@ -8329,6 +8909,182 @@ Examples:
       <trans-unit id="chatDebug.toolCall.toolLabel">
         <source xml:lang="en">Tool: {0}</source>
         <target>Інструмент: {0}</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatDebug/chatDebugWireLogView" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="chatDebug.ahpLog">
+        <source xml:lang="en">AHP Log</source>
+        <target>AHP Журнал</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.title">
+        <source xml:lang="en">Agent Debug Logs</source>
+        <target>Журнали налагодження агента</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.badge.notification">
+        <source xml:lang="en">notify</source>
+        <target>повідомити</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.badge.request">
+        <source xml:lang="en">request</source>
+        <target>запит</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.badge.response">
+        <source xml:lang="en">response</source>
+        <target>відповідь</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.chip.errors">
+        <source xml:lang="en">{0} errors</source>
+        <target>{0} помилок</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.chip.frames">
+        <source xml:lang="en">{0} frames</source>
+        <target>{0} кадрів</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.chip.pending">
+        <source xml:lang="en">{0} pending</source>
+        <target>{0} в очікуванні</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.chip.requests">
+        <source xml:lang="en">{0} requests</source>
+        <target>{0} запитів</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.chip.slowest">
+        <source xml:lang="en">slowest {0}</source>
+        <target>найповільніший {0}</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.disabledHint">
+        <source xml:lang="en">AHP logging is disabled — enable {0} and reproduce to capture client↔host protocol frames.</source>
+        <target>AHP журналювання вимкнено — увімкніть {0} і відтворіть, щоб зафіксувати кадри протоколу клієнт↔хост.</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.empty">
+        <source xml:lang="en">The AHP log is empty.</source>
+        <target>Журнал AHP порожній.</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.enableToCapture">
+        <source xml:lang="en">No AHP log is available. Enable {0} and reproduce the issue to capture protocol frames.</source>
+        <target>Жодного журналу AHP не доступно. Увімкніть {0} і відтворіть проблему, щоб захопити протокольні кадри.</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.error">
+        <source xml:lang="en">Failed to read AHP log: {0}</source>
+        <target>Не вдалося прочитати журнал AHP: {0}</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.filterAria">
+        <source xml:lang="en">Filter AHP log frames</source>
+        <target>Фільтрувати логічні рамки AHP</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.filterPlaceholder">
+        <source xml:lang="en">Filter by method, type, or id</source>
+        <target>Фільтрувати за методом, типом або ідентифікатором</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.footerRemote">
+        <source xml:lang="en">remote</source>
+        <target>віддалений</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.footerTail">
+        <source xml:lang="en">Showing the most recent frames</source>
+        <target>Показуючи найновіші кадри</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.frameId">
+        <source xml:lang="en">id: {0}</source>
+        <target>id: {0}</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.inbound">
+        <source xml:lang="en">Agent Host → VS Code</source>
+        <target>Агент Хост → VS Code</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.loadMore">
+        <source xml:lang="en">Load More ({0})</source>
+        <target>Завантажити більше ({0})</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.loadMoreTitle">
+        <source xml:lang="en">Load more frames</source>
+        <target>Завантажити більше кадрів</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.loading">
+        <source xml:lang="en">Loading…</source>
+        <target>Завантаження…</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.ms">
+        <source xml:lang="en">{0} ms</source>
+        <target>{0} мс</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.noFrames">
+        <source xml:lang="en">No AHP log was found yet for this session. Interact with the agent to capture protocol frames.</source>
+        <target>Не було знайдено жодного журналу AHP для цієї сесії. Взаємодійте з агентом, щоб захопити протокольні кадри.</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.noMatches">
+        <source xml:lang="en">No frames match '{0}'.</source>
+        <target>Немає рамок, які відповідають '{0}'.</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.notAgentHost">
+        <source xml:lang="en">The AHP Log is available for Agent Host sessions.</source>
+        <target>AHP журнал доступний для сесій Agent Host.</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.openFile">
+        <source xml:lang="en">Open Full File</source>
+        <target>Відкрити повний файл</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.outbound">
+        <source xml:lang="en">VS Code → Agent Host</source>
+        <target>VS Code → Агент Хост</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.refresh">
+        <source xml:lang="en">Refresh</source>
+        <target>Оновити</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.responseLabel">
+        <source xml:lang="en">(response)</source>
+        <target>(відповідь)</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.s">
+        <source xml:lang="en">{0} s</source>
+        <target>{0} с</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.section.error">
+        <source xml:lang="en">Error</source>
+        <target>Помилка</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.section.params">
+        <source xml:lang="en">Params</source>
+        <target>Параметри</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.section.responseError">
+        <source xml:lang="en">Response Error</source>
+        <target>Помилка відповіді</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.section.result">
+        <source xml:lang="en">Result</source>
+        <target>Результат</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.showingCount">
+        <source xml:lang="en">Showing {0} of {1} frames</source>
+        <target>Показано {0} з {1} кадрів</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.sourceLabel">
+        <source xml:lang="en">AHP log file</source>
+        <target>Файл журналу AHP</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.statusError">
+        <source xml:lang="en">error</source>
+        <target>помилка</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.statusErrorCode">
+        <source xml:lang="en">error {0}</source>
+        <target>помилка {0}</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.statusPending">
+        <source xml:lang="en">pending</source>
+        <target>очікує</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.truncatedFrame">
+        <source xml:lang="en">Large payload values were elided in the log. Open the full file for complete data.</source>
+        <target>Великі значення вантажу були опущені в журналі. Відкрийте повний файл для отримання всіх даних.</target>
+      </trans-unit>
+      <trans-unit id="chatDebug.wireLog.unavailable">
+        <source xml:lang="en">This AHP log is unavailable.</source>
+        <target>Цей журнал AHP недоступний.</target>
       </trans-unit>
     </body>
   </file>
@@ -9353,6 +10109,14 @@ Examples:
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatPromoNotification" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="chat.promo.endsAt">
+        <source xml:lang="en">Ends {0}.</source>
+        <target>Закінчується {0}.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/chat/browser/chatQuotaNotification" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="manageBudget">
@@ -10187,6 +10951,14 @@ Type anything below to get started!</source>
         <source xml:lang="en">Premium requests</source>
         <target>Преміум запити</target>
       </trans-unit>
+      <trans-unit id="premiumCreditsUsed">
+        <source xml:lang="en">{0} used</source>
+        <target>{0} використано</target>
+      </trans-unit>
+      <trans-unit id="premiumCreditsUsedCompact">
+        <source xml:lang="en">{0} used</source>
+        <target>{0} використано</target>
+      </trans-unit>
       <trans-unit id="premiumIncluded">
         <source xml:lang="en">Included with your organization's plan.</source>
         <target>Включено в план вашої організації.</target>
@@ -10358,6 +11130,22 @@ Type anything below to get started!</source>
       <trans-unit id="signIn">
         <source xml:lang="en">Sign In</source>
         <target>Увійти</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/browser/chatTerminalCommandPaste" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="paste">
+        <source xml:lang="en">Paste</source>
+        <target>Вставити</target>
+      </trans-unit>
+      <trans-unit id="pasteAndDontAskAgain">
+        <source xml:lang="en">Paste and Don't Ask Again</source>
+        <target>Вставити і не питати знову</target>
+      </trans-unit>
+      <trans-unit id="terminalCommandPasteWarning">
+        <source xml:lang="en">The pasted text starts with "{0}", which will run the message as a terminal command when sent. Paste anyway?</source>
+        <target>Вставлений текст починається з "{0}", що виконуватиме повідомлення як команду терміналу при відправці. Вставити все ж?</target>
       </trans-unit>
     </body>
   </file>
@@ -12103,6 +12891,10 @@ Note: This setting only controls tool approval and does not prevent the agent fr
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/voiceClient/micCaptureService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="mic.hardwareMuted">
+        <source xml:lang="en">Your microphone appears to be muted or disabled, possibly by a hardware switch. Voice Mode won't hear you until it's re-enabled.</source>
+        <target>Ваш мікрофон, здається, вимкнений або деактивований, можливо, апаратним вимикачем. Режим голосу не почує вас, поки він не буде повторно активований.</target>
+      </trans-unit>
       <trans-unit id="mic.permissionDenied">
         <source xml:lang="en">Microphone access was denied. Grant microphone permission in your system settings to use Voice Mode.</source>
         <target>Доступ до мікрофона був відхилений. Наддайте дозвіл на використання мікрофона у налаштуваннях системи, щоб використовувати Режим голосу.</target>
@@ -13111,6 +13903,10 @@ You can stop the agent at any time by clicking the stop button. This applies to 
         <source xml:lang="en">1 deletion</source>
         <target>1 видалення</target>
       </trans-unit>
+      <trans-unit id="chat.thinking.duration.seconds">
+        <source xml:lang="en">{0}s</source>
+        <target>{0}s</target>
+      </trans-unit>
       <trans-unit id="chat.thinking.editedFile">
         <source xml:lang="en">Edited {0}</source>
         <target>Відредаговано {0}</target>
@@ -13210,6 +14006,10 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <trans-unit id="chat.thinking.titleWithDiff">
         <source xml:lang="en">{0}, {1}, {2}</source>
         <target>{0}, {1}, {2}</target>
+      </trans-unit>
+      <trans-unit id="chat.thinking.titleWithDuration">
+        <source xml:lang="en">{0} - {1}</source>
+        <target>{0} - {1}</target>
       </trans-unit>
       <trans-unit id="chat.thinking.tool.1">
         <source xml:lang="en">Processing</source>
@@ -13371,6 +14171,30 @@ You can stop the agent at any time by clicking the stop button. This applies to 
   </file>
   <file original="src/vs/workbench/contrib/chat/browser/widget/chatContentParts/chatTurnPillsPart" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="chat.turnChanges.accessibleSummary">
+        <source xml:lang="en">{0}, {1} lines added, {2} lines deleted</source>
+        <target>{0}, {1} рядків додано, {2} рядків видалено</target>
+      </trans-unit>
+      <trans-unit id="chat.turnChanges.manyFiles">
+        <source xml:lang="en">{0} files changed</source>
+        <target>{0} файлів змінено</target>
+      </trans-unit>
+      <trans-unit id="chat.turnChanges.oneFile">
+        <source xml:lang="en">1 file changed</source>
+        <target>1 файл змінено</target>
+      </trans-unit>
+      <trans-unit id="chat.turnChanges.preview">
+        <source xml:lang="en">Preview</source>
+        <target>Попередній перегляд</target>
+      </trans-unit>
+      <trans-unit id="chat.turnPreview.tooltip">
+        <source xml:lang="en">Open Preview: {0}</source>
+        <target>Відкрити попередній перегляд: {0}</target>
+      </trans-unit>
+      <trans-unit id="chat.viewTurnFileChangesSummary">
+        <source xml:lang="en">View All File Changes</source>
+        <target>Переглянути всі зміни файлів</target>
+      </trans-unit>
       <trans-unit id="chatTurnPills.changes.title">
         <source xml:lang="en">Turn File Changes</source>
         <target>Увімкнути зміни файлу</target>
@@ -13547,6 +14371,10 @@ You can stop the agent at any time by clicking the stop button. This applies to 
         <source xml:lang="en">{0} files changed</source>
         <target>{0} файлів змінено</target>
       </trans-unit>
+      <trans-unit id="manyFilesCreated">
+        <source xml:lang="en">{0} files created</source>
+        <target>{0} файлів створено</target>
+      </trans-unit>
       <trans-unit id="modifiedFilesAllChangesTitle">
         <source xml:lang="en">All Changes</source>
         <target>Усі зміни</target>
@@ -13562,6 +14390,10 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <trans-unit id="oneFileChanged">
         <source xml:lang="en">1 file changed</source>
         <target>1 файл змінено</target>
+      </trans-unit>
+      <trans-unit id="oneFileCreated">
+        <source xml:lang="en">1 file created</source>
+        <target>1 файл створено</target>
       </trans-unit>
       <trans-unit id="viewAllChanges">
         <source xml:lang="en">View All Changes</source>
@@ -14151,6 +14983,14 @@ You can stop the agent at any time by clicking the stop button. This applies to 
         <source xml:lang="en">Turn status</source>
         <target>Статус ходу</target>
       </trans-unit>
+      <trans-unit id="chatTurnPills.browser.label">
+        <source xml:lang="en">Live Browser</source>
+        <target>Живий браузер</target>
+      </trans-unit>
+      <trans-unit id="chatTurnPills.browser.tooltip">
+        <source xml:lang="en">Open Live Browser: {0}</source>
+        <target>Відкрити живий браузер: {0}</target>
+      </trans-unit>
       <trans-unit id="chatTurnPills.changes.ariaLabel">
         <source xml:lang="en">View Changes: {0}, +{1}, -{2}</source>
         <target>Переглянути зміни: {0}, +{1}, -{2}</target>
@@ -14166,10 +15006,6 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <trans-unit id="chatTurnPills.changes.tooltip">
         <source xml:lang="en">View Changes</source>
         <target>Переглянути зміни</target>
-      </trans-unit>
-      <trans-unit id="chatTurnPills.preview.description">
-        <source xml:lang="en">preview</source>
-        <target>перегляд</target>
       </trans-unit>
       <trans-unit id="chatTurnPills.preview.label">
         <source xml:lang="en">Open Preview</source>
@@ -14413,6 +15249,10 @@ You can stop the agent at any time by clicking the stop button. This applies to 
         <source xml:lang="en">Configure Model</source>
         <target>Налаштувати модель</target>
       </trans-unit>
+      <trans-unit id="chat.modelPicker.copilotGroup">
+        <source xml:lang="en">Copilot</source>
+        <target>Копілот</target>
+      </trans-unit>
       <trans-unit id="chat.modelPicker.downloadUpdateHover">
         <source xml:lang="en">This model requires a newer version of VS Code. [Download Update](command:update.downloadUpdate) to access it.</source>
         <target>Ця модель вимагає новішої версії VS Code. [Завантажити оновлення](command:update.downloadUpdate), щоб отримати доступ до неї.</target>
@@ -14520,6 +15360,18 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <trans-unit id="chat.priceCategory.veryHigh">
         <source xml:lang="en">Very high cost</source>
         <target>Дуже висока вартість</target>
+      </trans-unit>
+      <trans-unit id="chat.promo.discount">
+        <source xml:lang="en">{0}% discount</source>
+        <target>{0}% знижка</target>
+      </trans-unit>
+      <trans-unit id="chat.promo.discountBadge">
+        <source xml:lang="en">{0}% discount</source>
+        <target>{0}% знижка</target>
+      </trans-unit>
+      <trans-unit id="chat.promo.endsAt">
+        <source xml:lang="en">Ends {0}.</source>
+        <target>Закінчується {0}.</target>
       </trans-unit>
       <trans-unit id="chat.tokens.header">
         <source xml:lang="en">Context Size</source>
@@ -14776,6 +15628,30 @@ You can stop the agent at any time by clicking the stop button. This applies to 
       <trans-unit id="chat.modelPicker.setupRequiredHover">
         <source xml:lang="en">{0} • Sign in to GitHub Copilot to choose a model.</source>
         <target>{0} • Увійдіть до GitHub Copilot, щоб вибрати модель.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/chat/browser/widget/input/modelProviderIcons" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="chatModelProviderClaudeIcon">
+        <source xml:lang="en">Icon for Claude models.</source>
+        <target>Іконка для моделей Claude.</target>
+      </trans-unit>
+      <trans-unit id="chatModelProviderCopilotIcon">
+        <source xml:lang="en">Icon for Copilot models.</source>
+        <target>Іконка для моделей Copilot.</target>
+      </trans-unit>
+      <trans-unit id="chatModelProviderGeminiIcon">
+        <source xml:lang="en">Icon for Gemini models.</source>
+        <target>Іконка для моделей Gemini.</target>
+      </trans-unit>
+      <trans-unit id="chatModelProviderGenericIcon">
+        <source xml:lang="en">Icon for other model providers.</source>
+        <target>Іконка для інших постачальників моделей.</target>
+      </trans-unit>
+      <trans-unit id="chatModelProviderOpenAIIcon">
+        <source xml:lang="en">Icon for OpenAI models.</source>
+        <target>Іконка для моделей OpenAI.</target>
       </trans-unit>
     </body>
   </file>
@@ -17718,6 +18594,10 @@ Example: `**/*.ts`, `**/*.js`, `client/**`</source>
   </file>
   <file original="src/vs/workbench/contrib/chat/common/promptSyntax/service/promptsServiceImpl" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="builtin.capitalized">
+        <source xml:lang="en">Built-in</source>
+        <target>Вбудований</target>
+      </trans-unit>
       <trans-unit id="extension.with.id">
         <source xml:lang="en">Extension: {0}</source>
         <target>Розширення: {0}</target>

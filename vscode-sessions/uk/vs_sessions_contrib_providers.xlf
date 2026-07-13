@@ -24,6 +24,22 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostCodexApprovalsPicker" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHostCodexApprovalsPicker.ariaLabel">
+        <source xml:lang="en">Approvals Picker</source>
+        <target>Вибір затверджень</target>
+      </trans-unit>
+      <trans-unit id="agentHostCodexApprovalsPicker.triggerAriaLabel">
+        <source xml:lang="en">Pick Approvals, {0}</source>
+        <target>Виберіть затвердження, {0}</target>
+      </trans-unit>
+      <trans-unit id="codexApprovals.learnMore">
+        <source xml:lang="en">Learn more about permissions</source>
+        <target>Дізнайтеся більше про дозволи</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostModePicker" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHostModePicker.ariaLabel">
@@ -78,11 +94,19 @@
         <source xml:lang="en">Session Approvals</source>
         <target>Сесійні затвердження</target>
       </trans-unit>
+      <trans-unit id="agentHostNewSessionCodexApprovalsPicker">
+        <source xml:lang="en">Approvals</source>
+        <target>Схвалення</target>
+      </trans-unit>
       <trans-unit id="agentHostNewSessionModePicker">
         <source xml:lang="en">Agent Mode</source>
         <target>Режим агента</target>
       </trans-unit>
       <trans-unit id="agentHostNewSessionPermissionModePicker">
+        <source xml:lang="en">Approvals</source>
+        <target>Схвалення</target>
+      </trans-unit>
+      <trans-unit id="agentHostRunningSessionCodexApprovalsPicker">
         <source xml:lang="en">Approvals</source>
         <target>Схвалення</target>
       </trans-unit>
@@ -121,6 +145,10 @@
       <trans-unit id="agentHostSessionConfig.filter">
         <source xml:lang="en">Filter options...</source>
         <target>Фільтри...</target>
+      </trans-unit>
+      <trans-unit id="agentHostSessionConfig.isolation.worktree">
+        <source xml:lang="en">New Worktree</source>
+        <target>Новий Worktree</target>
       </trans-unit>
       <trans-unit id="agentHostSessionConfig.triggerAria">
         <source xml:lang="en">{0}: {1}</source>
@@ -246,18 +274,6 @@
   </file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/baseAgentHostSessionsProvider" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="agentHost.download.megabytes">
-        <source xml:lang="en">{0} MB</source>
-        <target>{0} МБ</target>
-      </trans-unit>
-      <trans-unit id="agentHost.download.percent">
-        <source xml:lang="en">{0}%</source>
-        <target>{0}%</target>
-      </trans-unit>
-      <trans-unit id="agentHost.download.titleFallback">
-        <source xml:lang="en">Downloading…</source>
-        <target>Завантаження…</target>
-      </trans-unit>
       <trans-unit id="copilotCLI">
         <source xml:lang="en">Copilot</source>
         <target>Копілот</target>
@@ -294,6 +310,10 @@
         <source xml:lang="en">Cannot send request: not connected to agent host.</source>
         <target>Не вдалося надіслати запит: не підключено до хоста агента.</target>
       </trans-unit>
+      <trans-unit id="sessionNotCommitted">
+        <source xml:lang="en">Agent host session was not committed.</source>
+        <target>Сесію хоста агента не було зафіксовано.</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/exportDebugLogsAction" source-language="en" datatype="plaintext" target-language="uk">
@@ -307,8 +327,8 @@
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/localAgentHost.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="sessions.chat.agentHost.defaultSessionsProvider">
-        <source xml:lang="en">When enabled, the local agent host is used as the default sessions provider and its session types are shown first in the Agents window. Requires `#{0}#`.</source>
-        <target>Коли увімкнено, локальний агент-хост використовується як постачальник сесій за замовчуванням, і його типи сесій відображаються першими у вікні Агентів. Потрібно `#{0}#`.</target>
+        <source xml:lang="en">When enabled, the local agent host is used as the default sessions provider and its session types are shown first in the Agents window. Requires `#chat.agentHost.enabled#`.</source>
+        <target>Коли увімкнено, локальний агент-хост використовується як постачальник сесій за замовчуванням, і його типи сесій відображаються першими у вікні Агентів. Потрібно `#chat.agentHost.enabled#`.</target>
       </trans-unit>
     </body>
   </file>
@@ -538,21 +558,13 @@
   </file>
   <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/isolationPicker" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="isolationMode.folder">
-        <source xml:lang="en">Folder</source>
-        <target>Папка</target>
-      </trans-unit>
       <trans-unit id="isolationMode.worktree">
-        <source xml:lang="en">Worktree</source>
-        <target>Робоче дерево</target>
+        <source xml:lang="en">New Worktree</source>
+        <target>Новий робочий каталог</target>
       </trans-unit>
-      <trans-unit id="isolationPicker.ariaLabel">
-        <source xml:lang="en">Isolation Mode</source>
-        <target>Режим ізоляції</target>
-      </trans-unit>
-      <trans-unit id="isolationPicker.triggerAriaLabel">
-        <source xml:lang="en">Pick Isolation Mode, {0}</source>
-        <target>Виберіть режим ізоляції, {0}</target>
+      <trans-unit id="isolationPicker.checkboxAriaLabel">
+        <source xml:lang="en">Worktree isolation</source>
+        <target>Ізоляція робочого дерева</target>
       </trans-unit>
     </body>
   </file>

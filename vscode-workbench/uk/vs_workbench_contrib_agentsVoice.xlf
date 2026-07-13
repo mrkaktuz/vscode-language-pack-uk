@@ -2,10 +2,6 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file original="src/vs/workbench/contrib/agentsVoice/browser/agentsVoice.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="agents.voice.autoSendDelay">
-        <source xml:lang="en">In toggle voice mode (short tap), automatically finish recording after this many milliseconds of silence. Set to -1 to disable.</source>
-        <target>У режимі голосового перемикання (короткий дотик) автоматично завершити запис після цього часу мовчання в мілісекундах. Встановіть -1, щоб вимкнути.</target>
-      </trans-unit>
       <trans-unit id="agents.voice.backendUrl">
         <source xml:lang="en">Voice backend WebSocket URL. Leave empty to use the default hosted backend. Set to e.g. `ws://localhost:8000/api/v1/realtime/voice` to point at a backend running on your machine.</source>
         <target>URL-адреса WebSocket для голосового бекенду. Залиште порожнім, щоб використовувати за замовчуванням хостований бекенд. Встановіть, наприклад, `ws://localhost:8000/api/v1/realtime/voice`, щоб вказати на бекенд, що працює на вашій машині.</target>
@@ -14,17 +10,49 @@
         <source xml:lang="en">Enable the Voice Mode panel in the chat view for voice-driven coding conversations.</source>
         <target>Увімкніть панель режиму голосу у вікні чату для розмов про кодування з використанням голосу.</target>
       </trans-unit>
-      <trans-unit id="agents.voice.sendKeyword">
-        <source xml:lang="en">A keyword phrase (e.g. "send it") that, when spoken at the end of an utterance in toggle mode, triggers sending the request immediately. The keyword is stripped from the sent message. Leave empty to disable.</source>
-        <target>Ключова фраза (наприклад, "надішліть це"), яка, коли її вимовляють в кінці висловлювання в режимі перемикання, миттєво активує відправлення запиту. Ключове слово видаляється з надісланого повідомлення. Залиште порожнім, щоб вимкнути.</target>
+      <trans-unit id="agents.voice.handsFree">
+        <source xml:lang="en">When enabled, voice mode automatically re-enters listening after the assistant finishes speaking, so you can hold a hands-free back-and-forth conversation. When disabled, you start each turn manually. This controls only the auto-listen loop; how a turn ends is controlled by {0} and {1}.</source>
+        <target>Коли увімкнено, голосовий режим автоматично повторно входить у режим прослуховування після того, як асистент закінчує говорити, щоб ви могли вести бесіду без рук. Коли вимкнено, ви починаєте кожен хід вручну. Це контролює лише цикл автоматичного прослуховування; як закінчується хід, контролюється {0} і {1}.</target>
       </trans-unit>
       <trans-unit id="agents.voice.showTranscript">
-        <source xml:lang="en">Show the voice transcript overlay in the chat input area while voice mode is active.</source>
-        <target>Показати накладку транскрипції голосу в області введення чату, поки активний голосовий режим.</target>
+        <source xml:lang="en">Show the voice transcript overlay in the chat input area while voice mode is active. Enable this to read responses as text when `#agents.voice.speakResponses#` is disabled.</source>
+        <target>Показати накладку транскрипції голосу в області вводу чату, поки активний голосовий режим. Увімкніть це, щоб читати відповіді як текст, коли `#agents.voice.speakResponses#` вимкнено.</target>
       </trans-unit>
-      <trans-unit id="agents.voice.textToSpeech">
-        <source xml:lang="en">When enabled, the assistant reads responses aloud. When disabled, responses appear as text transcripts only.</source>
-        <target>Коли увімкнено, асистент читає відповіді вголос. Коли вимкнено, відповіді з'являються лише у вигляді текстових транскриптів.</target>
+      <trans-unit id="agents.voice.speakResponses">
+        <source xml:lang="en">When enabled, the assistant reads responses aloud. When disabled, responses are not spoken; enable `#agents.voice.showTranscript#` to read them as a text transcript instead.</source>
+        <target>Коли увімкнено, асистент зачитує відповіді вголос. Коли вимкнено, відповіді не озвучуються; увімкніть `#agents.voice.showTranscript#`, щоб прочитати їх у вигляді текстового транскрипту.</target>
+      </trans-unit>
+      <trans-unit id="agents.voice.turn.silenceMs">
+        <source xml:lang="en">Trailing silence in milliseconds before the backend ends the turn automatically. Set to `-1` to disable ending the turn on silence, in which case the turn ends only via a stop phrase ({0}) or manually. When enabled, the backend clamps this to its supported range (currently 200-5000 ms) and is the source of truth.</source>
+        <target>Затримка тиші в мілісекундах перед автоматичним завершенням ходу бекендом. Встановіть на `-1`, щоб вимкнути завершення ходу при тиші, у цьому випадку хід завершується лише через фразу зупинки ({0}) або вручну. Коли це увімкнено, бекенд обмежує це до свого підтримуваного діапазону (в даний момент 200-5000 мс) і є джерелом істини.</target>
+      </trans-unit>
+      <trans-unit id="agents.voice.turn.silenceMs.disabled">
+        <source xml:lang="en">Do not end the turn on trailing silence.</source>
+        <target>Не закінчуйте хід на затримці тиші.</target>
+      </trans-unit>
+      <trans-unit id="agents.voice.turn.stopPhrases">
+        <source xml:lang="en">Phrases that end the turn when spoken at the end of an utterance. Leave empty to disable ending the turn on a stop phrase, in which case the turn ends only on trailing silence ({0}) or manually. The backend strips the matched phrase from the transcript before it reaches the agent.</source>
+        <target>Фрази, які завершують чергу, коли їх вимовляють наприкінці висловлення. Залиште порожнім, щоб вимкнути завершення черги на стоп-фразі, у такому випадку черга завершується лише на затримці мовчання ({0}) або вручну. Бекенд видаляє співпадіння фрази з транскрипції перед тим, як вона досягає агента.</target>
+      </trans-unit>
+      <trans-unit id="agents.voice.voice">
+        <source xml:lang="en">The voice used when the assistant reads responses aloud. Changing this while voice mode is connected takes effect immediately.</source>
+        <target>Голос, який використовується, коли асистент читає відповіді вголос. Зміна цього під час підключення голосового режиму набирає чинності негайно.</target>
+      </trans-unit>
+      <trans-unit id="agents.voice.voice.daniel">
+        <source xml:lang="en">Daniel.</source>
+        <target>Даніел.</target>
+      </trans-unit>
+      <trans-unit id="agents.voice.voice.kevin">
+        <source xml:lang="en">Kevin.</source>
+        <target>Кевін.</target>
+      </trans-unit>
+      <trans-unit id="agents.voice.voice.maya">
+        <source xml:lang="en">Maya.</source>
+        <target>Мая.</target>
+      </trans-unit>
+      <trans-unit id="agents.voice.voice.victoria">
+        <source xml:lang="en">Victoria.</source>
+        <target>Вікторія.</target>
       </trans-unit>
       <trans-unit id="agentsVoice.connecting">
         <source xml:lang="en">Connecting...</source>
@@ -33,6 +61,10 @@
       <trans-unit id="agentsVoice.disconnect">
         <source xml:lang="en">Disconnect Voice Mode</source>
         <target>Вимкнути голосовий режим</target>
+      </trans-unit>
+      <trans-unit id="agentsVoice.openSettings">
+        <source xml:lang="en">Voice Mode Settings</source>
+        <target>Налаштування голосового режиму</target>
       </trans-unit>
       <trans-unit id="agentsVoice.pttStopInChat">
         <source xml:lang="en">Voice Mode: Stop Recording</source>
