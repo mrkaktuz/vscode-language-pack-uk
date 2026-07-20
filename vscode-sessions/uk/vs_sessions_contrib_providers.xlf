@@ -54,6 +54,22 @@
   </file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostPermissionPickerDelegate" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="agentHostPermissionPicker.allowAll.detail">
+        <source xml:lang="en">Runs tool calls without asking</source>
+        <target>Виконує виклики інструментів без запитів</target>
+      </trans-unit>
+      <trans-unit id="agentHostPermissionPicker.approveWhenSafe.detail">
+        <source xml:lang="en">Evaluates risk before running tools</source>
+        <target>Оцінює ризик перед запуском інструментів</target>
+      </trans-unit>
+      <trans-unit id="agentHostPermissionPicker.askWhenNeeded.detail">
+        <source xml:lang="en">Asks when approval settings don't apply</source>
+        <target>Запитує, коли налаштування схвалення не застосовуються</target>
+      </trans-unit>
+      <trans-unit id="agentHostPermissionPicker.assistedHover">
+        <source xml:lang="en">An LLM judge evaluates each tool call. Tools it doesn't approve require your approval.</source>
+        <target>Суддя LLM оцінює кожен виклик інструменту. Інструменти, які він не затверджує, потребують вашого схвалення.</target>
+      </trans-unit>
       <trans-unit id="agentHostPermissionPicker.autoApproveHover">
         <source xml:lang="en">Copilot runs all tools without asking for approval.</source>
         <target>Copilot запускає всі інструменти без запиту на затвердження.</target>
@@ -149,6 +165,10 @@
       <trans-unit id="agentHostSessionConfig.isolation.worktree">
         <source xml:lang="en">New Worktree</source>
         <target>Новий Worktree</target>
+      </trans-unit>
+      <trans-unit id="agentHostSessionConfig.policyDisabled">
+        <source xml:lang="en">Disabled by your organization. Contact your administrator.</source>
+        <target>Вимкнено вашою організацією. Зверніться до вашого адміністратора.</target>
       </trans-unit>
       <trans-unit id="agentHostSessionConfig.triggerAria">
         <source xml:lang="en">{0}: {1}</source>
@@ -358,29 +378,25 @@
         <source xml:lang="en">Open subagent chat: {0}</source>
         <target>Відкрити чат субагента: {0}</target>
       </trans-unit>
-      <trans-unit id="chat.subagent.prefix">
-        <source xml:lang="en">Subagent</source>
-        <target>Субагент</target>
-      </trans-unit>
     </body>
   </file>
   <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/branchPicker" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="branchPicker.ariaLabel">
-        <source xml:lang="en">Branch Picker</source>
-        <target>Вибір гілки</target>
-      </trans-unit>
-      <trans-unit id="branchPicker.filter">
-        <source xml:lang="en">Filter branches...</source>
-        <target>Фільтрувати гілки...</target>
-      </trans-unit>
       <trans-unit id="branchPicker.select">
         <source xml:lang="en">Branch</source>
         <target>Гілка</target>
       </trans-unit>
-      <trans-unit id="branchPicker.triggerAriaLabel">
-        <source xml:lang="en">Pick Branch, {0}</source>
-        <target>Виберіть філію, {0}</target>
+      <trans-unit id="isolationMode.worktree">
+        <source xml:lang="en">New Worktree</source>
+        <target>Новий Worktree</target>
+      </trans-unit>
+      <trans-unit id="isolationPicker.checkboxAriaLabel">
+        <source xml:lang="en">Worktree isolation</source>
+        <target>Ізоляція робочого дерева</target>
+      </trans-unit>
+      <trans-unit id="isolationPicker.noGitRepo">
+        <source xml:lang="en">Git repository required for worktree isolation</source>
+        <target>Необхідний Git репозиторій для ізоляції робочого дерева</target>
       </trans-unit>
     </body>
   </file>
@@ -457,10 +473,6 @@
       <trans-unit id="claudePermissionModePicker">
         <source xml:lang="en">Permission Mode</source>
         <target>Режим дозволів</target>
-      </trans-unit>
-      <trans-unit id="isolationPicker">
-        <source xml:lang="en">Isolation Mode</source>
-        <target>Режим ізоляції</target>
       </trans-unit>
       <trans-unit id="modePicker">
         <source xml:lang="en">Mode</source>
@@ -556,18 +568,6 @@
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/isolationPicker" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="isolationMode.worktree">
-        <source xml:lang="en">New Worktree</source>
-        <target>Новий робочий каталог</target>
-      </trans-unit>
-      <trans-unit id="isolationPicker.checkboxAriaLabel">
-        <source xml:lang="en">Worktree isolation</source>
-        <target>Ізоляція робочого дерева</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/mobilePermissionPicker" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="permissionPicker.title">
@@ -610,13 +610,25 @@
         <source xml:lang="en">Pick Permission Level, {0}, {1}</source>
         <target>Виберіть рівень дозволу, {0}, {1}</target>
       </trans-unit>
+      <trans-unit id="permissions.assisted">
+        <source xml:lang="en">Assisted permissions</source>
+        <target>Допоміжні дозволи</target>
+      </trans-unit>
+      <trans-unit id="permissions.assisted.description">
+        <source xml:lang="en">An LLM judge evaluates each tool call. Tools it doesn't approve require your approval.</source>
+        <target>Суддя LLM оцінює кожен виклик інструменту. Інструменти, які він не затверджує, потребують вашого схвалення.</target>
+      </trans-unit>
+      <trans-unit id="permissions.assisted.subtext">
+        <source xml:lang="en">Evaluates risk before running tools</source>
+        <target>Оцінює ризик перед використанням інструментів</target>
+      </trans-unit>
       <trans-unit id="permissions.autoApprove">
-        <source xml:lang="en">Bypass Approvals</source>
-        <target>Обійти затвердження</target>
+        <source xml:lang="en">Allow all</source>
+        <target>Дозволити все</target>
       </trans-unit>
       <trans-unit id="permissions.autoApprove.subtext">
-        <source xml:lang="en">All tool calls are auto-approved</source>
-        <target>Усі виклики інструментів автоматично затверджуються.</target>
+        <source xml:lang="en">Runs tool calls without asking</source>
+        <target>Виконує виклики інструментів без запитів</target>
       </trans-unit>
       <trans-unit id="permissions.autopilot">
         <source xml:lang="en">Autopilot (Preview)</source>
@@ -631,12 +643,12 @@
         <target>Автономно ітерує від початку до кінця</target>
       </trans-unit>
       <trans-unit id="permissions.default">
-        <source xml:lang="en">Default Approvals</source>
+        <source xml:lang="en">Default approvals</source>
         <target>Типові затвердження</target>
       </trans-unit>
       <trans-unit id="permissions.default.subtext">
-        <source xml:lang="en">Copilot uses your configured settings</source>
-        <target>Copilot використовує ваші налаштовані параметри</target>
+        <source xml:lang="en">Asks when approval settings don't apply</source>
+        <target>Запитує, коли налаштування затвердження не застосовуються.</target>
       </trans-unit>
       <trans-unit id="permissions.learnMore">
         <source xml:lang="en">Learn more about permissions</source>

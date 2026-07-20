@@ -736,6 +736,10 @@ Goal: {1}</source>
         <source xml:lang="en">Could not determine whether sandbox dependency installation succeeded. The command was not executed.</source>
         <target>Не вдалося визначити, чи успішно встановлено залежності пісочниці. Команда не була виконана.</target>
       </trans-unit>
+      <trans-unit id="runInTerminal.missingDeps.unsupportedInstaller">
+        <source xml:lang="en">The following dependencies required for sandboxed execution are not installed: {0}. Install them using your system package manager, then run the command again.</source>
+        <target>Наступні залежності, необхідні для виконання в пісочниці, не встановлені: {0}. Встановіть їх за допомогою менеджера пакетів вашої системи, а потім знову виконайте команду.</target>
+      </trans-unit>
       <trans-unit id="runInTerminal.presentationOverride">
         <source xml:lang="en">Run `{0}` command in `{1}`?</source>
         <target>Запустити команду `{0}` у `{1}`?</target>
@@ -1367,6 +1371,10 @@ Reason for leaving the sandbox: {2}</source>
         <source xml:lang="en">Whether to ignore the built-in default auto-approve rules used by the run in terminal tool as defined in {0}. When this setting is enabled, the run in terminal tool will ignore any rule that comes from the default set but still follow rules defined in the user, remote and workspace settings. Use this setting at your own risk; the default auto-approve rules are designed to protect you against running dangerous commands.</source>
         <target>Чи ігнорувати вбудовані правила автоматичного затвердження за замовчуванням, що використовуються інструментом запуску в терміналі, як визначено в {0}. Коли ця настройка увімкнена, інструмент запуску в терміналі ігноруватиме будь-яке правило, що походить з набору за замовчуванням, але все ще дотримуватиметься правил, визначених у налаштуваннях користувача, віддалених та робочого простору. Використовуйте цю настройку на свій власний ризик; правила автоматичного затвердження за замовчуванням розроблені для захисту вас від виконання небезпечних команд.</target>
       </trans-unit>
+      <trans-unit id="outputCompaction.description">
+        <source xml:lang="en">When enabled, the output of commands run by the run in terminal tool is compacted before being returned to the model, reducing the number of tokens spent on noisy output (for example progress bars or repeated log lines) while preserving the important information.</source>
+        <target>Коли увімкнено, вихід команд, виконаних за допомогою інструмента запуску в терміналі, стискається перед поверненням до моделі, зменшуючи кількість токенів, витрачених на шумний вихід (наприклад, індикатори прогресу або повторювані рядки журналу), зберігаючи при цьому важливу інформацію.</target>
+      </trans-unit>
       <trans-unit id="outputDeltas.description">
         <source xml:lang="en">When enabled, repeated get terminal output tool calls return only output added since the previous poll for the same terminal execution, or a short unchanged-output message when there is no new output.</source>
         <target>Коли увімкнено, повторні виклики інструмента отримання виходу терміналу повертають лише вихід, доданий з моменту попереднього опитування для того ж виконання терміналу, або коротке повідомлення про незмінний вихід, коли немає нового виходу.</target>
@@ -1818,10 +1826,6 @@ Reason for leaving the sandbox: {2}</source>
         <source xml:lang="en">Disable Initial Hint</source>
         <target>Вимкнути початкову підказку</target>
       </trans-unit>
-      <trans-unit id="emptyHintText">
-        <source xml:lang="en">Open chat {0}. </source>
-        <target>Відкрити чат {0}.</target>
-      </trans-unit>
       <trans-unit id="hintTextDismiss">
         <source xml:lang="en">[[don't show]] this again.</source>
         <note>Preserve double-square brackets and their order</note>
@@ -1840,15 +1844,6 @@ Reason for leaving the sandbox: {2}</source>
         <source xml:lang="en"> Start typing to dismiss or </source>
         <target>Почніть вводити, щоб закрити або</target>
       </trans-unit>
-      <trans-unit id="inlineChatHint">
-        <source xml:lang="en">[[Open chat]] or start typing to dismiss.</source>
-        <note>Preserve double-square brackets and their order</note>
-        <target>[[Відкрити чат]] або почніть вводити, щоб закрити.</target>
-      </trans-unit>
-      <trans-unit id="openChatHint">
-        <source xml:lang="en">Open chat or start typing to dismiss.</source>
-        <target>Відкрийте чат або почніть вводити текст, щоб закрити.</target>
-      </trans-unit>
       <trans-unit id="showSuggestHint">
         <source xml:lang="en">Show suggestions {0}. </source>
         <target>Показати пропозиції {0}.</target>
@@ -1860,10 +1855,6 @@ Reason for leaving the sandbox: {2}</source>
       <trans-unit id="terminal.integrated.initialHint">
         <source xml:lang="en">Controls if the first terminal without input will show a hint about available actions when it is focused. This will only show when {0} is disabled.</source>
         <target>Контролює, чи перший термінал без вводу відобразить підказку про доступні дії, коли він буде в фокусі. Це буде показано лише тоді, коли {0} вимкнено.</target>
-      </trans-unit>
-      <trans-unit id="terminal.integrated.initialHintCopilotCli">
-        <source xml:lang="en">When enabled, the terminal initial hint will suggest using Copilot CLI by typing {0} instead of opening Copilot Chat.</source>
-        <target>Коли увімкнено, початковий підказка терміналу запропонує використовувати Copilot CLI, ввівши {0}, замість відкриття Copilot Chat.</target>
       </trans-unit>
     </body>
   </file>

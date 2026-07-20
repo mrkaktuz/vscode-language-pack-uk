@@ -26,10 +26,6 @@
         <source xml:lang="en">{0} sessions require terminal approval</source>
         <target>{0} сесій потребують затвердження терміналу</target>
       </trans-unit>
-      <trans-unit id="nSessionsUnresolvedComments">
-        <source xml:lang="en">{0} sessions have unresolved comments</source>
-        <target>{0} сесій мають невирішені коментарі</target>
-      </trans-unit>
       <trans-unit id="oneSessionFailingCI">
         <source xml:lang="en">1 session is failing CI</source>
         <target>1 сесія не проходить CI</target>
@@ -46,14 +42,26 @@
         <source xml:lang="en">1 session requires terminal approval</source>
         <target>1 сесія потребує затвердження терміналу</target>
       </trans-unit>
-      <trans-unit id="oneSessionUnresolvedComments">
-        <source xml:lang="en">1 session has unresolved comments</source>
-        <target>1 сесія має невирішені коментарі</target>
-      </trans-unit>
     </body>
   </file>
   <file original="src/vs/sessions/contrib/sessions/browser/blockedSessionsList" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="ciFailureIgnored">
+        <source xml:lang="en">CI failure ignored until this session has another CI failure.</source>
+        <target>Помилка CI ігнорується, поки ця сесія не отримає іншу помилку CI.</target>
+      </trans-unit>
+      <trans-unit id="ignoreCIFailure">
+        <source xml:lang="en">Ignore CI Failure</source>
+        <target>Ігнорувати помилку CI</target>
+      </trans-unit>
+      <trans-unit id="ignoreInputNeeded">
+        <source xml:lang="en">Ignore Input Needed</source>
+        <target>Ігнорувати потрібний ввід</target>
+      </trans-unit>
+      <trans-unit id="inputNeededIgnored">
+        <source xml:lang="en">Input needed ignored until this session needs input again.</source>
+        <target>Вхідні дані ігноруються, поки ця сесія знову не потребує вводу.</target>
+      </trans-unit>
       <trans-unit id="sessionsRequiringInput">
         <source xml:lang="en">Sessions requiring input</source>
         <target>Сесії, що потребують введення</target>
@@ -400,6 +408,18 @@
       <trans-unit id="chatsSection">
         <source xml:lang="en">Chats</source>
         <target>Чати</target>
+      </trans-unit>
+      <trans-unit id="ci.blockedRow">
+        <source xml:lang="en">{0} checks failed, {1} pending</source>
+        <target>{0} перевірок не пройшли, {1} в очікуванні</target>
+      </trans-unit>
+      <trans-unit id="ci.fixCI">
+        <source xml:lang="en">Fix CI</source>
+        <target>Виправити CI</target>
+      </trans-unit>
+      <trans-unit id="ci.fixCITooltip">
+        <source xml:lang="en">Fix failing CI checks</source>
+        <target>Виправити невдалі перевірки CI</target>
       </trans-unit>
       <trans-unit id="createGroupAction">
         <source xml:lang="en">Create Group</source>

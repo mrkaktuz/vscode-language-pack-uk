@@ -110,6 +110,14 @@
         <source xml:lang="en">Quick Fix</source>
         <target>Швидке вирішення</target>
       </trans-unit>
+      <trans-unit id="accessibility.signals.voiceModeStarted">
+        <source xml:lang="en">Voice Mode Started</source>
+        <target>Режим голосу запущено</target>
+      </trans-unit>
+      <trans-unit id="accessibility.signals.voiceModeStopped">
+        <source xml:lang="en">Voice Mode Stopped</source>
+        <target>Режим голосу зупинено</target>
+      </trans-unit>
       <trans-unit id="accessibilitySignals.chatEditModifiedFile">
         <source xml:lang="en">Chat Edit Modified File</source>
         <target>Чат Редагувати змінений файл</target>
@@ -241,6 +249,14 @@
       <trans-unit id="accessibilitySignals.terminalQuickFix.name">
         <source xml:lang="en">Terminal Quick Fix</source>
         <target>Швидке виправлення терміналу</target>
+      </trans-unit>
+      <trans-unit id="accessibilitySignals.voiceModeStarted">
+        <source xml:lang="en">Voice Mode Started</source>
+        <target>Режим голосу запущено</target>
+      </trans-unit>
+      <trans-unit id="accessibilitySignals.voiceModeStopped">
+        <source xml:lang="en">Voice Mode Stopped</source>
+        <target>Режим голосу зупинено</target>
       </trans-unit>
       <trans-unit id="accessibilitySignals.voiceRecordingStarted">
         <source xml:lang="en">Voice Recording Started</source>
@@ -528,29 +544,21 @@ A keybinding</note>
         <source xml:lang="en">When enabled, hides the Extension Host Copilot CLI entry from the Agents window picker. Requires `#chat.agentHost.enabled#`.</source>
         <target>Коли увімкнено, приховує запис CLI Copilot хоста розширення з вибору вікна агентів. Потрібно `#chat.agentHost.enabled#`.</target>
       </trans-unit>
+      <trans-unit id="chat.defaultToCopilotHarness">
+        <source xml:lang="en">When enabled, new editor and panel chat sessions default to the Agent Host Copilot CLI instead of the local harness. Requires `#{0}#`.</source>
+        <target>Коли увімкнено, нові сесії редактора та панельного чату за замовчуванням використовують Agent Host Copilot CLI замість локального harness. Потрібно `#{0}#`.</target>
+      </trans-unit>
       <trans-unit id="chat.editor.copilotCli.hideExtensionHost">
         <source xml:lang="en">When enabled, hides the Extension Host Copilot CLI entry from the editor window chat picker.</source>
         <target>Коли ввімкнено, приховує запис CLI Copilot розширення з вибору чату вікна редактора.</target>
       </trans-unit>
-      <trans-unit id="chat.editor.defaultProvider">
-        <source xml:lang="en">Controls which provider is used as the default for new editor chat sessions.</source>
-        <target>Контролює, який постачальник використовується за замовчуванням для нових сеансів чату редактора.</target>
-      </trans-unit>
-      <trans-unit id="chat.editor.defaultProvider.copilotAh">
-        <source xml:lang="en">Use the Agent Host Copilot CLI</source>
-        <target>Використовуйте CLI Copilot для хоста агента</target>
-      </trans-unit>
-      <trans-unit id="chat.editor.defaultProvider.copilotEh">
-        <source xml:lang="en">Use the Extension Host Copilot CLI</source>
-        <target>Використовуйте CLI розширення Host Copilot</target>
-      </trans-unit>
-      <trans-unit id="chat.editor.defaultProvider.local">
-        <source xml:lang="en">Use the built-in VS Code local chat harness</source>
-        <target>Використовуйте вбудований локальний чат-харнес VS Code</target>
-      </trans-unit>
       <trans-unit id="chat.editor.localAgent.enabled">
-        <source xml:lang="en">When enabled, shows the VS Code local chat harness in the chat picker.</source>
-        <target>Коли увімкнено, показує локальний чат VS Code у виборі чату.</target>
+        <source xml:lang="en">When enabled, shows the VS Code local chat harness in the chat picker. This setting is ignored in virtual workspaces, where the local chat harness is always available.</source>
+        <target>Коли увімкнено, показує локальний чат VS Code у виборі чату. Ця налаштування ігнорується у віртуальних робочих просторах, де локальний чат завжди доступний.</target>
+      </trans-unit>
+      <trans-unit id="chat.editor.preferCopilotHarness">
+        <source xml:lang="en">When enabled, prefers the Agent Host Copilot CLI for new editor chat sessions. If the local harness is selected, it is replaced with Copilot once.</source>
+        <target>Коли увімкнено, надає перевагу CLI Copilot для хост-агента для нових сеансів чату редактора. Якщо вибрано локальний хард, він замінюється на Copilot один раз.</target>
       </trans-unit>
       <trans-unit id="chatAgentHostConfigurationTitle">
         <source xml:lang="en">Chat Agent Host</source>
@@ -577,8 +585,8 @@ A keybinding</note>
         <target>Codex Агент</target>
       </trans-unit>
       <trans-unit id="agentHost.config.globalAutoApproveEnabled.description">
-        <source xml:lang="en">Whether VS Code's global auto-approve setting is enabled. When `true`, every tool call is auto-approved, equivalent to a session using Bypass Approvals.</source>
-        <target>Чи увімкнено глобальне налаштування автоматичного схвалення в VS Code. Коли `true`, кожен виклик інструменту автоматично схвалюється, що еквівалентно сеансу з використанням обхідних схвалень.</target>
+        <source xml:lang="en">Whether VS Code's global auto-approve setting is enabled. When `true`, every tool call is auto-approved, equivalent to a session using Allow all.</source>
+        <target>Чи увімкнено глобальне автоматичне схвалення в налаштуваннях VS Code. Коли `true`, кожен виклик інструменту автоматично схвалюється, що еквівалентно сесії з дозволом на все.</target>
       </trans-unit>
       <trans-unit id="agentHost.config.globalAutoApproveEnabled.title">
         <source xml:lang="en">Global Auto Approve</source>
@@ -676,6 +684,14 @@ A keybinding</note>
         <source xml:lang="en">Session Sync</source>
         <target>Синхронізація сесії</target>
       </trans-unit>
+      <trans-unit id="agentHost.config.systemProxyEnabled.description">
+        <source xml:lang="en">Whether Copilot sessions automatically discover and use the operating system's proxy configuration.</source>
+        <target>Чи автоматично сесії Copilot виявляють і використовують конфігурацію проксі операційної системи.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.systemProxyEnabled.title">
+        <source xml:lang="en">System Proxy Discovery</source>
+        <target>Система виявлення проксі</target>
+      </trans-unit>
       <trans-unit id="agentHost.config.telemetryLevel.description">
         <source xml:lang="en">Most restrictive telemetry level requested by connected clients.</source>
         <target>Найбільш обмежувальний рівень телеметрії, запитуваний підключеними клієнтами.</target>
@@ -704,21 +720,29 @@ A keybinding</note>
         <source xml:lang="en">Approvals</source>
         <target>Схвалення</target>
       </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.autoApprove.assisted">
+        <source xml:lang="en">Assisted permissions</source>
+        <target>Допоміжні дозволи</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.autoApprove.assistedDescription">
+        <source xml:lang="en">Evaluates risk before running tools</source>
+        <target>Оцінює ризик перед запуском інструментів</target>
+      </trans-unit>
       <trans-unit id="agentHost.sessionConfig.autoApprove.bypass">
-        <source xml:lang="en">Bypass Approvals</source>
-        <target>Обійти затвердження</target>
+        <source xml:lang="en">Allow all</source>
+        <target>Дозволити все</target>
       </trans-unit>
       <trans-unit id="agentHost.sessionConfig.autoApprove.bypassDescription">
-        <source xml:lang="en">All tool calls are auto-approved</source>
-        <target>Усі виклики інструментів автоматично затверджуються.</target>
+        <source xml:lang="en">Runs tool calls without asking</source>
+        <target>Виконує виклики інструментів без запитів</target>
       </trans-unit>
       <trans-unit id="agentHost.sessionConfig.autoApprove.default">
-        <source xml:lang="en">Default Approvals</source>
+        <source xml:lang="en">Default approvals</source>
         <target>Типові затвердження</target>
       </trans-unit>
       <trans-unit id="agentHost.sessionConfig.autoApprove.defaultDescription">
-        <source xml:lang="en">Copilot uses your configured settings</source>
-        <target>Copilot використовує ваші налаштовані параметри.</target>
+        <source xml:lang="en">Asks when approval settings don't apply</source>
+        <target>Запитує, коли налаштування затвердження не застосовуються.</target>
       </trans-unit>
       <trans-unit id="agentHost.sessionConfig.autoApproveDescription">
         <source xml:lang="en">Tool approval behavior for this session</source>
@@ -904,6 +928,10 @@ A keybinding</note>
         <source xml:lang="en">Controls the enterprise-managed OTel `service.name` resource attribute for Copilot OpenTelemetry export.</source>
         <target>Контролює атрибут ресурсу OTel `service.name`, керований підприємством, для експорту OpenTelemetry Copilot.</target>
       </trans-unit>
+      <trans-unit id="chat.agentHost.systemProxy.enabled">
+        <source xml:lang="en">When enabled, Copilot sessions automatically discover and use the operating system's proxy configuration when no proxy environment variable is set.</source>
+        <target>Коли увімкнено, сеанси Copilot автоматично виявляють і використовують конфігурацію проксі операційної системи, коли жодна змінна середовища проксі не встановлена.</target>
+      </trans-unit>
       <trans-unit id="chatAgentHostStarterConfigurationTitle">
         <source xml:lang="en">Chat Agent Host Starter</source>
         <target>Чат-агент Хост Стартера</target>
@@ -964,6 +992,22 @@ A keybinding</note>
   </file>
   <file original="src/vs/platform/agentHost/common/copilotCliConfig" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="agentHost.config.copilotSdkLogLevel.description">
+        <source xml:lang="en">Controls logging from the Copilot SDK runtime. Agent host trace logging always enables trace output.</source>
+        <target>Контролює ведення журналу з часу виконання Copilot SDK. Ведення журналу трасування хоста агента завжди активує вихід трасування.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.copilotSdkLogLevel.info">
+        <source xml:lang="en">Info</source>
+        <target>Інформація</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.copilotSdkLogLevel.title">
+        <source xml:lang="en">Copilot SDK Log Level</source>
+        <target>Copilot SDK Рівень журналу</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.copilotSdkLogLevel.trace">
+        <source xml:lang="en">Trace</source>
+        <target>Слід</target>
+      </trans-unit>
       <trans-unit id="agentHost.config.enableCustomTerminalTool.description">
         <source xml:lang="en">When enabled, Copilot SDK sessions use Agent Host's terminal tool override instead of the SDK's default terminal behavior.</source>
         <target>Коли увімкнено, сесії Copilot SDK використовують перевагу інструмента терміналу Agent Host замість стандартної поведінки терміналу SDK.</target>
@@ -1472,6 +1516,10 @@ A keybinding</note>
         <source xml:lang="en">Run in terminal?</source>
         <target>Запустити в терміналі?</target>
       </trans-unit>
+      <trans-unit id="claude.permission.skill.title">
+        <source xml:lang="en">Run skill?</source>
+        <target>Запустити навичку?</target>
+      </trans-unit>
       <trans-unit id="claude.permission.url.title">
         <source xml:lang="en">Fetch URL?</source>
         <target>Отримати URL?</target>
@@ -1536,9 +1584,29 @@ A keybinding</note>
         <source xml:lang="en">Read file</source>
         <target>Читати файл</target>
       </trans-unit>
+      <trans-unit id="claude.tool.skill">
+        <source xml:lang="en">Run skill</source>
+        <target>Запустити навичку</target>
+      </trans-unit>
       <trans-unit id="claude.tool.task">
         <source xml:lang="en">Run subagent task</source>
         <target>Запустити підагентське завдання</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.taskCreate">
+        <source xml:lang="en">Create task</source>
+        <target>Створити задачу</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.taskGet">
+        <source xml:lang="en">Read task</source>
+        <target>Читати завдання</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.taskList">
+        <source xml:lang="en">List tasks</source>
+        <target>Список завдань</target>
+      </trans-unit>
+      <trans-unit id="claude.tool.taskUpdate">
+        <source xml:lang="en">Update task</source>
+        <target>Оновити завдання</target>
       </trans-unit>
       <trans-unit id="claude.tool.todoWrite">
         <source xml:lang="en">Update todo list</source>
@@ -1612,9 +1680,49 @@ A keybinding</note>
         <source xml:lang="en">Read {0}</source>
         <target>Читати {0}</target>
       </trans-unit>
+      <trans-unit id="claude.toolComplete.skill">
+        <source xml:lang="en">Ran skill</source>
+        <target>Запущений навик</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.skillNamed">
+        <source xml:lang="en">Ran skill {0}</source>
+        <target>Виконано навичку {0}</target>
+      </trans-unit>
       <trans-unit id="claude.toolComplete.task">
         <source xml:lang="en">Ran subagent</source>
         <target>Запустити підагента</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.taskComplete">
+        <source xml:lang="en">Completed task</source>
+        <target>Завершене завдання</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.taskCreate">
+        <source xml:lang="en">Created task</source>
+        <target>Створене завдання</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.taskCreateNamed">
+        <source xml:lang="en">Created task: {0}</source>
+        <target>Створено задачу: {0}</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.taskDelete">
+        <source xml:lang="en">Deleted task</source>
+        <target>Видалене завдання</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.taskGet">
+        <source xml:lang="en">Read task</source>
+        <target>Читати завдання</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.taskList">
+        <source xml:lang="en">Read task list</source>
+        <target>Прочитати список завдань</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.taskStart">
+        <source xml:lang="en">Started task</source>
+        <target>Розпочато завдання</target>
+      </trans-unit>
+      <trans-unit id="claude.toolComplete.taskUpdate">
+        <source xml:lang="en">Updated task</source>
+        <target>Оновлене завдання</target>
       </trans-unit>
       <trans-unit id="claude.toolComplete.todoWrite">
         <source xml:lang="en">Updated todo list</source>
@@ -1683,6 +1791,46 @@ A keybinding</note>
       <trans-unit id="claude.toolInvoke.readFile">
         <source xml:lang="en">Reading {0}</source>
         <target>Читання {0}</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.skill">
+        <source xml:lang="en">Running skill</source>
+        <target>Навички бігу</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.skillNamed">
+        <source xml:lang="en">Running skill {0}</source>
+        <target>Запуск навички {0}</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.taskComplete">
+        <source xml:lang="en">Completing task</source>
+        <target>Завершення завдання</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.taskCreate">
+        <source xml:lang="en">Creating task</source>
+        <target>Створення завдання</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.taskCreateNamed">
+        <source xml:lang="en">Creating task: {0}</source>
+        <target>Створення завдання: {0}</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.taskDelete">
+        <source xml:lang="en">Deleting task</source>
+        <target>Видалення завдання</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.taskGet">
+        <source xml:lang="en">Reading task</source>
+        <target>Читальне завдання</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.taskList">
+        <source xml:lang="en">Reading task list</source>
+        <target>Читання списку завдань</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.taskStart">
+        <source xml:lang="en">Starting task</source>
+        <target>Початок завдання</target>
+      </trans-unit>
+      <trans-unit id="claude.toolInvoke.taskUpdate">
+        <source xml:lang="en">Updating task</source>
+        <target>Оновлення завдання</target>
       </trans-unit>
       <trans-unit id="claude.toolInvoke.todoWrite">
         <source xml:lang="en">Updating todo list</source>
@@ -2004,58 +2152,6 @@ A keybinding</note>
   </file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotAgent" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="agentHost.sessionConfig.branch">
-        <source xml:lang="en">Branch</source>
-        <target>Гілка</target>
-      </trans-unit>
-      <trans-unit id="agentHost.sessionConfig.branchDescription">
-        <source xml:lang="en">Base branch to work from</source>
-        <target>Базова гілка для роботи</target>
-      </trans-unit>
-      <trans-unit id="agentHost.sessionConfig.isolation">
-        <source xml:lang="en">Isolation</source>
-        <target>Ізоляція</target>
-      </trans-unit>
-      <trans-unit id="agentHost.sessionConfig.isolation.folder">
-        <source xml:lang="en">Folder</source>
-        <target>Папка</target>
-      </trans-unit>
-      <trans-unit id="agentHost.sessionConfig.isolation.folderDescription">
-        <source xml:lang="en">Work directly in the folder</source>
-        <target>Працюйте безпосередньо в папці</target>
-      </trans-unit>
-      <trans-unit id="agentHost.sessionConfig.isolation.worktree">
-        <source xml:lang="en">Worktree</source>
-        <target>Робоче дерево</target>
-      </trans-unit>
-      <trans-unit id="agentHost.sessionConfig.isolation.worktreeDescription">
-        <source xml:lang="en">Create a Git worktree for isolation</source>
-        <target>Створіть Git worktree для ізоляції</target>
-      </trans-unit>
-      <trans-unit id="agentHost.sessionConfig.isolationDescription">
-        <source xml:lang="en">Where the agent should make changes</source>
-        <target>Де агент повинен внести зміни</target>
-      </trans-unit>
-      <trans-unit id="agentHost.sessionConfig.worktreeBranchPrefix">
-        <source xml:lang="en">Worktree Branch Prefix</source>
-        <target>Префікс гілки Worktree</target>
-      </trans-unit>
-      <trans-unit id="agentHost.sessionConfig.worktreeBranchPrefixDescription">
-        <source xml:lang="en">Prefix applied to the branch created for an isolated worktree.</source>
-        <target>Префікс, застосований до гілки, створеної для ізольованого робочого дерева.</target>
-      </trans-unit>
-      <trans-unit id="agentHost.sessionConfig.worktreeIncludeFiles">
-        <source xml:lang="en">Worktree Include Files</source>
-        <target>Файли, що включаються в робочу деревину</target>
-      </trans-unit>
-      <trans-unit id="agentHost.sessionConfig.worktreeIncludeFilesDescription">
-        <source xml:lang="en">Glob patterns for git-ignored files to copy into the isolated worktree.</source>
-        <target>Глобальні шаблони для файлів, ігнорованих git, які потрібно скопіювати в ізольоване робоче дерево.</target>
-      </trans-unit>
-      <trans-unit id="agentHost.sessionConfig.worktreeIncludeFilesItem">
-        <source xml:lang="en">Pattern</source>
-        <target>Шаблон</target>
-      </trans-unit>
       <trans-unit id="copilot.modelContextSize.default">
         <source xml:lang="en">Default</source>
         <target>За замовчуванням</target>
@@ -2088,37 +2184,21 @@ A keybinding</note>
         <source xml:lang="en">Error parsing plugin.</source>
         <target>Помилка парсингу плагіна.</target>
       </trans-unit>
-      <trans-unit id="copilotAgent.worktreeCreated">
-        <source xml:lang="en">Created isolated worktree for branch {0}</source>
-        <target>Створено ізольоване робоче дерево для гілки {0}</target>
-      </trans-unit>
-      <trans-unit id="sessionWorkingDirectoryMissing">
-        <source xml:lang="en">This session couldn't be loaded because its working directory no longer exists: {0}</source>
-        <target>Цю сесію не вдалося завантажити, оскільки її робочий каталог більше не існує: {0}</target>
-      </trans-unit>
-      <trans-unit id="sessionWorkingDirectoryMissingWithReason">
-        <source xml:lang="en">This session couldn't be loaded because its worktree is missing and could not be recreated: {0}</source>
-        <target>Цю сесію не вдалося завантажити, оскільки її робоче дерево відсутнє і не може бути відтворене: {0}</target>
-      </trans-unit>
-      <trans-unit id="worktreeRecreateBranchMissing">
-        <source xml:lang="en">the branch '{0}' no longer exists</source>
-        <target>гілка '{0}' більше не існує</target>
-      </trans-unit>
     </body>
   </file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotAgentSession" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHost.planReview.autopilot.description">
-        <source xml:lang="en">Auto-approve all tool calls and continue until done.</source>
-        <target>Автоматично затверджувати всі виклики інструментів і продовжувати до завершення.</target>
+        <source xml:lang="en">Continue autonomously until done, using the selected approval level.</source>
+        <target>Продовжуйте автономно, поки не завершите, використовуючи вибраний рівень затвердження.</target>
       </trans-unit>
       <trans-unit id="agentHost.planReview.autopilot.label">
         <source xml:lang="en">Implement with Autopilot</source>
         <target>Впровадити з Autopilot</target>
       </trans-unit>
       <trans-unit id="agentHost.planReview.autopilotFleet.description">
-        <source xml:lang="en">Auto-approve all tool calls, including fleet management actions, and continue until done.</source>
-        <target>Автоматично затверджуйте всі виклики інструментів, включаючи дії з управління флотом, і продовжуйте до завершення.</target>
+        <source xml:lang="en">Continue autonomously with fleet management, using the selected approval level.</source>
+        <target>Продовжуйте автономно з управлінням флотом, використовуючи обраний рівень затвердження.</target>
       </trans-unit>
       <trans-unit id="agentHost.planReview.autopilotFleet.label">
         <source xml:lang="en">Implement with Autopilot Fleet</source>
@@ -2911,6 +2991,78 @@ A keybinding</note>
       <trans-unit id="toolName.sendMessage">
         <source xml:lang="en">Send Message</source>
         <target>Надіслати повідомлення</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/shared/worktreeIsolation" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHost.sessionConfig.branch">
+        <source xml:lang="en">Branch</source>
+        <target>Гілка</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.branchDescription">
+        <source xml:lang="en">Base branch to work from</source>
+        <target>Базова гілка для роботи</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.isolation">
+        <source xml:lang="en">Isolation</source>
+        <target>Ізоляція</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.isolation.folder">
+        <source xml:lang="en">Folder</source>
+        <target>Папка</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.isolation.folderDescription">
+        <source xml:lang="en">Work directly in the folder</source>
+        <target>Працюйте безпосередньо в папці</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.isolation.worktree">
+        <source xml:lang="en">Worktree</source>
+        <target>Робоче дерево</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.isolation.worktreeDescription">
+        <source xml:lang="en">Create a Git worktree for isolation</source>
+        <target>Створіть Git worktree для ізоляції</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.isolationDescription">
+        <source xml:lang="en">Where the agent should make changes</source>
+        <target>Де агент повинен внести зміни</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.worktreeBranchPrefix">
+        <source xml:lang="en">Worktree Branch Prefix</source>
+        <target>Префікс гілки Worktree</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.worktreeBranchPrefixDescription">
+        <source xml:lang="en">Prefix applied to the branch created for an isolated worktree.</source>
+        <target>Префікс, застосований до гілки, створеної для ізольованого робочого дерева.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.worktreeIncludeFiles">
+        <source xml:lang="en">Worktree Include Files</source>
+        <target>Файли, що включаються в робочу деревину</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.worktreeIncludeFilesDescription">
+        <source xml:lang="en">Glob patterns for git-ignored files to copy into the isolated worktree.</source>
+        <target>Глобальні шаблони для файлів, ігнорованих git, які потрібно скопіювати в ізольоване робоче дерево.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.worktreeIncludeFilesItem">
+        <source xml:lang="en">Pattern</source>
+        <target>Шаблон</target>
+      </trans-unit>
+      <trans-unit id="agentHost.worktreeCreated">
+        <source xml:lang="en">Created isolated worktree for branch {0}</source>
+        <target>Створено ізольоване робоче дерево для гілки {0}</target>
+      </trans-unit>
+      <trans-unit id="sessionWorkingDirectoryMissing">
+        <source xml:lang="en">This session couldn't be loaded because its working directory no longer exists: {0}</source>
+        <target>Цю сесію не вдалося завантажити, оскільки її робочий каталог більше не існує: {0}</target>
+      </trans-unit>
+      <trans-unit id="sessionWorkingDirectoryMissingWithReason">
+        <source xml:lang="en">This session couldn't be loaded because its worktree is missing and could not be recreated: {0}</source>
+        <target>Цю сесію не вдалося завантажити, оскільки її робоче дерево відсутнє і не може бути відтворене: {0}</target>
+      </trans-unit>
+      <trans-unit id="worktreeRecreateBranchMissing">
+        <source xml:lang="en">the branch '{0}' no longer exists</source>
+        <target>гілка '{0}' більше не існує</target>
       </trans-unit>
     </body>
   </file>
@@ -4600,6 +4752,14 @@ A keybinding label</note>
   </file>
   <file original="src/vs/platform/mcp/common/allowedMcpServersService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="mcp server is denied">
+        <source xml:lang="en">This Model Context Protocol server is blocked by your organization's policy. Please contact your administrator for more information.</source>
+        <target>Цей сервер протоколу контексту моделі заблоковано політикою вашої організації. Будь ласка, зверніться до вашого адміністратора для отримання додаткової інформації.</target>
+      </trans-unit>
+      <trans-unit id="mcp server not in allowlist">
+        <source xml:lang="en">This Model Context Protocol server is not in the list of servers allowed by your organization. Please contact your administrator for more information.</source>
+        <target>Цей сервер протоколу контексту моделі не входить до списку серверів, дозволених вашою організацією. Будь ласка, зверніться до вашого адміністратора для отримання додаткової інформації.</target>
+      </trans-unit>
       <trans-unit id="mcp servers are not allowed">
         <source xml:lang="en">Model Context Protocol servers are disabled in the Editor. Please check your [settings]({0}).</source>
         <target>Сервери протоколу контексту моделі вимкнені в редакторі. Будь ласка, перевірте свої [налаштування]({0}).</target>
@@ -7339,6 +7499,10 @@ To override an existing profile use its profile name as the key, for example:
   </file>
   <file original="src/vs/platform/workspaces/electron-main/workspacesHistoryMainService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="agentsWindowRecentWorkspace">
+        <source xml:lang="en">Agents Window</source>
+        <target>Вікно агентів</target>
+      </trans-unit>
       <trans-unit id="cancel">
         <source xml:lang="en">&amp;&amp;Cancel</source>
         <note>&amp;&amp; denotes a mnemonic</note>

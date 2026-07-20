@@ -2,25 +2,73 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file original="src/vs/sessions/contrib/automations/browser/automationDialog" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="automation.form.branch.capabilityLoadingReason">
+        <source xml:lang="en">Session capabilities are loading.</source>
+        <target>Завантажуються можливості сесії.</target>
+      </trans-unit>
+      <trans-unit id="automation.form.branch.chooseReason">
+        <source xml:lang="en">Choose the local branch to use as the Worktree base.</source>
+        <target>Виберіть локальну гілку, яку використовувати як базу Worktree.</target>
+      </trans-unit>
       <trans-unit id="automation.form.branch.detached">
         <source xml:lang="en">({0})</source>
         <target>({0})</target>
       </trans-unit>
-      <trans-unit id="automation.form.branch.noBranch">
-        <source xml:lang="en">—</source>
-        <target>Будь ласка, надайте текст для перекладу.</target>
+      <trans-unit id="automation.form.branch.folderModeReason">
+        <source xml:lang="en">Select Worktree to choose a branch.</source>
+        <target>Виберіть Worktree, щоб обрати гілку.</target>
       </trans-unit>
-      <trans-unit id="automation.form.branch.noFolder">
-        <source xml:lang="en">—</source>
-        <target>Вибачте, але ви не надали текст для перекладу. Будь ласка, надайте рядок, який потрібно перекласти.</target>
+      <trans-unit id="automation.form.branch.loadError">
+        <source xml:lang="en">Unable to load branches</source>
+        <target>Неможливо завантажити гілки</target>
+      </trans-unit>
+      <trans-unit id="automation.form.branch.loadErrorReason">
+        <source xml:lang="en">Open the branch picker to retry loading local branches.</source>
+        <target>Відкрийте вибір гілок, щоб повторити завантаження локальних гілок.</target>
+      </trans-unit>
+      <trans-unit id="automation.form.branch.loading">
+        <source xml:lang="en">Loading branches…</source>
+        <target>Завантаження гілок…</target>
+      </trans-unit>
+      <trans-unit id="automation.form.branch.loadingReason">
+        <source xml:lang="en">Local branches are loading.</source>
+        <target>Локальні гілки завантажуються.</target>
+      </trans-unit>
+      <trans-unit id="automation.form.branch.noBranches">
+        <source xml:lang="en">No local branches</source>
+        <target>Немає локальних гілок</target>
+      </trans-unit>
+      <trans-unit id="automation.form.branch.noBranchesReason">
+        <source xml:lang="en">No local branches were found in this repository.</source>
+        <target>У цьому репозиторії не знайдено локальних гілок.</target>
+      </trans-unit>
+      <trans-unit id="automation.form.branch.noFolderReason">
+        <source xml:lang="en">Select a folder to determine its Git branch.</source>
+        <target>Виберіть папку, щоб визначити її Git-гілку.</target>
       </trans-unit>
       <trans-unit id="automation.form.branch.noRepo">
         <source xml:lang="en">no git repo</source>
         <target>немає git репозиторію</target>
       </trans-unit>
+      <trans-unit id="automation.form.branch.noRepoReason">
+        <source xml:lang="en">No Git repository was found for the selected folder.</source>
+        <target>Не було знайдено репозиторій Git для вибраної папки.</target>
+      </trans-unit>
+      <trans-unit id="automation.form.branch.select">
+        <source xml:lang="en">Select branch</source>
+        <target>Виберіть гілку</target>
+      </trans-unit>
       <trans-unit id="automation.form.branch.unknown">
         <source xml:lang="en">—</source>
         <target>Вибачте, але ви не надали текст для перекладу. Будь ласка, надайте рядок, який потрібно перекласти.</target>
+      </trans-unit>
+      <trans-unit id="automation.form.branch.unsupportedReason">
+        <source xml:lang="en">The selected session type does not support Worktree branch configuration.</source>
+        <target>Вибраний тип сесії не підтримує конфігурацію гілки Worktree.</target>
+      </trans-unit>
+      <trans-unit id="automation.form.branchRequired">
+        <source xml:lang="en">A branch is required for Worktree isolation.</source>
+        <target>Для ізоляції Worktree потрібна гілка.</target>
       </trans-unit>
       <trans-unit id="automation.form.day">
         <source xml:lang="en">Day of week</source>
@@ -42,21 +90,21 @@
         <source xml:lang="en">Schedule</source>
         <target>Розклад</target>
       </trans-unit>
-      <trans-unit id="automation.form.isolation.folder">
-        <source xml:lang="en">Folder</source>
-        <target>Папка</target>
-      </trans-unit>
-      <trans-unit id="automation.form.isolation.pickerAriaLabel">
-        <source xml:lang="en">Pick Isolation Mode, {0}</source>
-        <target>Виберіть режим ізоляції, {0}</target>
-      </trans-unit>
-      <trans-unit id="automation.form.isolation.widgetAriaLabel">
-        <source xml:lang="en">Isolation Mode</source>
-        <target>Режим ізоляції</target>
+      <trans-unit id="automation.form.isolation.checkboxAriaLabel">
+        <source xml:lang="en">Worktree isolation</source>
+        <target>Ізоляція робочого дерева</target>
       </trans-unit>
       <trans-unit id="automation.form.isolation.worktree">
-        <source xml:lang="en">Worktree</source>
-        <target>Робоче дерево</target>
+        <source xml:lang="en">New Worktree</source>
+        <target>Новий Worktree</target>
+      </trans-unit>
+      <trans-unit id="automation.form.isolation.worktreeNoFolder">
+        <source xml:lang="en">Select a folder to use Worktree isolation.</source>
+        <target>Виберіть папку для використання ізоляції Worktree.</target>
+      </trans-unit>
+      <trans-unit id="automation.form.isolation.worktreeUnavailable">
+        <source xml:lang="en">Not supported by the selected session type</source>
+        <target>Не підтримується вибраним типом сесії</target>
       </trans-unit>
       <trans-unit id="automation.form.isolationGroup.action">
         <source xml:lang="en">Automations Isolation Group</source>
@@ -74,6 +122,14 @@
         <source xml:lang="en">Name is required.</source>
         <target>Ім'я є обов'язковим.</target>
       </trans-unit>
+      <trans-unit id="automation.form.noWorkspace">
+        <source xml:lang="en">No workspace</source>
+        <target>Немає робочого простору</target>
+      </trans-unit>
+      <trans-unit id="automation.form.noWorkspace.description">
+        <source xml:lang="en">Run without a backing workspace</source>
+        <target>Запустити без робочого простору</target>
+      </trans-unit>
       <trans-unit id="automation.form.prompt">
         <source xml:lang="en">Prompt</source>
         <target>Запит</target>
@@ -86,6 +142,10 @@
         <source xml:lang="en">Prompt is required.</source>
         <target>Підказка є обов'язковою.</target>
       </trans-unit>
+      <trans-unit id="automation.form.sessionTypeRequired">
+        <source xml:lang="en">Session type is required.</source>
+        <target>Тип сесії є обов'язковим.</target>
+      </trans-unit>
       <trans-unit id="automation.form.time">
         <source xml:lang="en">Time</source>
         <target>Час</target>
@@ -93,6 +153,14 @@
       <trans-unit id="automation.form.workspacePicker.action">
         <source xml:lang="en">Automations Workspace Picker</source>
         <target>Вибір робочого простору автоматизацій</target>
+      </trans-unit>
+      <trans-unit id="automation.form.workspacePicker.pickAriaLabel">
+        <source xml:lang="en">Pick a workspace for this automation</source>
+        <target>Виберіть робочий простір для цієї автоматизації</target>
+      </trans-unit>
+      <trans-unit id="automation.form.workspacePicker.selectedAriaLabel">
+        <source xml:lang="en">Automation target, {0}</source>
+        <target>Автоматизаційна ціль, {0}</target>
       </trans-unit>
       <trans-unit id="automation.interval.daily">
         <source xml:lang="en">Daily</source>
@@ -110,6 +178,10 @@
         <source xml:lang="en">Weekly</source>
         <target>Щотижня</target>
       </trans-unit>
+      <trans-unit id="pickWorkspace">
+        <source xml:lang="en">workspace</source>
+        <target>робоча область</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/sessions/contrib/automations/browser/automationDialogService" source-language="en" datatype="plaintext" target-language="uk">
@@ -123,8 +195,8 @@
         <target>Створити</target>
       </trans-unit>
       <trans-unit id="automation.dialog.createDescription">
-        <source xml:lang="en">Define a prompt that Copilot will run on a schedule against the selected folder.</source>
-        <target>Визначте запит, який Copilot буде виконувати за розкладом для вибраної папки.</target>
+        <source xml:lang="en">Define a prompt that Copilot will run on a schedule against the selected target.</source>
+        <target>Визначте запит, який Copilot виконуватиме за розкладом щодо вибраної цілі.</target>
       </trans-unit>
       <trans-unit id="automation.dialog.createTitle">
         <source xml:lang="en">New automation</source>
