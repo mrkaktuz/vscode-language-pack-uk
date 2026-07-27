@@ -46,6 +46,10 @@
   </file>
   <file original="src/vs/sessions/contrib/sessions/browser/blockedSessionsList" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="allInputNeededIgnored">
+        <source xml:lang="en">All current blocked sessions were ignored.</source>
+        <target>Усі поточні заблоковані сесії були проігноровані.</target>
+      </trans-unit>
       <trans-unit id="ciFailureIgnored">
         <source xml:lang="en">CI failure ignored until this session has another CI failure.</source>
         <target>Помилка CI ігнорується, поки ця сесія не отримає іншу помилку CI.</target>
@@ -77,6 +81,10 @@
       <trans-unit id="automations">
         <source xml:lang="en">Automations</source>
         <target>Автоматизації</target>
+      </trans-unit>
+      <trans-unit id="harnessSettings">
+        <source xml:lang="en">Codex Settings</source>
+        <target>Налаштування Codex</target>
       </trans-unit>
       <trans-unit id="hooks">
         <source xml:lang="en">Hooks</source>
@@ -172,8 +180,8 @@
         <target>Закрити</target>
       </trans-unit>
       <trans-unit id="chatCompositeBar.conversations">
-        <source xml:lang="en">Conversations</source>
-        <target>Розмови</target>
+        <source xml:lang="en">Chats</source>
+        <target>Чати</target>
       </trans-unit>
       <trans-unit id="chatCompositeBar.maximize">
         <source xml:lang="en">Maximize Session</source>
@@ -369,6 +377,14 @@
         <source xml:lang="en">Show Sessions</source>
         <target>Показати сесії</target>
       </trans-unit>
+      <trans-unit id="closeBlockedSessions">
+        <source xml:lang="en">Close</source>
+        <target>Закрити</target>
+      </trans-unit>
+      <trans-unit id="ignoreAllInputNeeded">
+        <source xml:lang="en">Ignore All Input Needed</source>
+        <target>Ігнорувати всі необхідні введення</target>
+      </trans-unit>
       <trans-unit id="nSessionsApproved">
         <source xml:lang="en">Approved {0} sessions</source>
         <target>Схвалено {0} сесій</target>
@@ -449,6 +465,14 @@
         <source xml:lang="en">No chats</source>
         <target>Немає чатів</target>
       </trans-unit>
+      <trans-unit id="noSessionInGroup">
+        <source xml:lang="en">No session</source>
+        <target>Немає сесії</target>
+      </trans-unit>
+      <trans-unit id="noSessionInGroupHover">
+        <source xml:lang="en">Use Add to Group from a session's context menu, or drag it into this group.</source>
+        <target>Використовуйте Додати до групи з контекстного меню сесії або перетягніть його в цю групу.</target>
+      </trans-unit>
       <trans-unit id="older">
         <source xml:lang="en">Older</source>
         <target>Старший</target>
@@ -484,6 +508,10 @@
       <trans-unit id="sessionItemAria">
         <source xml:lang="en">{0}, updated {1}</source>
         <target>{0}, оновлено {1}</target>
+      </trans-unit>
+      <trans-unit id="sessionPlaceholderAria">
+        <source xml:lang="en">{0}. {1}</source>
+        <target>{0}. {1}</target>
       </trans-unit>
       <trans-unit id="sessions.dragLabel">
         <source xml:lang="en">{0} sessions</source>
@@ -609,53 +637,37 @@
   </file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsViewActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="archiveGroupSessions.archive">
-        <source xml:lang="en">Mark All as Done</source>
-        <target>Позначити все як виконане</target>
+      <trans-unit id="archiveGroupSession.confirmSingle">
+        <source xml:lang="en">Are you sure you want to archive 1 session from '{0}'?</source>
+        <target>Ви впевнені, що хочете архівувати 1 сесію з '{0}'?</target>
       </trans-unit>
       <trans-unit id="archiveGroupSessions.confirm">
-        <source xml:lang="en">Are you sure you want to mark {0} sessions from '{1}' as done?</source>
-        <target>Ви впевнені, що хочете позначити {0} сесій з '{1}' як завершені?</target>
-      </trans-unit>
-      <trans-unit id="archiveGroupSessions.confirmSingle">
-        <source xml:lang="en">Are you sure you want to mark 1 session from '{0}' as done?</source>
-        <target>Ви впевнені, що хочете позначити 1 сесію з '{0}' як завершену?</target>
+        <source xml:lang="en">Are you sure you want to archive {0} sessions from '{1}'?</source>
+        <target>Ви впевнені, що хочете архівувати {0} сесій з '{1}'?</target>
       </trans-unit>
       <trans-unit id="archiveGroupSessions.detail">
-        <source xml:lang="en">You can restore sessions later if needed from the sessions view.</source>
-        <target>Ви можете відновити сесії пізніше, якщо це необхідно, з вигляду сесій.</target>
+        <source xml:lang="en">You can unarchive sessions later if needed from the sessions view.</source>
+        <target>Ви можете розархівувати сесії пізніше, якщо це необхідно, з перегляду сесій.</target>
+      </trans-unit>
+      <trans-unit id="archivePinnedSectionSession.confirmSingle">
+        <source xml:lang="en">Are you sure you want to archive 1 pinned session?</source>
+        <target>Ви впевнені, що хочете архівувати 1 закріплену сесію?</target>
       </trans-unit>
       <trans-unit id="archivePinnedSectionSessions.confirm">
-        <source xml:lang="en">Are you sure you want to mark {0} pinned sessions as done?</source>
-        <target>Ви впевнені, що хочете позначити {0} закріплених сесій як завершені?</target>
+        <source xml:lang="en">Are you sure you want to archive {0} pinned sessions?</source>
+        <target>Ви впевнені, що хочете архівувати {0} закріплених сесій?</target>
       </trans-unit>
-      <trans-unit id="archivePinnedSectionSessions.confirmSingle">
-        <source xml:lang="en">Are you sure you want to mark 1 pinned session as done?</source>
-        <target>Ви впевнені, що хочете позначити 1 закріплену сесію як завершену?</target>
-      </trans-unit>
-      <trans-unit id="archiveSection">
-        <source xml:lang="en">Mark All as Done</source>
-        <target>Позначити всі як виконані</target>
-      </trans-unit>
-      <trans-unit id="archiveSectionSessions.archive">
-        <source xml:lang="en">Mark All as Done</source>
-        <target>Позначити все як виконане</target>
+      <trans-unit id="archiveSectionSession.confirmSingle">
+        <source xml:lang="en">Are you sure you want to archive 1 session from '{0}'?</source>
+        <target>Ви впевнені, що хочете архівувати 1 сесію з '{0}'?</target>
       </trans-unit>
       <trans-unit id="archiveSectionSessions.confirm">
-        <source xml:lang="en">Are you sure you want to mark {0} sessions from '{1}' as done?</source>
-        <target>Ви впевнені, що хочете позначити {0} сесій з '{1}' як завершені?</target>
-      </trans-unit>
-      <trans-unit id="archiveSectionSessions.confirmSingle">
-        <source xml:lang="en">Are you sure you want to mark 1 session from '{0}' as done?</source>
-        <target>Ви впевнені, що хочете позначити 1 сесію з '{0}' як завершену?</target>
+        <source xml:lang="en">Are you sure you want to archive {0} sessions from '{1}'?</source>
+        <target>Ви впевнені, що хочете архівувати {0} сесій з '{1}'?</target>
       </trans-unit>
       <trans-unit id="archiveSectionSessions.detail">
-        <source xml:lang="en">You can restore sessions later if needed from the sessions view.</source>
-        <target>Ви можете відновити сесії пізніше, якщо потрібно, з перегляду сесій.</target>
-      </trans-unit>
-      <trans-unit id="archiveSession">
-        <source xml:lang="en">Mark as Done</source>
-        <target>Позначити як Зроблено</target>
+        <source xml:lang="en">You can unarchive sessions later if needed from the sessions view.</source>
+        <target>Ви можете розархівувати сесії пізніше, якщо це буде потрібно, з вигляду сесій.</target>
       </trans-unit>
       <trans-unit id="closeSession">
         <source xml:lang="en">Close Session</source>
@@ -664,6 +676,10 @@
       <trans-unit id="collapseAllGroups">
         <source xml:lang="en">Collapse All Groups</source>
         <target>Сховати всі групи</target>
+      </trans-unit>
+      <trans-unit id="deleteEmptyGroup">
+        <source xml:lang="en">Delete Group</source>
+        <target>Видалити групу</target>
       </trans-unit>
       <trans-unit id="deleteSession">
         <source xml:lang="en">Delete...</source>
@@ -717,17 +733,45 @@
         <source xml:lang="en">Group by Workspace</source>
         <target>Групувати за Робочим простором</target>
       </trans-unit>
-      <trans-unit id="markAllInGroupAsDone">
-        <source xml:lang="en">Mark All as Done</source>
-        <target>Позначити все як виконане</target>
-      </trans-unit>
       <trans-unit id="markAllRead">
         <source xml:lang="en">Mark All as Read</source>
         <target>Позначити все як прочитане</target>
       </trans-unit>
+      <trans-unit id="markGroupSessionDone.confirmSingle">
+        <source xml:lang="en">Are you sure you want to mark 1 session from '{0}' as done?</source>
+        <target>Ви впевнені, що хочете позначити 1 сесію з '{0}' як завершену?</target>
+      </trans-unit>
+      <trans-unit id="markGroupSessionsDone.confirm">
+        <source xml:lang="en">Are you sure you want to mark {0} sessions from '{1}' as done?</source>
+        <target>Ви впевнені, що хочете позначити {0} сесій з '{1}' як завершені?</target>
+      </trans-unit>
+      <trans-unit id="markGroupSessionsDone.detail">
+        <source xml:lang="en">You can restore sessions later if needed from the sessions view.</source>
+        <target>Ви можете відновити сесії пізніше, якщо це необхідно, з вигляду сесій.</target>
+      </trans-unit>
+      <trans-unit id="markPinnedSectionSessionDone.confirmSingle">
+        <source xml:lang="en">Are you sure you want to mark 1 pinned session as done?</source>
+        <target>Ви впевнені, що хочете позначити 1 закріплену сесію як завершену?</target>
+      </trans-unit>
+      <trans-unit id="markPinnedSectionSessionsDone.confirm">
+        <source xml:lang="en">Are you sure you want to mark {0} pinned sessions as done?</source>
+        <target>Ви впевнені, що хочете позначити {0} закріплених сесій як завершені?</target>
+      </trans-unit>
       <trans-unit id="markRead">
         <source xml:lang="en">Mark as Read</source>
         <target>Позначити як прочитане</target>
+      </trans-unit>
+      <trans-unit id="markSectionSessionDone.confirmSingle">
+        <source xml:lang="en">Are you sure you want to mark 1 session from '{0}' as done?</source>
+        <target>Ви впевнені, що хочете позначити 1 сесію з '{0}' як завершену?</target>
+      </trans-unit>
+      <trans-unit id="markSectionSessionsDone.confirm">
+        <source xml:lang="en">Are you sure you want to mark {0} sessions from '{1}' as done?</source>
+        <target>Ви впевнені, що хочете позначити {0} сесій з '{1}' як завершені?</target>
+      </trans-unit>
+      <trans-unit id="markSectionSessionsDone.detail">
+        <source xml:lang="en">You can restore sessions later if needed from the sessions view.</source>
+        <target>Ви можете відновити сесії пізніше, якщо потрібно, з перегляду сесій.</target>
       </trans-unit>
       <trans-unit id="markUnread">
         <source xml:lang="en">Mark as Unread</source>
@@ -785,10 +829,6 @@
         <source xml:lang="en">New agent session title</source>
         <target>Новий заголовок сесії агента</target>
       </trans-unit>
-      <trans-unit id="restore">
-        <source xml:lang="en">Restore</source>
-        <target>Відновити</target>
-      </trans-unit>
       <trans-unit id="showAllSessions">
         <source xml:lang="en">Show All Sessions</source>
         <target>Показати всі сесії</target>
@@ -804,10 +844,6 @@
       <trans-unit id="sortByUpdated">
         <source xml:lang="en">Sort by Updated</source>
         <target>Сортувати за оновленням</target>
-      </trans-unit>
-      <trans-unit id="unarchiveSession">
-        <source xml:lang="en">Restore</source>
-        <target>Відновити</target>
       </trans-unit>
       <trans-unit id="unpinSession">
         <source xml:lang="en">Unpin</source>

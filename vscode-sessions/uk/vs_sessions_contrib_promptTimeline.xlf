@@ -6,41 +6,21 @@
         <source xml:lang="en">Controls whether the prompt timeline is shown next to the chat transcript in the Agents window.</source>
         <target>Контролює, чи відображається хронологія запитів поруч з транскриптом чату у вікні Агентів.</target>
       </trans-unit>
+      <trans-unit id="sessions.promptTimeline.rail.dock">
+        <source xml:lang="en">Show a minimal handle on the transcript's left edge that opens a list of prompts on hover.</source>
+        <target>Показати мінімальну ручку на лівому краю транскрипту, яка відкриває список підказок при наведенні.</target>
+      </trans-unit>
+      <trans-unit id="sessions.promptTimeline.rail.off">
+        <source xml:lang="en">Do not show the prompt timeline.</source>
+        <target>Не показувати часову шкалу запитів.</target>
+      </trans-unit>
+      <trans-unit id="sessions.promptTimeline.rail.ruler">
+        <source xml:lang="en">Show an overview ruler beside the transcript scrollbar that fans into prompt pills on engagement.</source>
+        <target>Показати оглядову лінійку поруч зі смугою прокрутки транскрипту, яка розширюється в підказки про залучення.</target>
+      </trans-unit>
       <trans-unit id="sessions.promptTimeline.stickyHeader">
         <source xml:lang="en">Controls whether the current prompt is pinned to the top of the chat transcript while scrolling in the Agents window.</source>
         <target>Контролює, чи закріплено поточний запит вгорі чату під час прокручування в вікні Агентів.</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/contrib/promptTimeline/browser/promptTimelineActions" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="promptTimeline.category">
-        <source xml:lang="en">Chat</source>
-        <target>Чат</target>
-      </trans-unit>
-      <trans-unit id="promptTimeline.emptyPrompt">
-        <source xml:lang="en">(empty prompt)</source>
-        <target>(порожній запит)</target>
-      </trans-unit>
-      <trans-unit id="promptTimeline.goToPrompt">
-        <source xml:lang="en">Go to Prompt...</source>
-        <target>Перейдіть до Prompt...</target>
-      </trans-unit>
-      <trans-unit id="promptTimeline.nFiles">
-        <source xml:lang="en">{0} files</source>
-        <target>{0} файлів</target>
-      </trans-unit>
-      <trans-unit id="promptTimeline.oneFile">
-        <source xml:lang="en">1 file</source>
-        <target>1 файл</target>
-      </trans-unit>
-      <trans-unit id="promptTimeline.pickPlaceholder">
-        <source xml:lang="en">Go to a prompt in this chat</source>
-        <target>Перейдіть до підказки в цьому чаті</target>
-      </trans-unit>
-      <trans-unit id="promptTimeline.statDetail">
-        <source xml:lang="en">+{0} −{1} · {2}</source>
-        <target>+{0} −{1} · {2}</target>
       </trans-unit>
     </body>
   </file>
@@ -65,6 +45,18 @@
       <trans-unit id="promptTimeline.reviewChangesForPrompt">
         <source xml:lang="en">Review Changes for Prompt: {0}</source>
         <target>Переглянути зміни для запиту: {0}</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/promptTimeline/browser/promptTimelineDockRail" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="promptTimeline.dock.railLabel">
+        <source xml:lang="en">Prompt timeline</source>
+        <target>Таймлайн запиту</target>
+      </trans-unit>
+      <trans-unit id="promptTimeline.dock.toggleLabel">
+        <source xml:lang="en">Show prompts</source>
+        <target>Показати підказки</target>
       </trans-unit>
     </body>
   </file>
@@ -98,6 +90,14 @@
         <source xml:lang="en">(empty prompt)</source>
         <target>(порожній запит)</target>
       </trans-unit>
+      <trans-unit id="promptTimeline.nextPrompt">
+        <source xml:lang="en">Go to Next Prompt</source>
+        <target>Перейти до наступного запиту</target>
+      </trans-unit>
+      <trans-unit id="promptTimeline.previousPrompt">
+        <source xml:lang="en">Go to Previous Prompt</source>
+        <target>Перейти до попереднього запиту</target>
+      </trans-unit>
       <trans-unit id="promptTimeline.stickyCount">
         <source xml:lang="en">{0}/{1}</source>
         <target>{0}/{1}</target>
@@ -105,6 +105,10 @@
       <trans-unit id="promptTimeline.stickyLabel">
         <source xml:lang="en">Go to prompt {0} of {1}: {2}</source>
         <target>Перейдіть до підказки {0} з {1}: {2}</target>
+      </trans-unit>
+      <trans-unit id="promptTimeline.stickyNavAriaLabel">
+        <source xml:lang="en">Prompt navigation</source>
+        <target>Швидка навігація</target>
       </trans-unit>
     </body>
   </file>

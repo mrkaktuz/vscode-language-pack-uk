@@ -488,6 +488,14 @@ A keybinding</note>
         <source xml:lang="en">Route Claude Through Copilot</source>
         <target>Маршрут Клода через Копілот</target>
       </trans-unit>
+      <trans-unit id="agentHost.config.codexUsageSource.description">
+        <source xml:lang="en">Choose whether Codex usage is routed through GitHub Copilot or uses an existing Codex OpenAI login. VS Code does not provide the OpenAI sign-in flow; authenticate Codex separately before selecting OpenAI.</source>
+        <target>Виберіть, чи використання Codex маршрутизується через GitHub Copilot, чи використовує існуючий логін Codex OpenAI. VS Code не надає процес входу OpenAI; аутентифікуйте Codex окремо перед вибором OpenAI.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.codexUsageSource.title">
+        <source xml:lang="en">Codex Usage Source</source>
+        <target>Джерело використання Кодексу</target>
+      </trans-unit>
       <trans-unit id="agentHost.config.customizations.description">
         <source xml:lang="en">Plugins configured on this agent host and available to remote sessions.</source>
         <target>Плагіни, налаштовані на цьому хості агента і доступні для віддалених сеансів.</target>
@@ -528,13 +536,21 @@ A keybinding</note>
         <source xml:lang="en">GitHub Enterprise URI</source>
         <target>GitHub Enterprise URI</target>
       </trans-unit>
+      <trans-unit id="agentHost.config.sessionCustomizationDiscoveryMode.description">
+        <source xml:lang="en">Controls whether session-scoped customizations are populated from local file scanning or from Copilot SDK discovery.</source>
+        <target>Контролює, чи заповнюються налаштування з сесійною областю з локального сканування файлів або з виявлення Copilot SDK.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.sessionCustomizationDiscoveryMode.title">
+        <source xml:lang="en">Session Customization Discovery Mode</source>
+        <target>Режим виявлення налаштування сеансу</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/platform/agentHost/common/agentHostEnablementService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHostEnabled">
-        <source xml:lang="en">Whether the local agent host process is enabled.</source>
-        <target>Чи увімкнено процес хосту локального агента.</target>
+        <source xml:lang="en">Whether Agent Host features are enabled.</source>
+        <target>Чи активовані функції Agent Host.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.enabled">
         <source xml:lang="en">When enabled, some agents run in a separate agent host process.</source>
@@ -583,6 +599,14 @@ A keybinding</note>
       <trans-unit id="agentHost.config.codexAgentEnabled.title">
         <source xml:lang="en">Codex Agent</source>
         <target>Codex Агент</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.disableRepoInfoTelemetry.description">
+        <source xml:lang="en">Whether repository information telemetry is disabled for Agent Host sessions.</source>
+        <target>Чи вимкнена телеметрія інформації репозиторію для сеансів Agent Host.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.disableRepoInfoTelemetry.title">
+        <source xml:lang="en">Disable Repository Information Telemetry</source>
+        <target>Вимкнути телеметрію інформації про репозиторій</target>
       </trans-unit>
       <trans-unit id="agentHost.config.globalAutoApproveEnabled.description">
         <source xml:lang="en">Whether VS Code's global auto-approve setting is enabled. When `true`, every tool call is auto-approved, equivalent to a session using Allow all.</source>
@@ -829,8 +853,8 @@ A keybinding</note>
         <target>Коли увімкнено, хост агента реєструє постачальника Codex (за умови, що SDK Codex доступний). Потрібно `#chat.agentHost.enabled#`. Процес хоста агента повинен бути перезапущений, щоб зміни набрали чинності.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.codexAgent.enabled.policy">
-        <source xml:lang="en">Enable Codex Agent sessions in VS Code. Start and resume agentic coding sessions powered by OpenAI Codex SDK. Uses your existing Copilot subscription.</source>
-        <target>Увімкніть сесії Codex Agent у VS Code. Починайте та відновлюйте агентські сесії кодування, що працюють на базі OpenAI Codex SDK. Використовує вашу існуючу підписку на Copilot.</target>
+        <source xml:lang="en">Enable Codex Agent sessions in VS Code. Start and resume agentic coding sessions powered by OpenAI Codex. Usage can be routed through GitHub Copilot or authenticated directly with an OpenAI account.</source>
+        <target>Увімкніть сесії Codex Agent у VS Code. Починайте та відновлюйте агентні сесії кодування, що працюють на базі OpenAI Codex. Використання може бути направлене через GitHub Copilot або автентифіковане безпосередньо з обліковим записом OpenAI.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.codexAgent.sdkRoot">
         <source xml:lang="en">Experimental, for local SDK development only. Absolute path to a directory containing `node_modules/@openai/codex`. When set, the agent host spawns the Codex binary from this tree instead of downloading the SDK. Empty (the default) falls through to the SDK distribution shipped with this build. Requires `#chat.agentHost.enabled#`. The agent host process must be restarted for changes to take effect.</source>
@@ -1063,6 +1087,50 @@ A keybinding</note>
       <trans-unit id="agentHost.config.rubberDuck.title">
         <source xml:lang="en">Rubber Duck Agent</source>
         <target>Резиновий каченя Агент</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.toolSearchEnabled.description">
+        <source xml:lang="en">When enabled, Copilot SDK sessions defer MCP and non-core VS Code tools behind a tool-search tool so the model discovers them on demand instead of loading every tool definition up front.</source>
+        <target>Коли увімкнено, сесії Copilot SDK відтерміновують MCP та некорінні інструменти VS Code за допомогою інструменту пошуку, щоб модель знаходила їх за запитом, а не завантажувала всі визначення інструментів заздалегідь.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.toolSearchEnabled.title">
+        <source xml:lang="en">Agent Host Tool Search</source>
+        <target>Інструмент пошуку хоста агента</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/common/copilotConfigSlashCommands" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="copilotConfigSlash.autopilot.on">
+        <source xml:lang="en">Switch to autopilot mode</source>
+        <target>Переключитися в режим автопілота</target>
+      </trans-unit>
+      <trans-unit id="copilotConfigSlash.autopilot.prompt">
+        <source xml:lang="en">Switch to autopilot mode with an objective</source>
+        <target>Переключіться в режим автопілота з метою</target>
+      </trans-unit>
+      <trans-unit id="copilotConfigSlash.autopilotHint">
+        <source xml:lang="en">objective</source>
+        <target>об'єктив</target>
+      </trans-unit>
+      <trans-unit id="copilotConfigSlash.default">
+        <source xml:lang="en">Set permissions back to default</source>
+        <target>Встановіть дозволи назад на значення за замовчуванням</target>
+      </trans-unit>
+      <trans-unit id="copilotConfigSlash.exitAutopilot">
+        <source xml:lang="en">Switch to interactive mode</source>
+        <target>Перейти в інтерактивний режим</target>
+      </trans-unit>
+      <trans-unit id="copilotConfigSlash.plan.prompt">
+        <source xml:lang="en">Create an implementation plan before coding</source>
+        <target>Створіть план реалізації перед кодуванням.</target>
+      </trans-unit>
+      <trans-unit id="copilotConfigSlash.promptHint">
+        <source xml:lang="en">Describe what you want to plan or research</source>
+        <target>Опишіть, що ви хочете спланувати або дослідити.</target>
+      </trans-unit>
+      <trans-unit id="copilotConfigSlash.yolo">
+        <source xml:lang="en">Set permissions to bypass approvals</source>
+        <target>Встановіть дозволи для обходу затверджень</target>
       </trans-unit>
     </body>
   </file>
@@ -2140,13 +2208,85 @@ A keybinding</note>
         <source xml:lang="en">Web-search tool availability for the model.</source>
         <target>Доступність інструмента веб-пошуку для моделі.</target>
       </trans-unit>
-      <trans-unit id="codexAgent.description">
-        <source xml:lang="en">Codex agent backed by the OpenAI Codex app-server</source>
-        <target>Агент Codex, підтримуваний сервером додатків OpenAI Codex</target>
+      <trans-unit id="codexAgent.description.copilot">
+        <source xml:lang="en">Codex agent using GitHub Copilot</source>
+        <target>Агент Codex, що використовує GitHub Copilot</target>
+      </trans-unit>
+      <trans-unit id="codexAgent.description.openai">
+        <source xml:lang="en">Codex agent using your OpenAI account</source>
+        <target>Агент Codex, що використовує ваш обліковий запис OpenAI</target>
       </trans-unit>
       <trans-unit id="codexAgent.displayName">
         <source xml:lang="en">Codex</source>
         <target>Codex</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/codex/codexProviderConfiguration" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="codex.configuration.autoReviewPolicy">
+        <source xml:lang="en">Auto-review policy</source>
+        <target>Політика автоматичного перегляду</target>
+      </trans-unit>
+      <trans-unit id="codex.configuration.autoReviewPolicy.description">
+        <source xml:lang="en">Updates auto_review.policy in config.toml. Leave empty to remove the auto_review section.</source>
+        <target>Оновлює auto_review.policy у config.toml. Залиште порожнім, щоб видалити розділ auto_review.</target>
+      </trans-unit>
+      <trans-unit id="codex.configuration.description">
+        <source xml:lang="en">Configure Codex defaults stored in config.toml. Project and managed configuration can override these user values.</source>
+        <target>Налаштуйте значення за замовчуванням Codex, збережені в config.toml. Проектна та керована конфігурація можуть переважати ці значення користувача.</target>
+      </trans-unit>
+      <trans-unit id="codex.configuration.file.description">
+        <source xml:lang="en">Open the Codex configuration file to customize additional agent behavior.</source>
+        <target>Відкрийте файл конфігурації Codex, щоб налаштувати додаткову поведінку агента.</target>
+      </trans-unit>
+      <trans-unit id="codex.configuration.file.docs">
+        <source xml:lang="en">Codex configuration documentation</source>
+        <target>Документація конфігурації Codex</target>
+      </trans-unit>
+      <trans-unit id="codex.configuration.file.open">
+        <source xml:lang="en">Open config.toml</source>
+        <target>Відкрийте config.toml</target>
+      </trans-unit>
+      <trans-unit id="codex.configuration.file.title">
+        <source xml:lang="en">Advanced configuration</source>
+        <target>Розширена конфігурація</target>
+      </trans-unit>
+      <trans-unit id="codex.configuration.personality">
+        <source xml:lang="en">Personality</source>
+        <target>Особистість</target>
+      </trans-unit>
+      <trans-unit id="codex.configuration.personality.default">
+        <source xml:lang="en">Default</source>
+        <target>За замовчуванням</target>
+      </trans-unit>
+      <trans-unit id="codex.configuration.personality.description">
+        <source xml:lang="en">Controls the default communication style for Codex. Default leaves personality unset in config.toml.</source>
+        <target>Контролює стиль комунікації за замовчуванням для Codex. Значення за замовчуванням залишає особистість не налаштованою в config.toml.</target>
+      </trans-unit>
+      <trans-unit id="codex.configuration.personality.friendly">
+        <source xml:lang="en">Friendly</source>
+        <target>Дружній</target>
+      </trans-unit>
+      <trans-unit id="codex.configuration.personality.pragmatic">
+        <source xml:lang="en">Pragmatic</source>
+        <target>Прагматичний</target>
+      </trans-unit>
+      <trans-unit id="codex.configuration.personalization">
+        <source xml:lang="en">Personalization</source>
+        <target>Персоналізація</target>
+      </trans-unit>
+      <trans-unit id="codex.configuration.review">
+        <source xml:lang="en">Review policy</source>
+        <target>Переглянути політику</target>
+      </trans-unit>
+      <trans-unit id="codex.configuration.review.save">
+        <source xml:lang="en">Save Policy</source>
+        <target>Зберегти політику</target>
+      </trans-unit>
+      <trans-unit id="codex.configuration.title">
+        <source xml:lang="en">Codex Settings</source>
+        <target>Налаштування Кодексу</target>
       </trans-unit>
     </body>
   </file>
@@ -3060,6 +3200,10 @@ A keybinding</note>
         <source xml:lang="en">This session couldn't be loaded because its worktree is missing and could not be recreated: {0}</source>
         <target>Цю сесію не вдалося завантажити, оскільки її робоче дерево відсутнє і не може бути відтворене: {0}</target>
       </trans-unit>
+      <trans-unit id="worktreeIsolation.commitMessage">
+        <source xml:lang="en">Saving uncommitted changes before archiving session</source>
+        <target>Збереження незавершених змін перед архівуванням сесії</target>
+      </trans-unit>
       <trans-unit id="worktreeRecreateBranchMissing">
         <source xml:lang="en">the branch '{0}' no longer exists</source>
         <target>гілка '{0}' більше не існує</target>
@@ -3275,6 +3419,42 @@ A keybinding</note>
       <trans-unit id="browser.contextMenu.reload">
         <source xml:lang="en">Reload</source>
         <target>Перезавантажити</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/chat/common/sessionArchiveActions" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="chatSession.archive">
+        <source xml:lang="en">Archive</source>
+        <target>Архів</target>
+      </trans-unit>
+      <trans-unit id="chatSession.archiveAll">
+        <source xml:lang="en">Archive All</source>
+        <target>Архівувати все</target>
+      </trans-unit>
+      <trans-unit id="chatSession.markAllAsDone">
+        <source xml:lang="en">Mark All as Done</source>
+        <target>Позначити всі як виконані</target>
+      </trans-unit>
+      <trans-unit id="chatSession.markAsDone">
+        <source xml:lang="en">Mark as Done</source>
+        <target>Позначити як Зроблено</target>
+      </trans-unit>
+      <trans-unit id="chatSession.restore">
+        <source xml:lang="en">Restore</source>
+        <target>Відновити</target>
+      </trans-unit>
+      <trans-unit id="chatSession.restoreAll">
+        <source xml:lang="en">Restore All</source>
+        <target>Відновити все</target>
+      </trans-unit>
+      <trans-unit id="chatSession.unarchive">
+        <source xml:lang="en">Unarchive</source>
+        <target>Розархівувати</target>
+      </trans-unit>
+      <trans-unit id="chatSession.unarchiveAll">
+        <source xml:lang="en">Unarchive All</source>
+        <target>Розархівувати все</target>
       </trans-unit>
     </body>
   </file>

@@ -104,6 +104,34 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/contrib/chat/browser/btwSlashCommand.contribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="btw">
+        <source xml:lang="en">Ask a side question without adding it to this conversation</source>
+        <target>Задайте побічне питання, не додаючи його до цієї розмови.</target>
+      </trans-unit>
+      <trans-unit id="btw.createFailed">
+        <source xml:lang="en">The side chat could not be created.</source>
+        <target>Бічний чат не вдалося створити.</target>
+      </trans-unit>
+      <trans-unit id="btw.missingPrompt">
+        <source xml:lang="en">Enter a question after `/btw`.</source>
+        <target>Введіть запитання після `/btw`.</target>
+      </trans-unit>
+      <trans-unit id="btw.noTurn">
+        <source xml:lang="en">Send a message in this conversation before starting a side chat.</source>
+        <target>Надішліть повідомлення в цій розмові перед початком побічного чату.</target>
+      </trans-unit>
+      <trans-unit id="btw.sessionUnavailable">
+        <source xml:lang="en">A side chat cannot be created from this conversation.</source>
+        <target>Бічний чат не може бути створений з цієї розмови.</target>
+      </trans-unit>
+      <trans-unit id="btw.unsupported">
+        <source xml:lang="en">This conversation does not support side chats.</source>
+        <target>Ця розмова не підтримує бічні чати.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/chat/browser/chat.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="chat.agentHost.runWorktreeCreatedTasks">
@@ -262,77 +290,25 @@
         <source xml:lang="en">Send (Alt-click to start in the background)</source>
         <target>Відправити (Alt-клік, щоб запустити у фоновому режимі)</target>
       </trans-unit>
-      <trans-unit id="sessionsChatInput.placeholder.describeTheOutcome">
-        <source xml:lang="en">Describe the outcome you want</source>
-        <target>Опишіть результат, якого ви хочете.</target>
+      <trans-unit id="sessionsChatInputHasDictationFocus">
+        <source xml:lang="en">True when focus is in an Agents window chat composer that supports dictation.</source>
+        <target>Істинно, коли фокус знаходиться в чат-композері вікна Агентів, який підтримує диктування.</target>
       </trans-unit>
-      <trans-unit id="sessionsChatInput.placeholder.describeWhatYouWantToBuild">
-        <source xml:lang="en">Describe what you want to build</source>
-        <target>Опишіть, що ви хочете побудувати.</target>
-      </trans-unit>
-      <trans-unit id="sessionsChatInput.placeholder.describeYourMission">
-        <source xml:lang="en">Describe your mission</source>
-        <target>Опишіть вашу місію</target>
-      </trans-unit>
-      <trans-unit id="sessionsChatInput.placeholder.pitchYourIdea">
-        <source xml:lang="en">Pitch your idea</source>
-        <target>Представте свою ідею</target>
-      </trans-unit>
-      <trans-unit id="sessionsChatInput.placeholder.whatAreYouBuilding">
-        <source xml:lang="en">What are you building?</source>
-        <target>Що ви будуєте?</target>
-      </trans-unit>
-      <trans-unit id="sessionsChatInput.placeholder.whatAreYouTryingToAchieve">
-        <source xml:lang="en">What are you trying to achieve?</source>
-        <target>Що ви намагаєтеся досягти?</target>
-      </trans-unit>
-      <trans-unit id="sessionsChatInput.placeholder.whatFeatureAreYouDreamingUp">
-        <source xml:lang="en">What feature are you dreaming up?</source>
-        <target>Яку функцію ви мрієте створити?</target>
-      </trans-unit>
-      <trans-unit id="sessionsChatInput.placeholder.whatProblemAreYouSolving">
-        <source xml:lang="en">What problem are you solving?</source>
-        <target>Яку проблему ви вирішуєте?</target>
-      </trans-unit>
-      <trans-unit id="sessionsChatInput.placeholder.whatWillYouCreate">
-        <source xml:lang="en">What will you create?</source>
-        <target>Що ви створите?</target>
-      </trans-unit>
-      <trans-unit id="sessionsChatInput.placeholder.whatWillYouLaunch">
-        <source xml:lang="en">What will you launch?</source>
-        <target>Що ви запустите?</target>
-      </trans-unit>
-      <trans-unit id="sessionsChatInput.placeholder.whatWillYouShipToday">
-        <source xml:lang="en">What will you ship today?</source>
-        <target>Що ви відправите сьогодні?</target>
-      </trans-unit>
-      <trans-unit id="sessionsChatInput.placeholder.whatWouldYouLikeToAutomate">
-        <source xml:lang="en">What would you like to automate?</source>
-        <target>Що б ви хотіли автоматизувати?</target>
-      </trans-unit>
-      <trans-unit id="sessionsChatInput.placeholder.whatsNextOnYourRoadmap">
-        <source xml:lang="en">What's next on your roadmap?</source>
-        <target>Що далі на вашій дорожній карті?</target>
-      </trans-unit>
-      <trans-unit id="sessionsChatInput.placeholder.whatsTheGoal">
-        <source xml:lang="en">What's the goal?</source>
-        <target>Яка мета?</target>
-      </trans-unit>
-      <trans-unit id="sessionsChatInput.placeholder.whatsYourNextMilestone">
-        <source xml:lang="en">What's your next milestone?</source>
-        <target>Яка ваша наступна віхова точка?</target>
+      <trans-unit id="sessionsStt.cancelPreparing">
+        <source xml:lang="en">Cancel Dictation. {0}</source>
+        <target>Скасувати диктування. {0}</target>
       </trans-unit>
       <trans-unit id="sessionsStt.dictate">
         <source xml:lang="en">Dictate (Speech to Text)</source>
         <target>Диктувати (Мова в Текст)</target>
       </trans-unit>
-      <trans-unit id="sessionsStt.preparing">
-        <source xml:lang="en">Preparing Speech to Text Model…</source>
-        <target>Підготовка моделі розпізнавання мови в текст…</target>
-      </trans-unit>
       <trans-unit id="sessionsStt.stop">
         <source xml:lang="en">Stop Dictation</source>
         <target>Зупинити диктування</target>
+      </trans-unit>
+      <trans-unit id="voiceInputMode">
+        <source xml:lang="en">Voice Input Mode</source>
+        <target>Режим голосового вводу</target>
       </trans-unit>
     </body>
   </file>
@@ -378,9 +354,25 @@
         <source xml:lang="en">with</source>
         <target>з</target>
       </trans-unit>
-      <trans-unit id="trustFolderMessage">
-        <source xml:lang="en">An agent session will be able to read files, run commands, and make changes in this folder.</source>
-        <target>Сесія агента зможе читати файли, виконувати команди та вносити зміни в цю папку.</target>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/chat/browser/newSessionFolderQuickPickAction" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="sessions.newSession.pickFolderQuickPick.browse">
+        <source xml:lang="en">Browse...</source>
+        <target>Перегляд...</target>
+      </trans-unit>
+      <trans-unit id="sessions.newSession.pickFolderQuickPick.label">
+        <source xml:lang="en">New Session in Folder...</source>
+        <target>Нова сесія в папці...</target>
+      </trans-unit>
+      <trans-unit id="sessions.newSession.pickFolderQuickPick.placeholder">
+        <source xml:lang="en">Select a folder to start a new session in</source>
+        <target>Виберіть папку, щоб розпочати нову сесію в</target>
+      </trans-unit>
+      <trans-unit id="sessions.newSession.pickFolderQuickPick.recent">
+        <source xml:lang="en">Recent</source>
+        <target>Останній</target>
       </trans-unit>
     </body>
   </file>
@@ -401,6 +393,42 @@
       <trans-unit id="noAgentHost.title">
         <source xml:lang="en">Connect a host to get started</source>
         <target>Підключіть хост, щоб почати</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/chat/browser/responseSelectionSideChatController" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="sessions.selectionSideChat.ariaLabel">
+        <source xml:lang="en">Ask a question about the selected response text</source>
+        <target>Задайте питання про вибраний текст відповіді</target>
+      </trans-unit>
+      <trans-unit id="sessions.selectionSideChat.ask">
+        <source xml:lang="en">Ask Question</source>
+        <target>Задати питання</target>
+      </trans-unit>
+      <trans-unit id="sessions.selectionSideChat.busy">
+        <source xml:lang="en">Asking question…</source>
+        <target>Запитання…</target>
+      </trans-unit>
+      <trans-unit id="sessions.selectionSideChat.createFailed">
+        <source xml:lang="en">The side chat could not be created.</source>
+        <target>Бічний чат не вдалося створити.</target>
+      </trans-unit>
+      <trans-unit id="sessions.selectionSideChat.enter">
+        <source xml:lang="en">Enter</source>
+        <target>Введіть</target>
+      </trans-unit>
+      <trans-unit id="sessions.selectionSideChat.placeholder">
+        <source xml:lang="en">Ask Question</source>
+        <target>Задати питання</target>
+      </trans-unit>
+      <trans-unit id="sessions.selectionSideChat.sessionUnavailable">
+        <source xml:lang="en">A side chat cannot be created from this conversation.</source>
+        <target>Бічний чат не може бути створений з цієї розмови.</target>
+      </trans-unit>
+      <trans-unit id="sessions.selectionSideChat.unsupported">
+        <source xml:lang="en">This conversation does not support side chats.</source>
+        <target>Ця розмова не підтримує бічні чати.</target>
       </trans-unit>
     </body>
   </file>
@@ -907,16 +935,16 @@
         <target>Сфокусуйтеся на перегляді змін{0}.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.closeChat">
-        <source xml:lang="en">Activate a chat tab's close button to close (hide) that chat from the tab strip without deleting it; reopen it later from the Conversations menu. The session's main chat cannot be closed.</source>
-        <target>Активуйте кнопку закриття вкладки чату, щоб закрити (сховати) цей чат з панелі вкладок без його видалення; відкрийте його пізніше з меню Бесіди. Основний чат сесії не можна закрити.</target>
+        <source xml:lang="en">Activate a chat tab's close button to close (hide) that chat from the tab strip without deleting it; reopen it later from the Chats menu. The session's main chat cannot be closed.</source>
+        <target>Активуйте кнопку закриття вкладки чату, щоб закрити (сховати) цей чат з панелі вкладок без його видалення; відкрийте його пізніше з меню Чати. Головний чат сесії не можна закрити.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.contextReferences">
         <source xml:lang="en">Type # in the chat input to attach context. Use #file to reference a file or folder, or #session to reference another agent session. Referencing a session together with the /troubleshoot command analyzes that session's logs instead of the current one. Accept a suggestion with Tab or Enter; the reference appears as a pill above the input that you can remove.</source>
         <target>Введіть # у полі чату, щоб додати контекст. Використовуйте #file, щоб посилатися на файл або папку, або #session, щоб посилатися на іншу сесію агента. Посилання на сесію разом з командою /troubleshoot аналізує журнали цієї сесії замість поточної. Прийміть пропозицію за допомогою Tab або Enter; посилання з'явиться у вигляді пігулки над полем введення, яку ви можете видалити.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.conversations">
-        <source xml:lang="en">When a session supports multiple chats, a New Chat button is always shown: as a labeled button in the session header while the session has a single open chat, and as a compact button at the end of the chat tab strip once the session has more than one open chat. Activate it to start a new chat. Once the session has more than one committed chat, a Conversations menu is also shown: in the session header while the tab strip is hidden, and at the end of the chat tab strip once it is shown. Open it to reopen a closed chat: each chat is listed with a checkbox, where checked chats are shown as tabs and unchecked chats are closed (hidden).</source>
-        <target>Коли сесія підтримує кілька чатів, кнопка Новий чат завжди відображається: як кнопка з написом у заголовку сесії, коли сесія має один відкритий чат, і як компактна кнопка в кінці смуги вкладок чатів, коли сесія має більше одного відкритого чату. Активуйте її, щоб почати новий чат. Коли в сесії є більше одного підтвердженого чату, також відображається меню Розмови: у заголовку сесії, коли смуга вкладок прихована, і в кінці смуги вкладок чатів, коли вона відображається. Відкрийте його, щоб повторно відкрити закритий чат: кожен чат перерахований з прапорцем, де чати з прапорцем відображаються як вкладки, а чати без прапорця закриті (приховані).</target>
+        <source xml:lang="en">When a session supports multiple chats, a New Chat button is always shown: as a labeled button in the session header while the session has a single visible chat tab, and as a compact button at the end of the chat tab strip once the session has more than one visible chat tab. Activate it to start a new chat. A Chats menu is also shown in the session header meta row, at the end of the pills, once the session has more than one committed chat or the active chat has subagents. Open it to reopen a closed chat or open a subagent: each chat is listed with a checkbox, where checked chats are shown as tabs and unchecked chats are closed (hidden).</source>
+        <target>Коли сесія підтримує кілька чатів, кнопка Новий чат завжди відображається: як позначена кнопка в заголовку сесії, коли сесія має один видимий чат-вкладку, і як компактна кнопка в кінці смуги вкладок чатів, коли сесія має більше ніж одну видиму чат-вкладку. Активуйте її, щоб почати новий чат. Меню Чати також відображається в мета-рядку заголовка сесії, в кінці пігулок, коли сесія має більше ніж один підтверджений чат або активний чат має субагентів. Відкрийте його, щоб повторно відкрити закритий чат або відкрити субагента: кожен чат перераховано з чекбоксом, де відмічені чати відображаються як вкладки, а не відмічені чати закриті (сховані).</target>
       </trans-unit>
       <trans-unit id="sessionsChat.customizations">
         <source xml:lang="en">Focus the Chat Customizations view{0}.</source>
@@ -926,9 +954,21 @@
         <source xml:lang="en">To permanently delete a chat, open the chat tab's context menu and choose Delete Chat. This is destructive and cannot be undone.</source>
         <target>Щоб назавжди видалити чат, відкрийте контекстне меню вкладки чату та виберіть Видалити чат. Це є руйнівним і не може бути скасовано.</target>
       </trans-unit>
+      <trans-unit id="sessionsChat.dictation">
+        <source xml:lang="en">When dictation is configured, dictate your message into the input{0}. Tap to start and stop, or hold to dictate only while pressed. If the speech-to-text model is still preparing, activate the dictation control again to cancel.</source>
+        <target>Коли диктування налаштоване, диктуйте своє повідомлення в поле введення{0}. Торкніться, щоб почати і зупинити, або утримуйте, щоб диктувати лише під час натискання. Якщо модель розпізнавання мови ще готується, активуйте елемент керування диктуванням знову, щоб скасувати.</target>
+      </trans-unit>
       <trans-unit id="sessionsChat.filesView">
         <source xml:lang="en">Focus the Files Explorer view{0}.</source>
         <target>Сфокусуйте перегляд Провідника файлів{0}.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.goBack">
+        <source xml:lang="en">Go back through visited sessions{0}.</source>
+        <target>Повернутися до відвіданих сесій{0}.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.goForward">
+        <source xml:lang="en">Go forward through visited sessions{0}.</source>
+        <target>Перейдіть вперед через відвідані сесії{0}.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.history">
         <source xml:lang="en">Use up and down arrows to navigate your request history in the input box.</source>
@@ -941,6 +981,10 @@
       <trans-unit id="sessionsChat.inputBackground">
         <source xml:lang="en">Press Alt+Enter to start the session in the background without navigating into it. The started session appears in the Chat Sessions view.</source>
         <target>Натисніть Alt+Enter, щоб розпочати сесію у фоновому режимі без переходу до неї. Розпочата сесія з'являється у вигляді чат-сесій.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.micContextMenu">
+        <source xml:lang="en">To choose a microphone or turn off dictation or Voice Mode, focus the microphone button in the input toolbar and open its context menu (for example Shift+F10).</source>
+        <target>Щоб вибрати мікрофон або вимкнути диктування чи Режим голосу, зосередьтеся на кнопці мікрофона в панелі інструментів введення та відкрийте її контекстне меню (наприклад, Shift+F10).</target>
       </trans-unit>
       <trans-unit id="sessionsChat.mobileConfig">
         <source xml:lang="en">On mobile, the mode and model pickers appear as tappable chips below the input. Tap a chip to open a bottom sheet where you can change the selection.</source>
@@ -962,6 +1006,14 @@
         <source xml:lang="en">You are in the Agents window. The Agents window is a dedicated workspace for working with AI agents. It provides a chat interface, a changes view for reviewing agent-generated changes, a file explorer, and customization options.</source>
         <target>Ви знаходитесь у вікні Агентів. Вікно Агентів є спеціалізованим робочим простором для роботи з AI-агентами. Воно надає інтерфейс чату, перегляд змін для перегляду змін, створених агентом, файловий провідник та можливості налаштування.</target>
       </trans-unit>
+      <trans-unit id="sessionsChat.pickFolderQuickPick">
+        <source xml:lang="en">To choose a folder from a searchable list instead, use the New Session in Folder command{0}.</source>
+        <target>Щоб вибрати папку з пошукового списку, використовуйте команду Нової сесії в папці {0}.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.promptTimeline">
+        <source xml:lang="en">When the prompt timeline is enabled, a handle on the left edge of the transcript lists your prompts. Activate it to expand the list, use the up and down arrows (or Home and End) to move between prompts, Enter or Space to jump to a prompt, and Escape to dismiss the list and return focus to the handle. When a prompt title is pinned above the transcript, activate its title to jump to that prompt, or use the Previous Prompt and Next Prompt buttons to jump between prompts.</source>
+        <target>Коли активовано часову шкалу підказок, елемент керування на лівому краю транскрипту відображає ваші підказки. Активуйте його, щоб розгорнути список, використовуйте стрілки вгору і вниз (або Home і End), щоб переміщатися між підказками, клавішу Enter або Space, щоб перейти до підказки, і клавішу Escape, щоб закрити список і повернути фокус на елемент керування. Коли заголовок підказки закріплено над транскриптом, активуйте його заголовок, щоб перейти до цієї підказки, або використовуйте кнопки "Попередня підказка" та "Наступна підказка", щоб переміщатися між підказками.</target>
+      </trans-unit>
       <trans-unit id="sessionsChat.quickChat">
         <source xml:lang="en">To start a workspace-less quick chat, use the New Quick Chat command{0} or the plus button on the Chats section in the sessions list. A quick chat has no workspace, so the workspace picker does not apply and the Toggle Side Panel command is disabled.</source>
         <target>Щоб розпочати швидкий чат без робочого простору, використовуйте команду New Quick Chat{0} або кнопку плюс у розділі Чати в списку сесій. Швидкий чат не має робочого простору, тому вибір робочого простору не застосовується, а команда Toggle Side Panel вимкнена.</target>
@@ -977,6 +1029,14 @@
       <trans-unit id="sessionsChat.viewAllChanges">
         <source xml:lang="en">The session header shows the diff stats (lines added and removed) as a button. Activate it to open the multi-file diff editor for all of the session's changes{0}.</source>
         <target>Заголовок сесії показує статистику змін (додані та видалені рядки) у вигляді кнопки. Активуйте її, щоб відкрити редактор багатофайлових змін для всіх змін сесії{0}.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.voiceMode">
+        <source xml:lang="en">Start or stop Voice Mode to interact with the agent using your microphone{0}.</source>
+        <target>Почніть або зупиніть режим голосу, щоб взаємодіяти з агентом, використовуючи ваш мікрофон{0}.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.vscodePet">
+        <source xml:lang="en">Type /vscode-pet to show or hide the VS Code pet above the input. Drag it horizontally to reposition it, or use Tab to focus it and the left and right arrow keys to move it. Press Enter or Space to show it some love.</source>
+        <target>Наберіть /vscode-pet, щоб показати або приховати домашнього улюбленця VS Code над полем введення. Перетягніть його горизонтально, щоб змінити позицію, або використовуйте Tab, щоб зосередити на ньому увагу, а також стрілки вліво і вправо, щоб перемістити його. Натисніть Enter або Space, щоб показати йому свою любов.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.workspace">
         <source xml:lang="en">Shift+Tab to navigate to the workspace picker and choose a workspace for your session.</source>
@@ -1005,6 +1065,10 @@
       <trans-unit id="slashCommand.skills">
         <source xml:lang="en">View and manage skills</source>
         <target>Перегляд та управління навичками</target>
+      </trans-unit>
+      <trans-unit id="slashCommand.vscodePet">
+        <source xml:lang="en">Toggle an interactive VS Code pet</source>
+        <target>Перемкнути інтерактивного домашнього улюбленця VS Code</target>
       </trans-unit>
     </body>
   </file>

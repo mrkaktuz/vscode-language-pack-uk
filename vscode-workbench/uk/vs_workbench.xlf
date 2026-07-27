@@ -1172,6 +1172,14 @@ To complete authentication, navigate to {1} and enter the code above.</source>
         <source xml:lang="en">A schema URL ('http:', 'https:') or relative path to the extension folder ('./').</source>
         <target>URL схеми ('http:', 'https:') або відносний шлях до папки розширення ('./').</target>
       </trans-unit>
+      <trans-unit id="contributes.jsonValidationRegistry">
+        <source xml:lang="en">Contributes a JSON validation registry. The registry can be a dynamic resource from a filesystem provider and allows associations to change at runtime.</source>
+        <target>Сприяє реєстру валідації JSON. Реєстр може бути динамічним ресурсом від постачальника файлової системи та дозволяє асоціаціям змінюватися під час виконання.</target>
+      </trans-unit>
+      <trans-unit id="contributes.jsonValidationRegistry.url">
+        <source xml:lang="en">A registry URI or relative path to the extension folder ('./').</source>
+        <target>URI реєстру або відносний шлях до папки розширення ('./').</target>
+      </trans-unit>
       <trans-unit id="fileMatch">
         <source xml:lang="en">File Match</source>
         <target>Відповідність файлів</target>
@@ -1183,6 +1191,26 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       <trans-unit id="invalid.jsonValidation">
         <source xml:lang="en">'configuration.jsonValidation' must be a array</source>
         <target>'configuration.jsonValidation' має бути масивом</target>
+      </trans-unit>
+      <trans-unit id="invalid.jsonValidationRegistry">
+        <source xml:lang="en">'configuration.jsonValidationRegistry' must be an array</source>
+        <target>'configuration.jsonValidationRegistry' повинен бути масивом</target>
+      </trans-unit>
+      <trans-unit id="invalid.jsonValidationRegistry.fileschema">
+        <source xml:lang="en">'configuration.jsonValidationRegistry.url' is an invalid relative URI: {0}</source>
+        <target>'configuration.jsonValidationRegistry.url' є недійсним відносним URI: {0}</target>
+      </trans-unit>
+      <trans-unit id="invalid.jsonValidationRegistry.path">
+        <source xml:lang="en">Expected `contributes.{0}.url` ({1}) to be included inside extension's folder ({2}). This might make the extension non-portable.</source>
+        <target>Очікувалося, що `contributes.{0}.url` ({1}) буде включено до папки розширення ({2}). Це може зробити розширення непортативним.</target>
+      </trans-unit>
+      <trans-unit id="invalid.jsonValidationRegistry.schema">
+        <source xml:lang="en">'configuration.jsonValidationRegistry.url' must be an absolute URI or start with './' to reference a registry located in the extension.</source>
+        <target>'configuration.jsonValidationRegistry.url' повинен бути абсолютним URI або починатися з './', щоб посилатися на реєстр, розташований в розширенні.</target>
+      </trans-unit>
+      <trans-unit id="invalid.jsonValidationRegistry.url">
+        <source xml:lang="en">'configuration.jsonValidationRegistry.url' must be a URI or relative path</source>
+        <target>'configuration.jsonValidationRegistry.url' повинен бути URI або відносним шляхом</target>
       </trans-unit>
       <trans-unit id="invalid.path.1">
         <source xml:lang="en">Expected `contributes.{0}.url` ({1}) to be included inside extension's folder ({2}). This might make the extension non-portable.</source>
@@ -2389,6 +2417,18 @@ This action is irreversible and may result in data loss!</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/browser/layout" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="auxiliaryBarHidden">
+        <source xml:lang="en">Secondary Side Bar hidden</source>
+        <target>Секундарна бічна панель прихована</target>
+      </trans-unit>
+      <trans-unit id="auxiliaryBarVisible">
+        <source xml:lang="en">Secondary Side Bar shown</source>
+        <target>Показано бічну панель вторинного боку</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/browser/parts/activitybar/activitybarPart" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="activity bar position">
@@ -2487,14 +2527,6 @@ This action is irreversible and may result in data loss!</source>
   </file>
   <file original="src/vs/workbench/browser/parts/auxiliarybar/auxiliaryBarActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="auxiliaryBarHidden">
-        <source xml:lang="en">Secondary Side Bar hidden</source>
-        <target>Секундарна бічна панель прихована</target>
-      </trans-unit>
-      <trans-unit id="auxiliaryBarVisible">
-        <source xml:lang="en">Secondary Side Bar shown</source>
-        <target>Показано бічну панель вторинного боку</target>
-      </trans-unit>
       <trans-unit id="closeIcon">
         <source xml:lang="en">Icon to close the secondary side bar.</source>
         <target>Іконка для закриття вторинної бокової панелі.</target>
@@ -7210,6 +7242,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Whether the modal editor part sidebar is visible</source>
         <target>Чи видима бічна панель частини модального редактора</target>
       </trans-unit>
+      <trans-unit id="editorPartModalVisible">
+        <source xml:lang="en">Whether a modal editor part is visible</source>
+        <target>Чи видима частина модального редактора</target>
+      </trans-unit>
       <trans-unit id="editorPartMultipleEditorGroups">
         <source xml:lang="en">Whether there are multiple editor groups opened in an editor part</source>
         <target>Чи відкрито кілька груп редакторів у частині редактора</target>
@@ -7353,6 +7389,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="resourceSet">
         <source xml:lang="en">Whether a resource is present or not</source>
         <target>Чи присутній ресурс чи ні</target>
+      </trans-unit>
+      <trans-unit id="secondarySideBarVisible">
+        <source xml:lang="en">Whether the layout surface representing the secondary side bar is visible</source>
+        <target>Чи видима поверхня макета, що представляє вторинну бокову панель</target>
       </trans-unit>
       <trans-unit id="sideBarFocus">
         <source xml:lang="en">Whether the sidebar has keyboard focus</source>
@@ -7957,6 +7997,18 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="statusBarWarningItemHoverForeground">
         <source xml:lang="en">Status bar warning items foreground color when hovering. Warning items stand out from other status bar entries to indicate warning conditions. The status bar is shown in the bottom of the window.</source>
         <target>Колір переднього плану елементів попередження на панелі стану при наведенні. Елементи попередження виділяються серед інших записів панелі стану, щоб вказати на умови попередження. Панель стану відображається внизу вікна.</target>
+      </trans-unit>
+      <trans-unit id="surfaceBackground">
+        <source xml:lang="en">Background color of framed container surfaces ("cards"), such as the floating workbench panels in the modern layout.</source>
+        <target>Колір фону рамкових контейнерів ("карток"), таких як плаваючі панелі робочого столу в сучасному макеті.</target>
+      </trans-unit>
+      <trans-unit id="surfaceBorder">
+        <source xml:lang="en">Border color of framed container surfaces ("cards"), such as the floating workbench panels in the modern layout.</source>
+        <target>Колір рамки поверхонь контейнерів ("карт"), таких як плаваючі панелі робочого столу в сучасному макеті.</target>
+      </trans-unit>
+      <trans-unit id="surfaceForeground">
+        <source xml:lang="en">Foreground color of framed container surfaces ("cards"), such as the floating workbench panels in the modern layout.</source>
+        <target>Колір переднього плану обрамлених контейнерів ("карток"), таких як плаваючі панелі робочого столу в сучасному макеті.</target>
       </trans-unit>
       <trans-unit id="tabActiveBackground">
         <source xml:lang="en">Active tab background color in an active group. Tabs are the containers for editors in the editor area. Multiple tabs can be opened in one editor group. There can be multiple editor groups.</source>

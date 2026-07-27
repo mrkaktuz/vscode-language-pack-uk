@@ -230,6 +230,10 @@
         <source xml:lang="en">Agent session failed.</source>
         <target>Сесія агента не вдалася.</target>
       </trans-unit>
+      <trans-unit id="automationTargetUnavailable">
+        <source xml:lang="en">Automation '{0}' cannot start until its agent becomes available.</source>
+        <target>Автоматизація '{0}' не може початися, поки її агент не стане доступним.</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/sessions/contrib/automations/browser/automationScheduler" source-language="en" datatype="plaintext" target-language="uk">
@@ -241,6 +245,130 @@
       <trans-unit id="automations.crashRecoveryReason">
         <source xml:lang="en">Interrupted by app shutdown</source>
         <target>Перервано через закриття додатку</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/automations/browser/automationTools" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="automation.tool.cancelled">
+        <source xml:lang="en">Automation change cancelled</source>
+        <target>Скасування зміни автоматизації</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.configure.create.confirmationMessage">
+        <source xml:lang="en">Create the automation **{0}**?</source>
+        <target>Створити автоматизацію **{0}**?</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.configure.create.confirmationTitle">
+        <source xml:lang="en">Create Automation?</source>
+        <target>Створити автоматизацію?</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.configure.create.invocationMessage">
+        <source xml:lang="en">Configuring a new automation</source>
+        <target>Налаштування нової автоматизації</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.configure.create.pastTenseMessage">
+        <source xml:lang="en">Configured a new automation</source>
+        <target>Налаштовано нову автоматизацію</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.configure.created">
+        <source xml:lang="en">Created automation {0}</source>
+        <target>Створено автоматизацію {0}</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.configure.displayName">
+        <source xml:lang="en">Configure Automation</source>
+        <target>Налаштувати автоматизацію</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.configure.update.confirmationMessage">
+        <source xml:lang="en">Apply the proposed changes to **{0}** (`{1}`)?</source>
+        <target>Застосувати запропоновані зміни до **{0}** (`{1}`)?</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.configure.update.confirmationTitle">
+        <source xml:lang="en">Update Automation?</source>
+        <target>Оновлення автоматизації?</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.configure.update.invocationMessage">
+        <source xml:lang="en">Configuring automation</source>
+        <target>Налаштування автоматизації</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.configure.update.pastTenseMessage">
+        <source xml:lang="en">Configured automation</source>
+        <target>Налаштована автоматизація</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.configure.updated">
+        <source xml:lang="en">Updated automation {0}</source>
+        <target>Оновлена автоматизація {0}</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.configure.userDescription">
+        <source xml:lang="en">Create or update an automation</source>
+        <target>Створити або оновити автоматизацію</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.delete.cancel">
+        <source xml:lang="en">Cancel</source>
+        <target>Скасувати</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.delete.cancelled">
+        <source xml:lang="en">Automation deletion cancelled</source>
+        <target>Скасовано видалення автоматизації</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.delete.confirm">
+        <source xml:lang="en">Delete</source>
+        <target>Видалити</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.delete.confirmationMessage">
+        <source xml:lang="en">Delete **{0}** (`{1}`)? Its saved configuration and run history will be permanently removed. Runs already in flight will continue.</source>
+        <target>Видалити **{0}** (`{1}`)? Його збережена конфігурація та історія виконання будуть назавжди видалені. Запуски, які вже виконуються, продовжать працювати.</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.delete.confirmationTitle">
+        <source xml:lang="en">Delete Automation?</source>
+        <target>Видалити автоматизацію?</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.delete.deleted">
+        <source xml:lang="en">Deleted automation {0}</source>
+        <target>Видалена автоматизація {0}</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.delete.displayName">
+        <source xml:lang="en">Delete Automation</source>
+        <target>Видалити автоматизацію</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.delete.invocationMessage">
+        <source xml:lang="en">Deleting automation {0}</source>
+        <target>Видалення автоматизації {0}</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.delete.pastTenseMessage">
+        <source xml:lang="en">Deleted automation {0}</source>
+        <target>Видалена автоматизація {0}</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.delete.userDescription">
+        <source xml:lang="en">Delete a scheduled agent automation</source>
+        <target>Видалити заплановану автоматизацію агента</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.error">
+        <source xml:lang="en">Automation request failed</source>
+        <target>Запит на автоматизацію не вдався</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.list.displayName">
+        <source xml:lang="en">List Automations</source>
+        <target>Список автоматизацій</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.list.invocationMessage">
+        <source xml:lang="en">Reading automations</source>
+        <target>Читання автоматизацій</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.list.pastTenseMessage">
+        <source xml:lang="en">Read automations</source>
+        <target>Читати автоматизації</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.list.result.plural">
+        <source xml:lang="en">Listed {0} automations</source>
+        <target>Перелічено {0} автоматизацій</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.list.result.singular">
+        <source xml:lang="en">Listed 1 automation</source>
+        <target>Перераховано 1 автоматизацію</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.list.userDescription">
+        <source xml:lang="en">List scheduled agent automations</source>
+        <target>Список запланованих автоматизацій агентів</target>
       </trans-unit>
     </body>
   </file>

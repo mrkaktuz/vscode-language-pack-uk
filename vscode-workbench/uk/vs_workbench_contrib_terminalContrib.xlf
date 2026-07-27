@@ -115,8 +115,20 @@
         <target>Зосередьте доступний вигляд терміналу, коли виконується команда.</target>
       </trans-unit>
       <trans-unit id="terminal.integrated.accessibleViewPreserveCursorPosition">
-        <source xml:lang="en">Preserve the cursor position on reopen of the terminal's accessible view rather than setting it to the bottom of the buffer.</source>
-        <target>Зберігайте позицію курсора при повторному відкритті доступного вигляду термінала, а не встановлюйте її внизу буфера.</target>
+        <source xml:lang="en">Controls whether the cursor position is preserved in the terminal's accessible view.</source>
+        <target>Контролює, чи зберігається позиція курсора у доступному вигляді терміналу.</target>
+      </trans-unit>
+      <trans-unit id="terminal.integrated.accessibleViewPreserveCursorPosition.always">
+        <source xml:lang="en">Always preserve the cursor position, including when new terminal content arrives.</source>
+        <target>Завжди зберігайте позицію курсора, включаючи випадки, коли надходить новий вміст терміналу.</target>
+      </trans-unit>
+      <trans-unit id="terminal.integrated.accessibleViewPreserveCursorPosition.false">
+        <source xml:lang="en">Always position the cursor at the bottom of the buffer.</source>
+        <target>Завжди розташовуйте курсор внизу буфера.</target>
+      </trans-unit>
+      <trans-unit id="terminal.integrated.accessibleViewPreserveCursorPosition.true">
+        <source xml:lang="en">Preserve the cursor position on reopen until new terminal content arrives.</source>
+        <target>Зберігайте позицію курсора при повторному відкритті, поки не надійде новий вміст терміналу.</target>
       </trans-unit>
     </body>
   </file>
@@ -657,8 +669,8 @@ Reason for allowing unrestricted network access in the sandbox: {2}</source>
         <target>Не вдалося визначити, чи успішно завершився ремонт за допомогою пупирчастої упаковки. Команда не була виконана.</target>
       </trans-unit>
       <trans-unit id="runInTerminal.bubblewrap.stillUnavailable">
-        <source xml:lang="en">Bubblewrap still cannot create the required sandbox namespace after remediation. The command was not executed.</source>
-        <target>Bubblewrap все ще не може створити необхідний простір імен пісочниці після виправлення. Команда не була виконана.</target>
+        <source xml:lang="en">Bubblewrap still cannot create the required sandbox namespace after remediation. Reload the window and try running the command again.</source>
+        <target>Bubblewrap все ще не може створити необхідний простір імен пісочниці після виправлення. Перезавантажте вікно і спробуйте знову виконати команду.</target>
       </trans-unit>
       <trans-unit id="runInTerminal.bubblewrap.title">
         <source xml:lang="en">Repair Bubblewrap Sandbox</source>
@@ -719,6 +731,10 @@ Goal: {1}</source>
       <trans-unit id="runInTerminal.missingDeps.install">
         <source xml:lang="en">Install</source>
         <target>Встановити</target>
+      </trans-unit>
+      <trans-unit id="runInTerminal.missingDeps.installed">
+        <source xml:lang="en">Sandbox dependencies were installed successfully. If the issue persists, reload the window and try running the command again.</source>
+        <target>Залежності пісочниці були успішно встановлені. Якщо проблема зберігається, перезавантажте вікно та спробуйте знову виконати команду.</target>
       </trans-unit>
       <trans-unit id="runInTerminal.missingDeps.message">
         <source xml:lang="en">The following dependencies required for sandboxed execution are not installed: {0}. Would you like to install them?</source>
@@ -2096,6 +2112,14 @@ For example:
  `lineMatcher: /git push --set-upstream origin (?&lt;branchName&gt;[^s]+)/;`
 
 `terminalCommand: 'git push --set-upstream origin ${group:branchName}';`</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/terminalContrib/resizeDimensionsOverlay/common/terminalResizeDimensionsOverlayConfiguration" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="resizeDimensionsOverlay.enabled">
+        <source xml:lang="en">Whether to show a visual overlay with the terminal's columns and rows when it is resized.</source>
+        <target>Чи показувати візуальний наклад поверх колонок і рядків термінала, коли він змінює розмір.</target>
       </trans-unit>
     </body>
   </file>
