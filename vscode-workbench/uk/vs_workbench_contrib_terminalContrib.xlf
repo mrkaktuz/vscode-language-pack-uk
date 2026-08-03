@@ -106,6 +106,10 @@
         <source xml:lang="en">The terminal request completions command can be invoked manually&lt;keybinding:{0}&gt;, but also appears while typing.</source>
         <target>Команду завершення запитів терміналу можна викликати вручну&lt;keybinding:{0}&gt;, але вона також з'являється під час введення.</target>
       </trans-unit>
+      <trans-unit id="terminalDictation">
+        <source xml:lang="en">Start or stop dictation in the terminal&lt;keybinding:{0}&gt;.</source>
+        <target>Почати або зупинити диктування в терміналі&lt;keybinding:{0}&gt;.</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/terminalContrib/accessibility/common/terminalAccessibilityConfiguration" source-language="en" datatype="plaintext" target-language="uk">
@@ -597,8 +601,8 @@ Reason: {0}</source>
         <target>Запустити команду `{0}`?</target>
       </trans-unit>
       <trans-unit id="runInTerminal.allowNetwork">
-        <source xml:lang="en">Allow the sandbox to run `{0}` command with unrestricted network access.</source>
-        <target>Дозвольте пісочниці виконувати команду `{0}` з необмеженим доступом до мережі.</target>
+        <source xml:lang="en">Allow {0} command to access the network?</source>
+        <target>Дозволити команді {0} доступ до мережі?</target>
       </trans-unit>
       <trans-unit id="runInTerminal.allowNetwork.autoRetry">
         <source xml:lang="en">Retry `{0}` command in the sandbox by allowing network access?</source>
@@ -644,37 +648,17 @@ Reason for allowing unrestricted network access in the sandbox: {2}</source>
         <source xml:lang="en">The command was not executed because it requested unrestricted network access in the terminal sandbox, but per-command network access is disabled by chat.agent.sandbox.retryWithAllowNetworkRequests. Run the command with restricted network access instead, or enable the setting to allow network access requests.</source>
         <target>Команда не була виконана, оскільки вона вимагала необмеженого доступу до мережі в пісочниці терміналу, але доступ до мережі за командою вимкнено параметром chat.agent.sandbox.retryWithAllowNetworkRequests. Виконайте команду з обмеженим доступом до мережі, або увімкніть налаштування для дозволу запитів на доступ до мережі.</target>
       </trans-unit>
-      <trans-unit id="runInTerminal.bubblewrap.applyFix">
-        <source xml:lang="en">Apply Fix and Retry</source>
-        <target>Застосувати виправлення та повторити спробу</target>
+      <trans-unit id="runInTerminal.bubblewrap.hostRestriction">
+        <source xml:lang="en">Sandbox creation failed due to host restrictions. Sandboxing can be disabled by setting `{0}` to `off`.</source>
+        <target>Створення пісочниці не вдалося через обмеження хоста. Пісочницю можна вимкнути, встановивши `{0}` в значення `off`.</target>
       </trans-unit>
-      <trans-unit id="runInTerminal.bubblewrap.cancel">
-        <source xml:lang="en">Cancel</source>
-        <target>Скасувати</target>
+      <trans-unit id="runInTerminal.bubblewrap.unsupportedEnvironment">
+        <source xml:lang="en">Sandboxing is not supported in this environment. To disable sandboxing, set `{0}` to `off`. The command was not executed.</source>
+        <target>Пісочниця не підтримується в цьому середовищі. Щоб вимкнути пісочницю, встановіть `{0}` на `off`. Команда не була виконана.</target>
       </trans-unit>
-      <trans-unit id="runInTerminal.bubblewrap.cancelled">
-        <source xml:lang="en">Bubblewrap sandbox repair was cancelled by the user.</source>
-        <target>Ремонт пісочниці з бульбашкової плівки був скасований користувачем.</target>
-      </trans-unit>
-      <trans-unit id="runInTerminal.bubblewrap.message">
-        <source xml:lang="en">Bubblewrap cannot create the sandbox environment.</source>
-        <target>Bubblewrap не може створити середовище пісочниці.</target>
-      </trans-unit>
-      <trans-unit id="runInTerminal.bubblewrap.repairFailed">
-        <source xml:lang="en">Bubblewrap repair failed (exit code {0}). The command was not executed.</source>
-        <target>Виправлення Bubblewrap не вдалося (код виходу {0}). Команда не була виконана.</target>
-      </trans-unit>
-      <trans-unit id="runInTerminal.bubblewrap.repairUnknown">
-        <source xml:lang="en">Could not determine whether the bubblewrap repair succeeded. The command was not executed.</source>
-        <target>Не вдалося визначити, чи успішно завершився ремонт за допомогою пупирчастої упаковки. Команда не була виконана.</target>
-      </trans-unit>
-      <trans-unit id="runInTerminal.bubblewrap.stillUnavailable">
-        <source xml:lang="en">Bubblewrap still cannot create the required sandbox namespace after remediation. Reload the window and try running the command again.</source>
-        <target>Bubblewrap все ще не може створити необхідний простір імен пісочниці після виправлення. Перезавантажте вікно і спробуйте знову виконати команду.</target>
-      </trans-unit>
-      <trans-unit id="runInTerminal.bubblewrap.title">
-        <source xml:lang="en">Repair Bubblewrap Sandbox</source>
-        <target>Відремонтувати пісочницю з бульбашкової плівки</target>
+      <trans-unit id="runInTerminal.bubblewrap.unsupportedEnvironmentWithSettingsLink">
+        <source xml:lang="en">Sandboxing is not supported in this environment. [Open the `{0}` setting](command:workbench.action.openSettings?{1} "Open Settings") and set it to `off`. The command was not executed.</source>
+        <target>Пісочниця не підтримується в цьому середовищі. [Відкрийте налаштування `{0}`](command:workbench.action.openSettings?{1} "Відкрити налаштування") і встановіть його на `вимкнено`. Команда не була виконана.</target>
       </trans-unit>
       <trans-unit id="runInTerminal.bubblewrap.unusable">
         <source xml:lang="en">Bubblewrap is installed but cannot create the required sandbox namespace on this system. The command was not executed.</source>
@@ -1129,10 +1113,6 @@ Reason for leaving the sandbox: {2}</source>
         <source xml:lang="en">Controls whether agent mode terminal commands can run outside the sandbox after user confirmation when a sandboxed command fails or when sandbox restrictions would block the command. This applies only when {0} is enabled.</source>
         <target>Контролює, чи можуть термінальні команди режиму агента виконуватися поза пісочницею після підтвердження користувача, коли команда в пісочниці не вдалася або коли обмеження пісочниці блокують команду. Це застосовується лише тоді, коли {0} увімкнено.</target>
       </trans-unit>
-      <trans-unit id="agentSandbox.enabled.deprecated">
-        <source xml:lang="en">Use {0} instead</source>
-        <target>Використовуйте {0} замість цього.</target>
-      </trans-unit>
       <trans-unit id="agentSandbox.enabledSetting">
         <source xml:lang="en">Controls whether agent mode uses sandboxing to restrict what tools can do. When enabled, tools like the terminal are run in a sandboxed environment to limit access to the system. Use {0} to allow all network domains.</source>
         <target>Контролює, чи режим агента використовує пісочницю для обмеження того, що можуть робити інструменти. Коли увімкнено, такі інструменти, як термінал, виконуються в середовищі пісочниці, щоб обмежити доступ до системи. Використовуйте {0}, щоб дозволити всі мережеві домени.</target>
@@ -1144,14 +1124,6 @@ Reason for leaving the sandbox: {2}</source>
       <trans-unit id="agentSandbox.enabledSetting.onDescription">
         <source xml:lang="en">Enable sandboxing for agent mode tools.</source>
         <target>Увімкніть пісочницю для інструментів режиму агента.</target>
-      </trans-unit>
-      <trans-unit id="agentSandbox.fileSystemLinux.deprecated">
-        <source xml:lang="en">Use {0} instead</source>
-        <target>Використовуйте {0} замість цього</target>
-      </trans-unit>
-      <trans-unit id="agentSandbox.fileSystemMac.deprecated">
-        <source xml:lang="en">Use {0} instead</source>
-        <target>Використовуйте {0} замість цього.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.linuxFileSystemSetting">
         <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Controls file system access in sandbox on Linux. Paths do not support glob patterns, only literal paths (ex: ./src/, ~/.ssh, .env). **bubblewrap** and **socat** should be installed for this setting to work.</source>
@@ -2774,6 +2746,14 @@ To exclude an extension, set it to `false`
   </file>
   <file original="src/vs/workbench/contrib/terminalContrib/voice/browser/terminalVoice" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="terminalVoice.stopDictationHover">
+        <source xml:lang="en">Stop Dictation ({0})</source>
+        <target>Зупинити диктування ({0})</target>
+      </trans-unit>
+      <trans-unit id="terminalVoice.stopDictationHoverNoKeybinding">
+        <source xml:lang="en">Stop Dictation</source>
+        <target>Зупинити диктування</target>
+      </trans-unit>
       <trans-unit id="terminalVoiceTextInserted">
         <source xml:lang="en">{0} inserted</source>
         <target>{0} вставлено</target>

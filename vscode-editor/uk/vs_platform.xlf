@@ -470,14 +470,6 @@ A keybinding</note>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/platform/agentHost/browser/agentHostEnablementService" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="chat.agentHost.enabled">
-        <source xml:lang="en">When enabled, some agents run in a separate agent host process.</source>
-        <target>Коли ввімкнено, деякі агенти працюють у окремому процесі хоста агента.</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/platform/agentHost/common/agentHostCustomizationConfig" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHost.config.claudeUseCopilotProxy.description">
@@ -549,8 +541,8 @@ A keybinding</note>
   <file original="src/vs/platform/agentHost/common/agentHostEnablementService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHostEnabled">
-        <source xml:lang="en">Whether Agent Host features are enabled.</source>
-        <target>Чи активовані функції Agent Host.</target>
+        <source xml:lang="en">Whether the local agent host process is enabled.</source>
+        <target>Чи увімкнено процес хосту локального агента.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.enabled">
         <source xml:lang="en">When enabled, some agents run in a separate agent host process.</source>
@@ -592,6 +584,14 @@ A keybinding</note>
         <source xml:lang="en">Auto Reply</source>
         <target>Автовідповідь</target>
       </trans-unit>
+      <trans-unit id="agentHost.config.claudeMultiRootEnabled.description">
+        <source xml:lang="en">Whether the Claude provider advertises support for multiple working directories, letting a session span every folder of a multi-root workspace.</source>
+        <target>Чи рекламує постачальник Claude підтримку кількох робочих директорій, дозволяючи сесії охоплювати кожну папку багатокореневої робочої області.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.claudeMultiRootEnabled.title">
+        <source xml:lang="en">Claude Multiple Working Directories</source>
+        <target>Claude Кілька робочих каталогів</target>
+      </trans-unit>
       <trans-unit id="agentHost.config.codexAgentEnabled.description">
         <source xml:lang="en">Whether the Codex provider is enabled.</source>
         <target>Чи увімкнено постачальника Codex.</target>
@@ -600,6 +600,22 @@ A keybinding</note>
         <source xml:lang="en">Codex Agent</source>
         <target>Codex Агент</target>
       </trans-unit>
+      <trans-unit id="agentHost.config.codexMultiRootEnabled.description">
+        <source xml:lang="en">Whether the Codex provider advertises support for multiple working directories, letting a session span every folder of a multi-root workspace.</source>
+        <target>Чи постачальник Codex рекламує підтримку кількох робочих директорій, дозволяючи сесії охоплювати кожну папку багатокореневої робочої області.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.codexMultiRootEnabled.title">
+        <source xml:lang="en">Codex Multiple Working Directories</source>
+        <target>Codex Багаторазові Робочі Директорії</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.copilotMultiRootEnabled.description">
+        <source xml:lang="en">Whether the Copilot provider advertises support for multiple working directories, letting a session span every folder of a multi-root workspace.</source>
+        <target>Чи постачальник Copilot рекламує підтримку кількох робочих директорій, дозволяючи сесії охоплювати кожну папку багатокореневого робочого простору.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.copilotMultiRootEnabled.title">
+        <source xml:lang="en">Copilot Multiple Working Directories</source>
+        <target>Copilot Кілька робочих директорій</target>
+      </trans-unit>
       <trans-unit id="agentHost.config.disableRepoInfoTelemetry.description">
         <source xml:lang="en">Whether repository information telemetry is disabled for Agent Host sessions.</source>
         <target>Чи вимкнена телеметрія інформації репозиторію для сеансів Agent Host.</target>
@@ -607,6 +623,14 @@ A keybinding</note>
       <trans-unit id="agentHost.config.disableRepoInfoTelemetry.title">
         <source xml:lang="en">Disable Repository Information Telemetry</source>
         <target>Вимкнути телеметрію інформації про репозиторій</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.editTelemetryEnabled.description">
+        <source xml:lang="en">Whether edit attribution telemetry is enabled for Agent Host sessions.</source>
+        <target>Чи увімкнено телеметрію атрибуції редагування для сеансів Agent Host.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.editTelemetryEnabled.title">
+        <source xml:lang="en">Edit Telemetry</source>
+        <target>Редагувати телеметрію</target>
       </trans-unit>
       <trans-unit id="agentHost.config.globalAutoApproveEnabled.description">
         <source xml:lang="en">Whether VS Code's global auto-approve setting is enabled. When `true`, every tool call is auto-approved, equivalent to a session using Allow all.</source>
@@ -693,8 +717,8 @@ A keybinding</note>
         <target>URL</target>
       </trans-unit>
       <trans-unit id="agentHost.config.preferLongContextEnabled.description">
-        <source xml:lang="en">Whether Copilot Chat's prefer-long-context setting is enabled. When `true`, models with a free long context window only show the long context option in the picker. When `false` (default), the smaller default context option stays selectable.</source>
-        <target>Чи увімкнено налаштування prefer-long-context для Copilot Chat. Коли `true`, моделі з безкоштовним довгим контекстом показують лише опцію довгого контексту в виборі. Коли `false` (за замовчуванням), менша опція стандартного контексту залишається вибірковою.</target>
+        <source xml:lang="en">Whether Copilot Chat's prefer-long-context setting is enabled. When `true` (default), models with a free long context window only show the long context option in the picker. When `false`, the smaller default context option stays selectable.</source>
+        <target>Чи увімкнено налаштування prefer-long-context для Copilot Chat. Коли `true` (за замовчуванням), моделі з безкоштовним довгим контекстним вікном показують лише опцію довгого контексту в виборі. Коли `false`, менша опція контексту за замовчуванням залишається вибірковою.</target>
       </trans-unit>
       <trans-unit id="agentHost.config.preferLongContextEnabled.title">
         <source xml:lang="en">Prefer Long Context</source>
@@ -761,8 +785,8 @@ A keybinding</note>
         <target>Виконує виклики інструментів без запитів</target>
       </trans-unit>
       <trans-unit id="agentHost.sessionConfig.autoApprove.default">
-        <source xml:lang="en">Default approvals</source>
-        <target>Типові затвердження</target>
+        <source xml:lang="en">Default permissions</source>
+        <target>За замовчуванням дозволи</target>
       </trans-unit>
       <trans-unit id="agentHost.sessionConfig.autoApprove.defaultDescription">
         <source xml:lang="en">Asks when approval settings don't apply</source>
@@ -781,8 +805,8 @@ A keybinding</note>
         <target>Автопілот</target>
       </trans-unit>
       <trans-unit id="agentHost.sessionConfig.mode.autopilotDescription">
-        <source xml:lang="en">Autonomously iterates from start to finish</source>
-        <target>Автономно ітерує від початку до кінця</target>
+        <source xml:lang="en">Works autonomously within permissions</source>
+        <target>Працює автономно в межах дозволів</target>
       </trans-unit>
       <trans-unit id="agentHost.sessionConfig.mode.interactive">
         <source xml:lang="en">Interactive</source>
@@ -840,6 +864,10 @@ A keybinding</note>
         <source xml:lang="en">Enable Claude Agent sessions in VS Code. Start and resume agentic coding sessions powered by Anthropic Claude Agent SDK directly in the editor. Uses your existing Copilot subscription.</source>
         <target>Увімкніть сесії агента Claude у VS Code. Починайте та відновлюйте сесії агентного кодування, які працюють на базі Anthropic Claude Agent SDK, безпосередньо в редакторі. Використовує вашу існуючу підписку на Copilot.</target>
       </trans-unit>
+      <trans-unit id="chat.agentHost.claudeAgent.multiRootEnabled">
+        <source xml:lang="en">When enabled, Claude agent-host sessions advertise support for multiple working directories, so a session created in a multi-root workspace can span every workspace folder. Experimental; newly created sessions pick up a change without restarting the agent host.</source>
+        <target>Коли увімкнено, сесії агента Claude повідомляють про підтримку кількох робочих каталогів, тому сесія, створена в багатокореневому робочому просторі, може охоплювати кожну папку робочого простору. Експериментально; новостворені сесії підхоплюють зміни без перезапуску агента.</target>
+      </trans-unit>
       <trans-unit id="chat.agentHost.codexAgent.binaryArgs">
         <source xml:lang="en">Additional command-line arguments passed to `codex app-server`. Primarily useful for debugging (for example, `--log-level=debug`).</source>
         <target>Додаткові аргументи командного рядка, передані `codex app-server`. Переважно корисні для налагодження (наприклад, `--log-level=debug`).</target>
@@ -856,9 +884,17 @@ A keybinding</note>
         <source xml:lang="en">Enable Codex Agent sessions in VS Code. Start and resume agentic coding sessions powered by OpenAI Codex. Usage can be routed through GitHub Copilot or authenticated directly with an OpenAI account.</source>
         <target>Увімкніть сесії Codex Agent у VS Code. Починайте та відновлюйте агентні сесії кодування, що працюють на базі OpenAI Codex. Використання може бути направлене через GitHub Copilot або автентифіковане безпосередньо з обліковим записом OpenAI.</target>
       </trans-unit>
+      <trans-unit id="chat.agentHost.codexAgent.multiRootEnabled">
+        <source xml:lang="en">When enabled, Codex agent-host sessions advertise support for multiple working directories, so a session created in a multi-root workspace can span every workspace folder. Experimental; newly created sessions pick up a change without restarting the agent host.</source>
+        <target>Коли увімкнено, сесії агента-хоста Codex рекламують підтримку кількох робочих директорій, тому сесія, створена в багатокореневому робочому просторі, може охоплювати кожну папку робочого простору. Експериментально; новостворені сесії підхоплюють зміни без перезапуску агента-хоста.</target>
+      </trans-unit>
       <trans-unit id="chat.agentHost.codexAgent.sdkRoot">
         <source xml:lang="en">Experimental, for local SDK development only. Absolute path to a directory containing `node_modules/@openai/codex`. When set, the agent host spawns the Codex binary from this tree instead of downloading the SDK. Empty (the default) falls through to the SDK distribution shipped with this build. Requires `#chat.agentHost.enabled#`. The agent host process must be restarted for changes to take effect.</source>
         <target>Експериментальний, тільки для локальної розробки SDK. Абсолютний шлях до каталогу, що містить `node_modules/@openai/codex`. Коли встановлено, хост агента запускає бінарний файл Codex з цього дерева замість завантаження SDK. Порожній (за замовчуванням) переходить до розподілу SDK, що постачається з цією збіркою. Потрібно `#chat.agentHost.enabled#`. Процес хоста агента повинен бути перезапущений, щоб зміни набрали чинності.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.copilotAgent.multiRootEnabled">
+        <source xml:lang="en">When enabled, Copilot agent-host sessions advertise support for multiple working directories, so a session created in a multi-root workspace can span every workspace folder. Experimental; newly created sessions pick up a change without restarting the agent host.</source>
+        <target>Коли увімкнено, сесії агента Copilot оголошують про підтримку кількох робочих директорій, тому сесія, створена в багатокореневому робочому просторі, може охоплювати кожну папку робочого простору. Експериментально; новостворені сесії підхоплюють зміну без перезапуску агента.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.otel.captureContent">
         <source xml:lang="en">When enabled, includes prompt and response content in OTel span attributes. Configurable in user settings only. Sets `OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT`. Privacy-sensitive: do not enable in environments that ship spans to shared sinks.</source>
@@ -1014,6 +1050,14 @@ A keybinding</note>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/platform/agentHost/common/cloudSandboxAgentHost" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="cloudSandbox.environmentOffline">
+        <source xml:lang="en">The environment for this session is offline. It will become available again when the host reconnects.</source>
+        <target>Середовище для цієї сесії офлайн. Воно знову стане доступним, коли хост повторно підключиться.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/platform/agentHost/common/copilotCliConfig" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHost.config.copilotSdkLogLevel.description">
@@ -1087,6 +1131,14 @@ A keybinding</note>
       <trans-unit id="agentHost.config.rubberDuck.title">
         <source xml:lang="en">Rubber Duck Agent</source>
         <target>Резиновий каченя Агент</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.toolSearchDeferThreshold.description">
+        <source xml:lang="en">Minimum number of tools before MCP and external tools are deferred behind tool search. Set to 0 to always defer external tools. Only effective when tool search is enabled.</source>
+        <target>Мінімальна кількість інструментів перед MCP та зовнішніми інструментами, які відкладені за пошуком інструментів. Встановіть на 0, щоб завжди відкладати зовнішні інструменти. Діє лише коли пошук інструментів увімкнено.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.toolSearchDeferThreshold.title">
+        <source xml:lang="en">Tool Search Defer Threshold</source>
+        <target>Поріг відкладення пошуку інструментів</target>
       </trans-unit>
       <trans-unit id="agentHost.config.toolSearchEnabled.description">
         <source xml:lang="en">When enabled, Copilot SDK sessions defer MCP and non-core VS Code tools behind a tool-search tool so the model discovers them on demand instead of loading every tool definition up front.</source>
@@ -1247,6 +1299,154 @@ A keybinding</note>
       <trans-unit id="agentHost.config.sandbox.windowsFileSystem.title">
         <source xml:lang="en">Windows Sandbox Filesystem</source>
         <target>Файлова система Windows Sandbox</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/common/streamingToolCallDisplay" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="toolStream.create">
+        <source xml:lang="en">Creating file</source>
+        <target>Створення файлу</target>
+      </trans-unit>
+      <trans-unit id="toolStream.createFile">
+        <source xml:lang="en">Creating {0}</source>
+        <target>Створення {0}</target>
+      </trans-unit>
+      <trans-unit id="toolStream.createLines">
+        <source xml:lang="en">Creating file ({0} lines)</source>
+        <target>Створення файлу ({0} рядків)</target>
+      </trans-unit>
+      <trans-unit id="toolStream.createLinesInFile">
+        <source xml:lang="en">Creating {0} ({1} lines)</source>
+        <target>Створення {0} ({1} рядків)</target>
+      </trans-unit>
+      <trans-unit id="toolStream.createOneLine">
+        <source xml:lang="en">Creating file (1 line)</source>
+        <target>Створення файлу (1 рядок)</target>
+      </trans-unit>
+      <trans-unit id="toolStream.createOneLineInFile">
+        <source xml:lang="en">Creating {0} (1 line)</source>
+        <target>Створення {0} (1 рядок)</target>
+      </trans-unit>
+      <trans-unit id="toolStream.edit">
+        <source xml:lang="en">Editing file</source>
+        <target>Редагування файлу</target>
+      </trans-unit>
+      <trans-unit id="toolStream.editFile">
+        <source xml:lang="en">Editing {0}</source>
+        <target>Редагування {0}</target>
+      </trans-unit>
+      <trans-unit id="toolStream.editLines">
+        <source xml:lang="en">Editing {0} lines</source>
+        <target>Редагування {0} рядків</target>
+      </trans-unit>
+      <trans-unit id="toolStream.editLinesInFile">
+        <source xml:lang="en">Editing {0} lines in {1}</source>
+        <target>Редагування {0} рядків у {1}</target>
+      </trans-unit>
+      <trans-unit id="toolStream.editOneLine">
+        <source xml:lang="en">Editing 1 line</source>
+        <target>Редагування 1 рядка</target>
+      </trans-unit>
+      <trans-unit id="toolStream.editOneLineInFile">
+        <source xml:lang="en">Editing 1 line in {0}</source>
+        <target>Редагування 1 рядка в {0}</target>
+      </trans-unit>
+      <trans-unit id="toolStream.insert">
+        <source xml:lang="en">Inserting text</source>
+        <target>Вставка тексту</target>
+      </trans-unit>
+      <trans-unit id="toolStream.insertInFile">
+        <source xml:lang="en">Inserting text in {0}</source>
+        <target>Вставка тексту в {0}</target>
+      </trans-unit>
+      <trans-unit id="toolStream.insertLines">
+        <source xml:lang="en">Inserting {0} lines</source>
+        <target>Вставка {0} рядків</target>
+      </trans-unit>
+      <trans-unit id="toolStream.insertLinesInFile">
+        <source xml:lang="en">Inserting {0} lines in {1}</source>
+        <target>Вставка {0} рядків у {1}</target>
+      </trans-unit>
+      <trans-unit id="toolStream.insertOneLine">
+        <source xml:lang="en">Inserting 1 line</source>
+        <target>Вставка 1 рядка</target>
+      </trans-unit>
+      <trans-unit id="toolStream.insertOneLineInFile">
+        <source xml:lang="en">Inserting 1 line in {0}</source>
+        <target>Вставка 1 рядка в {0}</target>
+      </trans-unit>
+      <trans-unit id="toolStream.patch">
+        <source xml:lang="en">Generating patch</source>
+        <target>Генерація патчу</target>
+      </trans-unit>
+      <trans-unit id="toolStream.patchFiles">
+        <source xml:lang="en">Generating patch in {0}</source>
+        <target>Генерація патчу в {0}</target>
+      </trans-unit>
+      <trans-unit id="toolStream.patchLines">
+        <source xml:lang="en">Generating patch ({0} lines)</source>
+        <target>Генерація патчу ({0} рядків)</target>
+      </trans-unit>
+      <trans-unit id="toolStream.patchLinesInFiles">
+        <source xml:lang="en">Generating patch ({0} lines) in {1}</source>
+        <target>Генерація патчу ({0} рядків) в {1}</target>
+      </trans-unit>
+      <trans-unit id="toolStream.patchOneLine">
+        <source xml:lang="en">Generating patch (1 line)</source>
+        <target>Генерація патчу (1 рядок)</target>
+      </trans-unit>
+      <trans-unit id="toolStream.patchOneLineInFiles">
+        <source xml:lang="en">Generating patch (1 line) in {0}</source>
+        <target>Генерація патчу (1 рядок) у {0}</target>
+      </trans-unit>
+      <trans-unit id="toolStream.replaceLines">
+        <source xml:lang="en">Replacing {0} lines</source>
+        <target>Замінюючи {0} рядків</target>
+      </trans-unit>
+      <trans-unit id="toolStream.replaceLinesInFile">
+        <source xml:lang="en">Replacing {0} lines in {1}</source>
+        <target>Замінюючи {0} рядків у {1}</target>
+      </trans-unit>
+      <trans-unit id="toolStream.replaceLinesWithLines">
+        <source xml:lang="en">Replacing {0} lines with {1} lines</source>
+        <target>Замінюючи {0} рядків на {1} рядків</target>
+      </trans-unit>
+      <trans-unit id="toolStream.replaceLinesWithLinesInFile">
+        <source xml:lang="en">Replacing {0} lines with {1} lines in {2}</source>
+        <target>Замінюючи {0} рядків на {1} рядків у {2}</target>
+      </trans-unit>
+      <trans-unit id="toolStream.replaceLinesWithOneLine">
+        <source xml:lang="en">Replacing {0} lines with 1 line</source>
+        <target>Замінюємо {0} рядків на 1 рядок</target>
+      </trans-unit>
+      <trans-unit id="toolStream.replaceLinesWithOneLineInFile">
+        <source xml:lang="en">Replacing {0} lines with 1 line in {1}</source>
+        <target>Замінюючи {0} рядків на 1 рядок у {1}</target>
+      </trans-unit>
+      <trans-unit id="toolStream.replaceOneLine">
+        <source xml:lang="en">Replacing 1 line</source>
+        <target>Замінюючи 1 рядок</target>
+      </trans-unit>
+      <trans-unit id="toolStream.replaceOneLineInFile">
+        <source xml:lang="en">Replacing 1 line in {0}</source>
+        <target>Замінюючи 1 рядок у {0}</target>
+      </trans-unit>
+      <trans-unit id="toolStream.replaceOneLineWithLines">
+        <source xml:lang="en">Replacing 1 line with {0} lines</source>
+        <target>Замінюючи 1 рядок на {0} рядків</target>
+      </trans-unit>
+      <trans-unit id="toolStream.replaceOneLineWithLinesInFile">
+        <source xml:lang="en">Replacing 1 line with {0} lines in {1}</source>
+        <target>Замінюючи 1 рядок на {0} рядків у {1}</target>
+      </trans-unit>
+      <trans-unit id="toolStream.replaceOneLineWithOneLine">
+        <source xml:lang="en">Replacing 1 line with 1 line</source>
+        <target>Замінюючи 1 рядок на 1 рядок</target>
+      </trans-unit>
+      <trans-unit id="toolStream.replaceOneLineWithOneLineInFile">
+        <source xml:lang="en">Replacing 1 line with 1 line in {0}</source>
+        <target>Замінюючи 1 рядок на 1 рядок у {0}</target>
       </trans-unit>
     </body>
   </file>
@@ -1563,6 +1763,14 @@ A keybinding</note>
       <trans-unit id="claude.exitPlanMode.title">
         <source xml:lang="en">Ready to code?</source>
         <target>Готові кодувати?</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/claude/claudeReplayMapper" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="claude.replay.missingPrompt">
+        <source xml:lang="en">Message content could not be retrieved</source>
+        <target>Не вдалося отримати вміст повідомлення.</target>
       </trans-unit>
     </body>
   </file>
@@ -2520,6 +2728,14 @@ A keybinding</note>
         <source xml:lang="en">Searched for {0}</source>
         <target>Шукали {0}</target>
       </trans-unit>
+      <trans-unit id="toolComplete.insert">
+        <source xml:lang="en">Inserted text</source>
+        <target>Вставлений текст</target>
+      </trans-unit>
+      <trans-unit id="toolComplete.insertFile">
+        <source xml:lang="en">Inserted text in {0}</source>
+        <target>Вставлений текст у {0}</target>
+      </trans-unit>
       <trans-unit id="toolComplete.listAgents">
         <source xml:lang="en">Listed agents</source>
         <target>Перераховані агенти</target>
@@ -2651,6 +2867,14 @@ A keybinding</note>
       <trans-unit id="toolInvoke.grepPattern">
         <source xml:lang="en">Searching for {0}</source>
         <target>Шукаю {0}</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.insert">
+        <source xml:lang="en">Inserting text</source>
+        <target>Вставка тексту</target>
+      </trans-unit>
+      <trans-unit id="toolInvoke.insertFile">
+        <source xml:lang="en">Inserting text in {0}</source>
+        <target>Вставка тексту в {0}</target>
       </trans-unit>
       <trans-unit id="toolInvoke.patch">
         <source xml:lang="en">Editing files</source>
@@ -3176,6 +3400,14 @@ A keybinding</note>
         <source xml:lang="en">Prefix applied to the branch created for an isolated worktree.</source>
         <target>Префікс, застосований до гілки, створеної для ізольованого робочого дерева.</target>
       </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.worktreeBranchTrack">
+        <source xml:lang="en">Worktree Branch Tracking</source>
+        <target>Відстеження гілки Worktree</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.worktreeBranchTrackDescription">
+        <source xml:lang="en">Whether the branch created for an isolated worktree tracks its upstream.</source>
+        <target>Чи гілка, створена для ізольованого робочого дерева, відстежує свій upstream.</target>
+      </trans-unit>
       <trans-unit id="agentHost.sessionConfig.worktreeIncludeFiles">
         <source xml:lang="en">Worktree Include Files</source>
         <target>Файли, що включаються в робочу деревину</target>
@@ -3188,9 +3420,33 @@ A keybinding</note>
         <source xml:lang="en">Pattern</source>
         <target>Шаблон</target>
       </trans-unit>
+      <trans-unit id="agentHost.worktreeCheckingOut">
+        <source xml:lang="en">Creating isolated worktree (checking out files)</source>
+        <target>Створення ізольованого робочого дерева (вивантаження файлів)</target>
+      </trans-unit>
+      <trans-unit id="agentHost.worktreeCheckingOutPercent">
+        <source xml:lang="en">Creating isolated worktree (checking out files, {0}%)</source>
+        <target>Створення ізольованого робочого дерева (вивантаження файлів, {0}%)</target>
+      </trans-unit>
+      <trans-unit id="agentHost.worktreeCopyingIncludeFiles">
+        <source xml:lang="en">Creating isolated worktree (copying additional files)</source>
+        <target>Створення ізольованого робочого дерева (копіювання додаткових файлів)</target>
+      </trans-unit>
+      <trans-unit id="agentHost.worktreeCopyingIncludeFilesPercent">
+        <source xml:lang="en">Creating isolated worktree (copying additional files, {0}%)</source>
+        <target>Створення ізольованого робочого дерева (копіювання додаткових файлів, {0}%)</target>
+      </trans-unit>
       <trans-unit id="agentHost.worktreeCreated">
         <source xml:lang="en">Created isolated worktree for branch {0}</source>
         <target>Створено ізольоване робоче дерево для гілки {0}</target>
+      </trans-unit>
+      <trans-unit id="agentHost.worktreeCreating">
+        <source xml:lang="en">Creating isolated worktree</source>
+        <target>Створення ізольованого робочого дерева</target>
+      </trans-unit>
+      <trans-unit id="agentHost.worktreeNamingBranch">
+        <source xml:lang="en">Creating isolated worktree (naming branch)</source>
+        <target>Створення ізольованого робочого дерева (іменування гілки)</target>
       </trans-unit>
       <trans-unit id="sessionWorkingDirectoryMissing">
         <source xml:lang="en">This session couldn't be loaded because its working directory no longer exists: {0}</source>
@@ -3374,8 +3630,48 @@ A keybinding</note>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/platform/browserView/electron-main/browserViewInspector" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="browserView.addComment">
+        <source xml:lang="en">Add Comment</source>
+        <target>Додати коментар</target>
+      </trans-unit>
+      <trans-unit id="browserView.addCommentPlaceholder">
+        <source xml:lang="en">Add a comment</source>
+        <target>Додати коментар</target>
+      </trans-unit>
+      <trans-unit id="browserView.commentOnSelectedElement">
+        <source xml:lang="en">Comment on selected element</source>
+        <target>Коментар до вибраного елемента</target>
+      </trans-unit>
+      <trans-unit id="browserView.elementComment">
+        <source xml:lang="en">Element comment {0}</source>
+        <target>Елемент коментар {0}</target>
+      </trans-unit>
+      <trans-unit id="browserView.elementCommentWithBody">
+        <source xml:lang="en">Element comment {0}: {1}</source>
+        <target>Елемент коментар {0}: {1}</target>
+      </trans-unit>
+      <trans-unit id="browserView.emptyElementComment">
+        <source xml:lang="en">Empty element comment {0}</source>
+        <target>Порожній елемент коментар {0}</target>
+      </trans-unit>
+      <trans-unit id="browserView.removeComment">
+        <source xml:lang="en">Remove Comment</source>
+        <target>Видалити коментар</target>
+      </trans-unit>
+      <trans-unit id="browserView.removeElementComment">
+        <source xml:lang="en">Remove element comment</source>
+        <target>Видалити елемент коментарю</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/platform/browserView/electron-main/browserViewMainService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="browser.contextMenu.addComment">
+        <source xml:lang="en">Add Comment...</source>
+        <target>Додати коментар...</target>
+      </trans-unit>
       <trans-unit id="browser.contextMenu.addElementToChat">
         <source xml:lang="en">Add Element to Chat</source>
         <target>Додати елемент до чату</target>

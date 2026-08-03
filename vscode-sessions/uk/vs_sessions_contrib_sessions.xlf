@@ -78,10 +78,6 @@
         <source xml:lang="en">Agents</source>
         <target>Агенти</target>
       </trans-unit>
-      <trans-unit id="automations">
-        <source xml:lang="en">Automations</source>
-        <target>Автоматизації</target>
-      </trans-unit>
       <trans-unit id="harnessSettings">
         <source xml:lang="en">Codex Settings</source>
         <target>Налаштування Codex</target>
@@ -141,6 +137,10 @@
       <trans-unit id="agentSessions.filesChanged">
         <source xml:lang="en">{0} files changed</source>
         <target>{0} файлів змінено</target>
+      </trans-unit>
+      <trans-unit id="agentSessions.worktreePending">
+        <source xml:lang="en">Creating worktree…</source>
+        <target>Створення робочого дерева…</target>
       </trans-unit>
     </body>
   </file>
@@ -353,6 +353,14 @@
         <source xml:lang="en">Go Forward One Session</source>
         <target>Перейти вперед на одну сесію</target>
       </trans-unit>
+      <trans-unit id="sessionsPickerNeedsInput">
+        <source xml:lang="en">needs input</source>
+        <target>потрібен вхід</target>
+      </trans-unit>
+      <trans-unit id="sessionsPickerUnread">
+        <source xml:lang="en">unread</source>
+        <target>непрочитано</target>
+      </trans-unit>
       <trans-unit id="showChatsPicker">
         <source xml:lang="en">Go to Chat in Session</source>
         <target>Перейдіть до чату в сесії</target>
@@ -403,6 +411,306 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/contrib/sessions/browser/views/automationsAccessibility" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="automationsAccessibleView.automation">
+        <source xml:lang="en">{0}, enabled</source>
+        <target>{0}, увімкнено</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.automationDisabled">
+        <source xml:lang="en">{0}, disabled</source>
+        <target>{0}, вимкнено</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.completed">
+        <source xml:lang="en">Completed</source>
+        <target>Завершено</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.daily">
+        <source xml:lang="en">Daily at {0}</source>
+        <target>Щодня о {0}</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.empty">
+        <source xml:lang="en">No automations.</source>
+        <target>Немає автоматизацій.</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.failed">
+        <source xml:lang="en">Failed</source>
+        <target>Не вдалося</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.history">
+        <source xml:lang="en">Run history</source>
+        <target>Історія запусків</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.hourly">
+        <source xml:lang="en">Hourly</source>
+        <target>Погодинно</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.manual">
+        <source xml:lang="en">Manual</source>
+        <target>Посібник</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.noRuns">
+        <source xml:lang="en">No runs.</source>
+        <target>Немає пробігів.</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.pending">
+        <source xml:lang="en">Pending</source>
+        <target>Очікує</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.prompt">
+        <source xml:lang="en">Prompt: {0}</source>
+        <target>Запит: {0}</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.run">
+        <source xml:lang="en">{0}, {1}, started {2}</source>
+        <target>{0}, {1}, розпочато {2}</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.runError">
+        <source xml:lang="en">Error: {0}</source>
+        <target>Помилка: {0}</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.running">
+        <source xml:lang="en">Running</source>
+        <target>Запуск</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.schedule">
+        <source xml:lang="en">Schedule: {0}</source>
+        <target>Розклад: {0}</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.title">
+        <source xml:lang="en">Automations</source>
+        <target>Автоматизації</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.unknown">
+        <source xml:lang="en">Unknown automation</source>
+        <target>Невідома автоматизація</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.weekly">
+        <source xml:lang="en">{0} at {1}</source>
+        <target>{0} о {1}</target>
+      </trans-unit>
+      <trans-unit id="automationsCustomView.help.accessibleView">
+        <source xml:lang="en">Use Open Accessible View to read the current automations and run history as text.</source>
+        <target>Використовуйте відкритий доступний перегляд, щоб читати поточні автоматизації та історію виконання у вигляді тексту.</target>
+      </trans-unit>
+      <trans-unit id="automationsCustomView.help.cards">
+        <source xml:lang="en">Tab between each card's Edit, Run now, and Delete controls. Edit, or clicking anywhere else on the card, opens the automation dialog. Run now starts a session immediately. Delete asks for confirmation.</source>
+        <target>Перемикайтеся між кнопками Редагувати, Запустити зараз та Видалити для кожної картки. Редагування або натискання в будь-якому іншому місці на картці відкриває діалог автоматизації. Запустити зараз негайно розпочинає сесію. Видалити запитує підтвердження.</target>
+      </trans-unit>
+      <trans-unit id="automationsCustomView.help.history">
+        <source xml:lang="en">Run history is grouped by date. Each run reports its Pending, Running, Completed, or Failed status. Runs with an available session can be opened with Enter or Space.</source>
+        <target>Історія запусків згрупована за датою. Кожен запуск повідомляє про свій статус: Очікує, Виконується, Завершено або Не вдалося. Запуски з доступною сесією можна відкрити за допомогою Enter або Space.</target>
+      </trans-unit>
+      <trans-unit id="automationsCustomView.help.overview">
+        <source xml:lang="en">You are in the Automations view. It contains automation cards followed by run history.</source>
+        <target>Ви знаходитесь у режимі Автоматизацій. Він містить картки автоматизацій, за якими слідує історія виконання.</target>
+      </trans-unit>
+      <trans-unit id="automationsCustomView.help.read">
+        <source xml:lang="en">Completed and failed runs that have not been opened are announced as unread. Use Mark all as read to clear all available unread runs.</source>
+        <target>Завершені та невдалі запуски, які не були відкриті, оголошуються як непрочитані. Використайте Позначити всі як прочитані, щоб очистити всі доступні непрочитані запуски.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/sessions/browser/views/automationsView" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="automationActions">
+        <source xml:lang="en">Actions for {0}</source>
+        <target>Дії для {0}</target>
+      </trans-unit>
+      <trans-unit id="automationAlreadyRunningStatus">
+        <source xml:lang="en">Automation {0} is already running</source>
+        <target>Автоматизація {0} вже запущена</target>
+      </trans-unit>
+      <trans-unit id="automationCard">
+        <source xml:lang="en">{0} — {1}</source>
+        <target>{0} — {1}</target>
+      </trans-unit>
+      <trans-unit id="automationChangedDuringEdit">
+        <source xml:lang="en">This automation changed while the dialog was open. Reopen it to review the latest values.</source>
+        <target>Ця автоматизація змінилася, поки діалог було відкрито. Відкрийте його знову, щоб переглянути останні значення.</target>
+      </trans-unit>
+      <trans-unit id="automationCreateFailed">
+        <source xml:lang="en">Failed to create automation.</source>
+        <target>Не вдалося створити автоматизацію.</target>
+      </trans-unit>
+      <trans-unit id="automationCreatedStatus">
+        <source xml:lang="en">Created automation {0}</source>
+        <target>Створено автоматизацію {0}</target>
+      </trans-unit>
+      <trans-unit id="automationDeleteFailed">
+        <source xml:lang="en">Failed to delete automation.</source>
+        <target>Не вдалося видалити автоматизацію.</target>
+      </trans-unit>
+      <trans-unit id="automationDeletedDuringEdit">
+        <source xml:lang="en">This automation was deleted while the dialog was open.</source>
+        <target>Цю автоматизацію було видалено, поки діалог було відкрито.</target>
+      </trans-unit>
+      <trans-unit id="automationDeletedStatus">
+        <source xml:lang="en">Deleted automation {0}</source>
+        <target>Видалена автоматизація {0}</target>
+      </trans-unit>
+      <trans-unit id="automationMarkAllReadFailed">
+        <source xml:lang="en">Failed to mark automation runs as read.</source>
+        <target>Не вдалося позначити запуски автоматизації як прочитані.</target>
+      </trans-unit>
+      <trans-unit id="automationNotStartedStatus">
+        <source xml:lang="en">Automation {0} did not start</source>
+        <target>Автоматизація {0} не розпочалася</target>
+      </trans-unit>
+      <trans-unit id="automationRunActionFailed">
+        <source xml:lang="en">Failed to run automation.</source>
+        <target>Не вдалося запустити автоматизацію.</target>
+      </trans-unit>
+      <trans-unit id="automationRunCompleted">
+        <source xml:lang="en">Completed</source>
+        <target>Завершено</target>
+      </trans-unit>
+      <trans-unit id="automationRunErrorAriaLabel">
+        <source xml:lang="en">Error: {0}</source>
+        <target>Помилка: {0}</target>
+      </trans-unit>
+      <trans-unit id="automationRunFailed">
+        <source xml:lang="en">Failed</source>
+        <target>Не вдалося</target>
+      </trans-unit>
+      <trans-unit id="automationRunOpenFailed">
+        <source xml:lang="en">Failed to open automation run.</source>
+        <target>Не вдалося відкрити автоматизацію.</target>
+      </trans-unit>
+      <trans-unit id="automationRunPending">
+        <source xml:lang="en">Pending</source>
+        <target>Очікується</target>
+      </trans-unit>
+      <trans-unit id="automationRunRunning">
+        <source xml:lang="en">Running</source>
+        <target>Запуск</target>
+      </trans-unit>
+      <trans-unit id="automationRunUnreadAriaLabel">
+        <source xml:lang="en">Unread</source>
+        <target>Непрочитано</target>
+      </trans-unit>
+      <trans-unit id="automationStartedStatus">
+        <source xml:lang="en">Started automation {0}</source>
+        <target>Розпочато автоматизацію {0}</target>
+      </trans-unit>
+      <trans-unit id="automationUpdateFailed">
+        <source xml:lang="en">Failed to update automation.</source>
+        <target>Не вдалося оновити автоматизацію.</target>
+      </trans-unit>
+      <trans-unit id="automationUpdatedStatus">
+        <source xml:lang="en">Updated automation {0}</source>
+        <target>Оновлена автоматизація {0}</target>
+      </trans-unit>
+      <trans-unit id="automationsDescription">
+        <source xml:lang="en">Schedule agent sessions to run automatically on a cadence you choose.</source>
+        <target>Заплануйте сесії агента для автоматичного виконання з частотою, яку ви оберете.</target>
+      </trans-unit>
+      <trans-unit id="automationsDisabledBeforeSave">
+        <source xml:lang="en">Automations were disabled before the change could be saved.</source>
+        <target>Автоматизації були вимкнені перед тим, як зміни могли бути збережені.</target>
+      </trans-unit>
+      <trans-unit id="automationsDisabledDetail">
+        <source xml:lang="en">Enable “{0}” to make changes.</source>
+        <target>Увімкніть “{0}”, щоб внести зміни.</target>
+      </trans-unit>
+      <trans-unit id="automationsDisabledTitle">
+        <source xml:lang="en">Automations are disabled.</source>
+        <target>Автоматизації вимкнені.</target>
+      </trans-unit>
+      <trans-unit id="automationsTitle">
+        <source xml:lang="en">Automations</source>
+        <target>Автоматизації</target>
+      </trans-unit>
+      <trans-unit id="confirmDeleteAutomation">
+        <source xml:lang="en">Delete automation "{0}"?</source>
+        <target>Видалити автоматизацію "{0}"?</target>
+      </trans-unit>
+      <trans-unit id="confirmDeleteDetail">
+        <source xml:lang="en">This will permanently delete the automation and its run history.</source>
+        <target>Це назавжди видалить автоматизацію та її історію виконання.</target>
+      </trans-unit>
+      <trans-unit id="createAutomation">
+        <source xml:lang="en">Create automation</source>
+        <target>Створити автоматизацію</target>
+      </trans-unit>
+      <trans-unit id="delete">
+        <source xml:lang="en">Delete</source>
+        <target>Видалити</target>
+      </trans-unit>
+      <trans-unit id="deleteAutomation">
+        <source xml:lang="en">Delete</source>
+        <target>Видалити</target>
+      </trans-unit>
+      <trans-unit id="disabled">
+        <source xml:lang="en">Disabled</source>
+        <target>Вимкнено</target>
+      </trans-unit>
+      <trans-unit id="editAutomationNamed">
+        <source xml:lang="en">Edit automation {0}</source>
+        <target>Редагувати автоматизацію {0}</target>
+      </trans-unit>
+      <trans-unit id="historyHeader">
+        <source xml:lang="en">History</source>
+        <target>Історія</target>
+      </trans-unit>
+      <trans-unit id="lastWeek">
+        <source xml:lang="en">Last week</source>
+        <target>Минулого тижня</target>
+      </trans-unit>
+      <trans-unit id="markAllRead">
+        <source xml:lang="en">Mark all as read</source>
+        <target>Позначити все як прочитане</target>
+      </trans-unit>
+      <trans-unit id="newAutomation">
+        <source xml:lang="en">New Automation</source>
+        <target>Нова автоматизація</target>
+      </trans-unit>
+      <trans-unit id="noAutomationsDesc">
+        <source xml:lang="en">Create an automation to schedule an agent session to run on a cadence you choose.</source>
+        <target>Створіть автоматизацію для запланування сесії агента, яка буде виконуватися з обраною вами періодичністю.</target>
+      </trans-unit>
+      <trans-unit id="noAutomationsYet">
+        <source xml:lang="en">No automations yet</source>
+        <target>Ще немає автоматизацій</target>
+      </trans-unit>
+      <trans-unit id="quickChat">
+        <source xml:lang="en">Quick Chat</source>
+        <target>Швидкий чат</target>
+      </trans-unit>
+      <trans-unit id="runNow">
+        <source xml:lang="en">Run now</source>
+        <target>Запустити зараз</target>
+      </trans-unit>
+      <trans-unit id="scheduleDailyAt">
+        <source xml:lang="en">Daily at {0}</source>
+        <target>Щодня о {0}</target>
+      </trans-unit>
+      <trans-unit id="scheduleHourly">
+        <source xml:lang="en">Hourly</source>
+        <target>Погодинно</target>
+      </trans-unit>
+      <trans-unit id="scheduleManual">
+        <source xml:lang="en">Manual</source>
+        <target>Посібник</target>
+      </trans-unit>
+      <trans-unit id="scheduleWeeklyAt">
+        <source xml:lang="en">{0} at {1}</source>
+        <target>{0} о {1}</target>
+      </trans-unit>
+      <trans-unit id="today">
+        <source xml:lang="en">Today</source>
+        <target>Сьогодні</target>
+      </trans-unit>
+      <trans-unit id="unknownAutomation">
+        <source xml:lang="en">Unknown</source>
+        <target>Невідомо</target>
+      </trans-unit>
+      <trans-unit id="yesterday">
+        <source xml:lang="en">Yesterday</source>
+        <target>Вчора</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsList" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="addToGroupAction">
@@ -420,6 +728,18 @@
       <trans-unit id="archived">
         <source xml:lang="en">Done</source>
         <target>Готово</target>
+      </trans-unit>
+      <trans-unit id="automations">
+        <source xml:lang="en">Automations</source>
+        <target>Автоматизації</target>
+      </trans-unit>
+      <trans-unit id="automationsActiveAria">
+        <source xml:lang="en">{0}, run in progress</source>
+        <target>{0}, виконання в процесі</target>
+      </trans-unit>
+      <trans-unit id="automationsUnreadRunAria">
+        <source xml:lang="en">{0}, unread run</source>
+        <target>{0}, непрочитаний запуск</target>
       </trans-unit>
       <trans-unit id="chatsSection">
         <source xml:lang="en">Chats</source>
@@ -508,6 +828,10 @@
       <trans-unit id="sessionItemAria">
         <source xml:lang="en">{0}, updated {1}</source>
         <target>{0}, оновлено {1}</target>
+      </trans-unit>
+      <trans-unit id="sessionItemWorktreePendingAria">
+        <source xml:lang="en">{0}, creating worktree, updated {1}</source>
+        <target>{0}, створення робочого дерева, оновлено {1}</target>
       </trans-unit>
       <trans-unit id="sessionPlaceholderAria">
         <source xml:lang="en">{0}. {1}</source>
@@ -732,6 +1056,14 @@
       <trans-unit id="groupByWorkspace">
         <source xml:lang="en">Group by Workspace</source>
         <target>Групувати за Робочим простором</target>
+      </trans-unit>
+      <trans-unit id="manageAutomations">
+        <source xml:lang="en">Manage Automations</source>
+        <target>Керувати автоматизаціями</target>
+      </trans-unit>
+      <trans-unit id="markAllAutomationRunsRead">
+        <source xml:lang="en">Mark All as Read</source>
+        <target>Позначити всі як прочитані</target>
       </trans-unit>
       <trans-unit id="markAllRead">
         <source xml:lang="en">Mark All as Read</source>

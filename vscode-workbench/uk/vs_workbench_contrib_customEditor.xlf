@@ -67,32 +67,28 @@
         <target>Людсько зрозуміла назва користувацького редактора. Вона відображається користувачам під час вибору, який редактор використовувати.</target>
       </trans-unit>
       <trans-unit id="contributes.priority">
-        <source xml:lang="en">Controls if the custom editor is enabled automatically when the user opens a file, diff, or merge editor. This may be overridden by users using the `workbench.editorAssociations` or `workbench.diffEditorAssociations` setting. When omitted, the custom editor defaults to `default` for the normal editor and `never` for diff and merge editors, so it is not used for diffs or merges unless it opts in.</source>
-        <target>Контролює, чи увімкнено користувацький редактор автоматично, коли користувач відкриває файл, редактор порівняння або злиття. Це може бути переоприділено користувачами за допомогою налаштувань `workbench.editorAssociations` або `workbench.diffEditorAssociations`. Якщо пропущено, користувацький редактор за замовчуванням встановлюється на `default` для звичайного редактора та `never` для редакторів порівняння та злиття, тому він не використовується для порівнянь або злиттів, якщо не вибрано.</target>
+        <source xml:lang="en">Controls if the custom editor is enabled automatically when the user opens a file or diff editor. This may be overridden by users using the `workbench.editorAssociations` or `workbench.diffEditorAssociations` setting. When omitted, the custom editor defaults to `default` for the normal editor and `explicit` for diff editors, so it is not used for diffs unless it opts in.</source>
+        <target>Контролює, чи активується користувацький редактор автоматично, коли користувач відкриває файл або редактор порівняння. Це може бути переоприділено користувачами за допомогою налаштувань `workbench.editorAssociations` або `workbench.diffEditorAssociations`. Якщо пропустити, користувацький редактор за замовчуванням буде `default` для звичайного редактора та `explicit` для редакторів порівняння, тому він не використовується для порівнянь, якщо не вибрано.</target>
       </trans-unit>
       <trans-unit id="contributes.priority.default">
         <source xml:lang="en">The editor is automatically used when the user opens a resource, provided that no other default custom editors are registered for that resource.</source>
         <target>Редактор автоматично використовується, коли користувач відкриває ресурс, за умови, що для цього ресурсу не зареєстровано жодних інших стандартних користувацьких редакторів.</target>
       </trans-unit>
       <trans-unit id="contributes.priority.diffEditor">
-        <source xml:lang="en">Controls if the custom editor is enabled automatically when the user opens a diff. When not specified this defaults to `never`, so the custom editor is not used for diffs unless it opts in.</source>
-        <target>Контролює, чи активується користувацький редактор автоматично, коли користувач відкриває різницю. Якщо не вказано, за замовчуванням це `ніколи`, тому користувацький редактор не використовується для різниць, якщо не вибрано.</target>
+        <source xml:lang="en">Controls if the custom editor is enabled automatically when the user opens a diff. When not specified this defaults to `explicit`, so the custom editor is not used for diffs unless it opts in.</source>
+        <target>Контролює, чи активується користувацький редактор автоматично, коли користувач відкриває різницю. Якщо не вказано, за замовчуванням це значення `explicit`, тому користувацький редактор не використовується для різниць, якщо не вибрано.</target>
       </trans-unit>
-      <trans-unit id="contributes.priority.mergeEditor">
-        <source xml:lang="en">Controls if the custom editor is enabled automatically when the user opens a merge editor. When not specified this defaults to `never`, so the custom editor is not used for merges unless it opts in.</source>
-        <target>Контролює, чи активується користувацький редактор автоматично, коли користувач відкриває редактор злиття. Якщо не вказано, за замовчуванням це `ніколи`, тому користувацький редактор не використовується для злиттів, якщо не вибрано.</target>
-      </trans-unit>
-      <trans-unit id="contributes.priority.never">
-        <source xml:lang="en">The editor is never automatically used, and it is also skipped when the user points a `workbench.editorAssociations` entry at it. It can still be opened via the `Reopen With` command or the specialized `workbench.diffEditorAssociations` setting.</source>
-        <target>Редактор ніколи не використовується автоматично, і він також пропускається, коли користувач вказує на нього записом `workbench.editorAssociations`. Його все ще можна відкрити за допомогою команди `Reopen With` або спеціалізованого налаштування `workbench.diffEditorAssociations`.</target>
+      <trans-unit id="contributes.priority.explicit">
+        <source xml:lang="en">The editor is not automatically used or opted into by an association from another editor mode. It can still be opened using the `Reopen With` command or an association configured specifically for this editor mode.</source>
+        <target>Редактор не використовується автоматично і не підключається асоціацією з іншого режиму редактора. Його все ще можна відкрити за допомогою команди `Reopen With` або асоціації, налаштованої спеціально для цього режиму редактора.</target>
       </trans-unit>
       <trans-unit id="contributes.priority.option">
         <source xml:lang="en">The editor is not automatically used when the user opens a resource, but a user can switch to the editor using the `Reopen With` command.</source>
         <target>Редактор не використовується автоматично, коли користувач відкриває ресурс, але користувач може перемкнутися на редактор, використовуючи команду `Перезапустити з`.</target>
       </trans-unit>
       <trans-unit id="contributes.priority.textEditor">
-        <source xml:lang="en">Controls if the custom editor is enabled automatically when the user opens a file. `diffEditor` and `mergeEditor` do not inherit this value; when they are not specified they default to `never`.</source>
-        <target>Контролює, чи увімкнено користувацький редактор автоматично, коли користувач відкриває файл. `diffEditor` та `mergeEditor` не успадковують це значення; коли вони не вказані, за замовчуванням встановлюється `never`.</target>
+        <source xml:lang="en">Controls if the custom editor is enabled automatically when the user opens a file. `diffEditor` does not inherit this value; when it is not specified it defaults to `explicit`.</source>
+        <target>Контролює, чи активується користувацький редактор автоматично, коли користувач відкриває файл. `diffEditor` не успадковує це значення; якщо воно не вказане, за замовчуванням використовується `explicit`.</target>
       </trans-unit>
       <trans-unit id="contributes.selector">
         <source xml:lang="en">Set of globs that the custom editor is enabled for.</source>
