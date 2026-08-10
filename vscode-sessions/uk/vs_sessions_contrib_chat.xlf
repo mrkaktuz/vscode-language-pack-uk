@@ -23,12 +23,12 @@
         <target>Використовується кнопкою Commit на панелі інструментів Зміни</target>
       </trans-unit>
       <trans-unit id="skillUI.createDraftPr">
-        <source xml:lang="en">Used by the Create Draft Pull Request button in the Changes toolbar</source>
-        <target>Використовується кнопкою Створити чернетку запиту на злиття в панелі інструментів Зміни</target>
+        <source xml:lang="en">Used by the Create Draft PR button in the Changes toolbar</source>
+        <target>Використовується кнопкою Створити чернетку PR на панелі інструментів Зміни</target>
       </trans-unit>
       <trans-unit id="skillUI.createPr">
-        <source xml:lang="en">Used by the Create Pull Request button in the Changes toolbar</source>
-        <target>Використовується кнопкою Створити запит на злиття на панелі інструментів Зміни</target>
+        <source xml:lang="en">Used by the Create PR button in the Changes toolbar</source>
+        <target>Використовується кнопкою Створити PR на панелі змін.</target>
       </trans-unit>
       <trans-unit id="skillUI.fixCi">
         <source xml:lang="en">Used by the Fix Checks button in the Changes toolbar</source>
@@ -145,6 +145,18 @@
       <trans-unit id="sessions.newSession.label">
         <source xml:lang="en">New Session</source>
         <target>Нова сесія</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/chat/browser/lastTurnChangesMultiDiffSourceResolver" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="sessions.currentTurnChanges.title">
+        <source xml:lang="en">Current Turn Changes</source>
+        <target>Поточні зміни черги</target>
+      </trans-unit>
+      <trans-unit id="sessions.lastTurnChanges.title">
+        <source xml:lang="en">Last Turn Changes</source>
+        <target>Останні зміни ходу</target>
       </trans-unit>
     </body>
   </file>
@@ -281,6 +293,10 @@
       <trans-unit id="newChatInput.status.otel.title">
         <source xml:lang="en">Monitoring with OpenTelemetry enabled</source>
         <target>Моніторинг з увімкненим OpenTelemetry</target>
+      </trans-unit>
+      <trans-unit id="newSessionPromptOptions.inserted">
+        <source xml:lang="en">Inserted prompt: {0}</source>
+        <target>Вставлений запит: {0}</target>
       </trans-unit>
       <trans-unit id="send">
         <source xml:lang="en">Send</source>
@@ -456,6 +472,18 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/contrib/chat/browser/newSessionPromptOptions" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="newSessionPromptOptions.optionAriaLabel">
+        <source xml:lang="en">{0}: {1}</source>
+        <target>{0}: {1}</target>
+      </trans-unit>
+      <trans-unit id="newSessionPromptOptions.title">
+        <source xml:lang="en">Send your first prompt</source>
+        <target>Надішліть свій перший запит</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/chat/browser/noAgentHostEmptyState" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="noAgentHost.aria">
@@ -473,6 +501,18 @@
       <trans-unit id="noAgentHost.title">
         <source xml:lang="en">Connect a host to get started</source>
         <target>Підключіть хост, щоб почати</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/chat/browser/promptTemplatePlaceholder" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="sessions.promptTemplatePlaceholder.hover">
+        <source xml:lang="en">Click or place the caret here and press Enter to describe the coding task</source>
+        <target>Натисніть або розмістіть курсор тут і натисніть Enter, щоб описати завдання з кодування.</target>
+      </trans-unit>
+      <trans-unit id="sessionsPromptTemplatePlaceholderFocused">
+        <source xml:lang="en">Whether the caret is inside an editable prompt template placeholder.</source>
+        <target>Чи знаходиться курсор всередині змінної шаблону підказки, що редагується.</target>
       </trans-unit>
     </body>
   </file>
@@ -852,14 +892,6 @@
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/sessions/contrib/chat/browser/sessionChatInputToolbar" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="sessions.lastTurnChanges.title">
-        <source xml:lang="en">Last Turn Changes</source>
-        <target>Останні зміни ходу</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/sessions/contrib/chat/browser/sessionChatInputToolbarDebug" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="sessions.debug.chatPills.agentFeedback">
@@ -1110,6 +1142,14 @@
         <source xml:lang="en">To choose a folder from a searchable list instead, use the New Session in Folder command{0}.</source>
         <target>Щоб вибрати папку з пошукового списку, використовуйте команду Нової сесії в папці {0}.</target>
       </trans-unit>
+      <trans-unit id="sessionsChat.promptOptions">
+        <source xml:lang="en">When prompt options appear above the new-session input, use Tab and Shift+Tab to move between them, then press Enter or Space to insert one. You can select a different option while the input is empty, exactly matches the inserted prompt, or only has its editable placeholder removed; other edits disable the options without hiding them.</source>
+        <target>Коли варіанти підказок з'являються над полем введення нової сесії, використовуйте Tab і Shift+Tab для переміщення між ними, а потім натисніть Enter або Space, щоб вставити один з них. Ви можете вибрати інший варіант, коли поле введення порожнє, точно відповідає вставленій підказці або тільки має видалений редагований плейсхолдер; інші зміни деактивують варіанти, не приховуючи їх.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.promptTemplatePlaceholder">
+        <source xml:lang="en">When the new-session prompt contains a highlighted task placeholder, place the caret inside it and replace it{0} to type your task.</source>
+        <target>Коли підказка нової сесії містить виділений плейсхолдер завдання, розмістіть курсор всередині нього та замініть його{0}, щоб ввести своє завдання.</target>
+      </trans-unit>
       <trans-unit id="sessionsChat.promptTimeline">
         <source xml:lang="en">When the prompt timeline is enabled, a handle on the left edge of the transcript lists your prompts. Activate it to expand the list, use the up and down arrows (or Home and End) to move between prompts, Enter or Space to jump to a prompt, and Escape to dismiss the list and return focus to the handle. When a prompt title is pinned above the transcript, activate its title to jump to that prompt, or use the Previous Prompt and Next Prompt buttons to jump between prompts.</source>
         <target>Коли активовано часову шкалу підказок, елемент керування на лівому краю транскрипту відображає ваші підказки. Активуйте його, щоб розгорнути список, використовуйте стрілки вгору і вниз (або Home і End), щоб переміщатися між підказками, клавішу Enter або Space, щоб перейти до підказки, і клавішу Escape, щоб закрити список і повернути фокус на елемент керування. Коли заголовок підказки закріплено над транскриптом, активуйте його заголовок, щоб перейти до цієї підказки, або використовуйте кнопки "Попередня підказка" та "Наступна підказка", щоб переміщатися між підказками.</target>
@@ -1185,30 +1225,6 @@
       <trans-unit id="fileEntryDescription">
         <source xml:lang="en">{0} ({1})</source>
         <target>{0} ({1})</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/contrib/chat/browser/voiceInputDecorations" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="voiceMode.bargeInHint">
-        <source xml:lang="en">Speak or use {0}</source>
-        <target>Говоріть або використовуйте {0}</target>
-      </trans-unit>
-      <trans-unit id="voiceMode.bargeInHintNoKb">
-        <source xml:lang="en">Speak to barge in</source>
-        <target>Говорити, щоб втрутитися</target>
-      </trans-unit>
-      <trans-unit id="voiceMode.clickMicOrBargeInHint">
-        <source xml:lang="en">Click voice mode to talk or barge in</source>
-        <target>Натисніть режим голосу, щоб говорити або втрутитися.</target>
-      </trans-unit>
-      <trans-unit id="voiceMode.listening">
-        <source xml:lang="en">Listening...</source>
-        <target>Слухаю...</target>
-      </trans-unit>
-      <trans-unit id="voiceMode.pttOrBargeInHint">
-        <source xml:lang="en">Press {0} to talk or barge in</source>
-        <target>Натисніть {0}, щоб поговорити або втрутитися</target>
       </trans-unit>
     </body>
   </file>

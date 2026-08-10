@@ -19,8 +19,8 @@
         <target>Коли увімкнено, голосовий режим автоматично повторно входить у режим прослуховування після того, як асистент закінчує говорити, тому ви можете вести розмову без рук. Коли вимкнено, ви починаєте і закінчуєте кожен хід вручну, а закінчення ходу надсилає його. Ходи не закінчуються автоматично при затримці мовчання або фразі зупинки, якщо {0} або {1} не налаштовані явно.</target>
       </trans-unit>
       <trans-unit id="agents.voice.language">
-        <source xml:lang="en">The language used for speech recognition, dictation, and spoken responses. The selectable languages support native voice output. Automatic follows the system or browser locale for speech recognition and dictation, and uses English voice output when the detected language does not support native voice output. Changing this while voice mode is connected takes effect immediately.</source>
-        <target>Мова, що використовується для розпізнавання мови, диктування та усних відповідей. Вибрані мови підтримують вихідний звук рідною мовою. Автоматичний режим слідує за мовною локалізацією системи або браузера для розпізнавання мови та диктування, і використовує англійський вихідний звук, коли виявлена мова не підтримує вихідний звук рідною мовою. Зміна цього під час підключення голосового режиму набирає чинності негайно.</target>
+        <source xml:lang="en">The language used for speech recognition, dictation, and spoken responses. The selectable languages support native voice output. Automatic uses the configured display language for speech recognition and dictation when supported; otherwise, it follows the system or browser locale. English voice output is used when the detected language does not support native voice output. Changing this while voice mode is connected takes effect immediately.</source>
+        <target>Мова, що використовується для розпізнавання мови, диктування та усних відповідей. Вибрані мови підтримують вихідний голос рідною мовою. Автоматичний режим використовує налаштовану мову відображення для розпізнавання мови та диктування, коли це підтримується; в іншому випадку, він слідує за локаллю системи або браузера. Вихідний голос англійською мовою використовується, коли виявлена мова не підтримує вихідний голос рідною мовою. Зміна цього під час підключення голосового режиму набирає чинності негайно.</target>
       </trans-unit>
       <trans-unit id="agents.voice.language.auto">
         <source xml:lang="en">Automatic</source>
@@ -66,6 +66,10 @@
         <source xml:lang="en">Show your speech as a live, word-by-word transcript while you are speaking. When disabled, your transcript appears only once you finish speaking. Requires `#agents.voice.showTranscript#` to be enabled to be visible.</source>
         <target>Показуйте вашу промову як живий, покроковий транскрипт під час виступу. Коли вимкнено, ваш транскрипт з'являється лише після завершення виступу. Потрібно, щоб `#agents.voice.showTranscript#` був увімкнений для видимості.</target>
       </trans-unit>
+      <trans-unit id="agents.voice.showButton">
+        <source xml:lang="en">Controls whether the Voice Mode button is shown in the chat input. When hidden, Voice Mode can still be started with its keyboard shortcut.</source>
+        <target>Контролює, чи кнопка Режиму голосу відображається в полі введення чату. Коли вона прихована, Режим голосу все ще можна запустити за допомогою його комбінації клавіш.</target>
+      </trans-unit>
       <trans-unit id="agents.voice.showTranscript">
         <source xml:lang="en">Show the voice transcript overlay in the chat input area while voice mode is active. Enable this to read responses as text when `#agents.voice.speakResponses#` is disabled.</source>
         <target>Показати накладку транскрипції голосу в області вводу чату, поки активний голосовий режим. Увімкніть це, щоб читати відповіді як текст, коли `#agents.voice.speakResponses#` вимкнено.</target>
@@ -90,21 +94,21 @@
         <source xml:lang="en">The voice used when the assistant reads responses aloud. Changing this while voice mode is connected takes effect immediately. Use [Voice Mode instructions](command:{0}) to customize Voice Mode behavior and terminology.</source>
         <target>Голос, який використовується, коли асистент читає відповіді вголос. Зміна цього під час підключення режиму голосу набирає чинності негайно. Використовуйте [інструкції режиму голосу](command:{0}), щоб налаштувати поведінку та термінологію режиму голосу.</target>
       </trans-unit>
-      <trans-unit id="agents.voice.voice.daniel">
-        <source xml:lang="en">Daniel.</source>
-        <target>Даніел.</target>
+      <trans-unit id="agents.voice.voice.birch">
+        <source xml:lang="en">Birch.</source>
+        <target>Береза.</target>
       </trans-unit>
-      <trans-unit id="agents.voice.voice.kevin">
-        <source xml:lang="en">Kevin.</source>
-        <target>Кевін.</target>
+      <trans-unit id="agents.voice.voice.harper">
+        <source xml:lang="en">Harper.</source>
+        <target>Гарпер.</target>
       </trans-unit>
-      <trans-unit id="agents.voice.voice.maya">
-        <source xml:lang="en">Maya.</source>
-        <target>Мая.</target>
+      <trans-unit id="agents.voice.voice.junho">
+        <source xml:lang="en">Junho.</source>
+        <target>Жунхо.</target>
       </trans-unit>
-      <trans-unit id="agents.voice.voice.victoria">
-        <source xml:lang="en">Victoria.</source>
-        <target>Вікторія.</target>
+      <trans-unit id="agents.voice.voice.oak">
+        <source xml:lang="en">Oak.</source>
+        <target>Дуб.</target>
       </trans-unit>
       <trans-unit id="agentsVoice.cancelActiveRequest">
         <source xml:lang="en">Voice Mode: Cancel Request</source>
@@ -130,10 +134,6 @@
         <source xml:lang="en">Voice Mode: Stop Recording</source>
         <target>Режим голосу: Зупинити запис</target>
       </trans-unit>
-      <trans-unit id="agentsVoice.selectMicrophone">
-        <source xml:lang="en">Voice: Select Microphone</source>
-        <target>Голос: Виберіть мікрофон</target>
-      </trans-unit>
       <trans-unit id="agentsVoice.showOnboarding">
         <source xml:lang="en">Voice Mode: Show Introduction</source>
         <target>Режим голосу: Показати вступ</target>
@@ -154,29 +154,9 @@
         <source xml:lang="en">Voice Mode: Push to Talk</source>
         <target>Режим голосу: Натисніть, щоб говорити</target>
       </trans-unit>
-      <trans-unit id="current">
-        <source xml:lang="en">(current)</source>
-        <target>(поточний)</target>
-      </trans-unit>
-      <trans-unit id="noMicrophones">
-        <source xml:lang="en">No microphones found</source>
-        <target>Мікрофонів не знайдено</target>
-      </trans-unit>
       <trans-unit id="resetAgentsVoiceOnboarding">
         <source xml:lang="en">Voice: Reset Onboarding</source>
         <target>Голос: Скинути введення в систему</target>
-      </trans-unit>
-      <trans-unit id="selectMic">
-        <source xml:lang="en">Select a microphone for Voice Mode</source>
-        <target>Виберіть мікрофон для голосового режиму</target>
-      </trans-unit>
-      <trans-unit id="systemDefault">
-        <source xml:lang="en">System Default</source>
-        <target>Системне значення за замовчуванням</target>
-      </trans-unit>
-      <trans-unit id="unknownDevice">
-        <source xml:lang="en">Unknown Device ({0})</source>
-        <target>Невідомий пристрій ({0})</target>
       </trans-unit>
     </body>
   </file>
@@ -292,6 +272,10 @@ The link opens Voice Mode settings.</note>
         <source xml:lang="en">Voice Mode introduction</source>
         <target>Вступ до голосового режиму</target>
       </trans-unit>
+      <trans-unit id="voiceMode.onboarding.regionDescription">
+        <source xml:lang="en">Choose how your agent speaks to you. Adjust settings anytime.</source>
+        <target>Виберіть, як ваш агент спілкується з вами. Налаштуйте параметри в будь-який час.</target>
+      </trans-unit>
       <trans-unit id="voiceMode.onboarding.systemDefault">
         <source xml:lang="en">System default</source>
         <target>Системне за замовчуванням</target>
@@ -308,9 +292,9 @@ The link opens Voice Mode settings.</note>
         <source xml:lang="en">Aruha</source>
         <target>Аруха</target>
       </trans-unit>
-      <trans-unit id="voiceMode.onboarding.voice.daniel">
-        <source xml:lang="en">Daniel</source>
-        <target>Даніель</target>
+      <trans-unit id="voiceMode.onboarding.voice.birch">
+        <source xml:lang="en">Birch (Default)</source>
+        <target>Береза (За замовчуванням)</target>
       </trans-unit>
       <trans-unit id="voiceMode.onboarding.voice.david">
         <source xml:lang="en">David</source>
@@ -324,13 +308,17 @@ The link opens Voice Mode settings.</note>
         <source xml:lang="en">Gil</source>
         <target>Гіл</target>
       </trans-unit>
+      <trans-unit id="voiceMode.onboarding.voice.harper">
+        <source xml:lang="en">Harper</source>
+        <target>Гарпер</target>
+      </trans-unit>
       <trans-unit id="voiceMode.onboarding.voice.jiyon">
         <source xml:lang="en">Jiyon</source>
         <target>Джіон</target>
       </trans-unit>
-      <trans-unit id="voiceMode.onboarding.voice.kevin">
-        <source xml:lang="en">Kevin</source>
-        <target>Кевін</target>
+      <trans-unit id="voiceMode.onboarding.voice.junho">
+        <source xml:lang="en">Junho</source>
+        <target>Жунхо</target>
       </trans-unit>
       <trans-unit id="voiceMode.onboarding.voice.localizedPlaying">
         <source xml:lang="en">Playing {0} preview.</source>
@@ -348,9 +336,9 @@ The link opens Voice Mode settings.</note>
         <source xml:lang="en">Maria</source>
         <target>Марія</target>
       </trans-unit>
-      <trans-unit id="voiceMode.onboarding.voice.maya">
-        <source xml:lang="en">Maya (Default)</source>
-        <target>Maya (За замовчуванням)</target>
+      <trans-unit id="voiceMode.onboarding.voice.oak">
+        <source xml:lang="en">Oak</source>
+        <target>Дуб</target>
       </trans-unit>
       <trans-unit id="voiceMode.onboarding.voice.previewAriaLabel">
         <source xml:lang="en">{0}. Hear how your agent will sound.</source>
@@ -367,10 +355,6 @@ The link opens Voice Mode settings.</note>
       <trans-unit id="voiceMode.onboarding.voice.stopPreview">
         <source xml:lang="en">Stop {0} preview.</source>
         <target>Зупинити {0} попередній перегляд.</target>
-      </trans-unit>
-      <trans-unit id="voiceMode.onboarding.voice.victoria">
-        <source xml:lang="en">Victoria</source>
-        <target>Вікторія</target>
       </trans-unit>
       <trans-unit id="voiceMode.onboarding.voice.wuzhi">
         <source xml:lang="en">Wuzhi</source>

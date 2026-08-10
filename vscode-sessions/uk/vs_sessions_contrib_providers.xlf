@@ -40,6 +40,26 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostDiscoveredConfigNotification" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHost.discoveredConfig.description">
+        <source xml:lang="en">If you intended to use a Copilot subscription, sign in to GitHub.</source>
+        <target>Якщо ви планували використовувати підписку Copilot, увійдіть до GitHub.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.discoveredConfig.message">
+        <source xml:lang="en">We've discovered your existing {0} configuration.</source>
+        <target>Ми виявили вашу існуючу конфігурацію {0}.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.discoveredConfig.mute">
+        <source xml:lang="en">Don't Show Again</source>
+        <target>Не показувати знову</target>
+      </trans-unit>
+      <trans-unit id="agentHost.discoveredConfig.signIn">
+        <source xml:lang="en">Sign in to GitHub</source>
+        <target>Увійти до GitHub</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostModePicker" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHostModePicker.ariaLabel">
@@ -243,12 +263,12 @@
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/agentHostSkillButtons" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentSessions.runSkill.createDraftPR">
-        <source xml:lang="en">Create Draft Pull Request</source>
-        <target>Створити чернетку запиту на злиття</target>
+        <source xml:lang="en">Create Draft PR</source>
+        <target>Створити чернетку PR</target>
       </trans-unit>
       <trans-unit id="agentSessions.runSkill.createPR">
-        <source xml:lang="en">Create Pull Request</source>
-        <target>Створити Pull Request</target>
+        <source xml:lang="en">Create PR</source>
+        <target>Створити PR</target>
       </trans-unit>
       <trans-unit id="agentSessions.runSkill.merge">
         <source xml:lang="en">Merge Changes</source>
@@ -343,8 +363,8 @@
         <target>Налаштуйте глобальну поведінку для цього хардвера.</target>
       </trans-unit>
       <trans-unit id="codexCustomizationSettings.navigationLabel">
-        <source xml:lang="en">Codex Settings</source>
-        <target>Налаштування Codex</target>
+        <source xml:lang="en">Codex</source>
+        <target>Кодекс</target>
       </trans-unit>
     </body>
   </file>
@@ -353,14 +373,6 @@
       <trans-unit id="exportAgentHostDebugLogs">
         <source xml:lang="en">Export Agent Host Debug Logs...</source>
         <target>Експорт журналів налагодження хоста агента...</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/contrib/providers/agentHost/browser/localAgentHost.contribution" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="sessions.chat.agentHost.defaultSessionsProvider">
-        <source xml:lang="en">When enabled, the local agent host is used as the default sessions provider and its session types are shown first in the Agents window. Requires `#chat.agentHost.enabled#`.</source>
-        <target>Коли увімкнено, локальний агент-хост використовується як постачальник сесій за замовчуванням, і його типи сесій відображаються першими у вікні Агентів. Потрібно `#chat.agentHost.enabled#`.</target>
       </trans-unit>
     </body>
   </file>
@@ -400,64 +412,8 @@
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/claudePermissionModePicker" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="claude.permissionMode.acceptEdits">
-        <source xml:lang="en">Edit Automatically</source>
-        <target>Редагувати автоматично</target>
-      </trans-unit>
-      <trans-unit id="claude.permissionMode.acceptEdits.description">
-        <source xml:lang="en">Claude edits files without asking</source>
-        <target>Клод редагує файли, не запитуючи.</target>
-      </trans-unit>
-      <trans-unit id="claude.permissionMode.auto">
-        <source xml:lang="en">Auto</source>
-        <target>Авто</target>
-      </trans-unit>
-      <trans-unit id="claude.permissionMode.auto.description">
-        <source xml:lang="en">A model classifier approves or denies tool operations automatically</source>
-        <target>Модельний класифікатор автоматично схвалює або відхиляє операції з інструментами.</target>
-      </trans-unit>
-      <trans-unit id="claude.permissionMode.bypass">
-        <source xml:lang="en">Bypass Permissions</source>
-        <target>Обійти дозволи</target>
-      </trans-unit>
-      <trans-unit id="claude.permissionMode.bypass.description">
-        <source xml:lang="en">All tools run without any confirmation</source>
-        <target>Усі інструменти працюють без жодного підтвердження.</target>
-      </trans-unit>
-      <trans-unit id="claude.permissionMode.default">
-        <source xml:lang="en">Ask Before Edits</source>
-        <target>Запитувати перед редагуванням</target>
-      </trans-unit>
-      <trans-unit id="claude.permissionMode.default.description">
-        <source xml:lang="en">Claude asks for approval before making changes</source>
-        <target>Клод просить затвердження перед внесенням змін.</target>
-      </trans-unit>
-      <trans-unit id="claude.permissionMode.plan">
-        <source xml:lang="en">Plan Mode</source>
-        <target>Режим планування</target>
-      </trans-unit>
-      <trans-unit id="claude.permissionMode.plan.description">
-        <source xml:lang="en">Claude creates a plan before making changes</source>
-        <target>Клод створює план перед внесенням змін.</target>
-      </trans-unit>
-      <trans-unit id="claudePermissionModePicker.ariaLabel">
-        <source xml:lang="en">Permission Mode</source>
-        <target>Режим дозволів</target>
-      </trans-unit>
-      <trans-unit id="claudePermissionModePicker.triggerAriaLabel">
-        <source xml:lang="en">Pick Permission Mode, {0}</source>
-        <target>Виберіть режим дозволів, {0}</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/copilotChatSessions.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="sessions.chat.claudeAgent.enabled">
-        <source xml:lang="en">Enable Claude Agent sessions in the Agents window. Start and resume agentic coding sessions powered by Anthropic's Claude Agent SDK directly. Uses your existing Copilot subscription.</source>
-        <target>Увімкніть сесії Claude Agent у вікні Агентів. Починайте та відновлюйте агентські кодувальні сесії, що працюють на базі SDK Claude Agent від Anthropic, безпосередньо. Використовує вашу існуючу підписку на Copilot.</target>
-      </trans-unit>
       <trans-unit id="sessions.github.copilot.multiChatSessions">
         <source xml:lang="en">Whether to enable multiple chats within a single session in the Copilot Chat sessions provider.</source>
         <target>Чи слід увімкнути кілька чатів в межах однієї сесії в постачальнику сесій Copilot Chat.</target>
@@ -469,10 +425,6 @@
       <trans-unit id="branchPicker">
         <source xml:lang="en">Branch</source>
         <target>Гілка</target>
-      </trans-unit>
-      <trans-unit id="claudePermissionModePicker">
-        <source xml:lang="en">Permission Mode</source>
-        <target>Режим дозволів</target>
       </trans-unit>
       <trans-unit id="modePicker">
         <source xml:lang="en">Mode</source>
@@ -526,10 +478,6 @@
   </file>
   <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/copilotChatSessionsProvider" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="claudeCode">
-        <source xml:lang="en">Claude</source>
-        <target>Клод</target>
-      </trans-unit>
       <trans-unit id="copilotChatSessionsProvider">
         <source xml:lang="en">Copilot Chat</source>
         <target>Copilot Chat</target>
@@ -660,43 +608,11 @@
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/sessions/contrib/providers/localChatSessions/browser/localChatSessions.contribution" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/cloudSandboxReadOnlySessionHandler" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="sessions.chat.localAgent.enabled">
-        <source xml:lang="en">Enable Local VS Code chat sessions in the Agents Window. Reload the window for changes to take effect.</source>
-        <target>Увімкніть локальні сеанси чату VS Code у вікні агентів. Перезавантажте вікно, щоб зміни набрали чинності.</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/contrib/providers/localChatSessions/browser/localChatSessionsProvider" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="deleteChat.confirm">
-        <source xml:lang="en">Are you sure you want to delete this chat?</source>
-        <target>Ви впевнені, що хочете видалити цей чат?</target>
-      </trans-unit>
-      <trans-unit id="deleteChat.delete">
-        <source xml:lang="en">Delete</source>
-        <target>Видалити</target>
-      </trans-unit>
-      <trans-unit id="deleteChat.detail">
-        <source xml:lang="en">This action cannot be undone.</source>
-        <target>Цю дію не можна скасувати.</target>
-      </trans-unit>
-      <trans-unit id="localChatSessionsProvider">
-        <source xml:lang="en">Copilot Chat</source>
-        <target>Copilot Chat</target>
-      </trans-unit>
-      <trans-unit id="localSession">
-        <source xml:lang="en">Local</source>
-        <target>Місцевий</target>
-      </trans-unit>
-      <trans-unit id="newChat">
-        <source xml:lang="en">New Chat</source>
-        <target>Новий чат</target>
-      </trans-unit>
-      <trans-unit id="newSession">
-        <source xml:lang="en">New Session</source>
-        <target>Нова сесія</target>
+      <trans-unit id="cloudSandbox.truncatedHistory">
+        <source xml:lang="en">This conversation is incomplete. Its recorded history ends mid-response, so the last exchange may be missing.</source>
+        <target>Ця розмова неповна. Її зафіксована історія закінчується на півдорозі відповіді, тому останній обмін може бути відсутнім.</target>
       </trans-unit>
     </body>
   </file>
@@ -1026,6 +942,26 @@
         <source xml:lang="en">Connecting to tunnel '{0}'...</source>
         <target>Підключення до тунелю '{0}'...</target>
       </trans-unit>
+      <trans-unit id="tunnelDeleteButton">
+        <source xml:lang="en">&amp;&amp;Delete</source>
+        <target>&amp;&amp;Видалити</target>
+      </trans-unit>
+      <trans-unit id="tunnelDeleteConfirmation">
+        <source xml:lang="en">Are you sure you want to delete dev tunnel '{0}'?</source>
+        <target>Ви впевнені, що хочете видалити dev tunnel '{0}'?</target>
+      </trans-unit>
+      <trans-unit id="tunnelDeleteDetail">
+        <source xml:lang="en">The tunnel may be recreated if a machine starts hosting it again.</source>
+        <target>Тунель може бути відтворений, якщо машина знову почне його хостити.</target>
+      </trans-unit>
+      <trans-unit id="tunnelDeleteFailed">
+        <source xml:lang="en">Failed to delete dev tunnel '{0}': {1}</source>
+        <target>Не вдалося видалити розробницький тунель '{0}': {1}</target>
+      </trans-unit>
+      <trans-unit id="tunnelDeleteTooltip">
+        <source xml:lang="en">Delete Dev Tunnel</source>
+        <target>Видалити Dev Tunnel</target>
+      </trans-unit>
       <trans-unit id="tunnelListFailed">
         <source xml:lang="en">Failed to list dev tunnels: {0}</source>
         <target>Не вдалося перерахувати тунелі розробника: {0}</target>
@@ -1033,6 +969,18 @@
       <trans-unit id="tunnelNoneFound">
         <source xml:lang="en">No dev tunnels with agent host support were found. Start a tunnel with 'code tunnel' on another machine.</source>
         <target>Не знайдено жодних тунелів розробника з підтримкою хосту агента. Запустіть тунель за допомогою 'code tunnel' на іншій машині.</target>
+      </trans-unit>
+      <trans-unit id="tunnelNoneFoundAfterDelete">
+        <source xml:lang="en">No dev tunnels with agent host support were found. Start a tunnel with 'code tunnel' on another machine.</source>
+        <target>Не було знайдено жодних тунелів для розробників з підтримкою хоста агента. Запустіть тунель за допомогою 'code tunnel' на іншій машині.</target>
+      </trans-unit>
+      <trans-unit id="tunnelPickOffline">
+        <source xml:lang="en">{0} · Offline</source>
+        <target>{0} · Офлайн</target>
+      </trans-unit>
+      <trans-unit id="tunnelPickOnline">
+        <source xml:lang="en">{0} · Online</source>
+        <target>{0} · Онлайн</target>
       </trans-unit>
       <trans-unit id="tunnelPickPlaceholder">
         <source xml:lang="en">Select a dev tunnel to connect to</source>
@@ -1170,6 +1118,10 @@
         <source xml:lang="en">Update Server</source>
         <target>Оновити сервер</target>
       </trans-unit>
+      <trans-unit id="workspacePicker.changeLocationPreference">
+        <source xml:lang="en">Change Preferred Agent Location</source>
+        <target>Змінити місцезнаходження обраного агента</target>
+      </trans-unit>
       <trans-unit id="workspacePicker.copyAddress">
         <source xml:lang="en">Copy Address</source>
         <target>Скопіювати адресу</target>
@@ -1242,6 +1194,22 @@ Address: {2}</source>
         <source xml:lang="en">Incompatible protocol version. We speak {0}, but {1} speaks {2}. Ensure {3} and {1} are both up to date.</source>
         <target>Несумісна версія протоколу. Ми говоримо {0}, але {1} говорить {2}. Переконайтеся, що {3} та {1} обидва оновлені.</target>
       </trans-unit>
+      <trans-unit id="workspacePicker.locationPreferenceReconnectFailed">
+        <source xml:lang="en">Preference saved for {0}, but reconnection failed: {1}</source>
+        <target>Налаштування збережено для {0}, але повторне з'єднання не вдалося: {1}</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.locationPreferenceReconnecting">
+        <source xml:lang="en">Reconnecting to {0}...</source>
+        <target>Відновлення з'єднання з {0}...</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.locationPreferenceSavedNoProvider">
+        <source xml:lang="en">Preference saved for {0}, but no active connection was found. This takes effect the next time it connects.</source>
+        <target>Налаштування збережено для {0}, але активне з'єднання не знайдено. Це набуде чинності наступного разу, коли буде виконано підключення.</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.locationPreferenceUpdated">
+        <source xml:lang="en">Preference updated for {0}.</source>
+        <target>Налаштування оновлено для {0}.</target>
+      </trans-unit>
       <trans-unit id="workspacePicker.openSettings">
         <source xml:lang="en">Open Settings</source>
         <target>Відкрити Налаштування</target>
@@ -1313,6 +1281,58 @@ Address: {2}</source>
       <trans-unit id="tunnelConnecting">
         <source xml:lang="en">Connecting to tunnel '{0}'...</source>
         <target>Підключення до тунелю '{0}'...</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/electron-browser/forgetSSHHostKeyCommand" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="forgetSSHHostKey">
+        <source xml:lang="en">Forget SSH Host Key</source>
+        <target>Забути ключ хоста SSH</target>
+      </trans-unit>
+      <trans-unit id="forgetSSHHostKey.forgotMany">
+        <source xml:lang="en">Forgot saved SSH host keys for {0} hosts. You'll be asked to verify them the next time you connect.</source>
+        <target>Забули збережені SSH ключі хостів для {0} хостів. Вам буде запропоновано їх підтвердити наступного разу, коли ви підключитеся.</target>
+      </trans-unit>
+      <trans-unit id="forgetSSHHostKey.forgotOne">
+        <source xml:lang="en">Forgot the saved SSH host key for '{0}'. You'll be asked to verify it the next time you connect.</source>
+        <target>Забули збережений SSH ключ хоста для '{0}'. Вам буде запропоновано підтвердити його наступного разу, коли ви підключитесь.</target>
+      </trans-unit>
+      <trans-unit id="forgetSSHHostKey.none">
+        <source xml:lang="en">No SSH host keys have been saved yet.</source>
+        <target>Ще жодні SSH ключі хоста не були збережені.</target>
+      </trans-unit>
+      <trans-unit id="forgetSSHHostKey.placeholder">
+        <source xml:lang="en">Select the hosts whose saved SSH host keys should be forgotten</source>
+        <target>Виберіть хости, ключі SSH яких слід забути.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/electron-browser/remoteAgentHostLocationPreferenceCommand" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="changeRemoteAgentHostLocationPreference">
+        <source xml:lang="en">Change Preferred Remote Agent Location</source>
+        <target>Змінити уподобане місце розташування віддаленого агента</target>
+      </trans-unit>
+      <trans-unit id="remoteAgentHostLocation.noHosts">
+        <source xml:lang="en">No remote agent hosts are configured yet. Connect to one first, then change its preferred agent run location.</source>
+        <target>Ще не налаштовано жодних віддалених агентів. Спочатку підключіться до одного з них, а потім змініть його бажане місце виконання агента.</target>
+      </trans-unit>
+      <trans-unit id="remoteAgentHostLocation.pickHost">
+        <source xml:lang="en">Select a remote host to change its preferred agent run location</source>
+        <target>Виберіть віддалений хост, щоб змінити його переважне місце виконання агента.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/electron-browser/tunnelAgentHostServiceImpl" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="tunnelAgentHostFailoverNotification">
+        <source xml:lang="en">The editor agent host exited. Reconnected to a dedicated agent host. In-progress work may have been interrupted.</source>
+        <target>Хост агента редактора вийшов. Підключено до виділеного хоста агента. Робота, що виконується, могла бути перервана.</target>
+      </trans-unit>
+      <trans-unit id="tunnelAgentHostRejectedEditorNotification">
+        <source xml:lang="en">The editor agent host is no longer running. Connected to a dedicated agent host instead.</source>
+        <target>Хост агента редактора більше не працює. З'єднано з виділеним хостом агента замість цього.</target>
       </trans-unit>
     </body>
   </file>

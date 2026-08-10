@@ -10,6 +10,14 @@
         <source xml:lang="en">Signed in as {0}</source>
         <target>Увійшли як {0}</target>
       </trans-unit>
+      <trans-unit id="agentsSignInOptional">
+        <source xml:lang="en">Sign In</source>
+        <target>Увійти</target>
+      </trans-unit>
+      <trans-unit id="agentsSignInOptionalAria">
+        <source xml:lang="en">Sign in to GitHub to use more agents</source>
+        <target>Увійдіть до GitHub, щоб використовувати більше агентів</target>
+      </trans-unit>
       <trans-unit id="agentsSignedOut">
         <source xml:lang="en">Agents Signed Out</source>
         <target>Агенти вийшли</target>
@@ -490,18 +498,6 @@
         <source xml:lang="en">Enable AI Features</source>
         <target>Увімкнути функції ШІ</target>
       </trans-unit>
-      <trans-unit id="sessions.signIn">
-        <source xml:lang="en">Sign in to use Agents</source>
-        <target>Увійдіть, щоб використовувати Агентів</target>
-      </trans-unit>
-      <trans-unit id="sessions.signingIn">
-        <source xml:lang="en">Signing in…</source>
-        <target>Увійти…</target>
-      </trans-unit>
-      <trans-unit id="sessions.signingIn.detail">
-        <source xml:lang="en">Please complete sign-in in the browser.</source>
-        <target>Будь ласка, завершіть вхід у браузері.</target>
-      </trans-unit>
       <trans-unit id="sessions.welcome.detail">
         <source xml:lang="en">Your AI-powered coding experience where agents explore, build, and iterate with you.</source>
         <target>Ваш досвід кодування з підтримкою ШІ, де агенти досліджують, створюють і ітеративно працюють з вами.</target>
@@ -529,15 +525,39 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/browser/sessionsSignInDialog" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="sessions.cancelSignIn">
+        <source xml:lang="en">Cancel Sign-In</source>
+        <target>Скасувати вхід</target>
+      </trans-unit>
+      <trans-unit id="sessions.returnToVSCodeEditor">
+        <source xml:lang="en">Return to VS Code Editor</source>
+        <target>Повернутися до редактора VS Code</target>
+      </trans-unit>
+      <trans-unit id="sessions.signIn">
+        <source xml:lang="en">Sign in to use Agents</source>
+        <target>Увійдіть, щоб використовувати Агентів</target>
+      </trans-unit>
+      <trans-unit id="sessions.signingIn">
+        <source xml:lang="en">Signing in…</source>
+        <target>Увійти…</target>
+      </trans-unit>
+      <trans-unit id="sessions.signingIn.detail">
+        <source xml:lang="en">Please complete sign-in in the browser.</source>
+        <target>Будь ласка, завершіть вхід у браузері.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/browser/singlePaneWorkbench" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="editorPaneHidden">
-        <source xml:lang="en">Editor pane hidden</source>
-        <target>Панель редактора прихована</target>
+      <trans-unit id="sidePaneHidden">
+        <source xml:lang="en">Side pane hidden</source>
+        <target>Бічна панель прихована</target>
       </trans-unit>
-      <trans-unit id="editorPaneVisible">
-        <source xml:lang="en">Editor pane shown</source>
-        <target>Панель редактора показана</target>
+      <trans-unit id="sidePaneVisible">
+        <source xml:lang="en">Side pane shown</source>
+        <target>Бічна панель показана</target>
       </trans-unit>
     </body>
   </file>
@@ -575,13 +595,29 @@
         <source xml:lang="en">The identifier of the active sessions panel</source>
         <target>Ідентифікатор панелі активних сесій</target>
       </trans-unit>
+      <trans-unit id="agentHostSessionTypesAvailable">
+        <source xml:lang="en">Whether at least one connected agent-host provider has advertised session types</source>
+        <target>Чи принаймні один підключений постачальник агентів-хостів оголосив типи сесій</target>
+      </trans-unit>
       <trans-unit id="agentSessionsHasDockedDetails">
         <source xml:lang="en">Whether the single-pane active editor has a docked detail panel (a managed Changes/Files tab or a text file editor)</source>
         <target>Чи має активний редактор з одним вікном закріплену панель деталей (керовану вкладку Зміни/Файли або редактор текстових файлів)</target>
       </trans-unit>
+      <trans-unit id="agentSessionsSinglePaneChangesTabAvailable">
+        <source xml:lang="en">Whether the single-pane session supports a Changes editor</source>
+        <target>Чи підтримує сесія з одного вікна редактор змін</target>
+      </trans-unit>
       <trans-unit id="agentSessionsSinglePaneChangesTabMissing">
         <source xml:lang="en">Whether the single-pane session supports a Changes editor but its tab is not currently open</source>
         <target>Чи підтримує сесія з одного вікна редактор Змін, але його вкладка наразі не відкрита</target>
+      </trans-unit>
+      <trans-unit id="agentSessionsSinglePaneDiffEditorInputActive">
+        <source xml:lang="en">Whether the active single-pane editor input is a diff, independent of the editor used to render it</source>
+        <target>Чи є активний ввід в однопанельному редакторі різницею, незалежно від редактора, що використовується для його відображення</target>
+      </trans-unit>
+      <trans-unit id="agentSessionsSinglePaneFilesTabAvailable">
+        <source xml:lang="en">Whether the single-pane session supports a Files editor</source>
+        <target>Чи підтримує сесія з одним вікном редактор файлів</target>
       </trans-unit>
       <trans-unit id="agentSessionsSinglePaneFilesTabMissing">
         <source xml:lang="en">Whether the single-pane session supports a Files tab but its tab is not currently open</source>
@@ -594,6 +630,10 @@
       <trans-unit id="automationsCustomViewFocus">
         <source xml:lang="en">Whether the Automations custom view has keyboard focus</source>
         <target>Чи має користувацький вигляд Автоматизацій клавіатурний фокус</target>
+      </trans-unit>
+      <trans-unit id="automationsHasItems">
+        <source xml:lang="en">Whether there is at least one automation</source>
+        <target>Чи є принаймні одна автоматизація</target>
       </trans-unit>
       <trans-unit id="customViewVisible">
         <source xml:lang="en">Whether a custom view is shown in place of the sessions grid. The side panel and the panel are hidden while it is.</source>
@@ -954,6 +994,14 @@
       <trans-unit id="openVSCodeWindow">
         <source xml:lang="en">Open VS Code Window</source>
         <target>Відкрити вікно VS Code</target>
+      </trans-unit>
+      <trans-unit id="returnToVSCodeEditor">
+        <source xml:lang="en">Return to VS Code Editor</source>
+        <target>Повернутися до редактора VS Code</target>
+      </trans-unit>
+      <trans-unit id="shouldShowReturnToVSCodeEditor">
+        <source xml:lang="en">Check Whether to Show Return to VS Code Editor</source>
+        <target>Перевірте, чи потрібно показувати повернення до редактора VS Code</target>
       </trans-unit>
     </body>
   </file>

@@ -472,21 +472,13 @@ A keybinding</note>
   </file>
   <file original="src/vs/platform/agentHost/common/agentHostCustomizationConfig" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="agentHost.config.claudeUseCopilotProxy.description">
-        <source xml:lang="en">When enabled (the default), the Claude agent routes all requests through GitHub Copilot. When disabled, Claude talks to Anthropic directly using your own credentials (API key or Claude subscription).</source>
-        <target>Коли увімкнено (за замовчуванням), агент Claude перенаправляє всі запити через GitHub Copilot. Коли вимкнено, Claude спілкується з Anthropic безпосередньо, використовуючи ваші власні облікові дані (API-ключ або підписку на Claude).</target>
+      <trans-unit id="agentHost.config.allowSignedOutWhenUsable.description">
+        <source xml:lang="en">Experimental. When enabled, the agent window opens without forcing GitHub sign-in as long as at least one agent is usable without GitHub (for example Claude in native mode with your own Anthropic API key). When disabled (the default), GitHub sign-in is required.</source>
+        <target>Експериментальний. Коли увімкнено, вікно агента відкривається без примусової авторизації в GitHub, якщо принаймні один агент доступний без GitHub (наприклад, Claude в рідному режимі з вашим власним API-ключем Anthropic). Коли вимкнено (за замовчуванням), авторизація в GitHub є обов'язковою.</target>
       </trans-unit>
-      <trans-unit id="agentHost.config.claudeUseCopilotProxy.title">
-        <source xml:lang="en">Route Claude Through Copilot</source>
-        <target>Маршрут Клода через Копілот</target>
-      </trans-unit>
-      <trans-unit id="agentHost.config.codexUsageSource.description">
-        <source xml:lang="en">Choose whether Codex usage is routed through GitHub Copilot or uses an existing Codex OpenAI login. VS Code does not provide the OpenAI sign-in flow; authenticate Codex separately before selecting OpenAI.</source>
-        <target>Виберіть, чи використання Codex маршрутизується через GitHub Copilot, чи використовує існуючий логін Codex OpenAI. VS Code не надає процес входу OpenAI; аутентифікуйте Codex окремо перед вибором OpenAI.</target>
-      </trans-unit>
-      <trans-unit id="agentHost.config.codexUsageSource.title">
-        <source xml:lang="en">Codex Usage Source</source>
-        <target>Джерело використання Кодексу</target>
+      <trans-unit id="agentHost.config.allowSignedOutWhenUsable.title">
+        <source xml:lang="en">Allow Signed-Out Agent Window</source>
+        <target>Дозволити вікно агента без входу в систему</target>
       </trans-unit>
       <trans-unit id="agentHost.config.customizations.description">
         <source xml:lang="en">Plugins configured on this agent host and available to remote sessions.</source>
@@ -544,21 +536,9 @@ A keybinding</note>
         <source xml:lang="en">Whether the local agent host process is enabled.</source>
         <target>Чи увімкнено процес хосту локального агента.</target>
       </trans-unit>
-      <trans-unit id="chat.agentHost.enabled">
-        <source xml:lang="en">When enabled, some agents run in a separate agent host process.</source>
-        <target>Коли ввімкнено, деякі агенти працюють у окремому процесі хоста агента.</target>
-      </trans-unit>
-      <trans-unit id="chat.agents.copilotCli.hideExtensionHost">
-        <source xml:lang="en">When enabled, hides the Extension Host Copilot CLI entry from the Agents window picker. Requires `#chat.agentHost.enabled#`.</source>
-        <target>Коли увімкнено, приховує запис CLI Copilot хоста розширення з вибору вікна агентів. Потрібно `#chat.agentHost.enabled#`.</target>
-      </trans-unit>
       <trans-unit id="chat.defaultToCopilotHarness">
-        <source xml:lang="en">When enabled, new editor and panel chat sessions default to the Agent Host Copilot CLI instead of the local harness. Requires `#{0}#`.</source>
-        <target>Коли увімкнено, нові сесії редактора та панельного чату за замовчуванням використовують Agent Host Copilot CLI замість локального harness. Потрібно `#{0}#`.</target>
-      </trans-unit>
-      <trans-unit id="chat.editor.copilotCli.hideExtensionHost">
-        <source xml:lang="en">When enabled, hides the Extension Host Copilot CLI entry from the editor window chat picker.</source>
-        <target>Коли ввімкнено, приховує запис CLI Copilot розширення з вибору чату вікна редактора.</target>
+        <source xml:lang="en">When enabled, new editor and panel chat sessions default to the Agent Host Copilot CLI instead of the local harness.</source>
+        <target>Коли увімкнено, нові сесії чату редактора та панелі за замовчуванням використовують Agent Host Copilot CLI замість локального harness.</target>
       </trans-unit>
       <trans-unit id="chat.editor.localAgent.enabled">
         <source xml:lang="en">When enabled, shows the VS Code local chat harness in the chat picker. This setting is ignored in virtual workspaces, where the local chat harness is always available.</source>
@@ -716,6 +696,14 @@ A keybinding</note>
         <source xml:lang="en">URL</source>
         <target>URL</target>
       </trans-unit>
+      <trans-unit id="agentHost.config.migrateLegacyCopilotCliEnabled.description">
+        <source xml:lang="en">Whether un-adopted extension-host Copilot CLI sessions are surfaced as adoptable agent-host sessions and migrated in place when opened.</source>
+        <target>Чи відображаються неусиновлені сеанси Copilot CLI, що є хостом розширення, як усиновлені сеанси хоста агента та мігруються на місці при відкритті.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.migrateLegacyCopilotCliEnabled.title">
+        <source xml:lang="en">Migrate Legacy Copilot CLI Sessions</source>
+        <target>Міграція сесій старого Copilot CLI</target>
+      </trans-unit>
       <trans-unit id="agentHost.config.preferLongContextEnabled.description">
         <source xml:lang="en">Whether Copilot Chat's prefer-long-context setting is enabled. When `true` (default), models with a free long context window only show the long context option in the picker. When `false`, the smaller default context option stays selectable.</source>
         <target>Чи увімкнено налаштування prefer-long-context для Copilot Chat. Коли `true` (за замовчуванням), моделі з безкоштовним довгим контекстним вікном показують лише опцію довгого контексту в виборі. Коли `false`, менша опція контексту за замовчуванням залишається вибірковою.</target>
@@ -853,12 +841,12 @@ A keybinding</note>
   <file original="src/vs/platform/agentHost/common/agentHostStarter.config.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="chat.agentHost.byokModels.enabled">
-        <source xml:lang="en">When enabled, the agent host wires up the BYOK ('bring your own key') language-model bridge so extension-provided BYOK models can run in agent-host sessions. Requires `#chat.agentHost.enabled#`. The agent host process must be restarted for changes to take effect.</source>
-        <target>Коли увімкнено, хост агента підключає міст мови BYOK ('принесіть свій власний ключ'), щоб моделі BYOK, надані розширенням, могли працювати в сесіях хоста агента. Потрібно `#chat.agentHost.enabled#`. Процес хоста агента повинен бути перезапущений, щоб зміни набрали чинності.</target>
+        <source xml:lang="en">When enabled, the agent host wires up the BYOK ('bring your own key') language-model bridge so extension-provided BYOK models can run in agent-host sessions. The agent host process must be restarted for changes to take effect.</source>
+        <target>Коли увімкнено, хост агента підключає міст мови BYOK ('принесіть свій власний ключ'), щоб моделі BYOK, надані розширенням, могли працювати в сесіях хоста агента. Процес хоста агента повинен бути перезапущений, щоб зміни набрали чинності.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.claudeAgent.enabled">
-        <source xml:lang="en">When enabled, the agent host registers the Claude provider (subject to the Claude SDK being reachable). Independent of `#chat.agents.claude.preferAgentHost#` and `#chat.editor.claude.preferAgentHost#`, which choose which integration surfaces Claude. Requires `#chat.agentHost.enabled#`. The agent host process must be restarted for changes to take effect.</source>
-        <target>Коли увімкнено, хост агента реєструє постачальника Claude (за умови, що SDK Claude доступний). Незалежно від `#chat.agents.claude.preferAgentHost#` та `#chat.editor.claude.preferAgentHost#`, які вибирають, які інтеграційні поверхні використовують Claude. Потрібно `#chat.agentHost.enabled#`. Процес хоста агента повинен бути перезапущений, щоб зміни набрали чинності.</target>
+        <source xml:lang="en">When enabled, the agent host registers the Claude provider, subject to the Claude SDK being reachable. The agent host process must be restarted for changes to take effect.</source>
+        <target>Коли увімкнено, хост агента реєструє постачальника Claude, за умови, що SDK Claude доступний. Процес хоста агента повинен бути перезапущений, щоб зміни набрали чинності.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.claudeAgent.enabled.policy">
         <source xml:lang="en">Enable Claude Agent sessions in VS Code. Start and resume agentic coding sessions powered by Anthropic Claude Agent SDK directly in the editor. Uses your existing Copilot subscription.</source>
@@ -877,8 +865,8 @@ A keybinding</note>
         <target>Необов'язкове перевизначення для `$CODEX_HOME`. Контролює, звідки бінарний файл codex читає конфігурацію та записує розгортання. Коли порожньо, codex використовує своє значення за замовчуванням (`~/.codex`).</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.codexAgent.enabled">
-        <source xml:lang="en">When enabled, the agent host registers the Codex provider (subject to the Codex SDK being reachable). Requires `#chat.agentHost.enabled#`. The agent host process must be restarted for changes to take effect.</source>
-        <target>Коли увімкнено, хост агента реєструє постачальника Codex (за умови, що SDK Codex доступний). Потрібно `#chat.agentHost.enabled#`. Процес хоста агента повинен бути перезапущений, щоб зміни набрали чинності.</target>
+        <source xml:lang="en">When enabled, the agent host registers the Codex provider (subject to the Codex SDK being reachable). Enabling takes effect without restarting the agent host.</source>
+        <target>Коли увімкнено, хост агента реєструє постачальника Codex (за умови, що SDK Codex доступний). Увімкнення набирає чинності без перезавантаження хоста агента.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.codexAgent.enabled.policy">
         <source xml:lang="en">Enable Codex Agent sessions in VS Code. Start and resume agentic coding sessions powered by OpenAI Codex. Usage can be routed through GitHub Copilot or authenticated directly with an OpenAI account.</source>
@@ -889,8 +877,8 @@ A keybinding</note>
         <target>Коли увімкнено, сесії агента-хоста Codex рекламують підтримку кількох робочих директорій, тому сесія, створена в багатокореневому робочому просторі, може охоплювати кожну папку робочого простору. Експериментально; новостворені сесії підхоплюють зміни без перезапуску агента-хоста.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.codexAgent.sdkRoot">
-        <source xml:lang="en">Experimental, for local SDK development only. Absolute path to a directory containing `node_modules/@openai/codex`. When set, the agent host spawns the Codex binary from this tree instead of downloading the SDK. Empty (the default) falls through to the SDK distribution shipped with this build. Requires `#chat.agentHost.enabled#`. The agent host process must be restarted for changes to take effect.</source>
-        <target>Експериментальний, тільки для локальної розробки SDK. Абсолютний шлях до каталогу, що містить `node_modules/@openai/codex`. Коли встановлено, хост агента запускає бінарний файл Codex з цього дерева замість завантаження SDK. Порожній (за замовчуванням) переходить до розподілу SDK, що постачається з цією збіркою. Потрібно `#chat.agentHost.enabled#`. Процес хоста агента повинен бути перезапущений, щоб зміни набрали чинності.</target>
+        <source xml:lang="en">Experimental, for local SDK development only. Absolute path to a directory containing `node_modules/@openai/codex`. When set, the agent host spawns the Codex binary from this tree instead of downloading the SDK. Empty (the default) falls through to the SDK distribution shipped with this build. The agent host process must be restarted for changes to take effect.</source>
+        <target>Експериментальний, лише для локальної розробки SDK. Абсолютний шлях до каталогу, що містить `node_modules/@openai/codex`. Коли встановлено, хост агента запускає бінарний файл Codex з цього дерева замість завантаження SDK. Порожній (за замовчуванням) переходить до розподілу SDK, що постачається з цією збіркою. Процес хоста агента повинен бути перезапущений, щоб зміни набрали чинності.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.copilotAgent.multiRootEnabled">
         <source xml:lang="en">When enabled, Copilot agent-host sessions advertise support for multiple working directories, so a session created in a multi-root workspace can span every workspace folder. Experimental; newly created sessions pick up a change without restarting the agent host.</source>
@@ -909,8 +897,8 @@ A keybinding</note>
         <target>Коли увімкнено, хост агента зберігає кожен випущений OTel span у локальній базі даних SQLite. Налаштовується лише в налаштуваннях користувача. Span можна перевірити за допомогою команди `Export Agent Host Traces Database`. Сумісний з зовнішніми експортерами: span записуються в SQLite *та* пересилаються до налаштованого користувачем приймача.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.otel.enabled">
-        <source xml:lang="en">When enabled, the agent host emits OpenTelemetry traces from the Copilot SDK. Configurable in user settings only. Requires `#chat.agentHost.enabled#`. Either configure `#chat.agentHost.otel.otlpEndpoint#` to ship traces to an external collector or enable `#chat.agentHost.otel.dbSpanExporter.enabled#` to capture them locally.</source>
-        <target>Коли увімкнено, хост агента випромінює OpenTelemetry трасування з Copilot SDK. Налаштовується лише в налаштуваннях користувача. Потрібно `#chat.agentHost.enabled#`. Або налаштуйте `#chat.agentHost.otel.otlpEndpoint#`, щоб відправляти трасування до зовнішнього колектора, або увімкніть `#chat.agentHost.otel.dbSpanExporter.enabled#`, щоб захоплювати їх локально.</target>
+        <source xml:lang="en">When enabled, the agent host emits OpenTelemetry traces from the Copilot SDK. Configurable in user settings only. Either configure `#chat.agentHost.otel.otlpEndpoint#` to ship traces to an external collector or enable `#chat.agentHost.otel.dbSpanExporter.enabled#` to capture them locally.</source>
+        <target>Коли увімкнено, хост агента випромінює OpenTelemetry сліди з Copilot SDK. Налаштовується лише в налаштуваннях користувача. Або налаштуйте `#chat.agentHost.otel.otlpEndpoint#`, щоб відправляти сліди до зовнішнього колектора, або увімкніть `#chat.agentHost.otel.dbSpanExporter.enabled#`, щоб захоплювати їх локально.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.otel.enabled.policy">
         <source xml:lang="en">Controls whether Copilot OpenTelemetry export is enabled. When managed, users cannot override the enterprise value.</source>
@@ -1050,14 +1038,6 @@ A keybinding</note>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/platform/agentHost/common/cloudSandboxAgentHost" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="cloudSandbox.environmentOffline">
-        <source xml:lang="en">The environment for this session is offline. It will become available again when the host reconnects.</source>
-        <target>Середовище для цієї сесії офлайн. Воно знову стане доступним, коли хост повторно підключиться.</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/platform/agentHost/common/copilotCliConfig" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHost.config.copilotSdkLogLevel.description">
@@ -1117,8 +1097,8 @@ A keybinding</note>
         <target>Opus 4.8 Запит агента</target>
       </trans-unit>
       <trans-unit id="agentHost.config.reasoningEffortOverride.description">
-        <source xml:lang="en">Overrides the reasoning effort for Copilot SDK sessions regardless of the per-model picker value. Set it to a level the selected model supports (e.g. `low`, `medium`, `high`, `xhigh`); a value that isn't a recognized effort level is ignored and the session falls back to the picker value. Only affects Copilot SDK sessions; intended for experimentation.</source>
-        <target>Перезаписує зусилля розуміння для сесій Copilot SDK незалежно від значення вибору для кожної моделі. Встановіть його на рівень, який підтримує обрана модель (наприклад, `низький`, `середній`, `високий`, `дуже високий`); значення, яке не є визнаним рівнем зусилля, ігнорується, і сесія повертається до значення вибору. Торкається лише сесій Copilot SDK; призначено для експериментів.</target>
+        <source xml:lang="en">Overrides the reasoning effort for Copilot SDK sessions regardless of the per-model picker value. Set it to a level the selected model supports (e.g. `low`, `medium`, `high`, `xhigh`, `max`); a value that isn't a recognized effort level is ignored and the session falls back to the picker value. Only affects Copilot SDK sessions; intended for experimentation.</source>
+        <target>Перезаписує зусилля розуміння для сесій Copilot SDK незалежно від значення вибору для кожної моделі. Встановіть його на рівень, який підтримує обрана модель (наприклад, `низький`, `середній`, `високий`, `дуже високий`, `максимум`); значення, яке не є визнаним рівнем зусилля, ігнорується, і сесія повертається до значення вибору. Торкається лише сесій Copilot SDK; призначено для експериментів.</target>
       </trans-unit>
       <trans-unit id="agentHost.config.reasoningEffortOverride.title">
         <source xml:lang="en">Reasoning Effort Override</source>
@@ -1243,6 +1223,42 @@ A keybinding</note>
       <trans-unit id="reasoningEffort.xhighDescription">
         <source xml:lang="en">Highest reasoning depth but slowest</source>
         <target>Найвища глибина міркування, але найповільніша</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/common/remoteAgentHostLocationPreferenceDialog" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="remoteAgentHostLocation.changeCommandLabel">
+        <source xml:lang="en">Chat: Change Preferred Remote Agent Location</source>
+        <target>Чат: Змінити бажане місцезнаходження віддаленого агента</target>
+      </trans-unit>
+      <trans-unit id="remoteAgentHostLocation.current">
+        <source xml:lang="en"> (Current)</source>
+        <target>(Поточний)</target>
+      </trans-unit>
+      <trans-unit id="remoteAgentHostLocation.dedicated">
+        <source xml:lang="en">Keep My Agents Running in a Dedicated Process</source>
+        <target>Тримайте мої агенти в роботі в окремому процесі</target>
+      </trans-unit>
+      <trans-unit id="remoteAgentHostLocation.dedicated.detail">
+        <source xml:lang="en">Agents continue after you close {0} and stop when their work finishes.</source>
+        <target>Агенти продовжують після того, як ви закриєте {0}, і зупиняються, коли їхня робота закінчується.</target>
+      </trans-unit>
+      <trans-unit id="remoteAgentHostLocation.editor">
+        <source xml:lang="en">Stop My Agents if I Close {0}</source>
+        <target>Зупинити моїх агентів, якщо я закрию {0}</target>
+      </trans-unit>
+      <trans-unit id="remoteAgentHostLocation.editor.detail">
+        <source xml:lang="en">Agents are available only while the remote {0} window is open.</source>
+        <target>Агенти доступні лише тоді, коли відкрите вікно {0} віддаленого доступу.</target>
+      </trans-unit>
+      <trans-unit id="remoteAgentHostLocation.message">
+        <source xml:lang="en">How long should agents keep running on {0}?</source>
+        <target>Як довго агенти повинні продовжувати працювати на {0}?</target>
+      </trans-unit>
+      <trans-unit id="remoteAgentHostLocation.reminder">
+        <source xml:lang="en">You can change this later with the **{0}** command.</source>
+        <target>Ви можете змінити це пізніше за допомогою команди **{0}**.</target>
       </trans-unit>
     </body>
   </file>
@@ -1452,6 +1468,58 @@ A keybinding</note>
   </file>
   <file original="src/vs/platform/agentHost/electron-browser/sshRemoteAgentHostServiceImpl" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="sshEditorAgentHostReplacedByStandalone">
+        <source xml:lang="en">The editor agent host exited. Reconnected to a dedicated agent host. In-progress work may have been interrupted.</source>
+        <target>Хост агента редактора вийшов. Підключено до виділеного хоста агента. Робота, що виконується, могла бути перервана.</target>
+      </trans-unit>
+      <trans-unit id="sshHostKeyCaOnlyDetail">
+        <source xml:lang="en">{0} key fingerprint is {1}.
+
+This host is configured to use a certificate authority, but certificate-based host keys cannot be verified here, so this key cannot be checked against it.</source>
+        <target>{0} відбиток ключа - {1}.
+
+Цей хост налаштований на використання центру сертифікації, але ключі хоста на основі сертифікатів не можуть бути перевірені тут, тому цей ключ не може бути перевірений щодо нього.</target>
+      </trans-unit>
+      <trans-unit id="sshHostKeyCancel">
+        <source xml:lang="en">Cancel</source>
+        <target>Скасувати</target>
+      </trans-unit>
+      <trans-unit id="sshHostKeyChanged">
+        <source xml:lang="en">Host key verification failed for '{0}'. Its {1} host key has changed, which could mean someone is impersonating the host — or that the host was legitimately rebuilt. Received {2}.</source>
+        <target>Перевірка ключа хоста не вдалася для '{0}'. Його {1} ключ хоста змінився, що може означати, що хтось видає себе за хост — або що хост був легітимно відновлений. Отримано {2}.</target>
+      </trans-unit>
+      <trans-unit id="sshHostKeyChangedKnownHosts">
+        <source xml:lang="en">Host key verification failed for '{0}'. Its {1} host key does not match the entry in your known_hosts file, which could mean someone is impersonating the host — or that the host was legitimately rebuilt. Received {2}. Update or remove the known_hosts entry if this change was expected.</source>
+        <target>Перевірка ключа хоста не вдалася для '{0}'. Його {1} ключ хоста не відповідає запису у вашому файлі known_hosts, що може означати, що хтось видає себе за хост — або що хост був легітимно відновлений. Отримано {2}. Оновіть або видаліть запис у known_hosts, якщо ця зміна була очікуваною.</target>
+      </trans-unit>
+      <trans-unit id="sshHostKeyConnect">
+        <source xml:lang="en">&amp;&amp;Connect</source>
+        <target>&amp;&amp;Підключитися</target>
+      </trans-unit>
+      <trans-unit id="sshHostKeyForgetAction">
+        <source xml:lang="en">Forget Saved Host Key</source>
+        <target>Забути збережений ключ хоста</target>
+      </trans-unit>
+      <trans-unit id="sshHostKeyRevoked">
+        <source xml:lang="en">Host key verification failed for '{0}'. This host's {1} key has been marked as revoked in your known_hosts file. Remove the @revoked line from known_hosts if this key should be trusted again.</source>
+        <target>Перевірка ключа хоста не вдалася для '{0}'. Ключ {1} цього хоста був позначений як відкликаний у вашому файлі known_hosts. Видаліть рядок @revoked з known_hosts, якщо цей ключ слід знову довіряти.</target>
+      </trans-unit>
+      <trans-unit id="sshHostKeyStrictUnknown">
+        <source xml:lang="en">Can't connect to '{0}': its host key is not known, and StrictHostKeyChecking is set to "yes" in your SSH configuration.</source>
+        <target>Не вдається підключитися до '{0}': його ключ хоста невідомий, а StrictHostKeyChecking встановлено на "yes" у вашій конфігурації SSH.</target>
+      </trans-unit>
+      <trans-unit id="sshHostKeyUnknownDetail">
+        <source xml:lang="en">{0} key fingerprint is {1}.
+
+Verify this fingerprint matches the host before continuing.</source>
+        <target>{0} відбиток ключа - це {1}.
+
+Перевірте, що цей відбиток відповідає хосту перед продовженням.</target>
+      </trans-unit>
+      <trans-unit id="sshHostKeyUnknownMessage">
+        <source xml:lang="en">The authenticity of host '{0}' can't be established.</source>
+        <target>Автентичність хоста '{0}' не може бути встановлена.</target>
+      </trans-unit>
       <trans-unit id="sshKbiDefaultPrompt">
         <source xml:lang="en">Authentication required for {0}@{1}</source>
         <target>Необхідна аутентифікація для {0}@{1}</target>
@@ -1617,24 +1685,24 @@ A keybinding</note>
   <file original="src/vs/platform/agentHost/node/agentHostPullRequestOperationProvider" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHost.changeset.createDraftPR">
-        <source xml:lang="en">Create Draft Pull Request</source>
-        <target>Створити чернетку запиту на злиття</target>
+        <source xml:lang="en">Create Draft PR</source>
+        <target>Створити чернетку PR</target>
       </trans-unit>
       <trans-unit id="agentHost.changeset.createPR">
-        <source xml:lang="en">Create Pull Request</source>
-        <target>Створити Pull Request</target>
+        <source xml:lang="en">Create PR</source>
+        <target>Створити PR</target>
       </trans-unit>
       <trans-unit id="agentHost.changeset.createPRAutoMerge">
-        <source xml:lang="en">Create Pull Request (Auto-Merge)</source>
-        <target>Створити Pull Request (Авто-Злиття)</target>
+        <source xml:lang="en">Create PR (Auto-Merge)</source>
+        <target>Створити PR (Авто-Злиття)</target>
       </trans-unit>
       <trans-unit id="agentHost.changeset.createPRAutoRebase">
-        <source xml:lang="en">Create Pull Request (Auto-Rebase)</source>
-        <target>Створити Pull Request (Авто-реабазування)</target>
+        <source xml:lang="en">Create PR (Auto-Rebase)</source>
+        <target>Створити PR (Авто-ребейз)</target>
       </trans-unit>
       <trans-unit id="agentHost.changeset.createPRAutoSquash">
-        <source xml:lang="en">Create Pull Request (Auto-Squash)</source>
-        <target>Створити Pull Request (Авто-сквош)</target>
+        <source xml:lang="en">Create PR (Auto-Squash)</source>
+        <target>Створити PR (Авто-склеювання)</target>
       </trans-unit>
     </body>
   </file>
@@ -2232,14 +2300,6 @@ A keybinding</note>
         <source xml:lang="en">Never ask for elevated permission; commands that cannot run in the sandbox are rejected.</source>
         <target>Ніколи не запитуйте підвищені дозволи; команди, які не можуть виконуватися в пісочниці, відхиляються.</target>
       </trans-unit>
-      <trans-unit id="codex.sessionConfig.approvalPolicy.onFailure">
-        <source xml:lang="en">Ask on Failure</source>
-        <target>Запитати про помилку</target>
-      </trans-unit>
-      <trans-unit id="codex.sessionConfig.approvalPolicy.onFailureDescription">
-        <source xml:lang="en">Try commands in the sandbox first, then ask to retry with elevated permission if the sandbox blocks them.</source>
-        <target>Спробуйте команди спочатку в пісочниці, а потім попросіть повторити з підвищеними правами, якщо пісочниця їх заблокує.</target>
-      </trans-unit>
       <trans-unit id="codex.sessionConfig.approvalPolicy.onRequest">
         <source xml:lang="en">Ask When Needed</source>
         <target>Запитуйте, коли потрібно</target>
@@ -2416,17 +2476,29 @@ A keybinding</note>
         <source xml:lang="en">Web-search tool availability for the model.</source>
         <target>Доступність інструмента веб-пошуку для моделі.</target>
       </trans-unit>
-      <trans-unit id="codexAgent.description.copilot">
-        <source xml:lang="en">Codex agent using GitHub Copilot</source>
-        <target>Агент Codex, що використовує GitHub Copilot</target>
-      </trans-unit>
-      <trans-unit id="codexAgent.description.openai">
-        <source xml:lang="en">Codex agent using your OpenAI account</source>
-        <target>Агент Codex, що використовує ваш обліковий запис OpenAI</target>
+      <trans-unit id="codexAgent.description">
+        <source xml:lang="en">Codex agent using session-selected model providers</source>
+        <target>Агент Codex, що використовує моделі постачальників, обрані за сесією</target>
       </trans-unit>
       <trans-unit id="codexAgent.displayName">
         <source xml:lang="en">Codex</source>
         <target>Codex</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/codex/codexMapAppServerEvents" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="codex.compaction.completed">
+        <source xml:lang="en">Compacted conversation</source>
+        <target>Стиснута розмова</target>
+      </trans-unit>
+      <trans-unit id="codex.compaction.displayName">
+        <source xml:lang="en">Compact conversation</source>
+        <target>Компактна розмова</target>
+      </trans-unit>
+      <trans-unit id="codex.compaction.inProgress">
+        <source xml:lang="en">Compacting conversation</source>
+        <target>Упорядкування розмови</target>
       </trans-unit>
     </body>
   </file>
@@ -2493,8 +2565,16 @@ A keybinding</note>
         <target>Зберегти політику</target>
       </trans-unit>
       <trans-unit id="codex.configuration.title">
-        <source xml:lang="en">Codex Settings</source>
-        <target>Налаштування Кодексу</target>
+        <source xml:lang="en">Codex</source>
+        <target>Кодекс</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/codexCompactCommand" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="codex.compact.description">
+        <source xml:lang="en">Compact this conversation's context</source>
+        <target>Стисніть контекст цієї розмови</target>
       </trans-unit>
     </body>
   </file>
@@ -2523,6 +2603,10 @@ A keybinding</note>
       <trans-unit id="copilot.modelThinkingLevel.title">
         <source xml:lang="en">Thinking Level</source>
         <target>Рівень мислення</target>
+      </trans-unit>
+      <trans-unit id="copilotAgent.connectionClosed">
+        <source xml:lang="en">The Copilot CLI stopped unexpectedly. Retry your request.</source>
+        <target>Copilot CLI несподівано зупинився. Спробуйте ще раз.</target>
       </trans-unit>
       <trans-unit id="copilotAgent.description">
         <source xml:lang="en">Copilot SDK agent running in the local agent host process</source>
@@ -2623,6 +2707,22 @@ A keybinding</note>
       <trans-unit id="agentHost.copilot.systemNotification.agentIdle">
         <source xml:lang="en">Background agent {0} is complete</source>
         <target>Фоновий агент {0} завершено</target>
+      </trans-unit>
+      <trans-unit id="agentHost.copilot.systemNotification.factoryCancelled">
+        <source xml:lang="en">Factory {0} was cancelled</source>
+        <target>Фабрика {0} була скасована</target>
+      </trans-unit>
+      <trans-unit id="agentHost.copilot.systemNotification.factoryCompleted">
+        <source xml:lang="en">Factory {0} completed</source>
+        <target>Фабрика {0} завершена</target>
+      </trans-unit>
+      <trans-unit id="agentHost.copilot.systemNotification.factoryFailed">
+        <source xml:lang="en">Factory {0} failed</source>
+        <target>Фабрика {0} не вдалася</target>
+      </trans-unit>
+      <trans-unit id="agentHost.copilot.systemNotification.factoryHalted">
+        <source xml:lang="en">Factory {0} was halted</source>
+        <target>Фабрика {0} була зупинена</target>
       </trans-unit>
       <trans-unit id="agentHost.copilot.systemNotification.instructionDiscovered">
         <source xml:lang="en">Instruction discovered: {0}</source>
@@ -2776,10 +2876,6 @@ A keybinding</note>
         <source xml:lang="en">Read skill {0}</source>
         <target>Читати навичку {0}</target>
       </trans-unit>
-      <trans-unit id="toolComplete.skillName">
-        <source xml:lang="en">Read skill {0}</source>
-        <target>Читати навичку {0}</target>
-      </trans-unit>
       <trans-unit id="toolComplete.sql">
         <source xml:lang="en">Executed SQL query</source>
         <target>Виконаний SQL запит</target>
@@ -2901,10 +2997,6 @@ A keybinding</note>
         <target>Виконання {0}</target>
       </trans-unit>
       <trans-unit id="toolInvoke.skill">
-        <source xml:lang="en">Reading skill {0}</source>
-        <target>Навичка читання {0}</target>
-      </trans-unit>
-      <trans-unit id="toolInvoke.skillName">
         <source xml:lang="en">Reading skill {0}</source>
         <target>Навичка читання {0}</target>
       </trans-unit>
@@ -3444,6 +3536,18 @@ A keybinding</note>
         <source xml:lang="en">Creating isolated worktree</source>
         <target>Створення ізольованого робочого дерева</target>
       </trans-unit>
+      <trans-unit id="agentHost.worktreeCreationFailed">
+        <source xml:lang="en">Couldn't create the isolated worktree. This session is continuing in the original folder.</source>
+        <target>Не вдалося створити ізольоване робоче дерево. Ця сесія продовжується в оригінальній папці.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.worktreeCreationFailedWithDiagnostic">
+        <source xml:lang="en">Couldn't create the isolated worktree. This session is continuing in the original folder.
+
+{0}</source>
+        <target>Не вдалося створити ізольоване робоче дерево. Ця сесія продовжується в оригінальній папці.
+
+{0}</target>
+      </trans-unit>
       <trans-unit id="agentHost.worktreeNamingBranch">
         <source xml:lang="en">Creating isolated worktree (naming branch)</source>
         <target>Створення ізольованого робочого дерева (іменування гілки)</target>
@@ -3484,9 +3588,17 @@ A keybinding</note>
         <source xml:lang="en">Enter passphrase for SSH key {0}.</source>
         <target>Введіть парольну фразу для SSH-ключа {0}.</target>
       </trans-unit>
+      <trans-unit id="sshProgressAwaitingAgent">
+        <source xml:lang="en">Waiting for the new agent host to register...</source>
+        <target>Очікування реєстрації нового хоста агента...</target>
+      </trans-unit>
+      <trans-unit id="sshProgressAwaitingSelection">
+        <source xml:lang="en">Waiting for endpoint selection...</source>
+        <target>Очікування вибору кінцевої точки...</target>
+      </trans-unit>
       <trans-unit id="sshProgressCheckingAgent">
-        <source xml:lang="en">Checking for existing agent host...</source>
-        <target>Перевірка наявності існуючого хоста агента...</target>
+        <source xml:lang="en">Checking for existing agent hosts...</source>
+        <target>Перевірка наявності існуючих хостів агентів...</target>
       </trans-unit>
       <trans-unit id="sshProgressConnecting">
         <source xml:lang="en">Establishing SSH connection...</source>
@@ -3744,6 +3856,14 @@ A keybinding</note>
         <source xml:lang="en">Restore All</source>
         <target>Відновити все</target>
       </trans-unit>
+      <trans-unit id="chatSession.section.archived">
+        <source xml:lang="en">Archived</source>
+        <target>Архівовано</target>
+      </trans-unit>
+      <trans-unit id="chatSession.section.done">
+        <source xml:lang="en">Done</source>
+        <target>Готово</target>
+      </trans-unit>
       <trans-unit id="chatSession.unarchive">
         <source xml:lang="en">Unarchive</source>
         <target>Розархівувати</target>
@@ -3756,6 +3876,10 @@ A keybinding</note>
   </file>
   <file original="src/vs/platform/configuration/common/configurationRegistry" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="config.agentHost.duplicate">
+        <source xml:lang="en">Cannot register '{0}'. The agent host configuration key '{1}' is already mirrored from '{2}'.</source>
+        <target>Не вдається зареєструвати '{0}'. Ключ конфігурації хоста агента '{1}' вже відображається з '{2}'.</target>
+      </trans-unit>
       <trans-unit id="config.policy.bothPolicyAndReference">
         <source xml:lang="en">Cannot register '{0}'. A setting must not declare both 'policy' and 'policyReference'.</source>
         <target>Не вдається зареєструвати '{0}'. Налаштування не повинно оголошувати одночасно 'policy' та 'policyReference'.</target>
@@ -3953,12 +4077,21 @@ ElectronBuildId: {4}
 Chromium: {5}
 Node.js: {6}
 V8: {7}
-OS: {8}</source>
-        <note>Electron, Chromium, Node.js and V8 are product names that need no translation</note>
+@github/copilot: {8}
+@github/copilot-sdk: {9}
+OS: {10}</source>
+        <note>Electron, Chromium, Node.js, V8 and Copilot are product names that need no translation</note>
         <target>Версія: {0}  
 Коміт: {1}  
 Дата: {2}  
-Браузер: {3}</target>
+Electron: {3}  
+ElectronBuildId: {4}  
+Chromium: {5}  
+Node.js: {6}  
+V8: {7}  
+@github/copilot: {8}  
+@github/copilot-sdk: {9}  
+ОС: {10}</target>
       </trans-unit>
     </body>
   </file>

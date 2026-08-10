@@ -767,6 +767,10 @@ To complete authentication, navigate to {1} and enter the code above.</source>
         <source xml:lang="en">Advanced settings are hidden by default in the Settings editor unless the user chooses to show advanced settings.</source>
         <target>Розширені налаштування за замовчуванням приховані в редакторі налаштувань, якщо користувач не вибере показати розширені налаштування.</target>
       </trans-unit>
+      <trans-unit id="config.property.agentHost.unsupported">
+        <source xml:lang="en">Extension '{0}' CANNOT use the 'agentHost' property on configuration '{1}'.</source>
+        <target>Розширення '{0}' НЕ МОЖЕ використовувати властивість 'agentHost' у конфігурації '{1}'.</target>
+      </trans-unit>
       <trans-unit id="config.property.agentsWindow.proposed">
         <source xml:lang="en">Extension '{0}' CANNOT use 'agentsWindow' property on configuration '{1}' without enabling the 'agentsWindowConfiguration' API proposal.</source>
         <target>Розширення '{0}' НЕ МОЖЕ використовувати властивість 'agentsWindow' у конфігурації '{1}', не активувавши пропозицію API 'agentsWindowConfiguration'.</target>
@@ -4425,6 +4429,22 @@ Browser: {3}</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/browser/parts/editor/editorHeaderControl" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="ariaLabelEditorHeaderActions">
+        <source xml:lang="en">Editor actions</source>
+        <target>Дії редактора</target>
+      </trans-unit>
+      <trans-unit id="ariaLabelEditorHeaderLayoutActions">
+        <source xml:lang="en">Editor layout actions</source>
+        <target>Дії макета редактора</target>
+      </trans-unit>
+      <trans-unit id="ariaLabelEditorHeaderPrimaryActions">
+        <source xml:lang="en">Editor primary actions</source>
+        <target>Дії редактора основні</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/browser/parts/editor/editorPanes" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="editorOpenErrorDialog">
@@ -4761,6 +4781,14 @@ Browser: {3}</source>
   </file>
   <file original="src/vs/workbench/browser/parts/editor/editorTabsControl" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="addTab">
+        <source xml:lang="en">Add Tab</source>
+        <target>Додати вкладку</target>
+      </trans-unit>
+      <trans-unit id="ariaLabelAddTab">
+        <source xml:lang="en">Add Tab</source>
+        <target>Додати вкладку</target>
+      </trans-unit>
       <trans-unit id="ariaLabelEditorActions">
         <source xml:lang="en">Editor actions</source>
         <target>Дії редактора</target>
@@ -4833,10 +4861,6 @@ Browser: {3}</source>
   </file>
   <file original="src/vs/workbench/browser/parts/editor/multiEditorTabsControl" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="addTab">
-        <source xml:lang="en">Add Tab</source>
-        <target>Додати вкладку</target>
-      </trans-unit>
       <trans-unit id="ariaLabelTabActions">
         <source xml:lang="en">Tab actions</source>
         <target>Дії вкладки</target>
@@ -7141,6 +7165,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="activeEditorCanToggleReadonly">
         <source xml:lang="en">Whether the active editor can toggle between being read-only or writeable</source>
         <target>Чи може активний редактор перемикатися між режимом тільки для читання та режимом запису</target>
+      </trans-unit>
+      <trans-unit id="activeEditorCannotClose">
+        <source xml:lang="en">Whether the active editor cannot be closed through standard user actions</source>
+        <target>Чи не можна закрити активний редактор стандартними діями користувача.</target>
       </trans-unit>
       <trans-unit id="activeEditorGroupEmpty">
         <source xml:lang="en">Whether the active editor group is empty</source>
