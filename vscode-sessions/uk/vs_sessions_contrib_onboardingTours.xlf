@@ -10,6 +10,10 @@
         <source xml:lang="en">Tackle the following issue and create a pull request for it: "{0}" ({1}).</source>
         <target>Вирішіть наступну проблему та створіть для неї запит на злиття: "{0}" ({1}).</target>
       </trans-unit>
+      <trans-unit id="sessions.onboarding.newSessionViewV3.githubPrompt.mergeConflict">
+        <source xml:lang="en">The following pull request has merge conflicts: "{0}" ({1}). Resolve the conflicts and update the pull request.</source>
+        <target>Наступний запит на злиття має конфлікти злиття: "{0}" ({1}). Вирішіть конфлікти та оновіть запит на злиття.</target>
+      </trans-unit>
       <trans-unit id="sessions.onboarding.newSessionViewV3.githubPrompt.reviewComments">
         <source xml:lang="en">The following pull request has unresolved review comments that have not been addressed by a newer commit: "{0}" ({1}). Address the review comments and update the pull request.</source>
         <target>Наступний запит на злиття має невирішені коментарі до огляду, які не були враховані новішим комітом: "{0}" ({1}). Виправте коментарі до огляду та оновіть запит на злиття.</target>
@@ -23,8 +27,8 @@
         <target>[опишіть помилку]</target>
       </trans-unit>
       <trans-unit id="sessions.onboarding.newSessionViewV3.options.fixBug.prompt">
-        <source xml:lang="en">Help me fix {0} in this project. First, inspect the relevant files and explain your approach briefly. Then implement the solution using existing project conventions, avoid unrelated changes, and run the most relevant tests or checks. If anything is unclear, make a reasonable assumption and state it. When finished, summarize what changed and mention any remaining issues.</source>
-        <target>Допоможіть мені виправити {0} у цьому проекті. Спочатку перевірте відповідні файли та коротко поясніть свій підхід. Потім реалізуйте рішення, використовуючи існуючі конвенції проекту, уникайте несуттєвих змін і запустіть найбільш релевантні тести або перевірки. Якщо щось незрозуміло, зробіть розумне припущення і вкажіть його. Коли закінчите, підсумуйте, що змінилося, і згадайте про будь-які залишкові проблеми.</target>
+        <source xml:lang="en">Help me fix {0} in this project. Ask me questions if anything is unclear regarding the bug or the intended behaviour.</source>
+        <target>Допоможіть мені виправити {0} у цьому проекті. Запитуйте мене, якщо щось неясно стосовно помилки або очікуваної поведінки.</target>
       </trans-unit>
       <trans-unit id="sessions.onboarding.newSessionViewV3.options.fixBug.title">
         <source xml:lang="en">Fix a bug</source>
@@ -39,8 +43,8 @@
         <target>[опишіть помилку CI або вставте посилання]</target>
       </trans-unit>
       <trans-unit id="sessions.onboarding.newSessionViewV3.options.fixCi.prompt">
-        <source xml:lang="en">Help me fix the failing CI for {0} in this project. First, inspect the relevant files and explain your approach briefly. Then implement the solution using existing project conventions, avoid unrelated changes, and run the most relevant tests or checks. If anything is unclear, make a reasonable assumption and state it. When finished, summarize what changed and mention any remaining issues.</source>
-        <target>Допоможіть мені виправити невдалий CI для {0} в цьому проекті. Спочатку перевірте відповідні файли та коротко поясніть свій підхід. Потім реалізуйте рішення, використовуючи існуючі конвенції проекту, уникайте несуттєвих змін і запустіть найбільш релевантні тести або перевірки. Якщо щось незрозуміло, зробіть обґрунтоване припущення і вкажіть його. Коли закінчите, підсумуйте, що змінилося, і згадайте про будь-які залишкові проблеми.</target>
+        <source xml:lang="en">Help me fix the failing CI for {0} in this project. Ask me questions if anything is unclear regarding the CI failure or how it should be fixed.</source>
+        <target>Допоможіть мені виправити невдалий CI для {0} в цьому проекті. Запитуйте мене, якщо щось неясно щодо збоїв CI або як це слід виправити.</target>
       </trans-unit>
       <trans-unit id="sessions.onboarding.newSessionViewV3.options.fixCi.title">
         <source xml:lang="en">Fix CI</source>
@@ -49,6 +53,10 @@
       <trans-unit id="sessions.onboarding.newSessionViewV3.options.githubCi.title">
         <source xml:lang="en">Fix CI</source>
         <target>Виправити CI</target>
+      </trans-unit>
+      <trans-unit id="sessions.onboarding.newSessionViewV3.options.githubConflicts.title">
+        <source xml:lang="en">Resolve conflicts</source>
+        <target>Вирішити конфлікти</target>
       </trans-unit>
       <trans-unit id="sessions.onboarding.newSessionViewV3.options.githubIssue.title">
         <source xml:lang="en">Tackle issue</source>
@@ -67,8 +75,8 @@
         <target>[опишіть функцію]</target>
       </trans-unit>
       <trans-unit id="sessions.onboarding.newSessionViewV3.options.implementFeature.prompt">
-        <source xml:lang="en">Help me implement {0} in this project. First, inspect the relevant files and explain your approach briefly. Then implement the solution using existing project conventions, avoid unrelated changes, and run the most relevant tests or checks. If anything is unclear, make a reasonable assumption and state it. When finished, summarize what changed and mention any remaining issues.</source>
-        <target>Допоможіть мені реалізувати {0} у цьому проекті. Спочатку перевірте відповідні файли та коротко поясніть свій підхід. Потім реалізуйте рішення, використовуючи існуючі конвенції проекту, уникайте несуттєвих змін і запустіть найбільш релевантні тести або перевірки. Якщо щось незрозуміло, зробіть обґрунтоване припущення і зазначте його. Коли закінчите, підсумуйте, що змінилося, і згадайте про будь-які залишкові проблеми.</target>
+        <source xml:lang="en">Help me implement {0} in this project. Ask me questions if anything is unclear regarding the intended behaviour.</source>
+        <target>Допоможіть мені реалізувати {0} у цьому проекті. Запитуйте мене, якщо щось незрозуміло щодо очікуваної поведінки.</target>
       </trans-unit>
       <trans-unit id="sessions.onboarding.newSessionViewV3.options.implementFeature.title">
         <source xml:lang="en">Implement a feature</source>

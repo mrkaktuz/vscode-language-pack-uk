@@ -167,6 +167,26 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/api/browser/mainThreadDataChannels" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="linkPresentation.ruleMismatch">
+        <source xml:lang="en">The selected link presentation provider does not accept this resource.</source>
+        <target>Вибраний постачальник презентації посилань не приймає цей ресурс.</target>
+      </trans-unit>
+      <trans-unit id="linkPresentation.unavailable">
+        <source xml:lang="en">Not available</source>
+        <target>Недоступно</target>
+      </trans-unit>
+      <trans-unit id="linkPresentation.unavailableAriaLabel">
+        <source xml:lang="en">Link presentation is not available</source>
+        <target>Презентація посилання недоступна</target>
+      </trans-unit>
+      <trans-unit id="linkPresentation.unavailableTooltip">
+        <source xml:lang="en">The link presentation provider failed to load.</source>
+        <target>Постачальник презентації посилання не зміг завантажитися.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/api/browser/mainThreadEditSessionIdentityParticipant" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="timeout.onWillCreateEditSessionIdentity">
@@ -1301,6 +1321,22 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       <trans-unit id="policyDiagnostics">
         <source xml:lang="en">Policy Diagnostics</source>
         <target>Діагностика політики</target>
+      </trans-unit>
+      <trans-unit id="policyDiagnostics.editorTitle">
+        <source xml:lang="en">Policy Diagnostics</source>
+        <target>Діагностика політики</target>
+      </trans-unit>
+      <trans-unit id="policyDiagnostics.previewError">
+        <source xml:lang="en">Policy diagnostics opened as Markdown source because the rendered preview could not be opened: {0}</source>
+        <target>Діагностика політики відкрилася як джерело Markdown, оскільки попередній перегляд не вдалося відкрити: {0}</target>
+      </trans-unit>
+      <trans-unit id="policyDiagnostics.previewMissingResource">
+        <source xml:lang="en">Policy diagnostics opened as Markdown source because the rendered preview could not be initialized.</source>
+        <target>Діагностика політики відкрилася як джерело Markdown, оскільки попередній перегляд не вдалося ініціалізувати.</target>
+      </trans-unit>
+      <trans-unit id="policyDiagnostics.progress">
+        <source xml:lang="en">Generating policy diagnostics...</source>
+        <target>Генерація діагностики політики...</target>
       </trans-unit>
       <trans-unit id="profile">
         <source xml:lang="en">Profile</source>
@@ -3696,6 +3732,10 @@ Browser: {3}</source>
         <source xml:lang="en">Close</source>
         <target>Закрити</target>
       </trans-unit>
+      <trans-unit id="closeOthers">
+        <source xml:lang="en">Close Others</source>
+        <target>Закрити інших</target>
+      </trans-unit>
       <trans-unit id="confirmClearDetail">
         <source xml:lang="en">This action is irreversible!</source>
         <target>Цю дію не можна скасувати!</target>
@@ -4861,6 +4901,14 @@ Browser: {3}</source>
   </file>
   <file original="src/vs/workbench/browser/parts/editor/multiEditorTabsControl" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="altClick">
+        <source xml:lang="en">Alt+Click</source>
+        <target>Alt+Click</target>
+      </trans-unit>
+      <trans-unit id="altClickMac">
+        <source xml:lang="en">⌥+Click</source>
+        <target>⌥+Click</target>
+      </trans-unit>
       <trans-unit id="ariaLabelTabActions">
         <source xml:lang="en">Tab actions</source>
         <target>Дії вкладки</target>
@@ -6001,6 +6049,10 @@ If {1} did not launch, try again below.</source>
   </file>
   <file original="src/vs/workbench/browser/workbench.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="accountsShowAvatar">
+        <source xml:lang="en">Controls whether signed-in account profile images (avatars) are shown in account-related UI, such as the Accounts item in the Activity Bar.</source>
+        <target>Контролює, чи відображаються зображення профілів (аватари) підписаного облікового запису в інтерфейсі, пов'язаному з обліковим записом, наприклад, у пункті "Облікові записи" на панелі активності.</target>
+      </trans-unit>
       <trans-unit id="activeEditorLanguageId">
         <source xml:lang="en">`${activeEditorLanguageId}`: the language identifier of the active editor (e.g. typescript).</source>
         <target>`${activeEditorLanguageId}`: ідентифікатор мови активного редактора (наприклад, typescript).</target>
@@ -6272,8 +6324,13 @@ If {1} did not launch, try again below.</source>
         <target>Налаштуйте інтервал у секундах, протягом якого останній запис у локальній історії файлів замінюється на запис, що додається. Це допомагає зменшити загальну кількість записів, які додаються, наприклад, коли увімкнено автоматичне збереження. Цей параметр застосовується лише до записів, які мають одне й те саме джерело походження. Зміна цього параметра не вплине на існуючі записи локальної історії файлів.</target>
       </trans-unit>
       <trans-unit id="modernUI">
-        <source xml:lang="en">Controls whether the experimental Modern UI Update is enabled. When on, the side bars and bottom panel are shown as floating cards with rounded corners and gaps, and a set of refreshed workbench styles is applied, matching the Agents window design.</source>
-        <target>Контролює, чи увімкнено експериментальне оновлення Modern UI. Коли увімкнено, бічні панелі та нижня панель відображаються як плаваючі картки з закругленими кутами та проміжками, а також застосовується набір оновлених стилів робочої області, що відповідають дизайну вікна Агентів.</target>
+        <source xml:lang="en">Controls whether the Modern UI Update is enabled. When on, the side bars and bottom panel are shown as floating cards with rounded corners and gaps, and a set of refreshed workbench styles is applied, matching the Agents window design.</source>
+        <target>Контролює, чи увімкнено оновлення Modern UI. Коли увімкнено, бічні панелі та нижня панель відображаються як плаваючі картки з закругленими кутами та проміжками, а також застосовується набір оновлених стилів робочої області, що відповідають дизайну вікна Агентів.</target>
+      </trans-unit>
+      <trans-unit id="modernUIUppercaseViewHeaders">
+        <source xml:lang="en">Controls whether view headers, side bar titles, and panel tabs use uppercase text when {0} is enabled.</source>
+        <note>{0} is a placeholder for a setting identifier.</note>
+        <target>Контролює, чи використовують заголовки переглядів, назви бічних панелей та вкладки панелей великий регістр, коли {0} увімкнено.</target>
       </trans-unit>
       <trans-unit id="mouseBackForwardToNavigate">
         <source xml:lang="en">Enables the use of mouse buttons four and five for commands 'Go Back' and 'Go Forward'.</source>
@@ -6840,6 +6897,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="workbench.editor.tabActionCloseVisibility">
         <source xml:lang="en">Controls the visibility of the tab close action button.</source>
         <target>Контролює видимість кнопки закриття вкладки.</target>
+      </trans-unit>
+      <trans-unit id="workbench.editor.tabActionReserveSpace">
+        <source xml:lang="en">Controls whether Modern UI editor tabs always reserve space for tab action buttons. When disabled, clean tabs stay compact; tabs with persistent dirty or pinned indicators reserve space regardless.</source>
+        <target>Контролює, чи завжди резервують місце для кнопок дій вкладки редактора Modern UI. Коли вимкнено, чисті вкладки залишаються компактними; вкладки з постійними брудними або закріпленими індикаторами резервують місце незалежно.</target>
       </trans-unit>
       <trans-unit id="workbench.editor.tabActionUnpinVisibility">
         <source xml:lang="en">Controls the visibility of the tab unpin action button.</source>
@@ -7638,6 +7699,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Foreground color of the command center when the window is inactive</source>
         <target>Колір переднього плану командного центру, коли вікно неактивне</target>
       </trans-unit>
+      <trans-unit id="editorBorder">
+        <source xml:lang="en">Border color of the editor surface in the modern layout.</source>
+        <target>Колір рамки поверхні редактора в сучасному макеті.</target>
+      </trans-unit>
       <trans-unit id="editorDragAndDropBackground">
         <source xml:lang="en">Background color when dragging editors around. The color should have transparency so that the editor contents can still shine through.</source>
         <target>Колір фону під час перетягування редакторів. Колір повинен мати прозорість, щоб вміст редактора все ще був видимим.</target>
@@ -7701,6 +7766,78 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="menubarSelectionForeground">
         <source xml:lang="en">Foreground color of the selected menu item in the menubar.</source>
         <target>Колір переднього плану вибраного елемента меню в панелі меню.</target>
+      </trans-unit>
+      <trans-unit id="modernActivityBarActiveBackground">
+        <source xml:lang="en">Background color of active Activity bar items in the default side position when the modern UI is enabled.</source>
+        <target>Колір фону активних елементів панелі активності у стандартному бічному положенні, коли увімкнено сучасний інтерфейс.</target>
+      </trans-unit>
+      <trans-unit id="modernActivityBarActiveForeground">
+        <source xml:lang="en">Foreground color of active Activity bar items in the default side position when the modern UI is enabled.</source>
+        <target>Колір переднього плану активних елементів панелі активності у стандартному боковому положенні, коли увімкнено сучасний інтерфейс.</target>
+      </trans-unit>
+      <trans-unit id="modernActivityBarHoverBackground">
+        <source xml:lang="en">Background color of Activity bar items in the default side position when hovering and the modern UI is enabled.</source>
+        <target>Колір фону елементів панелі активності в стандартному боковому положенні при наведенні курсору та увімкненому сучасному інтерфейсі.</target>
+      </trans-unit>
+      <trans-unit id="modernActivityBarHoverForeground">
+        <source xml:lang="en">Foreground color of Activity bar items in the default side position when hovering and the modern UI is enabled.</source>
+        <target>Колір переднього плану елементів панелі активності в стандартному бічному положенні при наведенні курсору та активованому сучасному інтерфейсі.</target>
+      </trans-unit>
+      <trans-unit id="modernEditorTabActiveActionBackground">
+        <source xml:lang="en">Opaque background color of tab actions on active editor tabs when the modern tab style is enabled.</source>
+        <target>Непрозорий колір фону дій вкладок на активних вкладках редактора, коли увімкнено сучасний стиль вкладок.</target>
+      </trans-unit>
+      <trans-unit id="modernEditorTabActiveBackground">
+        <source xml:lang="en">Background color of active editor tabs when the modern tab style is enabled.</source>
+        <target>Колір фону активних вкладок редактора, коли увімкнено сучасний стиль вкладок.</target>
+      </trans-unit>
+      <trans-unit id="modernEditorTabActiveForeground">
+        <source xml:lang="en">Foreground color of active editor tabs when the modern tab style is enabled.</source>
+        <target>Колір переднього плану активних вкладок редактора, коли увімкнено сучасний стиль вкладок.</target>
+      </trans-unit>
+      <trans-unit id="modernEditorTabActiveHoverActionBackground">
+        <source xml:lang="en">Opaque background color of tab actions on active editor tabs when hovering and the modern tab style is enabled.</source>
+        <target>Непрозорий колір фону дій вкладок на активних вкладках редактора під час наведення курсору, коли увімкнено сучасний стиль вкладок.</target>
+      </trans-unit>
+      <trans-unit id="modernEditorTabActiveHoverBackground">
+        <source xml:lang="en">Background color of active editor tabs when hovering and the modern tab style is enabled.</source>
+        <target>Колір фону активних вкладок редактора при наведенні курсору та увімкненому сучасному стилі вкладок.</target>
+      </trans-unit>
+      <trans-unit id="modernEditorTabHoverActionBackground">
+        <source xml:lang="en">Opaque background color of tab actions on editor tabs when hovering and the modern tab style is enabled.</source>
+        <target>Непрозорий колір фону дій вкладок на вкладках редактора при наведенні курсору та увімкненому сучасному стилі вкладок.</target>
+      </trans-unit>
+      <trans-unit id="modernEditorTabHoverBackground">
+        <source xml:lang="en">Background color of editor tabs when hovering and the modern tab style is enabled.</source>
+        <target>Колір фону вкладок редактора під час наведення курсора та коли увімкнено сучасний стиль вкладок.</target>
+      </trans-unit>
+      <trans-unit id="modernEditorTabHoverForeground">
+        <source xml:lang="en">Foreground color of editor tabs when hovering and the modern tab style is enabled.</source>
+        <target>Колір переднього плану вкладок редактора при наведенні курсора та активованому сучасному стилі вкладок.</target>
+      </trans-unit>
+      <trans-unit id="modernEditorTabInactiveBackground">
+        <source xml:lang="en">Background color of inactive editor tabs when the modern tab style is enabled.</source>
+        <target>Колір фону неактивних вкладок редактора, коли увімкнено сучасний стиль вкладок.</target>
+      </trans-unit>
+      <trans-unit id="modernEditorTabSelectedActionBackground">
+        <source xml:lang="en">Opaque background color of tab actions on selected editor tabs when the modern tab style is enabled.</source>
+        <target>Непрозорий колір фону дій вкладок на вибраних вкладках редактора, коли увімкнено сучасний стиль вкладок.</target>
+      </trans-unit>
+      <trans-unit id="modernTabActiveBackground">
+        <source xml:lang="en">Background color of active tabs when the modern tab style is enabled.</source>
+        <target>Колір фону активних вкладок, коли увімкнено сучасний стиль вкладок.</target>
+      </trans-unit>
+      <trans-unit id="modernTabActiveForeground">
+        <source xml:lang="en">Foreground color of active tabs when the modern tab style is enabled.</source>
+        <target>Колір переднього плану активних вкладок, коли увімкнено сучасний стиль вкладок.</target>
+      </trans-unit>
+      <trans-unit id="modernTabHoverBackground">
+        <source xml:lang="en">Background color of tabs when hovering and the modern tab style is enabled.</source>
+        <target>Колір фону вкладок при наведенні курсора та активованому сучасному стилі вкладок.</target>
+      </trans-unit>
+      <trans-unit id="modernTabHoverForeground">
+        <source xml:lang="en">Foreground color of tabs when hovering and the modern tab style is enabled.</source>
+        <target>Колір переднього плану вкладок при наведенні курсору та активованому сучасному стилі вкладок.</target>
       </trans-unit>
       <trans-unit id="notificationCenterBorder">
         <source xml:lang="en">Notifications center border color. Notifications slide in from the bottom right of the window.</source>

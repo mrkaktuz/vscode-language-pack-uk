@@ -128,6 +128,18 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/contrib/sessions/browser/sessionDetailsAction" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="sessions.details.editorTitle">
+        <source xml:lang="en">Session Details</source>
+        <target>Деталі сесії</target>
+      </trans-unit>
+      <trans-unit id="sessions.showSessionDetails">
+        <source xml:lang="en">Show Session Details</source>
+        <target>Показати деталі сесії</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/sessions/browser/sessionHoverContent" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentSessions.fileChanged">
@@ -247,6 +259,14 @@
         <source xml:lang="en">Focus Last Session in Grid</source>
         <target>Зосередити останню сесію в сітці</target>
       </trans-unit>
+      <trans-unit id="focusNextChatGroup">
+        <source xml:lang="en">Focus Next Chat Group</source>
+        <target>Сфокусувати наступну групу чату</target>
+      </trans-unit>
+      <trans-unit id="focusPreviousChatGroup">
+        <source xml:lang="en">Focus Previous Chat Group</source>
+        <target>Зосередити попередню групу чату</target>
+      </trans-unit>
       <trans-unit id="focusSessionInGrid">
         <source xml:lang="en">Focus Session {0} in Grid</source>
         <target>Сесія фокусу {0} у сітці</target>
@@ -260,6 +280,14 @@
         <source xml:lang="en">&amp;&amp;Forward</source>
         <note>&amp;&amp; denotes a mnemonic</note>
         <target>&amp;&amp;Далі</target>
+      </trans-unit>
+      <trans-unit id="moveChatToNextGroup">
+        <source xml:lang="en">Move Chat to Next Group</source>
+        <target>Перемістити чат до наступної групи</target>
+      </trans-unit>
+      <trans-unit id="moveChatToPreviousGroup">
+        <source xml:lang="en">Move Chat to Previous Group</source>
+        <target>Перемістити чат до попередньої групи</target>
       </trans-unit>
       <trans-unit id="navigateNextChat">
         <source xml:lang="en">Go to Next Chat</source>
@@ -333,6 +361,10 @@
         <source xml:lang="en">Rename...</source>
         <target>Перейменувати...</target>
       </trans-unit>
+      <trans-unit id="reopenLastClosedItem">
+        <source xml:lang="en">Reopen Closed Chat or Session</source>
+        <target>Відкрити закритий чат або сесію</target>
+      </trans-unit>
       <trans-unit id="searchChats">
         <source xml:lang="en">Search chats by name</source>
         <target>Шукати чати за назвою</target>
@@ -372,6 +404,14 @@
       <trans-unit id="showSessionsPicker">
         <source xml:lang="en">Show Sessions Picker</source>
         <target>Показати вибір сесій</target>
+      </trans-unit>
+      <trans-unit id="splitChatGroupDown">
+        <source xml:lang="en">Split Chat Group Down</source>
+        <target>Розділити групу чату вниз</target>
+      </trans-unit>
+      <trans-unit id="splitChatGroupRight">
+        <source xml:lang="en">Split Chat Group Right</source>
+        <target>Розділити групу чату вправо</target>
       </trans-unit>
       <trans-unit id="untitledChat">
         <source xml:lang="en">Untitled Chat</source>
@@ -502,8 +542,8 @@
         <target>Перейдіть до елемента редагування картки та кнопок дій за допомогою клавіші Tab. Використовуйте клавіші стрілок вліво та вправо, щоб переміщатися між "Запустити зараз" та "Видалити". Натисніть Enter або Space, щоб активувати елемент управління. Редагування або клацання в будь-якому іншому місці на картці відкриває діалог автоматизації. "Запустити зараз" починає сесію негайно. "Видалити" запитує підтвердження.</target>
       </trans-unit>
       <trans-unit id="automationsCustomView.help.history">
-        <source xml:lang="en">Run history is grouped by date. Each run reports its Pending, Running, Completed, or Failed status. Runs with an available session can be opened with Enter or Space. Tab to a run's delete button to permanently delete its session and history item, or to remove a terminal run that has no session from history, after confirmation.</source>
-        <target>Історія запусків згрупована за датою. Кожен запуск повідомляє про свій статус: Очікує, Виконується, Завершено або Не вдалося. Запуски з доступною сесією можна відкрити за допомогою Enter або Space. Перейдіть до кнопки видалення запуску, щоб назавжди видалити його сесію та елемент історії, або щоб видалити термінальний запуск, який не має сесії з історії, після підтвердження.</target>
+        <source xml:lang="en">Run history is grouped by date. While a run is waiting for its session, a lightweight row shows the automation name with a Working... description. Once the session is available, use Up Arrow and Down Arrow to navigate the Sessions list, Enter to open, and Tab to reach Stop or Delete actions when available. Delete permanently deletes the session and removes it from run history after confirmation.</source>
+        <target>Історія запусків групується за датою. Поки запуск чекає на свою сесію, легкий рядок показує назву автоматизації з описом "Виконується...". Коли сесія стає доступною, використовуйте стрілки вгору і вниз для навігації списком сесій, Enter для відкриття та Tab для доступу до дій "Зупинити" або "Видалити", коли вони доступні. Видалити назавжди видаляє сесію і прибирає її з історії запусків після підтвердження.</target>
       </trans-unit>
       <trans-unit id="automationsCustomView.help.overview">
         <source xml:lang="en">You are in the Automations view. It contains automation cards followed by run history.</source>
@@ -565,26 +605,6 @@
         <source xml:lang="en">Failed to run automation.</source>
         <target>Не вдалося запустити автоматизацію.</target>
       </trans-unit>
-      <trans-unit id="automationRunCompleted">
-        <source xml:lang="en">Completed</source>
-        <target>Завершено</target>
-      </trans-unit>
-      <trans-unit id="automationRunDeleteFailed">
-        <source xml:lang="en">Failed to remove the automation run from history.</source>
-        <target>Не вдалося видалити запуск автоматизації з історії.</target>
-      </trans-unit>
-      <trans-unit id="automationRunDeletedStatus">
-        <source xml:lang="en">Removed the run for {0} from history</source>
-        <target>Видалено запуск для {0} з історії</target>
-      </trans-unit>
-      <trans-unit id="automationRunErrorAriaLabel">
-        <source xml:lang="en">Error: {0}</source>
-        <target>Помилка: {0}</target>
-      </trans-unit>
-      <trans-unit id="automationRunFailed">
-        <source xml:lang="en">Failed</source>
-        <target>Не вдалося</target>
-      </trans-unit>
       <trans-unit id="automationRunHistoryDeleteFailed">
         <source xml:lang="en">The session was deleted, but its run history item could not be removed.</source>
         <target>Сесію було видалено, але її елемент історії виконання не вдалося видалити.</target>
@@ -592,14 +612,6 @@
       <trans-unit id="automationRunOpenFailed">
         <source xml:lang="en">Failed to open automation run.</source>
         <target>Не вдалося відкрити автоматизацію.</target>
-      </trans-unit>
-      <trans-unit id="automationRunPending">
-        <source xml:lang="en">Pending</source>
-        <target>Очікується</target>
-      </trans-unit>
-      <trans-unit id="automationRunRunning">
-        <source xml:lang="en">Running</source>
-        <target>Запуск</target>
       </trans-unit>
       <trans-unit id="automationRunSessionDeleteFailed">
         <source xml:lang="en">Failed to delete the automation run session.</source>
@@ -609,9 +621,21 @@
         <source xml:lang="en">Deleted the session for {0}</source>
         <target>Видалено сесію для {0}</target>
       </trans-unit>
-      <trans-unit id="automationRunUnreadAriaLabel">
-        <source xml:lang="en">Unread</source>
-        <target>Непрочитано</target>
+      <trans-unit id="automationRunSessionStopFailed">
+        <source xml:lang="en">Failed to stop the automation run session.</source>
+        <target>Не вдалося зупинити сесію автоматизації.</target>
+      </trans-unit>
+      <trans-unit id="automationRunSessionStoppedStatus">
+        <source xml:lang="en">Stopped the session for {0}</source>
+        <target>Зупинено сесію для {0}</target>
+      </trans-unit>
+      <trans-unit id="automationRunWorking">
+        <source xml:lang="en">Working...</source>
+        <target>Працює...</target>
+      </trans-unit>
+      <trans-unit id="automationRunWorkingAriaLabel">
+        <source xml:lang="en">{0}, Working...</source>
+        <target>{0}, Виконується...</target>
       </trans-unit>
       <trans-unit id="automationStartedStatus">
         <source xml:lang="en">Started automation {0}</source>
@@ -649,14 +673,6 @@
         <source xml:lang="en">Delete automation "{0}"?</source>
         <target>Видалити автоматизацію "{0}"?</target>
       </trans-unit>
-      <trans-unit id="confirmDeleteAutomationRunHistory">
-        <source xml:lang="en">Delete this run from history?</source>
-        <target>Видалити цей запуск з історії?</target>
-      </trans-unit>
-      <trans-unit id="confirmDeleteAutomationRunHistoryDetail">
-        <source xml:lang="en">This will permanently remove the run for "{0}" from history. This action cannot be undone.</source>
-        <target>Це назавжди видалить виконання для "{0}" з історії. Цю дію не можна скасувати.</target>
-      </trans-unit>
       <trans-unit id="confirmDeleteAutomationRunSession">
         <source xml:lang="en">Delete the session for "{0}"?</source>
         <target>Видалити сесію для "{0}"?</target>
@@ -681,13 +697,9 @@
         <source xml:lang="en">Delete</source>
         <target>Видалити</target>
       </trans-unit>
-      <trans-unit id="deleteAutomationRunHistory">
-        <source xml:lang="en">Delete run for {0} from history</source>
-        <target>Видалити запуск для {0} з історії</target>
-      </trans-unit>
-      <trans-unit id="deleteAutomationRunSession">
-        <source xml:lang="en">Delete session for {0}</source>
-        <target>Видалити сесію для {0}</target>
+      <trans-unit id="deleteAutomationRunSessionAction">
+        <source xml:lang="en">Delete</source>
+        <target>Видалити</target>
       </trans-unit>
       <trans-unit id="disabled">
         <source xml:lang="en">Disabled</source>
@@ -729,6 +741,10 @@
         <source xml:lang="en">Run now</source>
         <target>Запустити зараз</target>
       </trans-unit>
+      <trans-unit id="running">
+        <source xml:lang="en">Running</source>
+        <target>Запуск</target>
+      </trans-unit>
       <trans-unit id="scheduleDailyAt">
         <source xml:lang="en">Daily at {0}</source>
         <target>Щодня о {0}</target>
@@ -744,6 +760,10 @@
       <trans-unit id="scheduleWeeklyAt">
         <source xml:lang="en">{0} at {1}</source>
         <target>{0} о {1}</target>
+      </trans-unit>
+      <trans-unit id="stopAutomationRunSessionAction">
+        <source xml:lang="en">Stop</source>
+        <target>Зупинити</target>
       </trans-unit>
       <trans-unit id="today">
         <source xml:lang="en">Today</source>
@@ -781,6 +801,10 @@
         <source xml:lang="en">{0}, run in progress</source>
         <target>{0}, виконання в процесі</target>
       </trans-unit>
+      <trans-unit id="automationsNeedsInputAria">
+        <source xml:lang="en">{0}, run needs input</source>
+        <target>{0}, запуск потребує введення</target>
+      </trans-unit>
       <trans-unit id="automationsUnreadRunAria">
         <source xml:lang="en">{0}, unread run</source>
         <target>{0}, непрочитаний запуск</target>
@@ -809,17 +833,9 @@
         <source xml:lang="en">Delete Group</source>
         <target>Видалити групу</target>
       </trans-unit>
-      <trans-unit id="failed">
-        <source xml:lang="en">Failed</source>
-        <target>Не вдалося</target>
-      </trans-unit>
       <trans-unit id="moveToGroupAction">
         <source xml:lang="en">Move to Group</source>
         <target>Перемістити до групи</target>
-      </trans-unit>
-      <trans-unit id="needsInput">
-        <source xml:lang="en">Input needed</source>
-        <target>Введення необхідне</target>
       </trans-unit>
       <trans-unit id="newGroupName">
         <source xml:lang="en">New Group</source>
@@ -872,6 +888,10 @@
       <trans-unit id="sessionItemAria">
         <source xml:lang="en">{0}, updated {1}</source>
         <target>{0}, оновлено {1}</target>
+      </trans-unit>
+      <trans-unit id="sessionItemWorkspaceAria">
+        <source xml:lang="en">{0}, in {1}</source>
+        <target>{0}, у {1}</target>
       </trans-unit>
       <trans-unit id="sessionItemWorktreePendingAria">
         <source xml:lang="en">{0}, creating worktree, updated {1}</source>
@@ -932,10 +952,6 @@
       <trans-unit id="unknown">
         <source xml:lang="en">Unknown</source>
         <target>Невідомо</target>
-      </trans-unit>
-      <trans-unit id="working">
-        <source xml:lang="en">Working...</source>
-        <target>Працює...</target>
       </trans-unit>
     </body>
   </file>

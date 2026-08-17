@@ -98,6 +98,10 @@
         <source xml:lang="en">Hide Panel</source>
         <target>Сховати панель</target>
       </trans-unit>
+      <trans-unit id="hidePanel">
+        <source xml:lang="en">Hide Panel</source>
+        <target>Сховати панель</target>
+      </trans-unit>
       <trans-unit id="hideSecondarySideBar">
         <source xml:lang="en">Hide Secondary Side Bar</source>
         <target>Сховати вторинну бокову панель</target>
@@ -105,6 +109,10 @@
       <trans-unit id="openAndCloseSidebar">
         <source xml:lang="en">Open/Show and Close/Hide Sidebar</source>
         <target>Відкрити/Показати та Закрити/Сховати Бокову панель</target>
+      </trans-unit>
+      <trans-unit id="showPanel">
+        <source xml:lang="en">Show Panel</source>
+        <target>Показати панель</target>
       </trans-unit>
       <trans-unit id="showSecondarySideBar">
         <source xml:lang="en">Show Secondary Side Bar</source>
@@ -157,6 +165,30 @@
       <trans-unit id="renameChat.aria">
         <source xml:lang="en">Rename chat</source>
         <target>Перейменувати чат</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/browser/parts/chatGroupView" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="chatGroupAriaLabel">
+        <source xml:lang="en">Chat Group {0} of {1}</source>
+        <target>Група чату {0} з {1}</target>
+      </trans-unit>
+      <trans-unit id="chatGroupTabsAriaLabel">
+        <source xml:lang="en">Chats, Group {0} of {1}</source>
+        <target>Чати, Група {0} з {1}</target>
+      </trans-unit>
+      <trans-unit id="chatTabsAriaLabel">
+        <source xml:lang="en">Chats</source>
+        <target>Чати</target>
+      </trans-unit>
+      <trans-unit id="sessionReadOnlyBanner.archived">
+        <source xml:lang="en">Archived sessions are read-only.</source>
+        <target>Архівовані сесії доступні лише для читання.</target>
+      </trans-unit>
+      <trans-unit id="sessionReadOnlyBanner.message">
+        <source xml:lang="en">This chat is read-only</source>
+        <target>Цей чат доступний лише для читання.</target>
       </trans-unit>
     </body>
   </file>
@@ -456,6 +488,18 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/browser/parts/sessionConversationsActionViewItem" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="sessionConversationGroup.chats">
+        <source xml:lang="en">Chats</source>
+        <target>Чати</target>
+      </trans-unit>
+      <trans-unit id="sessionConversationGroup.subagents">
+        <source xml:lang="en">Subagents</source>
+        <target>Субагенти</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/browser/parts/sessionHeader" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="renameSession.aria">
@@ -468,19 +512,35 @@
     <body>
       <trans-unit id="sessionReadOnlyBanner.message">
         <source xml:lang="en">This chat is read-only</source>
-        <target>Цей чат тільки для читання</target>
+        <target>Цей чат доступний лише для читання.</target>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/sessions/browser/parts/sessionView" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/sessions/browser/sessionConversationGroups" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="sessionReadOnlyBanner.archived">
-        <source xml:lang="en">Archived sessions are read-only.</source>
-        <target>Архівовані сесії доступні лише для читання.</target>
+      <trans-unit id="sessionConversationStatus.ariaLabel">
+        <source xml:lang="en">State: {0}</source>
+        <target>Стан: {0}</target>
       </trans-unit>
-      <trans-unit id="sessionReadOnlyBanner.message">
-        <source xml:lang="en">This chat is read-only</source>
-        <target>Цей чат тільки для читання</target>
+      <trans-unit id="sessionConversationStatus.completed">
+        <source xml:lang="en">Completed</source>
+        <target>Завершено</target>
+      </trans-unit>
+      <trans-unit id="sessionConversationStatus.failed">
+        <source xml:lang="en">Failed</source>
+        <target>Не вдалося</target>
+      </trans-unit>
+      <trans-unit id="sessionConversationStatus.inProgress">
+        <source xml:lang="en">In Progress</source>
+        <target>В процесі</target>
+      </trans-unit>
+      <trans-unit id="sessionConversationStatus.needsInput">
+        <source xml:lang="en">Input Needed</source>
+        <target>Введення необхідне</target>
+      </trans-unit>
+      <trans-unit id="sessionConversationStatus.new">
+        <source xml:lang="en">New</source>
+        <target>Новий</target>
       </trans-unit>
     </body>
   </file>
@@ -527,10 +587,6 @@
   </file>
   <file original="src/vs/sessions/browser/sessionsSignInDialog" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="sessions.cancelSignIn">
-        <source xml:lang="en">Cancel Sign-In</source>
-        <target>Скасувати вхід</target>
-      </trans-unit>
       <trans-unit id="sessions.returnToVSCodeEditor">
         <source xml:lang="en">Return to VS Code Editor</source>
         <target>Повернутися до редактора VS Code</target>
@@ -652,8 +708,8 @@
         <target>Чи більше ніж одна сесія видима в сітці частини сесій</target>
       </trans-unit>
       <trans-unit id="sessionActiveChatHasSubagents">
-        <source xml:lang="en">Whether the session view's currently-active chat has spawned subagent (tool-origin) chats, which are listed as a separate group in the Conversations menu</source>
-        <target>Чи активний чат у вигляді сесії породив чати субагента (походження інструменту), які відображаються як окрема група в меню Розмови</target>
+        <source xml:lang="en">Whether the active chat has subagents, which are shown in the Chats dropdown</source>
+        <target>Чи має активний чат підагентів, які відображаються у випадаючому списку Чати</target>
       </trans-unit>
       <trans-unit id="sessionActiveChatIsClosable">
         <source xml:lang="en">Whether the session's active chat can be closed (hidden) from the tab strip, i.e. it is not the main chat. Includes read-only subagent chats. Used to scope the close-chat keybinding so it closes the tab instead of the session</source>
@@ -688,8 +744,8 @@
         <target>Чи посилається сесія в режимі перегляду принаймні на одну проблему GitHub</target>
       </trans-unit>
       <trans-unit id="sessionHasMultipleCommittedChats">
-        <source xml:lang="en">Whether the session view's session has more than one committed (non-draft) chat, which drives the Conversations menu visibility</source>
-        <target>Чи має сесія в режимі перегляду більше ніж один підтверджений (не чернетковий) чат, що впливає на видимість меню "Розмови".</target>
+        <source xml:lang="en">Whether the session view's session has more than one committed (non-draft) chat, which drives the Chats dropdown visibility</source>
+        <target>Чи має сесія в режимі перегляду сесії більше ніж один підтверджений (не чернетковий) чат, що визначає видимість випадаючого списку Чатів</target>
       </trans-unit>
       <trans-unit id="sessionHasMultipleOpenChats">
         <source xml:lang="en">Whether the session view's session has more than one open chat (the tabs shown in the strip, including in-composer drafts). Used to scope chat-to-chat navigation (next/previous chat, the Ctrl+Tab chat switcher)</source>
@@ -706,6 +762,10 @@
       <trans-unit id="sessionId">
         <source xml:lang="en">The identifier of the session in scope (the active session globally, or a specific session within an isolated component such as the session view or a context menu overlay)</source>
         <target>Ідентифікатор сесії в контексті (активна сесія глобально або конкретна сесія в межах ізольованого компонента, такого як вигляд сесії або накладення контекстного меню)</target>
+      </trans-unit>
+      <trans-unit id="sessionIsActive">
+        <source xml:lang="en">Whether the session in scope is in progress or needs input</source>
+        <target>Чи сесія, що знаходиться в межах, триває, чи потребує внесення даних</target>
       </trans-unit>
       <trans-unit id="sessionIsArchived">
         <source xml:lang="en">Whether the session in scope is archived/marked as done (the active session globally, or a specific session within an isolated component such as the session view or a context menu overlay)</source>
@@ -798,6 +858,10 @@
       <trans-unit id="sessionsFocus">
         <source xml:lang="en">Whether the sessions part has keyboard focus</source>
         <target>Чи має частина сесій фокус клавіатури</target>
+      </trans-unit>
+      <trans-unit id="sessionsHasClosedItem">
+        <source xml:lang="en">Whether a chat or session was closed recently and can be reopened with the Reopen Closed Chat or Session command</source>
+        <target>Чи був чат або сесія закриті нещодавно і можуть бути повторно відкриті за допомогою команди Відкрити закритий чат або сесію</target>
       </trans-unit>
       <trans-unit id="sessionsIsPhoneLayout">
         <source xml:lang="en">Whether the current layout is the phone layout</source>
@@ -906,6 +970,14 @@
       <trans-unit id="agentsBadge.foreground">
         <source xml:lang="en">Foreground color of badges in the agent sessions window.</source>
         <target>Колір переднього плану значків у вікні сесій агентів.</target>
+      </trans-unit>
+      <trans-unit id="agentsBottomPanel.border">
+        <source xml:lang="en">Border color of the bottom panel in the agent sessions window.</source>
+        <target>Колір рамки нижньої панелі у вікні сесій агента.</target>
+      </trans-unit>
+      <trans-unit id="agentsCard.border">
+        <source xml:lang="en">Border color of the floating content card (sessions grid and custom view grid) in the agent sessions window.</source>
+        <target>Колір рамки плаваючої картки вмісту (сітка сесій та сітка користувацького вигляду) у вікні сесій агента.</target>
       </trans-unit>
       <trans-unit id="agentsChatInput.background">
         <source xml:lang="en">Background color of the chat input field in the agent sessions window.</source>
@@ -1021,6 +1093,14 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/services/sessions/browser/sessionsManagementService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="sessions.cancelCurrentRequest.loadFailed">
+        <source xml:lang="en">Failed to load chat session for cancellation.</source>
+        <target>Не вдалося завантажити сесію чату для скасування.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/services/sessions/browser/sessionsService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="sessionsService.trustFolderMessage">
@@ -1039,6 +1119,18 @@
         <source xml:lang="en">New Session</source>
         <target>Нова сесія</target>
       </trans-unit>
+      <trans-unit id="failed">
+        <source xml:lang="en">Failed</source>
+        <target>Не вдалося</target>
+      </trans-unit>
+      <trans-unit id="needsInput">
+        <source xml:lang="en">Input needed</source>
+        <target>Введення необхідне</target>
+      </trans-unit>
+      <trans-unit id="sessionWorkspaceGroup.github">
+        <source xml:lang="en">GitHub</source>
+        <target>GitHub</target>
+      </trans-unit>
       <trans-unit id="sessionWorkspaceGroup.local">
         <source xml:lang="en">Local</source>
         <target>Локальний</target>
@@ -1046,6 +1138,10 @@
       <trans-unit id="sessionWorkspaceGroup.remote">
         <source xml:lang="en">Remote</source>
         <target>Віддалений</target>
+      </trans-unit>
+      <trans-unit id="working">
+        <source xml:lang="en">Working...</source>
+        <target>Працює...</target>
       </trans-unit>
     </body>
   </file>
