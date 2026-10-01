@@ -2,9 +2,9 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file original="src/vs/workbench/contrib/userDataSync/browser/userDataSync" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="accept failed">
-        <source xml:lang="en">Error while accepting changes. Please check [logs]({0}) for more details.</source>
-        <target>Помилка під час прийняття змін. Будь ласка, перевірте [логи]({0}) для отримання додаткової інформації.</target>
+      <trans-unit id="accept failed linked">
+        <source xml:lang="en">Error while accepting changes. Please check {0} for more details.</source>
+        <target>Помилка під час прийняття змін. Будь ласка, перевірте {0} для отримання додаткової інформації.</target>
       </trans-unit>
       <trans-unit id="auth failed">
         <source xml:lang="en">Error while turning on Settings Sync: Authentication failed.</source>
@@ -202,6 +202,14 @@
         <source xml:lang="en">Show Settings</source>
         <target>Показати налаштування</target>
       </trans-unit>
+      <trans-unit id="syncDocumentationLink">
+        <source xml:lang="en">Settings Sync Documentation</source>
+        <target>Документація синхронізації налаштувань</target>
+      </trans-unit>
+      <trans-unit id="syncLogLink">
+        <source xml:lang="en">logs</source>
+        <target>журнали</target>
+      </trans-unit>
       <trans-unit id="synced with time">
         <source xml:lang="en">synced {0}</source>
         <target>синхронізовано {0}</target>
@@ -227,9 +235,9 @@
         <note>&amp;&amp; denotes a mnemonic</note>
         <target>&amp;&amp;Вимкнути</target>
       </trans-unit>
-      <trans-unit id="turn off failed">
-        <source xml:lang="en">Error while turning off Settings Sync. Please check [logs]({0}) for more details.</source>
-        <target>Помилка під час вимкнення синхронізації налаштувань. Будь ласка, перевірте [журнали]({0}) для отримання додаткової інформації.</target>
+      <trans-unit id="turn off failed linked">
+        <source xml:lang="en">Error while turning off Settings Sync. Please check {0} for more details.</source>
+        <target>Помилка під час вимкнення синхронізації налаштувань. Будь ласка, перевірте {0} для отримання додаткової інформації.</target>
       </trans-unit>
       <trans-unit id="turn off sync confirmation">
         <source xml:lang="en">Do you want to turn off sync?</source>
@@ -248,9 +256,9 @@
         <note>Substitution is for error reason</note>
         <target>Помилка під час увімкнення синхронізації налаштувань. {0}</target>
       </trans-unit>
-      <trans-unit id="turn on failed with user data sync error">
-        <source xml:lang="en">Error while turning on Settings Sync. Please check [logs]({0}) for more details.</source>
-        <target>Помилка під час увімкнення синхронізації налаштувань. Будь ласка, перевірте [журнали]({0}) для отримання додаткової інформації.</target>
+      <trans-unit id="turn on failed with user data sync error linked">
+        <source xml:lang="en">Error while turning on Settings Sync. Please check {0} for more details.</source>
+        <target>Помилка під час увімкнення синхронізації налаштувань. Будь ласка, перевірте {0} для отримання додаткової інформації.</target>
       </trans-unit>
       <trans-unit id="turn on sync">
         <source xml:lang="en">Turn on Settings Sync...</source>
@@ -268,9 +276,9 @@
         <source xml:lang="en">Turning on Settings Sync...</source>
         <target>Увімкнення синхронізації налаштувань...</target>
       </trans-unit>
-      <trans-unit id="using separate service">
-        <source xml:lang="en">Settings sync now uses a separate service, more information is available in the [Settings Sync Documentation](https://aka.ms/vscode-settings-sync-help#_syncing-stable-versus-insiders).</source>
-        <target>Синхронізація налаштувань тепер використовує окремий сервіс, більше інформації доступно в [Документації з синхронізації налаштувань](https://aka.ms/vscode-settings-sync-help#_syncing-stable-versus-insiders).</target>
+      <trans-unit id="using separate service linked">
+        <source xml:lang="en">Settings sync now uses a separate service, more information is available in the {0}.</source>
+        <target>Синхронізація налаштувань тепер використовує окремий сервіс, більше інформації доступно в {0}.</target>
       </trans-unit>
       <trans-unit id="workbench.actions.syncData.reset">
         <source xml:lang="en">Clear Data in Cloud...</source>
@@ -477,6 +485,26 @@
       <trans-unit id="workbench.actions.sync.turnOffSyncOnMachine">
         <source xml:lang="en">Turn off Settings Sync</source>
         <target>Вимкнути синхронізацію налаштувань</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/userDataSync/electron-browser/userDataSync.contribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="Open Backup folder">
+        <source xml:lang="en">Open Local Backups Folder</source>
+        <target>Відкрити папку локальних резервних копій</target>
+      </trans-unit>
+      <trans-unit id="download sync activity complete">
+        <source xml:lang="en">Successfully downloaded Settings Sync activity.</source>
+        <target>Успішно завантажено активність синхронізації налаштувань.</target>
+      </trans-unit>
+      <trans-unit id="no backups">
+        <source xml:lang="en">Local backups folder does not exist</source>
+        <target>Тека локальних резервних копій не існує</target>
+      </trans-unit>
+      <trans-unit id="open">
+        <source xml:lang="en">Open Folder</source>
+        <target>Відкрити папку</target>
       </trans-unit>
     </body>
   </file>

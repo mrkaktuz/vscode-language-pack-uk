@@ -157,9 +157,13 @@
   </file>
   <file original="src/vs/editor/browser/widget/codeEditor/codeEditorWidget" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="cursors.maximum">
-        <source xml:lang="en">The number of cursors has been limited to {0}. Consider using [find and replace](https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace) for larger changes or increase the editor multi cursor limit setting.</source>
-        <target>Кількість курсорів обмежена до {0}. Розгляньте можливість використання [знайти та замінити](https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace) для більших змін або збільште налаштування обмеження кількох курсорів редактора.</target>
+      <trans-unit id="cursors.findAndReplaceLink">
+        <source xml:lang="en">find and replace</source>
+        <target>знайти та замінити</target>
+      </trans-unit>
+      <trans-unit id="cursors.maximumLinked">
+        <source xml:lang="en">The number of cursors has been limited to {0}. Consider using {1} for larger changes or increase the editor multi cursor limit setting.</source>
+        <target>Кількість курсорів обмежена до {0}. Розгляньте можливість використання {1} для більших змін або збільште налаштування обмеження на кількість курсорів у редакторі.</target>
       </trans-unit>
       <trans-unit id="goToSetting">
         <source xml:lang="en">Increase Multi Cursor Limit</source>
@@ -344,10 +348,6 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
         <source xml:lang="en">Show Moved Code Blocks</source>
         <target>Показати переміщені блоки коду</target>
       </trans-unit>
-      <trans-unit id="useInlineViewWhenSpaceIsLimited">
-        <source xml:lang="en">Use Inline View When Space Is Limited</source>
-        <target>Використовуйте вбудований вигляд, коли місця обмаль</target>
-      </trans-unit>
     </body>
   </file>
   <file original="src/vs/editor/browser/widget/diffEditor/features/hideUnchangedRegionsFeature" source-language="en" datatype="plaintext" target-language="uk">
@@ -355,6 +355,18 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <trans-unit id="diff.bottom">
         <source xml:lang="en">Click or drag to show more below</source>
         <target>Натисніть або перетягніть, щоб показати більше нижче</target>
+      </trans-unit>
+      <trans-unit id="diff.hiddenLines.breadcrumb">
+        <source xml:lang="en">Go to {0}</source>
+        <target>Перейдіть до {0}</target>
+      </trans-unit>
+      <trans-unit id="diff.hiddenLines.collapse">
+        <source xml:lang="en">Collapse unchanged lines</source>
+        <target>Згорнути незмінені рядки</target>
+      </trans-unit>
+      <trans-unit id="diff.hiddenLines.expand">
+        <source xml:lang="en">Show {0} hidden lines</source>
+        <target>Показати {0} прихованих рядків</target>
       </trans-unit>
       <trans-unit id="diff.hiddenLines.expandAll">
         <source xml:lang="en">Double click to unfold</source>
@@ -450,6 +462,18 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/editor/browser/widget/multiDiffEditor/diffEditorItemTemplate" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="binaryFileChanged">
+        <source xml:lang="en">Binary file changed</source>
+        <target>Бінарний файл змінено</target>
+      </trans-unit>
+      <trans-unit id="openBinaryDiff">
+        <source xml:lang="en">Open Diff</source>
+        <target>Відкрити різницю</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/editor/browser/widget/multiDiffEditor/multiDiffEditorWidgetImpl" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="loading">
@@ -523,6 +547,10 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <trans-unit id="editorConfigurationTitle">
         <source xml:lang="en">Editor</source>
         <target>Редактор</target>
+      </trans-unit>
+      <trans-unit id="hideOriginalLineNumbers">
+        <source xml:lang="en">Controls whether original line numbers are hidden in inline diffs. When set to null, uses the editor's default: hidden in compact multi diff editors and visible in other diff editors.</source>
+        <target>Контролює, чи приховані оригінальні номери рядків в інтерактивних відмінностях. Коли встановлено в null, використовується значення за замовчуванням редактора: приховані в компактних редакторах багатократних відмінностей і видимі в інших редакторах відмінностей.</target>
       </trans-unit>
       <trans-unit id="hideUnchangedRegions.contextLineCount">
         <source xml:lang="en">Controls how many lines are used as context when comparing unchanged regions.</source>
@@ -1476,6 +1504,18 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
         <source xml:lang="en">Controls whether the editor should automatically format the line after typing.</source>
         <target>Контролює, чи повинен редактор автоматично форматувати рядок після введення.</target>
       </trans-unit>
+      <trans-unit id="fullwidthCharacterWidth">
+        <source xml:lang="en">Controls the width used to render full-width characters.</source>
+        <target>Контролює ширину, що використовується для відображення символів повної ширини.</target>
+      </trans-unit>
+      <trans-unit id="fullwidthCharacterWidth.font">
+        <source xml:lang="en">Render full-width characters using the width defined by the font.</source>
+        <target>Відображайте символи повної ширини, використовуючи ширину, визначену шрифтом.</target>
+      </trans-unit>
+      <trans-unit id="fullwidthCharacterWidth.twoCells">
+        <source xml:lang="en">Render full-width characters centered in exactly two character cells. Only applies to monospace fonts. Does not apply to multi codepoint full-width characters or to GPU rendering. This has a performance impact on line rendering.</source>
+        <target>Відображати символи повної ширини, вирівняні по центру, точно в двох клітинках символів. Застосовується лише до моноширинних шрифтів. Не застосовується до багатокодових символів повної ширини або до рендерингу на GPU. Це впливає на продуктивність рендерингу рядків.</target>
+      </trans-unit>
       <trans-unit id="glyphMargin">
         <source xml:lang="en">Controls whether the editor should render the vertical glyph margin. Glyph margin is mostly used for debugging.</source>
         <target>Контролює, чи повинен редактор відображати вертикальний маргін гліфів. Маргін гліфів в основному використовується для налагодження.</target>
@@ -2064,6 +2104,22 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
         <source xml:lang="en">Whether subwords (like 'foo' in 'fooBar' or 'foo_bar') should be selected.</source>
         <target>Чи слід вибирати підслова (як 'foo' у 'fooBar' або 'foo_bar').</target>
       </trans-unit>
+      <trans-unit id="selectedTextMatchMode">
+        <source xml:lang="en">Controls how occurrences of selected text are matched when selecting the next, previous, or all occurrences and when highlighting selection matches. `caseSensitive` and `caseInsensitive` match substrings independently of the Find widget. An empty selection always starts a whole-word, case-sensitive search.</source>
+        <target>Контролює, як збігаються випадки вибраного тексту при виборі наступних, попередніх або всіх випадків та при підсвічуванні збігів вибору. `caseSensitive` та `caseInsensitive` збігаються з підрядками незалежно від віджета пошуку. Порожнє виділення завжди починає пошук за цілим словом з урахуванням регістру.</target>
+      </trans-unit>
+      <trans-unit id="selectedTextMatchMode.caseInsensitive">
+        <source xml:lang="en">Match occurrences case-insensitively and independently of the Find widget.</source>
+        <target>Збігати збіги без урахування регістру та незалежно від віджета Пошук.</target>
+      </trans-unit>
+      <trans-unit id="selectedTextMatchMode.caseSensitive">
+        <source xml:lang="en">Match occurrences case-sensitively and independently of the Find widget.</source>
+        <target>Збігати збіги з урахуванням регістру та незалежно від віджета Пошук.</target>
+      </trans-unit>
+      <trans-unit id="selectedTextMatchMode.findOptions">
+        <source xml:lang="en">Use the Find widget's match case and whole word settings.</source>
+        <target>Використовуйте налаштування чутливості до регістру та цілого слова від віджета пошуку.</target>
+      </trans-unit>
       <trans-unit id="selectionClipboard">
         <source xml:lang="en">Controls whether the Linux primary clipboard should be supported.</source>
         <target>Контролює, чи слід підтримувати основний буфер обміну Linux.</target>
@@ -2350,6 +2406,10 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
         <note>- `editor.wordWrap` refers to a different setting and should not be localized.&#xD;
 - 'wordWrapColumn' and 'bounded' refer to values the different setting can take and should not be localized.</note>
         <target>Контролює стовпець обгортання редактора, коли `#editor.wordWrap#` є `wordWrapColumn` або `bounded`.</target>
+      </trans-unit>
+      <trans-unit id="wordWrapIndicator">
+        <source xml:lang="en">Controls whether an indicator is rendered at the wrapping column of lines that wrap. Only has an effect when `#editor.wordWrap#` is enabled.</source>
+        <target>Контролює, чи індикатор відображається в обгортковій колонці рядків, які обгортаються. Має ефект лише тоді, коли увімкнено `#editor.wordWrap#`.</target>
       </trans-unit>
       <trans-unit id="wrapOnEscapedLineFeeds">
         <source xml:lang="en">Controls whether literal `\n` shall trigger a wordWrap when `#editor.wordWrap#` is enabled.
@@ -2647,6 +2707,10 @@ char* str="hello\n
         <source xml:lang="en">Color of whitespace characters in the editor.</source>
         <target>Колір пробільних символів в редакторі.</target>
       </trans-unit>
+      <trans-unit id="editorWordWrapIndicator">
+        <source xml:lang="en">Color of the indicator shown at the end of a soft wrapped line in the editor.</source>
+        <target>Колір індикатора, що відображається в кінці м'яко обгорнутого рядка в редакторі.</target>
+      </trans-unit>
       <trans-unit id="inactiveLineHighlight">
         <source xml:lang="en">Background color for the highlight of line at the cursor position when the editor is not focused.</source>
         <target>Колір фону для виділення рядка в позиції курсора, коли редактор не має фокусу.</target>
@@ -2711,6 +2775,10 @@ char* str="hello\n
         <source xml:lang="en">Whether a moved code block is selected for comparison</source>
         <target>Чи вибрано переміщений блок коду для порівняння</target>
       </trans-unit>
+      <trans-unit id="diffEditorAutomaticRenderSideBySide">
+        <source xml:lang="en">Whether automatic diff editor layout would render side by side</source>
+        <target>Чи буде автоматичне розташування редактора дифів відображатися поруч?</target>
+      </trans-unit>
       <trans-unit id="diffEditorHasChanges">
         <source xml:lang="en">Whether the diff editor has changes</source>
         <target>Чи має редактор відмінностей зміни</target>
@@ -2738,6 +2806,10 @@ char* str="hello\n
       <trans-unit id="diffEditorRenderSideBySideInlineBreakpointReached">
         <source xml:lang="en">Whether the diff editor render side by side inline breakpoint is reached</source>
         <target>Чи досягнуто візуалізації редактора відмінностей з боковим вбудованим зупинкою</target>
+      </trans-unit>
+      <trans-unit id="diffEditorTemporaryInlineMode">
+        <source xml:lang="en">Whether inline mode is temporarily active after manually resizing the diff editor</source>
+        <target>Чи активний режим вбудованого редагування тимчасово після ручного зміни розміру редактора порівняння?</target>
       </trans-unit>
       <trans-unit id="editorColumnSelection">
         <source xml:lang="en">Whether `editor.columnSelection` is enabled</source>

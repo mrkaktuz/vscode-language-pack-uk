@@ -26,37 +26,145 @@
         <source xml:lang="en">Your administrator restricts AI features to GitHub accounts in the following organizations: {0}.</source>
         <target>Ваш адміністратор обмежує функції ШІ для облікових записів GitHub у наступних організаціях: {0}.</target>
       </trans-unit>
-      <trans-unit id="managedSettingsUpdate.dialog.close">
+      <trans-unit id="managedSettingsRefresh.dialog.close">
         <source xml:lang="en">Close</source>
         <target>Закрити</target>
       </trans-unit>
-      <trans-unit id="managedSettingsUpdate.dialog.learnMore">
-        <source xml:lang="en">Learn More</source>
-        <target>Дізнатися більше</target>
+      <trans-unit id="managedSettingsRefresh.dialog.httpError">
+        <source xml:lang="en">AI features are unavailable because {0} could not refresh your organization's managed settings (HTTP {1}). Retry after checking your connection.</source>
+        <target>Функції ШІ недоступні, оскільки {0} не зміг оновити керовані налаштування вашої організації (HTTP {1}). Спробуйте ще раз після перевірки вашого з'єднання.</target>
       </trans-unit>
-      <trans-unit id="managedSettingsUpdate.dialog.title">
-        <source xml:lang="en">Update Required</source>
-        <target>Оновлення необхідне</target>
+      <trans-unit id="managedSettingsRefresh.dialog.invalidTitle">
+        <source xml:lang="en">Invalid Managed Settings</source>
+        <target>Недійсні керовані налаштування</target>
       </trans-unit>
-      <trans-unit id="managedSettingsUpdate.dialog.update">
-        <source xml:lang="en">Check for Updates</source>
-        <target>Перевірити оновлення</target>
+      <trans-unit id="managedSettingsRefresh.dialog.malformed">
+        <source xml:lang="en">AI features are unavailable because {0} received an invalid managed settings response. Retry or contact your administrator.</source>
+        <target>Функції ШІ недоступні, оскільки {0} отримав недійсну відповідь керованих налаштувань. Спробуйте ще раз або зв'яжіться з вашим адміністратором.</target>
       </trans-unit>
-      <trans-unit id="managedSettingsUpdate.notification">
-        <source xml:lang="en">Your version of {0} cannot enforce your organization's managed settings. Update {0} to continue using AI features.</source>
-        <target>Ваша версія {0} не може застосувати керовані налаштування вашої організації. Оновіть {0}, щоб продовжити використовувати функції ШІ.</target>
+      <trans-unit id="managedSettingsRefresh.dialog.network">
+        <source xml:lang="en">Your organization requires {0} to refresh managed settings whenever it starts or reloads.
+
+An error prevented the required policy from being retrieved, so AI features are unavailable. Retry, or contact your organization's administrator if the issue persists.</source>
+        <target>Ваша організація вимагає {0} для оновлення керованих налаштувань щоразу, коли вона запускається або перезавантажується.
+
+Помилка завадила отриманню необхідної політики, тому функції ШІ недоступні. Спробуйте ще раз або зверніться до адміністратора вашої організації, якщо проблема зберігається.</target>
       </trans-unit>
-      <trans-unit id="managedSettingsUpdate.notificationWithMinimumVersion">
-        <source xml:lang="en">Your version of {0} cannot enforce your organization's managed settings. Update {0} to version {1} or later to continue using AI features.</source>
-        <target>Ваша версія {0} не може забезпечити керовані налаштування вашої організації. Оновіть {0} до версії {1} або новішої, щоб продовжити використовувати функції ШІ.</target>
+      <trans-unit id="managedSettingsRefresh.dialog.noToken">
+        <source xml:lang="en">AI features are unavailable because {0} must refresh your organization's managed settings. Sign in to continue.</source>
+        <target>Функції ШІ недоступні, оскільки {0} повинен оновити керовані налаштування вашої організації. Увійдіть, щоб продовжити.</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsRefresh.dialog.noUrl">
+        <source xml:lang="en">AI features are unavailable because {0} cannot locate your organization's managed settings service. Contact your administrator.</source>
+        <target>Функції ШІ недоступні, оскільки {0} не може знайти службу керованих налаштувань вашої організації. Зв'яжіться з вашим адміністратором.</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsRefresh.dialog.rateLimited">
+        <source xml:lang="en">AI features are temporarily unavailable because your organization's managed settings service is rate limiting requests. Try again later.</source>
+        <target>Функції ШІ тимчасово недоступні, оскільки служба керованих налаштувань вашої організації обмежує кількість запитів. Спробуйте ще раз пізніше.</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsRefresh.dialog.retry">
+        <source xml:lang="en">Retry</source>
+        <target>Спробувати ще раз</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsRefresh.dialog.signIn">
+        <source xml:lang="en">Sign In</source>
+        <target>Увійти</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsRefresh.dialog.title">
+        <source xml:lang="en">Managed Settings Unavailable</source>
+        <target>Керовані налаштування недоступні</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsRefresh.notification.pending">
+        <source xml:lang="en">{0} is resolving your organization's policy. AI features will remain unavailable until this completes.</source>
+        <target>{0} вирішує політику вашої організації. Функції ШІ залишатимуться недоступними, поки це не завершиться.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/services/policies/browser/managedSettingsUpdate.contribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="managedSettingsUpdate.actionHelp">
+        <source xml:lang="en">The available update action is {0}.</source>
+        <target>Доступна дія оновлення - {0}.</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsUpdate.agentsHelp">
+        <source xml:lang="en">The Agents window is blocked by your organization's minimum-version requirement. The overlay explains the required update.</source>
+        <target>Вікно Агентів заблоковано вимогою мінімальної версії вашої організації. Накладка пояснює необхідне оновлення.</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsUpdate.availableActionsHelp">
+        <source xml:lang="en">Use Tab or Shift+Tab to move between available actions, then press Enter or Space to activate one.</source>
+        <target>Використовуйте Tab або Shift+Tab, щоб переміщатися між доступними діями, а потім натисніть Enter або Space, щоб активувати одну з них.</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsUpdate.bannerHelp">
+        <source xml:lang="en">The window banner is also available with the Focus Banner command. In the banner, use the arrow keys to reach its actions. Closing the banner does not dismiss the explanation in Chat or change your organization's requirement.</source>
+        <target>Віконний банер також доступний з командою Focus Banner. У банері використовуйте клавіші зі стрілками, щоб дістатися до його дій. Закриття банера не скасовує пояснення в Chat і не змінює вимоги вашої організації.</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsUpdate.bannerWithStatus">
+        <source xml:lang="en">{0} {1}</source>
+        <target>{0} {1}</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsUpdate.editorWindowHelp">
+        <source xml:lang="en">Use Tab or Shift+Tab to reach Open Editor Window, then press Enter or Space. This opens a new editor window.</source>
+        <target>Використовуйте Tab або Shift+Tab, щоб досягти Вікна відкриття редактора, потім натисніть Enter або Space. Це відкриває нове вікно редактора.</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsUpdate.help">
+        <source xml:lang="en">Chat is read-only while this requirement is active.</source>
+        <target>Чат доступний лише для читання, поки ця вимога активна.</target>
       </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/services/policies/common/accountPolicyService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="chatAccountPolicyGateActive">
-        <source xml:lang="en">True when account or managed-settings compatibility policy prevents this client from using AI features.</source>
-        <target>Істинно, коли політика сумісності облікового запису або керованих налаштувань заважає цьому клієнту використовувати функції ШІ.</target>
+        <source xml:lang="en">True when account policy or managed-settings enforcement prevents this client from using AI features.</source>
+        <target>Істинно, коли політика облікового запису або примус управлінських налаштувань заважає цьому клієнту використовувати функції ШІ.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/services/policies/common/managedSettingsUpdate" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="managedSettingsUpdate.check">
+        <source xml:lang="en">Check for Updates</source>
+        <target>Перевірити оновлення</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsUpdate.disabled">
+        <source xml:lang="en">Built-in updates are disabled by your organization. Contact your administrator for an approved update.</source>
+        <target>Вбудовані оновлення вимкнені вашою організацією. Зверніться до свого адміністратора для отримання затвердженого оновлення.</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsUpdate.download">
+        <source xml:lang="en">Download Update</source>
+        <target>Завантажити оновлення</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsUpdate.initializing">
+        <source xml:lang="en">Update availability is not yet known.</source>
+        <target>Оновлення доступності ще не відомо.</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsUpdate.install">
+        <source xml:lang="en">Install Update</source>
+        <target>Встановити оновлення</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsUpdate.installed">
+        <source xml:lang="en">Installed: {0}</source>
+        <target>Встановлено: {0}</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsUpdate.message">
+        <source xml:lang="en">Your organization requires an update to {0} to use AI features.</source>
+        <target>Вашій організації потрібне оновлення до {0}, щоб використовувати функції ШІ.</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsUpdate.minimumVersion">
+        <source xml:lang="en">Your organization requires {0} {1} or later to use AI features.</source>
+        <target>Вашій організації потрібен {0} {1} або новіший, щоб використовувати функції ШІ.</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsUpdate.progress">
+        <source xml:lang="en">An update operation is in progress.</source>
+        <target>Операція оновлення виконується.</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsUpdate.restart">
+        <source xml:lang="en">Restart to Update</source>
+        <target>Перезавантажте для оновлення</target>
+      </trans-unit>
+      <trans-unit id="managedSettingsUpdate.title">
+        <source xml:lang="en">Update required by your organization</source>
+        <target>Оновлення, яке вимагає ваша організація</target>
       </trans-unit>
     </body>
   </file>

@@ -2,6 +2,7 @@
 All notable changes to the "vscode-language-pack-uk" language pack will be documented in this file.
 
 ## [Released]
+* October 1, 2026 - Release for VS Code 1.141.0
 * August 24, 2026 - Release for VS Code 1.135.0
 * August 17, 2026 - Release for VS Code 1.134.0
 * August 10, 2026 - Release for VS Code 1.133.0

@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/sessions/contrib/remoteSessions/browser/getRemoteSessionTool" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="remoteInspection.description">
+        <source xml:lang="en">Inspect a remote session's state and latest response</source>
+        <target>Перевірте стан віддаленої сесії та останню відповідь</target>
+      </trans-unit>
+      <trans-unit id="remoteInspection.displayName">
+        <source xml:lang="en">Get Remote Session</source>
+        <target>Отримати віддалену сесію</target>
+      </trans-unit>
+      <trans-unit id="remoteInspection.invocation">
+        <source xml:lang="en">Reading remote session</source>
+        <target>Читання віддаленої сесії</target>
+      </trans-unit>
+      <trans-unit id="remoteInspection.past">
+        <source xml:lang="en">Read remote session</source>
+        <target>Читати віддалену сесію</target>
+      </trans-unit>
+      <trans-unit id="remoteInspection.result">
+        <source xml:lang="en">Remote session on {0}</source>
+        <target>Віддалена сесія на {0}</target>
+      </trans-unit>
+      <trans-unit id="remoteInspection.unavailable">
+        <source xml:lang="en">: Unavailable. {0}</source>
+        <target>Недоступно. {0}</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/remoteSessions/browser/remoteSessionChatService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="remoteSessionChat.disconnected">
+        <source xml:lang="en">The agent host for the background chat is no longer connected.</source>
+        <target>Агент-хост для фонового чату більше не підключений.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessionChat.unavailable">
+        <source xml:lang="en">Unable to load the background chat for remote session tools.</source>
+        <target>Неможливо завантажити фоновий чат для інструментів віддаленої сесії.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessionChat.unsupported">
+        <source xml:lang="en">This chat cannot prepare client tools for background messages.</source>
+        <target>Цей чат не може підготувати клієнтські інструменти для фонових повідомлень.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/remoteSessions/browser/remoteSessionInspector" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="remoteInspection.chatChanged">
+        <source xml:lang="en">The target chat identity changed during inspection.</source>
+        <target>Ідентичність цільового чату змінилася під час перевірки.</target>
+      </trans-unit>
+      <trans-unit id="remoteInspection.connectionChanged">
+        <source xml:lang="en">The remote agent host disconnected or its connection changed during inspection.</source>
+        <target>Віддалений агент-хост відключився або його з'єднання змінилося під час перевірки.</target>
+      </trans-unit>
+      <trans-unit id="remoteInspection.disabled">
+        <source xml:lang="en">Remote session tools are disabled.</source>
+        <target>Інструменти віддаленого сеансу вимкнено.</target>
+      </trans-unit>
+      <trans-unit id="remoteInspection.missingChat">
+        <source xml:lang="en">The exact target chat no longer exists on its agent host.</source>
+        <target>Точний цільовий чат більше не існує на його агентському хості.</target>
+      </trans-unit>
+      <trans-unit id="remoteInspection.offline">
+        <source xml:lang="en">The agent host is {0}. Inspection does not reconnect it.</source>
+        <target>Агент-хост - {0}. Інспекція не перепідключає його.</target>
+      </trans-unit>
+      <trans-unit id="remoteInspection.timeout">
+        <source xml:lang="en">Timed out reading the remote session's state.</source>
+        <target>Час вичерпано під час читання стану віддаленої сесії.</target>
+      </trans-unit>
+      <trans-unit id="remoteInspection.unknownHost">
+        <source xml:lang="en">Use a session or chat on a remote agent host registered in this Agents window.</source>
+        <target>Використовуйте сеанс або чат на віддаленому агентському хості, зареєстрованому в цьому вікні Агентів.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/remoteSessions/browser/remoteSessionMessageRouter" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="remoteMessage.acknowledgementTimeout">
+        <source xml:lang="en">Timed out waiting for remote message acknowledgement.</source>
+        <target>Час вичерпано, очікуючи підтвердження віддаленого повідомлення.</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.changedRetry">
+        <source xml:lang="en">A remote message request cannot be retried with different arguments.</source>
+        <target>Запит на віддалене повідомлення не може бути повторно виконаний з іншими аргументами.</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.chatChanged">
+        <source xml:lang="en">The target chat identity changed while preparing the message.</source>
+        <target>Цільова ідентичність чату змінилася під час підготовки повідомлення.</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.connectionChanged">
+        <source xml:lang="en">The agent host connection changed. The message was not sent on the replacement connection.</source>
+        <target>З'єднання з агентом змінилося. Повідомлення не було надіслано через нове з'єднання.</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.disabled">
+        <source xml:lang="en">Remote session tools are disabled.</source>
+        <target>Інструменти віддалених сесій вимкнено.</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.invalidInput">
+        <source xml:lang="en">Provide a session reference and a non-empty message of at most {0} characters.</source>
+        <target>Надайте посилання на сесію та непорожнє повідомлення не більше {0} символів.</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.limit">
+        <source xml:lang="en">Remote message limit reached ({0} requests per window).</source>
+        <target>Досягнуто ліміту віддалених повідомлень ({0} запитів за вікно).</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.missingChat">
+        <source xml:lang="en">The exact target chat no longer exists on its agent host.</source>
+        <target>Точний цільовий чат більше не існує на його агентському хості.</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.noOrigin">
+        <source xml:lang="en">This session has no saved remote-session origin.</source>
+        <target>Ця сесія не має збереженого походження віддаленої сесії.</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.preparationTimeout">
+        <source xml:lang="en">Timed out preparing the remote message.</source>
+        <target>Час вичерпано під час підготовки віддаленого повідомлення.</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.readOnly">
+        <source xml:lang="en">The target chat is archived or read-only.</source>
+        <target>Цільовий чат заархівовано або доступний лише для читання.</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.self">
+        <source xml:lang="en">A chat cannot send a remote message to itself.</source>
+        <target>Чат не може надіслати віддалене повідомлення самому собі.</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.unconfirmed">
+        <source xml:lang="en">Remote message delivery was not confirmed. It may already be queued; do not retry automatically. {0}</source>
+        <target>Доставку віддаленого повідомлення не підтверджено. Можливо, воно вже в черзі; не намагайтеся повторно автоматично. {0}</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.unknownWorkspace">
+        <source xml:lang="en">The target session's working directories are unavailable. Open the session before sending a remote message.</source>
+        <target>Робочі каталоги цільової сесії недоступні. Відкрийте сесію перед відправкою віддаленого повідомлення.</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.unregisteredProvider">
+        <source xml:lang="en">The agent host provider for {0} is not registered and connected in this Agents window.</source>
+        <target>Провайдер хоста агента для {0} не зареєстрований та не підключений у цьому вікні Агенти.</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.untrustedWorkspace">
+        <source xml:lang="en">The target session's workspace is not trusted. Trust it before sending a remote message.</source>
+        <target>Робоча область цільової сесії не є довіреною. Довірте її перед відправкою віддаленого повідомлення.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/remoteSessions/browser/remoteSessionService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="remoteSessions.changedRetry">
+        <source xml:lang="en">A remote session creation request cannot be retried with different arguments.</source>
+        <target>Запит на створення віддаленої сесії не може бути повторно виконаний з іншими аргументами.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.connectionChanged">
+        <source xml:lang="en">Remote agent host {0} connection changed during session creation.</source>
+        <target>З'єднання віддаленого агента {0} змінилося під час створення сесії.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.connectionUnavailable">
+        <source xml:lang="en">The host connection is not available.</source>
+        <target>З'єднання з хостом недоступне.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.creationLimit">
+        <source xml:lang="en">Remote session creation limit reached ({0} requests per window).</source>
+        <target>Досягнуто ліміту створення віддалених сесій ({0} запитів на вікно).</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.creationUnconfirmed">
+        <source xml:lang="en">Remote session creation ended without a committed session. Do not retry automatically.</source>
+        <target>Створення віддаленої сесії завершилося без підтвердженої сесії. Не намагайтеся повторити автоматично.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.dedicatedHost">
+        <source xml:lang="en">This host is dedicated to an existing session.</source>
+        <target>Цей хост призначений для існуючої сесії.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.disabled">
+        <source xml:lang="en">Remote session tools are disabled.</source>
+        <target>Інструменти віддаленої сесії вимкнені.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.hostNoLongerMatches">
+        <source xml:lang="en">Remote agent host {0} no longer matches this request. {1}</source>
+        <target>Віддалений агент-хост {0} більше не відповідає цьому запиту. {1}</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.noMatchingHost">
+        <source xml:lang="en">No connected remote agent host matches this request. {0}</source>
+        <target>Не знайдено жодного підключеного хоста віддаленого агента, який відповідає цьому запиту. {0}</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.recursionLimit">
+        <source xml:lang="en">Remote session recursion limit reached (maximum depth {0}).</source>
+        <target>Досягнуто межі рекурсії віддаленої сесії (максимальна глибина {0}).</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.unsupportedWorkspace">
+        <source xml:lang="en">No agent supports the requested workspace and isolation with an available model or Auto fallback.</source>
+        <target>Жоден агент не підтримує запитуване робоче середовище та ізоляцію з доступною моделлю або автоматичним резервуванням.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.workloadLost">
+        <source xml:lang="en">Remote agent host {0} no longer reports its workload.</source>
+        <target>Віддалений агент-хост {0} більше не повідомляє про своє навантаження.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.workspaceChanged">
+        <source xml:lang="en">Remote agent host {0} workspace changed during session creation.</source>
+        <target>Віддалений агент хосту {0} робоча область змінилася під час створення сесії.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.workspaceHostMismatch">
+        <source xml:lang="en">The workspace belongs to a different host.</source>
+        <target>Робоча область належить іншому хосту.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.workspaceInspectionFailed">
+        <source xml:lang="en">Workspace inspection failed: {0}</source>
+        <target>Перевірка робочого простору не вдалася: {0}</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.workspaceNotDirectory">
+        <source xml:lang="en">The workspace is not a directory.</source>
+        <target>Робоча область не є каталогом.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.workspaceNotTrusted">
+        <source xml:lang="en">The workspace is not trusted. Trust it before starting an unattended session.</source>
+        <target>Робоча область не є довіреною. Довірте її перед початком сеансу без нагляду.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.workspaceRequired">
+        <source xml:lang="en">The host does not support workspace-less sessions.</source>
+        <target>Хост не підтримує сесії без робочого простору.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/remoteSessions/browser/remoteSessionSource" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="remoteMessage.invalidLink">
+        <source xml:lang="en">The remote session link is invalid.</source>
+        <target>Посилання на віддалену сесію недійсне.</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.offline">
+        <source xml:lang="en">The agent host for {0} is not registered and connected in this Agents window.</source>
+        <target>Агент-хост для {0} не зареєстрований і не підключений у цьому вікні Агентів.</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.sourceChanged">
+        <source xml:lang="en">The originating chat or agent host connection changed.</source>
+        <target>З'єднання вихідного чату або агента змінилося.</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.sourceChatMissing">
+        <source xml:lang="en">The exact originating chat no longer exists on its agent host.</source>
+        <target>Точний вихідний чат більше не існує на його агентському хості.</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.sourceTimeout">
+        <source xml:lang="en">Timed out reading the originating session's state.</source>
+        <target>Час вичерпано при читанні стану вихідної сесії.</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.unknownChat">
+        <source xml:lang="en">The exact session or chat is no longer available: {0}</source>
+        <target>Точна сесія або чат більше недоступні: {0}</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.unqualifiedReference">
+        <source xml:lang="en">Use an exact host-qualified session or chat reference returned by the remote session tools.</source>
+        <target>Використовуйте точну сесійний або чат-референс, кваліфікований хостом, повернутий інструментами віддаленої сесії.</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.unsupportedSource">
+        <source xml:lang="en">Remote delegation requires an originating chat on an Agent Host. Other chat providers are not supported.</source>
+        <target>Віддалена делегація вимагає початкового чату на хостингу агента. Інші постачальники чатів не підтримуються.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/remoteSessions/browser/remoteSessionTools" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="remoteSessions.create.automaticHost">
+        <source xml:lang="en">a matching remote host</source>
+        <target>відповідний віддалений хост</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.create.baseBranch">
+        <source xml:lang="en">Worktree base branch: {0}</source>
+        <target>Гілка бази робочого дерева: {0}</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.create.confirmation">
+        <source xml:lang="en">Start this task on {0}? The host is selected from your connected remote agent hosts using the requested resources and current workload. The new session can send messages back to this chat.</source>
+        <target>Почати це завдання на {0}? Хост обирається з ваших підключених віддалених агентів, використовуючи запитані ресурси та поточне навантаження. Нова сесія може надсилати повідомлення назад у цей чат.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.create.confirmationTitle">
+        <source xml:lang="en">Create Remote Session?</source>
+        <target>Створити віддалену сесію?</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.create.description">
+        <source xml:lang="en">Delegate work to a matching remote agent host</source>
+        <target>Делегуйте роботу відповідному хосту віддаленого агента.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.create.displayName">
+        <source xml:lang="en">Create Remote Session</source>
+        <target>Створити віддалену сесію</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.create.invocation">
+        <source xml:lang="en">Creating remote session</source>
+        <target>Створення віддаленої сесії</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.create.missingContext">
+        <source xml:lang="en">Remote session creation requires an originating session.</source>
+        <target>Створення віддаленої сесії вимагає початкової сесії.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.create.model">
+        <source xml:lang="en">Model: {0}/{1}</source>
+        <target>Модель: {0}/{1}</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.create.noWorkspace">
+        <source xml:lang="en">No workspace or files are inherited from this session.</source>
+        <target>Жоден робочий простір або файли не успадковані з цієї сесії.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.create.past">
+        <source xml:lang="en">Created remote session</source>
+        <target>Створено віддалену сесію</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.create.requirements">
+        <source xml:lang="en">Requirements: {0}</source>
+        <target>Вимоги: {0}</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.create.result">
+        <source xml:lang="en">Created remote session on {0}</source>
+        <target>Створено віддалену сесію на {0}</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.create.workspace">
+        <source xml:lang="en">Workspace: {0} ({1})</source>
+        <target>Робоча область: {0} ({1})</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.list.description">
+        <source xml:lang="en">List connected remote agent hosts and their resources</source>
+        <target>Список підключених віддалених агентів та їхніх ресурсів</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.list.displayName">
+        <source xml:lang="en">List Agent Hosts</source>
+        <target>Список агентів хостів</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.list.invocation">
+        <source xml:lang="en">Reading remote agent hosts</source>
+        <target>Читання хостів віддаленого агента</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.list.past">
+        <source xml:lang="en">Read remote agent hosts</source>
+        <target>Читати хости віддаленого агента</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.list.result">
+        <source xml:lang="en">Listed {0} remote agent hosts</source>
+        <target>Перераховані {0} віддалені агенти хостів</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/remoteSessions/browser/remoteSessions.contribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="remoteSessions.tools.enabled">
+        <source xml:lang="en">Enable built-in tools to discover remote agent hosts, create and inspect remote sessions, and send messages between sessions in the Agents window. Requires {0}. Disabling this setting does not disconnect hosts or stop sessions already running.</source>
+        <target>Увімкніть вбудовані інструменти для виявлення хостів віддалених агентів, створення та перевірки віддалених сесій, а також надсилання повідомлень між сесіями у вікні Агентів. Потрібно {0}. Вимкнення цього налаштування не відключає хости та не зупиняє вже запущені сесії.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/remoteSessions/browser/sendRemoteMessageTool" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="remoteMessage.confirmation">
+        <source xml:lang="en">Send this message to {0} on {1}? It will use the target chat's existing permissions and queue behind any active or pending turns.</source>
+        <target>Відправити це повідомлення до {0} на {1}? Воно використовуватиме існуючі дозволи цільового чату та стане в чергу за будь-якими активними або очікуючими ходами.</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.confirmationTitle">
+        <source xml:lang="en">Send Remote Message</source>
+        <target>Надіслати віддалене повідомлення</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.description">
+        <source xml:lang="en">Send a message to a session on a connected agent host</source>
+        <target>Надішліть повідомлення на сесію на підключеному хосту агента</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.displayName">
+        <source xml:lang="en">Send Remote Message</source>
+        <target>Відправити віддалене повідомлення</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.invocation">
+        <source xml:lang="en">Sending a remote message</source>
+        <target>Відправка віддаленого повідомлення</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.missingContext">
+        <source xml:lang="en">Remote messaging requires an originating chat.</source>
+        <target>Віддалене повідомлення вимагає вихідного чату.</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.past">
+        <source xml:lang="en">Processed a remote message</source>
+        <target>Оброблено віддалене повідомлення</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.queued">
+        <source xml:lang="en">Queued a message on {0}</source>
+        <target>Ставлено повідомлення в чергу на {0}</target>
+      </trans-unit>
+      <trans-unit id="remoteMessage.sent">
+        <source xml:lang="en">Sent a message on {0}</source>
+        <target>Надіслано повідомлення на {0}</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/remoteSessions/common/remoteSessionInspection" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="remoteInspection.invalidInput">
+        <source xml:lang="en">Provide an exact session or chat reference returned by the remote session tools.</source>
+        <target>Надайте точну сесію або посилання на чат, яке повертається інструментами віддаленої сесії.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/remoteSessions/common/remoteSessions" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="remoteSessions.branchRequiresWorktree">
+        <source xml:lang="en">{0} requires {1} isolation; an existing checkout is never switched to another branch.</source>
+        <target>{0} вимагає {1} ізоляції; існуючий чекаут ніколи не переключається на іншу гілку.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.capabilitiesPending">
+        <source xml:lang="en">Host capabilities have not been received yet. Wait for host discovery to finish before creating a remote session.</source>
+        <target>Можливості хоста ще не були отримані. Зачекайте, поки завершиться виявлення хоста, перед створенням віддаленої сесії.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.cpuCountUnknown">
+        <source xml:lang="en">Required {0} logical CPUs; host reports unknown.</source>
+        <target>Необхідно {0} логічних ЦП; хост повідомляє невідомо.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.delegationUnsupported">
+        <source xml:lang="en">Host does not support remote session delegation. Update the agent host.</source>
+        <target>Хост не підтримує делегування віддалених сесій. Оновіть хост агента.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.hostIdMismatch">
+        <source xml:lang="en">Host ID does not match.</source>
+        <target>ID хоста не збігається.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.hostNotConnected">
+        <source xml:lang="en">Host is {0}. Establish a connection before creating a remote session; its capabilities are not available yet.</source>
+        <target>Хост є {0}. Встановіть з'єднання перед створенням віддаленої сесії; його можливості ще недоступні.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.insufficientCpuCount">
+        <source xml:lang="en">Required {0} logical CPUs; host reports {1}.</source>
+        <target>Необхідно {0} логічних ЦП; хост повідомляє {1}.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.insufficientMemory">
+        <source xml:lang="en">Required {0} GiB of memory; host reports {1} GiB.</source>
+        <target>Потрібно {0} GiB пам'яті; хост повідомляє {1} GiB.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.invalidInteger">
+        <source xml:lang="en">{0} must be a positive integer.</source>
+        <target>{0} повинен бути додатним цілим числом.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.invalidIsolation">
+        <source xml:lang="en">{0} must be {1} or {2}.</source>
+        <target>{0} повинен бути {1} або {2}.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.invalidNumber">
+        <source xml:lang="en">{0} must be a positive number.</source>
+        <target>{0} повинен бути додатним числом.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.invalidObject">
+        <source xml:lang="en">{0} must be an object.</source>
+        <target>{0} повинен бути об'єктом.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.invalidPlatform">
+        <source xml:lang="en">{0} must be {1}, {2}, or {3}.</source>
+        <target>{0} повинен бути {1}, {2} або {3}.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.invalidText">
+        <source xml:lang="en">{0} must be a non-empty string.</source>
+        <target>{0} повинен бути непорожнім рядком.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.invalidWorkspace">
+        <source xml:lang="en">{0} must identify an absolute folder using a file URI or a remote workspace URI from {1}.</source>
+        <target>{0} повинен вказати абсолютну папку, використовуючи URI файлу або URI віддаленого робочого простору з {1}.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.memoryUnknown">
+        <source xml:lang="en">Required {0} GiB of memory; host reports unknown.</source>
+        <target>Потрібно {0} GiB пам'яті; хост повідомляє невідомо.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.modelUnavailable">
+        <source xml:lang="en">Model {0}/{1} is not available.</source>
+        <target>Модель {0}/{1} недоступна.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.noAgents">
+        <source xml:lang="en">No usable agents have been advertised.</source>
+        <target>Не було оголошено жодних доступних агентів.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.platformMismatch">
+        <source xml:lang="en">Required platform {0}; host reports {1}.</source>
+        <target>Обов'язкова платформа {0}; звіти хоста {1}.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.platformUnknown">
+        <source xml:lang="en">Required platform {0}; host reports unknown.</source>
+        <target>Необхідна платформа {0}; хост звітує про невідоме.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.titleTooLong">
+        <source xml:lang="en">{0} must not exceed {1} characters.</source>
+        <target>{0} не повинен перевищувати {1} символів.</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.unknownProperty">
+        <source xml:lang="en">Unknown {0} property "{1}".</source>
+        <target>Невідома {0} властивість "{1}".</target>
+      </trans-unit>
+      <trans-unit id="remoteSessions.workloadUnavailable">
+        <source xml:lang="en">Running-session count is not available yet.</source>
+        <target>Кількість сесій запуску ще недоступна.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

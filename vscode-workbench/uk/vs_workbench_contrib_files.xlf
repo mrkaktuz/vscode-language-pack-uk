@@ -404,10 +404,6 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
         <source xml:lang="en">A file or folder name must be provided.</source>
         <target>Необхідно вказати ім'я файлу або папки.</target>
       </trans-unit>
-      <trans-unit id="fileDeleted">
-        <source xml:lang="en">The file(s) to paste have been deleted or moved since you copied them. {0}</source>
-        <target>Файл(и), які потрібно вставити, були видалені або переміщені з моменту їх копіювання. {0}</target>
-      </trans-unit>
       <trans-unit id="fileIsAncestor">
         <source xml:lang="en">File to paste is an ancestor of the destination folder</source>
         <target>Файл для вставки є предком папки призначення</target>
@@ -1015,8 +1011,8 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
         <target>Переглядач двійкових файлів</target>
       </trans-unit>
       <trans-unit id="candidateGuessEncodings">
-        <source xml:lang="en">List of character set encodings that the editor should attempt to guess in the order they are listed. In case it cannot be determined, {0} is respected</source>
-        <target>Список кодувань набору символів, які редактор повинен спробувати вгадати в порядку їх перерахування. У разі, якщо це не може бути визначено, {0} буде враховано.</target>
+        <source xml:lang="en">List of character set encodings that the editor should attempt to guess. If guessing fails for non-UTF-8 content, a legacy encoding is used only if it is the only lossless match among the candidates. If no encoding can be determined, {0} is respected.</source>
+        <target>Список кодувань набору символів, які редактор повинен спробувати вгадати. Якщо вгадування не вдається для вмісту, що не є UTF-8, спадкове кодування використовується лише в тому випадку, якщо це єдине безвтратне співпадіння серед кандидатів. Якщо жодне кодування не може бути визначено, {0} поважають.</target>
       </trans-unit>
       <trans-unit id="compressSingleChildFolders">
         <source xml:lang="en">Controls whether the Explorer should render folders in a compact form. In such a form, single child folders will be compressed in a combined tree element. Useful for Java package structures, for example.</source>
@@ -1689,6 +1685,30 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
       <trans-unit id="viewHasSomeCollapsibleItem">
         <source xml:lang="en">True when a workspace in the EXPLORER view has some collapsible root child.</source>
         <target>Істинно, коли робоча область у вигляді EXPLORER має деякі згортальні кореневі дочірні елементи.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/files/electron-browser/fileActions.contribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="filesCategory">
+        <source xml:lang="en">File</source>
+        <target>Файл</target>
+      </trans-unit>
+      <trans-unit id="miShare">
+        <source xml:lang="en">Share</source>
+        <target>Поділитися</target>
+      </trans-unit>
+      <trans-unit id="openContainer">
+        <source xml:lang="en">Open Containing Folder</source>
+        <target>Відкрити папку, що містить</target>
+      </trans-unit>
+      <trans-unit id="revealInMac">
+        <source xml:lang="en">Reveal in Finder</source>
+        <target>Відкрити в Finder</target>
+      </trans-unit>
+      <trans-unit id="revealInWindows">
+        <source xml:lang="en">Reveal in File Explorer</source>
+        <target>Відкрити в Провіднику файлів</target>
       </trans-unit>
     </body>
   </file>

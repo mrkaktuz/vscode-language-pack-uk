@@ -322,10 +322,6 @@
         <source xml:lang="en">Show server options for {0}</source>
         <target>Показати параметри сервера для {0}</target>
       </trans-unit>
-      <trans-unit id="mcp.servers">
-        <source xml:lang="en">MCP Servers</source>
-        <target>MCP Сервери</target>
-      </trans-unit>
       <trans-unit id="mcp.setOAuthClientSecret">
         <source xml:lang="en">Set OAuth Client Secret</source>
         <target>Встановити секретний ключ клієнта OAuth</target>
@@ -434,6 +430,10 @@
         <source xml:lang="en">Install MCP server {0}</source>
         <target>Встановіть сервер MCP {0}</target>
       </trans-unit>
+      <trans-unit id="mcp.agentHost.inputsUnsupported">
+        <source xml:lang="en">This server requires VS Code input variables. Add it to a VS Code configuration file instead of the current agent session.</source>
+        <target>Цей сервер вимагає вхідних змінних VS Code. Додайте їх до файлу конфігурації VS Code замість поточної сесії агента.</target>
+      </trans-unit>
       <trans-unit id="mcp.command.placeholder">
         <source xml:lang="en">Command to run (with optional arguments)</source>
         <target>Команда для виконання (з необов'язковими аргументами)</target>
@@ -445,6 +445,10 @@
       <trans-unit id="mcp.confirmPublish">
         <source xml:lang="en">Install {0}{1} from {2}?</source>
         <target>Встановити {0}{1} з {2}?</target>
+      </trans-unit>
+      <trans-unit id="mcp.copilotGlobal.added">
+        <source xml:lang="en">Added MCP server '{0}' to {1}. Set any referenced environment variables on the agent-host machine before starting a new Copilot session. VS Code input variables are not supported in this file.</source>
+        <target>Додано сервер MCP '{0}' до {1}. Встановіть будь-які згадані змінні середовища на машині хоста агента перед початком нової сесії Copilot. Змінні введення VS Code не підтримуються в цьому файлі.</target>
       </trans-unit>
       <trans-unit id="mcp.docker.placeholder">
         <source xml:lang="en">Image name (e.g., mcp/imagename)</source>
@@ -526,6 +530,10 @@
       <trans-unit id="mcp.nuget.title">
         <source xml:lang="en">Enter NuGet Package Name</source>
         <target>Введіть назву пакету NuGet</target>
+      </trans-unit>
+      <trans-unit id="mcp.package.loadFailed">
+        <source xml:lang="en">Unable to load MCP package details. Try again.</source>
+        <target>Не вдалося завантажити деталі пакета MCP. Спробуйте ще раз.</target>
       </trans-unit>
       <trans-unit id="mcp.pip.placeholder">
         <source xml:lang="en">Package name (e.g., package-name)</source>
@@ -619,9 +627,13 @@
         <source xml:lang="en">Add to Current Agent Session</source>
         <target>Додати до поточної сесії агента</target>
       </trans-unit>
-      <trans-unit id="mcp.target.local">
-        <source xml:lang="en">Install Server Locally...</source>
-        <target>Встановити сервер локально...</target>
+      <trans-unit id="mcp.target.copilotGlobal">
+        <source xml:lang="en">Copilot Global</source>
+        <target>Copilot Global</target>
+      </trans-unit>
+      <trans-unit id="mcp.target.global.placeholder">
+        <source xml:lang="en">Select the global configuration</source>
+        <target>Виберіть глобальну конфігурацію</target>
       </trans-unit>
       <trans-unit id="mcp.target.placeholder">
         <source xml:lang="en">Select the configuration target</source>
@@ -643,6 +655,14 @@
         <source xml:lang="en">Available in all workspaces, runs locally</source>
         <target>Доступно у всіх робочих просторах, працює локально</target>
       </trans-unit>
+      <trans-unit id="mcp.target.userConfigurationDeprecated">
+        <source xml:lang="en">User Configuration (deprecated)</source>
+        <target>Конфігурація користувача (застаріло)</target>
+      </trans-unit>
+      <trans-unit id="mcp.target.vscodeRequired">
+        <source xml:lang="en">This server requires VS Code configuration</source>
+        <target>Цей сервер вимагає налаштування VS Code</target>
+      </trans-unit>
       <trans-unit id="mcp.target.workspace">
         <source xml:lang="en">Workspace</source>
         <target>Робоча область</target>
@@ -655,6 +675,14 @@
         <source xml:lang="en">Available in this workspace, runs on {0}</source>
         <target>Доступно в цьому робочому просторі, працює на {0}</target>
       </trans-unit>
+      <trans-unit id="mcp.target.workspaceFolder">
+        <source xml:lang="en">Workspace Folder</source>
+        <target>Папка робочого простору</target>
+      </trans-unit>
+      <trans-unit id="mcp.target.workspaceFolderLabel">
+        <source xml:lang="en">Workspace ({0})</source>
+        <target>Робоча область ({0})</target>
+      </trans-unit>
       <trans-unit id="mcp.url.placeholder">
         <source xml:lang="en">URL of the MCP server (e.g., http://localhost:3000)</source>
         <target>URL сервера MCP (наприклад, http://localhost:3000)</target>
@@ -662,6 +690,50 @@
       <trans-unit id="mcp.url.title">
         <source xml:lang="en">Enter Server URL</source>
         <target>Введіть URL сервера</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/mcp/browser/mcpConfigurationDestination" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="mcp.config.add">
+        <source xml:lang="en">Add MCP Server to {0}</source>
+        <target>Додати MCP сервер до {0}</target>
+      </trans-unit>
+      <trans-unit id="mcp.config.add.placeholder">
+        <source xml:lang="en">Select the configuration file for the new server</source>
+        <target>Виберіть файл конфігурації для нового сервера</target>
+      </trans-unit>
+      <trans-unit id="mcp.config.invalidTarget">
+        <source xml:lang="en">Select a .mcp.json or .vscode/mcp.json file at the root of an open workspace folder.</source>
+        <target>Виберіть файл .mcp.json або .vscode/mcp.json у корені відкритої папки робочого простору.</target>
+      </trans-unit>
+      <trans-unit id="mcp.config.legacy">
+        <source xml:lang="en">VS Code workspace configuration</source>
+        <target>Конфігурація робочого простору VS Code</target>
+      </trans-unit>
+      <trans-unit id="mcp.config.legacy.deprecated">
+        <source xml:lang="en">Deprecated</source>
+        <target>Застарілий</target>
+      </trans-unit>
+      <trans-unit id="mcp.config.legacyRequired">
+        <source xml:lang="en">This server requires .vscode/mcp.json</source>
+        <target>Цей сервер вимагає .vscode/mcp.json</target>
+      </trans-unit>
+      <trans-unit id="mcp.config.open">
+        <source xml:lang="en">Open MCP Configuration in {0}</source>
+        <target>Відкрийте конфігурацію MCP у {0}</target>
+      </trans-unit>
+      <trans-unit id="mcp.config.open.placeholder">
+        <source xml:lang="en">Select the configuration file to open</source>
+        <target>Виберіть файл конфігурації для відкриття</target>
+      </trans-unit>
+      <trans-unit id="mcp.config.root">
+        <source xml:lang="en">Workspace root</source>
+        <target>Корінь робочого простору</target>
+      </trans-unit>
+      <trans-unit id="mcp.rootConfig.disabled">
+        <source xml:lang="en">Enable {0} to add servers to .mcp.json, or use .vscode/mcp.json.</source>
+        <target>Увімкніть {0}, щоб додати сервери до .mcp.json, або використовуйте .vscode/mcp.json.</target>
       </trans-unit>
     </body>
   </file>
@@ -1016,8 +1088,8 @@
         <target>Вимкніть цей MCP сервер лише в цьому робочому просторі.</target>
       </trans-unit>
       <trans-unit id="disableGlobally">
-        <source xml:lang="en">Disable</source>
-        <target>Вимкнути</target>
+        <source xml:lang="en">Disable (Globally)</source>
+        <target>Вимкнути (Глобально)</target>
       </trans-unit>
       <trans-unit id="disableGloballyTooltip">
         <source xml:lang="en">Disable this MCP server</source>
@@ -1098,6 +1170,10 @@
       <trans-unit id="mcp.target.workspace">
         <source xml:lang="en">Workspace</source>
         <target>Робоча область</target>
+      </trans-unit>
+      <trans-unit id="mcp.target.workspaceFolderLabel">
+        <source xml:lang="en">Workspace ({0})</source>
+        <target>Робоча область ({0})</target>
       </trans-unit>
       <trans-unit id="mcpServerInstallation">
         <source xml:lang="en">Installing MCP Server {0} started. An editor is now open with more details on this MCP Server</source>
@@ -1385,6 +1461,14 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/mcp/browser/mcpToolCallUI" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="mcpApp.agentHostConnectionUnavailable">
+        <source xml:lang="en">The Agent Host connection is no longer available.</source>
+        <target>З'єднання з Agent Host більше недоступне.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpWorkbenchService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="cannot be installed">
@@ -1410,6 +1494,14 @@
       <trans-unit id="mcp.configuration.userLocalValue">
         <source xml:lang="en">Global in {0}</source>
         <target>Глобальний у {0}</target>
+      </trans-unit>
+      <trans-unit id="mcpAgentFinderMismatchedServer">
+        <source xml:lang="en">The GitHub Feed returned a different MCP server or version than requested.</source>
+        <target>Потік GitHub повернув інший сервер MCP або версію, ніж було запитано.</target>
+      </trans-unit>
+      <trans-unit id="mcpRegistryChangedDuringLookup">
+        <source xml:lang="en">The MCP registry changed. Try installing the server again.</source>
+        <target>Реєстр MCP змінився. Спробуйте встановити сервер знову.</target>
       </trans-unit>
       <trans-unit id="not an extension">
         <source xml:lang="en">The provided object is not an mcp server.</source>
@@ -1496,8 +1588,8 @@
         <target>Робочий каталог для команди сервера. За замовчуванням використовується папка робочого простору, коли виконується в робочому просторі.</target>
       </trans-unit>
       <trans-unit id="app.mcp.json.headers">
-        <source xml:lang="en">Additional headers sent to the server.</source>
-        <target>Додаткові заголовки надіслані на сервер.</target>
+        <source xml:lang="en">Additional headers sent to the server. These headers are not sent to a different origin, including across redirects.</source>
+        <target>Додаткові заголовки, надіслані на сервер. Ці заголовки не надсилаються на інший походження, включаючи перенаправлення.</target>
       </trans-unit>
       <trans-unit id="app.mcp.json.oauth">
         <source xml:lang="en">OAuth configuration for authenticating with the server.</source>
@@ -1551,6 +1643,10 @@
         <source xml:lang="en">Model Context Protocol Servers</source>
         <target>Модель Контекст Протокол Сервери</target>
       </trans-unit>
+      <trans-unit id="app.mcp.json.transport">
+        <source xml:lang="en">The HTTP transport to preserve when sharing this configuration with other MCP clients.</source>
+        <target>HTTP-транспорт, який потрібно зберегти при обміні цією конфігурацією з іншими клієнтами MCP.</target>
+      </trans-unit>
       <trans-unit id="app.mcp.json.type">
         <source xml:lang="en">The type of the server.</source>
         <target>Тип сервера.</target>
@@ -1574,6 +1670,14 @@
       <trans-unit id="mcp.discovery.source.claude-desktop.config">
         <source xml:lang="en">Claude Desktop configuration (`claude_desktop_config.json`)</source>
         <target>Конфігурація настільного додатку Claude (`claude_desktop_config.json`)</target>
+      </trans-unit>
+      <trans-unit id="mcp.discovery.source.copilot">
+        <source xml:lang="en">GitHub Copilot CLI</source>
+        <target>GitHub Copilot CLI</target>
+      </trans-unit>
+      <trans-unit id="mcp.discovery.source.copilot.config">
+        <source xml:lang="en">GitHub Copilot CLI configuration (`mcp-config.json` in `COPILOT_HOME`, or `~/.copilot/mcp-config.json` when unset)</source>
+        <target>Конфігурація GitHub Copilot CLI (`mcp-config.json` в `COPILOT_HOME`, або `~/.copilot/mcp-config.json`, якщо не встановлено)</target>
       </trans-unit>
       <trans-unit id="mcp.discovery.source.cursor-global">
         <source xml:lang="en">Cursor (Global)</source>
@@ -1622,6 +1726,18 @@
       <trans-unit id="vscode.extension.contributes.mcp.when">
         <source xml:lang="en">Condition which must be true to enable this collection.</source>
         <target>Умова, яка повинна бути істинною, щоб активувати цю колекцію.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/mcp/common/mcpConfigurationGeneration" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="mcp.generation.formatMismatch">
+        <source xml:lang="en">The MCP setup extension returned an unexpected configuration format. Update the Copilot extension and try again.</source>
+        <target>Розширення налаштування MCP повернуло несподіваний формат конфігурації. Оновіть розширення Copilot і спробуйте ще раз.</target>
+      </trans-unit>
+      <trans-unit id="mcp.generation.invalid">
+        <source xml:lang="en">The generated MCP server configuration is invalid. Try again or add the server manually.</source>
+        <target>Сгенерована конфігурація сервера MCP є недійсною. Спробуйте ще раз або додайте сервер вручну.</target>
       </trans-unit>
     </body>
   </file>

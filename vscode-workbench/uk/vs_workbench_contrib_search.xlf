@@ -112,21 +112,9 @@
   </file>
   <file original="src/vs/workbench/contrib/search/browser/search.common.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="search.searchOnType">
-        <source xml:lang="en">Search all files as you type.</source>
-        <target>Шукайте всі файли під час введення.</target>
-      </trans-unit>
-      <trans-unit id="search.searchOnTypeDebouncePeriod">
-        <source xml:lang="en">When {0} is enabled, controls the timeout in milliseconds between a character being typed and the search starting. Has no effect when {0} is disabled.</source>
-        <target>Коли {0} увімкнено, контролює тайм-аут у мілісекундах між введенням символу та початком пошуку. Не має жодного ефекту, коли {0} вимкнено.</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/workbench/contrib/search/browser/search.contribution" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
       <trans-unit id="exclude">
         <source xml:lang="en">Configure [glob patterns](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options) for excluding files and folders in fulltext searches and file search in quick open. To exclude files from the recently opened list in quick open, patterns must be absolute (for example `**/node_modules/**`). Inherits all glob patterns from the `#files.exclude#` setting.</source>
-        <target>Налаштуйте [глобальні шаблони](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options) для виключення файлів і папок у повнотекстових пошуках та пошуку файлів у швидкому відкритті. Щоб виключити файли зі списку нещодавно відкритих у швидкому відкритті, шаблони повинні бути абсолютними (наприклад, `**/node_modules/**`). Спадкує всі глобальні шаблони з налаштування `#files.exclude#`.</target>
+        <target>Налаштуйте [глобальні шаблони](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options) для виключення файлів і папок у повнотекстових пошуках та пошуку файлів у швидкому відкритті. Щоб виключити файли з нещодавно відкритого списку у швидкому відкритті, шаблони повинні бути абсолютними (наприклад, `**/node_modules/**`). Спадкує всі глобальні шаблони з налаштування `#files.exclude#`.</target>
       </trans-unit>
       <trans-unit id="exclude.boolean">
         <source xml:lang="en">The glob pattern to match file paths against. Set to true or false to enable or disable the pattern.</source>
@@ -135,8 +123,76 @@
       <trans-unit id="exclude.when">
         <source xml:lang="en">Additional check on the siblings of a matching file. Use \$(basename) as variable for the matching file name.</source>
         <note>\$(basename) should not be translated</note>
-        <target>Додаткова перевірка на сусідні файли, що відповідають. Використовуйте \$(basename) як змінну для імені відповідного файлу.</target>
+        <target>Додаткова перевірка на братів і сестер відповідного файлу. Використовуйте \$(basename) як змінну для імені відповідного файлу.</target>
       </trans-unit>
+      <trans-unit id="search.followSymlinks">
+        <source xml:lang="en">Controls whether to follow symlinks while searching.</source>
+        <target>Контролює, чи слід слідувати символьним посиланням під час пошуку.</target>
+      </trans-unit>
+      <trans-unit id="search.maxResults">
+        <source xml:lang="en">Controls the maximum number of search results, this can be set to `null` (empty) to return unlimited results.</source>
+        <target>Контролює максимальну кількість результатів пошуку, це можна встановити на `null` (порожньо), щоб повернути необмежену кількість результатів.</target>
+      </trans-unit>
+      <trans-unit id="search.ripgrep.maxThreads">
+        <source xml:lang="en">Number of threads to use for searching. When set to 0, the engine automatically determines this value.</source>
+        <target>Кількість потоків, які використовувати для пошуку. Коли встановлено 0, система автоматично визначає це значення.</target>
+      </trans-unit>
+      <trans-unit id="search.searchOnType">
+        <source xml:lang="en">Search all files as you type.</source>
+        <target>Шукайте всі файли під час введення.</target>
+      </trans-unit>
+      <trans-unit id="search.searchOnTypeDebouncePeriod">
+        <source xml:lang="en">When {0} is enabled, controls the timeout in milliseconds between a character being typed and the search starting. Has no effect when {0} is disabled.</source>
+        <target>Коли {0} увімкнено, контролює тайм-аут у мілісекундах між введенням символу та початком пошуку. Не має жодного ефекту, коли {0} вимкнено.</target>
+      </trans-unit>
+      <trans-unit id="search.smartCase">
+        <source xml:lang="en">Search case-insensitively if the pattern is all lowercase, otherwise, search case-sensitively.</source>
+        <target>Шукайте без урахування регістру, якщо шаблон повністю написаний малими літерами, в іншому випадку шукайте з урахуванням регістру.</target>
+      </trans-unit>
+      <trans-unit id="search.sortOrder">
+        <source xml:lang="en">Controls sorting order of search results.</source>
+        <target>Контролює порядок сортування результатів пошуку.</target>
+      </trans-unit>
+      <trans-unit id="searchSortOrder.countAscending">
+        <source xml:lang="en">Results are sorted by count per file, in ascending order.</source>
+        <target>Результати відсортовані за кількістю на файл у порядку зростання.</target>
+      </trans-unit>
+      <trans-unit id="searchSortOrder.countDescending">
+        <source xml:lang="en">Results are sorted by count per file, in descending order.</source>
+        <target>Результати відсортовані за кількістю на файл у порядку спадання.</target>
+      </trans-unit>
+      <trans-unit id="searchSortOrder.default">
+        <source xml:lang="en">Results are sorted by folder and file names, in alphabetical order.</source>
+        <target>Результати відсортовані за назвами папок і файлів у алфавітному порядку.</target>
+      </trans-unit>
+      <trans-unit id="searchSortOrder.filesOnly">
+        <source xml:lang="en">Results are sorted by file names ignoring folder order, in alphabetical order.</source>
+        <target>Результати відсортовані за іменами файлів, ігноруючи порядок папок, в алфавітному порядку.</target>
+      </trans-unit>
+      <trans-unit id="searchSortOrder.modified">
+        <source xml:lang="en">Results are sorted by file last modified date, in descending order.</source>
+        <target>Результати відсортовані за датою останнього змінення файлу, у порядку спадання.</target>
+      </trans-unit>
+      <trans-unit id="searchSortOrder.type">
+        <source xml:lang="en">Results are sorted by file extensions, in alphabetical order.</source>
+        <target>Результати відсортовані за розширеннями файлів у алфавітному порядку.</target>
+      </trans-unit>
+      <trans-unit id="useGlobalIgnoreFiles">
+        <source xml:lang="en">Controls whether to use your global gitignore file (for example, from `$HOME/.config/git/ignore`) when searching for files. Requires {0} to be enabled.</source>
+        <target>Контролює, чи використовувати ваш глобальний файл gitignore (наприклад, з `$HOME/.config/git/ignore`) під час пошуку файлів. Потребує, щоб {0} був увімкнений.</target>
+      </trans-unit>
+      <trans-unit id="useIgnoreFiles">
+        <source xml:lang="en">Controls whether to use `.gitignore` and `.ignore` files when searching for files.</source>
+        <target>Контролює, чи використовувати файли `.gitignore` та `.ignore` під час пошуку файлів.</target>
+      </trans-unit>
+      <trans-unit id="useParentIgnoreFiles">
+        <source xml:lang="en">Controls whether to use `.gitignore` and `.ignore` files in parent directories when searching for files. Requires {0} to be enabled.</source>
+        <target>Контролює, чи використовувати файли `.gitignore` та `.ignore` у батьківських каталогах під час пошуку файлів. Потрібно, щоб {0} був увімкнений.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/search/browser/search.contribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
       <trans-unit id="filterSortOrder">
         <source xml:lang="en">Controls sorting order of editor history in quick open when filtering.</source>
         <target>Контролює порядок сортування історії редактора у швидкому відкритті під час фільтрації.</target>
@@ -206,17 +262,9 @@
         <source xml:lang="en">When enabled, the legacy `findFiles` extension API honors the user's `#search.useIgnoreFiles#` setting instead of always ignoring `.gitignore`. Extensions that explicitly pass `null` as the `exclude` argument still get unfiltered results. Telemetry is emitted regardless of this setting to help decide future defaults.</source>
         <target>Коли увімкнено, застарілий API розширення `findFiles` враховує налаштування користувача `#search.useIgnoreFiles#` замість того, щоб завжди ігнорувати `.gitignore`. Розширення, які явно передають `null` як аргумент `exclude`, все ще отримують нефільтровані результати. Телеметрія надсилається незалежно від цього налаштування, щоб допомогти визначити майбутні значення за замовчуванням.</target>
       </trans-unit>
-      <trans-unit id="search.followSymlinks">
-        <source xml:lang="en">Controls whether to follow symlinks while searching.</source>
-        <target>Контролює, чи слідувати символічним посиланням під час пошуку.</target>
-      </trans-unit>
       <trans-unit id="search.globalFindClipboard">
         <source xml:lang="en">Controls whether the Search view should read or modify the shared find clipboard on macOS.</source>
         <target>Контролює, чи має режим пошуку читати або змінювати спільний буфер обміну для пошуку на macOS.</target>
-      </trans-unit>
-      <trans-unit id="search.maxResults">
-        <source xml:lang="en">Controls the maximum number of search results, this can be set to `null` (empty) to return unlimited results.</source>
-        <target>Контролює максимальну кількість результатів пошуку, це можна встановити на `null` (пусто), щоб повернути необмежену кількість результатів.</target>
       </trans-unit>
       <trans-unit id="search.mode">
         <source xml:lang="en">Controls where new `Search: Find in Files` and `Find in Folder` operations occur: either in the Search view, or in a search editor.</source>
@@ -245,10 +293,6 @@
       <trans-unit id="search.quickOpen.includeSymbols">
         <source xml:lang="en">Whether to include results from a global symbol search in the file results for Quick Open.</source>
         <target>Чи включати результати з глобального пошуку символів у результати файлів для Швидкого відкриття.</target>
-      </trans-unit>
-      <trans-unit id="search.ripgrep.maxThreads">
-        <source xml:lang="en">Number of threads to use for searching. When set to 0, the engine automatically determines this value.</source>
-        <target>Кількість потоків, які використовувати для пошуку. Коли встановлено 0, движок автоматично визначає це значення.</target>
       </trans-unit>
       <trans-unit id="search.searchView.keywordSuggestions">
         <source xml:lang="en">Enable keyword suggestions in the Search view.</source>
@@ -282,41 +326,9 @@
         <source xml:lang="en">Controls whether to show line numbers for search results.</source>
         <target>Контролює, чи показувати номери рядків для результатів пошуку.</target>
       </trans-unit>
-      <trans-unit id="search.smartCase">
-        <source xml:lang="en">Search case-insensitively if the pattern is all lowercase, otherwise, search case-sensitively.</source>
-        <target>Шукайте без урахування регістру, якщо шаблон повністю написаний малими літерами, в іншому випадку шукайте з урахуванням регістру.</target>
-      </trans-unit>
-      <trans-unit id="search.sortOrder">
-        <source xml:lang="en">Controls sorting order of search results.</source>
-        <target>Контролює порядок сортування результатів пошуку.</target>
-      </trans-unit>
       <trans-unit id="search.useReplacePreview">
         <source xml:lang="en">Controls whether to open Replace Preview when selecting or replacing a match.</source>
         <target>Контролює, чи відкривати Попередній перегляд заміни при виборі або заміні збігу.</target>
-      </trans-unit>
-      <trans-unit id="searchSortOrder.countAscending">
-        <source xml:lang="en">Results are sorted by count per file, in ascending order.</source>
-        <target>Результати відсортовані за кількістю на файл у порядку зростання.</target>
-      </trans-unit>
-      <trans-unit id="searchSortOrder.countDescending">
-        <source xml:lang="en">Results are sorted by count per file, in descending order.</source>
-        <target>Результати відсортовані за кількістю на файл у порядку спадання.</target>
-      </trans-unit>
-      <trans-unit id="searchSortOrder.default">
-        <source xml:lang="en">Results are sorted by folder and file names, in alphabetical order.</source>
-        <target>Результати відсортовані за назвами папок і файлів у алфавітному порядку.</target>
-      </trans-unit>
-      <trans-unit id="searchSortOrder.filesOnly">
-        <source xml:lang="en">Results are sorted by file names ignoring folder order, in alphabetical order.</source>
-        <target>Результати відсортовані за іменами файлів, ігноруючи порядок папок, в алфавітному порядку.</target>
-      </trans-unit>
-      <trans-unit id="searchSortOrder.modified">
-        <source xml:lang="en">Results are sorted by file last modified date, in descending order.</source>
-        <target>Результати відсортовані за датою останнього змінення файлу, у порядку спадання.</target>
-      </trans-unit>
-      <trans-unit id="searchSortOrder.type">
-        <source xml:lang="en">Results are sorted by file extensions, in alphabetical order.</source>
-        <target>Результати відсортовані за розширеннями файлів у алфавітному порядку.</target>
       </trans-unit>
       <trans-unit id="textSearchPickerHelp">
         <source xml:lang="en">Search for Text</source>
@@ -325,18 +337,6 @@
       <trans-unit id="textSearchPickerPlaceholder">
         <source xml:lang="en">Search for text in your workspace files.</source>
         <target>Шукайте текст у файлах вашого робочого простору.</target>
-      </trans-unit>
-      <trans-unit id="useGlobalIgnoreFiles">
-        <source xml:lang="en">Controls whether to use your global gitignore file (for example, from `$HOME/.config/git/ignore`) when searching for files. Requires {0} to be enabled.</source>
-        <target>Контролює, чи використовувати ваш глобальний файл gitignore (наприклад, з `$HOME/.config/git/ignore`) під час пошуку файлів. Потребує, щоб {0} був увімкнений.</target>
-      </trans-unit>
-      <trans-unit id="useIgnoreFiles">
-        <source xml:lang="en">Controls whether to use `.gitignore` and `.ignore` files when searching for files.</source>
-        <target>Контролює, чи використовувати файли `.gitignore` та `.ignore` під час пошуку файлів.</target>
-      </trans-unit>
-      <trans-unit id="useParentIgnoreFiles">
-        <source xml:lang="en">Controls whether to use `.gitignore` and `.ignore` files in parent directories when searching for files. Requires {0} to be enabled.</source>
-        <target>Контролює, чи використовувати файли `.gitignore` та `.ignore` у батьківських каталогах під час пошуку файлів. Потрібно, щоб {0} був увімкнений.</target>
       </trans-unit>
     </body>
   </file>

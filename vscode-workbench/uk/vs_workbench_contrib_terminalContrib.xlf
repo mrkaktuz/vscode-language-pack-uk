@@ -196,6 +196,10 @@ Remarks:
         <source xml:lang="en">Whether the chat view is visible.</source>
         <target>Чи видима область чату.</target>
       </trans-unit>
+      <trans-unit id="terminalChatUsesAgentHostContextKey">
+        <source xml:lang="en">Whether the terminal chat session is backed by the Agent Host.</source>
+        <target>Чи підтримується термінальна чат-сесія хостом агента.</target>
+      </trans-unit>
       <trans-unit id="terminalHasChatTerminals">
         <source xml:lang="en">Whether there are any chat terminals.</source>
         <target>Чи є які-небудь термінали чату.</target>
@@ -958,8 +962,8 @@ Reason for leaving the sandbox: {2}</source>
         <target>Дозволити створення та виконання завдань?</target>
       </trans-unit>
       <trans-unit id="alreadyRunning">
-        <source xml:lang="en">Task `{0}` is already running.</source>
-        <target>Завдання `{0}` вже виконується.</target>
+        <source xml:lang="en">Task '{0}' is already running.</source>
+        <target>Завдання '{0}' вже виконується.</target>
       </trans-unit>
       <trans-unit id="copilotChat.fetchingTask">
         <source xml:lang="en">Resolving the task</source>
@@ -986,8 +990,8 @@ Reason for leaving the sandbox: {2}</source>
         <target>Створіть і запустіть задачу в робочому просторі</target>
       </trans-unit>
       <trans-unit id="createTask">
-        <source xml:lang="en">A task `{0}` with command `{1}`{2} will be created.</source>
-        <target>Завдання `{0}` з командою `{1}`{2} буде створено.</target>
+        <source xml:lang="en">Task '{0}' will be created in '{1}' and run with this command:</source>
+        <target>Завдання '{0}' буде створено в '{1}' і виконано з цією командою:</target>
       </trans-unit>
       <trans-unit id="createdTask">
         <source xml:lang="en">Created task `{0}`</source>
@@ -997,13 +1001,13 @@ Reason for leaving the sandbox: {2}</source>
         <source xml:lang="en">Created task `{0}`</source>
         <target>Створено задачу `{0}`</target>
       </trans-unit>
-      <trans-unit id="taskExists">
-        <source xml:lang="en">Task `{0}` already exists.</source>
-        <target>Завдання `{0}` вже існує.</target>
+      <trans-unit id="invalidWorkspaceFolder">
+        <source xml:lang="en">Cannot create a task outside the current workspace folder: {0}</source>
+        <target>Не можна створити завдання поза межами поточної папки робочого простору: {0}</target>
       </trans-unit>
-      <trans-unit id="taskExistsPast">
-        <source xml:lang="en">Task `{0}` already exists.</source>
-        <target>Завдання `{0}` вже існує.</target>
+      <trans-unit id="taskExists">
+        <source xml:lang="en">Task '{0}' already exists. Use the run task tool to run it.</source>
+        <target>Завдання '{0}' вже існує. Використайте інструмент запуску завдань, щоб запустити його.</target>
       </trans-unit>
     </body>
   </file>
