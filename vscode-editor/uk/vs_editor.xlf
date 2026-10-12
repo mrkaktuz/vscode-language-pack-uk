@@ -1513,8 +1513,8 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
         <target>Відображайте символи повної ширини, використовуючи ширину, визначену шрифтом.</target>
       </trans-unit>
       <trans-unit id="fullwidthCharacterWidth.twoCells">
-        <source xml:lang="en">Render full-width characters centered in exactly two character cells. Only applies to monospace fonts. Does not apply to multi codepoint full-width characters or to GPU rendering. This has a performance impact on line rendering.</source>
-        <target>Відображати символи повної ширини, вирівняні по центру, точно в двох клітинках символів. Застосовується лише до моноширинних шрифтів. Не застосовується до багатокодових символів повної ширини або до рендерингу на GPU. Це впливає на продуктивність рендерингу рядків.</target>
+        <source xml:lang="en">Render full-width characters centered in exactly two character cells. Only applies to monospace fonts when font ligatures are disabled. Does not apply to multi codepoint full-width characters or to GPU rendering. This has a performance impact on line rendering.</source>
+        <target>Відображати символи повної ширини, центровані точно в двох клітинках символів. Застосовується лише до моноширинних шрифтів, коли лігатури шрифтів вимкнені. Не застосовується до багатокодових символів повної ширини або до рендерингу на GPU. Це впливає на продуктивність рендерингу рядків.</target>
       </trans-unit>
       <trans-unit id="glyphMargin">
         <source xml:lang="en">Controls whether the editor should render the vertical glyph margin. Glyph margin is mostly used for debugging.</source>
@@ -1829,16 +1829,16 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
         <target>Відповідає `Control` на Windows і Linux та `Command` на macOS.</target>
       </trans-unit>
       <trans-unit id="multiCursorPaste">
-        <source xml:lang="en">Controls pasting when the line count of the pasted text matches the cursor count.</source>
-        <target>Контролює вставку, коли кількість рядків вставленого тексту відповідає кількості курсорів.</target>
+        <source xml:lang="en">Controls pasting when the line count of the pasted text matches the cursor count, or when pasting column selections into a single cursor.</source>
+        <target>Контролює вставку, коли кількість рядків вставленого тексту відповідає кількості курсорів, або коли вставляються вибірки стовпців в один курсор.</target>
       </trans-unit>
       <trans-unit id="multiCursorPaste.full">
         <source xml:lang="en">Each cursor pastes the full text.</source>
         <target>Кожен курсор вставляє повний текст.</target>
       </trans-unit>
       <trans-unit id="multiCursorPaste.spread">
-        <source xml:lang="en">Each cursor pastes a single line of the text.</source>
-        <target>Кожен курсор вставляє одну лінію тексту.</target>
+        <source xml:lang="en">Each cursor pastes a single line of the text. When pasting column selections into a single cursor, each copied line is pasted on a successive destination line and padded with spaces to form a rectangle.</source>
+        <target>Кожен курсор вставляє один рядок тексту. При вставці вибірок стовпців в один курсор кожен скопійований рядок вставляється на наступний рядок призначення і доповнюється пробілами, щоб утворити прямокутник.</target>
       </trans-unit>
       <trans-unit id="occurrencesHighlight">
         <source xml:lang="en">Controls whether occurrences should be highlighted across open files.</source>
@@ -1859,6 +1859,10 @@ Variables 3 and 5 will be "no lines changed", "1 line changed" or "X lines chang
       <trans-unit id="occurrencesHighlightDelay">
         <source xml:lang="en">Controls the delay in milliseconds after which occurrences are highlighted.</source>
         <target>Контролює затримку в мілісекундах, після якої події підсвічуються.</target>
+      </trans-unit>
+      <trans-unit id="occurrencesHighlightFromAllProviders">
+        <source xml:lang="en">Controls whether single-document highlights from all matching providers are merged. When enabled, basic word-based highlighting is only used if no other provider matches.</source>
+        <target>Контролює, чи об'єднуються виділення з одного документа від усіх відповідних постачальників. Коли увімкнено, базове виділення на основі слів використовується лише тоді, коли жоден інший постачальник не відповідає.</target>
       </trans-unit>
       <trans-unit id="off">
         <source xml:lang="en">Quick suggestions are disabled</source>

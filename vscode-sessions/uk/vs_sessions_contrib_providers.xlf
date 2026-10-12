@@ -22,6 +22,14 @@
         <source xml:lang="en">The Agent Host is not ready to create automations.</source>
         <target>Агент-хост не готовий створювати автоматизації.</target>
       </trans-unit>
+      <trans-unit id="agentHostAutomation.customSchedule">
+        <source xml:lang="en">This automation uses a schedule that cannot be edited in VS Code.</source>
+        <target>Ця автоматизація використовує розклад, який не можна редагувати в VS Code.</target>
+      </trans-unit>
+      <trans-unit id="agentHostAutomation.customizationVersion">
+        <source xml:lang="en">Version {0}</source>
+        <target>Версія {0}</target>
+      </trans-unit>
       <trans-unit id="agentHostAutomation.interruptedLegacyRun">
         <source xml:lang="en">Legacy run tracking was interrupted.</source>
         <target>Відстеження запуску у спадщині було перервано.</target>
@@ -30,9 +38,25 @@
         <source xml:lang="en">Automation operation '{0}' is not available for '{1}'.</source>
         <target>Операція автоматизації '{0}' недоступна для '{1}'.</target>
       </trans-unit>
+      <trans-unit id="agentHostAutomation.savedCustomization">
+        <source xml:lang="en">Not available locally. The saved copy is kept.</source>
+        <target>Недоступно локально. Збережена копія зберігається.</target>
+      </trans-unit>
+      <trans-unit id="agentHostAutomation.syncedCustomizationDescription">
+        <source xml:lang="en">Customizations synced from VS Code.</source>
+        <target>Налаштування синхронізовано з VS Code.</target>
+      </trans-unit>
+      <trans-unit id="agentHostAutomation.syncedCustomizations">
+        <source xml:lang="en">VS Code Customizations</source>
+        <target>Налаштування VS Code</target>
+      </trans-unit>
       <trans-unit id="agentHostAutomation.wrongHost">
         <source xml:lang="en">The automation target must belong to this Agent Host.</source>
         <target>Ціль автоматизації повинна належати цьому Агенту Хосту.</target>
+      </trans-unit>
+      <trans-unit id="automationUnsupportedSchedule">
+        <source xml:lang="en">Choose a local-time schedule for this Agent Host automation.</source>
+        <target>Виберіть розклад за місцевим часом для автоматизації цього Агентського Хоста.</target>
       </trans-unit>
     </body>
   </file>
@@ -113,6 +137,14 @@
       <trans-unit id="agentHostPermissionPicker.defaultApprovalsHover">
         <source xml:lang="en">Copilot asks before running tools unless your configured settings allow the tool.</source>
         <target>Copilot запитує перед запуском інструментів, якщо ваші налаштовані параметри не дозволяють інструмент.</target>
+      </trans-unit>
+      <trans-unit id="agentHostPermissionPicker.devContainerSandboxUnavailable">
+        <source xml:lang="en">Recreate the Dev Container with sandboxing enabled before enabling sandboxing for this session.</source>
+        <target>Відтворіть контейнер розробника з увімкненим пісочницею перед увімкненням пісочниці для цієї сесії.</target>
+      </trans-unit>
+      <trans-unit id="agentHostPermissionPicker.effectiveApprovalsHover">
+        <source xml:lang="en">Effective permissions: {0}. Requested permissions: {1}.</source>
+        <target>Ефективні дозволи: {0}. Запитані дозволи: {1}.</target>
       </trans-unit>
       <trans-unit id="agentHostPermissionPicker.manual.label">
         <source xml:lang="en">Manual permissions</source>
@@ -218,6 +250,14 @@
         <source xml:lang="en">1 uncommitted file</source>
         <target>1 незакріплений файл</target>
       </trans-unit>
+      <trans-unit id="agentHostSessionConfig.currentBranchGroup">
+        <source xml:lang="en">Current Branch</source>
+        <target>Поточна гілка</target>
+      </trans-unit>
+      <trans-unit id="agentHostSessionConfig.defaultBranchGroup">
+        <source xml:lang="en">Default Branch</source>
+        <target>Головна гілка</target>
+      </trans-unit>
       <trans-unit id="agentHostSessionConfig.filter">
         <source xml:lang="en">Filter options...</source>
         <target>Фільтрувати опції...</target>
@@ -234,10 +274,6 @@
         <source xml:lang="en">New Worktree cannot be combined with Dev Container execution.</source>
         <target>Новий Worktree не може бути поєднаний з виконанням Dev Container.</target>
       </trans-unit>
-      <trans-unit id="agentHostSessionConfig.isolation.worktree">
-        <source xml:lang="en">New Worktree</source>
-        <target>Новий робочий каталог</target>
-      </trans-unit>
       <trans-unit id="agentHostSessionConfig.isolation.worktreeDescription">
         <source xml:lang="en">Creates a separate copy for this session</source>
         <target>Створює окрему копію для цієї сесії</target>
@@ -249,6 +285,14 @@
       <trans-unit id="agentHostSessionConfig.itemAriaLabelWithDescription">
         <source xml:lang="en">{0}, {1}</source>
         <target>{0}, {1}</target>
+      </trans-unit>
+      <trans-unit id="agentHostSessionConfig.itemAriaLabelWithGroup">
+        <source xml:lang="en">{0}, {1}</source>
+        <target>{0}, {1}</target>
+      </trans-unit>
+      <trans-unit id="agentHostSessionConfig.otherBranchesGroup">
+        <source xml:lang="en">Branches</source>
+        <target>Гілки</target>
       </trans-unit>
       <trans-unit id="agentHostSessionConfig.policyDisabled">
         <source xml:lang="en">Disabled by your organization. Contact your administrator.</source>
@@ -614,21 +658,33 @@
   </file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/baseAgentHostSessionsProvider" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="agentHost.initialConfigFailed">
+        <source xml:lang="en">The initial session configuration could not be resolved.</source>
+        <target>Не вдалося вирішити конфігурацію початкової сесії.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.initialModeRejected">
+        <source xml:lang="en">The selected session mode '{0}' could not be applied.</source>
+        <target>Вибраний режим сеансу '{0}' не може бути застосований.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.initialPermissionRejected">
+        <source xml:lang="en">The selected session permissions could not be applied: the agent host did not apply '{0}'.</source>
+        <target>Вибрані дозволи сесії не можуть бути застосовані: хост агента не застосував '{0}'.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.initialPermissionUnsupported">
+        <source xml:lang="en">The selected session permissions could not be applied: agent '{0}' does not support permission '{1}'.</source>
+        <target>Вибрані дозволи сесії не можуть бути застосовані: агент '{0}' не підтримує дозвіл '{1}'.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.pullRequestSessionsUnsupported">
+        <source xml:lang="en">This agent host does not support creating sessions from pull requests.</source>
+        <target>Цей агент-хост не підтримує створення сесій з pull-запитів.</target>
+      </trans-unit>
       <trans-unit id="agentHost.sessionConfigUnavailable">
         <source xml:lang="en">Could not resolve the Agent Host session configuration. Please try again.</source>
         <target>Не вдалося вирішити конфігурацію сесії Agent Host. Будь ласка, спробуйте ще раз.</target>
       </trans-unit>
-      <trans-unit id="agentHostCanvas.disconnected">
-        <source xml:lang="en">The canvas runtime is disconnected.</source>
-        <target>Час виконання полотна відключено.</target>
-      </trans-unit>
-      <trans-unit id="agentHostCanvas.invalidSource">
-        <source xml:lang="en">The canvas returned an unsupported source.</source>
-        <target>Полотно повернуло непідтримуване джерело.</target>
-      </trans-unit>
-      <trans-unit id="agentHostCanvas.unavailable">
-        <source xml:lang="en">The canvas runtime is unavailable.</source>
-        <target>Час виконання полотна недоступний.</target>
+      <trans-unit id="canvasChatNotFound">
+        <source xml:lang="en">The chat could not be found.</source>
+        <target>Чат не знайдено.</target>
       </trans-unit>
       <trans-unit id="chatArchiveUnavailable">
         <source xml:lang="en">Archiving this chat is unavailable.</source>
@@ -677,6 +733,10 @@
       <trans-unit id="notConnectedSend">
         <source xml:lang="en">Cannot send request: not connected to agent host.</source>
         <target>Не вдалося надіслати запит: не підключено до хоста агента.</target>
+      </trans-unit>
+      <trans-unit id="openCanvasUnavailable">
+        <source xml:lang="en">Opening canvases is unavailable for this session.</source>
+        <target>Відкриття полотен недоступне для цієї сесії.</target>
       </trans-unit>
       <trans-unit id="removeSessionArtifactUnavailable">
         <source xml:lang="en">Removing artifacts is unavailable for this session.</source>
@@ -746,6 +806,14 @@
         <source xml:lang="en">The source Agent Host does not support preparing a worktree for a Dev Container.</source>
         <target>Джерело Agent Host не підтримує підготовку робочого дерева для Dev Container.</target>
       </trans-unit>
+      <trans-unit id="devContainerSample.containerRequired">
+        <source xml:lang="en">Dev Container samples must run in a container.</source>
+        <target>Зразки Dev Container повинні працювати в контейнері.</target>
+      </trans-unit>
+      <trans-unit id="devContainerSample.trust">
+        <source xml:lang="en">Starting this sample clones {0} into a Docker volume and runs its Dev Container lifecycle commands.</source>
+        <target>Починаючи з цього зразка, клонує {0} у Docker-об'єм і виконує команди життєвого циклу Dev Container.</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/exportDebugLogsAction" source-language="en" datatype="plaintext" target-language="uk">
@@ -758,6 +826,14 @@
   </file>
   <file original="src/vs/sessions/contrib/providers/agentHost/browser/localAgentHostSessionsProvider" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="devContainerSample.workspaceLabel">
+        <source xml:lang="en">{0} Sample</source>
+        <target>{0} Приклад</target>
+      </trans-unit>
+      <trans-unit id="environment.local">
+        <source xml:lang="en">Local</source>
+        <target>Місцевий</target>
+      </trans-unit>
       <trans-unit id="localAgentHostLabel">
         <source xml:lang="en">Local Agent Host</source>
         <target>Локальний агент-хост</target>
@@ -800,15 +876,143 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/cloudAutomationStore" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="cloudAutomations.customSchedule">
+        <source xml:lang="en">This automation uses triggers that cannot be edited in VS Code.</source>
+        <target>Ця автоматизація використовує тригери, які не можна редагувати у VS Code.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.description">
+        <source xml:lang="en">Runs even when your computer is off, triggered on a schedule.</source>
+        <target>Запускається навіть коли ваш комп'ютер вимкнений, активується за розкладом.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.githubRequired">
+        <source xml:lang="en">Select a private repository on GitHub.com.</source>
+        <target>Виберіть приватний репозиторій на GitHub.com.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.invalidSchedule">
+        <source xml:lang="en">Choose a daily or weekly UTC schedule with minutes 00, 15, 30, or 45.</source>
+        <target>Виберіть щоденний або щотижневий графік UTC з хвилинами 00, 15, 30 або 45.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.invalidTarget">
+        <source xml:lang="en">Select a GitHub repository with default isolation for this cloud automation.</source>
+        <target>Виберіть репозиторій GitHub з типовою ізоляцією для цієї хмарної автоматизації.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.localConfiguration">
+        <source xml:lang="en">Cloud automations do not support local mode or approval settings.</source>
+        <target>Хмарні автоматизації не підтримують локальний режим або налаштування затвердження.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.missing">
+        <source xml:lang="en">This cloud automation is no longer available. Refresh the catalogue.</source>
+        <target>Ця автоматизація хмари більше недоступна. Оновіть каталог.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.needsInput">
+        <source xml:lang="en">Needs input on GitHub</source>
+        <target>Потрібен внесок на GitHub</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.refreshFailed">
+        <source xml:lang="en">Cloud automations could not be refreshed.</source>
+        <target>Автоматизації хмари не вдалося оновити.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.refreshRequired">
+        <source xml:lang="en">Refresh cloud automations before submitting another request.</source>
+        <target>Оновіть хмарні автоматизації перед поданням іншого запиту.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.repositoryImmutable">
+        <source xml:lang="en">Duplicate this automation to use another repository.</source>
+        <target>Дублюйте цю автоматизацію, щоб використовувати інший репозиторій.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.requiredFields">
+        <source xml:lang="en">An automation name and prompt are required.</source>
+        <target>Необхідні назва автоматизації та підказка.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.resetUnsupported">
+        <source xml:lang="en">Resetting cloud automation configuration is not supported.</source>
+        <target>Скидання конфігурації автоматизації хмари не підтримується.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.searchPrivateRepository">
+        <source xml:lang="en">Search for a private repository or paste a repository URL...</source>
+        <target>Шукайте приватний репозиторій або вставте URL репозиторію...</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.stopUnavailable">
+        <source xml:lang="en">Unable to stop this cloud automation run.</source>
+        <target>Не вдалося зупинити цей запуск автоматизації хмари.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.targetImmutable">
+        <source xml:lang="en">The repository and provider cannot be changed for an existing cloud automation. Duplicate this automation to use another target.</source>
+        <target>Репозиторій і провайдер не можуть бути змінені для існуючої автоматизації в хмарі. Скопіюйте цю автоматизацію, щоб використовувати іншу ціль.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.targetUnavailable">
+        <source xml:lang="en">Cloud automations are unavailable.</source>
+        <target>Автоматизації в хмарі недоступні.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.toolsLoadFailed">
+        <source xml:lang="en">Available tools could not be loaded.</source>
+        <target>Доступні інструменти не вдалося завантажити.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.toolsUnavailable">
+        <source xml:lang="en">Cloud automations are unavailable.</source>
+        <target>Автоматизації в хмарі недоступні.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.unavailable">
+        <source xml:lang="en">Sign in to GitHub.com and enable cloud automations before continuing.</source>
+        <target>Увійдіть на GitHub.com та увімкніть хмарні автоматизації перед продовженням.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.unsupportedConfiguration">
+        <source xml:lang="en">This session configuration is not supported by cloud automations.</source>
+        <target>Ця конфігурація сеансу не підтримується хмарними автоматизаціями.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.unsupportedEdit">
+        <source xml:lang="en">This automation uses triggers that cannot be edited in VS Code.</source>
+        <target>Ця автоматизація використовує тригери, які не можна редагувати у VS Code.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/cloudSandboxSessionConfig" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="cloudSandbox.approvals">
+        <source xml:lang="en">Approvals</source>
+        <target>Схвалення</target>
+      </trans-unit>
+      <trans-unit id="cloudSandbox.autopilot">
+        <source xml:lang="en">Autopilot</source>
+        <target>Автопілот</target>
+      </trans-unit>
+      <trans-unit id="cloudSandbox.autopilotDescription">
+        <source xml:lang="en">Continues working until the task is done.</source>
+        <target>Продовжує працювати, поки завдання не буде виконано.</target>
+      </trans-unit>
+      <trans-unit id="cloudSandbox.interactive">
+        <source xml:lang="en">Interactive</source>
+        <target>Інтерактивний</target>
+      </trans-unit>
+      <trans-unit id="cloudSandbox.interactiveDescription">
+        <source xml:lang="en">Works with you and asks for input when needed.</source>
+        <target>Працює з вами та запитує вашу думку, коли це необхідно.</target>
+      </trans-unit>
+      <trans-unit id="cloudSandbox.mode">
+        <source xml:lang="en">Agent Mode</source>
+        <target>Режим агента</target>
+      </trans-unit>
+      <trans-unit id="cloudSandbox.plan">
+        <source xml:lang="en">Plan</source>
+        <target>План</target>
+      </trans-unit>
+      <trans-unit id="cloudSandbox.planDescription">
+        <source xml:lang="en">Plans the task before making changes.</source>
+        <target>Планує завдання перед внесенням змін.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/copilotChatSessionsActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="sandbox.agentDefaultModel">
-        <source xml:lang="en">Agent Default</source>
-        <target>Агент за замовчуванням</target>
+      <trans-unit id="sandbox.approvalPicker">
+        <source xml:lang="en">Approvals</source>
+        <target>Схвалення</target>
       </trans-unit>
-      <trans-unit id="sandboxPicker">
-        <source xml:lang="en">Sandbox</source>
-        <target>Пісочниця</target>
+      <trans-unit id="sandbox.modePicker">
+        <source xml:lang="en">Agent Mode</source>
+        <target>Режим агента</target>
       </trans-unit>
     </body>
   </file>
@@ -854,6 +1058,10 @@
         <source xml:lang="en">The selected clone is a workspace file. Choose the repository again to select a repository folder.</source>
         <target>Вибраний клон є файлом робочого простору. Виберіть репозиторій знову, щоб вибрати папку репозиторію.</target>
       </trans-unit>
+      <trans-unit id="cloudAutomationConfigurationUnsupported">
+        <source xml:lang="en">Cloud automations do not support local mode, approval, or model-specific settings. Remove those settings before saving.</source>
+        <target>Автоматизації в хмарі не підтримують локальний режим, затвердження або налаштування, специфічні для моделі. Видаліть ці налаштування перед збереженням.</target>
+      </trans-unit>
       <trans-unit id="copilotChatSessionsProvider">
         <source xml:lang="en">Copilot Chat</source>
         <target>Copilot Chat</target>
@@ -865,6 +1073,10 @@
       <trans-unit id="copilotSandbox">
         <source xml:lang="en">Copilot</source>
         <target>Копілот</target>
+      </trans-unit>
+      <trans-unit id="environment.cloud">
+        <source xml:lang="en">Cloud</source>
+        <target>Хмара</target>
       </trans-unit>
       <trans-unit id="issue">
         <source xml:lang="en">Issue...</source>
@@ -898,17 +1110,29 @@
         <source xml:lang="en">GitHub sandbox sessions are not enabled.</source>
         <target>Сесії GitHub sandbox не увімкнені.</target>
       </trans-unit>
-      <trans-unit id="sandbox.draftNotFound">
-        <source xml:lang="en">The GitHub sandbox draft is no longer available.</source>
-        <target>Чернетка GitHub sandbox більше недоступна.</target>
+      <trans-unit id="sandbox.modelConfigurationUnavailable">
+        <source xml:lang="en">The sandbox does not support the selected {0} for {1}.</source>
+        <target>Пісочниця не підтримує вибраний {0} для {1}.</target>
       </trans-unit>
-      <trans-unit id="sandbox.starting">
-        <source xml:lang="en">Starting GitHub sandbox...</source>
-        <target>Запуск GitHub пісочниці...</target>
+      <trans-unit id="sandbox.provisioningContainer">
+        <source xml:lang="en">Setting up cloud container</source>
+        <target>Налаштування хмарного контейнера</target>
+      </trans-unit>
+      <trans-unit id="sandbox.quickChatUnavailable">
+        <source xml:lang="en">The sandbox could not start a chat without a workspace. Your prompt was not sent.</source>
+        <target>Пісочниця не змогла розпочати чат без робочого простору. Ваш запит не був надісланий.</target>
+      </trans-unit>
+      <trans-unit id="sandbox.repositoryRequired">
+        <source xml:lang="en">GitHub sandbox creation requires a repository for this session. Please choose a repository to try again.</source>
+        <target>Створення пісочниці GitHub вимагає репозиторію для цієї сесії. Будь ласка, виберіть репозиторій, щоб спробувати ще раз.</target>
+      </trans-unit>
+      <trans-unit id="sandbox.startingAgent">
+        <source xml:lang="en">Starting Copilot agent</source>
+        <target>Запуск агента Copilot</target>
       </trans-unit>
       <trans-unit id="sandbox.unavailable">
-        <source xml:lang="en">GitHub sandbox creation is no longer available. Enable the feature and choose a repository to try again.</source>
-        <target>Створення пісочниці GitHub більше не доступне. Увімкніть функцію та виберіть репозиторій, щоб спробувати ще раз.</target>
+        <source xml:lang="en">GitHub sandbox creation is no longer available. Enable the feature to try again.</source>
+        <target>Створення пісочниці GitHub більше недоступне. Увімкніть функцію, щоб спробувати знову.</target>
       </trans-unit>
       <trans-unit id="sandbox.unsupportedConfiguration">
         <source xml:lang="en">This configuration is not supported for a new GitHub sandbox session.</source>
@@ -925,6 +1149,62 @@
       <trans-unit id="workInRepository">
         <source xml:lang="en">Work in Repository...</source>
         <target>Працюйте в репозиторії...</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/githubCloudAutomationStore" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="cloudAutomations.catalogueLimit">
+        <source xml:lang="en">This repository has more cloud automations than can be loaded. Its catalogue is incomplete.</source>
+        <target>Цей репозиторій має більше хмарних автоматизацій, ніж може бути завантажено. Його каталог неповний.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.checkingRepository">
+        <source xml:lang="en">Checking repository access...</source>
+        <target>Перевірка доступу до репозиторію...</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.dotcomRequired">
+        <source xml:lang="en">Cloud automations require a GitHub.com account.</source>
+        <target>Хмарні автоматизації вимагають облікового запису на GitHub.com.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.invalidRepositories">
+        <source xml:lang="en">Invalid stored cloud automation repositories.</source>
+        <target>Недійсні збережені репозиторії автоматизації в хмарі.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.invalidRepository">
+        <source xml:lang="en">Invalid stored cloud automation repository.</source>
+        <target>Недійсний збережений репозиторій автоматизації в хмарі.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.partialRefreshFailed">
+        <source xml:lang="en">Some GitHub repositories could not be refreshed. Check the logs for details.</source>
+        <target>Деякі репозиторії GitHub не вдалося оновити. Перевірте журнали для отримання деталей.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.privateRepositoryRequired">
+        <source xml:lang="en">Cloud automations currently require a private GitHub repository.</source>
+        <target>Автоматизації в хмарі наразі вимагають приватного репозиторію GitHub.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.privateRepositoryTargetRequired">
+        <source xml:lang="en">This repository must be private</source>
+        <target>Цей репозиторій повинен бути приватним</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.repositoryCheckFailed">
+        <source xml:lang="en">Unable to verify repository access. Refresh automations to try again.</source>
+        <target>Неможливо перевірити доступ до репозиторію. Оновіть автоматизації, щоб спробувати ще раз.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.repositoryRecheckRequired">
+        <source xml:lang="en">Repository access must be verified again.</source>
+        <target>Доступ до репозиторію потрібно перевірити знову.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.repositoryRequired">
+        <source xml:lang="en">Select a GitHub.com repository for this cloud automation.</source>
+        <target>Виберіть репозиторій GitHub.com для цієї хмарної автоматизації.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.repositoryTargetRequired">
+        <source xml:lang="en">Choose a private GitHub.com repository.</source>
+        <target>Виберіть приватний репозиторій GitHub.com.</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomations.signIn">
+        <source xml:lang="en">Sign in to GitHub.com with repository access to manage cloud automations.</source>
+        <target>Увійдіть на GitHub.com з доступом до репозиторію, щоб керувати хмарними автоматизаціями.</target>
       </trans-unit>
     </body>
   </file>
@@ -1028,22 +1308,6 @@
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/sandboxPicker" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="sandboxPicker.checkboxAriaLabel">
-        <source xml:lang="en">Run in a GitHub-managed sandbox</source>
-        <target>Запустіть у пісочниці, керованій GitHub</target>
-      </trans-unit>
-      <trans-unit id="sandboxPicker.label">
-        <source xml:lang="en">Sandbox</source>
-        <target>Пісочниця</target>
-      </trans-unit>
-      <trans-unit id="sandboxPicker.noRepository">
-        <source xml:lang="en">A repository is required to run in a sandbox</source>
-        <target>Для роботи потрібен репозиторій у пісочниці.</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/cloudSandboxAgentHostContribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="cloudSandbox.connecting">
@@ -1082,13 +1346,73 @@
         <source xml:lang="en">GitHub Sandboxes</source>
         <target>GitHub Пісочниці</target>
       </trans-unit>
+      <trans-unit id="sandbox.cloningFailed">
+        <source xml:lang="en">Repository cloning failed</source>
+        <target>Клонування репозиторію не вдалося</target>
+      </trans-unit>
+      <trans-unit id="sandbox.cloningRepository">
+        <source xml:lang="en">Cloning repository</source>
+        <target>Клонування репозиторію</target>
+      </trans-unit>
+      <trans-unit id="sandbox.cloningRepositoryProgress">
+        <source xml:lang="en">Cloning repository ({0}%)</source>
+        <target>Клонування репозиторію ({0}%)</target>
+      </trans-unit>
+      <trans-unit id="sandbox.connectingContainer">
+        <source xml:lang="en">Connecting to cloud container</source>
+        <target>Підключення до хмарного контейнера</target>
+      </trans-unit>
+      <trans-unit id="sandbox.connectionUnavailable">
+        <source xml:lang="en">The cloud sandbox connection is no longer available.</source>
+        <target>З'єднання з хмарним пісочницею більше недоступне.</target>
+      </trans-unit>
+      <trans-unit id="sandbox.preparationUnavailable">
+        <source xml:lang="en">Cloud sandbox repository preparation is not registered.</source>
+        <target>Підготовка репозиторію хмарного пісочниці не зареєстрована.</target>
+      </trans-unit>
+      <trans-unit id="sandbox.provisioningContainer">
+        <source xml:lang="en">Setting up cloud container</source>
+        <target>Налаштування хмарного контейнера</target>
+      </trans-unit>
+      <trans-unit id="sandbox.startingAgent">
+        <source xml:lang="en">Starting Copilot agent</source>
+        <target>Запуск агента Copilot</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/cloudSandboxSessionsProvider" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="cloudSandbox.archiveUnavailable">
+        <source xml:lang="en">Connect to the environment to change this session's archive state.</source>
+        <target>Підключіться до середовища, щоб змінити стан архіву цієї сесії.</target>
+      </trans-unit>
+      <trans-unit id="cloudSandbox.configNotApplied">
+        <source xml:lang="en">The sandbox could not apply the selected {0}. Your prompt was not sent.</source>
+        <target>Пісочниця не змогла застосувати вибраний {0}. Ваш запит не був надісланий.</target>
+      </trans-unit>
+      <trans-unit id="cloudSandbox.configUnavailable">
+        <source xml:lang="en">The sandbox connection is unavailable. Your prompt was not sent.</source>
+        <target>З'єднання з пісочницею недоступне. Ваш запит не був надісланий.</target>
+      </trans-unit>
+      <trans-unit id="cloudSandbox.renameUnavailable">
+        <source xml:lang="en">Connect to the environment to rename this session.</source>
+        <target>Підключіться до середовища, щоб перейменувати цю сесію.</target>
+      </trans-unit>
       <trans-unit id="cloudSandbox.sessionNotFound">
         <source xml:lang="en">Sandbox session not found.</source>
         <target>Сесію пісочниці не знайдено.</target>
+      </trans-unit>
+      <trans-unit id="cloudSandbox.settingsReadOnly">
+        <source xml:lang="en">This connection is read-only. Session settings cannot be changed.</source>
+        <target>Це з'єднання тільки для читання. Налаштування сеансу не можуть бути змінені.</target>
+      </trans-unit>
+      <trans-unit id="cloudSandbox.settingsUnavailable">
+        <source xml:lang="en">Connect to the environment before changing session settings.</source>
+        <target>Підключіться до середовища перед зміною налаштувань сесії.</target>
+      </trans-unit>
+      <trans-unit id="environment.cloud">
+        <source xml:lang="en">Cloud</source>
+        <target>Хмара</target>
       </trans-unit>
     </body>
   </file>
@@ -1742,9 +2066,21 @@
         <source xml:lang="en">Add or Manage</source>
         <target>Додати або Керувати</target>
       </trans-unit>
+      <trans-unit id="manageHosts.connectionStatus">
+        <source xml:lang="en">Connection: {0}</source>
+        <target>З'єднання: {0}</target>
+      </trans-unit>
       <trans-unit id="manageHosts.placeholder">
         <source xml:lang="en">Select a remote to manage or pick an action</source>
         <target>Виберіть пульт для управління або виберіть дію</target>
+      </trans-unit>
+      <trans-unit id="manageHosts.refresh">
+        <source xml:lang="en">Refresh Hosts</source>
+        <target>Оновити хости</target>
+      </trans-unit>
+      <trans-unit id="manageHosts.refreshFailed">
+        <source xml:lang="en">Could not refresh all hosts. Retained hosts are still available; use Refresh Hosts to retry.</source>
+        <target>Не вдалося оновити всі хости. Збережені хости все ще доступні; використовуйте Оновити хости, щоб спробувати ще раз.</target>
       </trans-unit>
       <trans-unit id="manageHosts.remoteHostsHeader">
         <source xml:lang="en">Remote Agent Hosts</source>
@@ -1761,6 +2097,62 @@
       <trans-unit id="manageRemoteAgentHosts">
         <source xml:lang="en">Manage Remote Agent Hosts...</source>
         <target>Керувати віддаленими агентами...</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/missionControlAgentHostContribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="connectMissionControlHost">
+        <source xml:lang="en">Environments</source>
+        <target>Середовища</target>
+      </trans-unit>
+      <trans-unit id="missionControl.available">
+        <source xml:lang="en">Online</source>
+        <target>Онлайн</target>
+      </trans-unit>
+      <trans-unit id="missionControl.connectingBanner">
+        <source xml:lang="en">Connecting to the environment...</source>
+        <target>Підключення до середовища...</target>
+      </trans-unit>
+      <trans-unit id="missionControl.connectingTitle">
+        <source xml:lang="en">Connecting to Environment</source>
+        <target>Підключення до середовища</target>
+      </trans-unit>
+      <trans-unit id="missionControl.disconnectHost">
+        <source xml:lang="en">Disconnect</source>
+        <target>Відключити</target>
+      </trans-unit>
+      <trans-unit id="missionControl.incompatibleBanner">
+        <source xml:lang="en">The environment's Agent Host Protocol version is incompatible.</source>
+        <target>Версія протоколу Agent Host середовища несумісна.</target>
+      </trans-unit>
+      <trans-unit id="missionControl.incompatibleTitle">
+        <source xml:lang="en">Environment Incompatible</source>
+        <target>Несумісне середовище</target>
+      </trans-unit>
+      <trans-unit id="missionControl.reconnectingBanner">
+        <source xml:lang="en">Reconnecting to the environment...</source>
+        <target>Відновлення з'єднання з середовищем...</target>
+      </trans-unit>
+      <trans-unit id="missionControl.reconnectingIn">
+        <source xml:lang="en">Reconnecting to the environment in {0}s...</source>
+        <target>Відновлення з'єднання з середовищем за {0}с...</target>
+      </trans-unit>
+      <trans-unit id="missionControl.unavailable">
+        <source xml:lang="en">Offline</source>
+        <target>Офлайн</target>
+      </trans-unit>
+      <trans-unit id="missionControl.unavailableBanner">
+        <source xml:lang="en">Environment disconnected.</source>
+        <target>Середовище відключено.</target>
+      </trans-unit>
+      <trans-unit id="missionControl.unavailableDescription">
+        <source xml:lang="en">Start the environment's owning application, then reconnect. This does not start or replace its compute.</source>
+        <target>Запустіть програму, що володіє середовищем, а потім повторно підключіться. Це не запускає і не замінює його обчислення.</target>
+      </trans-unit>
+      <trans-unit id="missionControl.unavailableTitle">
+        <source xml:lang="en">Environment Disconnected</source>
+        <target>Середовище відключено</target>
       </trans-unit>
     </body>
   </file>
@@ -1799,8 +2191,8 @@
         <target>Адреса WebSocket віддаленого агента (наприклад, "localhost:3000").</target>
       </trans-unit>
       <trans-unit id="chat.remoteAgentHosts.autoConnect">
-        <source xml:lang="en">Automatically connect to online dev tunnel, SSH, and WSL remote agent hosts on startup. When disabled, cached sessions are still shown but connections are established only on demand.</source>
-        <target>Автоматично підключатися до онлайн-розробницького тунелю, SSH та WSL віддалених агентів при запуску. Коли вимкнено, кешовані сесії все ще відображаються, але з'єднання встановлюються лише за запитом.</target>
+        <source xml:lang="en">Automatically connect to online dev tunnel, SSH, and WSL remote agent hosts on startup, and to online GitHub environments in the web Agents window. When disabled, cached sessions are still shown but connections are established only on demand.</source>
+        <target>Автоматично підключатися до онлайн-розробницького тунелю, SSH та віддалених агентів WSL під час запуску, а також до онлайн-середовищ GitHub у вікні агентів веб. Коли вимкнено, кешовані сесії все ще відображаються, але підключення встановлюються лише за запитом.</target>
       </trans-unit>
       <trans-unit id="chat.remoteAgentHosts.connectionToken">
         <source xml:lang="en">An optional connection token for authenticating with the remote agent host.</source>
@@ -1858,6 +2250,10 @@
         <source xml:lang="en">Configure SSH Hosts...</source>
         <target>Налаштувати SSH хости...</target>
       </trans-unit>
+      <trans-unit id="connectMissionControlHost">
+        <source xml:lang="en">Environments</source>
+        <target>Середовища</target>
+      </trans-unit>
       <trans-unit id="connectViaSSH">
         <source xml:lang="en">Connect to Remote Agent Host via SSH</source>
         <target>Підключитися до віддаленого агента хоста через SSH</target>
@@ -1897,6 +2293,14 @@
       <trans-unit id="nameRemoteValidationEmpty">
         <source xml:lang="en">Enter a name for this remote agent host.</source>
         <target>Введіть ім'я для цього віддаленого агента.</target>
+      </trans-unit>
+      <trans-unit id="remoteFolderBrowsingUnavailable">
+        <source xml:lang="en">The connected environment does not support folder browsing.</source>
+        <target>Підключене середовище не підтримує перегляд папок.</target>
+      </trans-unit>
+      <trans-unit id="remoteFolderProviderUnavailable">
+        <source xml:lang="en">The connected environment is not available for folder browsing.</source>
+        <target>Підключене середовище недоступне для перегляду папок.</target>
       </trans-unit>
       <trans-unit id="sshAddNewHost">
         <source xml:lang="en">Add New SSH Host...</source>
@@ -2182,6 +2586,10 @@
   </file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/remoteAgentHostSessionsProvider" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="browseRemoteFolderFailed">
+        <source xml:lang="en">Failed to browse folders on '{0}': {1}</source>
+        <target>Не вдалося переглянути папки на '{0}': {1}</target>
+      </trans-unit>
       <trans-unit id="connectFailed">
         <source xml:lang="en">Failed to connect to remote agent host '{0}': {1}</source>
         <target>Не вдалося підключитися до віддаленого агента хоста '{0}': {1}</target>
@@ -2234,6 +2642,14 @@
         <source xml:lang="en">Cannot create session: not connected to remote agent host '{0}'.</source>
         <target>Не вдалося створити сесію: не підключено до віддаленого агента хоста '{0}'.</target>
       </trans-unit>
+      <trans-unit id="remoteAgentHost.cannotRemove">
+        <source xml:lang="en">This host cannot be removed locally.</source>
+        <target>Цей хост не може бути видалений локально.</target>
+      </trans-unit>
+      <trans-unit id="remoteAgentHost.deleteSessionNotFound">
+        <source xml:lang="en">Session not found.</source>
+        <target>Сесію не знайдено.</target>
+      </trans-unit>
       <trans-unit id="selectRemoteFolder">
         <source xml:lang="en">Select Folder on {0}</source>
         <target>Виберіть папку на {0}</target>
@@ -2253,6 +2669,10 @@
       <trans-unit id="agentHostIncompatibleUpdate">
         <source xml:lang="en">Update Server</source>
         <target>Оновити сервер</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.cannotRemoveRemote">
+        <source xml:lang="en">This host cannot be removed locally.</source>
+        <target>Цей хост не може бути видалений локально.</target>
       </trans-unit>
       <trans-unit id="workspacePicker.changeLocationPreference">
         <source xml:lang="en">Change Preferred Agent Location</source>
@@ -2474,9 +2894,17 @@ Address: {0}</source>
         <source xml:lang="en">Number of seconds with no Agent Host sessions actively working, waiting for input, or holding unsent drafts before automatically stopping a Dev Container. Set to 0 to disable automatic shutdown. Archiving or deleting sessions can still remove the container.</source>
         <target>Кількість секунд без активних сесій Agent Host, які працюють, чекають на введення або утримують не надіслані чернетки, перед автоматичним зупиненням Dev Container. Встановіть 0, щоб вимкнути автоматичне завершення роботи. Архівування або видалення сесій все ще може видалити контейнер.</target>
       </trans-unit>
+      <trans-unit id="chat.agentHost.devContainer.samples.enabled">
+        <source xml:lang="en">Show Dev Container samples in the Agents window workspace picker. The sample is cloned into a Docker volume and started when you send the first prompt. Requires Dev Container Agent Host sessions to be enabled.</source>
+        <target>Показати зразки Dev Container у виборі робочого простору вікна Агентів. Зразок клонується в об'єм Docker і запускається, коли ви надсилаєте перший запит. Потрібно, щоб сесії Dev Container Agent Host були увімкнені.</target>
+      </trans-unit>
       <trans-unit id="chat.agentHost.devContainer.worktree.enabled">
         <source xml:lang="en">Enable running Dev Container Agent Host sessions in new worktrees.</source>
         <target>Увімкніть запуск сесій Dev Container Agent Host у нових робочих деревах.</target>
+      </trans-unit>
+      <trans-unit id="devContainerAgentHost.aiDisabled">
+        <source xml:lang="en">AI features are disabled.</source>
+        <target>Функції ШІ вимкнені.</target>
       </trans-unit>
       <trans-unit id="devContainerAgentHost.disabled">
         <source xml:lang="en">Dev Container Agent Host connections are not enabled.</source>

@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/sessions/contrib/chat/browser/agentHostInputCompletions" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHost.completion.providerUnavailable">
+        <source xml:lang="en">Agent Host session provider is not available.</source>
+        <target>Постачальник сесії хоста агента недоступний.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/chat/browser/agentsWindowWorkspaceHandoff" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentsHandoff.chooseWorkspace">
@@ -101,6 +109,10 @@
       <trans-unit id="branchPicker.loading">
         <source xml:lang="en">Loading branches…</source>
         <target>Завантаження гілок…</target>
+      </trans-unit>
+      <trans-unit id="branchPicker.newWorktree">
+        <source xml:lang="en">New Worktree</source>
+        <target>Новий Worktree</target>
       </trans-unit>
       <trans-unit id="branchPicker.retry">
         <source xml:lang="en">Retry Loading Branches</source>
@@ -394,6 +406,34 @@
         <source xml:lang="en">When enabled, hides the chat input in inactive panes when three or more parallel comparison attempts are shown in a grid. This behavior is disabled when screen-reader optimized mode is active.</source>
         <target>Коли увімкнено, приховує введення чату в неактивних панелях, коли в сітці показано три або більше паралельних спроб порівняння. Ця поведінка вимкнена, коли активний режим, оптимізований для екранних читалок.</target>
       </trans-unit>
+      <trans-unit id="sessions.chat.compareAgents.openInGrid">
+        <source xml:lang="en">Automatically opens comparison attempts in a grid when they start. When disabled, the attempts start in the background; select their comparison group to open the grid.</source>
+        <target>Автоматично відкриває спроби порівняння в сітці, коли вони починаються. Коли вимкнено, спроби починаються у фоновому режимі; виберіть їх групу порівняння, щоб відкрити сітку.</target>
+      </trans-unit>
+      <trans-unit id="sessions.chat.customizeWelcomeMessage">
+        <source xml:lang="en">Customize Welcome Message...</source>
+        <target>Налаштувати привітальне повідомлення...</target>
+      </trans-unit>
+      <trans-unit id="sessions.chat.customizeWelcomeMessage.name">
+        <source xml:lang="en">Name</source>
+        <target>Ім'я</target>
+      </trans-unit>
+      <trans-unit id="sessions.chat.customizeWelcomeMessage.nameDescription">
+        <source xml:lang="en">Set the name used in welcome messages</source>
+        <target>Встановіть ім'я, яке використовується у вітальних повідомленнях</target>
+      </trans-unit>
+      <trans-unit id="sessions.chat.customizeWelcomeMessage.phrases">
+        <source xml:lang="en">Phrases</source>
+        <target>Фрази</target>
+      </trans-unit>
+      <trans-unit id="sessions.chat.customizeWelcomeMessage.phrasesDescription">
+        <source xml:lang="en">Add to or replace the welcome phrases</source>
+        <target>Додати або замінити привітальні фрази</target>
+      </trans-unit>
+      <trans-unit id="sessions.chat.customizeWelcomeMessage.placeholder">
+        <source xml:lang="en">Choose what to customize</source>
+        <target>Виберіть, що налаштувати</target>
+      </trans-unit>
       <trans-unit id="sessions.chat.experimental.agentsPickerInAttachContextMenu">
         <source xml:lang="en">Controls whether the Agent picker starts in Add Context for Agents Window chat inputs. After an agent is selected, the picker returns to its usual position.</source>
         <target>Контролює, чи вибір агента починається в вікні Додати контекст для чат-введень агентів. Після вибору агента вибір повертається на своє звичайне місце.</target>
@@ -410,6 +450,18 @@
         <source xml:lang="en">Controls whether session options are expanded before you first expand or collapse them. Your last choice takes precedence afterward. This setting only applies when the new-session composer layout is enabled.</source>
         <target>Контролює, чи розширюються параметри сеансу перед тим, як ви вперше їх розгорнете або згорнете. Ваш останній вибір має пріоритет після цього. Цей параметр застосовується лише тоді, коли активовано макет композера нового сеансу.</target>
       </trans-unit>
+      <trans-unit id="sessions.chat.experimental.welcomeMessages">
+        <source xml:lang="en">Customize the welcome phrases shown above the new-session composer. Use `"mode": "replace"` to use only your phrases, or `"mode": "append"` to add them to the defaults. Use `{name}` inside a phrase to position the welcome name.</source>
+        <target>Налаштуйте вітальні фрази, які відображаються над композитором нової сесії. Використовуйте `"mode": "replace"`, щоб використовувати лише ваші фрази, або `"mode": "append"`, щоб додати їх до стандартних. Використовуйте `{name}` всередині фрази, щоб розмістити вітальне ім'я.</target>
+      </trans-unit>
+      <trans-unit id="sessions.chat.experimental.welcomeMessages.mode">
+        <source xml:lang="en">'replace' uses only your phrases; 'append' adds your phrases to the defaults.</source>
+        <target>'замінити' використовує лише ваші фрази; 'додати' додає ваші фрази до стандартних.</target>
+      </trans-unit>
+      <trans-unit id="sessions.chat.experimental.welcomeMessages.phrases">
+        <source xml:lang="en">Welcome phrases shown above the new-session composer. Use `{name}` to position the welcome name, for example `Back at it, {name}`. When no name is known, `{name}` and its surrounding separator are removed.</source>
+        <target>Привітальні фрази, показані вище композитора нової сесії. Використовуйте `{name}`, щоб розмістити привітальне ім'я, наприклад, `Знову в справі, {name}`. Коли ім'я не відоме, `{name}` та його навколишній роздільник видаляються.</target>
+      </trans-unit>
       <trans-unit id="sessions.chat.experimental.welcomeName">
         <source xml:lang="en">Specifies the name used in new-session welcome messages. Leave empty to use the first name from your signed-in GitHub profile when available; otherwise, welcome messages omit the name.</source>
         <target>Вказує ім'я, яке використовується у вітальних повідомленнях нової сесії. Залиште порожнім, щоб використовувати ім'я з вашого профілю GitHub, коли це можливо; в іншому випадку вітальні повідомлення не міститимуть імені.</target>
@@ -418,9 +470,9 @@
         <source xml:lang="en">Controls whether rotating welcome phrases are shown above the new-session composer.</source>
         <target>Контролює, чи відображаються обертові привітальні фрази над композитором нової сесії.</target>
       </trans-unit>
-      <trans-unit id="sessions.chat.setWelcomeName">
-        <source xml:lang="en">Set Welcome Name...</source>
-        <target>Встановити ім'я привітання...</target>
+      <trans-unit id="sessions.chat.hideWelcomeMessage">
+        <source xml:lang="en">Hide Welcome Message</source>
+        <target>Сховати привітальне повідомлення</target>
       </trans-unit>
       <trans-unit id="sessions.chat.setWelcomeName.cleared">
         <source xml:lang="en">Welcome name reset to your GitHub first name when available.</source>
@@ -466,6 +518,14 @@
   </file>
   <file original="src/vs/sessions/contrib/chat/browser/chatView" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="sessionComparison.judgeInstructions">
+        <source xml:lang="en">Judge Instructions</source>
+        <target>Інструкції судді</target>
+      </trans-unit>
+      <trans-unit id="sessionComparison.synthesisInstructions">
+        <source xml:lang="en">Synthesis Instructions</source>
+        <target>Інструкції з синтезу</target>
+      </trans-unit>
       <trans-unit id="sessionPreparation.attachUnavailable">
         <source xml:lang="en">Wait for session preparation to finish before adding attachments.</source>
         <target>Дочекайтеся завершення підготовки сесії перед додаванням вкладень.</target>
@@ -747,6 +807,10 @@
         <source xml:lang="en">Chat input. Press Enter to send out the request. Use the Chat Accessibility Help command for more information.</source>
         <target>Введення чату. Натисніть Enter, щоб надіслати запит. Використовуйте команду Допомога з доступності чату для отримання додаткової інформації.</target>
       </trans-unit>
+      <trans-unit id="comparisonTokenWarning">
+        <source xml:lang="en">This will use tokens for each session.</source>
+        <target>Це буде використовувати токени для кожної сесії.</target>
+      </trans-unit>
       <trans-unit id="initializing">
         <source xml:lang="en">Initializing...</source>
         <target>Ініціалізація...</target>
@@ -895,6 +959,34 @@
         <source xml:lang="en">Aquarium</source>
         <target>Акваріум</target>
       </trans-unit>
+      <trans-unit id="comparisonPicker.finishSetup">
+        <source xml:lang="en">Finish configuring the comparison in the model picker.</source>
+        <target>Завершіть налаштування порівняння у виборі моделі.</target>
+      </trans-unit>
+      <trans-unit id="comparisonPicker.modelUnavailable">
+        <source xml:lang="en">A selected comparison model is no longer available. Update the model picker selection.</source>
+        <target>Вибрана модель порівняння більше недоступна. Оновіть вибір моделі.</target>
+      </trans-unit>
+      <trans-unit id="comparisonPicker.permissionsUnavailable">
+        <source xml:lang="en">The current permissions are unavailable for comparison. Update the draft permissions and try again.</source>
+        <target>Поточні дозволи недоступні для порівняння. Оновіть чернетку дозволів і спробуйте ще раз.</target>
+      </trans-unit>
+      <trans-unit id="comparisonPicker.runAttempts">
+        <source xml:lang="en">Run {0} Attempts</source>
+        <target>Запустіть {0} спроби</target>
+      </trans-unit>
+      <trans-unit id="comparisonPicker.unavailable">
+        <source xml:lang="en">Comparison is no longer available for this draft. Check its workspace and agent configuration.</source>
+        <target>Порівняння більше недоступне для цього чернетки. Перевірте його робочий простір та конфігурацію агента.</target>
+      </trans-unit>
+      <trans-unit id="comparisonPicker.workspaceRequired">
+        <source xml:lang="en">Select a workspace for the comparison.</source>
+        <target>Виберіть робочу область для порівняння.</target>
+      </trans-unit>
+      <trans-unit id="comparisonPicker.worktreesRequired">
+        <source xml:lang="en">The selected agent no longer supports worktree comparisons.</source>
+        <target>Вибраний агент більше не підтримує порівняння робочих дерев.</target>
+      </trans-unit>
       <trans-unit id="newSession.agentContextAction">
         <source xml:lang="en">Agent...</source>
         <target>Агент...</target>
@@ -911,46 +1003,6 @@
         <source xml:lang="en">{0}
 To disable this announcement, set {1} to false.</source>
         <target>{0} Щоб вимкнути це оголошення, встановіть {1} в значення false.</target>
-      </trans-unit>
-      <trans-unit id="newSession.welcome.building">
-        <source xml:lang="en">What are we building?</source>
-        <target>Що ми будуємо?</target>
-      </trans-unit>
-      <trans-unit id="newSession.welcome.cook">
-        <source xml:lang="en">Let’s cook</source>
-        <target>Давайте готувати</target>
-      </trans-unit>
-      <trans-unit id="newSession.welcome.lockIn">
-        <source xml:lang="en">Time to lock in</source>
-        <target>Час закріпити</target>
-      </trans-unit>
-      <trans-unit id="newSession.welcome.move">
-        <source xml:lang="en">What’s the move?</source>
-        <target>Який план?</target>
-      </trans-unit>
-      <trans-unit id="newSession.welcome.named.building">
-        <source xml:lang="en">What are we building, {0}?</source>
-        <target>Що ми будуємо, {0}?</target>
-      </trans-unit>
-      <trans-unit id="newSession.welcome.named.cook">
-        <source xml:lang="en">Let’s cook, {0}</source>
-        <target>Давайте готувати, {0}</target>
-      </trans-unit>
-      <trans-unit id="newSession.welcome.named.lockIn">
-        <source xml:lang="en">Time to lock in, {0}</source>
-        <target>Час закріпити, {0}</target>
-      </trans-unit>
-      <trans-unit id="newSession.welcome.named.move">
-        <source xml:lang="en">What’s the move, {0}?</source>
-        <target>Який план, {0}?</target>
-      </trans-unit>
-      <trans-unit id="newSession.welcome.named.ship">
-        <source xml:lang="en">Let’s ship something, {0}</source>
-        <target>Давайте відправимо щось, {0}</target>
-      </trans-unit>
-      <trans-unit id="newSession.welcome.ship">
-        <source xml:lang="en">Let’s ship something</source>
-        <target>Давайте відправимо щось</target>
       </trans-unit>
       <trans-unit id="newSessionFeedback.many">
         <source xml:lang="en">{0} comments</source>
@@ -1012,54 +1064,6 @@ To disable this announcement, set {1} to false.</source>
         <source xml:lang="en">Pet (/vscode-pet)</source>
         <target>Pet (/vscode-pet)</target>
       </trans-unit>
-      <trans-unit id="runMultipleAgents.description">
-        <source xml:lang="en">Compares results and lets you synthesize the best concepts</source>
-        <target>Порівнює результати та дозволяє вам синтезувати найкращі концепції.</target>
-      </trans-unit>
-      <trans-unit id="runMultipleAgents.label">
-        <source xml:lang="en">Run and Compare Agents...</source>
-        <target>Запустіть і порівняйте агентів...</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.harnessUnavailable">
-        <source xml:lang="en">One or more selected agents no longer support this workspace or worktree isolation. Edit the comparison setup and choose another agent.</source>
-        <target>Один або кілька вибраних агентів більше не підтримують цю робочу область або ізоляцію робочого дерева. Відредагуйте налаштування порівняння та виберіть іншого агента.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.judgeHarnessUnavailable">
-        <source xml:lang="en">The selected Judge agent no longer supports this workspace or worktree isolation. Edit the comparison setup and choose another agent.</source>
-        <target>Вибраний агент Судді більше не підтримує це робоче середовище або ізоляцію робочого дерева. Відредагуйте налаштування порівняння та виберіть іншого агента.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.judgeModelUnavailable">
-        <source xml:lang="en">The selected Judge model is no longer available. Edit the comparison setup and choose another model.</source>
-        <target>Вибрана модель Судді більше недоступна. Відредагуйте налаштування порівняння та виберіть іншу модель.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.minimumAttempts">
-        <source xml:lang="en">Configure at least two attempts to start a comparison.</source>
-        <target>Налаштуйте принаймні дві спроби для початку порівняння.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.modelUnavailable">
-        <source xml:lang="en">The selected model for {0} is no longer available. Edit the comparison setup and choose another model.</source>
-        <target>Вибраний модель для {0} більше недоступна. Відредагуйте налаштування порівняння та виберіть іншу модель.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.synthesisHarnessUnavailable">
-        <source xml:lang="en">The selected Synthesizer agent no longer supports this workspace or worktree isolation. Edit the comparison setup and choose another agent.</source>
-        <target>Вибраний агент Synthesizer більше не підтримує це робоче середовище або ізоляцію робочого дерева. Відредагуйте налаштування порівняння та виберіть іншого агента.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.synthesisModelUnavailable">
-        <source xml:lang="en">The selected Synthesizer model is no longer available. Edit the comparison setup and choose another model.</source>
-        <target>Вибраний модель синтезатора більше недоступна. Відредагуйте налаштування порівняння та виберіть іншу модель.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.workspace">
-        <source xml:lang="en">Workspace</source>
-        <target>Робоча область</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.workspaceAriaLabel">
-        <source xml:lang="en">Choose the workspace for this comparison</source>
-        <target>Виберіть робочий простір для цього порівняння</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.workspaceTooltip">
-        <source xml:lang="en">Choose the workspace for this comparison</source>
-        <target>Виберіть робочий простір для цього порівняння</target>
-      </trans-unit>
       <trans-unit id="workspacePicker.signInGitHub">
         <source xml:lang="en">Sign in to GitHub</source>
         <target>Увійти на GitHub</target>
@@ -1068,6 +1072,10 @@ To disable this announcement, set {1} to false.</source>
   </file>
   <file original="src/vs/sessions/contrib/chat/browser/newSessionAction" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="sessions.newSession.chatUnavailable">
+        <source xml:lang="en">The new session chat is unavailable.</source>
+        <target>Новий чат сесії недоступний.</target>
+      </trans-unit>
       <trans-unit id="sessions.newSession.label">
         <source xml:lang="en">New Session</source>
         <target>Нова сесія</target>
@@ -1568,9 +1576,9 @@ To disable this announcement, set {1} to false.</source>
         <source xml:lang="en">Files</source>
         <target>Файли</target>
       </trans-unit>
-      <trans-unit id="sessionArtifacts.imageCarouselTitle">
-        <source xml:lang="en">Artifact Images</source>
-        <target>Зображення артефактів</target>
+      <trans-unit id="sessionArtifacts.generatedImages">
+        <source xml:lang="en">Generated Images</source>
+        <target>Згенеровані зображення</target>
       </trans-unit>
       <trans-unit id="sessionArtifacts.images">
         <source xml:lang="en">Images</source>
@@ -1587,6 +1595,10 @@ To disable this announcement, set {1} to false.</source>
       <trans-unit id="sessionArtifacts.openImage">
         <source xml:lang="en">Open {0} in Images Preview</source>
         <target>Відкрити {0} у попередньому перегляді зображень</target>
+      </trans-unit>
+      <trans-unit id="sessionArtifacts.openImageFailed">
+        <source xml:lang="en">Could not open image: {0}</source>
+        <target>Не вдалося відкрити зображення: {0}</target>
       </trans-unit>
       <trans-unit id="sessionArtifacts.pullRequests">
         <source xml:lang="en">Pull Requests</source>
@@ -1640,6 +1652,14 @@ To disable this announcement, set {1} to false.</source>
         <source xml:lang="en">All Changes ({0})</source>
         <target>Усі зміни ({0})</target>
       </trans-unit>
+      <trans-unit id="sessionChatPills.copied">
+        <source xml:lang="en">Copied</source>
+        <target>Скопійовано</target>
+      </trans-unit>
+      <trans-unit id="sessionChatPills.copiedToClipboard">
+        <source xml:lang="en">Copied to clipboard</source>
+        <target>Скопійовано в буфер обміну</target>
+      </trans-unit>
       <trans-unit id="sessionChatPills.copyIssue">
         <source xml:lang="en">Copy issue URL</source>
         <target>Скопіювати URL проблеми</target>
@@ -1648,25 +1668,13 @@ To disable this announcement, set {1} to false.</source>
         <source xml:lang="en">Copy pull request URL</source>
         <target>Скопіювати URL запиту на злиття</target>
       </trans-unit>
-      <trans-unit id="sessionChatPills.issue">
-        <source xml:lang="en">Issue #{0}</source>
-        <target>Проблема #{0}</target>
-      </trans-unit>
       <trans-unit id="sessionChatPills.issueDescription">
         <source xml:lang="en">{0}. {1}</source>
         <target>{0}. {1}</target>
       </trans-unit>
-      <trans-unit id="sessionChatPills.issueWithTitle">
-        <source xml:lang="en">Issue #{0}: {1}</source>
-        <target>Проблема #{0}: {1}</target>
-      </trans-unit>
       <trans-unit id="sessionChatPills.issues">
         <source xml:lang="en">Issues</source>
         <target>Проблеми</target>
-      </trans-unit>
-      <trans-unit id="sessionChatPills.pullRequest">
-        <source xml:lang="en">Pull Request #{0}</source>
-        <target>Запит на злиття #{0}</target>
       </trans-unit>
       <trans-unit id="sessionChatPills.pullRequestAttention">
         <source xml:lang="en">failing checks or merge conflicts</source>
@@ -1708,10 +1716,6 @@ To disable this announcement, set {1} to false.</source>
         <source xml:lang="en">open</source>
         <target>відкритий</target>
       </trans-unit>
-      <trans-unit id="sessionChatPills.pullRequestWithTitle">
-        <source xml:lang="en">Pull Request #{0}: {1}</source>
-        <target>Запит на злиття #{0}: {1}</target>
-      </trans-unit>
       <trans-unit id="sessionChatPills.pullRequests">
         <source xml:lang="en">Pull Requests</source>
         <target>Запити на злиття</target>
@@ -1731,6 +1735,10 @@ To disable this announcement, set {1} to false.</source>
       <trans-unit id="sessionChatPills.removeReferenceFailed">
         <source xml:lang="en">Could not remove {0} from this session: {1}</source>
         <target>Не вдалося видалити {0} з цієї сесії: {1}</target>
+      </trans-unit>
+      <trans-unit id="sessionChatPills.sessionChanges">
+        <source xml:lang="en">Session Changes</source>
+        <target>Зміни сеансу</target>
       </trans-unit>
     </body>
   </file>
@@ -1818,31 +1826,55 @@ To disable this announcement, set {1} to false.</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/contrib/chat/browser/sessionComparisonModelSelection" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="comparisonPicker.attempts">
+        <source xml:lang="en">Attempts</source>
+        <target>Спроби</target>
+      </trans-unit>
+      <trans-unit id="comparisonPicker.attemptsDescription">
+        <source xml:lang="en">Choose 2 to 10 models, or run one model 2 to 10 times.</source>
+        <target>Виберіть від 2 до 10 моделей або запустіть одну модель від 2 до 10 разів.</target>
+      </trans-unit>
+      <trans-unit id="comparisonPicker.compare">
+        <source xml:lang="en">Compare Models</source>
+        <target>Порівняти моделі</target>
+      </trans-unit>
+      <trans-unit id="comparisonPicker.judge">
+        <source xml:lang="en">Judge</source>
+        <target>Суддя</target>
+      </trans-unit>
+      <trans-unit id="comparisonPicker.judgeDescription">
+        <source xml:lang="en">Optionally choose a model to review the attempts and recommend a winner. Leave unselected to run attempts only.</source>
+        <target>Опціонально виберіть модель для перегляду спроб і рекомендації переможця. Залиште не вибраним, щоб виконати лише спроби.</target>
+      </trans-unit>
+      <trans-unit id="comparisonPicker.runs">
+        <source xml:lang="en">Number of Runs</source>
+        <target>Кількість пробігів</target>
+      </trans-unit>
+      <trans-unit id="comparisonPicker.summary">
+        <source xml:lang="en">{0} Attempts</source>
+        <target>{0} Спроби</target>
+      </trans-unit>
+      <trans-unit id="comparisonPicker.synthesizer">
+        <source xml:lang="en">Synthesizer</source>
+        <target>Синтезатор</target>
+      </trans-unit>
+      <trans-unit id="comparisonPicker.synthesizerDescription">
+        <source xml:lang="en">Optionally choose a model to combine the best parts after review. Synthesis starts only when you request it.</source>
+        <target>Опційно виберіть модель, щоб поєднати найкращі частини після перегляду. Синтез починається лише тоді, коли ви це запитаєте.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/chat/browser/sessionComparisonResult" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="sessionComparisonAccessibleView.affectedFiles">
-        <source xml:lang="en">Affected files: {0}</source>
-        <target>Уражені файли: {0}</target>
-      </trans-unit>
       <trans-unit id="sessionComparisonAccessibleView.attemptMetrics">
         <source xml:lang="en">{0}: Total time {1}{2}; Tokens used {3}{4}</source>
         <target>{0}: Загальний час {1}{2}; Використано токенів {3}{4}</target>
       </trans-unit>
-      <trans-unit id="sessionComparisonAccessibleView.decisionOption">
-        <source xml:lang="en">{0}: {1}. {2}{3}</source>
-        <target>{0}: {1}. {2}{3}</target>
-      </trans-unit>
       <trans-unit id="sessionComparisonAccessibleView.labelValue">
         <source xml:lang="en">{0}: {1}</source>
         <target>{0}: {1}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonAccessibleView.selected">
-        <source xml:lang="en"> Selected.</source>
-        <target>Вибрано.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonAccessibleView.synthesizerSelected">
-        <source xml:lang="en">Synthesizer decides. Selected.</source>
-        <target>Синтезатор вирішує. Вибрано.</target>
       </trans-unit>
       <trans-unit id="sessionComparisonAccessibleView.title">
         <source xml:lang="en">Comparison result</source>
@@ -1865,8 +1897,8 @@ To disable this announcement, set {1} to false.</source>
         <target>Додаткові інструкції з синтезу...</target>
       </trans-unit>
       <trans-unit id="sessionComparisonResult.additionalInstructionsDescription">
-        <source xml:lang="en">Add requirements for recommended or custom synthesis, then use Start Synthesis with Instructions or press Ctrl+Enter (Cmd+Enter on macOS).</source>
-        <target>Додайте вимоги для рекомендованого або індивідуального синтезу, потім використайте Почати синтез з інструкціями або натисніть Ctrl+Enter (Cmd+Enter на macOS).</target>
+        <source xml:lang="en">Add requirements for synthesis, then use Start Synthesis with Instructions or press Ctrl+Enter (Cmd+Enter on macOS).</source>
+        <target>Додайте вимоги для синтезу, потім використайте Почати синтез з інструкціями або натисніть Ctrl+Enter (Cmd+Enter на macOS).</target>
       </trans-unit>
       <trans-unit id="sessionComparisonResult.additionalInstructionsInputAriaLabel">
         <source xml:lang="en">Additional synthesis instructions</source>
@@ -1875,10 +1907,6 @@ To disable this announcement, set {1} to false.</source>
       <trans-unit id="sessionComparisonResult.additionalInstructionsPlaceholder">
         <source xml:lang="en">For example: preserve the public API and add focused tests</source>
         <target>Наприклад: зберегти публічний API та додати цілеспрямовані тести</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonResult.affectedFileCount">
-        <source xml:lang="en">{0} files affected</source>
-        <target>{0} файлів постраждало</target>
       </trans-unit>
       <trans-unit id="sessionComparisonResult.ariaLabelWithAccessibleViewHint">
         <source xml:lang="en">{0}. Use {1} to open the comparison result in the Accessible View.</source>
@@ -1895,26 +1923,6 @@ To disable this announcement, set {1} to false.</source>
       <trans-unit id="sessionComparisonResult.attemptMetricsDescription">
         <source xml:lang="en">Time is the provider-reported duration of the terminal first turn. Token counts marked 'at least' are partial and are not considered for the token usage winner.</source>
         <target>Час - це тривалість, що повідомляється постачальником, для термінального першого повороту. Кількість токенів, позначена як 'принаймні', є частковою і не враховується для переможця за використанням токенів.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonResult.betterChoice">
-        <source xml:lang="en">Better choice</source>
-        <target>Кращий вибір</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonResult.customSynthesis">
-        <source xml:lang="en">Custom Synthesis</source>
-        <target>Індивідуальний синтез</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonResult.customSynthesisAriaLabel">
-        <source xml:lang="en">Customize synthesis decisions</source>
-        <target>Налаштувати рішення синтезу</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonResult.customizeSynthesisDescription">
-        <source xml:lang="en">Choose which attempt's approach the synthesis agent should follow for each implementation decision. The agent will reconcile dependencies and validate the combined result in a new worktree.</source>
-        <target>Виберіть, який підхід спроби синтезуючий агент повинен дотримуватися для кожного рішення щодо реалізації. Агент узгодить залежності та перевірить комбінований результат у новому робочому дереві.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonResult.decision">
-        <source xml:lang="en">Decision</source>
-        <target>Рішення</target>
       </trans-unit>
       <trans-unit id="sessionComparisonResult.focusAttempt">
         <source xml:lang="en">Focus {0}</source>
@@ -1944,25 +1952,9 @@ To disable this announcement, set {1} to false.</source>
         <source xml:lang="en">{0}m {1}s</source>
         <target>{0}м {1}с</target>
       </trans-unit>
-      <trans-unit id="sessionComparisonResult.neutralChoice">
-        <source xml:lang="en">Neutral choice</source>
-        <target>Нейтральний вибір</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonResult.noDistinctApproach">
-        <source xml:lang="en">No distinct approach</source>
-        <target>Немає чітко визначеного підходу</target>
-      </trans-unit>
       <trans-unit id="sessionComparisonResult.noStrengths">
         <source xml:lang="en">No distinct strong points reported</source>
         <target>Не повідомлено про жодні виразні сильні сторони.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonResult.notSelected">
-        <source xml:lang="en">Not selected</source>
-        <target>Не вибрано</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonResult.oneAffectedFile">
-        <source xml:lang="en">1 file affected</source>
-        <target>1 файл змінено</target>
       </trans-unit>
       <trans-unit id="sessionComparisonResult.otherStrengths">
         <source xml:lang="en">Strong points from other attempts</source>
@@ -1996,22 +1988,6 @@ To disable this announcement, set {1} to false.</source>
         <source xml:lang="en">{0}s</source>
         <target>{0}s</target>
       </trans-unit>
-      <trans-unit id="sessionComparisonResult.selectAttemptApproachAriaLabel">
-        <source xml:lang="en">{0} for {1}. {2}. {3} {4}</source>
-        <target>{0} для {1}. {2}. {3} {4}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonResult.selected">
-        <source xml:lang="en">Selected</source>
-        <target>Вибрано</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonResult.startCustomSynthesis">
-        <source xml:lang="en">Start Custom Synthesis</source>
-        <target>Почати індивідуальний синтез</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonResult.startCustomSynthesisAriaLabel">
-        <source xml:lang="en">Start custom synthesis with the selected approaches</source>
-        <target>Почніть кастомний синтез з обраних підходів.</target>
-      </trans-unit>
       <trans-unit id="sessionComparisonResult.startWithInstructions">
         <source xml:lang="en">Start Synthesis with Instructions</source>
         <target>Почати синтез з інструкціями</target>
@@ -2044,22 +2020,6 @@ To disable this announcement, set {1} to false.</source>
         <source xml:lang="en">Synthesize using the Judge recommendation</source>
         <target>Синтезуйте, використовуючи рекомендацію Судді</target>
       </trans-unit>
-      <trans-unit id="sessionComparisonResult.synthesizer">
-        <source xml:lang="en">Synthesizer</source>
-        <target>Синтезатор</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonResult.synthesizerDecides">
-        <source xml:lang="en">Synthesizer Decides</source>
-        <target>Синтезатор вирішує</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonResult.synthesizerDecidesAriaLabel">
-        <source xml:lang="en">Let the Synthesizer decide for {0}. {1}</source>
-        <target>Нехай синтезатор вирішить для {0}. {1}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonResult.synthesizerDecidesDescription">
-        <source xml:lang="en">Reconcile the available approaches.</source>
-        <target>Узгодьте доступні підходи.</target>
-      </trans-unit>
       <trans-unit id="sessionComparisonResult.timeWinner">
         <source xml:lang="en">Time winner</source>
         <target>Час переможця</target>
@@ -2080,10 +2040,6 @@ To disable this announcement, set {1} to false.</source>
         <source xml:lang="en">Unavailable</source>
         <target>Недоступно</target>
       </trans-unit>
-      <trans-unit id="sessionComparisonResult.useAttemptNumber">
-        <source xml:lang="en">Use Attempt {0}</source>
-        <target>Використовуйте спробу {0}</target>
-      </trans-unit>
       <trans-unit id="sessionComparisonResult.whyWinner">
         <source xml:lang="en">Why it won</source>
         <target>Чому це виграло</target>
@@ -2091,310 +2047,6 @@ To disable this announcement, set {1} to false.</source>
       <trans-unit id="sessionComparisonResult.winner">
         <source xml:lang="en">{0} won</source>
         <target>{0} виграв</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonResult.worseChoice">
-        <source xml:lang="en">Worse choice</source>
-        <target>Гірший вибір</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/contrib/chat/browser/sessionComparisonSetupDialog" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="sessionComparisonSetup.actions">
-        <source xml:lang="en">Actions</source>
-        <target>Дії</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.addAttempt">
-        <source xml:lang="en">Add attempt</source>
-        <target>Додати спробу</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.addAttemptAriaLabel">
-        <source xml:lang="en">Add another comparison attempt</source>
-        <target>Додати ще одну спробу порівняння</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.agent">
-        <source xml:lang="en">Agent</source>
-        <target>Агент</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.agentForAttempt">
-        <source xml:lang="en">Agent for attempt {0}</source>
-        <target>Агент для спроби {0}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.agentForJudge">
-        <source xml:lang="en">Agent for the Judge</source>
-        <target>Агент для Судді</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.agentForSynthesizer">
-        <source xml:lang="en">Agent for the Synthesizer</source>
-        <target>Агент для Синтезатора</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.agentReset">
-        <source xml:lang="en">The agent for attempt {0} is no longer available. The first available agent will be used.</source>
-        <target>Агент для спроби {0} більше недоступний. Буде використано першого доступного агента.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.attachedContextCount">
-        <source xml:lang="en">{0} context items</source>
-        <target>{0} елементів контексту</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.attempt">
-        <source xml:lang="en">Attempt {0}</source>
-        <target>Спроба {0}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.attempts">
-        <source xml:lang="en">Attempts</source>
-        <target>Спроби</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.back">
-        <source xml:lang="en">Back</source>
-        <target>Назад</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.backAriaLabel">
-        <source xml:lang="en">Go to the previous comparison setup step</source>
-        <target>Перейдіть до попереднього кроку налаштування порівняння</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.branchUnavailable">
-        <source xml:lang="en">No branch</source>
-        <target>Немає гілки</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.cancel">
-        <source xml:lang="en">Cancel</source>
-        <target>Скасувати</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.cancelAriaLabel">
-        <source xml:lang="en">Cancel comparison setup</source>
-        <target>Скасувати налаштування порівняння</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.confirm">
-        <source xml:lang="en">Start {0} sessions in parallel</source>
-        <target>Почати {0} сесій паралельно</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.gitRemoteRequired">
-        <source xml:lang="en">Comparisons require a Git remote.</source>
-        <target>Порівняння вимагають Git remote.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.gitRepositoryRequired">
-        <source xml:lang="en">Run and Compare Agents requires a Git repository with at least one commit.</source>
-        <target>Запуск та порівняння агентів вимагає наявності Git-репозиторію з принаймні одним комітом.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.judge">
-        <source xml:lang="en">Judge</source>
-        <target>Суддя</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.judgeAgentReset">
-        <source xml:lang="en">The Judge agent is no longer available. The first available agent will be used.</source>
-        <target>Агент Судді більше недоступний. Буде використано першого доступного агента.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.judgeConfiguration">
-        <source xml:lang="en">Judge configuration</source>
-        <target>Конфігурація судді</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.judgeDescription">
-        <source xml:lang="en">Reviews the finished attempts and recommends a result.</source>
-        <target>Оцінює завершені спроби та рекомендує результат.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.judgeInfo">
-        <source xml:lang="en">About the Judge</source>
-        <target>Про суддю</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.judgeModelConfigurationReset">
-        <source xml:lang="en">The selected Judge model configuration is no longer supported. The model defaults will be used.</source>
-        <target>Вибрана конфігурація моделі судді більше не підтримується. Будуть використані значення за замовчуванням моделі.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.judgeModelReset">
-        <source xml:lang="en">The selected Judge model is no longer available. The agent default will be used.</source>
-        <target>Вибрана модель Судді більше недоступна. Буде використано стандартного агента.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.judgePermissionReset">
-        <source xml:lang="en">The selected Judge permission is no longer available. The agent default will be used.</source>
-        <target>Вибране дозволення Судді більше недоступне. Буде використано значення за замовчуванням агента.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.minimumSelection">
-        <source xml:lang="en">Add at least two attempts.</source>
-        <target>Додайте принаймні дві спроби.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.model">
-        <source xml:lang="en">Model</source>
-        <target>Модель</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.modelConfigurationReset">
-        <source xml:lang="en">The selected model configuration for attempt {0} is no longer supported. The model defaults will be used.</source>
-        <target>Вибрана конфігурація моделі для спроби {0} більше не підтримується. Будуть використані значення за замовчуванням моделі.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.modelForAttempt">
-        <source xml:lang="en">Model for attempt {0}</source>
-        <target>Модель для спроби {0}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.modelForJudge">
-        <source xml:lang="en">Model for the Judge</source>
-        <target>Модель для Судді</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.modelForSynthesizer">
-        <source xml:lang="en">Model for the Synthesizer</source>
-        <target>Модель для синтезатора</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.modelReset">
-        <source xml:lang="en">The selected model for attempt {0} is no longer available. The agent default will be used.</source>
-        <target>Вибрана модель для спроби {0} більше недоступна. Буде використано стандартне значення агента.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.next">
-        <source xml:lang="en">Next</source>
-        <target>Далі</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.nextEvaluationAriaLabel">
-        <source xml:lang="en">Continue to evaluation configuration</source>
-        <target>Продовжити налаштування оцінки</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.noAvailableAgents">
-        <source xml:lang="en">No agents that support worktree isolation are available.</source>
-        <target>Немає агентів, які підтримують ізоляцію робочого дерева.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.noHarnesses">
-        <source xml:lang="en">No agents that support worktree isolation are available.</source>
-        <target>Немає агентів, які підтримують ізоляцію робочого дерева.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.optional">
-        <source xml:lang="en">Optional</source>
-        <target>Необов'язковий</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.permissionReset">
-        <source xml:lang="en">The selected permission for attempt {0} is no longer available. The agent default will be used.</source>
-        <target>Вибране дозволення для спроби {0} більше не доступне. Буде використано значення за замовчуванням агента.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.permissions">
-        <source xml:lang="en">Permissions</source>
-        <target>Дозволи</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.permissions.allowAllParticipants">
-        <source xml:lang="en">Allow all permissions for every participant</source>
-        <target>Дозволити всі дозволи для кожного учасника</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.permissions.allowAllParticipantsDescription">
-        <source xml:lang="en">Uses each selected agent's Allow all, Bypass Permissions, or Full Access option. Uncheck to restore every participant's default.</source>
-        <target>Використовує параметри "Дозволити всім", "Обійти дозволи" або "Повний доступ" для кожного вибраного агента. Зніміть позначку, щоб відновити значення за замовчуванням для кожного учасника.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.permissions.allowAllParticipantsInfo">
-        <source xml:lang="en">About allowing all permissions for every participant</source>
-        <target>Про надання всіх дозволів для кожного учасника</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.permissions.allowAllParticipantsUnavailable">
-        <source xml:lang="en">Unavailable for one or more selected agents or disabled by your organization.</source>
-        <target>Недоступно для одного або кількох вибраних агентів або відключено вашою організацією.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.permissions.unavailable">
-        <source xml:lang="en">Unavailable</source>
-        <target>Недоступно</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.permissions.unavailableDetail">
-        <source xml:lang="en">This agent does not expose configurable permissions.</source>
-        <target>Цей агент не надає можливості налаштування дозволів.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.permissionsForAttempt">
-        <source xml:lang="en">Permissions for attempt {0}</source>
-        <target>Дозволи для спроби {0}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.permissionsForJudge">
-        <source xml:lang="en">Permissions for the Judge</source>
-        <target>Дозволи для Судді</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.permissionsForSynthesizer">
-        <source xml:lang="en">Permissions for the Synthesizer</source>
-        <target>Дозволи для Синтезатора</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.prompt">
-        <source xml:lang="en">Prompt</source>
-        <target>Запит</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.promptAriaLabel">
-        <source xml:lang="en">Prompt shared by every comparison attempt</source>
-        <target>Запит, поділений кожною спробою порівняння</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.promptRequired">
-        <source xml:lang="en">Enter a prompt to run the attempts.</source>
-        <target>Введіть запит для виконання спроб.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.removeAttemptAriaLabel">
-        <source xml:lang="en">Remove attempt {0}</source>
-        <target>Видалити спробу {0}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.resizeHeight">
-        <source xml:lang="en">Resize dialog height</source>
-        <target>Змінити висоту діалогового вікна</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.resizeWidth">
-        <source xml:lang="en">Resize dialog width</source>
-        <target>Змінити ширину діалогового вікна</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.runAriaLabel">
-        <source xml:lang="en">Start the configured sessions in parallel</source>
-        <target>Запустіть налаштовані сесії паралельно</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.runTokenWarning">
-        <source xml:lang="en">This will use tokens for each session.</source>
-        <target>Це буде використовувати токени для кожної сесії.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.startSessionCount">
-        <source xml:lang="en">Start {0} sessions in parallel</source>
-        <target>Почати {0} сесій паралельно</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.startingFrom">
-        <source xml:lang="en">Starting from</source>
-        <target>Починаючи з</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.stepAttempts">
-        <source xml:lang="en">Attempts</source>
-        <target>Спроби</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.stepEvaluation">
-        <source xml:lang="en">Evaluation</source>
-        <target>Оцінка</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.stepLabel">
-        <source xml:lang="en">{0}. {1}</source>
-        <target>{0}. {1}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.stepsAriaLabel">
-        <source xml:lang="en">Comparison setup steps</source>
-        <target>Кроки налаштування порівняння</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.synthesisConfiguration">
-        <source xml:lang="en">Optional Synthesizer configuration</source>
-        <target>Додаткова конфігурація синтезатора</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.synthesizer">
-        <source xml:lang="en">Synthesizer</source>
-        <target>Синтезатор</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.synthesizerAgentReset">
-        <source xml:lang="en">The Synthesizer agent is no longer available. The first available agent will be used.</source>
-        <target>Агент синтезатора більше недоступний. Буде використано першого доступного агента.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.synthesizerDescription">
-        <source xml:lang="en">Combines the strongest parts of the attempts after the Judge recommends a result.</source>
-        <target>Поєднує найсильніші частини спроб після того, як Суддя рекомендує результат.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.synthesizerInfo">
-        <source xml:lang="en">About the Synthesizer</source>
-        <target>Про синтезатор</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.synthesizerModelConfigurationReset">
-        <source xml:lang="en">The selected Synthesizer model configuration is no longer supported. The model defaults will be used.</source>
-        <target>Вибрана конфігурація моделі синтезатора більше не підтримується. Будуть використані значення за замовчуванням моделі.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.synthesizerModelReset">
-        <source xml:lang="en">The selected Synthesizer model is no longer available. The agent default will be used.</source>
-        <target>Вибрана модель синтезатора більше недоступна. Буде використано стандартного агента.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.synthesizerPermissionReset">
-        <source xml:lang="en">The selected Synthesizer permission is no longer available. The agent default will be used.</source>
-        <target>Вибране дозволення синтезатора більше не доступне. Буде використано стандартне дозволення агента.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.title">
-        <source xml:lang="en">Run and Compare Agents</source>
-        <target>Запустіть і порівняйте агентів</target>
-      </trans-unit>
-      <trans-unit id="sessionComparisonSetup.usage">
-        <source xml:lang="en">Each attempt runs in an isolated worktree. Nothing is applied automatically.</source>
-        <target>Кожна спроба виконується в ізольованому робочому дереві. Нічого не застосовується автоматично.</target>
       </trans-unit>
     </body>
   </file>
@@ -2492,6 +2144,10 @@ To disable this announcement, set {1} to false.</source>
         <source xml:lang="en">{0}, {1} attached</source>
         <target>{0}, {1} прикріплено</target>
       </trans-unit>
+      <trans-unit id="workspacePicker.browseHostDescription">
+        <source xml:lang="en">{0} · {1}</source>
+        <target>{0} · {1}</target>
+      </trans-unit>
       <trans-unit id="workspacePicker.browseSelectLocal">
         <source xml:lang="en">Select...</source>
         <target>Виберіть...</target>
@@ -2524,6 +2180,10 @@ To disable this announcement, set {1} to false.</source>
         <source xml:lang="en">Use Remote Host</source>
         <target>Використовуйте віддалений хост</target>
       </trans-unit>
+      <trans-unit id="workspacePicker.devContainer.samples">
+        <source xml:lang="en">Dev Container Sample</source>
+        <target>Приклад контейнера для розробки</target>
+      </trans-unit>
       <trans-unit id="workspacePicker.devContainer.use">
         <source xml:lang="en">Use Dev Container</source>
         <target>Використовуйте контейнер розробника</target>
@@ -2539,6 +2199,10 @@ To disable this announcement, set {1} to false.</source>
       <trans-unit id="workspacePicker.githubLoading">
         <source xml:lang="en">GitHub repositories are still loading</source>
         <target>Репозиторії GitHub все ще завантажуються</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.hostDescription">
+        <source xml:lang="en">{0} · {1}</source>
+        <target>{0} · {1}</target>
       </trans-unit>
       <trans-unit id="workspacePicker.manageRemoteHost">
         <source xml:lang="en">Manage {0}</source>
@@ -2564,6 +2228,10 @@ To disable this announcement, set {1} to false.</source>
         <source xml:lang="en">Start by picking a workspace</source>
         <target>Почніть з вибору робочого простору</target>
       </trans-unit>
+      <trans-unit id="workspacePicker.refreshHostsFailed">
+        <source xml:lang="en">Could not refresh remote hosts. Showing the last known hosts.</source>
+        <target>Не вдалося оновити віддалені хости. Показуються останні відомі хости.</target>
+      </trans-unit>
       <trans-unit id="workspacePicker.remote">
         <source xml:lang="en">Remote</source>
         <target>Віддалений</target>
@@ -2579,6 +2247,10 @@ To disable this announcement, set {1} to false.</source>
       <trans-unit id="workspacePicker.selectedAriaLabel">
         <source xml:lang="en">New session in {0}</source>
         <target>Нова сесія в {0}</target>
+      </trans-unit>
+      <trans-unit id="workspacePicker.statusConnected">
+        <source xml:lang="en">Connected</source>
+        <target>Підключено</target>
       </trans-unit>
       <trans-unit id="workspacePicker.statusWithActiveSession">
         <source xml:lang="en">{0} · {1} active session</source>
@@ -2604,6 +2276,10 @@ To disable this announcement, set {1} to false.</source>
         <source xml:lang="en">When all GitHub pull requests associated with the session have merged and no chat is working or waiting for input, an archive suggestion may appear above the chat input. Use Tab or Shift+Tab to reach Archive, Configure Automatic Cleanup, or Dismiss Archive Suggestion, then Enter or Space to activate it. Configure Automatic Cleanup opens the settings for automatically archiving inactive merged sessions and permanently deleting automatically archived merged sessions. The explanation under What Does "Archive" Do? is collapsed by default. Use Tab to reach it and Enter or Space to expand or collapse it. Dismiss Archive Suggestion, or Escape while the suggestion is focused, hides the suggestion for this session, including after a reload, until it is archived or deleted, and returns focus to the chat input. Archiving the session hides it from the sessions list so you can focus on your remaining tasks. The session is not deleted. Ask your agent to find it, or look in the "Archived" section of the sessions list. You can unarchive it anytime. The worktree created for the session, if any, will be deleted. You can recreate it by unarchiving the session.</source>
         <target>Коли всі запити на злиття GitHub, пов'язані з сеансом, були об'єднані, і жоден чат не працює або чекає на введення, може з'явитися пропозиція архівування над полем введення чату. Використовуйте Tab або Shift+Tab, щоб дістатися до Архіву, Налаштувати автоматичне очищення або Відхилити пропозицію архівування, а потім Enter або Space, щоб активувати її. Налаштування автоматичного очищення відкриває налаштування для автоматичного архівування неактивних об'єднаних сеансів і постійного видалення автоматично архівованих об'єднаних сеансів. Пояснення під заголовком Що робить "Архів"? за замовчуванням згорнуте. Використовуйте Tab, щоб дістатися до нього, і Enter або Space, щоб розгорнути або згорнути його. Відхилити пропозицію архівування, або Escape, коли пропозиція сфокусована, приховує пропозицію для цього сеансу, включаючи після перезавантаження, поки вона не буде архівована або видалена, і повертає фокус до поля введення чату. Архівування сеансу приховує його зі списку сеансів, щоб ви могли зосередитися на своїх залишкових завданнях. Сеанс не видаляється. Попросіть свого агента знайти його або подивіться в розділі "Архівовані" списку сеансів. Ви можете розархівувати його в будь-який час. Робоче дерево, створене для сеансу, якщо таке є, буде видалено. Ви можете відновити його, розархівувавши сеанс.</target>
       </trans-unit>
+      <trans-unit id="sessionsChat.archiveNudgeContinuation">
+        <source xml:lang="en">Sending a new message after the suggestion appears hides it for those pull requests, including after a reload. It can appear again when a new pull request is added to the session and all its pull requests have merged.</source>
+        <target>Відправка нового повідомлення після появи пропозиції приховує її для тих запитів на злиття, включаючи після перезавантаження. Вона може з'явитися знову, коли новий запит на злиття буде додано до сесії, і всі його запити на злиття будуть об'єднані.</target>
+      </trans-unit>
       <trans-unit id="sessionsChat.archiveNudgeOnboarding">
         <source xml:lang="en">The first time you activate the suggestion's Archive or Mark as Done button, a spotlight may reveal that session's action in the sessions list. It briefly waits for the list action to appear. The action waits until you activate the highlighted action, activate Understood, or press Escape to end the spotlight. Use Tab or Shift+Tab to move between the highlighted action and Understood, and Enter or Space to activate either. If the spotlight cannot be shown or is interrupted, the session is still archived or marked as done as long as the suggestion remains available. Once completed or skipped, the spotlight will not appear again.</source>
         <target>Перший раз, коли ви активуєте кнопку Архівувати або Позначити як виконане для пропозиції, може з'явитися підсвічування, яке покаже дію цієї сесії в списку сесій. Воно коротко чекає, поки дія списку з'явиться. Дія чекає, поки ви не активуєте підсвічену дію, не активуєте Зрозуміло, або не натиснете Escape, щоб закінчити підсвічування. Використовуйте Tab або Shift+Tab, щоб переміщатися між підсвіченою дією та Зрозуміло, а також Enter або Space, щоб активувати будь-яку з них. Якщо підсвічування не може бути показано або переривається, сесія все ще буде архівована або позначена як виконана, поки пропозиція залишається доступною. Після завершення або пропуску підсвічування більше не з'явиться.</target>
@@ -2624,9 +2300,17 @@ To disable this announcement, set {1} to false.</source>
         <source xml:lang="en">When a background image is set, use Tint Window to Match Background in the Command Palette or the background context menu to turn matching window colors on or off. A check mark means tinting is enabled. Turning it off keeps the background image and restores the original window colors.</source>
         <target>Коли встановлено фонове зображення, використовуйте Tint Window to Match Background у командній палітрі або контекстному меню фону, щоб увімкнути або вимкнути відповідність кольорів вікна. Галочка означає, що тонування увімкнено. Вимкнення цього зберігає фонове зображення та відновлює оригінальні кольори вікна.</target>
       </trans-unit>
+      <trans-unit id="sessionsChat.blobby">
+        <source xml:lang="en">Type /blobby to unlock True Name without sending a chat request. If Blobby is off, it turns on; if it is already on, the Color tab opens. Change Color in the pet's context menu always opens Color. Stable and Insiders are free choices; True Name unlocks solid and custom colors. Activating the True Name achievement card or account badge also opens Color. Use the color picker or enter an opaque hex color such as #ff8800, then activate Apply Color. Unapplied custom colors are discarded when you leave the tab or close the modal.</source>
+        <target>Введіть /blobby, щоб розблокувати Справжнє Ім'я без відправлення запиту в чаті. Якщо Blobby вимкнено, він увімкнеться; якщо він уже увімкнений, відкривається вкладка Колір. Змінити Колір у контекстному меню домашнього улюбленця завжди відкриває Колір. Stable та Insiders - це безкоштовні варіанти; Справжнє Ім'я розблоковує насичені та індивідуальні кольори. Активація картки досягнення Справжнє Ім'я або значка облікового запису також відкриває Колір. Використовуйте вибір кольору або введіть непрозорий шестикратний колір, наприклад #ff8800, а потім активуйте Застосувати Колір. Непризначені індивідуальні кольори скидаються, коли ви залишаєте вкладку або закриваєте модальне вікно.</target>
+      </trans-unit>
       <trans-unit id="sessionsChat.branchPickerUpstream">
-        <source xml:lang="en">For a new Agent Host session in a Git repository, use Tab to reach the branch picker and press Enter or Space to choose a base branch. With New Worktree selected, the current branch's tracked upstream is selected by default when available; otherwise the default branch is selected. When either the current branch or its upstream is selected, both appear together at the top with the upstream first and focused when the picker opens. Use the arrow keys to choose a branch and press Enter to select it.</source>
-        <target>Для нової сесії Agent Host у репозиторії Git використовуйте Tab, щоб перейти до вибору гілки, і натисніть Enter або Space, щоб вибрати базову гілку. Коли вибрано New Worktree, відстежуваний upstream поточної гілки вибирається за замовчуванням, якщо він доступний; в іншому випадку вибирається гілка за замовчуванням. Коли вибрано або поточну гілку, або її upstream, обидві з'являються разом вгорі, причому upstream перша і зосереджена, коли відкривається вибір. Використовуйте стрілки для вибору гілки і натисніть Enter, щоб вибрати її.</target>
+        <source xml:lang="en">For a new Agent Host session in a Git repository, use Tab to reach the branch picker and press Enter or Space to choose a base branch. With New Worktree selected, the current branch's tracked upstream is selected by default when available; otherwise the default branch is selected. The picker lists the current branch's upstream and the current branch when it is not the default branch, then the default branch's remote-tracking branch and the default branch, then the other branches, with a separator between each group, and focuses the selected branch when it opens. Each branch is announced with its group name: Current Branch, Default Branch, or Branches. With Branch selected, the checked-out branch, which is the selected branch, is listed first when it is not the default branch, followed by the default branch in its own group, then the other branches. Use the arrow keys to choose a branch and press Enter to select it.</source>
+        <target>Для нової сесії Agent Host у репозиторії Git використовуйте Tab, щоб дістатися до вибору гілки, і натисніть Enter або Space, щоб вибрати базову гілку. Коли вибрано New Worktree, відстежувана upstream поточної гілки вибирається за замовчуванням, якщо вона доступна; в іншому випадку вибирається гілка за замовчуванням. Вибірник перераховує upstream поточної гілки та поточну гілку, коли вона не є гілкою за замовчуванням, потім віддалену відстежувану гілку гілки за замовчуванням та гілку за замовчуванням, а потім інші гілки, з роздільником між кожною групою, і фокусується на вибраній гілці, коли відкривається. Кожна гілка оголошується з назвою своєї групи: Поточна гілка, Гілка за замовчуванням або Гілки. Коли вибрано Гілку, перевірена гілка, яка є вибраною гілкою, перераховується першою, коли вона не є гілкою за замовчуванням, за якою слідує гілка за замовчуванням у своїй власній групі, а потім інші гілки. Використовуйте клавіші зі стрілками, щоб вибрати гілку, і натисніть Enter, щоб вибрати її.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.canvases">
+        <source xml:lang="en">Available canvases appear in their own pill. A single canvas shows its title and opens directly; multiple canvases show a count and open a picker. Activating a canvas focuses its open tab or reopens it if it was closed.</source>
+        <target>Доступні полотна з'являються у своїй власній пігулці. Одне полотно показує свій заголовок і відкривається безпосередньо; кілька полотен показують кількість і відкривають вибір. Активуючи полотно, ви фокусуєте його відкриту вкладку або повторно відкриваєте її, якщо вона була закрита.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.changes">
         <source xml:lang="en">Focus the Changes view{0}.</source>
@@ -2653,20 +2337,40 @@ To disable this announcement, set {1} to false.</source>
         <target>Коли простір обмежений, вибір нової сесії показує значки замість міток, не переходячи на інший рядок. Назва робочого простору залишається видимою. Вибірки лише з іконками зберігають свої доступні імена та підказки; активуйте їх, щоб переглянути та змінити поточний вибір.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.compareAgents">
-        <source xml:lang="en">In the new-session input, open the agent picker and activate Run and Compare Agents to open a two-step comparison setup. Use Tab to reach the Attempts and Evaluation step buttons and activate either button to move directly to that step. In Attempts, choose a Git repository with at least one commit and a remote, choose the base branch, then edit the shared prompt or each attempt's agent, model, supported reasoning effort, and provider-specific Permissions selection. The Permissions picker uses the exact choices advertised by that agent, such as Manual permissions and Allow all for Copilot, Ask Before Edits and Bypass Permissions for Claude, or Default Permissions and Full Access for Codex. In comparisons, choosing Allow all for Copilot also uses Autopilot mode. Check Allow all permissions for every participant to select each agent's allow-all choice for every attempt, the Judge, and the Synthesizer; uncheck it to restore every participant's provider default. Activate the adjacent information button for details about these choices. Organization policy may disable elevated choices or the bulk checkbox. Activate Next to configure the Judge and optional Synthesizer together on the Evaluation step, and use Back to revisit Attempts. Their information buttons describe each role. Use Add attempt for another run; Remove appears when more than two attempts exist. On the Evaluation step, activate Start sessions in parallel to submit, hover it for a token-usage warning, or press Escape to cancel. Open the comparison parent in the Sessions list to open every available attempt in a resizable grid. With two attempt panes, both chat inputs remain visible. With three or more, only the active attempt pane shows its chat input; focus another attempt pane to show its input. Screen-reader optimized mode keeps every attempt input visible. After the Judge finishes, its chat shows the winning attempt and a concise categorized list covering the decisive comparison evidence, validation, code quality, and solution, followed by strong points from other attempts. Focus the comparison result and use Open Accessible View{0} to read its verdict, attempt metrics, and synthesis decisions as plain text. Use Tab to reach an attempt name and activate its link to reveal that session. Use Tab to reach Attempt time and token usage, then press Enter or Space to expand the table of total time and total tokens. Activate Focus Winning Session to open the recommended attempt, or use its adjacent dropdown to focus another attempt. When synthesis is available, Synthesize Attempts starts the Judge's default plan. Open its More Actions menu and choose Additional Synthesis Instructions to enter requirements that are remembered and applied to either recommended or custom synthesis. Activate Start Synthesis with Instructions, or press Ctrl+Enter (Cmd+Enter on macOS) in that field, to start the recommended plan with those requirements. When the Judge reports multiple implementation decisions, activate Custom Synthesis to reveal a decision table. Each row describes one implementation decision and rates the attempts as a better, neutral, or worse choice. The table scrolls when its decisions or attempt columns exceed the available space. Use Tab to move between the choice buttons, select one attempt per row or let the Synthesizer decide, then activate Start Custom Synthesis. The instructions and choices guide a new synthesis session and do not modify the original attempts.</source>
-        <target>У введенні нової сесії відкрийте вибір агента та активуйте Запустити та Порівняти агентів, щоб відкрити налаштування двоетапного порівняння. Використовуйте Tab, щоб дістатися до кнопок етапів Спроби та Оцінка, і активуйте будь-яку кнопку, щоб перейти безпосередньо до цього етапу. У Спробах виберіть репозиторій Git з принаймні одним комітом і віддаленим репозиторієм, виберіть базову гілку, а потім відредагуйте спільний запит або агента кожної спроби, модель, підтримувані зусилля з обґрунтування та вибір дозволів, специфічних для постачальника. Вибір дозволів використовує точні варіанти, які рекламує цей агент, такі як Ручні дозволи та Дозволити все для Copilot, Запитувати перед редагуванням та Обійти дозволи для Claude, або Стандартні дозволи та Повний доступ для Codex. У порівняннях вибір Дозволити все для Copilot також використовує режим Автопілота. Виберіть Дозволити всі дозволи для кожного учасника, щоб вибрати варіант дозволу для кожної спроби, Суддю та Синтезатор; зніміть галочку, щоб відновити стандартні налаштування постачальника кожного учасника. Активуйте сусідню кнопку інформації для деталей про ці вибори. Політика організації може вимкнути підвищені вибори або масову галочку. Активуйте Далі, щоб налаштувати Суддю та необов'язковий Синтезатор разом на етапі Оцінки, і використовуйте Назад, щоб повернутися до Спроб. Їхні кнопки інформації описують кожну роль. Використовуйте Додати спробу для ще одного запуску; Видалити з'являється, коли існує більше двох спроб. На етапі Оцінки активуйте Запустити сесії паралельно, щоб надіслати, наведіть курсор на неї для попередження про використання токенів або натисніть Escape, щоб скасувати. Відкрийте батьківське порівняння у списку Сесій, щоб відкрити кожну доступну спробу в змінному сітці. З двома панелями спроб обидва введення чату залишаються видимими. З трьома або більше лише активна панель спроби показує своє введення чату; зосередьтеся на іншій панелі спроби, щоб показати її введення. Режим, оптимізований для екранних читалок, зберігає видимими всі введення спроб. Після завершення Судді його чат показує виграшну спробу та стиснутий категоризований список, що охоплює вирішальні докази порівняння, валідацію, якість коду та рішення, за яким слідують сильні сторони з інших спроб. Зосередьтеся на результатах порівняння та використовуйте Відкрити доступний вигляд{0}, щоб прочитати його вердикт, метрики спроб та рішення синтезу у вигляді простого тексту. Використовуйте Tab, щоб дістатися до назви спроби та активуйте її посилання, щоб розкрити цю сесію. Використовуйте Tab, щоб дістатися до Часу спроби та використання токенів, а потім натисніть Enter або Space, щоб розгорнути таблицю загального часу та загальної кількості токенів. Активуйте Зосередити виграшну сесію, щоб відкрити рекомендовану спробу, або використовуйте сусіднє випадаюче меню, щоб зосередитися на іншій спробі. Коли синтез доступний, Синтезувати спроби запускає стандартний план Судді. Відкрийте його меню Додаткові дії та виберіть Додаткові інструкції з синтезу, щоб ввести вимоги, які запам'ятовуються та застосовуються до рекомендованого або спеціального синтезу. Активуйте Почати синтез з інструкціями або натисніть Ctrl+Enter (Cmd+Enter на macOS) у цьому полі, щоб розпочати рекомендований план з цими вимогами. Коли Суддя повідомляє про кілька рішень щодо реалізації, активуйте Спеціальний синтез, щоб відкрити таблицю рішень. Кожен рядок описує одне рішення щодо реалізації та оцінює спроби як кращий, нейтральний або гірший вибір. Таблиця прокручується, коли її рішення або стовпці спроб перевищують доступний простір. Використовуйте Tab, щоб переміщатися між кнопками вибору, виберіть одну спробу за рядок або дайте Синтезатору вирішити, а потім активуйте Почати спеціальний синтез. Інструкції та вибори ведуть нову сесію синтезу та не змінюють оригінальні спроби.</target>
+        <source xml:lang="en">In the new-session input, open the model picker and activate Compare Models. In Attempts, choose two to ten distinct models, or choose one model and set Number of Runs from two to ten. Attempts inherit the current workspace, branch, agent, and permissions. Use Tab to reach Back and Next. In Judge, optionally select a model to review the attempts and recommend a winner. Leave Judge unselected and activate Done to run attempts without review. With a Judge selected, activate Next to choose an optional Synthesizer. Without a Synthesizer, review is available but synthesis is not. Activate a selected model again to clear it. Back preserves your choices. Done returns to the composer; activate Run N Attempts to launch. Escape closes the picker without launching. Open the comparison parent in the Sessions list to open every available attempt in a resizable grid. With two attempt panes, both chat inputs remain visible. With three or more, only the active attempt pane shows its chat input; focus another attempt pane to show its input. Screen-reader optimized mode keeps every attempt input visible. After the Judge finishes, its chat shows the winning attempt and a concise categorized list covering the decisive comparison evidence, validation, code quality, and solution, followed by strong points from other attempts. Focus the comparison result and use Open Accessible View{0} to read its verdict and attempt metrics as plain text. Use Tab to reach an attempt name and activate its link to reveal that session. Use Tab to reach Attempt time and token usage, then press Enter or Space to expand the table of total time and total tokens. Activate Focus Winning Session to open the recommended attempt, or use its adjacent dropdown to focus another attempt. When synthesis is available, Synthesize Attempts starts the Judge's default plan. Open its More Actions menu and choose Additional Synthesis Instructions to enter requirements that are remembered and applied to recommended synthesis. Activate Start Synthesis with Instructions, or press Ctrl+Enter (Cmd+Enter on macOS) in that field, to start the recommended plan with those requirements. The additional instructions guide a new synthesis session and do not modify the original attempts.</source>
+        <target>У введенні нової сесії відкрийте вибір моделі та активуйте Порівняти моделі. У Спробах виберіть від двох до десяти різних моделей або виберіть одну модель і встановіть Кількість запусків від двох до десяти. Спроби успадковують поточне робоче середовище, гілку, агента та дозволи. Використовуйте Tab, щоб дістатися до Назад і Далі. У Судді за бажанням виберіть модель для перегляду спроб і рекомендації переможця. Залиште Суддю не вибраною та активуйте Готово, щоб запустити спроби без перегляду. Якщо Суддя вибраний, активуйте Далі, щоб вибрати необов'язковий Синтезатор. Без Синтезатора перегляд доступний, але синтезу немає. Активуйте вибрану модель ще раз, щоб скинути її. Назад зберігає ваші вибори. Готово повертає до композитора; активуйте Запустити N спроб, щоб запустити. Escape закриває вибір без запуску. Відкрийте батьківське порівняння у списку Сесій, щоб відкрити кожну доступну спробу в змінному сітці. З двома панелями спроб обидва введення чату залишаються видимими. З трьома або більше лише активна панель спроб показує своє введення чату; зосередьтеся на іншій панелі спроб, щоб показати її введення. Режим, оптимізований для екранних читалок, зберігає видимими всі введення спроб. Після завершення Судді його чат показує виграшну спробу та стиснутий категоризований список, що охоплює вирішальні порівняльні докази, валідацію, якість коду та рішення, за яким слідують сильні сторони інших спроб. Зосередьтеся на результаті порівняння та використовуйте Відкрити доступний перегляд{0}, щоб прочитати його вердикт і метрики спроб як простий текст. Використовуйте Tab, щоб дістатися до назви спроби та активуйте її посилання, щоб відкрити цю сесію. Використовуйте Tab, щоб дістатися до Часу спроби та використання токенів, а потім натисніть Enter або Space, щоб розгорнути таблицю загального часу та загальних токенів. Активуйте Зосередити виграшну сесію, щоб відкрити рекомендовану спробу, або використовуйте її сусіднє випадаюче меню, щоб зосередитися на іншій спробі. Коли синтез доступний, Синтезувати спроби запускає стандартний план Судді. Відкрийте його меню Додаткові дії та виберіть Додаткові інструкції для синтезу, щоб ввести вимоги, які запам'ятовуються та застосовуються до рекомендованого синтезу. Активуйте Почати синтез з інструкціями або натисніть Ctrl+Enter (Cmd+Enter на macOS) у цьому полі, щоб розпочати рекомендований план з цими вимогами. Додаткові інструкції керують новою сесією синтезу та не змінюють оригінальні спроби.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.compareAgentsConfiguration">
+        <source xml:lang="en">Comparison selections are kept while draft permissions or mode are updating. Run N Attempts is unavailable until the update finishes.</source>
+        <target>Вибори для порівняння зберігаються під час оновлення дозволів або режиму чернетки. Запуск N спроб недоступний, поки оновлення не завершиться.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.compareAgentsGroupActions">
-        <source xml:lang="en">When every comparison session is idle, activate the check-mark Archive Comparison action in the comparison header to archive its sessions without deleting them. Delete Group remains available from the comparison header context menu.</source>
-        <target>Коли кожна сесія порівняння бездіяльна, активуйте дію з позначкою Archive Comparison у заголовку порівняння, щоб архівувати її сесії без їх видалення. Дія Delete Group залишається доступною з контекстного меню заголовка порівняння.</target>
+        <source xml:lang="en">Use the comparison header's Mark All as Done action to mark its sessions done, with the same confirmation and Undo as other groups. When every participant is done, the automatically created group is removed. Undo restores the group and its sessions. Delete Group remains available from the comparison header context menu.</source>
+        <target>Використовуйте дію "Позначити всі як виконані" заголовка порівняння, щоб позначити сесії як виконані, з такою ж підтвердженням і скасуванням, як і в інших групах. Коли всі учасники завершать, автоматично створена група буде видалена. Скасування відновлює групу та її сесії. Видалити групу залишається доступним з контекстного меню заголовка порівняння.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.compareAgentsInactivePaneNotification">
-        <source xml:lang="en">When a question tool needs input in an inactive visible pane, the confirmation notification setting can show an operating system notification even while another pane in the Agents window is active.</source>
-        <target>Коли інструмент запитань потребує введення в неактивній видимій панелі, налаштування сповіщення про підтвердження може показувати сповіщення операційної системи, навіть коли інша панель у вікні Агентів активна.</target>
+        <source xml:lang="en">When a question tool needs attention in an inactive visible pane, the confirmation notification setting can show an operating system notification even while another pane in the Agents window is active.</source>
+        <target>Коли інструмент запитань потребує уваги в неактивній видимій панелі, налаштування сповіщення про підтвердження може показувати сповіщення операційної системи, навіть коли інша панель у вікні Агентів активна.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.compareAgentsInstructions">
+        <source xml:lang="en">The initial Judge and synthesis messages are collapsed under Judge Instructions or Synthesis Instructions. Use Tab to reach the summary, then press Enter or Space to expand or collapse the full instructions. The complete instructions remain in the conversation and in its Accessible View.</source>
+        <target>Початкові повідомлення Судді та синтезу згруповані під Інструкціями Судді або Інструкціями Синтезу. Використовуйте Tab, щоб дістатися до резюме, потім натисніть Enter або Space, щоб розгорнути або згрупувати повні інструкції. Повні інструкції залишаються в розмові та в її Доступному вигляді.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.compareAgentsOpenInGrid">
+        <source xml:lang="en">Attempts open in a grid when they start by default. Turn off sessions.chat.compareAgents.openInGrid to start them without automatic navigation. You can still select the comparison group to open its grid.</source>
+        <target>Спроби відкриваються в сітці, коли вони починаються за замовчуванням. Вимкніть sessions.chat.compareAgents.openInGrid, щоб почати їх без автоматичної навігації. Ви все ще можете вибрати групу порівняння, щоб відкрити її сітку.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.compareAgentsRationaleOrder">
         <source xml:lang="en">Judge results identify candidates as Attempt N with agent, model, and effort, then present Why it won in this order: Comparison, Validation, Code quality, Solution.</source>
         <target>Результати судження ідентифікують кандидатів як Спроба N з агентом, моделлю та зусиллям, а потім представляють Чому це виграло в такому порядку: Порівняння, Валідація, Якість коду, Рішення.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.compareAgentsSetup">
+        <source xml:lang="en">Comparison setup is a working copy until you activate Done. Cancel is available at every step. Cancel, Escape, or clicking outside the picker discards setup changes and keeps your previous single-model or configured comparison ready to send. Unfinished setup does not resume when you reopen the picker. Done commits your choices and changes the model label to N Attempts and Send to Run N Attempts. Reopening a configured comparison starts a working copy of those choices.</source>
+        <target>Налаштування порівняння є робочою копією, поки ви не активуєте Готово. Скасувати доступно на кожному етапі. Скасування, Escape або натискання поза вибором скасовує зміни в налаштуванні та зберігає ваше попереднє одно-модельне або налаштоване порівняння готовим до відправки. Невиконане налаштування не відновлюється, коли ви знову відкриваєте вибір. Готово фіксує ваші вибори та змінює мітку моделі на N Спроб та Відправити для Запуску N Спроб. Повторне відкриття налаштованого порівняння починає робочу копію цих виборів.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.compareAgentsTokenWarning">
+        <source xml:lang="en">Running a comparison uses tokens for each session. The Run N Attempts button shows this warning immediately on hover.</source>
+        <target>Запуск порівняння використовує токени для кожної сесії. Кнопка Запустити N Спроб показує це попередження відразу при наведенні.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.connectionLog">
         <source xml:lang="en">While connecting to a Dev Container for an existing session, use Tab to reach Show Log and press Enter to open the Dev Container output channel.</source>
@@ -2688,6 +2392,10 @@ To disable this announcement, set {1} to false.</source>
         <source xml:lang="en">To copy a browser link that opens an Agent Host session in the Agents window, open the session's context menu and choose Copy Link.</source>
         <target>Щоб скопіювати посилання браузера, яке відкриває сесію Agent Host у вікні Агентів, відкрийте контекстне меню сесії та виберіть Скопіювати посилання.</target>
       </trans-unit>
+      <trans-unit id="sessionsChat.copySessionRecord">
+        <source xml:lang="en">When a pill represents a single item, its context menu offers the item's copy actions, such as copying its URL or file path. For a collection, open the dropdown and use the individual row actions instead.</source>
+        <target>Коли пігулка представляє один елемент, її контекстне меню пропонує дії копіювання для цього елемента, такі як копіювання його URL або шляху до файлу. Для колекції відкрийте випадаюче меню та використовуйте дії для окремих рядків.</target>
+      </trans-unit>
       <trans-unit id="sessionsChat.createdBySession">
         <source xml:lang="en">When a session was created by another session, focus it in the Sessions list and use the Show Hover command{0}. Move focus to the Created by link, then press Enter or Space to open the creator session.</source>
         <target>Коли сесію було створено іншою сесією, зосередьте на ній увагу в списку Сесій і використайте команду Показати підказку{0}. Перемістіть фокус на посилання Створено ким, а потім натисніть Enter або Space, щоб відкрити сесію творця.</target>
@@ -2701,8 +2409,12 @@ To disable this announcement, set {1} to false.</source>
         <target>Повідомлення, надіслані з іншої сесії або чату, показують анотацію джерела над повідомленням. Натисніть Tab, щоб зосередитися на анотації, а потім натисніть Enter або Space, щоб відкрити чат джерела.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.deleteChat">
-        <source xml:lang="en">To permanently delete a chat, open the chat tab's context menu and choose Delete Chat. This is destructive and cannot be undone.</source>
-        <target>Щоб назавжди видалити чат, відкрийте контекстне меню вкладки чату та виберіть Видалити чат. Це є руйнівним і не може бути скасовано.</target>
+        <source xml:lang="en">Before a new nested session is committed, its session header and Sessions list row offer Delete without confirmation. After it is committed, those controls offer Archive or Mark as Done instead. To permanently delete a committed nested session, open the chat tab's context menu and choose Delete Chat. This is destructive and cannot be undone.</source>
+        <target>Перед тим, як нову вкладену сесію буде зафіксовано, її заголовок сесії та рядок списку Сесій пропонують Видалити без підтвердження. Після того, як вона буде зафіксована, ці елементи керування пропонують Архівувати або Позначити як Зроблено замість цього. Щоб назавжди видалити зафіксовану вкладену сесію, відкрийте контекстне меню вкладки чату та виберіть Видалити Чат. Це є руйнівним і не може бути скасовано.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.deleteSandboxSession">
+        <source xml:lang="en">For a Cloud sandbox session, Delete removes its task and stored conversation even when the environment is offline. A failed deletion leaves the session in the list.</source>
+        <target>Для сесії Cloud sandbox, видалення видаляє його завдання та збережену розмову, навіть коли середовище офлайн. Неуспішне видалення залишає сесію у списку.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.deleteSession">
         <source xml:lang="en">To permanently delete a session, open its context menu and choose Delete. This is destructive and cannot be undone.</source>
@@ -2711,6 +2423,10 @@ To disable this announcement, set {1} to false.</source>
       <trans-unit id="sessionsChat.devContainer">
         <source xml:lang="en">When Dev Container Agent Host sessions are enabled, Docker is available on the host, and a local, SSH, Tunnel, or WSL folder contains a Dev Container configuration, open the folder's submenu and choose Use Dev Container. For remote folders, first connect to a host that supports Dev Container sessions. For WSL folders, Docker must be available in the WSL distribution. Use the arrow keys to navigate submenus and Enter to select. The workspace picker then identifies the folder with a Dev Container suffix. Choose Use Local or Use Remote Host to switch back.</source>
         <target>Коли сесії Dev Container Agent Host увімкнені, Docker доступний на хості, а локальна, SSH, Tunnel або WSL папка містить конфігурацію Dev Container, відкрийте підменю папки та виберіть Використати Dev Container. Для віддалених папок спочатку підключіться до хоста, який підтримує сесії Dev Container. Для папок WSL Docker повинен бути доступний у дистрибутиві WSL. Використовуйте клавіші зі стрілками для навігації по підменю та клавішу Enter для вибору. Потім вибір робочого простору ідентифікує папку з суфіксом Dev Container. Виберіть Використати локальний або Використати віддалений хост, щоб повернутися назад.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.devContainerSamples">
+        <source xml:lang="en">The workspace picker includes Dev Container Sample. Open its submenu and choose a sample with the arrow keys and Enter. Selecting a sample does not start Docker or clone the repository. The sample is prepared in a Docker volume when you send your first prompt.</source>
+        <target>Вибір робочого простору включає зразок контейнера розробника. Відкрийте його підменю та виберіть зразок за допомогою клавіш зі стрілками та Enter. Вибір зразка не запускає Docker і не клонує репозиторій. Зразок готується у Docker-обсязі, коли ви надсилаєте свій перший запит.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.dictation">
         <source xml:lang="en">When dictation is configured, dictate your message into the input{0}. Tap to start and stop, or hold to dictate only while pressed. If the speech-to-text model is still preparing, activate the dictation control again to cancel.</source>
@@ -2723,6 +2439,10 @@ To disable this announcement, set {1} to false.</source>
       <trans-unit id="sessionsChat.doneNudge">
         <source xml:lang="en">When all GitHub pull requests associated with the session have merged and no chat is working or waiting for input, a mark as done suggestion may appear above the chat input. Use Tab or Shift+Tab to reach Mark as Done, Configure Automatic Cleanup, or Dismiss Mark as Done Suggestion, then Enter or Space to activate it. Configure Automatic Cleanup opens the settings for automatically archiving inactive merged sessions and permanently deleting automatically archived merged sessions. The explanation under What Does "Mark as Done" Do? is collapsed by default. Use Tab to reach it and Enter or Space to expand or collapse it. Dismiss Mark as Done Suggestion, or Escape while the suggestion is focused, hides the suggestion for this session, including after a reload, until it is marked as done or deleted, and returns focus to the chat input. Marking the session as done hides it from the sessions list so you can focus on your remaining tasks. The session is not deleted. Ask your agent to find it, or look in the "Done" section of the sessions list. You can restore it anytime. The worktree created for the session, if any, will be deleted. You can recreate it by restoring the session.</source>
         <target>Коли всі запити на злиття GitHub, пов'язані з сесією, були злиті, і жоден чат не працює або не чекає на введення, може з'явитися пропозиція "Позначити як виконане" над полем введення чату. Використовуйте Tab або Shift+Tab, щоб дістатися до "Позначити як виконане", "Налаштувати автоматичне очищення" або "Скасувати пропозицію 'Позначити як виконане'", а потім Enter або Space, щоб активувати його. "Налаштувати автоматичне очищення" відкриває налаштування для автоматичного архівування неактивних злитих сесій і постійного видалення автоматично архівованих злитих сесій. Пояснення під "Що робить 'Позначити як виконане'?" за замовчуванням згорнуте. Використовуйте Tab, щоб дістатися до нього, і Enter або Space, щоб розгорнути або згорнути його. "Скасувати пропозицію 'Позначити як виконане'", або Escape, коли пропозиція сфокусована, приховує пропозицію для цієї сесії, включаючи після перезавантаження, поки вона не буде позначена як виконана або видалена, і повертає фокус до поля введення чату. Позначення сесії як виконаної приховує її зі списку сесій, щоб ви могли зосередитися на своїх залишкових завданнях. Сесія не видаляється. Попросіть вашого агента знайти її або подивіться в розділі "Виконано" списку сесій. Ви можете відновити її в будь-який час. Робоче дерево, створене для сесії, якщо таке є, буде видалено. Ви можете відтворити його, відновивши сесію.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.environmentFolders">
+        <source xml:lang="en">Choose Environments in the workspace picker to connect to a GitHub environment, then select a folder on that host. Use the arrow keys to navigate, Enter to select, and Escape to cancel either picker.</source>
+        <target>Виберіть Середовища у вибірнику робочого простору, щоб підключитися до середовища GitHub, а потім виберіть папку на цьому хості. Використовуйте клавіші зі стрілками для навігації, Enter для вибору та Escape для скасування будь-якого вибірника.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.externalSessionAdoption">
         <source xml:lang="en">Once you send a message to an external session's agent, it becomes a regular session. Its banner and External hover label disappear, and it is no longer grouped or filtered as external.</source>
@@ -2737,8 +2457,8 @@ To disable this announcement, set {1} to false.</source>
         <target>Коли ви вперше відкриваєте сесію, створену в іншому додатку, банер пояснює, що ви можете продовжити її тут. Сесії Codex можуть використовувати вашу підписку на ChatGPT або Copilot, вибрану в селекторі моделей. Сесії Claude використовують вашу підписку на Copilot. Використовуйте Tab, щоб досягти Close, і натисніть Enter або Space, щоб назавжди закрити банер для всіх зовнішніх сесій та повернути фокус до вводу чату.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.externalSessionFilter">
-        <source xml:lang="en">The Sessions list Filter menu includes an External submenu. Choose None, Recent, Last 24 Hours, Last 7 Days, or Last 30 Days to control which sessions from other applications are shown.</source>
-        <target>Меню фільтра списку сесій містить підменю Зовнішнє. Виберіть Ні, Останні, Останні 24 години, Останні 7 днів або Останні 30 днів, щоб контролювати, які сесії з інших додатків відображаються.</target>
+        <source xml:lang="en">The Sessions list Filter Sessions menu includes a Created Externally submenu. Choose None, Recent, Last 24 Hours, Last 7 Days, or Last 30 Days to control which sessions from other applications are shown. Last 7 Days is the default. Show in External Section places these sessions in their own External section. This option is off by default, so external sessions appear alongside other sessions in their normal groups.</source>
+        <target>Меню Фільтр Сесій у списку Сесій включає підменю Створено зовні. Виберіть Ні, Останні, Останні 24 години, Останні 7 днів або Останні 30 днів, щоб контролювати, які сесії з інших додатків відображаються. Останні 7 днів є значенням за замовчуванням. Показати в Зовнішньому Розділі поміщає ці сесії в окремий Зовнішній розділ. Ця опція за замовчуванням вимкнена, тому зовнішні сесії з'являються поряд з іншими сесіями у своїх звичайних групах.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.externalSessionImport">
         <source xml:lang="en">To make an external session a regular session without sending a message, use Import in its row toolbar, before Archive or Mark as Done, or focus the session and choose Import from its context menu{0}. This action is available when the host supports importing sessions.</source>
@@ -2780,6 +2500,22 @@ To disable this announcement, set {1} to false.</source>
         <source xml:lang="en">Alt-click, or Option-click on macOS, the Fork Conversation button at a checkpoint to open the fork beside its source. Ordinary activation keeps its existing behavior. With the keyboard, activate Fork Conversation, reopen the source from the Sessions list, then choose Open to the Side from the fork's context menu.</source>
         <target>Alt-клік або Option-клік на macOS на кнопці Fork Conversation на контрольній точці, щоб відкрити гілку поряд з її джерелом. Звичайна активація зберігає свою існуючу поведінку. За допомогою клавіатури активуйте Fork Conversation, повторно відкрийте джерело зі списку сесій, а потім виберіть Open to the Side з контекстного меню гілки.</target>
       </trans-unit>
+      <trans-unit id="sessionsChat.generatedImageArtifacts">
+        <source xml:lang="en">Generated images from this chat automatically appear in the Generated Images section of the Artifacts pill, separate from other images and files. When Images Preview is enabled for chat, open an image and use the Left and Right Arrow keys to browse generated images and user attachments from the conversation. Images shown from the transcript do not offer Remove from Session unless they were also recorded as artifacts.</source>
+        <target>Згенеровані зображення з цього чату автоматично з'являються в розділі Згенеровані зображення в вкладці Артефакти, окремо від інших зображень і файлів. Коли попередній перегляд зображень увімкнено для чату, відкрийте зображення та використовуйте клавіші стрілок вліво та вправо для перегляду згенерованих зображень і вкладень користувача з розмови. Зображення, показані з транскрипту, не пропонують видалення з сесії, якщо вони також не були зафіксовані як артефакти.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.generatedImageBatch">
+        <source xml:lang="en">Multiple image-generation calls in a response share one batch preview. Select any thumbnail, including one still generating, to show its image or progress and its tool dropdown above the preview. Use Tab to focus the selected thumbnail, then Left or Right Arrow, Home, or End to select another image or its progress. Expand the selected tool dropdown to inspect its prompt and output. The selected thumbnail has a highlighted border. The thumbnail row follows the selected preview's size. Generating images show only the compact glyph band, while cancelled or failed images show their status in the tool dropdown without an empty preview. The Image batch status below the thumbnails shows how many images are ready out of the total, along with any that need attention, failed, or were cancelled. Later results arrive without changing your selection, and only the selected preview animates. Focus the main image and press Enter to open the carousel. Approval and authentication requests remain visible even when another image is selected.</source>
+        <target>Кілька викликів генерації зображень у відповіді ділять один попередній перегляд партії. Виберіть будь-який ескіз, включаючи той, що ще генерується, щоб показати його зображення або прогрес і випадаюче меню інструменту над попереднім переглядом. Використовуйте Tab для фокусування на вибраному ескізі, а потім стрілки вліво або вправо, Home або End, щоб вибрати інше зображення або його прогрес. Розгорніть вибране випадаюче меню інструменту, щоб перевірити його запит і вихідні дані. Вибраний ескіз має підсвічений контур. Рядок ескізів відповідає розміру вибраного попереднього перегляду. Генеровані зображення показують лише компактну смугу гліфів, тоді як скасовані або невдалі зображення показують свій статус у випадаючому меню інструменту без порожнього попереднього перегляду. Статус партії зображень під ескізами показує, скільки зображень готові з загальної кількості, а також будь-які, які потребують уваги, невдалі або були скасовані. Пізніші результати надходять без зміни вашого вибору, і лише вибраний попередній перегляд анімується. Зосередьтеся на основному зображенні та натисніть Enter, щоб відкрити карусель. Запити на затвердження та автентифікацію залишаються видимими, навіть коли вибрано інше зображення.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.generatedImageDetails">
+        <source xml:lang="en">Expand a completed image-generation dropdown to inspect its duration, total image byte size, and tokens. A dash means the value was not reported; token usage is not yet available. Generated image downloads include a stable hash suffix so different images have distinct filenames.</source>
+        <target>Розширте завершене випадаюче меню генерації зображень, щоб перевірити його тривалість, загальний обсяг байтів зображення та токени. Дефіс означає, що значення не було надано; використання токенів ще недоступне. Завантаження згенерованих зображень містять стабільний суфікс хешу, тому різні зображення мають різні імена файлів.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.generatedImagePreparation">
+        <source xml:lang="en">Image-generation tool entries, previews, and batch counts stay hidden while the model assembles the tool arguments. If approval is required, the confirmation is the first tool UI shown. Generating image, the glyph animation, painting progress phrases, and the painting pet start only when the tool executes, after any required confirmation. Confirmation and authentication waits pause image-generation progress.</source>
+        <target>Записи інструменту генерації зображень, попередні перегляди та кількість пакетів залишаються прихованими, поки модель збирає аргументи інструменту. Якщо потрібне схвалення, підтвердження є першим інтерфейсом користувача інструменту, що відображається. Генерація зображення, анімація гліфів, фрази прогресу малювання та початок малювання домашнього улюбленця починаються лише тоді, коли інструмент виконується, після будь-якого необхідного підтвердження. Підтвердження та аутентифікація призупиняють прогрес генерації зображення.</target>
+      </trans-unit>
       <trans-unit id="sessionsChat.githubContext">
         <source xml:lang="en">Use Add Context to attach files, images, and, when available, GitHub issues or pull requests.</source>
         <target>Використовуйте Додати контекст, щоб прикріпити файли, зображення та, коли це можливо, проблеми або запити на злиття GitHub.</target>
@@ -2789,20 +2525,24 @@ To disable this announcement, set {1} to false.</source>
         <target>Пілоти запитів на злиття та проблем вище поля введення чату відкривають їх елемент GitHub у розширенні GitHub Pull Requests, коли воно доступне. Пілоти, що представляють кілька елементів, відкривають доступний за допомогою клавіатури вибір.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.goBack">
-        <source xml:lang="en">Go back through visited sessions{0}.</source>
-        <target>Поверніться до відвіданих сесій{0}.</target>
+        <source xml:lang="en">Go back through visited sessions, the New Session view, and custom views such as Automations{0}.</source>
+        <target>Поверніться до відвіданих сесій, перегляду Нової сесії та користувацьких переглядів, таких як Автоматизації{0}.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.goForward">
-        <source xml:lang="en">Go forward through visited sessions{0}.</source>
-        <target>Перейдіть вперед через відвідані сесії{0}.</target>
+        <source xml:lang="en">Go forward through visited sessions and views{0}. Reopening New Session or a custom view moves its single history entry to the most recent position.</source>
+        <target>Перейдіть вперед через відвідані сесії та перегляди{0}. Відкриття нової сесії або користувацького перегляду переміщує його єдиний запис історії на найновішу позицію.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.harnessSwitchFeedbackSurvey">
-        <source xml:lang="en">After you switch from Copilot to Local, a two-step feedback survey may appear above the chat input. Use Shift+Tab to reach it. In the first step, use Up and Down Arrow to choose why you switched, then press Enter or Space. In the second step, enter any optional feedback and use Tab to reach Submit. Dismiss Survey or Escape closes the survey. After submission, the questions are replaced above the input by a message that your feedback was recorded. Use Dismiss Feedback Acknowledgement or Escape to close it.</source>
-        <target>Після того, як ви переключитеся з Copilot на Local, може з'явитися двоступенева анкета зворотного зв'язку над полем вводу чату. Використовуйте Shift+Tab, щоб дістатися до неї. На першому етапі використовуйте клавіші зі стрілками Вгору та Вниз, щоб вибрати причину, чому ви переключилися, потім натисніть Enter або Space. На другому етапі введіть будь-який необов'язковий відгук і використовуйте Tab, щоб дістатися до кнопки Submit. Дія Dismiss Survey або Escape закриває анкету. Після надсилання питання замінюються над полем вводу повідомленням про те, що ваш відгук був зафіксований. Використовуйте Dismiss Feedback Acknowledgement або Escape, щоб закрити його.</target>
+        <source xml:lang="en">After you switch from Copilot to Local, a feedback survey may appear above the chat input. Use Shift+Tab to reach it. Use Up and Down Arrow to choose why you switched, then press Enter or Space to submit. Dismiss Survey or Escape closes the survey. After submission, a message confirms that your feedback was recorded. Use Tab to reach Share it on GitHub to provide specific feedback in a GitHub issue. Use Dismiss Feedback Acknowledgement or Escape to close the message.</source>
+        <target>Після того, як ви переключитеся з Copilot на Local, над полем введення чату може з'явитися опитування зворотного зв'язку. Використовуйте Shift+Tab, щоб дістатися до нього. Використовуйте стрілки Вгору і Вниз, щоб вибрати причину вашого переключення, а потім натисніть Enter або Space, щоб надіслати. Дismiss Survey або Escape закриває опитування. Після надсилання з'явиться повідомлення, яке підтверджує, що ваш відгук був зафіксований. Використовуйте Tab, щоб дістатися до Share it on GitHub, щоб надати конкретний відгук у GitHub issue. Використовуйте Dismiss Feedback Acknowledgement або Escape, щоб закрити повідомлення.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.history">
         <source xml:lang="en">Use up and down arrows to navigate your request history in the input box.</source>
         <target>Використовуйте стрілки вгору та вниз, щоб переміщатися по історії запитів у полі введення.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.historyRefresh">
+        <source xml:lang="en">Previously loaded conversations refresh silently. If recent messages cannot be loaded, a banner offers Refresh. Use Tab to reach Refresh and press Enter or Space to retry loading recorded messages without restarting the session or waking its environment. Your draft is preserved.</source>
+        <target>Раніше завантажені розмови оновлюються без звуку. Якщо не вдається завантажити останні повідомлення, з'являється банер з пропозицією "Оновити". Використовуйте Tab, щоб дістатися до "Оновити", і натисніть Enter або Space, щоб повторити спробу завантаження записаних повідомлень без перезапуску сесії або пробудження її середовища. Ваш чернетка зберігається.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.input">
         <source xml:lang="en">You are in the chat input. Type a message and press Enter to send it.</source>
@@ -2816,6 +2556,10 @@ To disable this announcement, set {1} to false.</source>
         <source xml:lang="en">When session metadata or active-turn status pills appear above the input, press Shift+Tab to reach them, use the Left and Right arrow keys to move between them, and press Enter or Space to activate one. Open the context menu{0} to choose which pills are shown. Pull Requests Options lets you show all pull requests or only open and draft ones. Subagent Options offers Show All and Show In Progress. These choices are remembered across sessions. If every entry of a pill is filtered out, its options are also available in any other pill's context menu or the toolbar context menu.</source>
         <target>Коли метадані сесії або статусні пігулки активного ходу з'являються над полем введення, натисніть Shift+Tab, щоб досягти їх, використовуйте клавіші стрілок вліво та вправо, щоб переміщатися між ними, і натисніть Enter або Space, щоб активувати одну з них. Відкрийте контекстне меню{0}, щоб вибрати, які пігулки будуть показані. Опції запитів на злиття дозволяють показувати всі запити на злиття або лише відкриті та чернеткові. Опції підагента пропонують Показати всі та Показати в процесі. Ці вибори запам'ятовуються між сесіями. Якщо кожен запис пігулки відфільтровано, її опції також доступні в контекстному меню будь-якої іншої пігулки або в контекстному меню панелі інструментів.</target>
       </trans-unit>
+      <trans-unit id="sessionsChat.layoutDensity">
+        <source xml:lang="en">Choose Default or Compact from View &gt; Layout Density, or change the window.density.layout setting. Default uses a taller title bar. Compact uses a shorter title bar, removes the gaps between parts, and reduces pane spacing. Changes apply immediately.</source>
+        <target>Виберіть Значення за замовчуванням або Компактний у меню Перегляд &gt; Щільність макета, або змініть налаштування window.density.layout. Значення за замовчуванням використовує вищу панель заголовка. Компактний використовує нижчу панель заголовка, усуває проміжки між частинами та зменшує відстань між панелями. Зміни застосовуються негайно.</target>
+      </trans-unit>
       <trans-unit id="sessionsChat.mainChatToSide">
         <source xml:lang="en">To open the main chat beside a peer chat, choose Open to the Side from the session row's context menu. You can also Alt-click (Option-click on macOS) the row or drag it to a chat pane's edge.</source>
         <target>Щоб відкрити основний чат поряд з чатами колег, виберіть Відкрити збоку з контекстного меню рядка сесії. Ви також можете натиснути Alt і клікнути (Option-клік на macOS) на рядок або перетягнути його до краю панелі чату.</target>
@@ -2827,6 +2571,10 @@ To disable this announcement, set {1} to false.</source>
       <trans-unit id="sessionsChat.migrations">
         <source xml:lang="en">When agent customizations need an update, a notice below the new-session input shows how many need attention. Use Tab to reach Review Migrations and open the Migrations page. Dismiss Migration Notice for This Workspace hides the notice for that workspace, including after restarting, and returns focus to the input.</source>
         <target>Коли налаштування агента потребують оновлення, під полем введення нової сесії з'являється повідомлення про те, скільки з них потребують уваги. Використовуйте Tab, щоб перейти до перегляду міграцій і відкрити сторінку міграцій. Вибір "Приховати повідомлення про міграцію для цього робочого простору" приховує повідомлення для цього робочого простору, включаючи після перезапуску, і повертає фокус до поля введення.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.missionControlHosts">
+        <source xml:lang="en">In Manage Remote Agent Hosts or the workspace picker, choose Environments to discover your environments without starting compute or sessions. Use the arrow keys to choose an environment and Enter to connect. Tab reaches Refresh Environments. Escape returns to the previous control. Environment options offer Reconnect, Disconnect, and Rename. Rename changes only this profile's label, not the remote machine's name. The picker shows whether each environment is online or offline and whether you are connected to it.</source>
+        <target>У розділі Керування віддаленими агентами або в меню вибору робочого простору виберіть Середовища, щоб виявити ваші середовища без запуску обчислень або сесій. Використовуйте клавіші стрілок для вибору середовища та клавішу Enter для підключення. Tab переходить до Оновити середовища. Escape повертає до попереднього елемента управління. Опції середовища пропонують Перепідключитися, Відключитися та Перейменувати. Перейменування змінює лише мітку цього профілю, а не ім'я віддаленого комп'ютера. Меню вибору показує, чи є кожне середовище в мережі чи поза нею, а також чи ви підключені до нього.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.mobileConfig">
         <source xml:lang="en">On mobile, the mode and model pickers appear as tappable chips below the input. Tap a chip to open a bottom sheet where you can change the selection.</source>
@@ -2844,6 +2592,10 @@ To disable this announcement, set {1} to false.</source>
         <source xml:lang="en">Navigate to the previous session in the list{0}.</source>
         <target>Перейдіть до попередньої сесії в списку{0}.</target>
       </trans-unit>
+      <trans-unit id="sessionsChat.nestedSubagentActivity">
+        <source xml:lang="en">When a subagent starts another subagent, its activity row identifies the nested subagent by name. Focus that link with Tab and press Enter or Space to open the nested subagent's chat beside the current chat. The enclosing pill still opens the parent subagent.</source>
+        <target>Коли субагент запускає іншого субагента, його рядок активності ідентифікує вкладеного субагента за назвою. Сфокусуйтеся на цьому посиланні за допомогою Tab і натисніть Enter або Space, щоб відкрити чат вкладеного субагента поруч з поточним чатом. Обгортка все ще відкриває батьківського субагента.</target>
+      </trans-unit>
       <trans-unit id="sessionsChat.newSessionInputControls.agentInAttachContext">
         <source xml:lang="en">When an Agent picker is available in a new or running session, it initially appears in Add Context. Open Add Context and choose Agent to select an agent. After you select an agent, the Agent picker returns to its usual position. Other new-session controls remain in their layout-specific positions. Use Tab to reach toolbar controls, arrow keys to navigate toolbar items, and Enter or Space to open a picker.</source>
         <target>Коли вибір агента доступний у новій або активній сесії, він спочатку з'являється в Додати контекст. Відкрийте Додати контекст і виберіть Агента, щоб вибрати агента. Після того, як ви виберете агента, вибір агента повернеться на своє звичне місце. Інші елементи управління новою сесією залишаються на своїх специфічних позиціях. Використовуйте Tab, щоб дістатися до елементів панелі інструментів, стрілки для навігації по елементам панелі інструментів, а також Enter або Space, щоб відкрити вибір.</target>
@@ -2859,6 +2611,10 @@ To disable this announcement, set {1} to false.</source>
       <trans-unit id="sessionsChat.newSessionPickers">
         <source xml:lang="en">In a new-session composer, open and focus the workspace picker{0} or the harness picker{1}. Focus either picker control and open its context menu{2} to configure its keybinding.</source>
         <target>У новій сесії композитора відкрийте та зосередьтеся на виборі робочого простору {0} або виборі обладнання {1}. Зосередьтеся на будь-якому з елементів вибору та відкрийте його контекстне меню {2}, щоб налаштувати його прив'язку клавіш.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.offlineDraft">
+        <source xml:lang="en">By default, opening a cloud sandbox conversation connects or wakes its environment in the background. Turn off chat.agentHost.cloudSandbox.autoConnectOnOpen to wait until you start composing or explicitly connect instead. You can read its history and compose a draft while it connects. Connection progress and failures appear in a banner only after you type, paste, or add an attachment. If the session is ready before you start composing, no connection banner appears. Send, mode, and permissions are unavailable until the session is ready. If connecting fails, your draft stays in the input; use Retry in the banner to try again. Connecting never sends your draft automatically.</source>
+        <target>За замовчуванням, відкриття розмови в хмарному пісочниці підключає або активує її середовище у фоновому режимі. Вимкніть chat.agentHost.cloudSandbox.autoConnectOnOpen, щоб дочекатися, поки ви почнете складати повідомлення або підключитися явно. Ви можете прочитати її історію та скласти чернетку, поки вона підключається. Прогрес підключення та збої з'являються в банері лише після того, як ви введете текст, вставите або додасте вкладення. Якщо сесія готова до того, як ви почнете складати, банер підключення не з'являється. Відправка, режим і дозволи недоступні, поки сесія не буде готова. Якщо підключення не вдається, ваша чернетка залишається в полі вводу; використовуйте Retry у банері, щоб спробувати ще раз. Підключення ніколи не надсилає вашу чернетку автоматично.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.openPullRequest">
         <source xml:lang="en">When the session is associated with GitHub pull requests, a status pill above the chat input shows the pull request number or count. Activate it to open a single pull request or choose from the associated pull requests{0}.</source>
@@ -2901,8 +2657,12 @@ To disable this announcement, set {1} to false.</source>
         <target>У розділі репозиторію, де "Нова сесія" є кнопкою з розділенням, зосередьтеся на "Нова сесія" і натисніть праву стрілку, щоб дістатися до її випадаючого меню, потім активуйте "Нова сесія" з "Запиту на злиття", щоб відкрити вибір запиту на злиття з можливістю пошуку. Запити на злиття згруповані за статусом перегляду та призначення. Використовуйте стрілки для навігації, Enter для створення сесії та Escape для закриття вибору.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.quickChat">
-        <source xml:lang="en">To start a workspace-less quick chat, use the New Quick Chat command{0} or the plus button on the Chats section in the sessions list. When consolidated remote workspaces are enabled, this opens the new-session composer, where you can choose No workspace. Otherwise, it starts a workspace-less chat directly. The Toggle Side Panel command is disabled for quick chats.</source>
-        <target>Щоб розпочати швидкий чат без робочого простору, використайте команду New Quick Chat{0} або кнопку плюс на вкладці Chats у списку сесій. Коли активовані консолідовані віддалені робочі простори, це відкриває композитор нової сесії, де ви можете вибрати No workspace. В іншому випадку, це безпосередньо розпочинає чат без робочого простору. Команда Toggle Side Panel вимкнена для швидких чатів.</target>
+        <source xml:lang="en">To start a workspace-less quick chat, use the New Quick Chat command{0} or the plus button on the Chats section in the sessions list. When consolidated remote workspaces are enabled, this opens the new-session composer, where you can choose No workspace. Otherwise, it starts a workspace-less chat directly. When GitHub sandboxes are enabled, choose Cloud in the harness picker to chat without a repository or pull request. The Toggle Side Panel command is disabled for quick chats.</source>
+        <target>Щоб розпочати швидкий чат без робочого простору, використовуйте команду New Quick Chat{0} або кнопку плюс у розділі Чати в списку сесій. Коли активовані консолідовані віддалені робочі простори, це відкриває композитор нової сесії, де ви можете вибрати No workspace. В іншому випадку, це безпосередньо розпочне чат без робочого простору. Коли активовані пісочниці GitHub, виберіть Cloud у виборі обладнання, щоб спілкуватися без репозиторію або запиту на злиття. Команда Toggle Side Panel вимкнена для швидких чатів.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.remoteConnections">
+        <source xml:lang="en">On desktop, the title bar offers Allow Remote Connections. Use Tab to reach the title bar, arrow keys to reach the toggle, and Enter or Space to enable or disable sharing. The chat.agentHost.remoteConnections setting chooses Dev Tunnel or GitHub environment. Selecting a backend does not enable sharing; changing it turns sharing off. With GitHub environment selected, enabling the toggle registers your local environment for remote owner access. Local sessions continue using local IPC.</source>
+        <target>На настільному комп'ютері панель заголовка пропонує Дозволити віддалені з'єднання. Використовуйте Tab, щоб дістатися до панелі заголовка, стрілки, щоб дістатися до перемикача, і Enter або Space, щоб увімкнути або вимкнути спільний доступ. Налаштування chat.agentHost.remoteConnections вибирає Dev Tunnel або середовище GitHub. Вибір бекенду не активує спільний доступ; зміна його вимикає спільний доступ. При вибраному середовищі GitHub увімкнення перемикача реєструє ваше локальне середовище для віддаленого доступу власника. Локальні сесії продовжують використовувати локальний IPC.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.remoteDelegation">
         <source xml:lang="en">Ask the agent to list remote agent hosts or create a remote session with platform and resource requirements. Creation uses the standard tool confirmation and does not change the focused chat. The result includes a link to the remote session. Remote sessions can send messages back to the originating chat while this Agents window remains connected.</source>
@@ -2929,8 +2689,8 @@ To disable this announcement, set {1} to false.</source>
         <target>Щоб перейменувати сесію в рядку, зосередьтеся на її рядку в списку Сесій і викличте Rename{0}, двічі клацніть її заголовок або відкрийте контекстне меню та виберіть Rename. Введіть новий заголовок, а потім натисніть Enter, щоб підтвердити, або Escape, щоб скасувати. З основного чату або введення, виклик Rename редагує заголовок безпосередньо, коли він видимий, і відкриває запит у іншому випадку.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.repositoryCreation">
-        <source xml:lang="en">This host creates a new environment for each session. Open Select Repository to choose its repository. Selecting a repository does not start an environment; sending your first message does. The harness label identifies the available agent, and Agent Default means the host chooses the model.</source>
-        <target>Цей хост створює нове середовище для кожної сесії. Відкрийте Вибрати репозиторій, щоб вибрати його репозиторій. Вибір репозиторію не запускає середовище; перше відправлення вашого повідомлення робить це. Мітка обладнання ідентифікує доступного агента, а Агент за замовчуванням означає, що хост вибирає модель.</target>
+        <source xml:lang="en">This host creates a new environment for each session. Open Select Repository to choose its repository. Selecting a repository does not start an environment; sending your first message does. Before sending, use the mode picker to choose Interactive, Plan, or Autopilot, and the permissions picker to configure tool approvals. Open the model picker to choose a cloud model and its supported reasoning effort. Use the arrow keys to navigate options, Enter to select, and Escape to close a picker.</source>
+        <target>Цей хост створює нове середовище для кожної сесії. Відкрийте Вибір репозиторію, щоб вибрати його репозиторій. Вибір репозиторію не запускає середовище; перше повідомлення робить це. Перед відправкою використовуйте вибір режиму, щоб вибрати Інтерактивний, План або Автопілот, а також вибір дозволів для налаштування схвалень інструментів. Відкрийте вибір моделі, щоб вибрати хмарну модель та її підтримувані зусилля для міркування. Використовуйте стрілки для навігації по опціях, Enter для вибору та Escape для закриття вибору.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.repositorySelection">
         <source xml:lang="en">When choosing a GitHub repository in the browser, search or enter a GitHub URL or owner/repository. Use the arrow keys to navigate results, Enter to select, and Escape to cancel. Sign in to GitHub if prompted.</source>
@@ -2944,9 +2704,17 @@ To disable this announcement, set {1} to false.</source>
         <source xml:lang="en">When you select assistant response text, an action menu appears. Press Tab to focus the menu, use the Up Arrow and Down Arrow keys to move between actions, and press Enter to activate one. Press Escape to dismiss the menu. Ask in a Side Chat opens a question input anchored to the selected text. Quote appends the selection as a blockquote in the chat input when the conversation is interactive. Copy copies the selected text.</source>
         <target>Коли ви вибираєте текст відповіді асистента, з'являється меню дій. Натисніть Tab, щоб сфокусуватися на меню, використовуйте клавіші Стрілка вгору та Стрілка вниз, щоб переміщатися між діями, і натисніть Enter, щоб активувати одну з них. Натисніть Escape, щоб закрити меню. Запит у Бічному Чаті відкриває поле для запитання, прикріплене до вибраного тексту. Цитувати додає вибір як блокцитату у поле чату, коли розмова є інтерактивною. Копіювати копіює вибраний текст.</target>
       </trans-unit>
+      <trans-unit id="sessionsChat.sessionCreationFilters">
+        <source xml:lang="en">Created In lists the applications that created sessions, grouped by Local, Cloud, and each remote host, with the environment in each application's name. VS Code is always offered for each available environment, even before you create a session there. Other applications are listed after a session created in them is discovered. Only applications from included environments are listed. Excluding an environment hides its applications without changing their selections; including it again restores them. Other list filters do not remove application choices. Included remote hosts retain their applications while cached sessions remain, even when disconnected. If no environments are included, select an environment first.</source>
+        <target>Created In перераховує програми, які створили сесії, згруповані за Local, Cloud та кожним віддаленим хостом, з середовищем у назві кожної програми. VS Code завжди пропонується для кожного доступного середовища, навіть до того, як ви створите сесію там. Інші програми перераховуються після виявлення сесії, створеної в них. Перераховуються лише програми з включених середовищ. Виключення середовища приховує його програми, не змінюючи їх вибір; повторне включення відновлює їх. Інші фільтри списку не видаляють вибір програм. Включені віддалені хости зберігають свої програми, поки кешовані сесії залишаються, навіть коли вони відключені. Якщо жодне середовище не включено, спочатку виберіть середовище.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.sessionFilters">
+        <source xml:lang="en">The Environment, Created In, and Harness submenus filter the Sessions list. Checked options are included. In Local and on remote hosts, applications other than VS Code are hidden by default. Slack and Teams applications in Cloud are also hidden by default. Reset Filters restores these defaults. Show Done, or Show Archived depending on your settings, includes archived sessions. On desktop, Compact View and Collapse All Groups are available from the Sessions More Actions menu. On phone, use Sort and Find to navigate the list.</source>
+        <target>Меню "Середовище", "Створено в" та "Використати" фільтрують список сесій. Вибрані параметри включені. У локальному середовищі та на віддалених хостах програми, окрім VS Code, за замовчуванням приховані. Програми Slack і Teams у хмарі також за замовчуванням приховані. Скидання фільтрів відновлює ці значення за замовчуванням. "Показати завершені" або "Показати архівовані" в залежності від ваших налаштувань, включає архівовані сесії. На настільному комп'ютері доступні "Компактний вигляд" та "Згорнути всі групи" з меню "Додаткові дії сесій". На телефоні використовуйте "Сортувати" та "Знайти" для навігації списком.</target>
+      </trans-unit>
       <trans-unit id="sessionsChat.sessionGrid">
-        <source xml:lang="en">Session panes form a separate grid from the chat groups inside each session. Focus the session to the left{0}, right{1}, above{2}, or below{3}. The Session Layout menu and Command Palette offer Move Session Left, Right, Above, and Below, Increase or Decrease Session Width and Height, and Arrange Sessions in a Balanced Grid. Use Open in Grid in a sidebar session's context menu to open it beside, above, or below the active session. Arranging preserves the conversations and does not change side panels. On a phone, only the active session is shown; returning to a wider window restores the desktop arrangement.</source>
-        <target>Панелі сесій формують окрему сітку від груп чатів всередині кожної сесії. Сфокусуйте сесію ліворуч {0}, праворуч {1}, зверху {2} або знизу {3}. Меню макета сесії та палітра команд пропонують перемістити сесію ліворуч, праворуч, зверху та знизу, збільшити або зменшити ширину та висоту сесії, а також організувати сесії в збалансовану сітку. Використовуйте "Відкрити в сітці" в контекстному меню сесії бічної панелі, щоб відкрити її поруч, зверху або знизу активної сесії. Організація зберігає розмови і не змінює бічні панелі. На телефоні показується лише активна сесія; повернення до ширшого вікна відновлює настільну організацію.</target>
+        <source xml:lang="en">Session panes form a separate grid from the chat groups inside each session. Focus the session to the left{0}, right{1}, above{2}, or below{3}. The generic Navigate to the View on the Left{4}, Navigate to the View on the Right{5}, Navigate to the View Above{6}, and Navigate to the View Below{7} commands do the same while focus is in the session grid. The Session Layout menu and Command Palette offer Move Session Left, Right, Above, and Below, Increase or Decrease Session Width and Height, and Arrange Sessions in a Balanced Grid. Use Open in Grid in a sidebar session's context menu to open it beside, above, or below the active session. Arranging preserves the conversations and does not change side panels. On a phone, only the active session is shown; returning to a wider window restores the desktop arrangement.</source>
+        <target>Панелі сесій формують окрему сітку від груп чатів всередині кожної сесії. Сфокусуйте сесію ліворуч{0}, праворуч{1}, зверху{2} або знизу{3}. Загальні команди Перейти до перегляду ліворуч{4}, Перейти до перегляду праворуч{5}, Перейти до перегляду зверху{6} та Перейти до перегляду знизу{7} виконують те ж саме, коли фокус знаходиться в сітці сесії. Меню макета сесії та палітра команд пропонують Перемістити сесію ліворуч, праворуч, зверху та знизу, Збільшити або Зменшити ширину та висоту сесії, а також Упорядкувати сесії в збалансованій сітці. Використовуйте Відкрити в сітці в контекстному меню сесії бокової панелі, щоб відкрити її поруч, зверху або знизу активної сесії. Упорядкування зберігає розмови і не змінює бічні панелі. На телефоні показується лише активна сесія; повернення до ширшого вікна відновлює настільне упорядкування.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.sessionOptions">
         <source xml:lang="en">Above the new-session input, the workspace, repository and harness pickers are shown initially. As the chat narrows, picker labels are replaced by icons one at a time from right to left, except for the workspace name. Labels return when more space is available. Use Tab and Shift+Tab, or the Left and Right Arrow keys, to move between these controls. Press Enter or Space to open a picker, use the Up and Down Arrow keys to navigate its options, and press Escape to close it and return focus to its control. The isolation picker offers New Worktree to create a separate copy for the session, or Branch to work in the existing repository. The branch picker chooses the base branch for a new worktree or checks out a branch in the existing repository. Hide Session Options collapses these controls without changing your selections. Show Session Options or the Focus New Session Harness Picker command expands the controls again.</source>
@@ -2955,6 +2723,10 @@ To disable this announcement, set {1} to false.</source>
       <trans-unit id="sessionsChat.sessionOptions.screenReader">
         <source xml:lang="en">Above the new-session input, the workspace, repository and harness pickers are shown. As the chat narrows, picker labels are replaced by icons one at a time from right to left, except for the workspace name. Labels return when more space is available. Use Tab and Shift+Tab, or the Left and Right Arrow keys, to move between these controls. Press Enter or Space to open a picker, use the Up and Down Arrow keys to navigate its options, and press Escape to close it and return focus to its control. The isolation picker offers New Worktree to create a separate copy for the session, or Branch to work in the existing repository. The branch picker chooses the base branch for a new worktree or checks out a branch in the existing repository. These controls stay expanded while a screen reader is active.</source>
         <target>Вгорі вводу нової сесії відображаються вибірники робочого простору, репозиторію та інструменту. Коли чат звужується, назви вибірників замінюються значками по одному з правого на лівий бік, за винятком назви робочого простору. Назви повертаються, коли з'являється більше місця. Використовуйте Tab і Shift+Tab або клавіші стрілок вліво та вправо, щоб переміщатися між цими елементами управління. Натисніть Enter або Space, щоб відкрити вибірник, використовуйте клавіші стрілок вгору та вниз для навігації його опціями, і натисніть Escape, щоб закрити його та повернути фокус на елемент управління. Вибірник ізоляції пропонує New Worktree для створення окремої копії для сесії або Branch для роботи в існуючому репозиторії. Вибірник гілки вибирає базову гілку для нового робочого дерева або переходить на гілку в існуючому репозиторії. Ці елементи управління залишаються розгорнутими, поки активний екранний читач.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.sessionOrdering">
+        <source xml:lang="en">On desktop, the Filter Sessions menu offers Ordering and Grouping submenus. When grouping by Workspace, Show switches between Recent and All sessions. Current choices are checked inside the submenus. Use the Right arrow key to open a submenu, the Left arrow key to return, and Enter or Space to choose an option.</source>
+        <target>На настільному комп'ютері меню Фільтр сесій пропонує підменю Сортування та Групування. При групуванні за Робочим простором, Показати перемикається між Останніми та Всіма сесіями. Поточні вибори позначені галочкою всередині підменю. Використовуйте клавішу Стрілка вправо, щоб відкрити підменю, клавішу Стрілка вліво, щоб повернутися, та Enter або Пробіл, щоб вибрати опцію.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.sessionsListChatContextMenu">
         <source xml:lang="en">Open a nested chat's context menu to rename it, open it to the side, or, when supported, permanently delete it. Agent Host chats also offer Copy Link.</source>
@@ -2977,12 +2749,12 @@ To disable this announcement, set {1} to false.</source>
         <target>Панель інструментів рядка сесії пропонує закріпити або зняти закріплення перед позначенням як завершене. Для сесій, які підтримують кілька чатів, відкрийте контекстне меню сесії, щоб розпочати новий чат.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.sessionsListPromotedNewChatArchiveActions">
-        <source xml:lang="en">For sessions that support multiple chats, the session row toolbar offers New Chat in This Session before Archive. Open the session's context menu to pin or unpin it.</source>
-        <target>Для сесій, які підтримують кілька чатів, панель інструментів рядка сесії пропонує "Новий чат у цій сесії" перед "Архівувати". Відкрийте контекстне меню сесії, щоб закріпити або зняти закріплення.</target>
+        <source xml:lang="en">For sessions that support multiple chats, the session row toolbar offers New Nested Session before Archive. Open the session's context menu to pin or unpin it.</source>
+        <target>Для сесій, які підтримують кілька чатів, панель інструментів рядка сесії пропонує Нову вкладену сесію перед Архівом. Відкрийте контекстне меню сесії, щоб закріпити або зняти закріплення.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.sessionsListPromotedNewChatDoneActions">
-        <source xml:lang="en">For sessions that support multiple chats, the session row toolbar offers New Chat in This Session before Mark as Done. Open the session's context menu to pin or unpin it.</source>
-        <target>Для сесій, які підтримують кілька чатів, панель інструментів рядка сесії пропонує Новий чат у цій сесії перед Позначити як завершене. Відкрийте контекстне меню сесії, щоб закріпити або зняти закріплення.</target>
+        <source xml:lang="en">For sessions that support multiple chats, the session row toolbar offers New Nested Session before Mark as Done. Open the session's context menu to pin or unpin it.</source>
+        <target>Для сесій, які підтримують кілька чатів, панель інструментів рядка сесії пропонує Нову вкладену сесію перед Позначити як завершену. Відкрийте контекстне меню сесії, щоб закріпити або зняти закріплення.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.sessionsView">
         <source xml:lang="en">Focus the Chat Sessions view{0}.</source>
@@ -2995,6 +2767,10 @@ To disable this announcement, set {1} to false.</source>
       <trans-unit id="sessionsChat.showDoneChats">
         <source xml:lang="en">Use Done in the Sessions list Filter menu to control whether done sessions and nested chats are shown. A check mark means done content is shown.</source>
         <target>Використовуйте "Готово" у меню фільтра списку сесій, щоб контролювати, чи відображаються завершені сесії та вкладені чати. Позначка означає, що готовий контент відображається.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.subagentPillDetails">
+        <source xml:lang="en">Subagent pills announce their model settings when available. Use Tab to focus file and markdown links in the activity row, then Enter to open them independently of the subagent chat.</source>
+        <target>Пілоти субагентів оголошують свої налаштування моделі, коли вони доступні. Використовуйте Tab, щоб зосередитися на файлах і посиланнях на markdown у рядку активності, а потім Enter, щоб відкрити їх незалежно від чату субагента.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.subagentPills">
         <source xml:lang="en">Activate a subagent pill in the chat transcript to open the subagent beside the current chat. With the keyboard, focus a pill and press Enter or Space; Alt+Enter also opens it to the side. You can also drag a pill to a chat group's edge to choose where it opens.</source>
@@ -3028,21 +2804,29 @@ To disable this announcement, set {1} to false.</source>
         <source xml:lang="en">When the pet is enabled, the user account menu lists unlocked achievement badges before locked badges and provides a View Achievements button. A gold star on the pet announces a newly unlocked achievement; activate the pet while the star is visible to open Achievements.</source>
         <target>Коли домашній улюбленець увімкнено, меню облікового запису користувача відображає розблоковані значки досягнень перед заблокованими значками та надає кнопку Переглянути досягнення. Золота зірка на домашньому улюбленці сповіщає про нове розблоковане досягнення; активуйте домашнього улюбленця, поки зірка видима, щоб відкрити Досягнення.</target>
       </trans-unit>
+      <trans-unit id="sessionsChat.vscodePetPainting">
+        <source xml:lang="en">While an image-generation tool is running, the pet paints at a small easel, then returns to its normal activity. Reduced motion shows a still painting pose.</source>
+        <target>Поки інструмент генерації зображень працює, домашній улюбленець малює на маленькому мольберті, а потім повертається до своєї звичайної діяльності. Зменшена анімація показує статичну позу малювання.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChat.webMissionControlHosts">
+        <source xml:lang="en">On the web, the host picker includes Dev Tunnels and GitHub environments. Online GitHub environments connect automatically when {0} is enabled, so their sessions appear in the Sessions list. An explicit Disconnect keeps that environment disconnected until you connect it again. Use Tab to reach the host picker, Enter or Space to open it, and arrow keys and Enter to choose a host, Connect, Disconnect, or Re-discover Hosts. On phones, the Hosts sheet offers Re-discover hosts and Open Connection Information for connection controls.</source>
+        <target>Веб-інтерфейс вибору хоста включає Dev Tunnels та середовища GitHub. Онлайн-середовища GitHub підключаються автоматично, коли {0} увімкнено, тому їхні сесії з'являються у списку Сесій. Явне Відключення зберігає це середовище відключеним, поки ви знову його не підключите. Використовуйте Tab, щоб дістатися до вибору хоста, Enter або Space, щоб відкрити його, а також стрілки та Enter, щоб вибрати хоста, Підключитися, Відключитися або Знову знайти хостів. На телефонах аркуш Хостів пропонує Знову знайти хостів та Відкрити інформацію про підключення для керування підключеннями.</target>
+      </trans-unit>
       <trans-unit id="sessionsChat.welcomeName">
-        <source xml:lang="en">In a new session, the welcome heading is announced when shown. To disable this announcement, set accessibility.verbosity.newSessionWelcome to false. Press Tab to reach Set Welcome Name beside the welcome heading, or open its context menu{0}. Enter a custom name, or clear it to use your GitHub first name when available.</source>
-        <target>У новій сесії заголовок привітання оголошується, коли він відображається. Щоб вимкнути це оголошення, встановіть accessibility.verbosity.newSessionWelcome на false. Натисніть Tab, щоб дістатися до Налаштувати ім'я привітання поруч із заголовком привітання, або відкрийте його контекстне меню{0}. Введіть власне ім'я або очистіть його, щоб використовувати ваше ім'я з GitHub, якщо воно доступне.</target>
+        <source xml:lang="en">In a new session, the welcome heading is announced when shown. To disable this announcement, set accessibility.verbosity.newSessionWelcome to false. Press Tab to reach Customize Welcome Message beside the welcome heading, or open its context menu{0}. Choose Name to enter a custom name, or clear it to use your GitHub first name when available. Choose Phrases to open the setting where you add or replace welcome phrases, using {1} to position the name.</source>
+        <target>У новій сесії заголовок привітання оголошується, коли його показують. Щоб вимкнути це оголошення, встановіть accessibility.verbosity.newSessionWelcome в false. Натисніть Tab, щоб дістатися до Налаштувати повідомлення про привітання поруч із заголовком привітання, або відкрийте його контекстне меню{0}. Виберіть Ім'я, щоб ввести власне ім'я, або очистіть його, щоб використовувати своє ім'я з GitHub, якщо воно доступне. Виберіть Фрази, щоб відкрити налаштування, де ви можете додати або замінити фрази привітання, використовуючи {1} для розміщення імені.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.workspace">
         <source xml:lang="en">Use Tab or Shift+Tab to navigate to the workspace picker and choose a workspace for your session. When consolidated remote workspaces are enabled, opening the picker focuses its search input so you can immediately type to filter workspaces. If quick chats are available, you can also choose No workspace to start a workspace-less chat.</source>
         <target>Використовуйте Tab або Shift+Tab, щоб перейти до вибору робочого простору та обрати робочий простір для вашої сесії. Коли об'єднані віддалені робочі простори увімкнені, відкриття вибору фокусується на його полі вводу пошуку, щоб ви могли одразу почати вводити текст для фільтрації робочих просторів. Якщо доступні швидкі чати, ви також можете обрати "Без робочого простору", щоб розпочати чат без робочого простору.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.workspaceHandoff">
-        <source xml:lang="en">Opening Agents from an editor can suggest that editor's folder for a fresh session. Choosing a workspace yourself or starting another session cancels a pending suggestion. If an explicitly requested workspace cannot be selected, a notification offers Retry and Choose Workspace actions.</source>
-        <target>Відкриття агентів з редактора може запропонувати папку цього редактора для нової сесії. Вибір робочого простору самостійно або початок іншої сесії скасовує очікувану пропозицію. Якщо явно запитуваний робочий простір не може бути вибрано, сповіщення пропонує дії Спробувати знову та Вибрати робочий простір.</target>
+        <source xml:lang="en">Opening Agents from an editor can suggest that editor's folder for a fresh session. An already-open window keeps its active and visible sessions unless a session or New Session is explicitly requested. Revealing New Session preserves any unsent draft. Choosing a workspace yourself or starting another session cancels a pending suggestion. If an explicitly requested workspace cannot be selected, a notification offers Retry and Choose Workspace actions.</source>
+        <target>Відкриття агентів з редактора може запропонувати папку цього редактора для нової сесії. Вже відкрите вікно зберігає свої активні та видимі сесії, якщо сесію або Нову сесію не запитано явно. Відкриття Нової сесії зберігає будь-який не надісланий чернетку. Вибір робочого простору самостійно або початок іншої сесії скасовує очікувану пропозицію. Якщо явно запитаний робочий простір не може бути обраний, сповіщення пропонує дії Спробувати знову та Вибрати робочий простір.</target>
       </trans-unit>
       <trans-unit id="sessionsChat.worktreeCleanupSuggestion">
-        <source xml:lang="en">When at least 20 inactive session worktrees are eligible for cleanup or eligible inactive worktrees can reclaim at least 5 GiB, a storage suggestion may appear below the Sessions list and is announced with the Open Worktree Cleanup Command Palette command. The command is also available from the Sessions More Actions menu and from a session's context menu. Active, running, needs-input, pinned, and recently used sessions are excluded. Use Tab or Shift+Tab to reach Open Worktree Cleanup, Don't Show Again, or Dismiss Session Storage Suggestion, then Enter or Space to activate it. Don't Show Again disables future suggestions and announcements across restarts. Press Escape while focus is in the suggestion to dismiss it for the current window. To stop these suggestions and announcements without using the suggestion itself, run Disable Session Storage Cleanup Suggestions from the Command Palette, or run Open Worktree Cleanup and clear the Suggest Cleaning Up Session Storage When It Grows Large checkbox.</source>
-        <target>Коли принаймні 20 неактивних робочих дерев сесій підлягають очищенню або неактивні робочі дерева можуть відновити принаймні 5 GiB, підказка щодо зберігання може з'явитися під списком Сесій і оголошується за допомогою команди Open Worktree Cleanup Command Palette. Команда також доступна з меню Додаткові дії сесій та з контекстного меню сесії. Активні, запущені, що потребують вводу, закріплені та нещодавно використані сесії виключаються. Використовуйте Tab або Shift+Tab, щоб перейти до Open Worktree Cleanup, Don't Show Again або Dismiss Session Storage Suggestion, потім Enter або Space, щоб активувати його. Don't Show Again вимикає майбутні підказки та оголошення при перезавантаженнях. Натисніть Escape, коли фокус знаходиться на підказці, щоб відхилити її для поточного вікна. Щоб зупинити ці підказки та оголошення без використання самої підказки, запустіть Disable Session Storage Cleanup Suggestions з Command Palette або запустіть Open Worktree Cleanup і зніміть прапорець Suggest Cleaning Up Session Storage When It Grows Large.</target>
+        <source xml:lang="en">When at least 20 inactive session worktrees are eligible for cleanup or eligible inactive worktrees can reclaim at least 5 GiB, a storage suggestion may appear below the Sessions list and is announced with the Open Worktree Cleanup Command Palette command. The command is also available from the Sessions More Actions menu. Active, running, needs-input, pinned, and recently used sessions are excluded. Use Tab or Shift+Tab to reach Open Worktree Cleanup, Don't Show Again, or Dismiss Session Storage Suggestion, then Enter or Space to activate it. Don't Show Again disables future suggestions and announcements across restarts. Press Escape while focus is in the suggestion to dismiss it for the current window. To stop these suggestions and announcements without using the suggestion itself, run Disable Session Storage Cleanup Suggestions from the Command Palette, or run Open Worktree Cleanup and clear the Suggest Cleaning Up Session Storage When It Grows Large checkbox.</source>
+        <target>Коли принаймні 20 неактивних робочих дерев сесій підлягають очищенню або неактивні робочі дерева можуть відновити принаймні 5 GiB, пропозиція щодо зберігання може з'явитися нижче списку Сесій і оголошується командою Open Worktree Cleanup Command Palette. Команда також доступна з меню Додаткові дії сесій. Активні, що виконуються, потребують введення, закріплені та нещодавно використані сесії виключені. Використовуйте Tab або Shift+Tab, щоб дістатися до Open Worktree Cleanup, Don't Show Again або Dismiss Session Storage Suggestion, потім Enter або Space, щоб активувати його. Don't Show Again вимикає майбутні пропозиції та оголошення під час перезапусків. Натисніть Escape, коли фокус знаходиться на пропозиції, щоб відхилити її для поточного вікна. Щоб зупинити ці пропозиції та оголошення без використання самої пропозиції, запустіть Disable Session Storage Cleanup Suggestions з командної панелі або запустіть Open Worktree Cleanup і зніміть прапорець Suggest Cleaning Up Session Storage When It Grows Large.</target>
       </trans-unit>
     </body>
   </file>
@@ -3051,6 +2835,10 @@ To disable this announcement, set {1} to false.</source>
       <trans-unit id="slashCommand.agents">
         <source xml:lang="en">View and manage custom agents</source>
         <target>Переглянути та керувати користувацькими агентами</target>
+      </trans-unit>
+      <trans-unit id="slashCommand.blobby">
+        <source xml:lang="en">Show Blobby or open its color customization</source>
+        <target>Показати Blobby або відкрити його налаштування кольору</target>
       </trans-unit>
       <trans-unit id="slashCommand.hooks">
         <source xml:lang="en">View and manage hooks</source>
@@ -3094,6 +2882,50 @@ To disable this announcement, set {1} to false.</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/contrib/chat/common/welcomePhrases" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="newSession.welcome.building">
+        <source xml:lang="en">What are we building?</source>
+        <target>Що ми будуємо?</target>
+      </trans-unit>
+      <trans-unit id="newSession.welcome.cook">
+        <source xml:lang="en">Let’s cook</source>
+        <target>Давайте готувати</target>
+      </trans-unit>
+      <trans-unit id="newSession.welcome.lockIn">
+        <source xml:lang="en">Time to lock in</source>
+        <target>Час закріпити</target>
+      </trans-unit>
+      <trans-unit id="newSession.welcome.move">
+        <source xml:lang="en">What’s the move?</source>
+        <target>Який план?</target>
+      </trans-unit>
+      <trans-unit id="newSession.welcome.named.building">
+        <source xml:lang="en">What are we building, {0}?</source>
+        <target>Що ми будуємо, {0}?</target>
+      </trans-unit>
+      <trans-unit id="newSession.welcome.named.cook">
+        <source xml:lang="en">Let’s cook, {0}</source>
+        <target>Давайте готувати, {0}</target>
+      </trans-unit>
+      <trans-unit id="newSession.welcome.named.lockIn">
+        <source xml:lang="en">Time to lock in, {0}</source>
+        <target>Час закріпити, {0}</target>
+      </trans-unit>
+      <trans-unit id="newSession.welcome.named.move">
+        <source xml:lang="en">What’s the move, {0}?</source>
+        <target>Який план, {0}?</target>
+      </trans-unit>
+      <trans-unit id="newSession.welcome.named.ship">
+        <source xml:lang="en">Let’s ship something, {0}</source>
+        <target>Давайте відправимо щось, {0}</target>
+      </trans-unit>
+      <trans-unit id="newSession.welcome.ship">
+        <source xml:lang="en">Let’s ship something</source>
+        <target>Давайте відправимо щось</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/chat/electron-browser/chat.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentsHandoff.invalidDraft">
@@ -3103,6 +2935,10 @@ To disable this announcement, set {1} to false.</source>
       <trans-unit id="agentsHandoff.sessionNotFound">
         <source xml:lang="en">The linked session could not be found: {0}</source>
         <target>Не вдалося знайти пов'язану сесію: {0}</target>
+      </trans-unit>
+      <trans-unit id="savingAgentsWindowRequestActivity">
+        <source xml:lang="en">Saving Agent Host request activity</source>
+        <target>Збереження активності запиту агента хоста</target>
       </trans-unit>
     </body>
   </file>

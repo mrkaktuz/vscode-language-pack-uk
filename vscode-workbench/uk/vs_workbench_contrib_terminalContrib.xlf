@@ -854,20 +854,20 @@ Reason for leaving the sandbox: {2}</source>
         <target>Запустіть команду `{0}` поза [пісочницею]({1}), щоб отримати доступ до {2}?</target>
       </trans-unit>
       <trans-unit id="runInTerminal.unsandboxed.domain.reason.denied.multi">
-        <source xml:lang="en">This command accesses {0} and {1} more domains that are blocked by chat.agent.deniedNetworkDomains.</source>
-        <target>Ця команда отримує доступ до {0} та {1} більше доменів, які заблоковані chat.agent.deniedNetworkDomains.</target>
+        <source xml:lang="en">This command accesses {0} and {1} more domains that are blocked by chat.agent.sandbox.network.deniedDomains.</source>
+        <target>Ця команда отримує доступ до {0} та {1} додаткових доменів, які заблоковані chat.agent.sandbox.network.deniedDomains.</target>
       </trans-unit>
       <trans-unit id="runInTerminal.unsandboxed.domain.reason.denied.single">
-        <source xml:lang="en">This command accesses {0}, which is blocked by chat.agent.deniedNetworkDomains.</source>
-        <target>Ця команда отримує доступ до {0}, який заблокований chat.agent.deniedNetworkDomains.</target>
+        <source xml:lang="en">This command accesses {0}, which is blocked by chat.agent.sandbox.network.deniedDomains.</source>
+        <target>Ця команда отримує доступ до {0}, який заблоковано chat.agent.sandbox.network.deniedDomains.</target>
       </trans-unit>
       <trans-unit id="runInTerminal.unsandboxed.domain.reason.mixed.multi">
-        <source xml:lang="en">This command accesses {0} and {1} more domains that are blocked by chat.agent.deniedNetworkDomains or not added to chat.agent.allowedNetworkDomains.</source>
-        <target>Ця команда отримує доступ до {0} та {1} додаткових доменів, які заблоковані chat.agent.deniedNetworkDomains або не додані до chat.agent.allowedNetworkDomains.</target>
+        <source xml:lang="en">This command accesses {0} and {1} more domains that are blocked by chat.agent.sandbox.network.deniedDomains or not added to chat.agent.sandbox.network.allowedDomains.</source>
+        <target>Ця команда отримує доступ до {0} та {1} більше доменів, які заблоковані chat.agent.sandbox.network.deniedDomains або не додані до chat.agent.sandbox.network.allowedDomains.</target>
       </trans-unit>
       <trans-unit id="runInTerminal.unsandboxed.domain.reason.mixed.single">
-        <source xml:lang="en">This command accesses {0}, which is blocked by chat.agent.deniedNetworkDomains or not added to chat.agent.allowedNetworkDomains.</source>
-        <target>Ця команда отримує доступ до {0}, який заблокований chat.agent.deniedNetworkDomains або не доданий до chat.agent.allowedNetworkDomains.</target>
+        <source xml:lang="en">This command accesses {0}, which is blocked by chat.agent.sandbox.network.deniedDomains or not added to chat.agent.sandbox.network.allowedDomains.</source>
+        <target>Ця команда отримує доступ до {0}, який заблокований chat.agent.sandbox.network.deniedDomains або не доданий до chat.agent.sandbox.network.allowedDomains.</target>
       </trans-unit>
       <trans-unit id="runInTerminal.unsandboxed.domain.reason.multi">
         <source xml:lang="en">This command accesses {0} and {1} more domains that are not permitted by the current chat.agent.sandbox configuration.</source>
@@ -898,8 +898,8 @@ Reason for leaving the sandbox: {2}</source>
         <target>Пропустити</target>
       </trans-unit>
       <trans-unit id="terminalAssessingOutput">
-        <source xml:lang="en">{0} may need input</source>
-        <target>{0} може потребувати вводу</target>
+        <source xml:lang="en">{0} may need attention</source>
+        <target>{0} може потребувати уваги</target>
       </trans-unit>
       <trans-unit id="terminalCommandCompleted">
         <source xml:lang="en">{0} completed</source>
@@ -1105,21 +1105,45 @@ Reason for leaving the sandbox: {2}</source>
   </file>
   <file original="src/vs/workbench/contrib/terminalContrib/chatAgentTools/common/terminalChatAgentToolsConfiguration" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="agentSandbox.allowAutoApprove">
-        <source xml:lang="en">Controls whether agent mode terminal commands that run inside the sandbox are auto-approved. When disabled, the run in terminal tool uses the existing approval flow. This applies only when {0} is enabled.</source>
-        <target>Контролює, чи команди терміналу режиму агента, які виконуються всередині пісочниці, автоматично затверджуються. Коли вимкнено, інструмент виконання в терміналі використовує існуючий процес затвердження. Це застосовується лише тоді, коли {0} увімкнено.</target>
+      <trans-unit id="agentSandbox.allowDevToolAccess">
+        <source xml:lang="en">Grant read access to the tool directories found on PATH, in toolchain env vars (CARGO_HOME, GOROOT, and similar) and under your user profile, plus dev-tool config and caches (including registry tokens), and read-write to shared build caches.</source>
+        <target>Надайте доступ для читання до директорій інструментів, що знаходяться в PATH, у змінних середовища toolchain (CARGO_HOME, GOROOT та подібних) та під вашим профілем користувача, а також до конфігурацій dev-tool і кешів (включаючи токени реєстру), та надайте права на читання та запис до спільних кешів збірки.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.allowLocalNetwork">
+        <source xml:lang="en">Allow the sandboxed process to reach hosts on the local network. Windows needs this on when a proxy, host rules, or credential masking is used: it reaches the local listener over host loopback, and a sandboxed command will not launch without it. The local proxy checks destination addresses for direct connections. An upstream proxy resolves its own destinations.</source>
+        <target>Дозвольте пісочниці досягати хостів у локальній мережі. Windows потребує цього, коли використовується проксі, правила хостів або маскування облікових даних: він досягає локального прослуховувача через петлю хоста, і пісочниця не запуститься без цього. Локальний проксі перевіряє адреси призначення для прямих з'єднань. Проксі на верхньому рівні вирішує свої власні призначення.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.allowNetwork">
-        <source xml:lang="en">When {0} is enabled, controls whether to allow all network domains in the sandbox. When enabled, the sandbox preserves file system restrictions while relaxing all network restrictions.</source>
-        <target>Коли {0} увімкнено, контролює, чи дозволяти всі мережеві домени в пісочниці. Коли увімкнено, пісочниця зберігає обмеження файлової системи, одночасно послаблюючи всі мережеві обмеження.</target>
+        <source xml:lang="en">Allow outbound network access in the sandbox (`allowOutbound` in the SDK). Configured allowed and denied network domains still restrict destinations. When disabled, outbound network access is blocked, including for the integrated browser.</source>
+        <target>Дозвольте вихідний мережевий доступ у пісочниці (`allowOutbound` у SDK). Налаштовані дозволені та заборонені мережеві домени все ще обмежують цілі. Коли це вимкнено, вихідний мережевий доступ блокується, включаючи інтегрований браузер.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.allowNetworkPolicy">
+        <source xml:lang="en">Deprecated. Controls whether the Local agent sandbox allows outbound connections to all network domains while preserving file system restrictions. Use the sandbox.userPolicy.network.allowOutbound managed setting to enforce outbound network restrictions in Copilot Agent Host.</source>
+        <target>Застаріло. Контролює, чи дозволяє пісочниця локального агента вихідні з'єднання до всіх мережевих доменів, зберігаючи обмеження файлової системи. Використовуйте керовану настройку sandbox.userPolicy.network.allowOutbound для забезпечення обмежень вихідної мережі в Copilot Agent Host.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.allowUnsandboxedCommands">
-        <source xml:lang="en">Controls whether agent mode terminal commands can run outside the sandbox after user confirmation when a sandboxed command fails or when sandbox restrictions would block the command. This applies only when {0} is enabled.</source>
-        <target>Контролює, чи можуть термінальні команди режиму агента виконуватися поза пісочницею після підтвердження користувача, коли команда в пісочниці не вдалася або коли обмеження пісочниці блокують команду. Це застосовується лише тоді, коли {0} увімкнено.</target>
+        <source xml:lang="en">Controls whether agent mode terminal commands can run outside the sandbox after user confirmation when a sandboxed command fails or when sandbox restrictions would block the command.</source>
+        <target>Контролює, чи можуть команди терміналу режиму агента виконуватись поза пісочницею після підтвердження користувача, коли команда в пісочниці зазнає невдачі або коли обмеження пісочниці блокують команду.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.allowUnsandboxedCommandsPolicy">
+        <source xml:lang="en">Deprecated. Controls whether Local agent terminal commands can run outside the sandbox after user confirmation when sandbox restrictions would block the command. Use the sandbox.allowBypass managed setting to control sandbox bypass in Copilot Agent Host.</source>
+        <target>Застаріло. Контролює, чи можуть команди терміналу локального агента виконуватися поза пісочницею після підтвердження користувача, коли обмеження пісочниці блокують команду. Використовуйте керовану настройку sandbox.allowBypass для контролю обходу пісочниці в Copilot Agent Host.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.authenticateGh">
+        <source xml:lang="en">Use your GitHub account for gh commands inside the sandbox. Applies only to the Copilot Agent Host harness.</source>
+        <target>Використовуйте свій обліковий запис GitHub для команд gh всередині пісочниці. Застосовується лише до системи Copilot Agent Host.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.authenticateGit">
+        <source xml:lang="en">Use your credentials for HTTPS git operations inside the sandbox. Applies only to the Copilot Agent Host harness.</source>
+        <target>Використовуйте свої облікові дані для HTTPS git-операцій всередині пісочниці. Застосовується лише до системи Copilot Agent Host.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.enabledPolicy">
+        <source xml:lang="en">Deprecated. Controls whether the Local agent uses sandboxing to restrict what tools can do. In Copilot Agent Host, this legacy policy supplies an overridable sandbox default, not a mandatory requirement. Use the runtime-native sandbox.enabled managed setting to require sandboxing in Copilot Agent Host.</source>
+        <target>Застаріло. Контролює, чи використовує локальний агент пісочницю для обмеження дій інструментів. У хості агента Copilot ця застаріла політика забезпечує можливість перевизначення значення за замовчуванням для пісочниці, а не є обов'язковою вимогою. Використовуйте керовану настройку runtime-native sandbox.enabled, щоб вимагати використання пісочниці в хості агента Copilot.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.enabledSetting">
-        <source xml:lang="en">Controls whether agent mode uses sandboxing to restrict what tools can do. When enabled, tools like the terminal are run in a sandboxed environment to limit access to the system. Use {0} to allow all network domains.</source>
-        <target>Контролює, чи режим агента використовує пісочницю для обмеження того, що можуть робити інструменти. Коли увімкнено, такі інструменти, як термінал, виконуються в середовищі пісочниці, щоб обмежити доступ до системи. Використовуйте {0}, щоб дозволити всі мережеві домени.</target>
+        <source xml:lang="en">Controls whether agent mode uses sandboxing to restrict what tools can do. When enabled, tools like the terminal are run in a sandboxed environment to limit access to the system. The Local harness supports sandboxing on Linux and macOS only. The Copilot Agent Host harness uses the SDK runtime's sandbox, including on supported Windows hosts.</source>
+        <target>Контролює, чи режим агента використовує пісочницю для обмеження можливостей інструментів. Коли увімкнено, такі інструменти, як термінал, запускаються в середовищі пісочниці, щоб обмежити доступ до системи. Локальний хост підтримує пісочницю лише на Linux та macOS. Хост хардвару Copilot Agent використовує пісочницю середовища виконання SDK, включаючи підтримувані хосты Windows.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.enabledSetting.offDescription">
         <source xml:lang="en">Disable sandboxing for agent mode tools.</source>
@@ -1128,6 +1152,10 @@ Reason for leaving the sandbox: {2}</source>
       <trans-unit id="agentSandbox.enabledSetting.onDescription">
         <source xml:lang="en">Enable sandboxing for agent mode tools.</source>
         <target>Увімкніть пісочницю для інструментів режиму агента.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.fileSystem.deprecated">
+        <source xml:lang="en">This setting will be deprecated soon. For the Copilot Agent Host sandbox, use {0} instead.</source>
+        <target>Це налаштування буде незабаром застарілим. Для пісочниці Copilot Agent Host використовуйте {0} замість цього.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.linuxFileSystemSetting">
         <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Controls file system access in sandbox on Linux. Paths do not support glob patterns, only literal paths (ex: ./src/, ~/.ssh, .env). **bubblewrap** and **socat** should be installed for this setting to work.</source>
@@ -1149,6 +1177,10 @@ Reason for leaving the sandbox: {2}</source>
         <source xml:lang="en">Array of paths to deny write access within allowed paths (takes precedence over allowWrite).</source>
         <target>Масив шляхів для заборони запису в межах дозволених шляхів (має пріоритет над allowWrite).</target>
       </trans-unit>
+      <trans-unit id="agentSandbox.lspServers">
+        <source xml:lang="en">Controls whether LSP servers run in the sandbox when sandboxing is enabled.</source>
+        <target>Контролює, чи працюють LSP-сервери в пісочниці, коли пісочниця увімкнена.</target>
+      </trans-unit>
       <trans-unit id="agentSandbox.macFileSystemSetting">
         <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Controls file system access in sandbox on macOS. Paths also support git-style glob patterns(ex: *.ts, ./src, ./src/**/*.ts, file?.txt).</source>
         <target>Примітка: це налаштування застосовується лише тоді, коли {0} увімкнено. Контролює доступ до файлової системи в пісочниці на macOS. Шляхи також підтримують шаблони glob у стилі git (наприклад: *.ts, ./src, ./src/**/*.ts, file?.txt).</target>
@@ -1169,41 +1201,41 @@ Reason for leaving the sandbox: {2}</source>
         <source xml:lang="en">Array of paths to deny write access within allowed paths (takes precedence over allowWrite).</source>
         <target>Масив шляхів для заборони запису в межах дозволених шляхів (має пріоритет над allowWrite).</target>
       </trans-unit>
+      <trans-unit id="agentSandbox.mcpServers">
+        <source xml:lang="en">Controls whether MCP servers run in the sandbox when sandboxing is enabled.</source>
+        <target>Контролює, чи працюють сервери MCP у пісочниці, коли пісочниця увімкнена.</target>
+      </trans-unit>
       <trans-unit id="agentSandbox.retryWithAllowNetworkRequests">
         <source xml:lang="en">Controls whether agent mode terminal commands can retry in the sandbox with unrestricted network access after user confirmation. This applies only when {0} is enabled and preserves file system sandboxing while relaxing network restrictions for an approved command.</source>
         <target>Контролює, чи можуть термінальні команди режиму агента повторюватися в пісочниці з необмеженим доступом до мережі після підтвердження користувача. Це застосовується лише тоді, коли {0} увімкнено, і зберігає пісочницю файлової системи, одночасно послаблюючи мережеві обмеження для затвердженої команди.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.retryWithAllowNetworkRequests.deprecated">
+        <source xml:lang="en">This setting will be deprecated soon. It does not apply to the Copilot Agent Host sandbox.</source>
+        <target>Це налаштування буде незабаром застарілим. Воно не застосовується до пісочниці Copilot Agent Host.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.runtimeSetting">
         <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Key/value pairs are passed through to the root of the sandbox runtime configuration.</source>
         <target>Примітка: це налаштування застосовується тільки коли {0} увімкнено. Параметри ключ/значення передаються до кореня конфігурації середовища пісочниці.</target>
       </trans-unit>
-      <trans-unit id="agentSandbox.windowsEnabledSetting">
-        <source xml:lang="en">Controls whether agent mode uses sandboxing on Windows. Use {0} to allow all network domains.</source>
-        <target>Контролює, чи режим агента використовує пісочницю на Windows. Використовуйте {0}, щоб дозволити всі мережеві домени.</target>
+      <trans-unit id="agentSandbox.runtimeSetting.deprecated">
+        <source xml:lang="en">This setting will be deprecated soon. It does not apply to the Copilot Agent Host sandbox.</source>
+        <target>Ця налаштування буде незабаром застарілим. Воно не застосовується до пісочниці Copilot Agent Host.</target>
       </trans-unit>
-      <trans-unit id="agentSandbox.windowsEnabledSetting.offDescription">
-        <source xml:lang="en">Disable sandboxing for agent mode tools on Windows.</source>
-        <target>Вимкніть пісочницю для інструментів режиму агента на Windows.</target>
+      <trans-unit id="agentSandbox.userConfiguredPaths">
+        <source xml:lang="en">Customize file path permissions in the sandbox.</source>
+        <target>Налаштуйте дозволи на шлях до файлу в пісочниці.</target>
       </trans-unit>
-      <trans-unit id="agentSandbox.windowsEnabledSetting.onDescription">
-        <source xml:lang="en">Enable sandboxing for agent mode tools on Windows.</source>
-        <target>Увімкніть пісочницю для інструментів режиму агента на Windows.</target>
+      <trans-unit id="agentSandbox.userConfiguredPaths.deniedPaths">
+        <source xml:lang="en">Denied: paths the Copilot Agent Host sandbox cannot access.</source>
+        <target>Відмовлено: шляхи, до яких не має доступу пісочниця хоста Copilot Agent.</target>
       </trans-unit>
-      <trans-unit id="agentSandbox.windowsFileSystemSetting">
-        <source xml:lang="en">Note: this setting is applicable only when {0} is enabled. Controls file system access in sandbox on Windows. Paths do not support glob patterns, only literal paths (ex: C:\src, C:\Users\me\.ssh, .env).</source>
-        <target>Примітка: це налаштування застосовується лише коли {0} увімкнено. Контролює доступ до файлової системи в пісочниці на Windows. Шляхи не підтримують шаблони глобусів, лише літеральні шляхи (наприклад: C:\src, C:\Users\me\.ssh, .env).</target>
+      <trans-unit id="agentSandbox.userConfiguredPaths.readonlyPaths">
+        <source xml:lang="en">Read-Only: paths the Copilot Agent Host sandbox can read but not write.</source>
+        <target>Тільки для читання: шляхи, які агент Copilot Host може читати, але не записувати.</target>
       </trans-unit>
-      <trans-unit id="agentSandbox.windowsFileSystemSetting.allowRead">
-        <source xml:lang="en">Array of additional paths to allow read-only access. Takes precedence over denyRead.</source>
-        <target>Масив додаткових шляхів для надання доступу тільки для читання. Має пріоритет над denyRead.</target>
-      </trans-unit>
-      <trans-unit id="agentSandbox.windowsFileSystemSetting.allowWrite">
-        <source xml:lang="en">Array of additional paths to allow read/write access. Leave empty to disallow writes outside the workspace folders, workspace storage folder, and sandbox temp directory.</source>
-        <target>Масив додаткових шляхів для дозволу на читання/запис. Залиште порожнім, щоб заборонити записи за межами папок робочого простору, папки зберігання робочого простору та тимчасового каталогу пісочниці.</target>
-      </trans-unit>
-      <trans-unit id="agentSandbox.windowsFileSystemSetting.denyRead">
-        <source xml:lang="en">Array of paths to deny access. Leave empty to allow reading all paths.</source>
-        <target>Масив шляхів для заборони доступу. Залиште порожнім, щоб дозволити читання всіх шляхів.</target>
+      <trans-unit id="agentSandbox.userConfiguredPaths.readwritePaths">
+        <source xml:lang="en">Read/Write: paths the Copilot Agent Host sandbox can read and write.</source>
+        <target>Читання/Запис: шляхи, які може читати та записувати пісочниця агента Copilot.</target>
       </trans-unit>
       <trans-unit id="autoApprove.defaults">
         <source xml:lang="en">Note that there's a default set of rules to allow and also deny commands. Consider setting {0} to {1} to ignore all default rules to ensure there are no conflicts with your own rules. Do this at your own risk, the default denial rules are designed to protect you against running dangerous commands.</source>

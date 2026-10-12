@@ -1120,6 +1120,10 @@ To complete authentication, navigate to {1} and enter the code above.</source>
         <source xml:lang="en">Justification: {1}</source>
         <target>Обґрунтування: {1}</target>
       </trans-unit>
+      <trans-unit id="selectedModelUnavailable">
+        <source xml:lang="en">The selected model '{0}' is not available. Select a different model and try again.</source>
+        <target>Вибраний модель '{0}' недоступна. Виберіть іншу модель і спробуйте ще раз.</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/api/common/extHostLogService" source-language="en" datatype="plaintext" target-language="uk">
@@ -2151,6 +2155,18 @@ This action is irreversible and may result in data loss!</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/browser/actions/layoutDensityActions" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="layoutDensityCompact">
+        <source xml:lang="en">Compact</source>
+        <target>Компактний</target>
+      </trans-unit>
+      <trans-unit id="layoutDensityDefault">
+        <source xml:lang="en">Default</source>
+        <target>За замовчуванням</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/browser/actions/listCommands" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="mitoggleTreeStickyScroll">
@@ -2193,6 +2209,70 @@ This action is irreversible and may result in data loss!</source>
       <trans-unit id="navigateUp">
         <source xml:lang="en">Navigate to the View Above</source>
         <target>Перейдіть до перегляду зверху</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/browser/actions/policyDiagnosticsMarkdown" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="policyReadiness.conditional">
+        <source xml:lang="en">These policies have incomplete coverage for some paths or delivery sources. This is not a finding that your current source or session fails to enforce them. Check the conditions below; a runtime-managed value may already be enforced even when its VS Code-only equivalent is not.</source>
+        <target>Ці політики мають неповне покриття для деяких шляхів або джерел доставки. Це не є висновком про те, що ваше поточне джерело або сесія не забезпечують їх виконання. Перевірте умови нижче; значення, що керується під час виконання, може вже бути забезпечене, навіть якщо його еквівалент лише для VS Code не є таким.</target>
+      </trans-unit>
+      <trans-unit id="policyReadiness.harnessPolicy">
+        <source xml:lang="en">ChatEditorPreferCopilotHarness controls chat.editor.preferCopilotHarness: enabling it prefers Copilot when a new chat would otherwise use Local. It is a preference, not a harness lock; disabling it does not require Local or prohibit explicit or remembered Copilot choices. Existing sessions and the enterprise-required sandbox behavior are unchanged. Requiring a particular harness needs a separate enforcement contract, not an inference from this readiness report.</source>
+        <target>ChatEditorPreferCopilotHarness контролює chat.editor.preferCopilotHarness: увімкнення його віддає перевагу Copilot, коли новий чат інакше використовував би Local. Це перевага, а не блокування прив'язки; вимкнення його не вимагає Local або не забороняє явні чи запам'ятовані вибори Copilot. Існуючі сесії та поведінка пісочниці, що вимагається підприємством, залишаються незмінними. Вимога до конкретної прив'язки потребує окремого контракту на виконання, а не висновку з цього звіту про готовність.</target>
+      </trans-unit>
+      <trans-unit id="policyReadiness.impact">
+        <source xml:lang="en">Impact / What to Verify</source>
+        <target>Вплив / Що перевірити</target>
+      </trans-unit>
+      <trans-unit id="policyReadiness.needsVerification">
+        <source xml:lang="en">Applied requirements needing verification</source>
+        <target>Застосовані вимоги, що потребують перевірки</target>
+      </trans-unit>
+      <trans-unit id="policyReadiness.noGaps">
+        <source xml:lang="en">No known unsupported requirements were found in the applied VS Code policies. This does not establish full runtime policy parity; user settings and unprojected runtime managed settings are outside this check.</source>
+        <target>Не було виявлено жодних відомих непідтримуваних вимог у застосованих політиках VS Code. Це не встановлює повну паритетність політики виконання; налаштування користувача та непроєктовані налаштування управління виконанням знаходяться поза цією перевіркою.</target>
+      </trans-unit>
+      <trans-unit id="policyReadiness.notEnforced">
+        <source xml:lang="en">Applied requirements not enforced by Agent Host</source>
+        <target>Застосовані вимоги не виконуються хостом агента</target>
+      </trans-unit>
+      <trans-unit id="policyReadiness.policy">
+        <source xml:lang="en">Policy</source>
+        <target>Політика</target>
+      </trans-unit>
+      <trans-unit id="policyReadiness.reportOnly">
+        <source xml:lang="en">These findings are report-only: they do not hold users on Local, change experiment enrollment or harness selection, block messages, or add Chat banners. Existing rollout, preferences, explicit choices, and sessions are unchanged. Opening this report has no effect on selection. Supported bridge restrictions remain enforced.</source>
+        <target>Ці результати є лише для звіту: вони не утримують користувачів на Local, не змінюють реєстрацію в експерименті чи вибір варіантів, не блокують повідомлення та не додають банери чату. Існуючі розгортання, налаштування, явні вибори та сесії залишаються незмінними. Відкриття цього звіту не має жодного впливу на вибір. Підтримувані обмеження мостів залишаються в силі.</target>
+      </trans-unit>
+      <trans-unit id="policyReadiness.rollout">
+        <source xml:lang="en">Rollout and harness selection</source>
+        <target>Розгортання та вибір системи управління</target>
+      </trans-unit>
+      <trans-unit id="policyReadiness.runtimeSandboxNotRequired">
+        <source xml:lang="en">No enterprise-required Agent Host sandbox is active.</source>
+        <target>Немає активного пісочниці Agent Host, що вимагає підприємства.</target>
+      </trans-unit>
+      <trans-unit id="policyReadiness.runtimeSandboxRequired">
+        <source xml:lang="en">An enterprise-required Agent Host sandbox is active. Local cannot satisfy this runtime sandbox requirement.</source>
+        <target>Активний пісочниця Agent Host, що вимагається підприємством. Локальний не може задовольнити цю вимогу до середовища виконання пісочниці.</target>
+      </trans-unit>
+      <trans-unit id="policyReadiness.scope">
+        <source xml:lang="en">Only requirements from your currently applied enterprise policies are shown here. Unconfigured policies and known permissive values are excluded. This check covers Copilot Agent Host on this machine, not remote hosts, Claude, or Codex.</source>
+        <target>Тут відображаються лише вимоги з ваших поточних застосованих корпоративних політик. Налаштовані політики та відомі дозволені значення виключені. Ця перевірка охоплює Copilot Agent Host на цьому комп'ютері, а не на віддалених хостах, Claude або Codex.</target>
+      </trans-unit>
+      <trans-unit id="policyReadiness.setting">
+        <source xml:lang="en">Setting</source>
+        <target>Налаштування</target>
+      </trans-unit>
+      <trans-unit id="policyReadiness.source">
+        <source xml:lang="en">Applied Source</source>
+        <target>Застосоване джерело</target>
+      </trans-unit>
+      <trans-unit id="policyReadiness.title">
+        <source xml:lang="en">Agent Host Policy Readiness</source>
+        <target>Готовність політики хоста агента</target>
       </trans-unit>
     </body>
   </file>
@@ -2551,9 +2631,37 @@ This action is irreversible and may result in data loss!</source>
         <source xml:lang="en">Image preview unavailable.</source>
         <target>Попередній перегляд зображення недоступний.</target>
       </trans-unit>
+      <trans-unit id="chatPills.issue">
+        <source xml:lang="en">Issue</source>
+        <target>Проблема</target>
+      </trans-unit>
       <trans-unit id="chatPills.open">
         <source xml:lang="en">Open {0}</source>
         <target>Відкрити {0}</target>
+      </trans-unit>
+      <trans-unit id="chatPills.openReference">
+        <source xml:lang="en">{0}, Open {1}</source>
+        <target>{0}, Відкрити {1}</target>
+      </trans-unit>
+      <trans-unit id="chatPills.openReferenceWithTitle">
+        <source xml:lang="en">{0}, Open {1}: {2}</source>
+        <target>{0}, Відкрити {1}: {2}</target>
+      </trans-unit>
+      <trans-unit id="chatPills.openResource">
+        <source xml:lang="en">Open {0}</source>
+        <target>Відкрити {0}</target>
+      </trans-unit>
+      <trans-unit id="chatPills.pullRequest">
+        <source xml:lang="en">Pull Request</source>
+        <target>Запит на злиття</target>
+      </trans-unit>
+      <trans-unit id="chatPills.reference">
+        <source xml:lang="en">{0} {1}</source>
+        <target>{0} {1}</target>
+      </trans-unit>
+      <trans-unit id="chatPills.referenceWithTitle">
+        <source xml:lang="en">{0} {1}: {2}</source>
+        <target>{0} {1}: {2}</target>
       </trans-unit>
       <trans-unit id="chatPills.removeArtifact">
         <source xml:lang="en">Remove Artifact</source>
@@ -6875,17 +6983,17 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <target>Роздільник, що використовується {0}.</target>
       </trans-unit>
       <trans-unit id="windowDensityLayout">
-        <source xml:lang="en">Controls the spacing density of the workbench layout. Only applies when {0} is enabled.</source>
+        <source xml:lang="en">Controls the spacing density of the workbench layout. Applies in the Agents window and when {0} is enabled in the editor window.</source>
         <note>{0} is a placeholder for a setting identifier.</note>
-        <target>Контролює щільність відстані макета робочого столу. Застосовується лише тоді, коли {0} увімкнено.</target>
+        <target>Контролює щільність проміжків макета робочого столу. Застосовується у вікні Агентів та коли {0} увімкнено у вікні редактора.</target>
       </trans-unit>
       <trans-unit id="windowDensityLayout.compact">
-        <source xml:lang="en">Removes the gaps between workbench parts and reduces their internal spacing to provide more room for content.</source>
-        <target>Видаляє проміжки між частинами верстата і зменшує їх внутрішній простір, щоб забезпечити більше місця для вмісту.</target>
+        <source xml:lang="en">Removes the gaps between workbench parts and reduces their internal spacing to provide more room for content. Uses a shorter title bar in the Agents window.</source>
+        <target>Видаляє проміжки між частинами верстата і зменшує їх внутрішній простір, щоб забезпечити більше місця для вмісту. Використовує коротшу панель заголовка у вікні Агентів.</target>
       </trans-unit>
       <trans-unit id="windowDensityLayout.default">
-        <source xml:lang="en">Uses the standard spacing between workbench parts.</source>
-        <target>Використовує стандартний проміжок між частинами верстата.</target>
+        <source xml:lang="en">Uses the standard spacing between workbench parts and a taller title bar in the Agents window.</source>
+        <target>Використовує стандартний інтервал між частинами робочого столу та вищу панель заголовка у вікні Агентів.</target>
       </trans-unit>
       <trans-unit id="windowTitle">
         <source xml:lang="en">Controls the window title based on the current context such as the opened workspace or active editor. Variables are substituted based on the context:</source>
@@ -7730,6 +7838,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="editorPartModal">
         <source xml:lang="en">Whether focus is in a modal editor part</source>
         <target>Чи фокус знаходиться в частині модального редактора</target>
+      </trans-unit>
+      <trans-unit id="editorPartModalCanMoveToEditorArea">
+        <source xml:lang="en">Whether the modal editor can move into an editor area</source>
+        <target>Чи може модальний редактор переміститися в область редактора</target>
       </trans-unit>
       <trans-unit id="editorPartModalMaximized">
         <source xml:lang="en">Whether the modal editor part is maximized</source>
@@ -8688,8 +8800,12 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <target>Кордон зверху активної вкладки в неактивній групі. Вкладки є контейнерами для редакторів у зоні редактора. У одній групі редакторів може бути відкрито кілька вкладок. Може бути кілька груп редакторів.</target>
       </trans-unit>
       <trans-unit id="tabBorder">
-        <source xml:lang="en">Border to separate tabs from each other. Tabs are the containers for editors in the editor area. Multiple tabs can be opened in one editor group. There can be multiple editor groups.</source>
-        <target>Кордон для розділення вкладок один від одного. Вкладки є контейнерами для редакторів в області редактора. У одній групі редакторів може бути відкрито кілька вкладок. Може бути кілька груп редакторів.</target>
+        <source xml:lang="en">Border around tabs. Tabs are the containers for editors in the editor area. Multiple tabs can be opened in one editor group. There can be multiple editor groups.</source>
+        <target>Кордон навколо вкладок. Вкладки є контейнерами для редакторів у зоні редактора. У одній групі редакторів можна відкрити кілька вкладок. Може бути кілька груп редакторів.</target>
+      </trans-unit>
+      <trans-unit id="tabDivider">
+        <source xml:lang="en">Color of dividers between editor tabs.</source>
+        <target>Колір роздільників між вкладками редактора.</target>
       </trans-unit>
       <trans-unit id="tabDragAndDropBorder">
         <source xml:lang="en">Border between tabs to indicate that a tab can be inserted between two tabs. Tabs are the containers for editors in the editor area. Multiple tabs can be opened in one editor group. There can be multiple editor groups.</source>
