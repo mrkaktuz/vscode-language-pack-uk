@@ -1,5 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/workbench/contrib/canvases/browser/canvasContextPicker" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="chatContext.canvases">
+        <source xml:lang="en">Canvas...</source>
+        <target>Полотно...</target>
+      </trans-unit>
+      <trans-unit id="chatContext.canvases.placeholder">
+        <source xml:lang="en">Select a canvas</source>
+        <target>Виберіть полотно</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/canvases/browser/canvasesPillControl" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="canvasesPill.close">
+        <source xml:lang="en">Close Canvas {0}</source>
+        <target>Закрити полотно {0}</target>
+      </trans-unit>
+      <trans-unit id="canvasesPill.closeFailed">
+        <source xml:lang="en">Could not close canvas {0}: {1}</source>
+        <target>Не вдалося закрити полотно {0}: {1}</target>
+      </trans-unit>
+      <trans-unit id="canvasesPill.closeHoverLabel">
+        <source xml:lang="en">Close Canvas</source>
+        <target>Закрити полотно</target>
+      </trans-unit>
+      <trans-unit id="canvasesPill.closed">
+        <source xml:lang="en">Closed canvas {0}.</source>
+        <target>Закритий полотно {0}.</target>
+      </trans-unit>
+      <trans-unit id="canvasesPill.open">
+        <source xml:lang="en">Open canvas {0}</source>
+        <target>Відкрити полотно {0}</target>
+      </trans-unit>
+      <trans-unit id="canvasesPill.openFailed">
+        <source xml:lang="en">Could not open canvas {0}: {1}</source>
+        <target>Не вдалося відкрити полотно {0}: {1}</target>
+      </trans-unit>
+      <trans-unit id="canvasesPill.title">
+        <source xml:lang="en">Canvases</source>
+        <target>Полотна</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/canvases/browser/editorCanvasActions" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="editorCanvas.openFailed">
+        <source xml:lang="en">Could not open canvas {0}: {1}</source>
+        <target>Не вдалося відкрити полотно {0}: {1}</target>
+      </trans-unit>
+      <trans-unit id="editorCanvas.submenu">
+        <source xml:lang="en">Canvas</source>
+        <target>Полотно</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/canvases/common/agentHostCanvas" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="canvas.pendingTitle">
@@ -10,13 +66,37 @@
   </file>
   <file original="src/vs/workbench/contrib/canvases/common/canvas" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="canvas.definitionTitle">
+        <source xml:lang="en">{0} ({1})</source>
+        <target>{0} ({1})</target>
+      </trans-unit>
+      <trans-unit id="canvas.definitionTitleCollision">
+        <source xml:lang="en">{0} ({1})</source>
+        <target>{0} ({1})</target>
+      </trans-unit>
+      <trans-unit id="canvas.definitionTitleWithId">
+        <source xml:lang="en">{0} ({1}, {2})</source>
+        <target>{0} ({1}, {2})</target>
+      </trans-unit>
       <trans-unit id="canvas.editorDescription">
         <source xml:lang="en">Closing this tab hides the canvas. Reopen it from the Canvas submenu in Add Tab, use its canvas pill, or ask the agent to open it again.</source>
         <target>Закриття цієї вкладки приховує полотно. Відкрийте його з підменю Полотно в Додати вкладку, використайте його пігулку полотна або попросіть агента відкрити його знову.</target>
       </trans-unit>
+      <trans-unit id="canvas.editorDescriptionEditorWindow">
+        <source xml:lang="en">Closing this tab hides the canvas. Reopen it from its canvas pill or ask the agent to open it again.</source>
+        <target>Закриття цієї вкладки приховує полотно. Відкрийте його з його вкладки полотна або попросіть агента відкрити його знову.</target>
+      </trans-unit>
       <trans-unit id="canvas.editorName">
         <source xml:lang="en">Canvas</source>
         <target>Полотно</target>
+      </trans-unit>
+      <trans-unit id="canvas.instanceTitle">
+        <source xml:lang="en">{0} ({1})</source>
+        <target>{0} ({1})</target>
+      </trans-unit>
+      <trans-unit id="canvas.instanceTitleCollision">
+        <source xml:lang="en">{0} ({1}, {2})</source>
+        <target>{0} ({1}, {2})</target>
       </trans-unit>
       <trans-unit id="canvas.mainWindowOnly">
         <source xml:lang="en">Canvases can only be shown in the main window beside their owning conversation.</source>
@@ -37,6 +117,18 @@
       <trans-unit id="canvas.help.close">
         <source xml:lang="en">Closing the tab hides this canvas. Use the Add Tab menu in the editor toolbar, then Canvas, to open any available canvas or reopen a hidden canvas.</source>
         <target>Закриття вкладки приховує цей канвас. Використайте меню Додати вкладку в панелі інструментів редактора, потім Канвас, щоб відкрити будь-який доступний канвас або повторно відкрити прихований канвас.</target>
+      </trans-unit>
+      <trans-unit id="canvas.help.closeCanvas">
+        <source xml:lang="en">To close the canvas itself, which also notifies the canvas extension that provides it, use Close Canvas from its canvas pill.</source>
+        <target>Щоб закрити саму панель, яка також сповіщає про це розширення панелі, що її надає, використовуйте Close Canvas з її панелі.</target>
+      </trans-unit>
+      <trans-unit id="canvas.help.closeEditorWindow">
+        <source xml:lang="en">Closing the tab hides this canvas. Reopen it from its canvas pill or ask the agent to open it again.</source>
+        <target>Закриття вкладки приховує цей канвас. Відкрийте його з пігулки канваса або попросіть агента відкрити його знову.</target>
+      </trans-unit>
+      <trans-unit id="canvas.help.externalLinks">
+        <source xml:lang="en">User-initiated HTTP and HTTPS links that request a new tab or window open outside the canvas.</source>
+        <target>Посилання HTTP та HTTPS, ініційовані користувачем, які запитують відкриття нової вкладки або вікна поза межами полотна.</target>
       </trans-unit>
       <trans-unit id="canvas.help.navigation">
         <source xml:lang="en">Tab moves through page controls. Use &lt;keybinding:workbench.action.focusNextPart&gt; to leave the page.</source>

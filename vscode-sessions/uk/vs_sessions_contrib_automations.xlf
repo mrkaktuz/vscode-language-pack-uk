@@ -6,6 +6,10 @@
         <source xml:lang="en">Advanced</source>
         <target>Розширений</target>
       </trans-unit>
+      <trans-unit id="automation.allToolsAllowed">
+        <source xml:lang="en">All tools allowed</source>
+        <target>Усі інструменти дозволені</target>
+      </trans-unit>
       <trans-unit id="automation.allowedToolsTitle">
         <source xml:lang="en">Allowed Tools</source>
         <target>Дозволені інструменти</target>
@@ -49,6 +53,10 @@
       <trans-unit id="automation.customizations.summaryOutdated">
         <source xml:lang="en">{0} of {1} customizations · {2} outdated</source>
         <target>{0} з {1} налаштувань · {2} застарілих</target>
+      </trans-unit>
+      <trans-unit id="automation.form.addRepository">
+        <source xml:lang="en">Add repository</source>
+        <target>Додати репозиторій</target>
       </trans-unit>
       <trans-unit id="automation.form.branch.capabilityLoadingReason">
         <source xml:lang="en">Session capabilities are loading.</source>
@@ -118,9 +126,17 @@
         <source xml:lang="en">A branch is required for Worktree isolation.</source>
         <target>Для ізоляції робочого дерева потрібна гілка.</target>
       </trans-unit>
+      <trans-unit id="automation.form.checkingRepository">
+        <source xml:lang="en">Checking repository access...</source>
+        <target>Перевірка доступу до репозиторію...</target>
+      </trans-unit>
       <trans-unit id="automation.form.checkingTarget">
         <source xml:lang="en">Checking target availability...</source>
         <target>Перевірка доступності цілі...</target>
+      </trans-unit>
+      <trans-unit id="automation.form.cloudDisabled">
+        <source xml:lang="en">Cloud automations are disabled. To create this automation, enable the {0} setting or turn off Run in the cloud.</source>
+        <target>Автоматизації в хмарі вимкнені. Щоб створити цю автоматизацію, увімкніть налаштування {0} або вимкніть Запуск у хмарі.</target>
       </trans-unit>
       <trans-unit id="automation.form.cloudScheduleMinute">
         <source xml:lang="en">Choose a time that corresponds to minute 00, 15, 30, or 45 in UTC.</source>
@@ -130,17 +146,37 @@
         <source xml:lang="en">Cloud automations are unavailable.</source>
         <target>Автоматизації в хмарі недоступні.</target>
       </trans-unit>
+      <trans-unit id="automation.form.cloudUnavailableEdit">
+        <source xml:lang="en">Cloud automations are unavailable. Try again in a few moments.</source>
+        <target>Автоматизації в хмарі недоступні. Спробуйте ще раз через кілька хвилин.</target>
+      </trans-unit>
+      <trans-unit id="automation.form.cloudUnavailableRetry">
+        <source xml:lang="en">Cloud automations are unavailable. Try again in a few moments, or turn off Run in the cloud.</source>
+        <target>Автоматизації в хмарі недоступні. Спробуйте ще раз через кілька хвилин або вимкніть Запуск у хмарі.</target>
+      </trans-unit>
       <trans-unit id="automation.form.cloudWeekdays">
         <source xml:lang="en">Weekdays is only available for local automations. Choose a supported schedule for Cloud.</source>
         <target>Будні доступні лише для локальних автоматизацій. Виберіть підтримуваний графік для Хмари.</target>
+      </trans-unit>
+      <trans-unit id="automation.form.connectingCloud">
+        <source xml:lang="en">Connecting to cloud automations...</source>
+        <target>Підключення до хмарних автоматизацій...</target>
       </trans-unit>
       <trans-unit id="automation.form.day">
         <source xml:lang="en">Day of week</source>
         <target>День тижня</target>
       </trans-unit>
+      <trans-unit id="automation.form.disabledRepositoryAriaLabel">
+        <source xml:lang="en">{0}, unavailable. {1}</source>
+        <target>{0}, недоступно. {1}</target>
+      </trans-unit>
       <trans-unit id="automation.form.folderRequired">
         <source xml:lang="en">Workspace folder is required.</source>
         <target>Папка робочого простору є обов'язковою.</target>
+      </trans-unit>
+      <trans-unit id="automation.form.githubRepositoryRequired">
+        <source xml:lang="en">Cloud automations require a supported repository on GitHub.com.</source>
+        <target>Хмарні автоматизації вимагають підтримуваного репозиторію на GitHub.com.</target>
       </trans-unit>
       <trans-unit id="automation.form.harnessChip.action">
         <source xml:lang="en">Automations Harness Chip</source>
@@ -153,10 +189,6 @@
       <trans-unit id="automation.form.hostUnavailable">
         <source xml:lang="en">Choose an available Agent Host that supports automations.</source>
         <target>Виберіть доступний Агент Хост, який підтримує автоматизацію.</target>
-      </trans-unit>
-      <trans-unit id="automation.form.interval">
-        <source xml:lang="en">Schedule</source>
-        <target>Розклад</target>
       </trans-unit>
       <trans-unit id="automation.form.isolation.checkboxAriaLabel">
         <source xml:lang="en">Worktree isolation</source>
@@ -186,13 +218,17 @@
         <source xml:lang="en">Name is required.</source>
         <target>Ім'я є обов'язковим.</target>
       </trans-unit>
+      <trans-unit id="automation.form.noGitRepositories">
+        <source xml:lang="en">No known Git repositories</source>
+        <target>Немає відомих репозиторіїв Git</target>
+      </trans-unit>
       <trans-unit id="automation.form.noWorkspace.description">
         <source xml:lang="en">Run without a backing workspace</source>
         <target>Запустити без робочого простору</target>
       </trans-unit>
-      <trans-unit id="automation.form.privateRepositoryRequired">
-        <source xml:lang="en">The repository must be private.</source>
-        <target>Репозиторій повинен бути приватним.</target>
+      <trans-unit id="automation.form.privateRepositoriesOnly">
+        <source xml:lang="en">Cloud automations are only supported for private repositories.</source>
+        <target>Автоматизації в хмарі підтримуються лише для приватних репозиторіїв.</target>
       </trans-unit>
       <trans-unit id="automation.form.prompt.placeholder">
         <source xml:lang="en">Describe what you want to automate</source>
@@ -206,13 +242,37 @@
         <source xml:lang="en">The selected Agent Host and session type cannot run without a workspace. Choose a workspace or another session type.</source>
         <target>Вибраний Агент Хост і тип сесії не можуть працювати без робочого простору. Виберіть робочий простір або інший тип сесії.</target>
       </trans-unit>
-      <trans-unit id="automation.form.saving">
-        <source xml:lang="en">Saving automation…</source>
-        <target>Збереження автоматизації…</target>
+      <trans-unit id="automation.form.repositoryAriaLabel">
+        <source xml:lang="en">{0}, {1}</source>
+        <target>{0}, {1}</target>
+      </trans-unit>
+      <trans-unit id="automation.form.repositoryAvailabilityDescription">
+        <source xml:lang="en">{0}. {1}</source>
+        <target>{0}. {1}</target>
+      </trans-unit>
+      <trans-unit id="automation.form.repositoryRequired">
+        <source xml:lang="en">Cloud automations cannot be managed for this repository.</source>
+        <target>Автоматизації хмари не можуть бути керовані для цього репозиторію.</target>
+      </trans-unit>
+      <trans-unit id="automation.form.repositoryUnsupported">
+        <source xml:lang="en">Cloud automations cannot be managed for this repository.</source>
+        <target>Автоматизації хмари не можуть бути керовані для цього репозиторію.</target>
+      </trans-unit>
+      <trans-unit id="automation.form.runInCloud">
+        <source xml:lang="en">Run in the Cloud</source>
+        <target>Запустити в Хмарі</target>
+      </trans-unit>
+      <trans-unit id="automation.form.runInCloudUnavailable">
+        <source xml:lang="en">Unable to load cloud automations. Please try again in a few moments.</source>
+        <target>Не вдалося завантажити хмарні автоматизації. Будь ласка, спробуйте ще раз через кілька хвилин.</target>
       </trans-unit>
       <trans-unit id="automation.form.scheduleRequired">
         <source xml:lang="en">Choose a supported schedule.</source>
         <target>Виберіть підтримуваний графік.</target>
+      </trans-unit>
+      <trans-unit id="automation.form.selectRepository">
+        <source xml:lang="en">Select a repository</source>
+        <target>Виберіть репозиторій</target>
       </trans-unit>
       <trans-unit id="automation.form.selectWorkspace">
         <source xml:lang="en">Select workspace</source>
@@ -242,10 +302,6 @@
         <source xml:lang="en">Saving the current session configuration...</source>
         <target>Збереження конфігурації поточної сесії...</target>
       </trans-unit>
-      <trans-unit id="automation.form.syncingCustomizations">
-        <source xml:lang="en">Syncing customizations…</source>
-        <target>Синхронізація налаштувань…</target>
-      </trans-unit>
       <trans-unit id="automation.form.target">
         <source xml:lang="en">Target</source>
         <target>Ціль</target>
@@ -262,13 +318,13 @@
         <source xml:lang="en">Time (Local)</source>
         <target>Час (місцевий)</target>
       </trans-unit>
+      <trans-unit id="automation.form.trigger">
+        <source xml:lang="en">Trigger</source>
+        <target>Тригер</target>
+      </trans-unit>
       <trans-unit id="automation.form.trustFolderMessage">
         <source xml:lang="en">An agent session will be able to read files, run commands, and make changes in this folder.</source>
         <target>Сесія агента зможе читати файли, виконувати команди та вносити зміни в цю папку.</target>
-      </trans-unit>
-      <trans-unit id="automation.form.workInGitHub">
-        <source xml:lang="en">Work in GitHub</source>
-        <target>Працюйте в GitHub</target>
       </trans-unit>
       <trans-unit id="automation.form.workspacePicker.action">
         <source xml:lang="en">Automations Workspace Picker</source>
@@ -282,6 +338,10 @@
         <source xml:lang="en">Pick a workspace for this automation</source>
         <target>Виберіть робочий простір для цієї автоматизації</target>
       </trans-unit>
+      <trans-unit id="automation.form.workspacePicker.pickRepositoryAriaLabel">
+        <source xml:lang="en">Pick a repository for this automation</source>
+        <target>Виберіть репозиторій для цієї автоматизації</target>
+      </trans-unit>
       <trans-unit id="automation.form.workspacePicker.selectedAriaLabel">
         <source xml:lang="en">Automation target, {0}</source>
         <target>Автоматизаційна ціль, {0}</target>
@@ -290,9 +350,9 @@
         <source xml:lang="en">The selected Agent Host and session type cannot use this workspace. Choose another workspace or session type.</source>
         <target>Вибраний Агент Хост і тип сесії не можуть використовувати цей робочий простір. Виберіть інший робочий простір або тип сесії.</target>
       </trans-unit>
-      <trans-unit id="automation.interval.choose">
-        <source xml:lang="en">Choose a schedule</source>
-        <target>Виберіть розклад</target>
+      <trans-unit id="automation.form.workspaceUnavailable">
+        <source xml:lang="en">The workspace provider is unavailable.</source>
+        <target>Постачальник робочого простору недоступний.</target>
       </trans-unit>
       <trans-unit id="automation.interval.daily">
         <source xml:lang="en">Daily</source>
@@ -314,6 +374,42 @@
         <source xml:lang="en">Weekly</source>
         <target>Щотижневий</target>
       </trans-unit>
+      <trans-unit id="automation.oneToolAllowed">
+        <source xml:lang="en">1 tool allowed</source>
+        <target>1 інструмент дозволено</target>
+      </trans-unit>
+      <trans-unit id="automation.owner">
+        <source xml:lang="en">Owner</source>
+        <target>Власник</target>
+      </trans-unit>
+      <trans-unit id="automation.owner.immutableDescription">
+        <source xml:lang="en">{0} Ownership can't be changed after creation.</source>
+        <target>{0} Власність не може бути змінена після створення.</target>
+      </trans-unit>
+      <trans-unit id="automation.owner.repository">
+        <source xml:lang="en">Repository</source>
+        <target>Репозиторій</target>
+      </trans-unit>
+      <trans-unit id="automation.owner.repositoryActionDescription">
+        <source xml:lang="en">This automation will act as Copilot.</source>
+        <target>Ця автоматизація буде діяти як Copilot.</target>
+      </trans-unit>
+      <trans-unit id="automation.owner.repositoryDescription">
+        <source xml:lang="en">Anyone who can read the repository can see it, and anyone with write access can edit it. Runs act as Copilot.</source>
+        <target>Будь-хто, хто може читати репозиторій, може його бачити, а будь-хто з правами запису може його редагувати. Запуски діють як Copilot.</target>
+      </trans-unit>
+      <trans-unit id="automation.owner.user">
+        <source xml:lang="en">Only me</source>
+        <target>Тільки я</target>
+      </trans-unit>
+      <trans-unit id="automation.owner.userActionDescription">
+        <source xml:lang="en">This automation will act as you.</source>
+        <target>Ця автоматизація буде діяти як ви.</target>
+      </trans-unit>
+      <trans-unit id="automation.owner.userDescription">
+        <source xml:lang="en">Only you can see and edit it. Runs act as you.</source>
+        <target>Тільки ви можете бачити та редагувати це. Запуски діють як ви.</target>
+      </trans-unit>
       <trans-unit id="automation.retryTools">
         <source xml:lang="en">Retry</source>
         <target>Спробувати ще раз</target>
@@ -330,9 +426,9 @@
         <source xml:lang="en">Tools</source>
         <target>Інструменти</target>
       </trans-unit>
-      <trans-unit id="automation.toolsDescription">
-        <source xml:lang="en">Select which tools the agent can use. Built-in tools are always available.</source>
-        <target>Виберіть, які інструменти агент може використовувати. Вбудовані інструменти завжди доступні.</target>
+      <trans-unit id="automation.toolsAllowedCount">
+        <source xml:lang="en">{0} tools allowed</source>
+        <target>{0} інструментів дозволено</target>
       </trans-unit>
       <trans-unit id="automation.toolsLoading">
         <source xml:lang="en">Loading available tools...</source>
@@ -345,6 +441,18 @@
       <trans-unit id="automation.toolsSelectedCount">
         <source xml:lang="en">{0} of {1} tools selected</source>
         <target>{0} з {1} вибраних інструментів</target>
+      </trans-unit>
+      <trans-unit id="automation.trigger.choose">
+        <source xml:lang="en">Choose a trigger</source>
+        <target>Виберіть тригер</target>
+      </trans-unit>
+      <trans-unit id="automation.trigger.issue">
+        <source xml:lang="en">Issue</source>
+        <target>Проблема</target>
+      </trans-unit>
+      <trans-unit id="automation.trigger.pr">
+        <source xml:lang="en">Pull Request</source>
+        <target>Запит на злиття</target>
       </trans-unit>
     </body>
   </file>
@@ -362,17 +470,9 @@
         <source xml:lang="en">Create</source>
         <target>Створити</target>
       </trans-unit>
-      <trans-unit id="automation.dialog.createDescription">
-        <source xml:lang="en">Define a prompt that will run on a schedule against the selected target.</source>
-        <target>Визначте запит, який буде виконуватись за розкладом щодо вибраної цілі.</target>
-      </trans-unit>
       <trans-unit id="automation.dialog.createTitle">
         <source xml:lang="en">New automation</source>
         <target>Нова автоматизація</target>
-      </trans-unit>
-      <trans-unit id="automation.dialog.editDescription">
-        <source xml:lang="en">Update the schedule, prompt, or run target for this automation.</source>
-        <target>Оновіть розклад, підказку або ціль для цієї автоматизації.</target>
       </trans-unit>
       <trans-unit id="automation.dialog.editTitle">
         <source xml:lang="en">Edit automation</source>
@@ -385,6 +485,14 @@
       <trans-unit id="automation.dialog.saving">
         <source xml:lang="en">Saving…</source>
         <target>Збереження…</target>
+      </trans-unit>
+      <trans-unit id="automation.owner.repositoryCreateWarning">
+        <source xml:lang="en">This automation will be visible to everyone with repository access, and can be edited by anyone with write access.</source>
+        <target>Ця автоматизація буде видима для всіх, хто має доступ до репозиторію, і може бути відредагована будь-ким, хто має доступ на запис.</target>
+      </trans-unit>
+      <trans-unit id="automation.owner.repositoryEditWarning">
+        <source xml:lang="en">This automation is visible to everyone with repository access, and can be edited by anyone with write access.</source>
+        <target>Ця автоматизація видима для всіх, хто має доступ до репозиторію, і може бути відредагована будь-ким, хто має доступ на запис.</target>
       </trans-unit>
     </body>
   </file>
@@ -534,6 +642,10 @@
         <source xml:lang="en">Automation request failed</source>
         <target>Запит на автоматизацію не вдався</target>
       </trans-unit>
+      <trans-unit id="automation.tool.list.cancelled">
+        <source xml:lang="en">Listing automations cancelled</source>
+        <target>Скасовано автоматизації списків</target>
+      </trans-unit>
       <trans-unit id="automation.tool.list.displayName">
         <source xml:lang="en">List Automations</source>
         <target>Список автоматизацій</target>
@@ -610,21 +722,93 @@
         <source xml:lang="en">Automation {0} was already running</source>
         <target>Автоматизація {0} вже працює</target>
       </trans-unit>
+      <trans-unit id="automation.tool.unknown">
+        <source xml:lang="en">The request outcome is unknown. Refresh automations before submitting another request.</source>
+        <target>Результат запиту невідомий. Оновіть автоматизації перед поданням іншого запиту.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/automations/browser/automationTriggerEditor" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="automation.trigger.actor">
+        <source xml:lang="en">Require write access to trigger</source>
+        <target>Потрібен доступ на запис для активації</target>
+      </trans-unit>
+      <trans-unit id="automation.trigger.actorDescription">
+        <source xml:lang="en">Only people with write access to the repository can trigger this automation.</source>
+        <target>Тільки люди з правами на запис у репозиторій можуть ініціювати цю автоматизацію.</target>
+      </trans-unit>
+      <trans-unit id="automation.trigger.commaSeparated">
+        <source xml:lang="en">Comma-separated values</source>
+        <target>Значення, розділені комами</target>
+      </trans-unit>
+      <trans-unit id="automation.trigger.custom">
+        <source xml:lang="en">Custom trigger</source>
+        <target>Користувацький тригер</target>
+      </trans-unit>
+      <trans-unit id="automation.trigger.event">
+        <source xml:lang="en">Event</source>
+        <target>Подія</target>
+      </trans-unit>
+      <trans-unit id="automation.trigger.eventCount">
+        <source xml:lang="en">{0} events selected</source>
+        <target>Вибрано {0} подій</target>
+      </trans-unit>
+      <trans-unit id="automation.trigger.loading">
+        <source xml:lang="en">Loading available triggers…</source>
+        <target>Завантаження доступних тригерів…</target>
+      </trans-unit>
+      <trans-unit id="automation.trigger.open">
+        <source xml:lang="en">Open on GitHub</source>
+        <target>Відкрити на GitHub</target>
+      </trans-unit>
+      <trans-unit id="automation.trigger.pathsPlaceholder">
+        <source xml:lang="en">Match changed files with gitignore-style patterns, separated by commas</source>
+        <target>Відповідність змінених файлів шаблонам стилю gitignore, розділеним комами</target>
+      </trans-unit>
+      <trans-unit id="automation.trigger.queryExample">
+        <source xml:lang="en">e.g. label:bug is:open</source>
+        <target>наприклад, мітка:помилка є:відкрита</target>
+      </trans-unit>
+      <trans-unit id="automation.trigger.readOnly">
+        <source xml:lang="en">These triggers cannot be edited here. Other changes keep them unchanged.</source>
+        <target>Ці тригери не можна редагувати тут. Інші зміни залишають їх незмінними.</target>
+      </trans-unit>
+      <trans-unit id="automation.trigger.retry">
+        <source xml:lang="en">Retry</source>
+        <target>Спробувати ще раз</target>
+      </trans-unit>
+      <trans-unit id="automation.trigger.selectEvents">
+        <source xml:lang="en">Pull Request Events</source>
+        <target>Події запиту на злиття</target>
+      </trans-unit>
+      <trans-unit id="automation.trigger.selectEventsPlaceholder">
+        <source xml:lang="en">Select at least one event</source>
+        <target>Виберіть принаймні одну подію</target>
+      </trans-unit>
+      <trans-unit id="automation.trigger.selectedEvents">
+        <source xml:lang="en">Select events. Current selection: {0}</source>
+        <target>Виберіть події. Поточний вибір: {0}</target>
+      </trans-unit>
+      <trans-unit id="automation.trigger.selectedEventsCount">
+        <source xml:lang="en">Select events. {0}. Current selection: {1}</source>
+        <target>Виберіть події. {0}. Поточний вибір: {1}</target>
+      </trans-unit>
+      <trans-unit id="automation.trigger.unavailable">
+        <source xml:lang="en">The selected triggers are unavailable. Retry loading the trigger catalog before saving.</source>
+        <target>Вибрані тригери недоступні. Спробуйте знову завантажити каталог тригерів перед збереженням.</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/sessions/contrib/automations/browser/automations.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="chat.automations.cloud.enabled">
-        <source xml:lang="en">Enables managing user-owned cloud automations in known private GitHub repositories. Disabling this setting does not stop schedules already running on GitHub.</source>
-        <target>Дозволяє керувати автоматизаціями у хмарі, що належать користувачу, у відомих приватних репозиторіях GitHub. Вимкнення цього налаштування не зупиняє вже запущені розклади на GitHub.</target>
+        <source xml:lang="en">Enables managing Only me and Repository cloud automations in known GitHub repositories that support automation management. Disabling this setting does not stop schedules already running on GitHub.</source>
+        <target>Дозволяє керувати автоматизаціями Only me та Repository в відомих репозиторіях GitHub, які підтримують управління автоматизацією. Вимкнення цього налаштування не зупиняє вже запущені розклади на GitHub.</target>
       </trans-unit>
       <trans-unit id="chat.automations.enabled">
         <source xml:lang="en">Enables the Automations feature: scheduling agent sessions to run on a cadence. When disabled, the Automations entry in the Customizations sidebar, the Automations section in the Customizations editor, and the Automation option in the new-session composer are hidden, and scheduled automations are not dispatched.</source>
         <target>Увімкнення функції Автоматизацій: планування сеансів агентів для виконання з певною періодичністю. Коли вимкнено, запис Автоматизацій у бічній панелі Налаштувань, розділ Автоматизацій у редакторі Налаштувань та опція Автоматизації в композиторі нових сеансів приховані, а заплановані автоматизації не виконуються.</target>
-      </trans-unit>
-      <trans-unit id="chat.automations.runTimeoutMinutes">
-        <source xml:lang="en">Maximum number of minutes an automation run is allowed to take before it is ended. Prevents a single hung run from permanently blocking subsequent runs.</source>
-        <target>Максимальна кількість хвилин, протягом яких дозволено виконання автоматизації, перш ніж вона буде завершена. Запобігає блокуванню наступних запусків через один завислий процес.</target>
       </trans-unit>
     </body>
   </file>

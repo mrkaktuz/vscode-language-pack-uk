@@ -170,17 +170,37 @@
         <source xml:lang="en">Your input will not be saved. Are you sure you want to close this window?</source>
         <target>Ваші дані не будуть збережені. Ви впевнені, що хочете закрити це вікно?</target>
       </trans-unit>
+      <trans-unit id="invalidIssueDestination">
+        <source xml:lang="en">The selected issue destination is invalid. No issue data was sent.</source>
+        <target>Вибране місце призначення проблеми є недійсним. Дані проблеми не були надіслані.</target>
+      </trans-unit>
+      <trans-unit id="invalidScreenshotAttachment">
+        <source xml:lang="en">The screenshot could not be read.</source>
+        <target>Скріншот не вдалося прочитати.</target>
+      </trans-unit>
       <trans-unit id="issueData">
         <source xml:lang="en">Issue Data</source>
         <target>Дані випуску</target>
+      </trans-unit>
+      <trans-unit id="issueReporter.attachmentUploadFailed">
+        <source xml:lang="en">Could not upload {0}. Try again, or remove this file and attach it on GitHub.</source>
+        <target>Не вдалося завантажити {0}. Спробуйте ще раз або видаліть цей файл і прикріпіть його на GitHub.</target>
       </trans-unit>
       <trans-unit id="issueReporter.attachmentsHeading">
         <source xml:lang="en">Attachments</source>
         <target>Вкладення</target>
       </trans-unit>
+      <trans-unit id="issueReporter.attachmentsNeedAuthentication">
+        <source xml:lang="en">Attachments could not be uploaded. Sign in to GitHub, or remove the attachments and add them on GitHub.</source>
+        <target>Вкладення не вдалося завантажити. Увійдіть до GitHub або видаліть вкладення та додайте їх на GitHub.</target>
+      </trans-unit>
       <trans-unit id="issueReporter.attachmentsUploadFailed">
-        <source xml:lang="en">Upload failed. Please drag and drop attachments manually.</source>
-        <target>Завантаження не вдалося. Будь ласка, перетягніть вкладення вручну.</target>
+        <source xml:lang="en">Could not upload attachments. Try again, or remove them and attach them on GitHub.</source>
+        <target>Не вдалося завантажити вкладення. Спробуйте ще раз або видаліть їх і прикріпіть на GitHub.</target>
+      </trans-unit>
+      <trans-unit id="issueReporter.authenticationFailed">
+        <source xml:lang="en">Could not access your GitHub session. Try signing in again, or remove the attachments and add them on GitHub.</source>
+        <target>Не вдалося отримати доступ до вашої сесії GitHub. Спробуйте увійти знову або видаліть вкладення та додайте їх на GitHub.</target>
       </trans-unit>
       <trans-unit id="issueReporterWriteToClipboard">
         <source xml:lang="en">There is too much data to send to GitHub directly. The data will be copied to the clipboard, please paste it into the GitHub issue page that is opened.</source>
@@ -194,6 +214,10 @@
       <trans-unit id="pasteData">
         <source xml:lang="en">We have written the needed data into your clipboard because it was too large to send. Please paste.</source>
         <target>Ми скопіювали необхідні дані у ваш буфер обміну, оскільки вони були занадто великими для відправки. Будь ласка, вставте.</target>
+      </trans-unit>
+      <trans-unit id="screenshotAttachment">
+        <source xml:lang="en">Screenshot {0}</source>
+        <target>Скріншот {0}</target>
       </trans-unit>
       <trans-unit id="yes">
         <source xml:lang="en">&amp;&amp;Yes</source>
@@ -240,6 +264,30 @@
         <source xml:lang="en">Icon for the issue reporter editor.</source>
         <target>Іконка для редактора звітів про проблеми.</target>
       </trans-unit>
+      <trans-unit id="waitBeforeMovingReporter">
+        <source xml:lang="en">Wait for attachments and captures to finish before moving the issue reporter.</source>
+        <target>Зачекайте, поки завершаться вкладення та захоплення, перш ніж переміщати репортер проблеми.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/issue/browser/issueReporterMedia" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="attachmentTooLarge">
+        <source xml:lang="en">Cannot attach {0}. The limit for this file is {1} MB.</source>
+        <target>Не вдається прикріпити {0}. Ліміт для цього файлу становить {1} МБ.</target>
+      </trans-unit>
+      <trans-unit id="imageDecodeFailed">
+        <source xml:lang="en">The image could not be decoded. It may be damaged or use an unsupported format.</source>
+        <target>Зображення не вдалося декодувати. Можливо, воно пошкоджене або використовує непідтримуваний формат.</target>
+      </trans-unit>
+      <trans-unit id="unnamedAttachment">
+        <source xml:lang="en">Clipboard attachment</source>
+        <target>Прикріплення буфера обміну</target>
+      </trans-unit>
+      <trans-unit id="videoDecodeFailed">
+        <source xml:lang="en">The video could not be decoded. It may be damaged or use an unsupported format or codec.</source>
+        <target>Відео не вдалося декодувати. Можливо, воно пошкоджене або використовує несумісний формат чи кодек.</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/issue/browser/issueReporterOverlay" source-language="en" datatype="plaintext" target-language="uk">
@@ -248,9 +296,9 @@
         <source xml:lang="en">A/B Experiments</source>
         <target>A/B експерименти</target>
       </trans-unit>
-      <trans-unit id="additionalInformation">
-        <source xml:lang="en">Additional Information</source>
-        <target>Додаткова інформація</target>
+      <trans-unit id="addFiles">
+        <source xml:lang="en">Add Files...</source>
+        <target>Додати файли...</target>
       </trans-unit>
       <trans-unit id="additionalPerformanceData">
         <source xml:lang="en">Additional Performance Data</source>
@@ -268,13 +316,61 @@
         <source xml:lang="en">E.g. Sessions list does not refresh after creating a new session</source>
         <target>Наприклад, список сесій не оновлюється після створення нової сесії.</target>
       </trans-unit>
-      <trans-unit id="attachments">
-        <source xml:lang="en">Attachments ({0})</source>
-        <target>Вкладення ({0})</target>
+      <trans-unit id="attachmentArea">
+        <source xml:lang="en">Attachments. Paste or drop files here.</source>
+        <target>Вкладення. Вставте або перетягніть файли сюди.</target>
       </trans-unit>
-      <trans-unit id="back">
-        <source xml:lang="en">Back</source>
-        <target>Назад</target>
+      <trans-unit id="attachmentErrorDetails">
+        <source xml:lang="en">Technical details</source>
+        <target>Технічні деталі</target>
+      </trans-unit>
+      <trans-unit id="attachmentErrorDetailsCopied">
+        <source xml:lang="en">Technical details copied.</source>
+        <target>Технічні деталі скопійовані.</target>
+      </trans-unit>
+      <trans-unit id="attachmentImportHint">
+        <source xml:lang="en">Drop or paste up to {0} files. Images: 10 MB. Videos: 100 MB. Other files: 25 MB. Files stay local until you preview on GitHub.</source>
+        <target>Перетягніть або вставте до {0} файлів. Зображення: 10 МБ. Відео: 100 МБ. Інші файли: 25 МБ. Файли залишаються локальними, поки ви не переглянете їх на GitHub.</target>
+      </trans-unit>
+      <trans-unit id="attachmentImportLimit">
+        <source xml:lang="en">Attachment limit reached. Remove a file to add another.</source>
+        <target>Досягнуто ліміту прикріплень. Видаліть файл, щоб додати інший.</target>
+      </trans-unit>
+      <trans-unit id="attachmentImported">
+        <source xml:lang="en">Attachment added.</source>
+        <target>Додано вкладення.</target>
+      </trans-unit>
+      <trans-unit id="attachmentPending">
+        <source xml:lang="en">Waiting to upload</source>
+        <target>Очікування завантаження</target>
+      </trans-unit>
+      <trans-unit id="attachmentPreviewUnavailable">
+        <source xml:lang="en">Preview unavailable</source>
+        <target>Попередній перегляд недоступний</target>
+      </trans-unit>
+      <trans-unit id="attachmentTextAdded">
+        <source xml:lang="en">Text added to the description.</source>
+        <target>Текст додано до опису.</target>
+      </trans-unit>
+      <trans-unit id="attachmentUploaded">
+        <source xml:lang="en">Uploaded</source>
+        <target>Завантажено</target>
+      </trans-unit>
+      <trans-unit id="attachmentUploading">
+        <source xml:lang="en">Uploading</source>
+        <target>Завантаження</target>
+      </trans-unit>
+      <trans-unit id="attachmentsHeading">
+        <source xml:lang="en">Attachments</source>
+        <target>Вкладення</target>
+      </trans-unit>
+      <trans-unit id="attachmentsImporting">
+        <source xml:lang="en">Importing {0} file(s)...</source>
+        <target>Імпортування {0} файлу(ів)...</target>
+      </trans-unit>
+      <trans-unit id="attachmentsUploading">
+        <source xml:lang="en">Uploading attachments...</source>
+        <target>Завантаження вкладень...</target>
       </trans-unit>
       <trans-unit id="bug">
         <source xml:lang="en">Bug</source>
@@ -288,9 +384,9 @@
         <source xml:lang="en">Capture options</source>
         <target>Опції захоплення</target>
       </trans-unit>
-      <trans-unit id="category">
-        <source xml:lang="en">Category</source>
-        <target>Категорія</target>
+      <trans-unit id="captureScreenshot">
+        <source xml:lang="en">Capture Screenshot</source>
+        <target>Зробити знімок екрану</target>
       </trans-unit>
       <trans-unit id="categoryRequired">
         <source xml:lang="en">Select a category to continue.</source>
@@ -300,21 +396,21 @@
         <source xml:lang="en">Close</source>
         <target>Закрити</target>
       </trans-unit>
-      <trans-unit id="composeMessage">
-        <source xml:lang="en">Describe</source>
-        <target>Описати</target>
+      <trans-unit id="copy">
+        <source xml:lang="en">Copy</source>
+        <target>Копіювати</target>
+      </trans-unit>
+      <trans-unit id="copyAttachmentErrorDetails">
+        <source xml:lang="en">Copy technical details</source>
+        <target>Скопіювати технічні деталі</target>
+      </trans-unit>
+      <trans-unit id="copyAttachmentErrorDetailsFailed">
+        <source xml:lang="en">Could not copy technical details: {0}</source>
+        <target>Не вдалося скопіювати технічні деталі: {0}</target>
       </trans-unit>
       <trans-unit id="defaultGuidance">
         <source xml:lang="en">Select a category above, then describe your feedback in detail.</source>
         <target>Виберіть категорію вище, а потім детально опишіть свої відгуки.</target>
-      </trans-unit>
-      <trans-unit id="deleteRecording">
-        <source xml:lang="en">Remove recording</source>
-        <target>Видалити запис</target>
-      </trans-unit>
-      <trans-unit id="deleteScreenshot">
-        <source xml:lang="en">Delete screenshot</source>
-        <target>Видалити скріншот</target>
       </trans-unit>
       <trans-unit id="describeHeading">
         <source xml:lang="en">Describe your feedback</source>
@@ -324,17 +420,33 @@
         <source xml:lang="en">Description</source>
         <target>Опис</target>
       </trans-unit>
-      <trans-unit id="descriptionPlaceholder">
-        <source xml:lang="en">Describe the issue in detail...</source>
-        <target>Опишіть проблему детально...</target>
+      <trans-unit id="descriptionInputLabel">
+        <source xml:lang="en">Description, Markdown. Paste or drop files to attach them.</source>
+        <target>Опис, Markdown. Вставте або перетягніть файли, щоб прикріпити їх.</target>
+      </trans-unit>
+      <trans-unit id="descriptionMode">
+        <source xml:lang="en">Description mode</source>
+        <target>Режим опису</target>
       </trans-unit>
       <trans-unit id="descriptionRequired">
         <source xml:lang="en">Enter a description to continue.</source>
         <target>Введіть опис, щоб продовжити.</target>
       </trans-unit>
-      <trans-unit id="editScreenshot">
-        <source xml:lang="en">Click to edit screenshot</source>
-        <target>Натисніть, щоб редагувати скріншот</target>
+      <trans-unit id="diagnosticChoices">
+        <source xml:lang="en">Choose which diagnostic information to include. Expand a section to review its details.</source>
+        <target>Виберіть, яку діагностичну інформацію включити. Розгорніть розділ, щоб переглянути його деталі.</target>
+      </trans-unit>
+      <trans-unit id="editScreenshotLabel">
+        <source xml:lang="en">Edit {0}</source>
+        <target>Редагувати {0}</target>
+      </trans-unit>
+      <trans-unit id="emptyDescriptionPreview">
+        <source xml:lang="en">Nothing to preview.</source>
+        <target>Немає нічого для попереднього перегляду.</target>
+      </trans-unit>
+      <trans-unit id="experimentDataUnavailable">
+        <source xml:lang="en">No experiment data is available yet.</source>
+        <target>Дані експерименту поки що недоступні.</target>
       </trans-unit>
       <trans-unit id="extension">
         <source xml:lang="en">Extension</source>
@@ -343,6 +455,10 @@
       <trans-unit id="extensionData">
         <source xml:lang="en">Extension Data</source>
         <target>Дані розширення</target>
+      </trans-unit>
+      <trans-unit id="extensionDataUnavailable">
+        <source xml:lang="en">No extension data is available yet.</source>
+        <target>Дані розширення ще недоступні.</target>
       </trans-unit>
       <trans-unit id="extensionExternalIssueUrl">
         <source xml:lang="en">This extension uses an external issue reporter. Preview will open that issue reporter.</source>
@@ -367,6 +483,10 @@
       <trans-unit id="extensions">
         <source xml:lang="en">Extensions ({0})</source>
         <target>Розширення</target>
+      </trans-unit>
+      <trans-unit id="externalReporterConsent">
+        <source xml:lang="en">Opens the extension's issue reporter without sending this report or its attachments.</source>
+        <target>Відкриває репортер проблем розширення без відправлення цього звіту або його вкладень.</target>
       </trans-unit>
       <trans-unit id="featureGuidance">
         <source xml:lang="en">Describe the feature you'd like to see, what problem it would solve, and any alternatives you've considered.</source>
@@ -400,9 +520,13 @@
         <source xml:lang="en">Hide Toolbar in Screenshots</source>
         <target>Сховати панель інструментів у знімках екрану</target>
       </trans-unit>
-      <trans-unit id="issueTargetRepo">
-        <source xml:lang="en">Issue will be created in {0}/{1}.</source>
-        <target>Проблема буде створена в {0}/{1}.</target>
+      <trans-unit id="includeDiagnostic">
+        <source xml:lang="en">Include {0}</source>
+        <target>Включити {0}</target>
+      </trans-unit>
+      <trans-unit id="invalidIssueRepository">
+        <source xml:lang="en">Invalid issue destination</source>
+        <target>Недійсне призначення проблеми</target>
       </trans-unit>
       <trans-unit id="issueTitle">
         <source xml:lang="en">Title</source>
@@ -448,29 +572,25 @@
         <source xml:lang="en">Max attachments reached</source>
         <target>Досягнуто максимальної кількості вкладень</target>
       </trans-unit>
-      <trans-unit id="next">
-        <source xml:lang="en">Next</source>
-        <target>Далі</target>
-      </trans-unit>
       <trans-unit id="noDelay">
         <source xml:lang="en">No delay</source>
         <target>Без затримки</target>
       </trans-unit>
-      <trans-unit id="noDescription">
-        <source xml:lang="en">(no description)</source>
-        <target>(немає опису)</target>
+      <trans-unit id="noDiagnosticExtensions">
+        <source xml:lang="en">No extensions are currently listed.</source>
+        <target>Наразі жодні розширення не вказані.</target>
       </trans-unit>
-      <trans-unit id="noSimilarIssues">
-        <source xml:lang="en">No similar issues found.</source>
-        <target>Схожих проблем не знайдено.</target>
-      </trans-unit>
-      <trans-unit id="noTitle">
-        <source xml:lang="en">(no title)</source>
-        <target>(без заголовка)</target>
+      <trans-unit id="openAttachment">
+        <source xml:lang="en">Open {0}</source>
+        <target>Відкрити {0}</target>
       </trans-unit>
       <trans-unit id="openExternalIssueReporter">
         <source xml:lang="en">Open External Issue Reporter</source>
         <target>Відкрити зовнішній репортер проблем</target>
+      </trans-unit>
+      <trans-unit id="optionalDiagnostics">
+        <source xml:lang="en">Diagnostics (optional)</source>
+        <target>Діагностика (необов'язково)</target>
       </trans-unit>
       <trans-unit id="or">
         <source xml:lang="en">or</source>
@@ -488,21 +608,29 @@
         <source xml:lang="en">Performance Issue</source>
         <target>Проблема продуктивності (зависання, повільна робота, аварія)</target>
       </trans-unit>
+      <trans-unit id="previewConsent">
+        <source xml:lang="en">Preview uploads attachments and opens your report on GitHub. You can review it there before submitting.</source>
+        <target>Попередній перегляд завантажених вкладень та відкриття вашого звіту на GitHub. Ви можете переглянути його там перед поданням.</target>
+      </trans-unit>
+      <trans-unit id="previewDescription">
+        <source xml:lang="en">Preview</source>
+        <target>Попередній перегляд</target>
+      </trans-unit>
       <trans-unit id="previewOnGitHub">
         <source xml:lang="en">Preview on GitHub</source>
         <target>Попередній перегляд на GitHub</target>
+      </trans-unit>
+      <trans-unit id="processDataUnavailable">
+        <source xml:lang="en">No process information is available.</source>
+        <target>Немає доступної інформації про процес.</target>
       </trans-unit>
       <trans-unit id="recordVideo">
         <source xml:lang="en">Record video</source>
         <target>Записати відео</target>
       </trans-unit>
-      <trans-unit id="recordingActive">
-        <source xml:lang="en">Recording active</source>
-        <target>Запис активний</target>
-      </trans-unit>
-      <trans-unit id="recordingThumbnailAlt">
-        <source xml:lang="en">Recording {0}</source>
-        <target>Запис {0}</target>
+      <trans-unit id="recordingPending">
+        <source xml:lang="en">Recording in progress</source>
+        <target>Запис у процесі</target>
       </trans-unit>
       <trans-unit id="refresh">
         <source xml:lang="en">Refresh</source>
@@ -511,6 +639,10 @@
       <trans-unit id="refreshPerformanceData">
         <source xml:lang="en">Reload running processes and workspace metadata</source>
         <target>Перезавантажити запущені процеси та метадані робочого простору</target>
+      </trans-unit>
+      <trans-unit id="removeAttachment">
+        <source xml:lang="en">Remove {0}</source>
+        <target>Видалити {0}</target>
       </trans-unit>
       <trans-unit id="reportIssue">
         <source xml:lang="en">Report Issue</source>
@@ -521,10 +653,6 @@
         <note>{Locked="https://github.com/microsoft/vscode/wiki/Submitting-Bugs-and-Suggestions"}</note>
         <target>Перед тим, як ви повідомите про проблему тут, будь ласка, [ознайомтеся з рекомендаціями, які ми надаємо](https://github.com/microsoft/vscode/wiki/Submitting-Bugs-and-Suggestions). Будь ласка, заповніть форму англійською мовою.</target>
       </trans-unit>
-      <trans-unit id="reviewSubmit">
-        <source xml:lang="en">Review and submit</source>
-        <target>Переглянути та надіслати</target>
-      </trans-unit>
       <trans-unit id="runningProcesses">
         <source xml:lang="en">Running Processes</source>
         <target>Запущені процеси</target>
@@ -532,26 +660,6 @@
       <trans-unit id="screenshot">
         <source xml:lang="en">Screenshot</source>
         <target>Скріншот</target>
-      </trans-unit>
-      <trans-unit id="screenshotAlt">
-        <source xml:lang="en">Screenshot {0}</source>
-        <target>Скріншот {0}</target>
-      </trans-unit>
-      <trans-unit id="screenshots">
-        <source xml:lang="en">Attachments</source>
-        <target>Вкладення</target>
-      </trans-unit>
-      <trans-unit id="screenshotsHeading">
-        <source xml:lang="en">Add attachments for better context</source>
-        <target>Додайте вкладення для кращого контексту</target>
-      </trans-unit>
-      <trans-unit id="screenshotsSubtitle">
-        <source xml:lang="en">You can add up to {0} screenshots or videos. Navigate VS Code and choose when to capture.</source>
-        <target>Ви можете додати до {0} скріншотів або відео. Перейдіть до VS Code і виберіть, коли зробити знімок.</target>
-      </trans-unit>
-      <trans-unit id="searchingSimilarIssues">
-        <source xml:lang="en">Searching similar issues...</source>
-        <target>Шукаю подібні проблеми...</target>
       </trans-unit>
       <trans-unit id="selectExtension">
         <source xml:lang="en">Select extension</source>
@@ -561,33 +669,9 @@
         <source xml:lang="en">Use the floating capture bar, or press</source>
         <target>Використовуйте плаваючу панель захоплення або натисніть</target>
       </trans-unit>
-      <trans-unit id="similarIssues">
-        <source xml:lang="en">Similar Issues</source>
-        <target>Схожі проблеми</target>
-      </trans-unit>
-      <trans-unit id="similarIssuesNeedsTitle">
-        <source xml:lang="en">Enter a title to search for similar issues.</source>
-        <target>Введіть заголовок для пошуку схожих проблем.</target>
-      </trans-unit>
-      <trans-unit id="similarIssuesSearchFailed">
-        <source xml:lang="en">Unable to search for similar issues.</source>
-        <target>Неможливо знайти подібні проблеми.</target>
-      </trans-unit>
-      <trans-unit id="skip">
-        <source xml:lang="en">Skip</source>
-        <target>Пропустити</target>
-      </trans-unit>
-      <trans-unit id="stepOf">
-        <source xml:lang="en">Step {0} of {1}</source>
-        <target>Крок {0} з {1}</target>
-      </trans-unit>
       <trans-unit id="stopRecording">
         <source xml:lang="en">Stop recording</source>
         <target>Зупинити запис</target>
-      </trans-unit>
-      <trans-unit id="submit">
-        <source xml:lang="en">Review</source>
-        <target>Огляд</target>
       </trans-unit>
       <trans-unit id="systemInformation">
         <source xml:lang="en">System Information</source>
@@ -645,13 +729,25 @@
         <source xml:lang="en">E.g. Workbench is missing problems panel</source>
         <target>Наприклад, панель проблем у робочій області відсутня</target>
       </trans-unit>
+      <trans-unit id="waitingForAttachments">
+        <source xml:lang="en">Wait for attachments and captures to finish.</source>
+        <target>Чекайте, поки завершаться вкладення та захоплення.</target>
+      </trans-unit>
       <trans-unit id="waitingForDiagnostics">
         <source xml:lang="en">Waiting for performance diagnostics to finish loading</source>
         <target>Очікування завершення завантаження діагностики продуктивності</target>
       </trans-unit>
+      <trans-unit id="workspaceDataUnavailable">
+        <source xml:lang="en">No workspace metadata is available.</source>
+        <target>Немає доступних метаданих робочого простору.</target>
+      </trans-unit>
       <trans-unit id="workspaceMetadata">
         <source xml:lang="en">Workspace Metadata</source>
         <target>Метадані робочого простору</target>
+      </trans-unit>
+      <trans-unit id="writeDescription">
+        <source xml:lang="en">Write</source>
+        <target>Напишіть</target>
       </trans-unit>
     </body>
   </file>
@@ -766,6 +862,22 @@
       <trans-unit id="titleLengthValidation">
         <source xml:lang="en">The title is too long.</source>
         <target>Заголовок занадто довгий.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/issue/browser/issueReporterRepositoryPicker" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="chooseIssueRepository">
+        <source xml:lang="en">Choose Issue Repository: {0}</source>
+        <target>Виберіть репозиторій проблеми: {0}</target>
+      </trans-unit>
+      <trans-unit id="invalidIssueDestination">
+        <source xml:lang="en">The selected issue destination is invalid. No issue data will be sent.</source>
+        <target>Вибране місце призначення проблеми є недійсним. Дані проблеми не були надіслані.</target>
+      </trans-unit>
+      <trans-unit id="issueDestination">
+        <source xml:lang="en">Issue will be opened in {0}</source>
+        <target>Питання буде відкрито в {0}</target>
       </trans-unit>
     </body>
   </file>
@@ -1015,13 +1127,33 @@ Translate this to "Report Issue in English" in all languages please!</note>
   </file>
   <file original="src/vs/workbench/contrib/issue/electron-browser/issue.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="issueReporter.additionalRepositories">
+        <source xml:lang="en">Additional GitHub repositories offered in the issue reporter for VS Code and Agents Window reports, in owner/repo format. The default repository remains selected initially. GitHub manages repository access.</source>
+        <target>Додаткові репозиторії GitHub, які пропонуються в репортері проблем для VS Code та звітах вікна агентів, у форматі owner/repo. За замовчуванням спочатку вибрано репозиторій. GitHub управляє доступом до репозиторіїв.</target>
+      </trans-unit>
+      <trans-unit id="issueReporter.repositoryFormat">
+        <source xml:lang="en">Use a GitHub repository in owner/repo format, not a URL.</source>
+        <target>Використовуйте репозиторій GitHub у форматі owner/repo, а не URL.</target>
+      </trans-unit>
       <trans-unit id="issueReporter.wizard.enabled">
-        <source xml:lang="en">Enable the new issue reporter wizard instead of the classic issue reporter.</source>
-        <target>Увімкніть новий майстер звіту про проблеми замість класичного звіту про проблеми.</target>
+        <source xml:lang="en">Enable the new single-page issue reporter instead of the classic issue reporter.</source>
+        <target>Увімкніть новий односторінковий репортер проблем замість класичного репортера проблем.</target>
       </trans-unit>
       <trans-unit id="issueReporter.wizard.fullWorkspaceScan">
-        <source xml:lang="en">When auto-collecting performance diagnostics for the issue reporter wizard, walk the full workspace instead of stopping at the default 20,000-file cap. Set to false on very large workspaces if the scan slows the initial wizard render.</source>
-        <target>При автоматичному зборі діагностики продуктивності для майстра звітів про проблеми пройдіть весь робочий простір замість того, щоб зупинятися на стандартному обмеженні в 20,000 файлів. Встановіть значення false для дуже великих робочих просторів, якщо сканування уповільнює початковий рендер майстра.</target>
+        <source xml:lang="en">When auto-collecting performance diagnostics for the issue reporter, walk the full workspace instead of stopping at the default 20,000-file cap. Set to false on very large workspaces if the scan slows the initial report render.</source>
+        <target>При автоматичному зборі діагностики продуктивності для репортера проблем, пройдіть повний робочий простір замість зупинки на стандартному обмеженні в 20 000 файлів. Встановіть значення false для дуже великих робочих просторів, якщо сканування уповільнює початкове відображення звіту.</target>
+      </trans-unit>
+      <trans-unit id="issueReporter.wizard.openLocation">
+        <source xml:lang="en">Where to open fresh reports when the new issue reporter is enabled. Existing reports keep their current location.</source>
+        <target>Де відкривати нові звіти, коли увімкнено новий репортер проблем. Існуючі звіти зберігають своє поточне місце.</target>
+      </trans-unit>
+      <trans-unit id="issueReporter.wizard.openLocation.editor">
+        <source xml:lang="en">Open new issue reports in an editor tab.</source>
+        <target>Відкрийте нові звіти про проблеми у вкладці редактора.</target>
+      </trans-unit>
+      <trans-unit id="issueReporter.wizard.openLocation.window">
+        <source xml:lang="en">Open new issue reports in a separate window attached to the current workbench.</source>
+        <target>Відкрийте нові звіти про проблеми в окремому вікні, прив'язаному до поточної робочої області.</target>
       </trans-unit>
       <trans-unit id="issueReporterConfigurationTitle">
         <source xml:lang="en">Issue Reporter</source>
@@ -1046,8 +1178,20 @@ Translate this to "Report Issue in English" in all languages please!</note>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/issue/electron-browser/issueReporterEditorPane" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/contrib/issue/electron-browser/issueReporterController" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="attachmentImportFailed">
+        <source xml:lang="en">Could not attach {0}: {1}</source>
+        <target>Не вдалося приєднати {0}: {1}</target>
+      </trans-unit>
+      <trans-unit id="attachmentPreviewFailed">
+        <source xml:lang="en">Could not open the attachment: {0}</source>
+        <target>Не вдалося відкрити вкладення: {0}</target>
+      </trans-unit>
+      <trans-unit id="attachmentReadonly">
+        <source xml:lang="en">Issue reporter attachments are read-only. Edit the original file and attach it again.</source>
+        <target>Вкладення репортера проблем є лише для читання. Відредагуйте оригінальний файл і прикріпіть його знову.</target>
+      </trans-unit>
       <trans-unit id="noData">
         <source xml:lang="en">No issue reporter data available.</source>
         <target>Дані про репортерів проблем недоступні.</target>
@@ -1060,17 +1204,41 @@ Translate this to "Report Issue in English" in all languages please!</note>
         <source xml:lang="en">Open System Settings</source>
         <target>Відкрити Налаштування системи</target>
       </trans-unit>
+      <trans-unit id="recordingAttachmentRejected">
+        <source xml:lang="en">The recording could not be attached because the attachment limit was reached. Remove an attachment and record again.</source>
+        <target>Запис не вдалося прикріпити, оскільки було досягнуто ліміту на прикріплення. Видаліть прикріплення та запишіть знову.</target>
+      </trans-unit>
       <trans-unit id="recordingTooLarge">
         <source xml:lang="en">Recording stopped automatically: the 100 MB upload limit was reached.</source>
-        <target>Запис автоматично зупинено: досягнуто ліміту завантаження 100 МБ.</target>
+        <target>Запис автоматично зупинено: досягнуто обмеження на завантаження в 100 МБ.</target>
+      </trans-unit>
+      <trans-unit id="screenRecordingFailed">
+        <source xml:lang="en">Screen recording failed: {0} Try recording again.</source>
+        <target>Запис екрану не вдався: {0} Спробуйте записати знову.</target>
+      </trans-unit>
+      <trans-unit id="screenRecordingFailedMac">
+        <source xml:lang="en">Screen recording failed: {0} If you recently changed Screen Recording permission, quit and reopen {1}. If recording still fails, remove {1} from the Screen Recording list in System Settings, reopen it, and grant access again.</source>
+        <target>Запис екрану не вдався: {0} Якщо ви нещодавно змінили дозвіл на запис екрану, закрийте та знову відкрийте {1}. Якщо запис все ще не вдається, видаліть {1} зі списку запису екрану в системних налаштуваннях, знову відкрийте його та надайте доступ.</target>
       </trans-unit>
       <trans-unit id="screenRecordingPermissionDenied">
-        <source xml:lang="en">{0} needs Screen Recording permission to record videos. Grant access in System Settings, then click Record again.</source>
-        <target>{0} потрібен дозвіл на запис екрану, щоб записувати відео. Надані доступ у системних налаштуваннях, а потім натисніть "Записати" знову.</target>
+        <source xml:lang="en">{0} needs Screen Recording permission to record videos. Grant access in System Settings and restart {0} if requested. If {0} is missing after you removed it from the list, quit and reopen {0}, then click Record again.</source>
+        <target>{0} потребує дозволу на запис екрану для запису відео. Наддайте доступ у системних налаштуваннях і перезапустіть {0}, якщо буде запропоновано. Якщо {0} відсутній після того, як ви видалили його зі списку, вийдіть і знову відкрийте {0}, а потім натисніть "Записати" ще раз.</target>
       </trans-unit>
       <trans-unit id="screenRecordingPermissionDeniedGeneric">
         <source xml:lang="en">Screen recording permission was denied. Allow {0} to record the screen and try again.</source>
         <target>Дозвіл на запис екрану був відхилений. Дозвольте {0} записувати екран і спробуйте ще раз.</target>
+      </trans-unit>
+      <trans-unit id="screenRecordingPermissionRestricted">
+        <source xml:lang="en">Screen recording is restricted by macOS. Check Screen Recording permissions in System Settings or contact your administrator.</source>
+        <target>Запис екрану обмежений macOS. Перевірте дозволи на запис екрану в Налаштуваннях системи або зверніться до вашого адміністратора.</target>
+      </trans-unit>
+      <trans-unit id="screenRecordingSettingsFailed">
+        <source xml:lang="en">Unable to open Screen Recording settings: {0}</source>
+        <target>Неможливо відкрити налаштування запису екрану: {0}</target>
+      </trans-unit>
+      <trans-unit id="unnamedAttachment">
+        <source xml:lang="en">Clipboard attachment</source>
+        <target>Прикріплення буфера обміну</target>
       </trans-unit>
     </body>
   </file>
@@ -1095,6 +1263,74 @@ Translate this to "Report Issue in English" in all languages please!</note>
       <trans-unit id="updateAvailable">
         <source xml:lang="en">A new version of {0} is available.</source>
         <target>Доступна нова версія {0}.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/issue/electron-browser/issueService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="invalidAdditionalRepositories">
+        <source xml:lang="en">The issueReporter.additionalRepositories setting must be an array of GitHub repositories in owner/repo format. Additional destinations were not loaded.</source>
+        <target>Налаштування issueReporter.additionalRepositories повинно бути масивом репозиторіїв GitHub у форматі owner/repo. Додаткові місця призначення не були завантажені.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/issue/electron-browser/nativeIssueFormService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="issueReporterCloseFailed">
+        <source xml:lang="en">The issue reporter could not be closed. Please try again.</source>
+        <target>Не вдалося закрити репортер проблеми. Будь ласка, спробуйте ще раз.</target>
+      </trans-unit>
+      <trans-unit id="issueReporterUnsavedChanges">
+        <source xml:lang="en">The issue report has unsaved changes. Confirm whether to discard them to close the window.</source>
+        <target>Звіт про проблему має незбережені зміни. Підтвердіть, чи слід скасувати їх, щоб закрити вікно.</target>
+      </trans-unit>
+      <trans-unit id="issueReporterWindowTitle">
+        <source xml:lang="en">Issue Reporter</source>
+        <target>Доповідач проблем</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/issue/electron-browser/nativeRecordingService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="recordingEmpty">
+        <source xml:lang="en">No video was captured. Try recording again.</source>
+        <target>Не було захоплено відео. Спробуйте записати ще раз.</target>
+      </trans-unit>
+      <trans-unit id="recordingEndedBeforeStart">
+        <source xml:lang="en">Screen capture ended before recording could start. Try again.</source>
+        <target>Запис екрану завершився до того, як запис міг початися. Спробуйте ще раз.</target>
+      </trans-unit>
+      <trans-unit id="recordingEndedDuringStart">
+        <source xml:lang="en">Screen capture ended while starting the recording. Try again.</source>
+        <target>Запис екрану завершився під час початку запису. Спробуйте ще раз.</target>
+      </trans-unit>
+      <trans-unit id="recordingInProgress">
+        <source xml:lang="en">A recording is already in progress.</source>
+        <target>Запис вже триває.</target>
+      </trans-unit>
+      <trans-unit id="recordingInterrupted">
+        <source xml:lang="en">Screen recording failed. Try recording again.</source>
+        <target>Запис екрану не вдався. Спробуйте записати знову.</target>
+      </trans-unit>
+      <trans-unit id="recordingNoLiveTrack">
+        <source xml:lang="en">No live screen capture source is available. Try recording again.</source>
+        <target>Немає доступного джерела захоплення живого екрану. Спробуйте записати ще раз.</target>
+      </trans-unit>
+      <trans-unit id="recordingStartFailed">
+        <source xml:lang="en">Unable to start screen recording. Try again.</source>
+        <target>Не вдалося розпочати запис екрану. Спробуйте ще раз.</target>
+      </trans-unit>
+      <trans-unit id="recordingStartTimeout">
+        <source xml:lang="en">Screen recording did not start. Try again.</source>
+        <target>Запис екрану не розпочався. Спробуйте ще раз.</target>
+      </trans-unit>
+      <trans-unit id="recordingStopTimeout">
+        <source xml:lang="en">Screen recording did not finish. Try recording again.</source>
+        <target>Запис екрану не завершився. Спробуйте записати знову.</target>
+      </trans-unit>
+      <trans-unit id="recordingUnsupported">
+        <source xml:lang="en">Screen recording is not supported in this environment.</source>
+        <target>Запис екрану не підтримується в цьому середовищі.</target>
       </trans-unit>
     </body>
   </file>

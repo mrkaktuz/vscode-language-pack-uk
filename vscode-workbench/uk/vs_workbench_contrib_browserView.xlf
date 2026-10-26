@@ -118,6 +118,10 @@ Open the page in a new tab to share it with agents.</source>
         <source xml:lang="en">Agent access to browser tabs was revoked because network filtering was enabled.</source>
         <target>Доступ агента до вкладок браузера було відкликано, оскільки було увімкнено фільтрацію мережі.</target>
       </trans-unit>
+      <trans-unit id="browser.networkProxyUnavailable">
+        <source xml:lang="en">The browser network proxy did not start. Reload the window and try again.</source>
+        <target>Проксі-сервер мережі браузера не запустився. Перезавантажте вікно та спробуйте ще раз.</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserAutoReloadFeatures" source-language="en" datatype="plaintext" target-language="uk">
@@ -860,8 +864,12 @@ Ensure the URL is correct and the server is accessible from the remote machine.<
         <target>Підключено через віддалений доступ</target>
       </trans-unit>
       <trans-unit id="browser.enableRemoteProxy">
-        <source xml:lang="en">When enabled, browser requests in remote workspaces are proxied through the remote connection. This allows web pages to access resources available on the remote host.</source>
-        <target>Коли увімкнено, запити браузера в віддалених робочих просторах проксіруються через віддалене з'єднання. Це дозволяє веб-сторінкам отримувати доступ до ресурсів, доступних на віддаленому хості.</target>
+        <source xml:lang="en">When enabled, browser requests in remote workspaces are proxied through the remote connection. This allows web pages to access resources available on the remote host. Browsers using global storage always use the local network.</source>
+        <target>Коли увімкнено, запити браузера в віддалених робочих просторах проксіруються через віддалене з'єднання. Це дозволяє веб-сторінкам отримувати доступ до ресурсів, доступних на віддаленому хості. Браузери, що використовують глобальне сховище, завжди використовують локальну мережу.</target>
+      </trans-unit>
+      <trans-unit id="browser.localFallback.global">
+        <source xml:lang="en">Connected locally. Browsers using global storage load pages from your local network.</source>
+        <target>Підключено локально. Браузери, що використовують глобальне сховище, завантажують сторінки з вашої локальної мережі.</target>
       </trans-unit>
     </body>
   </file>

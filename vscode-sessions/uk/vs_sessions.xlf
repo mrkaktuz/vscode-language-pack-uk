@@ -118,9 +118,33 @@
         <source xml:lang="en">Hide Panel</source>
         <target>Сховати панель</target>
       </trans-unit>
+      <trans-unit id="hideSessionActivityBar">
+        <source xml:lang="en">Hide Session Activity Bar</source>
+        <target>Сховати панель активності сесії</target>
+      </trans-unit>
       <trans-unit id="layoutDensity">
         <source xml:lang="en">Layout Density</source>
         <target>Щільність макета</target>
+      </trans-unit>
+      <trans-unit id="miAppearance">
+        <source xml:lang="en">&amp;&amp;Appearance</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Зовнішній вигляд</target>
+      </trans-unit>
+      <trans-unit id="miLayoutDensity">
+        <source xml:lang="en">Layout &amp;&amp;Density</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>Макет &amp;&amp;Щільність</target>
+      </trans-unit>
+      <trans-unit id="miPrimarySideBar">
+        <source xml:lang="en">Primary &amp;&amp;Side Bar</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>Основний &amp;&amp;Бокова панель</target>
+      </trans-unit>
+      <trans-unit id="miSessionActivityBar">
+        <source xml:lang="en">Session &amp;&amp;Activity Bar</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>Сесія &amp;&amp;Панель активності</target>
       </trans-unit>
       <trans-unit id="openAndCloseSidebar">
         <source xml:lang="en">Open/Show and Close/Hide Sidebar</source>
@@ -134,6 +158,10 @@
         <source xml:lang="en">Show Panel</source>
         <target>Показати панель</target>
       </trans-unit>
+      <trans-unit id="showSessionActivityBarLayoutActions">
+        <source xml:lang="en">Show Layout Actions</source>
+        <target>Показати дії макета</target>
+      </trans-unit>
       <trans-unit id="sidebarHidden">
         <source xml:lang="en">Primary Side Bar hidden</source>
         <target>Основна бічна панель прихована</target>
@@ -141,6 +169,14 @@
       <trans-unit id="sidebarVisible">
         <source xml:lang="en">Primary Side Bar shown</source>
         <target>Показано бічну панель первинного рівня</target>
+      </trans-unit>
+      <trans-unit id="toggleSessionActivityBar">
+        <source xml:lang="en">Toggle Session Activity Bar</source>
+        <target>Перемкнути панель активності сеансу</target>
+      </trans-unit>
+      <trans-unit id="toggleSessionActivityBarLayoutActions">
+        <source xml:lang="en">Toggle Layout Actions in Session Activity Bar</source>
+        <target>Перемикання дій макета в панелі активності сесії</target>
       </trans-unit>
       <trans-unit id="toggleSidebar">
         <source xml:lang="en">Toggle Side Bar</source>
@@ -218,10 +254,6 @@
         <source xml:lang="en">{0} {1}</source>
         <target>{0} {1}</target>
       </trans-unit>
-      <trans-unit id="sessionReadOnlyBanner.archived">
-        <source xml:lang="en">Archived sessions are read-only.</source>
-        <target>Архівовані сесії доступні лише для читання.</target>
-      </trans-unit>
       <trans-unit id="sessionReadOnlyBanner.message">
         <source xml:lang="en">This chat is read-only</source>
         <target>Цей чат тільки для читання</target>
@@ -229,6 +261,18 @@
       <trans-unit id="sessionReadOnlyBanner.preparing">
         <source xml:lang="en">Preparing the session...</source>
         <target>Підготовка сесії...</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/browser/parts/emptyEditorGroupAddTab" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="addTabWatermark">
+        <source xml:lang="en">Add Tab</source>
+        <target>Додати вкладку</target>
+      </trans-unit>
+      <trans-unit id="addTabWatermarkEntryAriaLabel">
+        <source xml:lang="en">{0} ({1})</source>
+        <target>{0} ({1})</target>
       </trans-unit>
     </body>
   </file>
@@ -532,8 +576,32 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/browser/parts/sessionActivityBar" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="sessionActivityBar">
+        <source xml:lang="en">Session Activity Bar</source>
+        <target>Панель активності сесії</target>
+      </trans-unit>
+      <trans-unit id="sessionActivityBar.dragHandle">
+        <source xml:lang="en">Drag to move. Double-click to reset the position.</source>
+        <target>Перетягніть, щоб перемістити. Двічі клацніть, щоб скинути позицію.</target>
+      </trans-unit>
+      <trans-unit id="sessionActivityBar.titleWithActivity">
+        <source xml:lang="en">{0} - {1}</source>
+        <target>{0} - {1}</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/browser/parts/sessionHeaderBar" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="chatHeaderLabel">
+        <source xml:lang="en">Chat: {0}</source>
+        <target>Чат: {0}</target>
+      </trans-unit>
+      <trans-unit id="newSessionDragArea">
+        <source xml:lang="en">New Session</source>
+        <target>Нова сесія</target>
+      </trans-unit>
       <trans-unit id="renameChat.aria">
         <source xml:lang="en">Rename chat</source>
         <target>Перейменувати чат</target>
@@ -542,6 +610,10 @@
   </file>
   <file original="src/vs/sessions/browser/parts/sessionReadOnlyBanner" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="sessionReadOnlyBanner.archived">
+        <source xml:lang="en">Archived sessions are read-only.</source>
+        <target>Архівні сесії доступні тільки для читання.</target>
+      </trans-unit>
       <trans-unit id="sessionReadOnlyBanner.message">
         <source xml:lang="en">This chat is read-only</source>
         <target>Цей чат тільки для читання</target>
@@ -757,6 +829,22 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/common/agentHostSessionsProvider" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="agentHost.connected">
+        <source xml:lang="en">Connected</source>
+        <target>Підключено</target>
+      </trans-unit>
+      <trans-unit id="agentHost.connecting">
+        <source xml:lang="en">Connecting</source>
+        <target>Підключення</target>
+      </trans-unit>
+      <trans-unit id="agentHost.disconnected">
+        <source xml:lang="en">Disconnected</source>
+        <target>Відключено</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/common/categories" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agents">
@@ -863,13 +951,17 @@
         <source xml:lang="en">True when Agent Merge is enabled for the active agent session</source>
         <target>Істина, коли злиття агентів увімкнено для активної сесії агента</target>
       </trans-unit>
-      <trans-unit id="sessionAgentPickerInAttachContext">
-        <source xml:lang="en">Whether the active session's Agent picker is shown in Add Context instead of the input toolbar</source>
-        <target>Чи показується вибірник агента активної сесії в Додати контекст замість панелі введення</target>
+      <trans-unit id="sessionBranchPickerVisible">
+        <source xml:lang="en">Whether the new-session view's branch picker is visible</source>
+        <target>Чи видимий вибір гілки у вигляді нової сесії</target>
       </trans-unit>
       <trans-unit id="sessionChatsPickerVisible">
         <source xml:lang="en">Whether the chats picker (chats within the active session) is visible</source>
         <target>Чи видимий вибір чатів (чати в активній сесії)</target>
+      </trans-unit>
+      <trans-unit id="sessionEnvironmentPickerVisible">
+        <source xml:lang="en">Whether the new-session view's environment picker is visible</source>
+        <target>Чи видимий вибір середовища у вигляді нової сесії</target>
       </trans-unit>
       <trans-unit id="sessionFocusedChatIsRenameTarget">
         <source xml:lang="en">Whether the focused chat group's visible chat is a non-main chat that should receive the chat-specific rename command instead of the session rename command</source>
@@ -995,6 +1087,10 @@
         <source xml:lang="en">Whether the session view's session supports creating a side chat from a turn (via /btw)</source>
         <target>Чи підтримує перегляд сесії створення бічного чату з обговорення (через /btw)</target>
       </trans-unit>
+      <trans-unit id="sessionSyncActionVisible">
+        <source xml:lang="en">Whether the new-session view's sync action is visible</source>
+        <target>Чи видима дія синхронізації в режимі перегляду нової сесії</target>
+      </trans-unit>
       <trans-unit id="sessionToolbarShowsSession">
         <source xml:lang="en">Whether the session toolbar represents the whole session rather than a side-by-side chat group</source>
         <target>Чи представляє панель інструментів сеансу весь сеанс, а не групу чату поруч?</target>
@@ -1026,6 +1122,10 @@
       <trans-unit id="sessionWorktreeCleanupEditorFocused">
         <source xml:lang="en">Whether the Open worktree cleanup editor is focused</source>
         <target>Чи сфокусований редактор очищення відкритого робочого дерева</target>
+      </trans-unit>
+      <trans-unit id="sessionWorktreePickerVisible">
+        <source xml:lang="en">Whether the new-session view's worktree picker is visible</source>
+        <target>Чи видимий вибірник робочого дерева нового сеансу</target>
       </trans-unit>
       <trans-unit id="sessionsAquariumActive">
         <source xml:lang="en">Whether the sessions aquarium overlay is active</source>
@@ -1099,6 +1199,14 @@
   </file>
   <file original="src/vs/sessions/common/sessionApplication" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="application.automations">
+        <source xml:lang="en">Automations</source>
+        <target>Автоматизації</target>
+      </trans-unit>
+      <trans-unit id="application.azureBoards">
+        <source xml:lang="en">Azure Boards</source>
+        <target>Azure Boards</target>
+      </trans-unit>
       <trans-unit id="application.claude">
         <source xml:lang="en">Claude</source>
         <target>Клод</target>
@@ -1115,17 +1223,49 @@
         <source xml:lang="en">Copilot CLI</source>
         <target>Copilot CLI</target>
       </trans-unit>
-      <trans-unit id="application.issuesAssignment">
-        <source xml:lang="en">Issues Assignment</source>
-        <target>Призначення проблем</target>
+      <trans-unit id="application.github">
+        <source xml:lang="en">GitHub</source>
+        <target>GitHub</target>
+      </trans-unit>
+      <trans-unit id="application.githubMcp">
+        <source xml:lang="en">GitHub MCP</source>
+        <target>GitHub MCP</target>
+      </trans-unit>
+      <trans-unit id="application.githubMobile">
+        <source xml:lang="en">GitHub Mobile</source>
+        <target>GitHub Mobile</target>
+      </trans-unit>
+      <trans-unit id="application.jetbrains">
+        <source xml:lang="en">JetBrains</source>
+        <target>JetBrains</target>
+      </trans-unit>
+      <trans-unit id="application.jira">
+        <source xml:lang="en">Jira</source>
+        <target>Jira</target>
+      </trans-unit>
+      <trans-unit id="application.linear">
+        <source xml:lang="en">Linear</source>
+        <target>Лінійний</target>
+      </trans-unit>
+      <trans-unit id="application.raycast">
+        <source xml:lang="en">Raycast</source>
+        <target>Raycast</target>
       </trans-unit>
       <trans-unit id="application.slack">
         <source xml:lang="en">Slack</source>
         <target>Slack</target>
       </trans-unit>
       <trans-unit id="application.teams">
-        <source xml:lang="en">Teams</source>
-        <target>Команди</target>
+        <source xml:lang="en">Microsoft Teams</source>
+        <target>Microsoft Teams</target>
+      </trans-unit>
+      <trans-unit id="application.unknown">
+        <source xml:lang="en">Unknown</source>
+        <target>Невідомо</target>
+      </trans-unit>
+      <trans-unit id="application.visualStudio">
+        <source xml:lang="en">Visual Studio</source>
+        <target>Visual Studio</target>
       </trans-unit>
       <trans-unit id="application.vscode">
         <source xml:lang="en">VS Code</source>
@@ -1166,6 +1306,34 @@
       <trans-unit id="join.closeStorage">
         <source xml:lang="en">Saving UI state</source>
         <target>Збереження стану інтерфейсу користувача</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/services/artifactIntegrations/browser/clientArtifactRuntime" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="artifactBackgroundSendUnavailable">
+        <source xml:lang="en">Background delivery is unavailable for this agent host.</source>
+        <target>Фонову доставку недоступно для цього хоста агента.</target>
+      </trans-unit>
+      <trans-unit id="artifactClientChatMoved">
+        <source xml:lang="en">The artifact's chat no longer belongs to this session.</source>
+        <target>Чат артефакту більше не належить цій сесії.</target>
+      </trans-unit>
+      <trans-unit id="artifactClientPaused">
+        <source xml:lang="en">Runs on this computer while connected. This runtime is currently paused.</source>
+        <target>Запускається на цьому комп'ютері під час підключення. Цей час виконання наразі призупинено.</target>
+      </trans-unit>
+      <trans-unit id="artifactNoticeUnavailable">
+        <source xml:lang="en">The agent host cannot receive this artifact automation notice.</source>
+        <target>Агент-хост не може отримати це повідомлення про автоматизацію артефакту.</target>
+      </trans-unit>
+      <trans-unit id="artifactNoticesUnsupported">
+        <source xml:lang="en">Automatic actions are paused because this agent host does not support the required chat notices. Manual actions remain available.</source>
+        <target>Автоматичні дії призупинені, оскільки цей хост агента не підтримує необхідні сповіщення чату. Ручні дії залишаються доступними.</target>
+      </trans-unit>
+      <trans-unit id="artifactRemoteWorkspaceUnavailable">
+        <source xml:lang="en">This client cannot reserve the agent host's workspace for an artifact action.</source>
+        <target>Цей клієнт не може зарезервувати робочий простір агента для дії з артефактом.</target>
       </trans-unit>
     </body>
   </file>
@@ -1317,9 +1485,21 @@
         <source xml:lang="en">Failed to load chat session for cancellation.</source>
         <target>Не вдалося завантажити чат-сесію для скасування.</target>
       </trans-unit>
+      <trans-unit id="sessions.closeCanvas.unsupported">
+        <source xml:lang="en">Closing canvases is not supported for this session.</source>
+        <target>Закриття полотен не підтримується для цієї сесії.</target>
+      </trans-unit>
       <trans-unit id="sessions.importSession.unsupported">
         <source xml:lang="en">Importing is not supported for this session.</source>
         <target>Імпорт не підтримується для цієї сесії.</target>
+      </trans-unit>
+      <trans-unit id="sessions.moveChat.unsupported">
+        <source xml:lang="en">This chat can't be moved there.</source>
+        <target>Цей чат не можна перемістити туди.</target>
+      </trans-unit>
+      <trans-unit id="sessions.moveSession.unsupported">
+        <source xml:lang="en">This session can't be moved there.</source>
+        <target>Цю сесію не можна перемістити туди.</target>
       </trans-unit>
       <trans-unit id="sessions.openCanvas.unsupported">
         <source xml:lang="en">Opening canvases is not supported for this session.</source>
@@ -1328,6 +1508,10 @@
       <trans-unit id="sessions.removeSessionArtifact.unsupported">
         <source xml:lang="en">Removing artifacts is not supported for this session.</source>
         <target>Видалення артефактів не підтримується для цієї сесії.</target>
+      </trans-unit>
+      <trans-unit id="sessions.worktreeCleanupUnavailable">
+        <source xml:lang="en">Retrying worktree cleanup is unavailable for this session.</source>
+        <target>Повторна спроба очищення робочого дерева недоступна для цієї сесії.</target>
       </trans-unit>
     </body>
   </file>
@@ -1362,8 +1546,8 @@
         <target>GitHub</target>
       </trans-unit>
       <trans-unit id="sessionWorkspaceGroup.local">
-        <source xml:lang="en">Local</source>
-        <target>Локальний</target>
+        <source xml:lang="en">This Computer</source>
+        <target>Цей комп'ютер</target>
       </trans-unit>
       <trans-unit id="sessionWorkspaceGroup.remote">
         <source xml:lang="en">Remote</source>
@@ -1381,13 +1565,9 @@
         <source xml:lang="en">Attempt {0} ({1})</source>
         <target>Спроба {0} ({1})</target>
       </trans-unit>
-      <trans-unit id="sessionComparison.gitRemoteRequired">
-        <source xml:lang="en">Comparisons require a Git remote.</source>
-        <target>Порівняння вимагає Git-репозиторію.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.gitRepositoryRequired">
-        <source xml:lang="en">Comparisons require a Git repository with at least one commit.</source>
-        <target>Порівняння вимагають наявності репозиторію Git з принаймні одним комітом.</target>
+      <trans-unit id="sessionComparison.gitBranchRequired">
+        <source xml:lang="en">Comparisons require a Git repository with branch information.</source>
+        <target>Порівняння вимагають репозиторій Git з інформацією про гілки.</target>
       </trans-unit>
       <trans-unit id="sessionComparison.harnessAndModel">
         <source xml:lang="en">{0} · {1}</source>
@@ -1396,6 +1576,22 @@
       <trans-unit id="sessionComparison.harnessModelAndConfiguration">
         <source xml:lang="en">{0} · {1}</source>
         <target>{0} · {1}</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/services/sessions/common/sessionsProvider" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="nestedChatWorkspace.alreadyStarted">
+        <source xml:lang="en">The nested session already started, so its workspace can't change.</source>
+        <target>Вкладена сесія вже почалася, тому її робоче середовище не може змінитися.</target>
+      </trans-unit>
+      <trans-unit id="nestedChatWorkspace.notSupported">
+        <source xml:lang="en">This agent can't give a nested session its own folder.</source>
+        <target>Цей агент не може надати вкладеній сесії власну папку.</target>
+      </trans-unit>
+      <trans-unit id="nestedChatWorkspace.refused">
+        <source xml:lang="en">The nested session could not be created in {0}: {1}</source>
+        <target>Вкладену сесію не вдалося створити в {0}: {1}</target>
       </trans-unit>
     </body>
   </file>

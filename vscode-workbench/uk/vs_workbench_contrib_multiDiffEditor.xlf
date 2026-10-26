@@ -14,6 +14,14 @@
         <source xml:lang="en">Diff View</source>
         <target>Перегляд відмінностей</target>
       </trans-unit>
+      <trans-unit id="filesViewAndPosition">
+        <source xml:lang="en">Files View &amp; Position</source>
+        <target>Файли Перегляд та Позиція</target>
+      </trans-unit>
+      <trans-unit id="focusFileList">
+        <source xml:lang="en">Focus File List</source>
+        <target>Список файлів фокусу</target>
+      </trans-unit>
       <trans-unit id="goToFile">
         <source xml:lang="en">Open File</source>
         <target>Відкрити файл</target>
@@ -30,6 +38,26 @@
         <source xml:lang="en">Open Multi Diff Editor Layout Debug State</source>
         <target>Відкрити макет редактора багатократних відмінностей стану налагодження</target>
       </trans-unit>
+      <trans-unit id="positionFileListLeft">
+        <source xml:lang="en">On the Left</source>
+        <target>Зліва</target>
+      </trans-unit>
+      <trans-unit id="positionFileListRight">
+        <source xml:lang="en">On the Right</source>
+        <target>Зправа</target>
+      </trans-unit>
+      <trans-unit id="toggleFileList">
+        <source xml:lang="en">Toggle Files</source>
+        <target>Перемикання файлів</target>
+      </trans-unit>
+      <trans-unit id="viewFileListAsList">
+        <source xml:lang="en">View as List</source>
+        <target>Перегляд у вигляді списку</target>
+      </trans-unit>
+      <trans-unit id="viewFileListAsTree">
+        <source xml:lang="en">View as Tree</source>
+        <target>Переглядати як Дерево</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/multiDiffEditor/browser/icons.contribution" source-language="en" datatype="plaintext" target-language="uk">
@@ -45,6 +73,70 @@
       <trans-unit id="name">
         <source xml:lang="en">Multi Diff Editor</source>
         <target>Мульти диф редактор</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/multiDiffEditor/browser/multiDiffEditorAccessibilityHelp" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="multiDiffEditor.fileListHelp.actions">
+        <source xml:lang="en">Use Toggle Files in the editor toolbar or Command Palette to show or hide the changed files. The Files View &amp; Position submenu in the editor toolbar's More Actions menu switches between a list and a folder tree, and moves the files to the left or right of the diffs.</source>
+        <target>Використовуйте перемикач файлів у панелі інструментів редактора або командній палітрі, щоб показати або приховати змінені файли. Підменю "Перегляд файлів і позиція" в меню "Більше дій" панелі інструментів редактора перемикає між списком і деревом папок, а також переміщує файли вліво або вправо від відмінностей.</target>
+      </trans-unit>
+      <trans-unit id="multiDiffEditor.fileListHelp.agentsWindowActions">
+        <source xml:lang="en">Use Toggle Details in the editor toolbar{0} to show or hide the changed files. The Files View &amp; Position submenu in the tab bar's More Actions menu switches between a list and a folder tree, and moves the files to the left or right of the diffs.</source>
+        <target>Використовуйте Перемикач деталей у панелі інструментів редактора{0}, щоб показати або приховати змінені файли. Підменю Перегляд файлів і позиція в меню Більше дій на панелі вкладок перемикає між списком і деревом папок, а також переміщує файли вліво або вправо від відмінностей.</target>
+      </trans-unit>
+      <trans-unit id="multiDiffEditor.fileListHelp.navigation">
+        <source xml:lang="en">Use the Up and Down Arrow keys to navigate files. In tree mode, use the Left and Right Arrow keys to collapse or expand folders.</source>
+        <target>Використовуйте клавіші стрілок Вгору та Вниз для навігації по файлах. У режимі дерева використовуйте клавіші стрілок Вліво та Вправо для згортання або розгортання папок.</target>
+      </trans-unit>
+      <trans-unit id="multiDiffEditor.fileListHelp.open">
+        <source xml:lang="en">Press Enter to reveal the selected file and move focus to its diff.</source>
+        <target>Натисніть Enter, щоб відобразити вибраний файл і перемістити фокус на його відмінності.</target>
+      </trans-unit>
+      <trans-unit id="multiDiffEditor.fileListHelp.overview">
+        <source xml:lang="en">You are in the changed files list of a multi diff editor.</source>
+        <target>Ви в списку змінених файлів багатофайлового редактора.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/multiDiffEditor/browser/multiDiffEditorFileList" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="multiDiffEditorFileList">
+        <source xml:lang="en">Changed Files</source>
+        <target>Змінені файли</target>
+      </trans-unit>
+      <trans-unit id="multiDiffEditorFileList.accessibilityHelp">
+        <source xml:lang="en">{0}, use {1} for accessibility help</source>
+        <target>{0}, використовуйте {1} для допомоги з доступністю</target>
+      </trans-unit>
+      <trans-unit id="multiDiffEditorFileList.accessibilityHelpNoKb">
+        <source xml:lang="en">{0}, run the Open Accessibility Help command for more information</source>
+        <target>{0}, виконайте команду Open Accessibility Help для отримання додаткової інформації</target>
+      </trans-unit>
+      <trans-unit id="multiDiffEditorFileList.added">
+        <source xml:lang="en">Added</source>
+        <target>Додано</target>
+      </trans-unit>
+      <trans-unit id="multiDiffEditorFileList.deleted">
+        <source xml:lang="en">Deleted</source>
+        <target>Видалено</target>
+      </trans-unit>
+      <trans-unit id="multiDiffEditorFileList.item">
+        <source xml:lang="en">{0}, {1}, {2}</source>
+        <target>{0}, {1}, {2}</target>
+      </trans-unit>
+      <trans-unit id="multiDiffEditorFileList.modified">
+        <source xml:lang="en">Modified</source>
+        <target>Змінений</target>
+      </trans-unit>
+      <trans-unit id="multiDiffEditorFileList.renamed">
+        <source xml:lang="en">Renamed</source>
+        <target>Перейменовано</target>
+      </trans-unit>
+      <trans-unit id="multiDiffEditorFileList.renamedTitle">
+        <source xml:lang="en">{0} (renamed from {1})</source>
+        <target>{0} (перейменовано з {1})</target>
       </trans-unit>
     </body>
   </file>
@@ -77,6 +169,10 @@
   </file>
   <file original="src/vs/workbench/contrib/multiDiffEditor/common/multiDiffEditor" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="multiDiffEditor.experimental.fileList">
+        <source xml:lang="en">Controls whether newly created multi diff editors support a list of the changed files alongside the diffs. Reload the window to apply this change to existing editors.</source>
+        <target>Контролює, чи новостворені редактори багатократних дифів підтримують список змінених файлів поряд з дифами. Перезавантажте вікно, щоб застосувати цю зміну до існуючих редакторів.</target>
+      </trans-unit>
       <trans-unit id="multiDiffEditor.experimental.variant">
         <source xml:lang="en">Controls the experimental variant of the multi diff editor.</source>
         <target>Контролює експериментальний варіант багатофункціонального редактора дифів.</target>
@@ -92,6 +188,30 @@
       <trans-unit id="multiDiffEditorConfigurationTitle">
         <source xml:lang="en">Multi Diff Editor</source>
         <target>Мульти диф редактор</target>
+      </trans-unit>
+      <trans-unit id="multiDiffEditorFileListAvailable">
+        <source xml:lang="en">Whether the active multi diff editor supports the changed files list</source>
+        <target>Чи підтримує активний багатофайловий редактор відмінностей список змінених файлів</target>
+      </trans-unit>
+      <trans-unit id="multiDiffEditorFileListEnabled">
+        <source xml:lang="en">Whether the changed files list is enabled in the active multi diff editor</source>
+        <target>Чи увімкнено список змінених файлів у активному редакторі багатопоточних відмінностей</target>
+      </trans-unit>
+      <trans-unit id="multiDiffEditorFileListFocus">
+        <source xml:lang="en">Whether focus is in the multi diff editor changed files list</source>
+        <target>Чи фокус знаходиться в списку змінених файлів багатофункціонального редактора дифів</target>
+      </trans-unit>
+      <trans-unit id="multiDiffEditorFileListPosition">
+        <source xml:lang="en">The position of the multi diff editor file list</source>
+        <target>Позиція списку файлів мульти диф редактора</target>
+      </trans-unit>
+      <trans-unit id="multiDiffEditorFileListViewMode">
+        <source xml:lang="en">Whether the multi diff editor file list shows the files as a flat list or as a tree of folders</source>
+        <target>Чи показує список файлів багатофункціонального редактора різниць файли у вигляді плоского списку чи у вигляді дерева папок</target>
+      </trans-unit>
+      <trans-unit id="multiDiffEditorFileListVisible">
+        <source xml:lang="en">Whether the multi diff editor shows the list of changed files</source>
+        <target>Чи показує редактор багатократних відмінностей список змінених файлів</target>
       </trans-unit>
     </body>
   </file>

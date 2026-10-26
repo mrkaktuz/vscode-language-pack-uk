@@ -18,6 +18,10 @@
         <source xml:lang="en">Search</source>
         <target>Пошук</target>
       </trans-unit>
+      <trans-unit id="openBrowser">
+        <source xml:lang="en">Browser</source>
+        <target>Браузер</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/sessions/contrib/editor/browser/diffEditor.sessions.contribution" source-language="en" datatype="plaintext" target-language="uk">
@@ -86,33 +90,17 @@
   </file>
   <file original="src/vs/sessions/contrib/editor/browser/emptyFileEditor" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="emptyFileEditor.description">
-        <source xml:lang="en">Select a file from the Files view</source>
-        <target>Виберіть файл з перегляду файлів</target>
-      </trans-unit>
-      <trans-unit id="emptyFileEditor.search">
-        <source xml:lang="en">Search Files</source>
-        <target>Шукати файли</target>
-      </trans-unit>
-      <trans-unit id="emptyFileEditor.searchAria">
-        <source xml:lang="en">Search Files ({0})</source>
-        <target>Шукати файли ({0})</target>
-      </trans-unit>
-      <trans-unit id="emptyFileEditor.searchAriaNoKeybinding">
-        <source xml:lang="en">Search Files</source>
-        <target>Шукати файли</target>
-      </trans-unit>
-      <trans-unit id="emptyFileEditor.searchTooltip">
-        <source xml:lang="en">Search Files ({0})</source>
-        <target>Шукати файли ({0})</target>
-      </trans-unit>
-      <trans-unit id="emptyFileEditor.searchTooltipNoKeybinding">
-        <source xml:lang="en">Search Files</source>
-        <target>Шукати файли</target>
-      </trans-unit>
-      <trans-unit id="emptyFileEditor.title">
+      <trans-unit id="emptyFileEditor.actions">
         <source xml:lang="en">Files</source>
         <target>Файли</target>
+      </trans-unit>
+      <trans-unit id="emptyFileEditor.ariaLabel">
+        <source xml:lang="en">Files editor</source>
+        <target>Редактор файлів</target>
+      </trans-unit>
+      <trans-unit id="emptyFileEditorFocused">
+        <source xml:lang="en">Whether focus is in the empty Files editor.</source>
+        <target>Чи знаходиться фокус у порожньому редакторі файлів.</target>
       </trans-unit>
     </body>
   </file>
@@ -121,6 +109,38 @@
       <trans-unit id="emptyFileEditor.label">
         <source xml:lang="en">File</source>
         <target>Файл</target>
+      </trans-unit>
+      <trans-unit id="emptyFileEditor.newFile">
+        <source xml:lang="en">New File</source>
+        <target>Новий файл</target>
+      </trans-unit>
+      <trans-unit id="emptyFileEditor.openFile">
+        <source xml:lang="en">Open File...</source>
+        <target>Відкрити файл...</target>
+      </trans-unit>
+      <trans-unit id="emptyFileEditor.openFileIcon">
+        <source xml:lang="en">Icon for opening a file from the Files editor.</source>
+        <target>Іконка для відкриття файлу з редактора файлів.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/editor/browser/emptyFileEditorAccessibility" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="emptyFileEditor.searchHelp.dismiss">
+        <source xml:lang="en">Press Escape to close the search results and return to the Files editor.</source>
+        <target>Натисніть Escape, щоб закрити результати пошуку та повернутися до редактора файлів.</target>
+      </trans-unit>
+      <trans-unit id="emptyFileEditor.searchHelp.inlineSearch">
+        <source xml:lang="en">Type part of a file name in the search field to search the active session workspace. Use Up Arrow and Down Arrow to choose a result, and Enter to open it. Press Escape to clear the search and return to the search field.</source>
+        <target>Введіть частину імені файлу в полі пошуку, щоб знайти активну сесію робочого простору. Використовуйте клавіші Стрілка вгору та Стрілка вниз, щоб вибрати результат, і натисніть Enter, щоб відкрити його. Натисніть Escape, щоб очистити пошук і повернутися до поля пошуку.</target>
+      </trans-unit>
+      <trans-unit id="emptyFileEditor.searchHelp.open">
+        <source xml:lang="en">Open File searches the active session workspace. Type part of a file name, use Up Arrow and Down Arrow to choose a result, and press Enter to open it.</source>
+        <target>Відкрити файл шукає в робочому просторі активної сесії. Введіть частину назви файлу, використовуйте стрілки вгору та вниз, щоб вибрати результат, і натисніть Enter, щоб відкрити його.</target>
+      </trans-unit>
+      <trans-unit id="emptyFileEditor.searchHelp.overview">
+        <source xml:lang="en">The Files editor offers a search field, followed by Open File and New File actions. Use Tab to reach the search field and actions. Use Up Arrow or Down Arrow to move between actions and Enter or Space to run one.</source>
+        <target>Редактор файлів пропонує поле пошуку, за яким слідують дії Відкрити файл та Новий файл. Використовуйте Tab, щоб дістатися до поля пошуку та дій. Використовуйте стрілки вгору або вниз, щоб переміщатися між діями, і Enter або Space, щоб виконати одну з них.</target>
       </trans-unit>
     </body>
   </file>
@@ -132,11 +152,51 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/contrib/editor/browser/emptyFileEditorSearch" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="emptyFileEditor.searchAriaLabel">
+        <source xml:lang="en">Search files in the session workspace</source>
+        <target>Шукати файли в робочому просторі сесії</target>
+      </trans-unit>
+      <trans-unit id="emptyFileEditor.searchPlaceholder">
+        <source xml:lang="en">Search files by name</source>
+        <target>Шукати файли за назвою</target>
+      </trans-unit>
+      <trans-unit id="emptyFileEditorSearchPickerFocused">
+        <source xml:lang="en">Whether the empty Files editor search picker is active.</source>
+        <target>Чи активний вибірник пошуку в порожньому редакторі файлів.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/editor/common/diffEditorOptionsService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="sessionsDiffViewMode">
         <source xml:lang="en">The preferred layout mode for diffs in the Agents window</source>
         <target>Улюблений режим розташування для відмінностей у вікні Агентів</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/editor/electron-browser/browserEmptyState.contribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="browser.emptyActions">
+        <source xml:lang="en">Browser actions</source>
+        <target>Дії браузера</target>
+      </trans-unit>
+      <trans-unit id="browser.history">
+        <source xml:lang="en">History</source>
+        <target>Історія</target>
+      </trans-unit>
+      <trans-unit id="browser.historyIcon">
+        <source xml:lang="en">Icon for browser history.</source>
+        <target>Іконка для історії браузера.</target>
+      </trans-unit>
+      <trans-unit id="browser.openAddress">
+        <source xml:lang="en">Open Address...</source>
+        <target>Відкрита адреса...</target>
+      </trans-unit>
+      <trans-unit id="browser.openAddressIcon">
+        <source xml:lang="en">Icon for entering a browser address.</source>
+        <target>Іконка для введення адреси браузера.</target>
       </trans-unit>
     </body>
   </file>

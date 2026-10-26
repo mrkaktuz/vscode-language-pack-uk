@@ -66,6 +66,10 @@
         <source xml:lang="en">Show your speech as a live, word-by-word transcript while you are speaking. When disabled, your transcript appears only once you finish speaking. Requires `#agents.voice.showTranscript#` to be enabled to be visible.</source>
         <target>Показуйте вашу промову як живий, покроковий транскрипт під час виступу. Коли вимкнено, ваш транскрипт з'являється лише після завершення виступу. Потрібно, щоб `#agents.voice.showTranscript#` був увімкнений для видимості.</target>
       </trans-unit>
+      <trans-unit id="agents.voice.sessionAwareness">
+        <source xml:lang="en">Share a bounded briefing of tracked sessions and the active chat's recent conversation with OpenAI BYOK Voice Mode, so it can answer session status questions directly. This includes session titles, response summaries, pending prompt details, the selected model, and attachment names, but not attachment contents. Disable to restore input-only context. Changes take effect when Voice Mode reconnects.</source>
+        <target>Поділіться обмеженим брифінгом відстежуваних сесій та нещодавньою розмовою активного чату з OpenAI BYOK Voice Mode, щоб він міг безпосередньо відповідати на запитання про статус сесії. Це включає назви сесій, резюме відповідей, деталі очікуючих запитів, вибрану модель та назви вкладень, але не вміст вкладень. Вимкніть, щоб відновити контекст лише для введення. Зміни набирають чинності, коли Voice Mode повторно підключається.</target>
+      </trans-unit>
       <trans-unit id="agents.voice.showButton">
         <source xml:lang="en">Controls whether the Voice Mode button is shown in the chat input. When hidden, Voice Mode can still be started with its keyboard shortcut.</source>
         <target>Контролює, чи кнопка Режиму голосу відображається в полі введення чату. Коли вона прихована, Режим голосу все ще можна запустити за допомогою його комбінації клавіш.</target>
@@ -89,6 +93,10 @@
       <trans-unit id="agents.voice.turn.stopPhrases">
         <source xml:lang="en">Phrases that end the turn when spoken at the end of an utterance. Leave empty to disable ending the turn on a stop phrase, in which case the turn ends only on trailing silence ({0}) or manually. The backend strips the matched phrase from the transcript before it reaches the agent. When hands-free mode ({1}) is disabled, stop phrases do not end the turn by default unless this setting is explicitly configured, so you keep manual control over when a turn is sent.</source>
         <target>Фрази, які завершують чергу, коли вимовляються в кінці висловлення. Залиште порожнім, щоб вимкнути завершення черги на стоп-фразі, в цьому випадку черга завершується лише на затримці мовчання ({0}) або вручну. Бекенд видаляє співпадіння фрази з транскрипції перед тим, як вона досягає агента. Коли режим без рук ({1}) вимкнено, стоп-фрази за замовчуванням не завершують чергу, якщо ця настройка не налаштована явно, тому ви зберігаєте ручний контроль над тим, коли черга відправляється.</target>
+      </trans-unit>
+      <trans-unit id="agents.voice.useBYOKVoiceModel">
+        <source xml:lang="en">The OpenAI live model ID to use for Voice Mode with your configured API key. Add the key in Models Management. Voice Mode uses this model when client BYOK is allowed and the key has access to it; leave empty to use the hosted voice model, which requires a paid Copilot plan.</source>
+        <target>Ідентифікатор живої моделі OpenAI, який слід використовувати для Режиму Голосу з вашим налаштованим API-ключем. Додайте ключ у Керуванні Моделями. Режим Голосу використовує цю модель, коли дозволено BYOK клієнта і ключ має до неї доступ; залиште порожнім, щоб використовувати хостингову голосову модель, яка вимагає платного плану Copilot.</target>
       </trans-unit>
       <trans-unit id="agents.voice.voice">
         <source xml:lang="en">The voice used when the assistant reads responses aloud. Changing this while voice mode is connected takes effect immediately. Use [Voice Mode instructions](command:{0}) to customize Voice Mode behavior and terminology.</source>

@@ -394,6 +394,38 @@
         <source xml:lang="en">Discovering tools...</source>
         <target>Відкриття інструментів...</target>
       </trans-unit>
+      <trans-unit id="mcp.userConfig.copilotGlobal">
+        <source xml:lang="en">Copilot Global</source>
+        <target>Copilot Global</target>
+      </trans-unit>
+      <trans-unit id="mcp.userConfig.legacy">
+        <source xml:lang="en">Legacy</source>
+        <target>Спадщина</target>
+      </trans-unit>
+      <trans-unit id="mcp.userConfig.openCustomizations">
+        <source xml:lang="en">Open MCP Customizations</source>
+        <target>Відкрити налаштування MCP</target>
+      </trans-unit>
+      <trans-unit id="mcp.userConfig.placeholder">
+        <source xml:lang="en">Select the configuration to open</source>
+        <target>Виберіть конфігурацію для відкриття</target>
+      </trans-unit>
+      <trans-unit id="mcp.userConfig.recommended">
+        <source xml:lang="en">Recommended</source>
+        <target>Рекомендовано</target>
+      </trans-unit>
+      <trans-unit id="mcp.userConfig.recommendedNotExisting">
+        <source xml:lang="en">Recommended, not existing</source>
+        <target>Рекомендовано, не існує</target>
+      </trans-unit>
+      <trans-unit id="mcp.userConfig.title">
+        <source xml:lang="en">Open User MCP Configuration</source>
+        <target>Відкрити конфігурацію MCP користувача</target>
+      </trans-unit>
+      <trans-unit id="mcp.userConfig.vscode">
+        <source xml:lang="en">VS Code User Configuration</source>
+        <target>Конфігурація користувача VS Code</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpCommandsAddConfiguration" source-language="en" datatype="plaintext" target-language="uk">
@@ -1267,6 +1299,10 @@
         <source xml:lang="en">Environment variable {0} name</source>
         <target>Змінна середовища {0} ім'я</target>
       </trans-unit>
+      <trans-unit id="mcpForm.env.namePlaceholder">
+        <source xml:lang="en">Key</source>
+        <target>Ключ</target>
+      </trans-unit>
       <trans-unit id="mcpForm.env.removeAria">
         <source xml:lang="en">Remove environment variable {0}</source>
         <target>Видалити змінну середовища {0}</target>
@@ -1284,8 +1320,8 @@
         <target>Значення змінної середовища {0}</target>
       </trans-unit>
       <trans-unit id="mcpForm.env.valuePlaceholder">
-        <source xml:lang="en">your-api-key</source>
-        <target>ваш-ключ-апі</target>
+        <source xml:lang="en">Value</source>
+        <target>Значення</target>
       </trans-unit>
       <trans-unit id="mcpForm.envFile">
         <source xml:lang="en">Environment File</source>
@@ -1643,6 +1679,10 @@
         <source xml:lang="en">MCP Servers</source>
         <target>MCP Сервери</target>
       </trans-unit>
+      <trans-unit id="mcp-installed">
+        <source xml:lang="en">MCP Servers - Installed</source>
+        <target>MCP Сервери - Встановлено</target>
+      </trans-unit>
       <trans-unit id="mcp.welcome.descriptionWithLink">
         <source xml:lang="en">Browse and install [Model Context Protocol (MCP) servers](https://code.visualstudio.com/docs/agent-customization/mcp-servers) from the Customizations marketplace.</source>
         <target>Перегляньте та встановіть [сервери Протоколу контексту моделі (MCP)](https://code.visualstudio.com/docs/agent-customization/mcp-servers) з ринку налаштувань.</target>
@@ -1800,8 +1840,8 @@
         <target>(Попередній перегляд) Коли встановлено значення `true`, цей MCP сервер автентифікується через постачальника SSO, налаштованого за допомогою `#mcp.enterpriseManagedAuth.idp#`, використовуючи OAuth Identity Assertion Authorization Grant (ID-JAG). Після одноразового входу в систему наступні сервери, що керуються підприємством, підключаються безшумно. Постачальник IdP та облікові дані клієнта читаються з налаштування `#mcp.enterpriseManagedAuth.idp#`; `clientId` у цьому записі сервера передається серверу авторизації ресурсів.</target>
       </trans-unit>
       <trans-unit id="app.mcp.json.sandbox">
-        <source xml:lang="en">Sandbox config that determines file system and network access. Sandboxing is enabled when sandboxEnabled property is set at the server level on Mac OS and Linux only.</source>
-        <target>Конфігурація пісочниці, яка визначає доступ до файлової системи та мережі. Пісочниця активується, коли властивість sandboxEnabled встановлена на рівні сервера лише на Mac OS та Linux.</target>
+        <source xml:lang="en">Sandbox deny rules shared by all servers in this file. Allow rules are only supported in a server's sandbox property; root-level allow rules are ignored. Sandboxing requires sandboxEnabled at the server level on macOS or Linux.</source>
+        <target>Правила відмови пісочниці, спільні для всіх серверів у цьому файлі. Правила дозволу підтримуються лише у властивості пісочниці сервера; правила дозволу на кореневому рівні ігноруються. Пісочниця вимагає sandboxEnabled на рівні сервера в macOS або Linux.</target>
       </trans-unit>
       <trans-unit id="app.mcp.json.sandbox.filesystem">
         <source xml:lang="en">Filesystem access settings for the sandboxed server. Glob patterns are supported for Mac OS only.</source>
@@ -1834,6 +1874,10 @@
       <trans-unit id="app.mcp.json.sandboxEnabled">
         <source xml:lang="en">Whether to run the server in a sandboxed environment.</source>
         <target>Чи запускати сервер у ізольованому середовищі.</target>
+      </trans-unit>
+      <trans-unit id="app.mcp.json.serverSandbox">
+        <source xml:lang="en">Sandbox filesystem and network permissions for this server only. Root-level sandbox deny rules also apply. Dialog approvals are saved here. Requires sandboxEnabled on macOS or Linux.</source>
+        <target>Права доступу до файлової системи та мережі пісочниці для цього сервера лише. Правила заборони пісочниці на рівні root також застосовуються. Схвалення діалогів зберігаються тут. Потрібно sandboxEnabled на macOS або Linux.</target>
       </trans-unit>
       <trans-unit id="app.mcp.json.title">
         <source xml:lang="en">Model Context Protocol Servers</source>
@@ -2112,17 +2156,21 @@
   <file original="src/vs/workbench/contrib/mcp/common/mcpSandboxService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="mcpSandboxSuggestion.allowWrite">
-        <source xml:lang="en">Add to `sandbox.filesystem.allowWrite`: {0}</source>
-        <target>Додати до `sandbox.filesystem.allowWrite`: {0}</target>
+        <source xml:lang="en">Add to this server's `sandbox.filesystem.allowWrite`: {0}</source>
+        <target>Додати до `sandbox.filesystem.allowWrite` цього сервера: {0}</target>
       </trans-unit>
       <trans-unit id="mcpSandboxSuggestion.allowedDomains">
-        <source xml:lang="en">Add to `sandbox.network.allowedDomains`: {0}</source>
-        <target>Додати до `sandbox.network.allowedDomains`: {0}</target>
+        <source xml:lang="en">Add to this server's `sandbox.network.allowedDomains`: {0}</source>
+        <target>Додати до `sandbox.network.allowedDomains` цього сервера: {0}</target>
       </trans-unit>
       <trans-unit id="mcpSandboxSuggestion.message">
         <source xml:lang="en">The MCP server {0} reported potential sandbox blocks. VS Code found possible sandbox configuration updates:
 {1}</source>
         <target>Сервер MCP {0} повідомив про потенційні блокування пісочниці. VS Code виявив можливі оновлення конфігурації пісочниці: {1}</target>
+      </trans-unit>
+      <trans-unit id="mcpSandboxSuggestion.serverUnavailable">
+        <source xml:lang="en">The stdio MCP server {0} is no longer available in this configuration.</source>
+        <target>Сервер stdio MCP {0} більше не доступний у цій конфігурації.</target>
       </trans-unit>
     </body>
   </file>

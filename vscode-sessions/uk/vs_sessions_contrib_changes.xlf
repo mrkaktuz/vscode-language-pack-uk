@@ -45,6 +45,40 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/contrib/changes/browser/changesActivity" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="changesActivity.newChanges">
+        <source xml:lang="en">New changes</source>
+        <target>Нові зміни</target>
+      </trans-unit>
+      <trans-unit id="changesActivity.titleWithStats">
+        <source xml:lang="en">{0}
+{1}, +{2}, -{3}</source>
+        <target>{0}  
+{1}, +{2}, -{3}</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/changes/browser/changesEmptyState" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="changes.empty">
+        <source xml:lang="en">No changed files</source>
+        <target>Немає змінених файлів</target>
+      </trans-unit>
+      <trans-unit id="changes.emptyActions">
+        <source xml:lang="en">Changes actions</source>
+        <target>Зміни дії</target>
+      </trans-unit>
+      <trans-unit id="changes.openFiles">
+        <source xml:lang="en">Open Files</source>
+        <target>Відкрити файли</target>
+      </trans-unit>
+      <trans-unit id="changes.searchFiles">
+        <source xml:lang="en">Search in Files</source>
+        <target>Шукати у файлах</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/changes/browser/changesView" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="changes">
@@ -63,21 +97,13 @@
         <source xml:lang="en">{0} files</source>
         <target>{0} файлів</target>
       </trans-unit>
-      <trans-unit id="changesView.emptyTitle">
-        <source xml:lang="en">Changes</source>
-        <target>Зміни</target>
-      </trans-unit>
-      <trans-unit id="changesView.noChanges">
-        <source xml:lang="en">No changed files</source>
-        <target>Немає змінених файлів</target>
-      </trans-unit>
-      <trans-unit id="changesView.picker.tooltip">
+      <trans-unit id="changesView.picker.ariaLabelWithDescription">
         <source xml:lang="en">{0}: {1}</source>
         <target>{0}: {1}</target>
       </trans-unit>
       <trans-unit id="changesView.picker.tooltipWithSummary">
-        <source xml:lang="en">{0}: {1}, {2}</source>
-        <target>{0}: {1}, {2}</target>
+        <source xml:lang="en">{0}, {1}</source>
+        <target>{0}, {1}</target>
       </trans-unit>
       <trans-unit id="changesView.viewChanges">
         <source xml:lang="en">View All Changes</source>
@@ -162,6 +188,14 @@
       <trans-unit id="diffView.sideBySide">
         <source xml:lang="en">Side by Side</source>
         <target>Поряд один з одним</target>
+      </trans-unit>
+      <trans-unit id="filesView">
+        <source xml:lang="en">Files View</source>
+        <target>Перегляд файлів</target>
+      </trans-unit>
+      <trans-unit id="filesViewAndPosition">
+        <source xml:lang="en">Files View &amp; Position</source>
+        <target>Файли Перегляд та Позиція</target>
       </trans-unit>
       <trans-unit id="openChanges">
         <source xml:lang="en">Open Changes</source>
@@ -687,13 +721,25 @@
         <source xml:lang="en">Use Diff View in the editor title area's More Actions menu to select inline, side-by-side, or automatic layout. The Toggle Preferred Diff View command switches between inline and automatic layout{0}.</source>
         <target>Використовуйте перегляд відмінностей у меню Додаткові дії заголовка редактора, щоб вибрати вбудований, поруч або автоматичний макет. Команда Перемикання переважного перегляду відмінностей перемикає між вбудованим і автоматичним макетом{0}.</target>
       </trans-unit>
+      <trans-unit id="sessionsChanges.editorActions">
+        <source xml:lang="en">Changes actions, including Run Code Review and Commit when available, are in the toolbar beside the editor tabs, before the separator and layout actions. Use its More Actions menu for diff actions and the Files View submenu in the final group.</source>
+        <target>Зміни дій, включаючи Запустити перевірку коду та Коміт, коли це можливо, знаходяться на панелі інструментів поруч із вкладками редактора, перед роздільником і діями макета. Використовуйте меню Більше дій для дій порівняння та підменю Перегляд файлів у фінальній групі.</target>
+      </trans-unit>
+      <trans-unit id="sessionsChanges.editorOverview">
+        <source xml:lang="en">You are in the Changes editor. It shows the changed files and their diffs for the current session.</source>
+        <target>Ви в редакторі Змін. Він показує змінені файли та їхні відмінності для поточної сесії.</target>
+      </trans-unit>
       <trans-unit id="sessionsChanges.editorWordWrap">
         <source xml:lang="en">Use Word Wrap in the editor title area's More Actions menu to control word wrapping independently for code and multi-diff editors in the Agents window.</source>
         <target>Використовуйте обгортання слів у меню Додаткові дії області заголовка редактора, щоб контролювати обгортання слів незалежно для редакторів коду та багатосторонніх відмінностей у вікні Агенти.</target>
       </trans-unit>
+      <trans-unit id="sessionsChanges.empty">
+        <source xml:lang="en">When there are no changed files, use Tab to reach Open Files and Search in Files. Use Up Arrow and Down Arrow to move between those actions, and Enter or Space to run one.</source>
+        <target>Коли немає змінених файлів, використовуйте Tab, щоб перейти до Відкритих файлів та Пошуку у файлах. Використовуйте стрілки вгору та вниз, щоб переміщатися між цими діями, і Enter або Space, щоб виконати одну з них.</target>
+      </trans-unit>
       <trans-unit id="sessionsChanges.operations">
-        <source xml:lang="en">When available, the Changes toolbar or editor title bar also provides actions to commit, merge, sync, or create a pull request. When Agent Merge is the primary action, activate it to toggle Agent Merge and use its dropdown to configure it. Use Tab and Shift+Tab to move between the file list and toolbar actions.</source>
-        <target>Коли доступно, панель інструментів Зміни або заголовок редактора також надає дії для коміту, злиття, синхронізації або створення запиту на злиття. Коли злиття агента є основною дією, активуйте його, щоб перемикати злиття агента, і використовуйте його випадаюче меню для налаштування. Використовуйте Tab і Shift+Tab, щоб переміщатися між списком файлів і діями на панелі інструментів.</target>
+        <source xml:lang="en">When available, a changed file's toolbar provides actions such as Discard Changes. Destructive actions ask for confirmation and are disabled while the agent is working. The Changes toolbar or editor title bar also provides actions to commit, merge, sync, or create a pull request. When Agent Merge is the primary action, activate it to toggle Agent Merge and use its dropdown to configure it. Use Tab and Shift+Tab to move between the file list and toolbar actions.</source>
+        <target>Коли доступно, панель інструментів зміненого файлу надає дії, такі як Скасувати зміни. Руйнувальні дії вимагають підтвердження і вимкнені, поки агент працює. Панель інструментів Змін або заголовок редактора також надає дії для коміту, злиття, синхронізації або створення запиту на злиття. Коли Дія злиття агента є основною дією, активуйте її, щоб перемикати Дію злиття агента, і використовуйте її випадаюче меню для налаштування. Використовуйте Tab і Shift+Tab, щоб переміщатися між списком файлів і діями панелі інструментів.</target>
       </trans-unit>
       <trans-unit id="sessionsChanges.overview">
         <source xml:lang="en">You are in the Changes view. It shows the files changed by the current session as a tree, followed by a collapsible Checks section.</source>
@@ -704,8 +750,8 @@
         <target>Використовуйте клавіші стрілок вгору та вниз, щоб переміщатися між зміненими файлами, а клавіші стрілок вліво та вправо, щоб згортати або розгортати папки. Натисніть Enter, щоб відкрити різницю вибраного файлу.</target>
       </trans-unit>
       <trans-unit id="sessionsChanges.viewMode">
-        <source xml:lang="en">The Changes view can show files as a tree or a flat list. Use the view's toolbar actions to switch between Tree and List modes.</source>
-        <target>Вигляд Змін може показувати файли у вигляді дерева або плоского списку. Використовуйте дії панелі інструментів вигляду, щоб перемикатися між режимами Дерево та Список.</target>
+        <source xml:lang="en">The Changes view can show files as a tree or a flat list. Use Files View in the editor title area's More Actions menu, or the view's toolbar actions, to switch between View as List and View as Tree. Files View shows both options and marks the active one as selected.</source>
+        <target>Вигляд Змін може показувати файли у вигляді дерева або плоского списку. Використовуйте Вигляд Файлів у меню Додаткові Дії заголовка редактора або дії панелі інструментів вигляду, щоб перемикатися між Виглядом як Список та Виглядом як Дерево. Вигляд Файлів показує обидва варіанти і позначає активний як вибраний.</target>
       </trans-unit>
     </body>
   </file>

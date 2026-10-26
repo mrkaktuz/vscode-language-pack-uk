@@ -1414,6 +1414,10 @@ Please make sure the markdown extension is enabled.</source>
   </file>
   <file original="src/vs/workbench/contrib/testing/common/testingChatAgentTool" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="runTestTool.configuredCommand">
+        <source xml:lang="en">This does not establish that the workspace contains no tests. Use the repository's configured test command if one is defined; otherwise report that no tests could be run. Do not retry this tool unless discovery or configuration changes.</source>
+        <target>Це не встановлює, що робоча область не містить тестів. Використовуйте налаштовану команду тестування репозиторію, якщо така визначена; в іншому випадку повідомте, що тести не можуть бути виконані. Не намагайтеся знову використовувати цей інструмент, якщо не відбулися зміни в виявленні або конфігурації.</target>
+      </trans-unit>
       <trans-unit id="runTestTool.confirm.all">
         <source xml:lang="en">The model wants to run all tests.</source>
         <target>Модель хоче виконати всі тести.</target>
@@ -1430,9 +1434,21 @@ Please make sure the markdown extension is enabled.</source>
         <source xml:lang="en">Allow test run?</source>
         <target>Дозволити запуск тесту?</target>
       </trans-unit>
+      <trans-unit id="runTestTool.controllerDiscoveryPending">
+        <source xml:lang="en">VS Code test discovery is pending for controller {0}. The request has not been validated.</source>
+        <target>Виявлення тестів VS Code очікує для контролера {0}. Запит не був перевірений.</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.controllers">
+        <source xml:lang="en">Registered VS Code test controllers: {0}.</source>
+        <target>Зареєстровані контролери тестів VS Code: {0}.</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.discoveryUnavailable">
+        <source xml:lang="en">VS Code test discovery is unavailable without a registered test controller. Use the repository's configured test command instead of repeatedly checking the same paths.</source>
+        <target>Виявлення тестів у VS Code недоступне без зареєстрованого контролера тестів. Використовуйте налаштовану команду тестування репозиторію замість повторної перевірки тих самих шляхів.</target>
+      </trans-unit>
       <trans-unit id="runTestTool.invoke.cancelled">
-        <source xml:lang="en">Test run was cancelled.</source>
-        <target>Запуск тесту був скасований.</target>
+        <source xml:lang="en">Test run was cancelled. The request has not been validated.</source>
+        <target>Тестовий запуск було скасовано. Запит не було верифіковано.</target>
       </trans-unit>
       <trans-unit id="runTestTool.invoke.filesProgress">
         <source xml:lang="en">Discovering tests...</source>
@@ -1442,17 +1458,97 @@ Please make sure the markdown extension is enabled.</source>
         <source xml:lang="en">Filtering tests...</source>
         <target>Фільтрація тестів...</target>
       </trans-unit>
+      <trans-unit id="runTestTool.invoke.noTestsRun">
+        <source xml:lang="en">No tests were run.</source>
+        <target>Не було виконано жодних тестів.</target>
+      </trans-unit>
       <trans-unit id="runTestTool.invoke.progress">
         <source xml:lang="en">Starting test run...</source>
         <target>Початок тестового запуску...</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.noNames">
+        <source xml:lang="en">No discovered VS Code tests matched the requested test names. The request has not been validated.</source>
+        <target>Не знайдено жодних тестів VS Code, які відповідали б запитаним іменам тестів. Запит не було перевірено.</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.noRun">
+        <source xml:lang="en">No test run was started. The request has not been validated.</source>
+        <target>Не було розпочато жодного тестового запуску. Запит не був перевірений.</target>
       </trans-unit>
       <trans-unit id="runTestTool.noRunStarted">
         <source xml:lang="en">No test run was started. This may be an issue with your test runner or extension.</source>
         <target>Не було розпочато жодного тестового запуску. Це може бути проблемою з вашим тестовим запуском або розширенням.</target>
       </trans-unit>
       <trans-unit id="runTestTool.noTests">
-        <source xml:lang="en">No tests found in the files</source>
-        <target>Не знайдено тестів у файлах</target>
+        <source xml:lang="en">No VS Code tests matched the requested files. The request has not been validated.</source>
+        <target>Не знайдено жодних тестів VS Code, що відповідають запитаним файлам. Запит не було перевірено.</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.noTestsExecuted">
+        <source xml:lang="en">The test run executed no tests ({0} skipped). This is not a passing test result. The request has not been validated.</source>
+        <target>Тестовий запуск не виконав жодного тесту ({0} пропущено). Це не є успішним результатом тесту. Запит не був перевірений.</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.noWorkspaceTests">
+        <source xml:lang="en">No tests are available to run through VS Code's test extensions in this workspace. No tests were run; this is not a passing test result.</source>
+        <target>У цьому робочому просторі немає доступних тестів для запуску через розширення тестів VS Code. Тести не були запущені; це не є успішним результатом тесту.</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.partial">
+        <source xml:lang="en">Only the matched tests were run. The full request has not been validated.</source>
+        <target>Було виконано лише відповідні тести. Повний запит не був перевірений.</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.pathCheckError">
+        <source xml:lang="en">{0}: path check error: {1}</source>
+        <target>{0}: помилка перевірки шляху: {1}</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.pathCheckPending">
+        <source xml:lang="en">The path check did not finish before discovery stopped.</source>
+        <target>Перевірка шляху не закінчилася до того, як зупинився процес виявлення.</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.pathExists">
+        <source xml:lang="en">{0}: path exists.</source>
+        <target>{0}: шлях існує.</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.pathMatches">
+        <source xml:lang="en">Discovered test items matching this file: {0}; matching the requested test names: {1}; discovery: {2}.</source>
+        <target>Виявлені тестові елементи, що відповідають цьому файлу: {0}; що відповідають запитаним іменам тестів: {1}; виявлення: {2}.</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.pathMissing">
+        <source xml:lang="en">{0}: path is missing.</source>
+        <target>{0}: шлях відсутній.</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.pathNoMatch">
+        <source xml:lang="en">No discovered test items match this file; discovery: {0}.</source>
+        <target>Не знайдено жодних тестових елементів, які відповідають цьому файлу; виявлення: {0}.</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.providerError">
+        <source xml:lang="en">Provider discovery error: {0}</source>
+        <target>Помилка виявлення постачальника: {0}</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.runnerError">
+        <source xml:lang="en">The test runner failed: {0}. The request has not been validated.</source>
+        <target>Тестовий запуск не вдався: {0}. Запит не було верифіковано.</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.state.completed">
+        <source xml:lang="en">completed</source>
+        <target>завершено</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.state.failed">
+        <source xml:lang="en">failed</source>
+        <target>невдалий</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.state.pending">
+        <source xml:lang="en">pending</source>
+        <target>очікує</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.state.unknown">
+        <source xml:lang="en">unknown</source>
+        <target>невідомий</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.unmatchedNames">
+        <source xml:lang="en">Requested test names with no discovered or executed match: {0}.</source>
+        <target>Запитувані імена тестів без виявлених або виконаних відповідностей: {0}.</target>
+      </trans-unit>
+      <trans-unit id="runTestTool.unresolvedPath">
+        <source xml:lang="en">A relative path cannot be resolved without a workspace folder.</source>
+        <target>Відносний шлях не може бути вирішений без папки робочого простору.</target>
       </trans-unit>
       <trans-unit id="runTestTool.userDescription">
         <source xml:lang="en">Run unit tests (optionally with coverage)</source>

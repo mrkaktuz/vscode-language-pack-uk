@@ -152,6 +152,10 @@
         <source xml:lang="en">An activation event emitted whenever sessions are requested from the specified authentication provider.</source>
         <target>Подія активації, що генерується щоразу, коли запитуються сесії від вказаного постачальника аутентифікації.</target>
       </trans-unit>
+      <trans-unit id="vscode.extension.activationEvents.onChatArtifactIntegration">
+        <source xml:lang="en">An activation event emitted when recorded chat artifacts are observed or an agent host that can use artifact integrations connects.</source>
+        <target>Подія активації, що генерується, коли спостерігаються записані артефакти чату або підключається хост агента, який може використовувати інтеграції артефактів.</target>
+      </trans-unit>
       <trans-unit id="vscode.extension.activationEvents.onChatContextProvider">
         <source xml:lang="en">An activation event emitted when the specified chat context provider is invoked.</source>
         <target>Подія активації, що генерується, коли викликається вказаний постачальник контексту чату.</target>
@@ -309,12 +313,12 @@
         <target>Оголосіть набір підтримуваних можливостей розширення.</target>
       </trans-unit>
       <trans-unit id="vscode.extension.capabilities.agentsWindow">
-        <source xml:lang="en">Declares whether the extension should be enabled in the Agents window. Requires the `agentsWindowActivation` API proposal. Non-built-in extensions also require the experimental Agents window capability setting.</source>
-        <target>Оголошує, чи повинна бути увімкнена розширення у вікні Агентів. Потребує пропозиції API `agentsWindowActivation`. Не вбудовані розширення також вимагають налаштування експериментальної можливості вікна Агентів.</target>
+        <source xml:lang="en">Declares whether the extension should be enabled in the Agents window.</source>
+        <target>Оголошує, чи має бути розширення увімкнене у вікні Агентів.</target>
       </trans-unit>
       <trans-unit id="vscode.extension.capabilities.agentsWindow.supported">
-        <source xml:lang="en">Declares whether the extension supports running in the Agents window. The extension must enable the `agentsWindowActivation` API proposal. Non-built-in extensions also require the `extensions.experimental.enableAgentsWindowCapability` setting for this property to take effect.</source>
-        <target>Оголошує, чи підтримує розширення запуск у вікні Агентів. Розширення повинно активувати пропозицію API `agentsWindowActivation`. Розширення, що не є вбудованими, також потребують налаштування `extensions.experimental.enableAgentsWindowCapability`, щоб ця властивість набула чинності.</target>
+        <source xml:lang="en">Declares whether the extension supports running in the Agents window. For non-built-in extensions, this takes effect while the `extensions.experimental.enableAgentsWindowCapability` setting is enabled (the default).</source>
+        <target>Оголошує, чи розширення підтримує виконання у вікні Агентів. Для не вбудованих розширень це набирає чинності, коли увімкнено налаштування `extensions.experimental.enableAgentsWindowCapability` (за замовчуванням).</target>
       </trans-unit>
       <trans-unit id="vscode.extension.capabilities.untrustedWorkspaces">
         <source xml:lang="en">Declares how the extension should be handled in untrusted workspaces.</source>
