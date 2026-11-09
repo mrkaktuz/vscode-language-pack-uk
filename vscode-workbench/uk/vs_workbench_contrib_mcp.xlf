@@ -278,6 +278,34 @@
         <source xml:lang="en">Server Options</source>
         <target>Опції сервера</target>
       </trans-unit>
+      <trans-unit id="mcp.remoteUserConfig.copilot">
+        <source xml:lang="en">Copilot Remote Configuration</source>
+        <target>Copilot Дистанційна Конфігурація</target>
+      </trans-unit>
+      <trans-unit id="mcp.remoteUserConfig.placeholder">
+        <source xml:lang="en">Select the remote configuration to open</source>
+        <target>Виберіть віддалену конфігурацію для відкриття</target>
+      </trans-unit>
+      <trans-unit id="mcp.remoteUserConfig.recommended">
+        <source xml:lang="en">Recommended</source>
+        <target>Рекомендовано</target>
+      </trans-unit>
+      <trans-unit id="mcp.remoteUserConfig.recommendedNotExisting">
+        <source xml:lang="en">Recommended, not existing</source>
+        <target>Рекомендовано, не існує</target>
+      </trans-unit>
+      <trans-unit id="mcp.remoteUserConfig.title">
+        <source xml:lang="en">Open Remote User MCP Configuration</source>
+        <target>Відкрити конфігурацію MCP віддаленого користувача</target>
+      </trans-unit>
+      <trans-unit id="mcp.remoteUserConfig.vscode">
+        <source xml:lang="en">VS Code Remote User Configuration</source>
+        <target>Конфігурація користувача VS Code Remote</target>
+      </trans-unit>
+      <trans-unit id="mcp.remoteUserConfig.vscodeProfile">
+        <source xml:lang="en">VS Code profile</source>
+        <target>Профіль VS Code</target>
+      </trans-unit>
       <trans-unit id="mcp.resetCachedTools">
         <source xml:lang="en">Reset Cached Tools</source>
         <target>Скинути кешовані інструменти</target>
@@ -771,9 +799,17 @@
   </file>
   <file original="src/vs/workbench/contrib/mcp/browser/mcpElicitationService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="mcp.elicit.accept">
+        <source xml:lang="en">Accept</source>
+        <target>Прийняти</target>
+      </trans-unit>
       <trans-unit id="mcp.elicit.cancel">
         <source xml:lang="en">Cancel</source>
         <target>Скасувати</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.decline">
+        <source xml:lang="en">Decline</source>
+        <target>Відхилити</target>
       </trans-unit>
       <trans-unit id="mcp.elicit.enum.none">
         <source xml:lang="en">None</source>
@@ -786,6 +822,10 @@
       <trans-unit id="mcp.elicit.false">
         <source xml:lang="en">False</source>
         <target>Хибний</target>
+      </trans-unit>
+      <trans-unit id="mcp.elicit.form.title">
+        <source xml:lang="en">Confirmation Required</source>
+        <target>Підтвердження необхідне</target>
       </trans-unit>
       <trans-unit id="mcp.elicit.give">
         <source xml:lang="en">Respond</source>
@@ -1735,9 +1775,37 @@
         <source xml:lang="en">Global in {0}</source>
         <target>Глобальний у {0}</target>
       </trans-unit>
+      <trans-unit id="mcpLegacyGalleryUnavailable">
+        <source xml:lang="en">The MCP registry could not be reached. Looking for this server in Customizations.</source>
+        <target>Реєстр MCP не вдалося досягти. Шукаємо цей сервер у Налаштуваннях.</target>
+      </trans-unit>
+      <trans-unit id="mcpLinkGalleryNotConfigured">
+        <source xml:lang="en">The MCP gallery is not configured. Configure 'chat.mcp.gallery.serviceUrl' to open MCP server details.</source>
+        <target>Галерея MCP не налаштована. Налаштуйте 'chat.mcp.gallery.serviceUrl', щоб відкрити деталі сервера MCP.</target>
+      </trans-unit>
+      <trans-unit id="mcpLinkLookupRetry">
+        <source xml:lang="en">The MCP registry could not be reached. Check your connection or sign-in, then try this link again.</source>
+        <target>Реєстр MCP не вдалося досягти. Перевірте своє з'єднання або вхід, а потім спробуйте цей посилання знову.</target>
+      </trans-unit>
+      <trans-unit id="mcpLinkMissingName">
+        <source xml:lang="en">This MCP link does not specify a server. Browse MCP servers to find an available server.</source>
+        <target>Цей MCP посилання не вказує сервер. Перегляньте MCP сервери, щоб знайти доступний сервер.</target>
+      </trans-unit>
+      <trans-unit id="mcpLinkOutsideGallery">
+        <source xml:lang="en">This MCP link is not part of the configured registry. Browse MCP servers to find an available server.</source>
+        <target>Цей MCP-лінк не є частиною налаштованого реєстру. Перегляньте сервери MCP, щоб знайти доступний сервер.</target>
+      </trans-unit>
+      <trans-unit id="mcpLinkUnavailable">
+        <source xml:lang="en">This MCP link is no longer available in the configured registry. Browse MCP servers to find an available server.</source>
+        <target>Цей MCP посилання більше не доступне в налаштованому реєстрі. Перегляньте сервери MCP, щоб знайти доступний сервер.</target>
+      </trans-unit>
       <trans-unit id="mcpRegistryChangedDuringLookup">
         <source xml:lang="en">The MCP registry changed. Try installing the server again.</source>
         <target>Реєстр MCP змінився. Спробуйте встановити сервер знову.</target>
+      </trans-unit>
+      <trans-unit id="mcpServerNotFound">
+        <source xml:lang="en">MCP server '{0}' was not found in the configured registry.</source>
+        <target>Сервер MCP '{0}' не знайдено в налаштованому реєстрі.</target>
       </trans-unit>
       <trans-unit id="not an extension">
         <source xml:lang="en">The provided object is not an mcp server.</source>
@@ -2230,7 +2298,7 @@
       </trans-unit>
       <trans-unit id="mcpServerNotFound">
         <source xml:lang="en">The command "{0}" needed to run {1} was not found.</source>
-        <target>Команда "{0}", необхідна для виконання {1}, не була знайдена.</target>
+        <target>Сервер MCP '{0}' не знайдено в налаштованому реєстрі.</target>
       </trans-unit>
       <trans-unit id="mcpViewDocs">
         <source xml:lang="en">View Docs</source>

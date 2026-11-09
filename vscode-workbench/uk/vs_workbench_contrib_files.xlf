@@ -730,6 +730,10 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
         <source xml:lang="en">Reopen Editor With...</source>
         <target>Відкрити редактор з...</target>
       </trans-unit>
+      <trans-unit id="revealInFilesView">
+        <source xml:lang="en">Reveal in Files View</source>
+        <target>Відобразити у вигляді файлів</target>
+      </trans-unit>
       <trans-unit id="revealInSideBar">
         <source xml:lang="en">Reveal in Explorer View</source>
         <target>Відкрити в режимі Провідника</target>
@@ -1124,8 +1128,8 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
         <target>Отформатувати весь файл.</target>
       </trans-unit>
       <trans-unit id="exclude">
-        <source xml:lang="en">Configure [glob patterns](https://aka.ms/vscode-glob-patterns) for excluding files and folders. For example, the File Explorer decides which files and folders to show or hide based on this setting. Refer to the `#search.exclude#` setting to define search-specific excludes. Refer to the `#explorer.excludeGitIgnore#` setting for ignoring files based on your `.gitignore`.</source>
-        <target>Налаштуйте [глобальні шаблони](https://aka.ms/vscode-glob-patterns) для виключення файлів і папок. Наприклад, Провідник файлів вирішує, які файли та папки показувати або приховувати на основі цього налаштування. Зверніться до налаштування `#search.exclude#`, щоб визначити виключення, специфічні для пошуку. Зверніться до налаштування `#explorer.excludeGitIgnore#` для ігнорування файлів на основі вашого `.gitignore`.</target>
+        <source xml:lang="en">Configure [glob patterns](https://aka.ms/vscode-glob-patterns) for excluding files and folders. For example, the File Explorer decides which files and folders to show or hide based on this setting. Prefix a pattern with `!` to show matching files and folders even if another pattern excludes them, for example `"!node_modules/@types": true`. Refer to the `#search.exclude#` setting to define search-specific excludes. Refer to the `#explorer.excludeGitIgnore#` setting for ignoring files based on your `.gitignore`.</source>
+        <target>Налаштуйте [глобальні шаблони](https://aka.ms/vscode-glob-patterns) для виключення файлів і папок. Наприклад, Провідник файлів вирішує, які файли та папки показувати або приховувати на основі цього налаштування. Додайте префікс `!` до шаблону, щоб показати відповідні файли та папки, навіть якщо інший шаблон виключає їх, наприклад, `"!node_modules/@types": true`. Зверніться до налаштування `#search.exclude#`, щоб визначити виключення, специфічні для пошуку. Зверніться до налаштування `#explorer.excludeGitIgnore#` для ігнорування файлів на основі вашого `.gitignore`.</target>
       </trans-unit>
       <trans-unit id="excludeGitignore">
         <source xml:lang="en">Controls whether entries in .gitignore should be parsed and excluded from the Explorer. Similar to {0}.</source>
@@ -1217,6 +1221,10 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
         <source xml:lang="en">The glob pattern to match file paths against. Set to true or false to enable or disable the pattern.</source>
         <target>Шаблон glob для порівняння з шляхами файлів. Встановіть true або false, щоб увімкнути або вимкнути шаблон.</target>
       </trans-unit>
+      <trans-unit id="files.exclude.exception">
+        <source xml:lang="en">An exception: files and folders that match the glob pattern after the `!`, and everything inside them, are not excluded even if another pattern excludes them. Version control folders such as `.git` stay excluded unless the pattern names them. Set to true or false to enable or disable the exception.</source>
+        <target>Виключення: файли та папки, які відповідають шаблону glob після `!`, та все, що всередині них, не виключаються, навіть якщо інший шаблон виключає їх. Папки контролю версій, такі як `.git`, залишаються виключеними, якщо шаблон не вказує їх. Встановіть значення true або false, щоб увімкнути або вимкнути виключення.</target>
+      </trans-unit>
       <trans-unit id="files.exclude.when">
         <source xml:lang="en">Additional check on the siblings of a matching file. Use \$(basename) as variable for the matching file name.</source>
         <note>\$(basename) should not be translated</note>
@@ -1237,6 +1245,22 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
       <trans-unit id="files.simpleDialog.enable">
         <source xml:lang="en">Enables the simple file dialog for opening and saving files and folders. The simple file dialog replaces the system file dialog when enabled.</source>
         <target>Увімкнення простого діалогу файлів для відкриття та збереження файлів і папок. Простий діалог файлів замінює системний діалог файлів, коли він увімкнений.</target>
+      </trans-unit>
+      <trans-unit id="files.simpleDialog.selectInitialPath">
+        <source xml:lang="en">Controls whether the pre-filled path in the simple file dialog is selected when the dialog opens.</source>
+        <target>Контролює, чи вибрано попередньо заповнений шлях у простому діалоговому вікні файлів, коли діалог відкривається.</target>
+      </trans-unit>
+      <trans-unit id="files.simpleDialog.selectInitialPath.auto">
+        <source xml:lang="en">Select the pre-filled path only when a screen reader is detected.</source>
+        <target>Виберіть попередньо заповнений шлях лише тоді, коли виявлено екранний зчитувач.</target>
+      </trans-unit>
+      <trans-unit id="files.simpleDialog.selectInitialPath.off">
+        <source xml:lang="en">Never select the pre-filled path; place the cursor at its end.</source>
+        <target>Ніколи не вибирайте попередньо заповнений шлях; розмістіть курсор в його кінці.</target>
+      </trans-unit>
+      <trans-unit id="files.simpleDialog.selectInitialPath.on">
+        <source xml:lang="en">Always select the pre-filled path so typing replaces it.</source>
+        <target>Завжди обирайте попередньо заповнений шлях, щоб введення замінювало його.</target>
       </trans-unit>
       <trans-unit id="filesConfigurationTitle">
         <source xml:lang="en">Files</source>

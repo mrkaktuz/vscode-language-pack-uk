@@ -1358,14 +1358,6 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/api/node/extHostBrowserTunnelProxy" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="browser.unknownNetwork">
-        <source xml:lang="en">This page was opened for another remote ({0}). Open it again from a window connected to that remote.</source>
-        <target>Цю сторінку було відкрито для іншого віддаленого ({0}). Відкрийте її знову з вікна, підключеного до цього віддаленого.</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/workbench/api/node/extHostDebugService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="debug.terminal.title">
@@ -1376,13 +1368,17 @@ To complete authentication, navigate to {1} and enter the code above.</source>
   </file>
   <file original="src/vs/workbench/browser/actions/developerActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="excludedTelemetryContributions">
-        <source xml:lang="en">Telemetry contributions excluded by the selected block</source>
-        <target>Внески телеметрії, виключені вибраним блоком</target>
+      <trans-unit id="communicationBlockSource">
+        <source xml:lang="en">Selected communication block</source>
+        <target>Вибраний блок комунікації</target>
       </trans-unit>
-      <trans-unit id="excludedTelemetryStatus">
-        <source xml:lang="en">Excluded by higher-priority telemetry block (value omitted)</source>
-        <target>Виключено через блок телеметрії вищого пріоритету (значення пропущено)</target>
+      <trans-unit id="excludedBlockContributions">
+        <source xml:lang="en">Contributions excluded by a selected whole block</source>
+        <target>Внески, виключені вибраним цілим блоком</target>
+      </trans-unit>
+      <trans-unit id="excludedBlockStatus">
+        <source xml:lang="en">Excluded by higher-priority {0} block (value omitted)</source>
+        <target>Виключено вищим пріоритетом {0} блоку (значення пропущено)</target>
       </trans-unit>
       <trans-unit id="global">
         <source xml:lang="en">Global</source>
@@ -1411,8 +1407,8 @@ To complete authentication, navigate to {1} and enter the code above.</source>
         <target>Машина</target>
       </trans-unit>
       <trans-unit id="managedSettingsPrecedence">
-        <source xml:lang="en">Precedence is native MDM, then server, then file. Most settings resolve per key, filling gaps from lower channels. Telemetry selects one whole block: omitted leaves never inherit from weaker blocks. Empty or unknown-only server/file objects still select a block; native MDM exposes only declared flat keys. The internal telemetry presence marker is not a policy setting. For sandbox.enabled, any managed true wins regardless of channel precedence, matching the runtime sandbox floor.</source>
-        <target>Пріоритет має корінний MDM, потім сервер, потім файл. Більшість налаштувань вирішуються за ключем, заповнюючи прогалини з нижчих каналів. Телеметрія вибирає один цілий блок: пропущені залишки ніколи не успадковують з слабших блоків. Порожні або об'єкти сервера/файлів лише з невідомими значеннями все ще вибирають блок; корінний MDM відкриває лише оголошені плоскі ключі. Внутрішній маркер присутності телеметрії не є налаштуванням політики. Для sandbox.enabled будь-яке кероване true виграє незалежно від пріоритету каналу, відповідно до рівня пісочниці під час виконання.</target>
+        <source xml:lang="en">Precedence is native MDM, then server, then file. Most settings resolve per key, filling gaps from lower channels. Telemetry and communication each select one whole block: omitted leaves never inherit from weaker blocks. Empty or unknown-only server/file objects still select a block; native MDM exposes only declared flat keys. The internal block presence markers are not policy settings. For sandbox.enabled, any managed true wins regardless of channel precedence, matching the runtime sandbox floor.</source>
+        <target>Пріоритет - це рідний MDM, потім сервер, потім файл. Більшість налаштувань вирішуються за ключем, заповнюючи прогалини з нижчих каналів. Телеметрія та комунікація кожна вибирає один цілий блок: пропущені залишки ніколи не успадковують від слабших блоків. Порожні або об'єкти сервера/файлів лише з невідомими даними все ще вибирають блок; рідний MDM відкриває лише оголошені плоскі ключі. Внутрішні маркери присутності блоків не є налаштуваннями політики. Для sandbox.enabled будь-яке кероване true виграє незалежно від пріоритету каналу, відповідно до рівня виконання пісочниці.</target>
       </trans-unit>
       <trans-unit id="noSelectedManagedSettingsKeys">
         <source xml:lang="en">The selected sources supply no managed-settings leaves.</source>
@@ -2727,6 +2723,14 @@ This action is irreversible and may result in data loss!</source>
         <source xml:lang="en">Remove Reference</source>
         <target>Видалити посилання</target>
       </trans-unit>
+      <trans-unit id="chatPills.videoPreviewLabel">
+        <source xml:lang="en">Preview of {0}</source>
+        <target>Попередній перегляд {0}</target>
+      </trans-unit>
+      <trans-unit id="chatPills.videoPreviewUnavailable">
+        <source xml:lang="en">Video preview unavailable.</source>
+        <target>Попередній перегляд відео недоступний.</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/browser/chatResourcePill" source-language="en" datatype="plaintext" target-language="uk">
@@ -2882,6 +2886,14 @@ This action is irreversible and may result in data loss!</source>
       <trans-unit id="top">
         <source xml:lang="en">Top</source>
         <target>Верх</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/browser/parts/activitybar/menuActivityBar" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="menuActivityBar.titleWithActivity">
+        <source xml:lang="en">{0} - {1}</source>
+        <target>{0} - {1}</target>
       </trans-unit>
     </body>
   </file>
@@ -3275,6 +3287,10 @@ Browser: {3}</source>
         <source xml:lang="en">Controls whether the breadcrumbs bar shows a dropdown to switch between the editors that can open the current file (for example the text editor and a custom editor). The dropdown only appears when a more specialized editor is available.</source>
         <target>Контролює, чи показує панель хлібних крихт випадаюче меню для перемикання між редакторами, які можуть відкрити поточний файл (наприклад, текстовим редактором та спеціальним редактором). Випадаюче меню з'являється лише тоді, коли доступний більш спеціалізований редактор.</target>
       </trans-unit>
+      <trans-unit id="showInUntitledFiles">
+        <source xml:lang="en">Controls whether breadcrumbs are shown for untitled files.</source>
+        <target>Контролює, чи відображаються хлібні крихти для файлів без назви.</target>
+      </trans-unit>
       <trans-unit id="symbolPathSeparator">
         <source xml:lang="en">The separator used when copying the breadcrumb symbol path.</source>
         <target>Роздільник, що використовується при копіюванні символу шляху хлібних крихт.</target>
@@ -3383,6 +3399,14 @@ Browser: {3}</source>
       <trans-unit id="breadcrumbs">
         <source xml:lang="en">Breadcrumbs</source>
         <target>Хлібні крихти</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/browser/parts/editor/contentPart" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="contentPart">
+        <source xml:lang="en">Editor</source>
+        <target>Редактор</target>
       </trans-unit>
     </body>
   </file>
@@ -4026,6 +4050,10 @@ Browser: {3}</source>
       <trans-unit id="unpinEditor">
         <source xml:lang="en">Unpin Editor</source>
         <target>Відкріпити редактор</target>
+      </trans-unit>
+      <trans-unit id="viewEditor">
+        <source xml:lang="en">View Editor</source>
+        <target>Переглянути редактор</target>
       </trans-unit>
     </body>
   </file>
@@ -4734,6 +4762,10 @@ Browser: {3}</source>
         <source xml:lang="en">Hold __{0}__ to drop into editor</source>
         <target>Утримуйте __{0}__ для переходу в редактор</target>
       </trans-unit>
+      <trans-unit id="movedEditorToPart">
+        <source xml:lang="en">Moved {0} to {1}</source>
+        <target>Переміщено {0} до {1}</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/browser/parts/editor/editorGroupView" source-language="en" datatype="plaintext" target-language="uk">
@@ -4761,10 +4793,6 @@ Browser: {3}</source>
       <trans-unit id="groupLabelLong">
         <source xml:lang="en">{0}: Group {1}</source>
         <target>{0}: Група {1}</target>
-      </trans-unit>
-      <trans-unit id="moveErrorDetails">
-        <source xml:lang="en">Try saving or reverting the editor first and then try again.</source>
-        <target>Спробуйте спочатку зберегти або скасувати зміни в редакторі, а потім спробуйте ще раз.</target>
       </trans-unit>
       <trans-unit id="reopenWith">
         <source xml:lang="en">Reopen Editor With</source>
@@ -4907,6 +4935,30 @@ Browser: {3}</source>
         <source xml:lang="en">&amp;&amp;OK</source>
         <note>&amp;&amp; denotes a mnemonic</note>
         <target>&amp;&amp;Гаразд</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/browser/parts/editor/editorPartActions" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="moveEditorToPart">
+        <source xml:lang="en">Move Editor to Part...</source>
+        <target>Перемістити редактор до частини...</target>
+      </trans-unit>
+      <trans-unit id="movedEditorToPart">
+        <source xml:lang="en">Moved {0} to {1}</source>
+        <target>Переміщено {0} до {1}</target>
+      </trans-unit>
+      <trans-unit id="noOtherPart">
+        <source xml:lang="en">There is no other part in this window</source>
+        <target>У цьому вікні немає жодної іншої частини.</target>
+      </trans-unit>
+      <trans-unit id="part">
+        <source xml:lang="en">Part</source>
+        <target>Частина</target>
+      </trans-unit>
+      <trans-unit id="pickPart">
+        <source xml:lang="en">Select a part to move '{0}' to</source>
+        <target>Виберіть частину, щоб перемістити '{0}' до</target>
       </trans-unit>
     </body>
   </file>
@@ -5244,6 +5296,14 @@ Browser: {3}</source>
       <trans-unit id="draggedEditorGroup">
         <source xml:lang="en">{0} (+{1})</source>
         <target>{0} (+{1})</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/browser/parts/editor/editorTransferVeto" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="editorTransferVetoDetail">
+        <source xml:lang="en">Try saving or reverting the editor first and then try again.</source>
+        <target>Спробуйте спочатку зберегти або скасувати зміни в редакторі, а потім спробуйте ще раз.</target>
       </trans-unit>
     </body>
   </file>
@@ -5953,6 +6013,82 @@ Browser: {3}</source>
       <trans-unit id="showLabels">
         <source xml:lang="en">Show Labels</source>
         <target>Показати мітки</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/browser/parts/partGrid/partGrid" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="copiedEditorsIntoNewPart">
+        <source xml:lang="en">Copied {0} into a new part</source>
+        <target>Скопійовано {0} в нову частину</target>
+      </trans-unit>
+      <trans-unit id="mergedPart">
+        <source xml:lang="en">Merged {0} into {1}</source>
+        <target>Об'єднано {0} в {1}</target>
+      </trans-unit>
+      <trans-unit id="movedEditorsIntoNewPart">
+        <source xml:lang="en">Moved {0} into a new part</source>
+        <target>Переміщено {0} у нову частину</target>
+      </trans-unit>
+      <trans-unit id="movedPart">
+        <source xml:lang="en">Moved {0}</source>
+        <target>Переміщено {0}</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/browser/parts/partGrid/partGridActions" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="moveEditorIntoNewPartAbove">
+        <source xml:lang="en">Move Editor into New Part Above</source>
+        <target>Перемістити редактор у нову частину вище</target>
+      </trans-unit>
+      <trans-unit id="moveEditorIntoNewPartBelow">
+        <source xml:lang="en">Move Editor into New Part Below</source>
+        <target>Перемістіть редактор у нову частину нижче</target>
+      </trans-unit>
+      <trans-unit id="moveEditorIntoNewPartLeft">
+        <source xml:lang="en">Move Editor into New Part Left</source>
+        <target>Перемістити редактор у нову частину зліва</target>
+      </trans-unit>
+      <trans-unit id="moveEditorIntoNewPartRight">
+        <source xml:lang="en">Move Editor into New Part Right</source>
+        <target>Перемістити редактор у нову частину праворуч</target>
+      </trans-unit>
+      <trans-unit id="movePartDown">
+        <source xml:lang="en">Move Part Down</source>
+        <target>Перемістити частину вниз</target>
+      </trans-unit>
+      <trans-unit id="movePartLeft">
+        <source xml:lang="en">Move Part Left</source>
+        <target>Перемістити частину вліво</target>
+      </trans-unit>
+      <trans-unit id="movePartRight">
+        <source xml:lang="en">Move Part Right</source>
+        <target>Перемістити частину вправо</target>
+      </trans-unit>
+      <trans-unit id="movePartUp">
+        <source xml:lang="en">Move Part Up</source>
+        <target>Перемістити частину вгору</target>
+      </trans-unit>
+      <trans-unit id="movedPart">
+        <source xml:lang="en">Moved {0}</source>
+        <target>Переміщено {0}</target>
+      </trans-unit>
+      <trans-unit id="noNewPart">
+        <source xml:lang="en">Editors do not go into new parts in this window</source>
+        <target>Редактори не переходять до нових частин у цьому вікні.</target>
+      </trans-unit>
+      <trans-unit id="partCannotMove">
+        <source xml:lang="en">The parts of this window do not move</source>
+        <target>Частини цього вікна не рухаються.</target>
+      </trans-unit>
+      <trans-unit id="partCannotMoveNow">
+        <source xml:lang="en">{0} does not move as it shows now</source>
+        <target>{0} не рухається, як показує зараз.</target>
+      </trans-unit>
+      <trans-unit id="partDidNotMove">
+        <source xml:lang="en">{0} is already there</source>
+        <target>{0} вже там.</target>
       </trans-unit>
     </body>
   </file>
@@ -7963,6 +8099,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Whether the editor area (any editor part) has keyboard focus</source>
         <target>Чи має область редактора (будь-яка частина редактора) фокус клавіатури</target>
       </trans-unit>
+      <trans-unit id="editorGroupLockActionsHidden">
+        <source xml:lang="en">Whether the editor group hides the actions that lock and unlock it, as its owner keeps it locked</source>
+        <target>Чи приховує група редакторів дії, які блокують і розблоковують його, оскільки його власник тримає його заблокованим</target>
+      </trans-unit>
       <trans-unit id="editorIsOpen">
         <source xml:lang="en">Whether an editor is open</source>
         <target>Чи відкритий редактор</target>
@@ -7970,6 +8110,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="editorPartEditorGroupMaximized">
         <source xml:lang="en">Editor Part has a maximized group</source>
         <target>Частина редактора має розгорнуту групу</target>
+      </trans-unit>
+      <trans-unit id="editorPartInPartGrid">
+        <source xml:lang="en">Whether the editor part is one of the parts of a window that arranges its parts in a grid, where parts move and editors go into new parts</source>
+        <target>Чи є частина редактора однією з частин вікна, яке розташовує свої елементи в сітці, де елементи переміщуються, а редактори переходять у нові частини</target>
       </trans-unit>
       <trans-unit id="editorPartModal">
         <source xml:lang="en">Whether focus is in a modal editor part</source>
@@ -8062,6 +8206,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="isWindowAlwaysOnTop">
         <source xml:lang="en">Whether the window is always on top</source>
         <target>Чи вікно завжди поверх інших</target>
+      </trans-unit>
+      <trans-unit id="layoutMode">
+        <source xml:lang="en">How the window shows its chat and its editor parts, either 'chatOnly', 'editorOnly', 'stacked' or 'sideBySide'. Unset in windows without layout modes.</source>
+        <target>Як вікно показує свої частини чату та редактора, або 'chatOnly', 'editorOnly', 'stacked' чи 'sideBySide'. Не встановлено у вікнах без режимів макета.</target>
       </trans-unit>
       <trans-unit id="mainEditorAreaVisible">
         <source xml:lang="en">Whether the editor area in the main window is visible</source>
@@ -8163,6 +8311,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Whether editors split vertically</source>
         <target>Чи розділяють редактори вертикально</target>
       </trans-unit>
+      <trans-unit id="splitLayout">
+        <source xml:lang="en">How the window arranges its chat and its editor parts while both show, or as they will next show together, either 'stacked' or 'sideBySide'. Unset in windows without layout modes.</source>
+        <target>Як вікно організовує свої частини чату та редактора, коли обидві показуються, або як вони будуть наступного разу показані разом, або 'в стопці', або 'поряд'. Не встановлено у вікнах без режимів макета.</target>
+      </trans-unit>
       <trans-unit id="statusBarFocused">
         <source xml:lang="en">Whether the status bar has keyboard focus</source>
         <target>Чи має рядок стану фокус клавіатури</target>
@@ -8170,6 +8322,14 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="temporaryWorkspace">
         <source xml:lang="en">The scheme of the current workspace is from a temporary file system.</source>
         <target>Схема поточного робочого простору походить з тимчасової файлової системи.</target>
+      </trans-unit>
+      <trans-unit id="terminalsPosition">
+        <source xml:lang="en">Where the part that holds the window's terminals sits, either 'underChat', 'underEditor' or 'fullWidth'. Unset in windows without such a part.</source>
+        <target>Де знаходиться частина, що утримує термінали вікна, або 'underChat', 'underEditor', або 'fullWidth'. Не встановлено в вікнах без такої частини.</target>
+      </trans-unit>
+      <trans-unit id="terminalsVisible">
+        <source xml:lang="en">Whether the window shows the part that holds its terminals. Unset in windows without such a part.</source>
+        <target>Чи вікно показує частину, яка утримує його термінали. Скинуто в вікнах без такої частини.</target>
       </trans-unit>
       <trans-unit id="textCompareEditorActive">
         <source xml:lang="en">Whether a text compare editor is active</source>

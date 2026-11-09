@@ -147,12 +147,16 @@
   <file original="src/vs/workbench/contrib/search/browser/search.common.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="exclude">
-        <source xml:lang="en">Configure [glob patterns](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options) for excluding files and folders in fulltext searches and file search in quick open. To exclude files from the recently opened list in quick open, patterns must be absolute (for example `**/node_modules/**`). Inherits all glob patterns from the `#files.exclude#` setting.</source>
-        <target>Налаштуйте [глобальні шаблони](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options) для виключення файлів і папок у повнотекстових пошуках та пошуку файлів у швидкому відкритті. Щоб виключити файли з нещодавно відкритого списку у швидкому відкритті, шаблони повинні бути абсолютними (наприклад, `**/node_modules/**`). Спадкує всі глобальні шаблони з налаштування `#files.exclude#`.</target>
+        <source xml:lang="en">Configure [glob patterns](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options) for excluding files and folders in fulltext searches and file search in quick open. To exclude files from the recently opened list in quick open, patterns must be absolute (for example `**/node_modules/**`). Inherits all glob patterns from the `#files.exclude#` setting. Prefix a pattern with `!` to search matching files and folders even if another pattern, including one from `#files.exclude#`, excludes them.</source>
+        <target>Налаштуйте [глобальні шаблони](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options) для виключення файлів і папок у повнотекстових пошуках та пошуку файлів у швидкому відкритті. Щоб виключити файли з нещодавно відкритого списку у швидкому відкритті, шаблони повинні бути абсолютними (наприклад, `**/node_modules/**`). Спадкує всі глобальні шаблони з налаштування `#files.exclude#`. Додайте префікс `!` до шаблону, щоб шукати відповідні файли та папки, навіть якщо інший шаблон, включаючи один з `#files.exclude#`, виключає їх.</target>
       </trans-unit>
       <trans-unit id="exclude.boolean">
         <source xml:lang="en">The glob pattern to match file paths against. Set to true or false to enable or disable the pattern.</source>
         <target>Шаблон glob для порівняння з шляхами файлів. Встановіть значення true або false, щоб увімкнути або вимкнути шаблон.</target>
+      </trans-unit>
+      <trans-unit id="exclude.exception">
+        <source xml:lang="en">An exception: files and folders that match the glob pattern after the `!`, and everything inside them, are searched even if another pattern excludes them. Version control folders such as `.git` stay excluded unless the pattern names them. Set to true or false to enable or disable the exception.</source>
+        <target>Виключення: файли та папки, які відповідають шаблону glob після `!`, і все, що всередині них, шукаються, навіть якщо інший шаблон виключає їх. Папки контролю версій, такі як `.git`, залишаються виключеними, якщо шаблон не називає їх. Встановіть значення true або false, щоб увімкнути або вимкнути виключення.</target>
       </trans-unit>
       <trans-unit id="exclude.when">
         <source xml:lang="en">Additional check on the siblings of a matching file. Use \$(basename) as variable for the matching file name.</source>

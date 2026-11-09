@@ -59,8 +59,8 @@
         <target>Перейдіть до Символу&lt;keybinding:{0}&gt;</target>
       </trans-unit>
       <trans-unit id="iconPicker">
-        <source xml:lang="en">Change Icon opens a searchable icon grid. Enter a name to filter, then press Down Arrow to enter the grid. Arrow keys move between icons, Home and End move to the first and last icon, and Up Arrow from the top row returns to search. Tab and Shift+Tab move between search, the grid, and Reset to default. Press Enter to choose an icon or reset the default terminal icon without changing its color. Escape cancels without changing the icon.</source>
-        <target>Зміна значка відкриває пошукову сітку значків. Введіть ім'я для фільтрації, потім натисніть стрілку вниз, щоб увійти в сітку. Стрілки переміщують між значками, Home і End переміщують до першого та останнього значка, а стрілка вгору з верхнього рядка повертає до пошуку. Tab і Shift+Tab переміщують між пошуком, сіткою та скиданням до значення за замовчуванням. Натисніть Enter, щоб вибрати значок або скинути значок терміналу за замовчуванням без зміни його кольору. Escape скасовує без зміни значка.</target>
+        <source xml:lang="en">Change Icon opens a searchable icon grid. Enter a name to filter, then press Down Arrow to enter the grid. Arrow keys move between icons, Home and End move to the first and last icon, and Up Arrow from the top row returns to search. Tab and Shift+Tab move between search, the grid, and the Reset to default button below the grid. Press Enter to choose an icon or reset the default terminal icon without changing its color. Escape cancels without changing the icon.</source>
+        <target>Зміна значка відкриває пошукову сітку значків. Введіть ім'я для фільтрації, потім натисніть клавішу вниз, щоб увійти в сітку. Клавіші зі стрілками переміщують між значками, Home і End переміщують до першого та останнього значка, а клавіша вгору з верхнього рядка повертає до пошуку. Tab і Shift+Tab переміщують між пошуком, сіткою та кнопкою скидання до значень за замовчуванням під сіткою. Натисніть Enter, щоб вибрати значок або скинути значок терміналу за замовчуванням без зміни його кольору. Escape скасовує без зміни значка.</target>
       </trans-unit>
       <trans-unit id="newWithProfile">
         <source xml:lang="en">The Create New Terminal (With Profile) command&lt;keybinding:{0}&gt; allows for easy terminal creation using a specific profile.</source>
@@ -137,6 +137,14 @@
       <trans-unit id="terminal.integrated.accessibleViewPreserveCursorPosition.true">
         <source xml:lang="en">Preserve the cursor position on reopen until new terminal content arrives.</source>
         <target>Зберігайте позицію курсора при повторному відкритті, поки не надійде новий вміст терміналу.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/terminalContrib/autoReplies/browser/terminal.autoReplies.contribution" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="removeTerminalAutoReplies">
+        <source xml:lang="en">Remove Terminal Auto Replies</source>
+        <target>Видалити автоматичні відповіді терміналу</target>
       </trans-unit>
     </body>
   </file>
@@ -993,7 +1001,7 @@ Reason for leaving the sandbox: {2}</source>
         <source xml:lang="en">Create and run a task in the workspace</source>
         <target>Створіть і запустіть задачу в робочому просторі</target>
       </trans-unit>
-      <trans-unit id="createTask">
+      <trans-unit id="createTaskInWorkspace">
         <source xml:lang="en">Task '{0}' will be created in '{1}' and run with this command:</source>
         <target>Завдання '{0}' буде створено в '{1}' і виконано з цією командою:</target>
       </trans-unit>
@@ -1117,15 +1125,15 @@ Reason for leaving the sandbox: {2}</source>
         <source xml:lang="en">Allow the sandboxed process to reach hosts on the local network. Windows needs this on when a proxy, host rules, or credential masking is used: it reaches the local listener over host loopback, and a sandboxed command will not launch without it. The local proxy checks destination addresses for direct connections. An upstream proxy resolves its own destinations.</source>
         <target>Дозвольте пісочниці досягати хостів у локальній мережі. Windows потребує цього, коли використовується проксі, правила хостів або маскування облікових даних: він досягає локального прослуховувача через петлю хоста, і пісочниця не запуститься без цього. Локальний проксі перевіряє адреси призначення для прямих з'єднань. Проксі на верхньому рівні вирішує свої власні призначення.</target>
       </trans-unit>
-      <trans-unit id="agentSandbox.allowNetwork">
+      <trans-unit id="agentSandbox.allowNetwork2">
         <source xml:lang="en">Allow outbound network access in the sandbox (`allowOutbound` in the SDK). Configured allowed and denied network domains still restrict destinations. When disabled, outbound network access is blocked, including for the integrated browser.</source>
-        <target>Дозвольте вихідний мережевий доступ у пісочниці (`allowOutbound` у SDK). Налаштовані дозволені та заборонені мережеві домени все ще обмежують цілі. Коли це вимкнено, вихідний мережевий доступ блокується, включаючи інтегрований браузер.</target>
+        <target>Дозвольте вихідний мережевий доступ у пісочниці (`allowOutbound` у SDK). Налаштовані дозволені та заборонені мережеві домени все ще обмежують призначення. Коли вимкнено, вихідний мережевий доступ блокується, включаючи інтегрований браузер.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.allowNetworkPolicy">
         <source xml:lang="en">Deprecated. Controls whether the Local agent sandbox allows outbound connections to all network domains while preserving file system restrictions. Use the sandbox.userPolicy.network.allowOutbound managed setting to enforce outbound network restrictions in Copilot Agent Host.</source>
         <target>Застаріло. Контролює, чи дозволяє пісочниця локального агента вихідні з'єднання до всіх мережевих доменів, зберігаючи обмеження файлової системи. Використовуйте керовану настройку sandbox.userPolicy.network.allowOutbound для забезпечення обмежень вихідної мережі в Copilot Agent Host.</target>
       </trans-unit>
-      <trans-unit id="agentSandbox.allowUnsandboxedCommands">
+      <trans-unit id="agentSandbox.allowUnsandboxedCommands2">
         <source xml:lang="en">Controls whether agent mode terminal commands can run outside the sandbox after user confirmation when a sandboxed command fails or when sandbox restrictions would block the command.</source>
         <target>Контролює, чи можуть команди терміналу режиму агента виконуватись поза пісочницею після підтвердження користувача, коли команда в пісочниці зазнає невдачі або коли обмеження пісочниці блокують команду.</target>
       </trans-unit>
@@ -1141,13 +1149,21 @@ Reason for leaving the sandbox: {2}</source>
         <source xml:lang="en">Use your credentials for HTTPS git operations inside the sandbox. Applies only to the Copilot Agent Host harness.</source>
         <target>Використовуйте свої облікові дані для HTTPS git-операцій всередині пісочниці. Застосовується лише до системи Copilot Agent Host.</target>
       </trans-unit>
+      <trans-unit id="agentSandbox.credentialEnvVars">
+        <source xml:lang="en">Mask the named environment variables inside the Copilot Agent Host sandbox. For each variable, list the HTTPS hosts that may receive its value in `injectHosts`. Enter variable names, not secret values.</source>
+        <target>Сховати зазначені змінні середовища всередині пісочниці хоста Copilot Agent. Для кожної змінної перерахувати HTTPS-хости, які можуть отримати її значення в `injectHosts`. Введіть імена змінних, а не секретні значення.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.credentialEnvVars.injectHosts">
+        <source xml:lang="en">HTTPS destination hosts where the sandbox may inject this environment variable's value. Host patterns are validated by the runtime.</source>
+        <target>HTTPS-адреси призначення, куди пісочниця може вставити значення цієї змінної середовища. Шаблони хостів перевіряються під час виконання.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.credentialEnvVars.name">
+        <source xml:lang="en">Name of an environment variable to mask, not its secret value.</source>
+        <target>Назва змінної середовища для маскування, а не її секретне значення.</target>
+      </trans-unit>
       <trans-unit id="agentSandbox.enabledPolicy">
         <source xml:lang="en">Deprecated. Controls whether the Local agent uses sandboxing to restrict what tools can do. In Copilot Agent Host, this legacy policy supplies an overridable sandbox default, not a mandatory requirement. Use the runtime-native sandbox.enabled managed setting to require sandboxing in Copilot Agent Host.</source>
         <target>Застаріло. Контролює, чи використовує локальний агент пісочницю для обмеження дій інструментів. У хості агента Copilot ця застаріла політика забезпечує можливість перевизначення значення за замовчуванням для пісочниці, а не є обов'язковою вимогою. Використовуйте керовану настройку runtime-native sandbox.enabled, щоб вимагати використання пісочниці в хості агента Copilot.</target>
-      </trans-unit>
-      <trans-unit id="agentSandbox.enabledSetting">
-        <source xml:lang="en">Controls whether agent mode uses sandboxing to restrict what tools can do. When enabled, tools like the terminal are run in a sandboxed environment to limit access to the system. The Local harness supports sandboxing on Linux and macOS only. The Copilot Agent Host harness uses the SDK runtime's sandbox, including on supported Windows hosts.</source>
-        <target>Контролює, чи режим агента використовує пісочницю для обмеження можливостей інструментів. Коли увімкнено, такі інструменти, як термінал, запускаються в середовищі пісочниці, щоб обмежити доступ до системи. Локальний хост підтримує пісочницю лише на Linux та macOS. Хост хардвару Copilot Agent використовує пісочницю середовища виконання SDK, включаючи підтримувані хосты Windows.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.enabledSetting.offDescription">
         <source xml:lang="en">Disable sandboxing for agent mode tools.</source>
@@ -1156,6 +1172,10 @@ Reason for leaving the sandbox: {2}</source>
       <trans-unit id="agentSandbox.enabledSetting.onDescription">
         <source xml:lang="en">Enable sandboxing for agent mode tools.</source>
         <target>Увімкніть пісочницю для інструментів режиму агента.</target>
+      </trans-unit>
+      <trans-unit id="agentSandbox.enabledSetting2">
+        <source xml:lang="en">Controls whether agent mode uses sandboxing to restrict what tools can do. When enabled, tools like the terminal are run in a sandboxed environment to limit access to the system. The Local harness supports sandboxing on Linux and macOS only. The Copilot Agent Host harness uses the SDK runtime's sandbox, including on supported Windows hosts.</source>
+        <target>Контролює, чи режим агента використовує пісочницю для обмеження дій інструментів. Коли це ввімкнено, такі інструменти, як термінал, запускаються в середовищі пісочниці, щоб обмежити доступ до системи. Локальний хостинг підтримує пісочницю тільки на Linux та macOS. Хостинг Copilot Agent використовує пісочницю середовища виконання SDK, включаючи підтримувані хости Windows.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.fileSystem.deprecated">
         <source xml:lang="en">This setting will be deprecated soon. For the Copilot Agent Host sandbox, use {0} instead.</source>
@@ -1204,18 +1224,6 @@ Reason for leaving the sandbox: {2}</source>
       <trans-unit id="agentSandbox.macFileSystemSetting.denyWrite">
         <source xml:lang="en">Array of paths to deny write access within allowed paths (takes precedence over allowWrite).</source>
         <target>Масив шляхів для заборони запису в межах дозволених шляхів (має пріоритет над allowWrite).</target>
-      </trans-unit>
-      <trans-unit id="agentSandbox.maskedEnvironmentVariables">
-        <source xml:lang="en">Choose environment variables and the HTTPS hosts allowed to receive their real values.</source>
-        <target>Виберіть змінні середовища та хости HTTPS, яким дозволено отримувати їхні реальні значення.</target>
-      </trans-unit>
-      <trans-unit id="agentSandbox.maskedEnvironmentVariables.envVars">
-        <source xml:lang="en">Map environment variable names to the hosts where their values may be injected. Specify environment variable names, not secret values.</source>
-        <target>Сопоставте імена змінних середовища з хостами, куди можуть бути вставлені їх значення. Вкажіть імена змінних середовища, а не секретні значення.</target>
-      </trans-unit>
-      <trans-unit id="agentSandbox.maskedEnvironmentVariables.envVars.injectHosts">
-        <source xml:lang="en">Hosts where the credential may be injected.</source>
-        <target>Хости, куди можуть бути впроваджені облікові дані.</target>
       </trans-unit>
       <trans-unit id="agentSandbox.mcpServers">
         <source xml:lang="en">Controls whether MCP servers run in the sandbox when sandboxing is enabled.</source>
@@ -2771,8 +2779,8 @@ To exclude an extension, set it to `false`
         <target>Коли локальне ехо має бути ввімкнене. Це переоприділить {0}</target>
       </trans-unit>
       <trans-unit id="terminal.integrated.localEchoEnabled.auto">
-        <source xml:lang="en">Enabled only for remote workspaces</source>
-        <target>Увімкнено лише для віддалених робочих просторів</target>
+        <source xml:lang="en">Enabled only for remote terminals, such as those in remote workspaces or on remote agent hosts</source>
+        <target>Увімкнено лише для віддалених терміналів, таких як ті, що в віддалених робочих просторах або на хостах віддалених агентів.</target>
       </trans-unit>
       <trans-unit id="terminal.integrated.localEchoEnabled.off">
         <source xml:lang="en">Always disabled</source>

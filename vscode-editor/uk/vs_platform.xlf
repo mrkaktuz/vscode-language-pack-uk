@@ -327,6 +327,10 @@
         <source xml:lang="en">Remove</source>
         <target>Видалити</target>
       </trans-unit>
+      <trans-unit id="actionList.standaloneToggle.disabledReason">
+        <source xml:lang="en">{0}, {1}</source>
+        <target>{0}, {1}</target>
+      </trans-unit>
       <trans-unit id="actionList.standaloneToggle.off">
         <source xml:lang="en">{0}, off</source>
         <target>{0}, вимкнено</target>
@@ -343,11 +347,6 @@
         <source xml:lang="en">Action Widget</source>
         <note>An action widget option</note>
         <target>Віджет дій</target>
-      </trans-unit>
-      <trans-unit id="customQuickFixWidget.labels">
-        <source xml:lang="en">{0}, Disabled Reason: {1}</source>
-        <note>Action widget labels for accessibility.</note>
-        <target>{0}, Причина відключення: {1}</target>
       </trans-unit>
       <trans-unit id="label">
         <source xml:lang="en">{0} to Apply</source>
@@ -504,6 +503,10 @@ A keybinding</note>
         <source xml:lang="en">This agent host can't move a chat into its own workspace.</source>
         <target>Цей агент-хост не може перемістити чат у своє власне робоче середовище.</target>
       </trans-unit>
+      <trans-unit id="agentHost.sideChatWithoutContextUnsupported">
+        <source xml:lang="en">This agent host can't create a side chat without source context. Update the agent host to explain this command.</source>
+        <target>Цей хост агента не може створити бокову бесіду без контексту джерела. Оновіть хост агента, щоб пояснити цю команду.</target>
+      </trans-unit>
       <trans-unit id="agentHost.trustWorkspaceMessage">
         <source xml:lang="en">An agent session will be able to read files, run commands, and make changes in this folder.</source>
         <target>Сесія агента зможе читати файли, виконувати команди та вносити зміни в цю папку.</target>
@@ -517,8 +520,8 @@ A keybinding</note>
         <target>Пісочниця в контейнері розробки</target>
       </trans-unit>
       <trans-unit id="agentHostSandboxToggle.devContainerTitle">
-        <source xml:lang="en">Start the Dev Container with the Docker options needed for terminal sandboxing: unconfined seccomp, AppArmor and system paths, and access to /dev/net/tun. This relaxes the outer container's isolation; terminal commands still run inside their own sandbox.</source>
-        <target>Запустіть Dev Container з параметрами Docker, необхідними для пісочниці терміналу: unconfined seccomp, AppArmor і системні шляхи, а також доступ до /dev/net/tun. Це послаблює ізоляцію зовнішнього контейнера; команди терміналу все ще виконуються в їхній власній пісочниці.</target>
+        <source xml:lang="en">Start the Dev Container with the additional Docker options that terminal sandboxing requires. This relaxes the outer container's isolation; terminal commands still run inside their own sandbox.</source>
+        <target>Запустіть Dev Container з додатковими параметрами Docker, які вимагає пісочниця терміналу. Це знижує ізоляцію зовнішнього контейнера; команди терміналу все ще виконуються у своїй власній пісочниці.</target>
       </trans-unit>
       <trans-unit id="agentHostSandboxToggle.devContainerUnavailableEnabledTitle">
         <source xml:lang="en">Sandboxing is requested for this session, but this Dev Container was started without the required Docker options. Recreate it with sandboxing enabled, or turn sandboxing off for this session if your organization permits it.</source>
@@ -541,8 +544,8 @@ A keybinding</note>
         <target>Пісочниця є обов'язковою для вашої організації.</target>
       </trans-unit>
       <trans-unit id="agentHostSandboxToggle.title">
-        <source xml:lang="en">Run this session's terminal commands inside a sandbox that restricts file system and network access. The applied setting is saved for this session and checked against current organization policy when restored.</source>
-        <target>Запустіть термінальні команди цієї сесії в пісочниці, яка обмежує доступ до файлової системи та мережі. Застосоване налаштування зберігається для цієї сесії та перевіряється на відповідність поточній політиці організації під час відновлення.</target>
+        <source xml:lang="en">Run this session's terminal commands inside a sandbox that restricts file system and network access. The applied setting is saved for this session and checked against your organization's current requirements when restored.</source>
+        <target>Запустіть термінальні команди цієї сесії в пісочниці, яка обмежує доступ до файлової системи та мережі. Застосоване налаштування зберігається для цієї сесії та перевіряється на відповідність поточним вимогам вашої організації під час відновлення.</target>
       </trans-unit>
     </body>
   </file>
@@ -598,16 +601,16 @@ Close this dialog to apply the change with your next message after the current t
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/platform/agentHost/common/agentHostChatProviders" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="multipleChatProviders.config.enabled">
+        <source xml:lang="en">Multiple Chat Providers</source>
+        <target>Кілька постачальників чатів</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/platform/agentHost/common/agentHostCustomizationConfig" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="agentHost.config.allowSignedOutWhenUsable.description">
-        <source xml:lang="en">Experimental. When enabled, Agent Host sessions remain available while signed out as long as the selected agent has a usable model and authentication (for example Codex with ChatGPT authentication or Claude in native mode with your own Anthropic credentials). When disabled (the default), GitHub sign-in is required.</source>
-        <target>Експериментальний. Коли увімкнено, сесії Agent Host залишаються доступними під час виходу з системи, якщо обраний агент має придатну модель та автентифікацію (наприклад, Codex з автентифікацією ChatGPT або Claude в рідному режимі з вашими власними обліковими даними Anthropic). Коли вимкнено (за замовчуванням), потрібен вхід через GitHub.</target>
-      </trans-unit>
-      <trans-unit id="agentHost.config.allowSignedOutWhenUsable.title">
-        <source xml:lang="en">Allow Signed-Out Agent Host</source>
-        <target>Дозволити хост агента, що вийшов із системи</target>
-      </trans-unit>
       <trans-unit id="agentHost.config.customizations.description">
         <source xml:lang="en">Plugins configured on this agent host and available to remote sessions.</source>
         <target>Плагіни, налаштовані на цьому хості агента і доступні для віддалених сеансів.</target>
@@ -737,8 +740,8 @@ Close this dialog to apply the change with your next message after the current t
         <target>Сесії цілей Agent Host можуть залишатися доступними в редакторі, навіть коли режим агента вимкнено політикою.</target>
       </trans-unit>
       <trans-unit id="policyGap.customizations">
-        <source xml:lang="en">The workbench filters synchronized customizations, but runtime discovery and standalone instructions do not have equivalent coverage across policy sources.</source>
-        <target>Робочий стіл фільтрує синхронізовані налаштування, але виявлення під час виконання та автономні інструкції не мають еквівалентного покриття серед джерел політики.</target>
+        <source xml:lang="en">Copilot managed settings restrict runtime discovery, including executable Copilot extensions, but values delivered only through VS Code policy do not reach those paths and standalone instructions still lack equivalent runtime coverage.</source>
+        <target>Copilot керовані налаштування обмежують виявлення під час виконання, включаючи виконувані розширення Copilot, але значення, що надходять лише через політику VS Code, не досягають цих шляхів, а автономні інструкції все ще не мають еквівалентного покриття під час виконання.</target>
       </trans-unit>
       <trans-unit id="policyGap.hooks">
         <source xml:lang="en">The Local-only hooks switch does not disable runtime-discovered Agent Host hooks.</source>
@@ -847,6 +850,14 @@ Close this dialog to apply the change with your next message after the current t
       <trans-unit id="agentHost.config.artifactTools.title">
         <source xml:lang="en">Artifact Tools</source>
         <target>Інструменти артефактів</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.assistedApprovalInstructions.description">
+        <source xml:lang="en">User-authored instructions for the reviewer that decides which tool calls run without confirmation under Assisted permissions. Empty uses the default guidance.</source>
+        <target>Інструкції, написані користувачем, для рецензента, який вирішує, які виклики інструментів виконуються без підтвердження під час використання дозволів Assisted. Порожнє значення використовує стандартні рекомендації.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.assistedApprovalInstructions.title">
+        <source xml:lang="en">Assisted Permissions Instructions</source>
+        <target>Інструкції щодо допоміжних дозволів</target>
       </trans-unit>
       <trans-unit id="agentHost.config.autoApprovePolicyRestricted">
         <source xml:lang="en">Auto Approve Policy Restricted</source>
@@ -968,6 +979,18 @@ Close this dialog to apply the change with your next message after the current t
         <source xml:lang="en">Edit Telemetry</source>
         <target>Редагувати телеметрію</target>
       </trans-unit>
+      <trans-unit id="agentHost.config.extensionPermissionApprovals.description">
+        <source xml:lang="en">Per-extension-identity decisions for letting Copilot extensions load with privileged capabilities, such as registering hooks, in all sessions on this agent host. Identities include the extension name and requested capabilities. Remove an entry to ask again.</source>
+        <target>Рішення щодо ідентичності за розширенням для дозволу завантаження розширень Copilot з привілейованими можливостями, такими як реєстрація хуків, у всіх сесіях на цьому хості агента. Ідентичності включають назву розширення та запитувані можливості. Видаліть запис, щоб запитати знову.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.extensionPermissionApprovals.entry">
+        <source xml:lang="en">Extension Permission Decision</source>
+        <target>Рішення про дозвіл розширення</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.extensionPermissionApprovals.title">
+        <source xml:lang="en">Extension Permission Approvals</source>
+        <target>Схвалення дозволів на розширення</target>
+      </trans-unit>
       <trans-unit id="agentHost.config.githubArtifactIgnoredChecks.description">
         <source xml:lang="en">Check-name patterns that do not need to pass before a pull request artifact is automatically marked ready.</source>
         <target>Перевірте шаблони імен, які не потрібно проходити, перш ніж артефакт запиту на злиття буде автоматично позначений як готовий.</target>
@@ -1023,6 +1046,14 @@ Close this dialog to apply the change with your next message after the current t
       <trans-unit id="agentHost.config.httpProxyKerberosServicePrincipal.title">
         <source xml:lang="en">HTTP Proxy Kerberos Service Principal</source>
         <target>HTTP Proxy Kerberos Service Principal</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.localCredentials.description">
+        <source xml:lang="en">Use this host's GitHub and Copilot credentials for same-account Mission Control sessions.</source>
+        <target>Використовуйте облікові дані GitHub та Copilot цього хоста для сесій Mission Control з одного облікового запису.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.localCredentials.title">
+        <source xml:lang="en">Use Local Credentials</source>
+        <target>Використовуйте локальні облікові дані</target>
       </trans-unit>
       <trans-unit id="agentHost.config.markdownPlanRichLinks.description">
         <source xml:lang="en">Whether agents receive guidance for using rich links and running task markers in Markdown plan documents.</source>
@@ -1128,6 +1159,26 @@ Close this dialog to apply the change with your next message after the current t
         <source xml:lang="en">URL</source>
         <target>URL</target>
       </trans-unit>
+      <trans-unit id="agentHost.config.mcpSkillsEnabled.description">
+        <source xml:lang="en">Whether Copilot agent sessions discover and use skills served by MCP servers. Changes apply to new sessions.</source>
+        <target>Чи сесії агента Copilot виявляють і використовують навички, що надаються серверами MCP. Зміни застосовуються до нових сесій.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.mcpSkillsEnabled.title">
+        <source xml:lang="en">MCP Skills</source>
+        <target>MCP Навички</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.mcpSkillsServerApprovals.description">
+        <source xml:lang="en">Per-server-identity decisions for loading and using MCP-served skills in all sessions on this agent host. Identities include known server configuration and source, or the exact server name when no other identity is available. Remove an entry to ask again. This does not approve ordinary tool permission requests.</source>
+        <target>Рішення щодо ідентичності на сервері для завантаження та використання навичок, які надаються MCP, у всіх сесіях на цьому агентському хості. Ідентичності включають відому конфігурацію сервера та джерело, або точну назву сервера, коли інша ідентичність недоступна. Видаліть запис, щоб запитати знову. Це не затверджує звичайні запити на дозвіл інструментів.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.mcpSkillsServerApprovals.entry">
+        <source xml:lang="en">MCP Server Skills Decision</source>
+        <target>Рішення навичок сервера MCP</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.mcpSkillsServerApprovals.title">
+        <source xml:lang="en">MCP Skills Server Approvals</source>
+        <target>MCP Навички Серверні Затвердження</target>
+      </trans-unit>
       <trans-unit id="agentHost.config.mcpToolRoutingEnabled.description">
         <source xml:lang="en">Whether Copilot agent sessions use cached MCP tool metadata for routing.</source>
         <target>Чи використовують сесії агента Copilot кешовані метадані інструменту MCP для маршрутизації.</target>
@@ -1143,6 +1194,14 @@ Close this dialog to apply the change with your next message after the current t
       <trans-unit id="agentHost.config.migrateLegacyCopilotCliEnabled.title">
         <source xml:lang="en">Migrate Legacy Copilot CLI Sessions</source>
         <target>Міграція сесій старого Copilot CLI</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.modelRouterEnabled.description">
+        <source xml:lang="en">Whether model routers from ~/.agents/model-routers are offered as Copilot models.</source>
+        <target>Чи моделі маршрутизаторів з ~/.agents/model-routers пропонуються як моделі Copilot.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.modelRouterEnabled.title">
+        <source xml:lang="en">Model Routers</source>
+        <target>Моделі маршрутизаторів</target>
       </trans-unit>
       <trans-unit id="agentHost.config.overlapProviderPreparation.description">
         <source xml:lang="en">Whether agents prepare their session for a turn while the turn-start checkpoint is captured, instead of after it.</source>
@@ -1212,13 +1271,13 @@ Close this dialog to apply the change with your next message after the current t
         <source xml:lang="en">Terminal Auto Approve</source>
         <target>Термінал Авто Підтвердження</target>
       </trans-unit>
-      <trans-unit id="agentHost.config.terminalAutoApproveRules.description">
-        <source xml:lang="en">Terminal auto-approve rules forwarded by the connected client for agent-host shell permission checks.</source>
-        <target>Правила автоматичного схвалення терміналу, надіслані підключеним клієнтом для перевірки дозволів оболонки агента-хоста.</target>
+      <trans-unit id="agentHost.config.terminalIgnoreDefaultAutoApproveRules.description">
+        <source xml:lang="en">Ignore implicit terminal auto-approve rules and use only explicit permission rules.</source>
+        <target>Ігноруйте неявні правила автоматичного схвалення терміналів і використовуйте лише явні правила дозволів.</target>
       </trans-unit>
-      <trans-unit id="agentHost.config.terminalAutoApproveRules.title">
-        <source xml:lang="en">Terminal Auto Approve Rules</source>
-        <target>Правила автоматичного затвердження терміналу</target>
+      <trans-unit id="agentHost.config.terminalIgnoreDefaultAutoApproveRules.title">
+        <source xml:lang="en">Ignore Default Terminal Auto Approve Rules</source>
+        <target>Ігнорувати правила автоматичного схвалення терміналу за замовчуванням</target>
       </trans-unit>
       <trans-unit id="agentHost.config.titleGeneration.activeAgent">
         <source xml:lang="en">The active agent names sessions and chats with rename tools.</source>
@@ -1341,20 +1400,24 @@ Close this dialog to apply the change with your next message after the current t
         <target>Дозволи</target>
       </trans-unit>
       <trans-unit id="agentHost.sessionConfig.permissions.allow">
-        <source xml:lang="en">Allowed tools</source>
-        <target>Дозволені інструменти</target>
+        <source xml:lang="en">Allowed permission rules</source>
+        <target>Дозволені правила доступу</target>
+      </trans-unit>
+      <trans-unit id="agentHost.sessionConfig.permissions.ask">
+        <source xml:lang="en">Permission Rules Requiring Confirmation</source>
+        <target>Правила дозволів, що вимагають підтвердження</target>
       </trans-unit>
       <trans-unit id="agentHost.sessionConfig.permissions.deny">
-        <source xml:lang="en">Denied tools</source>
-        <target>Відхилені інструменти</target>
+        <source xml:lang="en">Denied permission rules</source>
+        <target>Правила відмови в доступі</target>
       </trans-unit>
-      <trans-unit id="agentHost.sessionConfig.permissions.toolName">
-        <source xml:lang="en">Tool name</source>
-        <target>Назва інструменту</target>
+      <trans-unit id="agentHost.sessionConfig.permissions.rule">
+        <source xml:lang="en">Permission rule</source>
+        <target>Правило дозволу</target>
       </trans-unit>
       <trans-unit id="agentHost.sessionConfig.permissionsDescription">
-        <source xml:lang="en">Per-tool session permissions. Updated automatically when approving a tool "in this Session".</source>
-        <target>Дозволи сесії для кожного інструмента. Оновлюються автоматично при затвердженні інструмента "в цій сесії".</target>
+        <source xml:lang="en">Permission rules: a tool name or Tool(specifier), e.g. Shell(npm run *), WebFetch(example.com), WebFetch(example.com/docs/*), Read(./src/**), or Edit(./docs/**). Shell specifiers support wildcards, /regex/flags, and commandLine:&lt;specifier&gt; for the full command line. Deny rules reject matching calls; ask rules require confirmation before allow rules or implicit defaults. Updated automatically when approving "in this Session" or "Always Allow".</source>
+        <target>Правила дозволів: ім'я інструменту або Tool(specifier), наприклад, Shell(npm run *), WebFetch(example.com), WebFetch(example.com/docs/*), Read(./src/**) або Edit(./docs/**). Специфікатори Shell підтримують шаблони, /regex/flags та commandLine:&lt;specifier&gt; для повної командної строки. Правила відмови відхиляють відповідні виклики; правила запиту вимагають підтвердження перед правилами дозволу або неявними значеннями за замовчуванням. Оновлюється автоматично при затвердженні "в цій сесії" або "Завжди дозволити".</target>
       </trans-unit>
       <trans-unit id="agentHost.sessionConfig.sandboxEnabled">
         <source xml:lang="en">Sandbox</source>
@@ -1469,8 +1532,8 @@ Close this dialog to apply the change with your next message after the current t
         <target>Коли увімкнено, агенти отримують вказівки щодо використання багатих посилань на проблеми, запити на злиття, коміти, сеанси та чати, а також маркери завдань, під час створення або редагування документів плану Markdown.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.experimental.mcpToolRouting">
-        <source xml:lang="en">When enabled and tool search is available, agent-host sessions use cached MCP tool metadata to route requests and only prompt for MCP authentication when a server is relevant. Routing tools wait for the selected server's tools to become available. Servers without routing tools retain proactive sign-in hints. Newly created sessions pick up changes to this setting.</source>
-        <target>Коли увімкнено і доступний пошук інструментів, сесії агент-хост використовують кешовані метадані інструментів MCP для маршрутизації запитів і запитують аутентифікацію MCP лише тоді, коли сервер є релевантним. Інструменти маршрутизації чекають, поки інструменти вибраного сервера стануть доступними. Сервери без інструментів маршрутизації зберігають проактивні підказки для входу. Новостворені сесії враховують зміни в цій налаштуванні.</target>
+        <source xml:lang="en">When enabled and tool search is available, agent-host sessions offer routing tools for configured MCP servers and Connectors, using server names and cached MCP tool metadata to discover relevant servers. Selecting a routing tool can request authentication and waits for the server's current tools. Connector-owned servers do not show proactive sign-in hints when this setting is enabled. Other servers without routing tools retain proactive sign-in hints. Newly created sessions pick up changes to this setting.</source>
+        <target>Коли увімкнено і доступний пошук інструментів, сесії агент-хосту пропонують інструменти маршрутизації для налаштованих серверів MCP та Конекторів, використовуючи імена серверів та кешовані метадані інструментів MCP для виявлення відповідних серверів. Вибір інструмента маршрутизації може вимагати автентифікації та чекає на поточні інструменти сервера. Сервери, що належать Конектору, не показують проактивні підказки для входу, коли це налаштування увімкнено. Інші сервери без інструментів маршрутизації зберігають проактивні підказки для входу. Щойно створені сесії враховують зміни цього налаштування.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.experimental.overlapProviderPreparation">
         <source xml:lang="en">When enabled, agents prepare their session for a new turn, such as starting the runtime session, while the turn-start checkpoint is captured instead of after it. This can shorten the time to the first response, especially on the first turn of a session.</source>
@@ -1483,6 +1546,14 @@ Close this dialog to apply the change with your next message after the current t
       <trans-unit id="chat.agentHost.githubMcpServer.enabled">
         <source xml:lang="en">When enabled, agent-host sessions include the GitHub MCP server.</source>
         <target>Коли увімкнено, сесії агент-хоста включають сервер GitHub MCP.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.mcpSkills.enabled">
+        <source xml:lang="en">When enabled, Copilot agent sessions discover and use skills served by MCP servers. Changes apply to new sessions.</source>
+        <target>Коли ввімкнено, сесії агента Copilot виявляють і використовують навички, які надаються серверами MCP. Зміни застосовуються до нових сесій.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.multipleChatProviders.enabled">
+        <source xml:lang="en">Enables chats in one Agent Host session to use different agents.</source>
+        <target>Дозволяє чатам в одній сесії Agent Host використовувати різних агентів.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.otel.captureContent">
         <source xml:lang="en">When enabled, includes prompt and response content in OTel span attributes. Configurable in user settings only. Sets `OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT`. Privacy-sensitive: do not enable in environments that ship spans to shared sinks.</source>
@@ -1641,8 +1712,16 @@ Close this dialog to apply the change with your next message after the current t
         <target>Контролює, чи активовані сесії об'єднання агентів запитують у агента оновити гілки, які відстають, або вирішити конфлікти злиття.</target>
       </trans-unit>
       <trans-unit id="chat.canvases.enabled">
-        <source xml:lang="en">Controls whether local Agent Host Copilot sessions can open Canvases with interactive content in the Agents Window and the Editor Window. Newly created sessions pick up changes to this setting.</source>
-        <target>Контролює, чи можуть локальні сесії Agent Host Copilot відкривати Канваси з інтерактивним контентом у Вікні Агентів та Вікні Редактора. Новостворені сесії враховують зміни цього налаштування.</target>
+        <source xml:lang="en">Controls whether Agent Host Copilot sessions can open Canvases with interactive content in the Agents Window and the Editor Window. Sessions on remote agent hosts also require `#{0}#`, so canvas pages load through the agent host's network. Newly created sessions pick up changes to this setting.</source>
+        <target>Контролює, чи можуть сесії Agent Host Copilot відкривати Канваси з інтерактивним контентом у Вікні Агентів та Вікні Редактора. Сесії на віддалених агентських хостах також потребують `#{0}#`, щоб сторінки канвасу завантажувалися через мережу агентського хоста. Новостворені сесії враховують зміни в цьому налаштуванні.</target>
+      </trans-unit>
+      <trans-unit id="chat.canvases.enabled.policy">
+        <source xml:lang="en">Controls whether Copilot sessions can use Canvases to present interactive content.</source>
+        <target>Контролює, чи можуть сесії Copilot використовувати Canvases для представлення інтерактивного контенту.</target>
+      </trans-unit>
+      <trans-unit id="chat.copilot.modelRouter.enabled">
+        <source xml:lang="en">When enabled, Copilot in Agent Host sessions offers each model router in `~/.agents/model-routers/` as a model. A router picks a model for each turn from the routes you write. The built-in `model-router` skill can write and check routers.</source>
+        <target>Коли увімкнено, Copilot у сесіях Agent Host пропонує кожен маршрутизатор моделі в `~/.agents/model-routers/` як модель. Маршрутизатор обирає модель для кожного ходу з маршрутів, які ви пишете. Вбудований навик `model-router` може писати та перевіряти маршрутизатори.</target>
       </trans-unit>
       <trans-unit id="chat.experimental.workspaceSnapshot">
         <source xml:lang="en">When enabled, the first turn of a new Copilot agent host chat includes a bounded file-name snapshot of its working directories, so the agent can orient itself without listing the workspace first. File contents are never included.</source>
@@ -1812,10 +1891,6 @@ Close this dialog to apply the change with your next message after the current t
         <source xml:lang="en">Agent Merge was disabled for this session.</source>
         <target>Злиття агентів було вимкнено для цієї сесії.</target>
       </trans-unit>
-      <trans-unit id="agentMerge.notice.enabled">
-        <source xml:lang="en">It will wait for a pull request on this branch, then monitor it.</source>
-        <target>Воно буде чекати на pull request в цій гілці, а потім моніторити його.</target>
-      </trans-unit>
       <trans-unit id="agentMerge.notice.enabled.addressReviews">
         <source xml:lang="en">It will ask the agent to address new pull request review comments.</source>
         <target>Воно попросить агента звернути увагу на нові коментарі до огляду запиту на злиття.</target>
@@ -1851,6 +1926,10 @@ Close this dialog to apply the change with your next message after the current t
       <trans-unit id="agentMerge.notice.enabled.waitingForCI">
         <source xml:lang="en">After each update, it will wait for new CI results.</source>
         <target>Після кожного оновлення він чекатиме нових результатів CI.</target>
+      </trans-unit>
+      <trans-unit id="agentMerge.notice.enabled.waitingForPullRequest">
+        <source xml:lang="en">It will wait for a pull request on this branch, then monitor it.</source>
+        <target>Воно буде чекати на запит на злиття в цій гілці, а потім моніторити його.</target>
       </trans-unit>
       <trans-unit id="agentMerge.notice.enabled.withPullRequest">
         <source xml:lang="en">It is monitoring the pull request for this branch.</source>
@@ -1888,9 +1967,25 @@ Close this dialog to apply the change with your next message after the current t
         <source xml:lang="en">It will squash-merge the pull request.</source>
         <target>Це буде squash-merge запит на злиття.</target>
       </trans-unit>
+      <trans-unit id="agentMerge.notice.missingPullRequest">
+        <source xml:lang="en">Agent Merge hasn't found a pull request for {0}, so it isn't monitoring one yet. It starts as soon as GitHub reports a pull request for this branch. If this branch is a local copy of a pull request, make it track the pull request's branch.</source>
+        <target>Агент Merge не знайшов запит на злиття для {0}, тому він ще не відстежує його. Відстеження почнеться, як тільки GitHub повідомить про запит на злиття для цієї гілки. Якщо ця гілка є локальною копією запиту на злиття, налаштуйте її на відстеження гілки запиту на злиття.</target>
+      </trans-unit>
       <trans-unit id="agentMerge.notice.moveConflict">
         <source xml:lang="en">Agent Merge was turned off for this chat: another chat in this session already runs it for this pull request.</source>
         <target>Злиття агентів було вимкнено для цього чату: інший чат у цій сесії вже виконує його для цього запиту на витяг.</target>
+      </trans-unit>
+      <trans-unit id="agentMerge.notice.singleSignOn">
+        <source xml:lang="en">Agent Merge can't read pull requests in {0} because your GitHub sign-in isn't authorized for the organization's single sign-on. {1} to authorize it, and Agent Merge continues on its own.</source>
+        <target>Agent Merge не може прочитати запити на злиття в {0}, оскільки ваш вхід до GitHub не авторизований для єдиного входу організації. {1}, щоб авторизувати його, і Agent Merge продовжить самостійно.</target>
+      </trans-unit>
+      <trans-unit id="agentMerge.notice.singleSignOn.link">
+        <source xml:lang="en">Sign in to {0}</source>
+        <target>Увійти в {0}</target>
+      </trans-unit>
+      <trans-unit id="agentMerge.notice.singleSignOnWithoutLink">
+        <source xml:lang="en">Agent Merge can't read pull requests in {0} because your GitHub sign-in isn't authorized for the organization's single sign-on. Authorize it for {0} on GitHub, and Agent Merge continues on its own.</source>
+        <target>Agent Merge не може читати запити на злиття в {0}, оскільки ваш вхід до GitHub не авторизований для єдиного входу організації. Авторизуйте його для {0} на GitHub, і Agent Merge продовжить самостійно.</target>
       </trans-unit>
       <trans-unit id="agentMerge.pullRequestMerged">
         <source xml:lang="en">Agent Merge merged pull request [#{0}]({1}).</source>
@@ -2009,8 +2104,8 @@ Close this dialog to apply the change with your next message after the current t
         <target>Коли ця функція увімкнена, агенти можуть записувати артефакти — запити на злиття, проблеми, коміти, вебсайти, файли та інші ресурси — які відображаються над полем введення чату.</target>
       </trans-unit>
       <trans-unit id="prArtifact.ignoredChecks.setting">
-        <source xml:lang="en">Check names that do not need to pass before **Automatically Mark Ready** runs for a pull request artifact. Matching is case-sensitive; `*` matches any text, and other characters are literal. These checks remain visible, are still repaired by **Fix CI**, and must still pass for automatic merging. This setting does not enable automation.</source>
-        <target>Перевірте імена, які не потребують проходження перед тим, як **Автоматично позначити готовим** запуститься для артефакту запиту на злиття. Порівняння чутливе до регістру; `*` відповідає будь-якому тексту, а інші символи є літеральними. Ці перевірки залишаються видимими, їх все ще можна виправити за допомогою **Виправити CI**, і вони все ще повинні проходити для автоматичного злиття. Ця настройка не активує автоматизацію.</target>
+        <source xml:lang="en">Check names that do not need to pass before a draft pull request counts as ready for review: before **Automatically Mark Ready** runs for a pull request artifact, and before Agent Merge offers **Mark Ready**. Matching is case-sensitive; `*` matches any text, and other characters are literal. These checks remain visible, are still repaired when required, and must still pass for automatic merging. This setting does not enable automation.</source>
+        <target>Перевірте імена, які не потребують проходження перед чернеткою запиту на злиття, щоб вважатися готовими до перегляду: перед тим, як **Автоматично позначити готовим** виконується для артефакту запиту на злиття, і перед тим, як Agent Merge пропонує **Позначити готовим**. Пошук чутливий до регістру; `*` відповідає будь-якому тексту, а інші символи є літеральними. Ці перевірки залишаються видимими, все ще виправляються за потреби і все ще повинні проходити для автоматичного злиття. Ця налаштування не активує автоматизацію.</target>
       </trans-unit>
     </body>
   </file>
@@ -2063,6 +2158,158 @@ Close this dialog to apply the change with your next message after the current t
       <trans-unit id="agentHost.automationsEnabled.description">
         <source xml:lang="en">Whether this Agent Host may run automations.</source>
         <target>Чи може цей Агент Хост виконувати автоматизації.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/common/automationCron" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="automationCron.ascending">
+        <source xml:lang="en">{0} ranges must be ascending.</source>
+        <target>{0} діапазони повинні бути в порядку зростання.</target>
+      </trans-unit>
+      <trans-unit id="automationCron.calendar">
+        <source xml:lang="en">Automation schedule cannot match a real calendar date.</source>
+        <target>Графік автоматизації не може відповідати реальній календарній даті.</target>
+      </trans-unit>
+      <trans-unit id="automationCron.dayOfMonth">
+        <source xml:lang="en">Day of month</source>
+        <target>День місяця</target>
+      </trans-unit>
+      <trans-unit id="automationCron.dayOfWeek">
+        <source xml:lang="en">Day of week</source>
+        <target>День тижня</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description">
+        <source xml:lang="en">Runs {0} {1}.</source>
+        <target>Виконує {0} {1}.</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description.additionalDays">
+        <source xml:lang="en">{0} and also {1}</source>
+        <target>{0} та також {1}</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description.everyDay">
+        <source xml:lang="en">every day</source>
+        <target>кожен день</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description.everyMinute">
+        <source xml:lang="en">every minute</source>
+        <target>кожну хвилину</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description.hourCadence">
+        <source xml:lang="en">every {0} hours</source>
+        <target>кожні {0} годин</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description.hours">
+        <source xml:lang="en">the hours {0}</source>
+        <target>години {0}</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description.inMonths">
+        <source xml:lang="en">In {0}, runs {1} {2}.</source>
+        <target>У {0} виконується {1} {2}.</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description.list">
+        <source xml:lang="en">{0} and {1}</source>
+        <target>{0} та {1}</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description.minuteCadence">
+        <source xml:lang="en">every {0} minutes</source>
+        <target>кожні {0} хвилин</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description.minuteCadenceDuring">
+        <source xml:lang="en">every {0} minutes during {1}</source>
+        <target>кожні {0} хвилин під час {1}</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description.minuteDuring">
+        <source xml:lang="en">at minute {0} past {1}</source>
+        <target>о {0} хвилині {1}</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description.minuteHourly">
+        <source xml:lang="en">at minute {0} of every hour</source>
+        <target>на хвилині {0} кожної години</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description.minutesDuring">
+        <source xml:lang="en">every minute during {0}</source>
+        <target>кожну хвилину під час {0}</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description.minutesDuringHours">
+        <source xml:lang="en">at minutes {0} past {1}</source>
+        <target>о {0} хвилині {1}</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description.minutesHourly">
+        <source xml:lang="en">at minutes {0} of every hour</source>
+        <target>о хвилинах {0} кожної години</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description.monthDay">
+        <source xml:lang="en">on day {0} of the month</source>
+        <target>на день {0} місяця</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description.monthDays">
+        <source xml:lang="en">on days {0} of the month</source>
+        <target>в дні {0} місяця</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description.range">
+        <source xml:lang="en">{0} through {1}</source>
+        <target>{0} через {1}</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description.separator">
+        <source xml:lang="en">, </source>
+        <target>,</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description.singleHour">
+        <source xml:lang="en">the {0} hour</source>
+        <target>година {0}</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description.times">
+        <source xml:lang="en">at {0}</source>
+        <target>в {0}</target>
+      </trans-unit>
+      <trans-unit id="automationCron.description.weekdays">
+        <source xml:lang="en">on {0}</source>
+        <target>на {0}</target>
+      </trans-unit>
+      <trans-unit id="automationCron.emptySegment">
+        <source xml:lang="en">{0} contains an empty list item.</source>
+        <target>{0} містить порожній елемент списку.</target>
+      </trans-unit>
+      <trans-unit id="automationCron.fields">
+        <source xml:lang="en">Automation schedule must contain exactly five fields: minute, hour, day of month, month, day of week.</source>
+        <target>Графік автоматизації повинен містити рівно п'ять полів: хвилина, година, день місяця, місяць, день тижня.</target>
+      </trans-unit>
+      <trans-unit id="automationCron.hour">
+        <source xml:lang="en">Hour</source>
+        <target>Година</target>
+      </trans-unit>
+      <trans-unit id="automationCron.invalidRange">
+        <source xml:lang="en">{0} contains an invalid range.</source>
+        <target>{0} містить недійсний діапазон.</target>
+      </trans-unit>
+      <trans-unit id="automationCron.invalidStep">
+        <source xml:lang="en">{0} contains an invalid step.</source>
+        <target>{0} містить недійсний крок.</target>
+      </trans-unit>
+      <trans-unit id="automationCron.minute">
+        <source xml:lang="en">Minute</source>
+        <target>Хвилина</target>
+      </trans-unit>
+      <trans-unit id="automationCron.month">
+        <source xml:lang="en">Month</source>
+        <target>Місяць</target>
+      </trans-unit>
+      <trans-unit id="automationCron.positiveStep">
+        <source xml:lang="en">{0} step must be a positive integer.</source>
+        <target>{0} крок має бути додатним цілим числом.</target>
+      </trans-unit>
+      <trans-unit id="automationCron.range">
+        <source xml:lang="en">{0} value is outside {1}-{2}.</source>
+        <target>{0} значення виходить за межі {1}-{2}.</target>
+      </trans-unit>
+      <trans-unit id="automationCron.stepBase">
+        <source xml:lang="en">{0} steps require '*' or a range such as {1}-{2}.</source>
+        <target>{0} кроки вимагають '*' або діапазон, наприклад {1}-{2}.</target>
+      </trans-unit>
+      <trans-unit id="automationCron.timeZone">
+        <source xml:lang="en">Automation schedule uses an invalid time zone.</source>
+        <target>Графік автоматизації використовує недійсну часову зону.</target>
       </trans-unit>
     </body>
   </file>
@@ -2176,6 +2423,34 @@ Close this dialog to apply the change with your next message after the current t
         <source xml:lang="en">Claude Advisor Tool</source>
         <target>Claude Advisor Tool</target>
       </trans-unit>
+      <trans-unit id="agentHost.config.copilotPolicyHelper.args.description">
+        <source xml:lang="en">Arguments passed to the policy helper executable.</source>
+        <target>Аргументи, передані виконуваному файлу допоміжної програми політики.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.copilotPolicyHelper.args.item.title">
+        <source xml:lang="en">Argument</source>
+        <target>Аргумент</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.copilotPolicyHelper.args.title">
+        <source xml:lang="en">Arguments</source>
+        <target>Аргументи</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.copilotPolicyHelper.description">
+        <source xml:lang="en">Policy helper executable for the Copilot runtime. Device and server policies take precedence. An empty path disables it. Changes restart the runtime after active turns and subagents finish.</source>
+        <target>Виконуваний файл допомоги політики для середовища виконання Copilot. Політики пристрою та сервера мають пріоритет. Порожній шлях вимикає його. Зміни перезапускають середовище виконання після завершення активних черг і підагентів.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.copilotPolicyHelper.path.description">
+        <source xml:lang="en">Absolute path to the policy helper executable.</source>
+        <target>Абсолютний шлях до виконуваного файлу допоміжної програми політики.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.copilotPolicyHelper.path.title">
+        <source xml:lang="en">Path</source>
+        <target>Шлях</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.copilotPolicyHelper.title">
+        <source xml:lang="en">Copilot Policy Helper</source>
+        <target>Помічник політики Copilot</target>
+      </trans-unit>
       <trans-unit id="agentHost.config.copilotRuntimePath.description">
         <source xml:lang="en">Absolute path to a local Copilot runtime executable. Empty uses the bundled runtime.</source>
         <target>Абсолютний шлях до локального виконуваного файлу Copilot. Пустий використовує вбудований виконуваний файл.</target>
@@ -2199,14 +2474,6 @@ Close this dialog to apply the change with your next message after the current t
       <trans-unit id="agentHost.config.copilotSdkLogLevel.trace">
         <source xml:lang="en">Trace</source>
         <target>Слід</target>
-      </trans-unit>
-      <trans-unit id="agentHost.config.dynamicAutoTiers.description">
-        <source xml:lang="en">When enabled, Auto's "Optimize for" tiers come from the Copilot service instead of the built-in list. Takes effect when the Copilot runtime restarts.</source>
-        <target>Коли увімкнено, рівні "Оптимізувати для" Auto беруться з сервісу Copilot замість вбудованого списку. Вступає в силу після перезапуску середовища виконання Copilot.</target>
-      </trans-unit>
-      <trans-unit id="agentHost.config.dynamicAutoTiers.title">
-        <source xml:lang="en">Dynamic Auto Tiers</source>
-        <target>Динамічні авто-рівні</target>
       </trans-unit>
       <trans-unit id="agentHost.config.enableCustomTerminalTool.description">
         <source xml:lang="en">When enabled, Copilot SDK sessions use Agent Host's terminal tool override instead of the SDK's default terminal behavior. Not supported on Windows, where sessions use the SDK's terminal and sandbox runtime.</source>
@@ -2264,30 +2531,6 @@ Close this dialog to apply the change with your next message after the current t
         <source xml:lang="en">Explore Agent</source>
         <target>Дослідити агента</target>
       </trans-unit>
-      <trans-unit id="agentHost.config.hydraFusion.description">
-        <source xml:lang="en">When enabled, Copilot SDK sessions can use the experimental HydraFusion model.</source>
-        <target>Коли увімкнено, сесії Copilot SDK можуть використовувати експериментальну модель HydraFusion.</target>
-      </trans-unit>
-      <trans-unit id="agentHost.config.hydraFusion.title">
-        <source xml:lang="en">HydraFusion</source>
-        <target>HydraFusion</target>
-      </trans-unit>
-      <trans-unit id="agentHost.config.hydraFusionMultiRoot.description">
-        <source xml:lang="en">When enabled together with HydraFusion v2, Copilot SDK sessions ask the service to keep reusing the previous turn's root model when it fits the next turn's workflow.</source>
-        <target>Коли увімкнено разом з HydraFusion v2, сесії Copilot SDK просять сервіс повторно використовувати кореневу модель попереднього ходу, коли вона підходить для робочого процесу наступного ходу.</target>
-      </trans-unit>
-      <trans-unit id="agentHost.config.hydraFusionMultiRoot.title">
-        <source xml:lang="en">HydraFusion Multi-Root</source>
-        <target>HydraFusion Multi-Root</target>
-      </trans-unit>
-      <trans-unit id="agentHost.config.hydraFusionV2.description">
-        <source xml:lang="en">When enabled together with HydraFusion, Copilot SDK sessions use HydraFusion v2.</source>
-        <target>Коли увімкнено разом з HydraFusion, сесії Copilot SDK використовують HydraFusion v2.</target>
-      </trans-unit>
-      <trans-unit id="agentHost.config.hydraFusionV2.title">
-        <source xml:lang="en">HydraFusion V2</source>
-        <target>HydraFusion V2</target>
-      </trans-unit>
       <trans-unit id="agentHost.config.imageGenerationEnabled.description">
         <source xml:lang="en">Enable image generation and editing when the runtime's image model is available to your account. Prompts and selected images are sent to that model, and its charges are in addition to the conversation model. Account access and tool permissions still apply. Disabling this setting prevents future image tool calls.</source>
         <target>Увімкніть генерацію та редагування зображень, коли модель зображень у середовищі виконання доступна для вашого облікового запису. Запити та вибрані зображення надсилаються цій моделі, а її витрати додаються до витрат на модель розмови. Доступ до облікового запису та дозволи на інструменти все ще діють. Вимкнення цього налаштування запобігає майбутнім викликам інструменту зображень.</target>
@@ -2304,6 +2547,14 @@ Close this dialog to apply the change with your next message after the current t
         <source xml:lang="en">Image Watermark</source>
         <target>Зображення з водяним знаком</target>
       </trans-unit>
+      <trans-unit id="agentHost.config.includeCoAuthoredBy.description">
+        <source xml:lang="en">When enabled, Copilot SDK sessions add a `Co-authored-by` trailer to the commits they create. Applied when a session starts or resumes.</source>
+        <target>Коли увімкнено, сесії Copilot SDK додають трейлер `Co-authored-by` до комітів, які вони створюють. Застосовується, коли сесія починається або відновлюється.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.includeCoAuthoredBy.title">
+        <source xml:lang="en">Include Co-authored-by Trailer</source>
+        <target>Включити трейлер Co-authored-by</target>
+      </trans-unit>
       <trans-unit id="agentHost.config.localIndexEnabled.description">
         <source xml:lang="en">Whether Copilot SDK sessions use the local cross-session store for Chronicle indexing and retrieval.</source>
         <target>Чи використовують сесії Copilot SDK локальне міжсесійне сховище для індексації та отримання даних Chronicle.</target>
@@ -2313,8 +2564,8 @@ Close this dialog to apply the change with your next message after the current t
         <target>Локальний індекс сесії</target>
       </trans-unit>
       <trans-unit id="agentHost.config.localMemory.description">
-        <source xml:lang="en">When enabled together with Copilot Memory, Copilot SDK sessions store memories in the repository's .github/copilot-memories.jsonl file instead of GitHub's cloud memory service. Requires a GitHub-hosted repository; GitHub Copilot Memory settings and policies don't apply.</source>
-        <target>Коли увімкнено разом з Copilot Memory, сесії Copilot SDK зберігають спогади у файлі .github/copilot-memories.jsonl репозиторію замість хмарного сервісу пам'яті GitHub. Потрібен репозиторій, розміщений на GitHub; налаштування та політики пам'яті GitHub Copilot не застосовуються.</target>
+        <source xml:lang="en">When enabled, Copilot SDK sessions store memories in the repository's .github/copilot-memories.jsonl file instead of GitHub's cloud memory service. Requires a GitHub-hosted repository; GitHub Copilot Memory settings and policies don't apply.</source>
+        <target>Коли увімкнено, сесії Copilot SDK зберігають спогади у файлі .github/copilot-memories.jsonl репозиторію замість сервісу пам'яті в хмарі GitHub. Потрібен репозиторій, розміщений на GitHub; налаштування та політики пам'яті GitHub Copilot не застосовуються.</target>
       </trans-unit>
       <trans-unit id="agentHost.config.localMemory.title">
         <source xml:lang="en">Local Copilot Memory</source>
@@ -2351,14 +2602,6 @@ Close this dialog to apply the change with your next message after the current t
       <trans-unit id="agentHost.config.localModelUseInAuto.title">
         <source xml:lang="en">Use On-Device Model in Auto</source>
         <target>Використовуйте модель на пристрої в автоматичному режимі</target>
-      </trans-unit>
-      <trans-unit id="agentHost.config.memory.description">
-        <source xml:lang="en">When enabled, Copilot SDK sessions can store and recall Copilot Memory. GitHub Copilot Memory settings and policies still apply.</source>
-        <target>Коли увімкнено, сесії Copilot SDK можуть зберігати та відновлювати пам'ять Copilot. Налаштування та політики пам'яті GitHub Copilot все ще застосовуються.</target>
-      </trans-unit>
-      <trans-unit id="agentHost.config.memory.title">
-        <source xml:lang="en">Copilot Memory</source>
-        <target>Копілот Пам'ять</target>
       </trans-unit>
       <trans-unit id="agentHost.config.modelCapabilityOverrides.availableTools.description">
         <source xml:lang="en">When set, only matching tools are available to sessions on this model. Patterns: bare tool names, `builtin:*` or `builtin:&lt;name&gt;` (Copilot runtime tools), `mcp:*` or `mcp:&lt;name&gt;` (MCP server tools), and `custom:*` or `custom:&lt;name&gt;` (every tool VS Code registers with the SDK, including the agent host's own terminal tools); a bare `*` expands to all three sources. Applied when the session launches or resumes.</source>
@@ -2448,6 +2691,22 @@ Close this dialog to apply the change with your next message after the current t
         <source xml:lang="en">Opus 4.8 Agent Prompt</source>
         <target>Opus 4.8 Запит агента</target>
       </trans-unit>
+      <trans-unit id="agentHost.config.progressUpdatesPrompt.description">
+        <source xml:lang="en">When enabled, Copilot SDK sessions running a GPT model or Auto are asked to send brief user-visible progress updates before and between tool calls.</source>
+        <target>Коли увімкнено, сесії Copilot SDK, що використовують модель GPT або Auto, просять надсилати короткі видимі для користувача оновлення прогресу перед і між викликами інструментів.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.progressUpdatesPrompt.title">
+        <source xml:lang="en">Progress Updates Prompt</source>
+        <target>Оновлення прогресу</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.progressUpdatesPromptDefaultControlled.description">
+        <source xml:lang="en">Whether the workbench progress updates prompt setting has no explicit override. Used only to gate setting experiment telemetry.</source>
+        <target>Чи має налаштування оновлень прогресу робочого столу явне переважання. Використовується лише для контролю налаштування телеметрії експерименту.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.progressUpdatesPromptDefaultControlled.title">
+        <source xml:lang="en">Progress Updates Prompt Default Control</source>
+        <target>Оновлення прогресу Запит за замовчуванням Контроль</target>
+      </trans-unit>
       <trans-unit id="agentHost.config.rubberDuck.description">
         <source xml:lang="en">When enabled, the coding agent uses a rubber duck critic subagent to review code changes using a complementary model.</source>
         <target>Коли увімкнено, агент кодування використовує субагента критика у вигляді гумової качки для перегляду змін коду, використовуючи доповнюючу модель.</target>
@@ -2463,6 +2722,14 @@ Close this dialog to apply the change with your next message after the current t
       <trans-unit id="agentHost.config.searchSubagent.title">
         <source xml:lang="en">Search Subagent</source>
         <target>Пошук підагента</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.searchSubagentGrepNudge.description">
+        <source xml:lang="en">During the first two user messages, defer at most one grep search per message to suggest the available search subagent. Further grep calls proceed through normal permissions. Does not affect searches inside subagents.</source>
+        <target>Протягом перших двох повідомлень користувача відкладіть не більше одного пошуку grep на повідомлення, щоб запропонувати доступний підагент пошуку. Подальші виклики grep виконуються з нормальними правами доступу. Не впливає на пошуки всередині підагентів.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.searchSubagentGrepNudge.title">
+        <source xml:lang="en">Search Subagent Grep Nudge</source>
+        <target>Пошук підагента Grep Nudge</target>
       </trans-unit>
       <trans-unit id="agentHost.config.searchSubagentModel.description">
         <source xml:lang="en">CAPI model ID to use for the search subagent. Empty uses the runtime default. An unavailable model makes the search tool unavailable. Changing this value restarts the Copilot SDK client after active turns finish.</source>
@@ -2487,30 +2754,6 @@ Close this dialog to apply the change with your next message after the current t
       <trans-unit id="agentHost.config.stabilityOrderedPrompt.title">
         <source xml:lang="en">Stability-Ordered System Prompt</source>
         <target>Система запитів з порядком стабільності</target>
-      </trans-unit>
-      <trans-unit id="agentHost.config.tgrep.description">
-        <source xml:lang="en">When enabled, Copilot SDK sessions use tgrep indexed search for eligible large repositories. Requires a local Git repository on a non-virtual filesystem.</source>
-        <target>Коли увімкнено, сесії Copilot SDK використовують індексований пошук tgrep для відповідних великих репозиторіїв. Потрібен локальний Git-репозиторій на невіртуальній файловій системі.</target>
-      </trans-unit>
-      <trans-unit id="agentHost.config.tgrep.title">
-        <source xml:lang="en">Indexed Search (tgrep)</source>
-        <target>Індексований пошук (tgrep)</target>
-      </trans-unit>
-      <trans-unit id="agentHost.config.toolSearchDeferThreshold.description">
-        <source xml:lang="en">Minimum number of tools before MCP and external tools are deferred behind tool search. Set to 0 to always defer external tools. Only effective when tool search is enabled.</source>
-        <target>Мінімальна кількість інструментів перед MCP та зовнішніми інструментами, які відкладені за пошуком інструментів. Встановіть на 0, щоб завжди відкладати зовнішні інструменти. Діє лише коли пошук інструментів увімкнено.</target>
-      </trans-unit>
-      <trans-unit id="agentHost.config.toolSearchDeferThreshold.title">
-        <source xml:lang="en">Tool Search Defer Threshold</source>
-        <target>Поріг відкладення пошуку інструментів</target>
-      </trans-unit>
-      <trans-unit id="agentHost.config.toolSearchEnabled.description">
-        <source xml:lang="en">When enabled, Copilot SDK sessions defer MCP and non-core VS Code tools behind a tool-search tool so the model discovers them on demand instead of loading every tool definition up front.</source>
-        <target>Коли увімкнено, сесії Copilot SDK відтерміновують MCP та некорінні інструменти VS Code за допомогою інструменту пошуку, щоб модель знаходила їх за запитом, а не завантажувала всі визначення інструментів заздалегідь.</target>
-      </trans-unit>
-      <trans-unit id="agentHost.config.toolSearchEnabled.title">
-        <source xml:lang="en">Agent Host Tool Search</source>
-        <target>Інструмент пошуку хоста агента</target>
       </trans-unit>
     </body>
   </file>
@@ -2550,14 +2793,6 @@ Close this dialog to apply the change with your next message after the current t
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/platform/agentHost/common/dynamicAutoTiersConfiguration" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="chat.copilot.dynamicAutoTiers.enabled">
-        <source xml:lang="en">When enabled, Copilot Agent Host sessions take Auto's tiers from the Copilot service, and those tiers decide how Auto is presented. When they include a Fusion tier the account can run, Auto is presented as Copilot Fusion, with HydraFusion and HydraFusion Max among its tiers. When they include none, Auto is offered with the service's tiers. When the service provides no tiers, Auto, HydraFusion, and HydraFusion Max are offered as separate models. When disabled, Auto and HydraFusion are offered as separate models, with HydraFusion controlled by `#{0}#`. Changing this setting restarts the Copilot runtime after active turns finish.</source>
-        <target>Коли увімкнено, сесії Copilot Agent Host беруть рівні Auto з сервісу Copilot, і ці рівні визначають, як представляється Auto. Коли вони включають рівень Fusion, який може використовувати обліковий запис, Auto представляється як Copilot Fusion, з HydraFusion та HydraFusion Max серед його рівнів. Коли вони не включають жодного, Auto пропонується з рівнями сервісу. Коли сервіс не надає жодних рівнів, Auto, HydraFusion та HydraFusion Max пропонуються як окремі моделі. Коли вимкнено, Auto та HydraFusion пропонуються як окремі моделі, при цьому HydraFusion контролюється `#{0}#`. Зміна цього налаштування перезапускає середовище виконання Copilot після завершення активних ходів.</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/platform/agentHost/common/githubPullRequestArtifact" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="prArtifact.autoCI">
@@ -2565,8 +2800,8 @@ Close this dialog to apply the change with your next message after the current t
         <target>Автоматично виправити CI</target>
       </trans-unit>
       <trans-unit id="prArtifact.autoCI.description">
-        <source xml:lang="en">Repair any failing check, including optional checks, then commit and push the repairs.</source>
-        <target>Виправте будь-які невдалі перевірки, включаючи необов'язкові перевірки, а потім зафіксуйте та надішліть виправлення.</target>
+        <source xml:lang="en">Repair failing required checks, including the jobs a required check waits for, then commit and push the repairs. When the base branch requires no checks, every check counts.</source>
+        <target>Виправте невдалі обов'язкові перевірки, включаючи роботи, на які чекає обов'язкова перевірка, а потім зафіксуйте та надішліть виправлення. Коли базова гілка не потребує перевірок, кожна перевірка має значення.</target>
       </trans-unit>
       <trans-unit id="prArtifact.autoConflicts">
         <source xml:lang="en">Automatically Update Branch</source>
@@ -2581,16 +2816,16 @@ Close this dialog to apply the change with your next message after the current t
         <target>Автоматично зливайте, коли готові</target>
       </trans-unit>
       <trans-unit id="prArtifact.autoMerge.description">
-        <source xml:lang="en">Merge when every check passes, qualifying review threads are resolved, and GitHub permits it.</source>
-        <target>Об'єднати, коли всі перевірки пройдені, кваліфікаційні обговорення вирішені, і GitHub це дозволяє.</target>
+        <source xml:lang="en">Merge when every required check passes, qualifying review threads are resolved, and GitHub permits it.</source>
+        <target>Об'єднати, коли всі необхідні перевірки пройдені, кваліфіковані обговорення перегляду вирішені, і GitHub це дозволяє.</target>
       </trans-unit>
       <trans-unit id="prArtifact.autoReady">
         <source xml:lang="en">Automatically Mark Ready</source>
         <target>Автоматично позначити готовим</target>
       </trans-unit>
       <trans-unit id="prArtifact.autoReady.description">
-        <source xml:lang="en">Mark the draft ready when checks pass and no qualifying unresolved review threads remain. The check-exclusion setting applies only to this action.</source>
-        <target>Позначте чернетку як готову, коли перевірки пройдені і не залишилося жодних невирішених тем огляду, що потребують кваліфікації. Налаштування виключення перевірок застосовується лише до цієї дії.</target>
+        <source xml:lang="en">Mark the draft ready when required checks pass and no qualifying unresolved review threads remain. The check-exclusion setting applies only to this action.</source>
+        <target>Позначте чернетку як готову, коли необхідні перевірки пройдені і не залишилося жодних невирішених тем огляду. Налаштування виключення перевірки застосовується лише до цієї дії.</target>
       </trans-unit>
       <trans-unit id="prArtifact.autoReviews">
         <source xml:lang="en">Automatically Address Reviews</source>
@@ -3845,12 +4080,24 @@ Computer Use lets Copilot see and control apps on this computer. It stays on for
         <target>Аутентифікувати git</target>
       </trans-unit>
       <trans-unit id="agentHost.config.sandbox.credentials.envVars.description">
-        <source xml:lang="en">Maps environment variable names to objects with an injectHosts array of HTTPS destinations. Credential entries are validated by the runtime.</source>
-        <target>Відображає імена змінних середовища на об'єкти з масивом injectHosts для HTTPS-адрес. Записи облікових даних перевіряються під час виконання.</target>
+        <source xml:lang="en">Maps environment variable names to objects with an injectHosts array of HTTPS destinations. Destination patterns are validated by the runtime.</source>
+        <target>Картує імена змінних середовища на об'єкти з масивом injectHosts для HTTPS-адрес. Шаблони призначення перевіряються під час виконання.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.sandbox.credentials.envVars.entry.title">
+        <source xml:lang="en">Environment Variable</source>
+        <target>Змінна середовища</target>
       </trans-unit>
       <trans-unit id="agentHost.config.sandbox.credentials.envVars.title">
         <source xml:lang="en">Environment Variables</source>
         <target>Змінні середовища</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.sandbox.credentials.injectHosts.item.title">
+        <source xml:lang="en">Host</source>
+        <target>Хост</target>
+      </trans-unit>
+      <trans-unit id="agentHost.config.sandbox.credentials.injectHosts.title">
+        <source xml:lang="en">Injection Hosts</source>
+        <target>Хости для ін'єкцій</target>
       </trans-unit>
       <trans-unit id="agentHost.config.sandbox.deniedDomains.item.title">
         <source xml:lang="en">Domain</source>
@@ -4245,6 +4492,14 @@ Verify this fingerprint matches the host before continuing.</source>
       <trans-unit id="automationActiveClient">
         <source xml:lang="en">Automation</source>
         <target>Автоматизація</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/agentHostAutomationService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="deletedAutomationNameUnavailable">
+        <source xml:lang="en">Deleted automation (name unavailable)</source>
+        <target>Видалена автоматизація (ім'я недоступне)</target>
       </trans-unit>
     </body>
   </file>
@@ -4844,6 +5099,14 @@ Verify this fingerprint matches the host before continuing.</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/platform/agentHost/node/agentHostSkillCompletionProvider" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="mcpSkillDescription">
+        <source xml:lang="en">{0} (MCP: {1})</source>
+        <target>{0} (MCP: {1})</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/platform/agentHost/node/agentHostSyncOperationHandler" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHost.changeset.sync.cancelled">
@@ -4869,6 +5132,18 @@ Verify this fingerprint matches the host before continuing.</source>
       <trans-unit id="agentHost.changeset.syncIncomingOutgoing">
         <source xml:lang="en">Sync Changes {0}↓ {1}↑</source>
         <target>Синхронізувати зміни {0}↓ {1}↑</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/agentHostWorktreeCleanupService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="worktreeCleanup.branchNamespace">
+        <source xml:lang="en">Only worktrees on agent-managed branches can be cleaned up.</source>
+        <target>Тільки робочі дерева на гілках, що керуються агентом, можуть бути очищені.</target>
+      </trans-unit>
+      <trans-unit id="worktreeCleanup.conflictingRegistration">
+        <source xml:lang="en">This worktree is inside another registered worktree.</source>
+        <target>Ця робоча директорія знаходиться всередині іншої зареєстрованої робочої директорії.</target>
       </trans-unit>
     </body>
   </file>
@@ -4929,6 +5204,10 @@ Verify this fingerprint matches the host before continuing.</source>
       <trans-unit id="agentHost.sessionArchivedWhilePreparingChat">
         <source xml:lang="en">The session was archived while preparing the new chat. Unarchive it before trying again.</source>
         <target>Сесію було заархівовано під час підготовки нового чату. Розархівуйте її перед повторною спробою.</target>
+      </trans-unit>
+      <trans-unit id="agentHost.virtualWorkspaceUnsupported">
+        <source xml:lang="en">Agent '{0}' does not support virtual workspaces.</source>
+        <target>Агент '{0}' не підтримує віртуальні робочі простори.</target>
       </trans-unit>
       <trans-unit id="agentHost.worktreeBaseBranchMissing">
         <source xml:lang="en">Branch '{0}' does not exist in {1}.</source>
@@ -5047,8 +5326,8 @@ Verify this fingerprint matches the host before continuing.</source>
         <target>{0} з {1} перевірок пройдено; {2} не вдалося.</target>
       </trans-unit>
       <trans-unit id="prArtifact.checksSummaryWithSkipped">
-        <source xml:lang="en">{0} of {1} checks passed; {2} failed; {3} skipped.</source>
-        <target>{0} з {1} перевірок пройшли; {2} не вдалося; {3} пропущено.</target>
+        <source xml:lang="en">{0} of {1} checks completed without failure; {2} failed; {3} skipped.</source>
+        <target>{0} з {1} перевірок завершено без помилок; {2} не вдалося; {3} пропущено.</target>
       </trans-unit>
       <trans-unit id="prArtifact.checksTitle">
         <source xml:lang="en">Checks ({0}/{1})</source>
@@ -5074,6 +5353,14 @@ Verify this fingerprint matches the host before continuing.</source>
         <source xml:lang="en">Comments ({0})</source>
         <target>Коментарі ({0})</target>
       </trans-unit>
+      <trans-unit id="prArtifact.conflicts">
+        <source xml:lang="en">Conflicts</source>
+        <target>Конфлікти</target>
+      </trans-unit>
+      <trans-unit id="prArtifact.conflictsSummary">
+        <source xml:lang="en">This pull request has merge conflicts.</source>
+        <target>Цей запит на злиття має конфлікти злиття.</target>
+      </trans-unit>
       <trans-unit id="prArtifact.detailsDescriptionPage">
         <source xml:lang="en">{0}
 Showing {1}-{2} of {3}.</source>
@@ -5095,6 +5382,14 @@ Showing {1}-{2} of {3}.</source>
       <trans-unit id="prArtifact.enqueued">
         <source xml:lang="en">Pull request added to the merge queue.</source>
         <target>Запит на злиття додано до черги злиття.</target>
+      </trans-unit>
+      <trans-unit id="prArtifact.failingChecksDescription">
+        <source xml:lang="en">Shows the failing required checks, and the jobs they wait for, that this action asked to fix.</source>
+        <target>Показує невдалі обов'язкові перевірки та роботи, які вони чекають, які ця дія попросила виправити.</target>
+      </trans-unit>
+      <trans-unit id="prArtifact.failingChecksTitle">
+        <source xml:lang="en">Failing Checks ({0})</source>
+        <target>Невдалі перевірки ({0})</target>
       </trans-unit>
       <trans-unit id="prArtifact.fixCI">
         <source xml:lang="en">Fix Checks</source>
@@ -5132,6 +5427,10 @@ Showing {1}-{2} of {3}.</source>
         <source xml:lang="en">GitHub's merge requirements changed.</source>
         <target>Змінилися вимоги до злиття в GitHub.</target>
       </trans-unit>
+      <trans-unit id="prArtifact.mergeCheckoutMissing">
+        <source xml:lang="en">Merging only unchanged pull requests requires the chat that recorded this pull request to have {0} checked out on branch {1}.</source>
+        <target>Об'єднання лише незмінних запитів на злиття вимагає, щоб чат, який зафіксував цей запит на злиття, мав {0} перевірений на гілці {1}.</target>
+      </trans-unit>
       <trans-unit id="prArtifact.mergeCompleted">
         <source xml:lang="en">Pull request merged.</source>
         <target>Запит на злиття об'єднано.</target>
@@ -5147,10 +5446,6 @@ Showing {1}-{2} of {3}.</source>
       <trans-unit id="prArtifact.missingId">
         <source xml:lang="en">GitHub did not provide the pull request's identity.</source>
         <target>GitHub не надав ідентичність запиту на злиття.</target>
-      </trans-unit>
-      <trans-unit id="prArtifact.noCheckout">
-        <source xml:lang="en">A verifiable Git checkout is required for this pull request repair.</source>
-        <target>Для виправлення цього запиту на злиття потрібен перевірений Git checkout.</target>
       </trans-unit>
       <trans-unit id="prArtifact.noMergeMethod">
         <source xml:lang="en">The repository does not allow a supported merge method.</source>
@@ -5187,6 +5482,10 @@ Showing {1}-{2} of {3}.</source>
       <trans-unit id="prArtifact.reviewThread">
         <source xml:lang="en">Review thread</source>
         <target>Перегляд теми</target>
+      </trans-unit>
+      <trans-unit id="prArtifact.sessionCredentialsUnavailable">
+        <source xml:lang="en">Resume this session or reconnect its client to restore access to this pull request.</source>
+        <target>Відновіть цю сесію або повторно підключіть її клієнта, щоб відновити доступ до цього запиту на злиття.</target>
       </trans-unit>
       <trans-unit id="prArtifact.settingsChanged">
         <source xml:lang="en">The pull request's workspace settings need to be refreshed before automatically marking it ready.</source>
@@ -5231,10 +5530,6 @@ Showing {1}-{2} of {3}.</source>
       <trans-unit id="prArtifact.workflowRunning">
         <source xml:lang="en">The workflow of {0} is still running. Rerun the check after it finishes.</source>
         <target>Робочий процес {0} все ще виконується. Повторіть перевірку після його завершення.</target>
-      </trans-unit>
-      <trans-unit id="prArtifact.wrongCheckout">
-        <source xml:lang="en">The chat must already have {0} checked out on branch {1}. Branches will not be switched automatically.</source>
-        <target>Чат вже повинен мати {0} перевірений на гілці {1}. Гілки не будуть автоматично змінюватися.</target>
       </trans-unit>
     </body>
   </file>
@@ -6232,13 +6527,53 @@ Showing {1}-{2} of {3}.</source>
   </file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotAgent" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="copilot.extensionReconcileFailed">
-        <source xml:lang="en">The extension preference was saved, but the selected chat could not be updated: {0}</source>
-        <target>Налаштування розширення було збережено, але вибраний чат не вдалося оновити: {0}</target>
+      <trans-unit id="copilot.extensionDisableFailed">
+        <source xml:lang="en">Couldn't disable canvas extension '{0}'. {1}</source>
+        <target>Не вдалося вимкнути розширення canvas '{0}'. {1}</target>
       </trans-unit>
-      <trans-unit id="copilot.extensionReconcileTargetUnavailable">
-        <source xml:lang="en">The selected chat stopped or was replaced before its extension state could be updated.</source>
-        <target>Вибраний чат зупинився або був замінений до того, як його стан розширення міг бути оновлений.</target>
+      <trans-unit id="copilot.extensionDisableReconcileFailed">
+        <source xml:lang="en">Canvas extension '{0}' was disabled in settings, but couldn't be stopped in this chat. {1}</source>
+        <target>Розширення Canvas '{0}' було вимкнено в налаштуваннях, але не вдалося зупинити його в цьому чаті. {1}</target>
+      </trans-unit>
+      <trans-unit id="copilot.extensionDisableRefreshFailed">
+        <source xml:lang="en">After disabling '{0}', this chat couldn't finish updating canvas extensions because '{1}' failed to start. This chat may not match your canvas extension settings.</source>
+        <target>Після вимкнення '{0}' цей чат не зміг завершити оновлення розширень канвасу, оскільки '{1}' не вдалося запустити. Цей чат може не відповідати вашим налаштуванням розширень канвасу.</target>
+      </trans-unit>
+      <trans-unit id="copilot.extensionDisableRefreshMultipleFailed">
+        <source xml:lang="en">After disabling '{0}', this chat couldn't finish updating canvas extensions because other canvas extensions failed to start. This chat may not match your canvas extension settings.</source>
+        <target>Після вимкнення '{0}' цей чат не зміг завершити оновлення розширень полотна, оскільки інші розширення полотна не змогли запуститися. Цей чат може не відповідати вашим налаштуванням розширень полотна.</target>
+      </trans-unit>
+      <trans-unit id="copilot.extensionDisableTargetFailed">
+        <source xml:lang="en">After disabling '{0}', this chat couldn't finish updating canvas extensions because '{0}' couldn't be stopped. This chat may not match your canvas extension settings.</source>
+        <target>Після вимкнення '{0}' цей чат не зміг завершити оновлення розширень канвасу, оскільки '{0}' не вдалося зупинити. Цей чат може не відповідати вашим налаштуванням розширень канвасу.</target>
+      </trans-unit>
+      <trans-unit id="copilot.extensionDisableTargetUnavailable">
+        <source xml:lang="en">After disabling '{0}', the canvas extension change couldn't be confirmed because the selected chat stopped or was replaced. '{0}' is disabled in settings.</source>
+        <target>Після вимкнення '{0}' зміна розширення полотна не могла бути підтверджена, оскільки вибраний чат зупинився або був замінений. '{0}' вимкнено в налаштуваннях.</target>
+      </trans-unit>
+      <trans-unit id="copilot.extensionEnableFailed">
+        <source xml:lang="en">Couldn't enable canvas extension '{0}'. {1}</source>
+        <target>Не вдалося увімкнути розширення canvas '{0}'. {1}</target>
+      </trans-unit>
+      <trans-unit id="copilot.extensionEnableReconcileFailed">
+        <source xml:lang="en">Canvas extension '{0}' was enabled in settings, but couldn't be started in this chat. {1}</source>
+        <target>Розширення Canvas '{0}' було увімкнене в налаштуваннях, але не вдалося запустити його в цьому чаті. {1}</target>
+      </trans-unit>
+      <trans-unit id="copilot.extensionEnableRefreshFailed">
+        <source xml:lang="en">After enabling '{0}', this chat couldn't finish updating canvas extensions because '{1}' failed to start. This chat may not match your canvas extension settings.</source>
+        <target>Після активації '{0}' цей чат не зміг завершити оновлення розширень canvas, оскільки '{1}' не вдалося запустити. Цей чат може не відповідати вашим налаштуванням розширення canvas.</target>
+      </trans-unit>
+      <trans-unit id="copilot.extensionEnableRefreshMultipleFailed">
+        <source xml:lang="en">After enabling '{0}', this chat couldn't finish updating canvas extensions because other canvas extensions failed to start. This chat may not match your canvas extension settings.</source>
+        <target>Після увімкнення '{0}' цей чат не зміг завершити оновлення розширень полотна, оскільки інші розширення полотна не змогли запуститися. Цей чат може не відповідати вашим налаштуванням розширень полотна.</target>
+      </trans-unit>
+      <trans-unit id="copilot.extensionEnableTargetFailed">
+        <source xml:lang="en">After enabling '{0}', this chat couldn't finish updating canvas extensions because '{0}' failed to start. This chat may not match your canvas extension settings.</source>
+        <target>Після увімкнення '{0}' цей чат не зміг завершити оновлення розширень canvas, оскільки '{0}' не вдалося запустити. Цей чат може не відповідати вашим налаштуванням розширення canvas.</target>
+      </trans-unit>
+      <trans-unit id="copilot.extensionEnableTargetUnavailable">
+        <source xml:lang="en">After enabling '{0}', the canvas extension change couldn't be confirmed because the selected chat stopped or was replaced. '{0}' is enabled in settings.</source>
+        <target>Після увімкнення '{0}' зміна розширення полотна не могла бути підтверджена, оскільки вибраний чат зупинився або був замінений. '{0}' увімкнено в налаштуваннях.</target>
       </trans-unit>
       <trans-unit id="copilot.localModelThinking.description">
         <source xml:lang="en">Controls whether the model thinks before it answers.</source>
@@ -6316,6 +6651,11 @@ Showing {1}-{2} of {3}.</source>
         <source xml:lang="en">Effort Level</source>
         <target>Рівень зусиль</target>
       </trans-unit>
+      <trans-unit id="copilotAgent.fusionTierModelName">
+        <source xml:lang="en">Copilot Fusion {0}</source>
+        <note>{0} is an effort level of Copilot Fusion, e.g. High</note>
+        <target>{0} є рівнем зусиль Copilot Fusion, наприклад, Високий</target>
+      </trans-unit>
       <trans-unit id="copilotAgent.interruptedTurn">
         <source xml:lang="en">The agent was interrupted before this request finished.</source>
         <target>Агента перервали, перш ніж цей запит завершився.</target>
@@ -6327,6 +6667,26 @@ Showing {1}-{2} of {3}.</source>
       <trans-unit id="copilotAgent.pluginParseError">
         <source xml:lang="en">Error parsing plugin.</source>
         <target>Помилка парсингу плагіна.</target>
+      </trans-unit>
+      <trans-unit id="copilotAgent.sessionInUse">
+        <source xml:lang="en">This session is still open in another Copilot CLI process. Exit the session there, then try again.</source>
+        <target>Ця сесія все ще відкрита в іншому процесі Copilot CLI. Вийдіть із сесії там, а потім спробуйте ще раз.</target>
+      </trans-unit>
+      <trans-unit id="modelRouter.agentModel">
+        <source xml:lang="en">The {0} agent uses its own model, so the model router didn't pick one.</source>
+        <target>Агент {0} використовує свою власну модель, тому маршрутизатор моделей не вибрав жодну.</target>
+      </trans-unit>
+      <trans-unit id="modelRouter.disabled">
+        <source xml:lang="en">Model routers are turned off, so this chat kept its current model.</source>
+        <target>Моделі маршрутизаторів вимкнені, тому цей чат зберіг свою поточну модель.</target>
+      </trans-unit>
+      <trans-unit id="modelRouter.rowInvalid">
+        <source xml:lang="en">This router has errors, so chats using it keep their current model. Ask /model-router to fix it.</source>
+        <target>Цей маршрутизатор має помилки, тому чати, що його використовують, зберігають свою поточну модель. Запитайте /model-router, щоб виправити це.</target>
+      </trans-unit>
+      <trans-unit id="modelRouter.rowWarning">
+        <source xml:lang="en">{0} has errors: {1}</source>
+        <target>{0} має помилки: {1}</target>
       </trans-unit>
     </body>
   </file>
@@ -6376,9 +6736,21 @@ Showing {1}-{2} of {3}.</source>
         <source xml:lang="en">Run Command Outside the Sandbox?</source>
         <target>Запустити команду поза пісочницею?</target>
       </trans-unit>
+      <trans-unit id="copilot.clientToolReplacementEnded">
+        <source xml:lang="en">Tool call ended before client tool configuration replacement completed.</source>
+        <target>Виклик інструмента завершився до того, як було завершено заміну конфігурації клієнтського інструмента.</target>
+      </trans-unit>
+      <trans-unit id="copilot.clientToolReplacementFailed">
+        <source xml:lang="en">Client tool configuration replacement failed.</source>
+        <target>Не вдалося замінити конфігурацію інструмента клієнта.</target>
+      </trans-unit>
       <trans-unit id="copilot.mcpRouting.connect">
         <source xml:lang="en">Connect to {0}</source>
         <target>Підключитися до {0}</target>
+      </trans-unit>
+      <trans-unit id="copilot.mcpRouting.connector">
+        <source xml:lang="en">{0} (Connector)</source>
+        <target>{0} (Конектор)</target>
       </trans-unit>
       <trans-unit id="copilot.pluginReloadFailed">
         <source xml:lang="en">Plugin reload failed: {0}</source>
@@ -6387,6 +6759,14 @@ Showing {1}-{2} of {3}.</source>
       <trans-unit id="copilot.pluginReloadInvalid">
         <source xml:lang="en">The runtime returned an invalid plugin reload result.</source>
         <target>Час виконання повернув недійсний результат перезавантаження плагіна.</target>
+      </trans-unit>
+      <trans-unit id="copilot.virtualWorkspaceDisconnected">
+        <source xml:lang="en">The window that owns the virtual workspace is not connected.</source>
+        <target>Вікно, яке володіє віртуальним робочим простором, не підключене.</target>
+      </trans-unit>
+      <trans-unit id="copilotAgent.assistedApprovalInstructionsFailed">
+        <source xml:lang="en">The Assisted permissions instructions could not be applied. Try again before continuing.</source>
+        <target>Інструкції щодо дозволів з асистування не вдалося застосувати. Спробуйте ще раз перед продовженням.</target>
       </trans-unit>
       <trans-unit id="copilotAgent.compactionCompleted">
         <source xml:lang="en">Compaction completed</source>
@@ -6448,6 +6828,26 @@ Showing {1}-{2} of {3}.</source>
         <source xml:lang="en">The /{0} command requires selecting a subcommand. Available options: {1}</source>
         <target>Команда /{0} вимагає вибору підкоманди. Доступні варіанти: {1}</target>
       </trans-unit>
+      <trans-unit id="extensionPermissionConsentAllowed">
+        <source xml:lang="en">Allowed extension {0}</source>
+        <target>Дозволене розширення {0}</target>
+      </trans-unit>
+      <trans-unit id="extensionPermissionConsentConfirmation">
+        <source xml:lang="en">Allow Extension {0}?</source>
+        <target>Дозволити розширення {0}?</target>
+      </trans-unit>
+      <trans-unit id="extensionPermissionConsentDeclined">
+        <source xml:lang="en">Did not allow extension {0}</source>
+        <target>Не дозволено розширення {0}</target>
+      </trans-unit>
+      <trans-unit id="extensionPermissionConsentDisplayName">
+        <source xml:lang="en">Extensions</source>
+        <target>Розширення</target>
+      </trans-unit>
+      <trans-unit id="extensionPermissionConsentInvocation">
+        <source xml:lang="en">Extension '{0}' wants to load with these permissions: {1}.</source>
+        <target>Розширення '{0}' хоче завантажитися з цими дозволами: {1}.</target>
+      </trans-unit>
       <trans-unit id="mcpSamplingAllowAlways">
         <source xml:lang="en">Always Allow for This Server</source>
         <target>Завжди дозволяти для цього сервера</target>
@@ -6480,6 +6880,50 @@ Showing {1}-{2} of {3}.</source>
         <source xml:lang="en">Skip</source>
         <target>Пропустити</target>
       </trans-unit>
+      <trans-unit id="mcpSkillConsentAllowOnce">
+        <source xml:lang="en">Allow Once</source>
+        <target>Дозволити один раз</target>
+      </trans-unit>
+      <trans-unit id="mcpSkillConsentAllowed">
+        <source xml:lang="en">Allowed skills from {0}</source>
+        <target>Дозволені навички з {0}</target>
+      </trans-unit>
+      <trans-unit id="mcpSkillConsentAlwaysAllow">
+        <source xml:lang="en">Always Allow</source>
+        <target>Завжди дозволяти</target>
+      </trans-unit>
+      <trans-unit id="mcpSkillConsentConfirmation">
+        <source xml:lang="en">Allow Skills from {0}?</source>
+        <target>Дозволити навички з {0}?</target>
+      </trans-unit>
+      <trans-unit id="mcpSkillConsentCrossOriginRead">
+        <source xml:lang="en">MCP server '{0}' is involved in a skill reading resources from another MCP server.</source>
+        <target>Сервер MCP '{0}' залучений до читання ресурсів навички з іншого сервера MCP.</target>
+      </trans-unit>
+      <trans-unit id="mcpSkillConsentDeclined">
+        <source xml:lang="en">Did not allow skills from {0}</source>
+        <target>Не дозволено навички з {0}</target>
+      </trans-unit>
+      <trans-unit id="mcpSkillConsentDisplayName">
+        <source xml:lang="en">MCP Skills</source>
+        <target>Навички MCP</target>
+      </trans-unit>
+      <trans-unit id="mcpSkillConsentExecute">
+        <source xml:lang="en">MCP server '{0}' provides skills that want to use tools in this session.</source>
+        <target>Сервер MCP '{0}' надає навички, які хочуть використовувати інструменти в цій сесії.</target>
+      </trans-unit>
+      <trans-unit id="mcpSkillConsentLoad">
+        <source xml:lang="en">MCP server '{0}' provides skills that want to load instructions into this session.</source>
+        <target>Сервер MCP '{0}' надає навички, які хочуть завантажити інструкції в цю сесію.</target>
+      </trans-unit>
+      <trans-unit id="mcpSkillConsentNever">
+        <source xml:lang="en">Never</source>
+        <target>Ніколи</target>
+      </trans-unit>
+      <trans-unit id="mcpSkillConsentNotNow">
+        <source xml:lang="en">Not Now</source>
+        <target>Не зараз</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotApprovalPolicy" source-language="en" datatype="plaintext" target-language="uk">
@@ -6507,6 +6951,18 @@ Showing {1}-{2} of {3}.</source>
       <trans-unit id="copilot.builtinAsk.name">
         <source xml:lang="en">Ask</source>
         <target>Запитати</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotBuiltinSkills" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="copilot.builtinModelRouter.description">
+        <source xml:lang="en">Create, edit or fix a model router: a .model-router.yaml file that picks a model for each chat turn. Checks every edit with check_model_router.</source>
+        <target>Створіть, редагуйте або виправте маршрутизатор моделі: файл .model-router.yaml, який обирає модель для кожного чату. Перевіряє кожне редагування за допомогою check_model_router.</target>
+      </trans-unit>
+      <trans-unit id="copilot.builtinTroubleshoot.description">
+        <source xml:lang="en">Investigate unexpected Copilot session behavior, slow requests, tool failures, and customization loading by analyzing session event logs.</source>
+        <target>Досліджуйте несподівану поведінку сесій Copilot, повільні запити, збої інструментів та завантаження налаштувань, аналізуючи журнали подій сесій.</target>
       </trans-unit>
     </body>
   </file>
@@ -6552,6 +7008,26 @@ Showing {1}-{2} of {3}.</source>
   </file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotCustomizationCommandDisplay" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="copilotMcp.configuration">
+        <source xml:lang="en">Launch configuration</source>
+        <target>Конфігурація запуску</target>
+      </trans-unit>
+      <trans-unit id="copilotMcp.configurationFailed">
+        <source xml:lang="en">Could not read the launch configuration.</source>
+        <target>Не вдалося прочитати конфігурацію запуску.</target>
+      </trans-unit>
+      <trans-unit id="copilotMcp.configurationNote">
+        <source xml:lang="en">Configuration known to the agent host. Environment variable and header names are shown without their values.</source>
+        <target>Конфігурація, відома хосту агента. Імена змінних середовища та заголовків показані без їх значень.</target>
+      </trans-unit>
+      <trans-unit id="copilotMcp.configurationUnavailable">
+        <source xml:lang="en">The runtime does not expose this server's launch configuration to the agent host.</source>
+        <target>Час виконання не надає конфігурацію запуску цього сервера хосту агента.</target>
+      </trans-unit>
+      <trans-unit id="copilotMcp.enabled">
+        <source xml:lang="en">Enabled: {0}</source>
+        <target>Увімкнено: {0}</target>
+      </trans-unit>
       <trans-unit id="copilotMcp.error">
         <source xml:lang="en">Error</source>
         <target>Помилка</target>
@@ -6560,6 +7036,22 @@ Showing {1}-{2} of {3}.</source>
         <source xml:lang="en">Last stderr</source>
         <target>Останній stderr</target>
       </trans-unit>
+      <trans-unit id="copilotMcp.no">
+        <source xml:lang="en">No</source>
+        <target>Ні</target>
+      </trans-unit>
+      <trans-unit id="copilotMcp.noTools">
+        <source xml:lang="en">No tools reported by this server.</source>
+        <target>Цей сервер не повідомляє про інструменти.</target>
+      </trans-unit>
+      <trans-unit id="copilotMcp.notFound">
+        <source xml:lang="en">MCP server "{0}" is not configured in this session.</source>
+        <target>Сервер MCP "{0}" не налаштований у цій сесії.</target>
+      </trans-unit>
+      <trans-unit id="copilotMcp.serverDetails">
+        <source xml:lang="en">MCP server: {0}</source>
+        <target>MCP сервер: {0}</target>
+      </trans-unit>
       <trans-unit id="copilotMcp.serverNameUsage">
         <source xml:lang="en">Usage: {0}</source>
         <target>Використання: {0}</target>
@@ -6567,6 +7059,34 @@ Showing {1}-{2} of {3}.</source>
       <trans-unit id="copilotMcp.servers">
         <source xml:lang="en">MCP servers</source>
         <target>MCP сервери</target>
+      </trans-unit>
+      <trans-unit id="copilotMcp.source">
+        <source xml:lang="en">Source: {0}</source>
+        <target>Джерело: {0}</target>
+      </trans-unit>
+      <trans-unit id="copilotMcp.sourceFile">
+        <source xml:lang="en">Configuration file: {0}</source>
+        <target>Конфігураційний файл: {0}</target>
+      </trans-unit>
+      <trans-unit id="copilotMcp.sourcePlugin">
+        <source xml:lang="en">Plugin: {0}</source>
+        <target>Плагін: {0}</target>
+      </trans-unit>
+      <trans-unit id="copilotMcp.status">
+        <source xml:lang="en">Status: {0}</source>
+        <target>Статус: {0}</target>
+      </trans-unit>
+      <trans-unit id="copilotMcp.tools">
+        <source xml:lang="en">Available tools</source>
+        <target>Доступні інструменти</target>
+      </trans-unit>
+      <trans-unit id="copilotMcp.toolsUnavailable">
+        <source xml:lang="en">Tools are not loaded for this server.</source>
+        <target>Інструменти не завантажені для цього сервера.</target>
+      </trans-unit>
+      <trans-unit id="copilotMcp.yes">
+        <source xml:lang="en">Yes</source>
+        <target>Так</target>
       </trans-unit>
       <trans-unit id="copilotPlugin.alreadyDisabled">
         <source xml:lang="en">Plugin {0} is already disabled.</source>
@@ -6825,12 +7345,12 @@ Showing {1}-{2} of {3}.</source>
         <target>Каскад</target>
       </trans-unit>
       <trans-unit id="copilot.fusion.completedDegraded">
-        <source xml:lang="en">HydraFusion workflow completed with a fallback</source>
-        <target>HydraFusion робочий процес завершено з резервним варіантом</target>
+        <source xml:lang="en">Copilot Fusion workflow completed with a fallback</source>
+        <target>Процес роботи Copilot Fusion завершено з резервним варіантом.</target>
       </trans-unit>
       <trans-unit id="copilot.fusion.continuing">
-        <source xml:lang="en">Continuing the HydraFusion workflow...</source>
-        <target>Продовження робочого процесу HydraFusion...</target>
+        <source xml:lang="en">Continuing the Copilot Fusion workflow...</source>
+        <target>Продовження робочого процесу Copilot Fusion...</target>
       </trans-unit>
       <trans-unit id="copilot.fusion.critic">
         <source xml:lang="en">Critique pass</source>
@@ -6849,8 +7369,8 @@ Showing {1}-{2} of {3}.</source>
         <target>Тривалість: {0}</target>
       </trans-unit>
       <trans-unit id="copilot.fusion.ended">
-        <source xml:lang="en">HydraFusion workflow ended: {0}</source>
-        <target>HydraFusion робочий процес завершено: {0}</target>
+        <source xml:lang="en">Copilot Fusion workflow ended: {0}</source>
+        <target>Робочий процес Copilot Fusion завершено: {0}</target>
       </trans-unit>
       <trans-unit id="copilot.fusion.fallback">
         <source xml:lang="en">Continuing with a fallback phase...</source>
@@ -6861,8 +7381,8 @@ Showing {1}-{2} of {3}.</source>
         <target>Наступний прохід</target>
       </trans-unit>
       <trans-unit id="copilot.fusion.interrupted">
-        <source xml:lang="en">HydraFusion workflow interrupted</source>
-        <target>HydraFusion робочий процес перервано</target>
+        <source xml:lang="en">Copilot Fusion workflow interrupted</source>
+        <target>Робочий процес Copilot Fusion перервано</target>
       </trans-unit>
       <trans-unit id="copilot.fusion.judge">
         <source xml:lang="en">Review pass</source>
@@ -6921,12 +7441,12 @@ Showing {1}-{2} of {3}.</source>
         <target>Перегляд виправлень</target>
       </trans-unit>
       <trans-unit id="copilot.fusion.routeFailed">
-        <source xml:lang="en">HydraFusion routing failed; continuing with {0}</source>
-        <target>HydraFusion маршрутизація не вдалася; продовжуємо з {0}</target>
+        <source xml:lang="en">Copilot Fusion routing failed; continuing with {0}</source>
+        <target>Copilot Fusion маршрутизація не вдалася; продовжуємо з {0}</target>
       </trans-unit>
       <trans-unit id="copilot.fusion.routing">
-        <source xml:lang="en">Choosing a HydraFusion workflow...</source>
-        <target>Вибір робочого процесу HydraFusion...</target>
+        <source xml:lang="en">Choosing a Copilot Fusion workflow...</source>
+        <target>Вибір робочого процесу Copilot Fusion...</target>
       </trans-unit>
       <trans-unit id="copilot.fusion.selected">
         <source xml:lang="en">Selected {0} workflow</source>
@@ -6962,6 +7482,34 @@ Showing {1}-{2} of {3}.</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotModelRouter" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="modelRouter.invalid">
+        <source xml:lang="en">The model router {0} has a problem, so this chat kept its current model: {1}</source>
+        <target>Модель маршрутизатора {0} має проблему, тому цей чат зберіг свою поточну модель: {1}</target>
+      </trans-unit>
+      <trans-unit id="modelRouter.missing">
+        <source xml:lang="en">The model router {0} was not found, so this chat kept its current model.</source>
+        <target>Модель маршрутизатора {0} не була знайдена, тому цей чат зберіг свою поточну модель.</target>
+      </trans-unit>
+      <trans-unit id="modelRouter.noDecisionModel">
+        <source xml:lang="en">The model router {0} used {1}, its first model, because your account can't use the decision model that routes chats.</source>
+        <target>Модель маршрутизатора {0} використовувала {1}, свою першу модель, оскільки ваш обліковий запис не може використовувати модель прийняття рішень, яка маршрутизує чати.</target>
+      </trans-unit>
+      <trans-unit id="modelRouter.noModels">
+        <source xml:lang="en">None of the models in the model router {0} are available, so this chat kept its current model.</source>
+        <target>Жодна з моделей у маршрутизаторі моделей {0} недоступна, тому цей чат зберіг свою поточну модель.</target>
+      </trans-unit>
+      <trans-unit id="modelRouter.switched">
+        <source xml:lang="en">This request fits another route, so the model router {0} moved this chat to {1}.</source>
+        <target>Цей запит підходить для іншого маршруту, тому маршрутизатор моделі {0} перемістив цей чат до {1}.</target>
+      </trans-unit>
+      <trans-unit id="modelRouter.unavailable">
+        <source xml:lang="en">The model router {0} used {1}, its first model, because routing was unavailable.</source>
+        <target>Модель маршрутизатора {0} використовувала {1}, свою першу модель, оскільки маршрутизація була недоступна.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotSandboxCertificate" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="copilot.sandboxCertificate.changed">
@@ -6975,6 +7523,14 @@ Showing {1}-{2} of {3}.</source>
       <trans-unit id="copilot.sandboxCertificate.installUnavailable">
         <source xml:lang="en">The sandbox certificate cannot be installed for this configuration.</source>
         <target>Сертифікат пісочниці не може бути встановлений для цієї конфігурації.</target>
+      </trans-unit>
+      <trans-unit id="copilot.sandboxCertificate.refreshDisabled">
+        <source xml:lang="en">Sandboxing is no longer enabled for this chat.</source>
+        <target>Пісочниця більше не увімкнена для цього чату.</target>
+      </trans-unit>
+      <trans-unit id="copilot.sandboxCertificate.refreshFailed">
+        <source xml:lang="en">Could not refresh the sandbox certificate status.</source>
+        <target>Не вдалося оновити статус сертифіката пісочниці.</target>
       </trans-unit>
       <trans-unit id="copilot.sandboxCertificate.removeUnconfirmed">
         <source xml:lang="en">The agent host did not confirm that the sandbox certificate was removed from OS trust.</source>
@@ -6995,6 +7551,10 @@ Showing {1}-{2} of {3}.</source>
       <trans-unit id="copilot.sandboxCertificate.timeout">
         <source xml:lang="en">Checking the sandbox certificate timed out.</source>
         <target>Перевірка сертифіката пісочниці перевищила час очікування.</target>
+      </trans-unit>
+      <trans-unit id="copilot.sandboxCertificate.trustFailed">
+        <source xml:lang="en">The sandbox certificate was not trusted.</source>
+        <target>Сертифікат пісочниці не був довіреним.</target>
       </trans-unit>
       <trans-unit id="copilot.sandboxCertificate.trustUnconfirmed">
         <source xml:lang="en">The agent host did not confirm that the sandbox certificate is trusted.</source>
@@ -7216,6 +7776,50 @@ Showing {1}-{2} of {3}.</source>
   </file>
   <file original="src/vs/platform/agentHost/node/copilot/copilotToolDisplay" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="assistedApproval.excluded">
+        <source xml:lang="en">Assisted permissions didn't review this request.</source>
+        <target>Дозволи, які були надані, не переглянули цей запит.</target>
+      </trans-unit>
+      <trans-unit id="assistedApproval.excluded.content">
+        <source xml:lang="en">Assisted permissions didn't review this request because it involves content your organization excludes from Copilot.</source>
+        <target>Дозволи асистента не переглянули цей запит, оскільки він містить контент, який ваша організація виключає з Copilot.</target>
+      </trans-unit>
+      <trans-unit id="assistedApproval.excluded.extensionPermissions">
+        <source xml:lang="en">Assisted permissions doesn't review requests for extension permissions.</source>
+        <target>Допоміжні дозволи не переглядають запити на розширення дозволів.</target>
+      </trans-unit>
+      <trans-unit id="assistedApproval.excluded.history">
+        <source xml:lang="en">Assisted permissions didn't review this request because it couldn't verify the session's earlier approvals.</source>
+        <target>Допоміжні дозволи не переглянули цей запит, оскільки не змогли підтвердити попередні схвалення сесії.</target>
+      </trans-unit>
+      <trans-unit id="assistedApproval.excluded.managed">
+        <source xml:lang="en">Assisted permissions didn't review this request because your organization requires you to approve it.</source>
+        <target>Дозволи, що допомагають, не переглянули цей запит, оскільки ваша організація вимагає, щоб ви його затвердили.</target>
+      </trans-unit>
+      <trans-unit id="assistedApproval.excluded.path">
+        <source xml:lang="en">Assisted permissions doesn't review access to paths this session isn't allowed to use.</source>
+        <target>Допоміжні дозволи не перевіряють доступ до шляхів, які ця сесія не має права використовувати.</target>
+      </trans-unit>
+      <trans-unit id="assistedApproval.excluded.sandboxBypass">
+        <source xml:lang="en">Assisted permissions doesn't review requests to run outside the sandbox.</source>
+        <target>Допоміжні дозволи не переглядають запити на виконання поза пісочницею.</target>
+      </trans-unit>
+      <trans-unit id="assistedApproval.excluded.tooLong">
+        <source xml:lang="en">Assisted permissions didn't review this request because it's too long to assess.</source>
+        <target>Допоміжні дозволи не переглянули цей запит, оскільки він занадто довгий для оцінки.</target>
+      </trans-unit>
+      <trans-unit id="assistedApproval.failed">
+        <source xml:lang="en">Assisted permissions couldn't review this request.</source>
+        <target>Дозволи, що допомагають, не змогли переглянути цей запит.</target>
+      </trans-unit>
+      <trans-unit id="assistedApproval.failed.timeout">
+        <source xml:lang="en">Assisted permissions couldn't review this request in time.</source>
+        <target>Дозволи, що допомагають, не змогли переглянути цей запит вчасно.</target>
+      </trans-unit>
+      <trans-unit id="assistedApproval.failed.tooLarge">
+        <source xml:lang="en">Assisted permissions couldn't review this request because it's too large.</source>
+        <target>Дозволи, що допомагають, не змогли переглянути цей запит, оскільки він занадто великий.</target>
+      </trans-unit>
       <trans-unit id="copilot.permission.create.title">
         <source xml:lang="en">Create file?</source>
         <target>Створити файл?</target>
@@ -7260,6 +7864,10 @@ Showing {1}-{2} of {3}.</source>
         <source xml:lang="en">Allow read/write access to {0} and retry inside the sandbox.</source>
         <target>Дозвольте доступ на читання/запис до {0} та спробуйте знову всередині пісочниці.</target>
       </trans-unit>
+      <trans-unit id="copilot.permission.hook.title">
+        <source xml:lang="en">Allow tool call: {0}?</source>
+        <target>Дозволити виклик інструмента: {0}?</target>
+      </trans-unit>
       <trans-unit id="copilot.permission.mcp.defaultTool">
         <source xml:lang="en">MCP Tool</source>
         <target>MCP Інструмент</target>
@@ -7284,9 +7892,21 @@ Showing {1}-{2} of {3}.</source>
         <source xml:lang="en">Allow reading file outside of workspace?</source>
         <target>Дозволити читання файлу поза робочою областю?</target>
       </trans-unit>
+      <trans-unit id="copilot.permission.shell.bypass.intentionTitle">
+        <source xml:lang="en">Run in terminal outside the sandbox: {0}</source>
+        <target>Запустіть у терміналі поза пісочницею: {0}</target>
+      </trans-unit>
       <trans-unit id="copilot.permission.shell.bypass.title">
         <source xml:lang="en">Run in terminal outside the sandbox?</source>
         <target>Запустити в терміналі поза пісочницею?</target>
+      </trans-unit>
+      <trans-unit id="copilot.permission.shell.intentionTitle">
+        <source xml:lang="en">Run in terminal: {0}</source>
+        <target>Запустіть у терміналі: {0}</target>
+      </trans-unit>
+      <trans-unit id="copilot.permission.shell.permissive.intentionTitle">
+        <source xml:lang="en">Retry by allowing filesystem access inside the sandbox: {0}</source>
+        <target>Спробуйте ще раз, дозволивши доступ до файлової системи всередині пісочниці: {0}</target>
       </trans-unit>
       <trans-unit id="copilot.permission.shell.permissive.title">
         <source xml:lang="en">Retry by allowing filesystem access inside the sandbox?</source>
@@ -7448,6 +8068,10 @@ Showing {1}-{2} of {3}.</source>
         <source xml:lang="en">Read skill {0}</source>
         <target>Прочитати навичку {0}</target>
       </trans-unit>
+      <trans-unit id="toolInvoke.skillGeneric">
+        <source xml:lang="en">Read skill</source>
+        <target>Читання навички</target>
+      </trans-unit>
       <trans-unit id="toolInvoke.sql">
         <source xml:lang="en">Execute SQL query</source>
         <target>Виконати SQL запит</target>
@@ -7524,6 +8148,64 @@ Showing {1}-{2} of {3}.</source>
         <source xml:lang="en">Write to sibling agents</source>
         <target>Напишіть до агентів-сиблінгів</target>
       </trans-unit>
+      <trans-unit id="toolMarkdown.blockedAction.mcp">
+        <source xml:lang="en">Use an MCP tool</source>
+        <target>Використовуйте інструмент MCP</target>
+      </trans-unit>
+      <trans-unit id="toolMarkdown.blockedAction.memory">
+        <source xml:lang="en">Update memory</source>
+        <target>Оновити пам'ять</target>
+      </trans-unit>
+      <trans-unit id="toolMarkdown.blockedAction.read">
+        <source xml:lang="en">Read a file</source>
+        <target>Прочитати файл</target>
+      </trans-unit>
+      <trans-unit id="toolMarkdown.blockedAction.shell">
+        <source xml:lang="en">Run a terminal command</source>
+        <target>Виконайте команду терміналу</target>
+      </trans-unit>
+      <trans-unit id="toolMarkdown.blockedAction.tool">
+        <source xml:lang="en">Use a tool</source>
+        <target>Використовуйте інструмент</target>
+      </trans-unit>
+      <trans-unit id="toolMarkdown.blockedAction.url">
+        <source xml:lang="en">Fetch a URL</source>
+        <target>Отримати URL</target>
+      </trans-unit>
+      <trans-unit id="toolMarkdown.blockedAction.workflow">
+        <source xml:lang="en">Run a workflow</source>
+        <target>Запустити робочий процес</target>
+      </trans-unit>
+      <trans-unit id="toolMarkdown.blockedAction.write">
+        <source xml:lang="en">Edit a file</source>
+        <target>Редагувати файл</target>
+      </trans-unit>
+      <trans-unit id="toolMarkdown.blockedActions">
+        <source xml:lang="en">Blocked actions:
+{0}</source>
+        <target>Заблоковані дії:  
+{0}</target>
+      </trans-unit>
+      <trans-unit id="toolMarkdown.phaseTaskSummary">
+        <source xml:lang="en">**Summary:**
+
+{0}</source>
+        <target>**Резюме:** 
+
+{0}</target>
+      </trans-unit>
+      <trans-unit id="toolMarkdown.taskBlocked">
+        <source xml:lang="en">**Task blocked:**
+
+{0}</source>
+        <target>**Завдання заблоковано:** 
+
+{0}</target>
+      </trans-unit>
+      <trans-unit id="toolMarkdown.taskBlockedWithoutDetails">
+        <source xml:lang="en">**Task blocked.**</source>
+        <target>**Завдання заблоковано.**</target>
+      </trans-unit>
       <trans-unit id="toolMarkdown.taskComplete">
         <source xml:lang="en">**Task completed:**
 
@@ -7531,6 +8213,18 @@ Showing {1}-{2} of {3}.</source>
         <target>**Завдання виконано:** 
 
 {0}</target>
+      </trans-unit>
+      <trans-unit id="toolMarkdown.taskCompletedWithBlockedActions">
+        <source xml:lang="en">**Task completed with blocked actions:**
+
+{0}
+
+{1}</source>
+        <target>**Завдання виконано з заблокованими діями:** 
+
+{0}
+
+{1}</target>
       </trans-unit>
       <trans-unit id="toolName.applyPatch">
         <source xml:lang="en">Apply Patch</source>
@@ -7710,83 +8404,171 @@ Showing {1}-{2} of {3}.</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/platform/agentHost/node/copilot/copilotVirtualSessionFs" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="virtualWorkspaceDisconnected">
+        <source xml:lang="en">The window that owns the virtual workspace is not connected.</source>
+        <target>Вікно, яке володіє віртуальним робочим простором, не підключене.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/platform/agentHost/node/copilot/customizations/copilotCustomizationInstallations" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="copilot.customizationFeed.installUnavailable">
-        <source xml:lang="en">The SDK cannot install this customization in the selected session.</source>
-        <target>SDK не може встановити цю кастомізацію в обраній сесії.</target>
+        <source xml:lang="en">This customization cannot be installed in the selected session.</source>
+        <target>Цю настройку не можна встановити в обраній сесії.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.applyUncertain">
+        <source xml:lang="en">The installation result is unknown. Refresh the installed customizations before trying again.</source>
+        <target>Результат встановлення невідомий. Оновіть встановлені налаштування перед повторною спробою.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.cancelled">
+        <source xml:lang="en">The customization installation was cancelled.</source>
+        <target>Встановлення налаштування було скасовано.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.catalogChanged">
-        <source xml:lang="en">The SDK catalog no longer contains this exact customization. Refresh Browse and try again.</source>
-        <target>Каталог SDK більше не містить цього точного налаштування. Оновіть перегляд і спробуйте ще раз.</target>
+        <source xml:lang="en">The catalog no longer contains this exact customization. Refresh Browse and try again.</source>
+        <target>Каталог більше не містить цього точного налаштування. Оновіть перегляд і спробуйте ще раз.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.catalogVersionChanged">
-        <source xml:lang="en">The SDK catalog version changed after discovery. Refresh Browse and try again.</source>
-        <target>Версія каталогу SDK змінилася після виявлення. Оновіть перегляд і спробуйте ще раз.</target>
+        <source xml:lang="en">The catalog version changed after discovery. Refresh Browse and try again.</source>
+        <target>Версія каталогу змінилася після виявлення. Оновіть перегляд і спробуйте ще раз.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.choiceUnavailable">
+        <source xml:lang="en">The selected installation choice is unavailable. Start the installation again.</source>
+        <target>Вибраний варіант установки недоступний. Почніть установку знову.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.configuredFailed">
+        <source xml:lang="en">Could not install this MCP server.</source>
+        <target>Не вдалося встановити цей сервер MCP.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.configuredUnsupported">
+        <source xml:lang="en">The active Copilot runtime does not support configured MCP server installation.</source>
+        <target>Активний час виконання Copilot не підтримує встановлення налаштованого сервера MCP.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.continueFailed">
+        <source xml:lang="en">Could not prepare this MCP server installation. Start the installation again.</source>
+        <target>Не вдалося підготувати цю установку сервера MCP. Почніть установку знову.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.expired">
         <source xml:lang="en">This customization installation review expired. Start the operation again.</source>
         <target>Цей огляд установки налаштування закінчився. Почніть операцію знову.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.installFailed">
-        <source xml:lang="en">The SDK could not install this customization.</source>
-        <target>SDK не змогла встановити цю настройку.</target>
+        <source xml:lang="en">Could not install this customization.</source>
+        <target>Не вдалося встановити цю настройку.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.installNotCompleted">
-        <source xml:lang="en">The SDK did not complete this customization installation.</source>
-        <target>SDK не завершив установку цієї кастомізації.</target>
+        <source xml:lang="en">The customization installation did not complete.</source>
+        <target>Встановлення налаштування не завершено.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.invalidOperation">
-        <source xml:lang="en">The SDK returned an invalid customization installation operation.</source>
-        <target>SDK повернув недійсну операцію встановлення налаштувань.</target>
+        <source xml:lang="en">The customization service returned an invalid installation operation.</source>
+        <target>Служба налаштування повернула недійсну операцію встановлення.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.invalidValue">
+        <source xml:lang="en">The value for '{0}' is invalid.</source>
+        <target>Значення для '{0}' є недійсним.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.mcpCardChanged">
+        <source xml:lang="en">The MCP server card changed after installation review. Refresh Browse and try again.</source>
+        <target>Картка сервера MCP змінилася після перегляду установки. Оновіть перегляд і спробуйте ще раз.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.mcpCardFetchFailed">
+        <source xml:lang="en">Could not read the MCP server card (HTTP {0}).</source>
+        <target>Не вдалося прочитати картку сервера MCP (HTTP {0}).</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.mcpCardInvalid">
+        <source xml:lang="en">The MCP server card contains invalid JSON.</source>
+        <target>Картка сервера MCP містить недійсний JSON.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.mcpCardTooLarge">
+        <source xml:lang="en">The MCP server card is too large to install.</source>
+        <target>Картка сервера MCP занадто велика для установки.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.mcpCardUnavailable">
+        <source xml:lang="en">The MCP server card is unavailable for local configuration.</source>
+        <target>Картка сервера MCP недоступна для локальної конфігурації.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.mcpConfigurationChanged">
+        <source xml:lang="en">The MCP server configuration does not match the installation plan. Refresh Browse and try again.</source>
+        <target>Конфігурація сервера MCP не відповідає плану встановлення. Оновіть перегляд і спробуйте ще раз.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.mcpInputsRequired">
         <source xml:lang="en">This MCP server requires an installation choice or additional values that Browse cannot collect yet.</source>
         <target>Цей сервер MCP вимагає вибору установки або додаткових значень, які Browse ще не може зібрати.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.mcpInventoryFailed">
-        <source xml:lang="en">The SDK could not list installed MCP servers.</source>
-        <target>SDK не змогло перерахувати встановлені сервери MCP.</target>
+        <source xml:lang="en">Could not list installed MCP servers.</source>
+        <target>Не вдалося перерахувати встановлені сервери MCP.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.mcpPackageChanged">
+        <source xml:lang="en">The MCP package does not match the installation plan. Refresh Browse and try again.</source>
+        <target>Пакет MCP не відповідає плану установки. Оновіть перегляд і спробуйте ще раз.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.mcpPackageInputsRequired">
+        <source xml:lang="en">This MCP package requires additional configuration that Browse cannot collect yet.</source>
+        <target>Цей пакет MCP вимагає додаткової конфігурації, яку Browse ще не може зібрати.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.mcpPackageUnsupported">
+        <source xml:lang="en">Confirmed local MCP server installations are not supported.</source>
+        <target>Підтверджені локальні установки сервера MCP не підтримуються.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.mcpPlanFailed">
-        <source xml:lang="en">The SDK could not prepare this MCP server installation.</source>
-        <target>SDK не змогло підготувати цю установку сервера MCP.</target>
+        <source xml:lang="en">Could not prepare this MCP server installation.</source>
+        <target>Не вдалося підготувати цю установку сервера MCP.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.mcpPolicyBlocked">
         <source xml:lang="en">Policy blocked this MCP server installation.</source>
         <target>Політика заблокувала цю установку сервера MCP.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.mcpPrepareFailed">
-        <source xml:lang="en">The SDK could not prepare this MCP server installation.</source>
-        <target>SDK не змогло підготувати цю установку сервера MCP.</target>
+        <source xml:lang="en">Could not prepare this MCP server installation.</source>
+        <target>Не вдалося підготувати цю установку сервера MCP.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.mcpProvisionalUnsupported">
         <source xml:lang="en">This MCP server requires configuration that provisional Gallery installation cannot preserve.</source>
         <target>Цей сервер MCP потребує конфігурації, яку тимчасова установка Gallery не може зберегти.</target>
       </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.mcpRemoteChanged">
+        <source xml:lang="en">The MCP server endpoint does not match the installation plan. Refresh Browse and try again.</source>
+        <target>Кінцева точка сервера MCP не відповідає плану встановлення. Оновіть перегляд і спробуйте ще раз.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.mcpRemoteInputsRequired">
+        <source xml:lang="en">This MCP server requires configuration that Browse cannot collect yet.</source>
+        <target>Цей сервер MCP потребує конфігурації, яку Browse ще не може зібрати.</target>
+      </trans-unit>
       <trans-unit id="copilot.customizationInstallation.mcpUnavailable">
-        <source xml:lang="en">The SDK cannot install this MCP server in the selected session.</source>
-        <target>SDK не може встановити цей MCP сервер у вибраній сесії.</target>
+        <source xml:lang="en">This MCP server cannot be installed in the selected session.</source>
+        <target>Цей сервер MCP не може бути встановлений у вибраній сесії.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.mcpUninstallPlanFailed">
-        <source xml:lang="en">The SDK could not prepare this MCP server removal.</source>
-        <target>SDK не змогло підготувати видалення цього MCP сервера.</target>
+        <source xml:lang="en">Could not prepare this MCP server removal.</source>
+        <target>Не вдалося підготувати видалення цього сервера MCP.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.notFound">
-        <source xml:lang="en">The SDK no longer owns this customization installation.</source>
-        <target>SDK більше не володіє цією установкою налаштування.</target>
+        <source xml:lang="en">This customization installation is no longer available.</source>
+        <target>Ця установка налаштування більше недоступна.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.pluginIdentityUnavailable">
-        <source xml:lang="en">The SDK installed the plugin without returning its verified installation identity.</source>
-        <target>SDK встановив плагін, не повернувши його перевірену ідентичність установки.</target>
+        <source xml:lang="en">The plugin was installed without a verified installation identity.</source>
+        <target>Плагін був встановлений без перевіреної ідентичності установки.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.pluginPlanFailed">
-        <source xml:lang="en">The SDK could not prepare this plugin installation.</source>
-        <target>SDK не змогло підготувати установку цього плагіна.</target>
+        <source xml:lang="en">Could not prepare this plugin installation.</source>
+        <target>Не вдалося підготувати установку цього плагіна.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.pluginUnsupported">
-        <source xml:lang="en">The SDK does not support installing catalog plugins.</source>
-        <target>SDK не підтримує встановлення плагінів каталогу.</target>
+        <source xml:lang="en">Catalog plugin installation is not supported.</source>
+        <target>Встановлення плагіна каталогу не підтримується.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.policyDenied">
+        <source xml:lang="en">Policy does not allow this MCP server installation.</source>
+        <target>Політика не дозволяє встановлення цього MCP сервера.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.recoveryRequired">
+        <source xml:lang="en">The installation result is unknown. Refresh the installed customizations before trying again.</source>
+        <target>Результат встановлення невідомий. Оновіть встановлені налаштування перед повторною спробою.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.resultErrorDetail">
         <source xml:lang="en">{0} ({1})</source>
@@ -7796,33 +8578,53 @@ Showing {1}-{2} of {3}.</source>
         <source xml:lang="en">The customization runtime restarted. Start the operation again.</source>
         <target>Час виконання налаштування перезапустився. Почніть операцію знову.</target>
       </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.secretRequired">
+        <source xml:lang="en">A secret for '{0}' is required.</source>
+        <target>Необхіден секрет для '{0}'.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.secretStoreUnavailable">
+        <source xml:lang="en">The secret store is unavailable.</source>
+        <target>Секретний магазин недоступний.</target>
+      </trans-unit>
       <trans-unit id="copilot.customizationInstallation.skillInventoryFailed">
-        <source xml:lang="en">The SDK could not list installed skills.</source>
-        <target>SDK не змогло перерахувати встановлені навички.</target>
+        <source xml:lang="en">Could not list installed skills.</source>
+        <target>Не вдалося перерахувати встановлені навички.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.skillPlanFailed">
-        <source xml:lang="en">The SDK could not prepare this skill installation.</source>
-        <target>SDK не змогло підготувати цю установку навички.</target>
+        <source xml:lang="en">Could not prepare this skill installation.</source>
+        <target>Не вдалося підготувати установку цього навику.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.skillUnavailable">
-        <source xml:lang="en">The SDK cannot install this skill in the selected session.</source>
-        <target>SDK не може встановити цей навик у вибраній сесії.</target>
+        <source xml:lang="en">This skill cannot be installed in the selected session.</source>
+        <target>Цю навичку не можна встановити в обраній сесії.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.skillUninstallPlanFailed">
-        <source xml:lang="en">The SDK could not prepare this skill removal.</source>
-        <target>SDK не змогло підготувати видалення цього навику.</target>
+        <source xml:lang="en">Could not prepare this skill removal.</source>
+        <target>Не вдалося підготувати видалення цього вміння.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.sourceChanged">
+        <source xml:lang="en">The MCP server or its configuration changed after review. Start the installation again.</source>
+        <target>Сервер MCP або його конфігурація змінилися після перегляду. Розпочніть установку знову.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.tooManyValues">
+        <source xml:lang="en">Too many installation values were supplied.</source>
+        <target>Надто багато значень установки було надано.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.uninstallFailed">
-        <source xml:lang="en">The SDK could not remove this customization.</source>
-        <target>SDK не змогло видалити цю настройку.</target>
+        <source xml:lang="en">Could not remove this customization.</source>
+        <target>Не вдалося видалити цю настройку.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.uninstallNotCompleted">
-        <source xml:lang="en">The SDK did not complete this customization removal.</source>
-        <target>SDK не завершив видалення цього налаштування.</target>
+        <source xml:lang="en">The customization removal did not complete.</source>
+        <target>Видалення налаштувань не завершено.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationInstallation.unsupported">
-        <source xml:lang="en">This customization does not provide an SDK installation identity.</source>
-        <target>Ця настройка не надає ідентифікатор установки SDK.</target>
+        <source xml:lang="en">This customization does not provide an installation identity.</source>
+        <target>Ця настройка не надає ідентифікацію установки.</target>
+      </trans-unit>
+      <trans-unit id="copilot.customizationInstallation.valueRequired">
+        <source xml:lang="en">A value for '{0}' is required.</source>
+        <target>Значення для '{0}' є обов'язковим.</target>
       </trans-unit>
       <trans-unit id="copilot.customizationMarketplace.cursorExpired">
         <source xml:lang="en">This catalog page expired. Start the search again.</source>
@@ -7836,6 +8638,10 @@ Showing {1}-{2} of {3}.</source>
   </file>
   <file original="src/vs/platform/agentHost/node/copilot/localModelBridge/shim/copilotRequestHandler" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="localModel.fallbackFailed">
+        <source xml:lang="en">The cloud model could not finish its response. Try again.</source>
+        <target>Модель хмари не змогла завершити свою відповідь. Спробуйте ще раз.</target>
+      </trans-unit>
       <trans-unit id="localModel.invalidRequest">
         <source xml:lang="en">The on-device model received a request it could not read.</source>
         <target>Модель на пристрої отримала запит, який не змогла прочитати.</target>
@@ -8070,6 +8876,22 @@ Showing {1}-{2} of {3}.</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/platform/agentHost/node/copilot/sessionCustomizationDiscovery" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="copilot.discoveredHooks">
+        <source xml:lang="en">Copilot hooks</source>
+        <target>Крючки Copilot</target>
+      </trans-unit>
+      <trans-unit id="copilot.discoveredMcpServers">
+        <source xml:lang="en">Copilot MCP servers</source>
+        <target>Сервери Copilot MCP</target>
+      </trans-unit>
+      <trans-unit id="copilot.workspaceHooksFallbackFailed">
+        <source xml:lang="en">Workspace hook discovery failed: {0}</source>
+        <target>Виявлення хуків робочого простору не вдалося: {0}</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/platform/agentHost/node/devContainerAgentHostService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="devContainerAgentHost.commandFailed">
@@ -8173,6 +8995,14 @@ stderr: {2}</target>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/platform/agentHost/node/devContainerShell" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="devContainerShell.exited">
+        <source xml:lang="en">Dev Container shell exited ({0}): {1}</source>
+        <target>Контейнер оболонки Dev вийшов ({0}): {1}</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/platform/agentHost/node/localCommands/bangLocalCommand" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="agentHostBang.background">
@@ -8207,6 +9037,10 @@ stderr: {2}</target>
         <source xml:lang="en">Command timed out</source>
         <target>Команда перевищила час очікування</target>
       </trans-unit>
+      <trans-unit id="agentHostBang.virtualWorkspace">
+        <source xml:lang="en">Terminal commands are unavailable in virtual workspaces.</source>
+        <target>Команди терміналу недоступні у віртуальних робочих просторах.</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/platform/agentHost/node/localCommands/renameLocalCommand" source-language="en" datatype="plaintext" target-language="uk">
@@ -8231,6 +9065,34 @@ stderr: {2}</target>
         <source xml:lang="en">Allow</source>
         <target>Дозволити</target>
       </trans-unit>
+      <trans-unit id="sessionPermissions.allowCommand">
+        <source xml:lang="en">Allow {0} in this Session</source>
+        <target>Дозволити {0} у цій сесії</target>
+      </trans-unit>
+      <trans-unit id="sessionPermissions.allowDomain">
+        <source xml:lang="en">Allow Fetching {0} in this Session</source>
+        <target>Дозволити отримання {0} у цій сесії</target>
+      </trans-unit>
+      <trans-unit id="sessionPermissions.allowExactCommand">
+        <source xml:lang="en">Allow Exact Command in this Session</source>
+        <target>Дозволити точну команду в цій сесії</target>
+      </trans-unit>
+      <trans-unit id="sessionPermissions.allowFileEdits">
+        <source xml:lang="en">Allow Edits to {0} in this Session</source>
+        <target>Дозволити редагування {0} у цій сесії</target>
+      </trans-unit>
+      <trans-unit id="sessionPermissions.allowFileReads">
+        <source xml:lang="en">Allow Reading {0} in this Session</source>
+        <target>Дозволити читання {0} у цій сесії</target>
+      </trans-unit>
+      <trans-unit id="sessionPermissions.allowFolderEdits">
+        <source xml:lang="en">Allow Edits in {0} in this Session</source>
+        <target>Дозволити редагування в {0} у цій сесії</target>
+      </trans-unit>
+      <trans-unit id="sessionPermissions.allowFolderReads">
+        <source xml:lang="en">Allow Reading Files in {0} in this Session</source>
+        <target>Дозволити читання файлів у {0} у цій сесії</target>
+      </trans-unit>
       <trans-unit id="sessionPermissions.allowOnce">
         <source xml:lang="en">Allow Once</source>
         <target>Дозволити один раз</target>
@@ -8238,6 +9100,38 @@ stderr: {2}</target>
       <trans-unit id="sessionPermissions.allowSession">
         <source xml:lang="en">Allow in this Session</source>
         <target>Дозволити в цій сесії</target>
+      </trans-unit>
+      <trans-unit id="sessionPermissions.alwaysAllowCommand">
+        <source xml:lang="en">Always Allow {0}</source>
+        <target>Завжди дозволяти {0}</target>
+      </trans-unit>
+      <trans-unit id="sessionPermissions.alwaysAllowDomain">
+        <source xml:lang="en">Always Allow Fetching {0}</source>
+        <target>Завжди дозволяти отримання {0}</target>
+      </trans-unit>
+      <trans-unit id="sessionPermissions.alwaysAllowExactCommand">
+        <source xml:lang="en">Always Allow Exact Command</source>
+        <target>Завжди дозволяти точну команду</target>
+      </trans-unit>
+      <trans-unit id="sessionPermissions.alwaysAllowFileEdits">
+        <source xml:lang="en">Always Allow Edits to {0}</source>
+        <target>Завжди дозволяти редагування {0}</target>
+      </trans-unit>
+      <trans-unit id="sessionPermissions.alwaysAllowFileReads">
+        <source xml:lang="en">Always Allow Reading {0}</source>
+        <target>Завжди дозволяти читання {0}</target>
+      </trans-unit>
+      <trans-unit id="sessionPermissions.alwaysAllowFolderEdits">
+        <source xml:lang="en">Always Allow Edits in {0}</source>
+        <target>Завжди дозволяти редагування в {0}</target>
+      </trans-unit>
+      <trans-unit id="sessionPermissions.alwaysAllowFolderReads">
+        <source xml:lang="en">Always Allow Reading Files in {0}</source>
+        <target>Завжди дозволяти читання файлів у {0}</target>
+      </trans-unit>
+      <trans-unit id="sessionPermissions.commands">
+        <source xml:lang="en">Commands {0}</source>
+        <target>Команди {0}</target>
       </trans-unit>
       <trans-unit id="sessionPermissions.skip">
         <source xml:lang="en">Skip</source>
@@ -8775,6 +9669,10 @@ stderr: {2}</target>
   </file>
   <file original="src/vs/platform/agentHost/node/shared/sessionServerTools" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="toolComplete.archiveChat">
+        <source xml:lang="en">Archived chat</source>
+        <target>Архівний чат</target>
+      </trans-unit>
       <trans-unit id="toolComplete.cancelMessage">
         <source xml:lang="en">Processed message cancellation</source>
         <target>Обробка скасування повідомлення</target>
@@ -8831,6 +9729,10 @@ stderr: {2}</target>
         <source xml:lang="en">Change Workspace to {0}?</source>
         <target>Змінити робочий простір на {0}?</target>
       </trans-unit>
+      <trans-unit id="toolInvoke.archiveChat">
+        <source xml:lang="en">Archiving chat</source>
+        <target>Архівування чату</target>
+      </trans-unit>
       <trans-unit id="toolInvoke.cancelMessage">
         <source xml:lang="en">Cancelling message</source>
         <target>Скасування повідомлення</target>
@@ -8882,6 +9784,10 @@ stderr: {2}</target>
       <trans-unit id="toolInvoke.setWorkspace">
         <source xml:lang="en">Requesting a workspace change</source>
         <target>Запит на зміну робочого простору</target>
+      </trans-unit>
+      <trans-unit id="toolName.archiveChat">
+        <source xml:lang="en">Archive Chat</source>
+        <target>Архівувати чат</target>
       </trans-unit>
       <trans-unit id="toolName.cancelMessage">
         <source xml:lang="en">Cancel Message</source>
@@ -9359,6 +10265,10 @@ stderr: {2}</target>
         <source xml:lang="en">Artifact integrations are disabled.</source>
         <target>Інтеграції артефактів вимкнені на цьому хості.</target>
       </trans-unit>
+      <trans-unit id="artifactInvalidPromptDetails">
+        <source xml:lang="en">The integration supplied invalid details for this action.</source>
+        <target>Інтеграція надала недійсні дані для цієї дії.</target>
+      </trans-unit>
       <trans-unit id="artifactOriginMissing">
         <source xml:lang="en">The chat that originally recorded this artifact is unknown.</source>
         <target>Чат, який спочатку зафіксував цей артефакт, невідомий.</target>
@@ -9427,6 +10337,10 @@ stderr: {2}</target>
         <source xml:lang="en">{0} enabled for {1}</source>
         <target>{0} увімкнено для {1}</target>
       </trans-unit>
+      <trans-unit id="artifactAutomationNoneRemainingForIntegrationsNotice">
+        <source xml:lang="en">No automation rules remain enabled for these artifact integrations.</source>
+        <target>Не залишилося жодних правил автоматизації, увімкнених для цих інтеграцій артефактів.</target>
+      </trans-unit>
       <trans-unit id="artifactAutomationNoneRemainingNotice">
         <source xml:lang="en">No automation rules remain enabled for this artifact integration.</source>
         <target>Для цієї інтеграції артефакта не залишилося жодних активованих правил автоматизації.</target>
@@ -9435,6 +10349,18 @@ stderr: {2}</target>
         <source xml:lang="en">Still enabled: {0}.</source>
         <target>Все ще увімкнено: {0}.</target>
       </trans-unit>
+      <trans-unit id="artifactAutomationRuleChanged">
+        <source xml:lang="en">{0} updated</source>
+        <target>{0} оновлено</target>
+      </trans-unit>
+      <trans-unit id="artifactAutomationRuleDisabled">
+        <source xml:lang="en">{0} disabled</source>
+        <target>{0} вимкнено</target>
+      </trans-unit>
+      <trans-unit id="artifactAutomationRuleEnabled">
+        <source xml:lang="en">{0} enabled</source>
+        <target>{0} увімкнено</target>
+      </trans-unit>
       <trans-unit id="artifactAutomationSelectedMode">
         <source xml:lang="en">Mode: {0}</source>
         <target>Режим: {0}</target>
@@ -9442,6 +10368,14 @@ stderr: {2}</target>
       <trans-unit id="artifactAutomationStoppedNotice">
         <source xml:lang="en">No new automatic runs will start for this rule. Pending runs will be cancelled; work already sent may still finish. Completed changes are not undone.</source>
         <target>Нові автоматичні запуски для цього правила не розпочнуться. Очікуючі запуски будуть скасовані; вже надіслана робота може все ще завершитися. Завершені зміни не скасовуються.</target>
+      </trans-unit>
+      <trans-unit id="artifactAutomationStoppedRulesNotice">
+        <source xml:lang="en">No new automatic runs will start for the disabled rules. Pending runs will be cancelled; work already sent may still finish. Completed changes are not undone.</source>
+        <target>Нові автоматичні запуски для вимкнених правил не почнуться. Очікуючі запуски будуть скасовані; робота, яка вже була надіслана, може все ще завершитися. Завершені зміни не скасовуються.</target>
+      </trans-unit>
+      <trans-unit id="artifactAutomationUpdatedNotice">
+        <source xml:lang="en">Autopilot updated for {0} ({1} rules)</source>
+        <target>Автопілот оновлено для {0} ({1} правил)</target>
       </trans-unit>
     </body>
   </file>
@@ -10696,8 +11630,8 @@ V8: {7}
         <target>Цю розширення було заблоковано на Ринку Розширень і його не слід використовувати.</target>
       </trans-unit>
       <trans-unit id="blocked by organization policy">
-        <source xml:lang="en">This extension is not permitted by your organization's policy.</source>
-        <target>Ця розширення не дозволено політикою вашої організації.</target>
+        <source xml:lang="en">This extension is not allowed by your organization.</source>
+        <target>Цю розширення не дозволено вашою організацією.</target>
       </trans-unit>
     </body>
   </file>
@@ -10903,6 +11837,22 @@ V8: {7}
   </file>
   <file original="src/vs/platform/files/common/fileService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="atomicMoveProvider">
+        <source xml:lang="en">Atomic moves require the same file system provider.</source>
+        <target>Атомарні операції вимагають одного й того ж постачальника файлової системи.</target>
+      </trans-unit>
+      <trans-unit id="atomicMoveSource">
+        <source xml:lang="en">Atomic moves only support files.</source>
+        <target>Атомарні переміщення підтримують лише файли.</target>
+      </trans-unit>
+      <trans-unit id="atomicMoveTarget">
+        <source xml:lang="en">Atomic moves only support replacing files.</source>
+        <target>Атомарні переміщення підтримують лише заміну файлів.</target>
+      </trans-unit>
+      <trans-unit id="atomicMoveUnsupported">
+        <source xml:lang="en">The file system provider does not support atomic rename.</source>
+        <target>Постачальник файлової системи не підтримує атомарне перейменування.</target>
+      </trans-unit>
       <trans-unit id="deleteFailedAtomicUnsupported">
         <source xml:lang="en">Unable to delete file '{0}' atomically because provider does not support it.</source>
         <target>Не вдалося видалити файл '{0}' атомарно, оскільки постачальник цього не підтримує.</target>
@@ -11063,6 +12013,14 @@ V8: {7}
   </file>
   <file original="src/vs/platform/files/node/diskFileSystemProvider" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="atomicRenameSource">
+        <source xml:lang="en">Atomic renames only support files.</source>
+        <target>Атомарні перейменування підтримують лише файли.</target>
+      </trans-unit>
+      <trans-unit id="atomicRenameTarget">
+        <source xml:lang="en">Atomic renames only support replacing files.</source>
+        <target>Атомні перейменування підтримують лише заміну файлів.</target>
+      </trans-unit>
       <trans-unit id="copyError">
         <source xml:lang="en">Unable to copy '{0}' into '{1}' ({2}).</source>
         <target>Неможливо скопіювати '{0}' у '{1}' ({2}).</target>
@@ -11412,9 +12370,13 @@ A keybinding label</note>
         <source xml:lang="en">This Model Context Protocol server cannot run because its policy environment variables have not been resolved on the server host. Restart the server to try again.</source>
         <target>Цей сервер протоколу контексту моделі не може працювати, оскільки його змінні середовища політики не були вирішені на хості сервера. Перезапустіть сервер, щоб спробувати ще раз.</target>
       </trans-unit>
+      <trans-unit id="mcp server configuration invalid">
+        <source xml:lang="en">This Model Context Protocol server cannot be installed or run because its configuration is invalid.</source>
+        <target>Цей сервер протоколу контексту моделі не може бути встановлений або запущений, оскільки його конфігурація є недійсною.</target>
+      </trans-unit>
       <trans-unit id="mcp server is denied">
-        <source xml:lang="en">This Model Context Protocol server is blocked by your organization's policy. Please contact your administrator for more information.</source>
-        <target>Цей сервер протоколу контексту моделі заблоковано політикою вашої організації. Будь ласка, зверніться до вашого адміністратора для отримання додаткової інформації.</target>
+        <source xml:lang="en">This Model Context Protocol server is blocked by your organization. Contact your administrator for more information.</source>
+        <target>Цей сервер протоколу контексту моделі заблокований вашою організацією. Зверніться до вашого адміністратора для отримання додаткової інформації.</target>
       </trans-unit>
       <trans-unit id="mcp server name overridden by command">
         <source xml:lang="en">This Model Context Protocol server is not in the list of servers allowed by your organization. A name entry matches, but this allowlist contains command entries, so the server must match an allowed command and arguments. Please contact your administrator for more information.</source>
@@ -12257,8 +13219,8 @@ A keybinding label</note>
         <target>Наступна таблиця описує дані, надіслані з кожним налаштуванням:</target>
       </trans-unit>
       <trans-unit id="telemetry.telemetryLevelMd">
-        <source xml:lang="en">Controls {0} telemetry, first-party extension telemetry, and participating third-party extension telemetry. Some third party extensions might not respect this setting. Consult the specific extension's documentation to be sure. Telemetry helps us better understand how {0} is performing, where improvements need to be made, and how features are being used.</source>
-        <target>Контролює телеметрію {0}, телеметрію розширень першої сторони та телеметрію розширень третіх сторін, які беруть участь. Деякі розширення третіх сторін можуть не дотримуватися цього налаштування. Ознайомтеся з документацією конкретного розширення, щоб бути впевненими. Телеметрія допомагає нам краще зрозуміти, як {0} працює, де потрібно вносити покращення та як використовуються функції.</target>
+        <source xml:lang="en">Controls {0} telemetry, Microsoft extension telemetry, and participating third-party extension telemetry. Some third party extensions might not respect this setting. Consult the specific extension's documentation to be sure. Telemetry helps us better understand how {0} is performing, where improvements need to be made, and how features are being used.</source>
+        <target>Контролює телеметрію {0}, телеметрію розширень Microsoft та телеметрію розширень третіх сторін, що беруть участь. Деякі розширення третіх сторін можуть не дотримуватись цього налаштування. Ознайомтесь з документацією конкретного розширення, щоб бути впевненим. Телеметрія допомагає нам краще зрозуміти, як працює {0}, де потрібно внести покращення та як використовуються функції.</target>
       </trans-unit>
       <trans-unit id="telemetry.usage">
         <source xml:lang="en">Usage Data</source>
@@ -12608,6 +13570,34 @@ To override an existing profile use its profile name as the key, for example:
       <trans-unit id="chartsYellow">
         <source xml:lang="en">The yellow color used in chart visualizations.</source>
         <target>Жовтий колір, використаний у візуалізаціях графіків.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/theme/common/colors/confettiColors" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="confettiColor1">
+        <source xml:lang="en">The first color used in confetti animations.</source>
+        <target>Перший колір, використаний у анімаціях конфетті.</target>
+      </trans-unit>
+      <trans-unit id="confettiColor2">
+        <source xml:lang="en">The second color used in confetti animations.</source>
+        <target>Другий колір, що використовується в анімаціях конфетті.</target>
+      </trans-unit>
+      <trans-unit id="confettiColor3">
+        <source xml:lang="en">The third color used in confetti animations.</source>
+        <target>Третій колір, що використовується в анімаціях конфетті.</target>
+      </trans-unit>
+      <trans-unit id="confettiColor4">
+        <source xml:lang="en">The fourth color used in confetti animations.</source>
+        <target>Четвертий колір, що використовується в анімаціях конфетті.</target>
+      </trans-unit>
+      <trans-unit id="confettiColor5">
+        <source xml:lang="en">The fifth color used in confetti animations.</source>
+        <target>П'ятий колір, що використовується в анімаціях конфетті.</target>
+      </trans-unit>
+      <trans-unit id="confettiColor6">
+        <source xml:lang="en">The sixth color used in confetti animations.</source>
+        <target>Шостий колір, що використовується в анімаціях конфетті.</target>
       </trans-unit>
     </body>
   </file>
@@ -13378,8 +14368,8 @@ To override an existing profile use its profile name as the key, for example:
         <target>Колір маркера на міні-карті для помилок.</target>
       </trans-unit>
       <trans-unit id="minimapFindMatchHighlight">
-        <source xml:lang="en">Minimap marker color for find matches.</source>
-        <target>Колір маркера на міні-карті для пошуку матчів.</target>
+        <source xml:lang="en">Minimap marker color for find matches. In light and dark themes, the default uses the overview ruler search match color at 80% opacity.</source>
+        <target>Колір маркера на мінікарті для пошуку збігів. У світлій та темній темах за замовчуванням використовується колір збігу пошуку з оглядової лінійки з прозорістю 80%.</target>
       </trans-unit>
       <trans-unit id="minimapForegroundOpacity">
         <source xml:lang="en">Opacity of foreground elements rendered in the minimap. For example, "#000000c0" will render the elements with 75% opacity.</source>
@@ -14020,6 +15010,14 @@ To override an existing profile use its profile name as the key, for example:
         <source xml:lang="en">Disable updates.</source>
         <target>Вимкнути оновлення.</target>
       </trans-unit>
+      <trans-unit id="restartWhenIdle">
+        <source xml:lang="en">Controls whether to restart automatically to apply a downloaded update after the screen has been locked for a minute while on power, keeping the machine from going to sleep until then. The restart only happens if every window can be restored exactly as it was, for example when no terminal process, task, debug session, chat request, or agent session is running, and it does not take focus from another application. Only supported on macOS.</source>
+        <target>Контролює, чи перезапустити автоматично для застосування завантаженого оновлення після того, як екран був заблокований протягом хвилини під час підключення до живлення, не дозволяючи машині перейти в режим сну до цього часу. Перезапуск відбувається лише якщо кожне вікно може бути відновлено точно так, як було, наприклад, коли не виконується жоден термінальний процес, завдання, сеанс налагодження, запит чату або сеанс агента, і він не забирає фокус у іншого застосунку. Підтримується лише на macOS.</target>
+      </trans-unit>
+      <trans-unit id="showOutdatedBuildReminder">
+        <source xml:lang="en">Show a reminder to update once this version of VS Code is two months old. The reminder is shown at most once a month.</source>
+        <target>Показати нагадування про оновлення, коли ця версія VS Code стане двомісячною. Нагадування показується не більше ніж раз на місяць.</target>
+      </trans-unit>
       <trans-unit id="showPostInstallInfo">
         <source xml:lang="en">Show a post-install update tooltip in the title bar instead of opening the release notes editor.</source>
         <target>Показати підказку про оновлення після встановлення в рядку заголовка замість відкриття редактора приміток до випуску.</target>
@@ -14172,6 +15170,18 @@ To override an existing profile use its profile name as the key, for example:
       <trans-unit id="webPageLoader.unsupportedUriScheme">
         <source xml:lang="en">Navigation to the '{0}' URI scheme is not allowed.</source>
         <target>Навігація до схеми URI '{0}' не дозволена.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/platform/webContentExtractor/node/sharedWebContentExtractorService" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="imageRequestFailed">
+        <source xml:lang="en">Image request failed ({0}).</source>
+        <target>Запит на зображення не вдався ({0}).</target>
+      </trans-unit>
+      <trans-unit id="imageTypeUnsupported">
+        <source xml:lang="en">The response is not a supported image.</source>
+        <target>Відповідь не є підтримуваним зображенням.</target>
       </trans-unit>
     </body>
   </file>

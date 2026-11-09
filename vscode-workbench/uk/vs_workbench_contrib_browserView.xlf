@@ -122,6 +122,14 @@ Open the page in a new tab to share it with agents.</source>
         <source xml:lang="en">The browser network proxy did not start. Reload the window and try again.</source>
         <target>Проксі-сервер мережі браузера не запустився. Перезавантажте вікно та спробуйте ще раз.</target>
       </trans-unit>
+      <trans-unit id="browser.requiredNetworkUnavailable">
+        <source xml:lang="en">The required remote network is unavailable.</source>
+        <target>Вимагана віддалена мережа недоступна.</target>
+      </trans-unit>
+      <trans-unit id="browser.unknownNetwork">
+        <source xml:lang="en">This page was opened for another remote ({0}). Open it again from a window connected to that remote.</source>
+        <target>Цю сторінку було відкрито для іншого віддаленого ({0}). Відкрийте її знову з вікна, підключеного до цього віддаленого.</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserAutoReloadFeatures" source-language="en" datatype="plaintext" target-language="uk">
@@ -859,17 +867,25 @@ Ensure the URL is correct and the server is accessible from the remote machine.<
         <source xml:lang="en">Connected locally</source>
         <target>Підключено локально</target>
       </trans-unit>
-      <trans-unit id="browser.connectedRemotely">
-        <source xml:lang="en">Connected via remote</source>
-        <target>Підключено через віддалений доступ</target>
+      <trans-unit id="browser.connectedViaHost">
+        <source xml:lang="en">Connected via {0}</source>
+        <target>Підключено через {0}</target>
       </trans-unit>
       <trans-unit id="browser.enableRemoteProxy">
-        <source xml:lang="en">When enabled, browser requests in remote workspaces are proxied through the remote connection. This allows web pages to access resources available on the remote host. Browsers using global storage always use the local network.</source>
-        <target>Коли увімкнено, запити браузера в віддалених робочих просторах проксіруються через віддалене з'єднання. Це дозволяє веб-сторінкам отримувати доступ до ресурсів, доступних на віддаленому хості. Браузери, що використовують глобальне сховище, завжди використовують локальну мережу.</target>
+        <source xml:lang="en">When enabled, browser requests in remote workspaces, and for agent sessions on remote agent hosts, are proxied through the remote connection. This allows web pages to access resources available on the remote host. Browsers using global storage always use the local network.</source>
+        <target>Коли увімкнено, запити браузера в віддалених робочих просторах та для сесій агентів на віддалених хостах агентів проксуються через віддалене з'єднання. Це дозволяє веб-сторінкам отримувати доступ до ресурсів, доступних на віддаленому хості. Браузери, що використовують глобальне сховище, завжди використовують локальну мережу.</target>
+      </trans-unit>
+      <trans-unit id="browser.hostDisconnected">
+        <source xml:lang="en">{0} is disconnected. Reload the page after it reconnects.</source>
+        <target>{0} відключено. Перезавантажте сторінку після повторного підключення.</target>
       </trans-unit>
       <trans-unit id="browser.localFallback.global">
-        <source xml:lang="en">Connected locally. Browsers using global storage load pages from your local network.</source>
-        <target>Підключено локально. Браузери, що використовують глобальне сховище, завантажують сторінки з вашої локальної мережі.</target>
+        <source xml:lang="en">Connected locally. Browsers using global storage load pages from your local network, not from {0}.</source>
+        <target>Підключено локально. Браузери, що використовують глобальне сховище, завантажують сторінки з вашої локальної мережі, а не з {0}.</target>
+      </trans-unit>
+      <trans-unit id="browser.localFallback.unsupported">
+        <source xml:lang="en">{0} does not support browser proxying. Pages load from your local network. Update the agent host to reach its network.</source>
+        <target>{0} не підтримує проксі-сервери браузера. Сторінки завантажуються з вашої локальної мережі. Оновіть хост агента, щоб отримати доступ до його мережі.</target>
       </trans-unit>
     </body>
   </file>
@@ -914,6 +930,10 @@ Ensure the URL is correct and the server is accessible from the remote machine.<
       <trans-unit id="browser.editorOpen">
         <source xml:lang="en">Whether any browser editor is currently open</source>
         <target>Чи відкритий наразі будь-який редактор браузера</target>
+      </trans-unit>
+      <trans-unit id="browser.externalUriOpener">
+        <source xml:lang="en">Open in Integrated Browser</source>
+        <target>Відкрити в інтегрованому браузері</target>
       </trans-unit>
       <trans-unit id="browser.linkOpenedHint.ariaLabel">
         <source xml:lang="en">This link opened in the integrated browser</source>

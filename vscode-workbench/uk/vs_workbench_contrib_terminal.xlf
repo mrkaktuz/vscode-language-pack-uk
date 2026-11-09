@@ -2,10 +2,6 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file original="src/vs/workbench/contrib/terminal/browser/agentHostTerminalService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="agentHostTerminal.default">
-        <source xml:lang="en">Agent Host Terminal</source>
-        <target>Агентський хост термінал</target>
-      </trans-unit>
       <trans-unit id="agentHostTerminal.pick">
         <source xml:lang="en">Agent Host…</source>
         <target>Агент Хост…</target>
@@ -17,10 +13,6 @@
       <trans-unit id="agentHostTerminal.profileName">
         <source xml:lang="en">Agent Host ({0})</source>
         <target>Агент Хост ({0})</target>
-      </trans-unit>
-      <trans-unit id="agentHostTerminal.tool">
-        <source xml:lang="en">Agent Host Terminal</source>
-        <target>Агент Хост Термінал</target>
       </trans-unit>
     </body>
   </file>
@@ -949,10 +941,6 @@ The terminal's title</note>
         <source xml:lang="en">Command executed {0}, took {1} and failed (Exit Code {2})</source>
         <target>Команда виконана {0}, зайняла {1} і не вдалася (Код виходу {2})</target>
       </trans-unit>
-      <trans-unit id="terminalPromptCommandSuccess">
-        <source xml:lang="en">Command executed {0} now</source>
-        <target>Команда виконана {0} зараз</target>
-      </trans-unit>
       <trans-unit id="terminalPromptCommandSuccess.">
         <source xml:lang="en">Command executed {0} </source>
         <target>Команда виконана {0}</target>
@@ -960,6 +948,10 @@ The terminal's title</note>
       <trans-unit id="terminalPromptCommandSuccess.duration">
         <source xml:lang="en">Command executed {0} and took {1}</source>
         <target>Команда виконана {0} і зайняла {1}</target>
+      </trans-unit>
+      <trans-unit id="terminalPromptCommandSuccess.noDuration">
+        <source xml:lang="en">Command executed {0}</source>
+        <target>Команда виконана {0}</target>
       </trans-unit>
       <trans-unit id="terminalPromptContextMenu">
         <source xml:lang="en">Show Command Actions</source>
@@ -1148,6 +1140,10 @@ The terminal's title</note>
       <trans-unit id="hideOnStartup.whenEmpty">
         <source xml:lang="en">Only hide the terminal when there are no persistent sessions restored.</source>
         <target>Сховати термінал лише тоді, коли немає відновлених постійних сеансів.</target>
+      </trans-unit>
+      <trans-unit id="host">
+        <source xml:lang="en">the name of the remote agent host the terminal runs on.</source>
+        <target>ім'я хоста віддаленого агента, на якому працює термінал.</target>
       </trans-unit>
       <trans-unit id="local">
         <source xml:lang="en">indicates a local terminal in a remote workspace.</source>
@@ -2008,6 +2004,17 @@ This setting applies only when terminals are created, so you will need to restar
       <trans-unit id="terminalCategory">
         <source xml:lang="en">Terminal</source>
         <target>Термінал</target>
+      </trans-unit>
+      <trans-unit id="terminalOnHost">
+        <source xml:lang="en">on {0}</source>
+        <note>{0} is the name of the remote machine a terminal runs on</note>
+        <target>на {0}</target>
+      </trans-unit>
+      <trans-unit id="terminalTitleOnHost">
+        <source xml:lang="en">{0} on {1}</source>
+        <note>{0} is the title of a terminal, such as "zsh"&#xD;
+{1} is the name of the remote machine the terminal runs on</note>
+        <target>{0} на {1}</target>
       </trans-unit>
       <trans-unit id="unsplitTerminal">
         <source xml:lang="en">Unsplit Terminal</source>

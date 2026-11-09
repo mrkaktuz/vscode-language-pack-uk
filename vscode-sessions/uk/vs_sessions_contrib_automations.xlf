@@ -1,5 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/sessions/contrib/automations/browser/automationCronInput" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="cron.day">
+        <source xml:lang="en">Day of month</source>
+        <target>День місяця</target>
+      </trans-unit>
+      <trans-unit id="cron.dayCaption">
+        <source xml:lang="en">day</source>
+        <target>день</target>
+      </trans-unit>
+      <trans-unit id="cron.dayHint">
+        <source xml:lang="en">Every day * or from 1 to 31</source>
+        <target>Кожен день * або з 1 по 31</target>
+      </trans-unit>
+      <trans-unit id="cron.expression">
+        <source xml:lang="en">Cron expression</source>
+        <target>Cron вираз</target>
+      </trans-unit>
+      <trans-unit id="cron.hour">
+        <source xml:lang="en">Hour</source>
+        <target>Година</target>
+      </trans-unit>
+      <trans-unit id="cron.hourCaption">
+        <source xml:lang="en">hour</source>
+        <target>година</target>
+      </trans-unit>
+      <trans-unit id="cron.hourHint">
+        <source xml:lang="en">Every hour * or from 0 to 23</source>
+        <target>Кожну годину * або з 0 до 23</target>
+      </trans-unit>
+      <trans-unit id="cron.localTime">
+        <source xml:lang="en">Evaluated in local time.</source>
+        <target>Оцінено в місцевому часі.</target>
+      </trans-unit>
+      <trans-unit id="cron.min">
+        <source xml:lang="en">min</source>
+        <target>мін</target>
+      </trans-unit>
+      <trans-unit id="cron.minute">
+        <source xml:lang="en">Minute</source>
+        <target>Хвилина</target>
+      </trans-unit>
+      <trans-unit id="cron.minuteHint">
+        <source xml:lang="en">Every minute * or from 0 to 59</source>
+        <target>Кожну хвилину * або з 0 до 59</target>
+      </trans-unit>
+      <trans-unit id="cron.month">
+        <source xml:lang="en">Month</source>
+        <target>Місяць</target>
+      </trans-unit>
+      <trans-unit id="cron.monthCaption">
+        <source xml:lang="en">month</source>
+        <target>місяць</target>
+      </trans-unit>
+      <trans-unit id="cron.monthHint">
+        <source xml:lang="en">Every month * or from January (1) to December (12)</source>
+        <target>Кожного місяця * або з січня (1) по грудень (12)</target>
+      </trans-unit>
+      <trans-unit id="cron.timeZone">
+        <source xml:lang="en">Evaluated in {0}.</source>
+        <target>Оцінено в {0}.</target>
+      </trans-unit>
+      <trans-unit id="cron.weekday">
+        <source xml:lang="en">Day of week</source>
+        <target>День тижня</target>
+      </trans-unit>
+      <trans-unit id="cron.weekdayCaption">
+        <source xml:lang="en">weekday</source>
+        <target>день тижня</target>
+      </trans-unit>
+      <trans-unit id="cron.weekdayHint">
+        <source xml:lang="en">Every day of week * or from Monday (1) to Sunday (7 and 0)</source>
+        <target>Кожен день тижня * або з понеділка (1) до неділі (7 і 0)</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/automations/browser/automationDialog" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="automation.advanced">
@@ -134,9 +210,17 @@
         <source xml:lang="en">Checking target availability...</source>
         <target>Перевірка доступності цілі...</target>
       </trans-unit>
+      <trans-unit id="automation.form.cloudCron">
+        <source xml:lang="en">Cron is only available for local automations. Choose a supported schedule for Cloud.</source>
+        <target>Cron доступний лише для локальних автоматизацій. Виберіть підтримуваний графік для Cloud.</target>
+      </trans-unit>
       <trans-unit id="automation.form.cloudDisabled">
         <source xml:lang="en">Cloud automations are disabled. To create this automation, enable the {0} setting or turn off Run in the cloud.</source>
         <target>Автоматизації в хмарі вимкнені. Щоб створити цю автоматизацію, увімкніть налаштування {0} або вимкніть Запуск у хмарі.</target>
+      </trans-unit>
+      <trans-unit id="automation.form.cloudPreview">
+        <source xml:lang="en">Preview</source>
+        <target>Попередній перегляд</target>
       </trans-unit>
       <trans-unit id="automation.form.cloudScheduleMinute">
         <source xml:lang="en">Choose a time that corresponds to minute 00, 15, 30, or 45 in UTC.</source>
@@ -353,6 +437,10 @@
       <trans-unit id="automation.form.workspaceUnavailable">
         <source xml:lang="en">The workspace provider is unavailable.</source>
         <target>Постачальник робочого простору недоступний.</target>
+      </trans-unit>
+      <trans-unit id="automation.interval.cron">
+        <source xml:lang="en">Cron</source>
+        <target>Крон</target>
       </trans-unit>
       <trans-unit id="automation.interval.daily">
         <source xml:lang="en">Daily</source>
@@ -630,6 +718,10 @@
         <source xml:lang="en">Deleting automation {0}</source>
         <target>Видалення автоматизації {0}</target>
       </trans-unit>
+      <trans-unit id="automation.tool.delete.keepHistoryConfirmation">
+        <source xml:lang="en">Delete **{0}** (`{1}`)? Its saved configuration will be permanently removed. Run history will be kept.</source>
+        <target>Видалити **{0}** (`{1}`)? Його збережена конфігурація буде назавжди видалена. Історія виконання буде збережена.</target>
+      </trans-unit>
       <trans-unit id="automation.tool.delete.pastTenseMessage">
         <source xml:lang="en">Deleted automation {0}</source>
         <target>Видалена автоматизація {0}</target>
@@ -730,13 +822,9 @@
   </file>
   <file original="src/vs/sessions/contrib/automations/browser/automationTriggerEditor" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="automation.trigger.actor">
-        <source xml:lang="en">Require write access to trigger</source>
-        <target>Потрібен доступ на запис для активації</target>
-      </trans-unit>
-      <trans-unit id="automation.trigger.actorDescription">
-        <source xml:lang="en">Only people with write access to the repository can trigger this automation.</source>
-        <target>Тільки люди з правами на запис у репозиторій можуть ініціювати цю автоматизацію.</target>
+      <trans-unit id="automation.trigger.activity">
+        <source xml:lang="en">Trigger activity</source>
+        <target>Запустити активність</target>
       </trans-unit>
       <trans-unit id="automation.trigger.commaSeparated">
         <source xml:lang="en">Comma-separated values</source>
@@ -754,6 +842,10 @@
         <source xml:lang="en">{0} events selected</source>
         <target>Вибрано {0} подій</target>
       </trans-unit>
+      <trans-unit id="automation.trigger.includeReadAccessActivity">
+        <source xml:lang="en">Include activity from users without write access to this repository</source>
+        <target>Включити активність користувачів без прав на запис у цей репозиторій</target>
+      </trans-unit>
       <trans-unit id="automation.trigger.loading">
         <source xml:lang="en">Loading available triggers…</source>
         <target>Завантаження доступних тригерів…</target>
@@ -769,6 +861,10 @@
       <trans-unit id="automation.trigger.queryExample">
         <source xml:lang="en">e.g. label:bug is:open</source>
         <target>наприклад, мітка:помилка є:відкрита</target>
+      </trans-unit>
+      <trans-unit id="automation.trigger.readAccessDisabled">
+        <source xml:lang="en">Disabled by your repository settings</source>
+        <target>Вимкнено через налаштування вашого репозиторію</target>
       </trans-unit>
       <trans-unit id="automation.trigger.readOnly">
         <source xml:lang="en">These triggers cannot be edited here. Other changes keep them unchanged.</source>
@@ -802,6 +898,18 @@
   </file>
   <file original="src/vs/sessions/contrib/automations/browser/automations.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="automationAlreadyRunning">
+        <source xml:lang="en">Automation '{0}' is already running.</source>
+        <target>Автоматизація '{0}' вже запущена.</target>
+      </trans-unit>
+      <trans-unit id="automationRunOpenFailed">
+        <source xml:lang="en">Failed to open automation run: {0}</source>
+        <target>Не вдалося відкрити запуск автоматизації: {0}</target>
+      </trans-unit>
+      <trans-unit id="automationRunRequested">
+        <source xml:lang="en">Run requested for automation '{0}'.</source>
+        <target>Запит на виконання автоматизації '{0}'.</target>
+      </trans-unit>
       <trans-unit id="chat.automations.cloud.enabled">
         <source xml:lang="en">Enables managing Only me and Repository cloud automations in known GitHub repositories that support automation management. Disabling this setting does not stop schedules already running on GitHub.</source>
         <target>Дозволяє керувати автоматизаціями Only me та Repository в відомих репозиторіях GitHub, які підтримують управління автоматизацією. Вимкнення цього налаштування не зупиняє вже запущені розклади на GitHub.</target>
@@ -809,6 +917,34 @@
       <trans-unit id="chat.automations.enabled">
         <source xml:lang="en">Enables the Automations feature: scheduling agent sessions to run on a cadence. When disabled, the Automations entry in the Customizations sidebar, the Automations section in the Customizations editor, and the Automation option in the new-session composer are hidden, and scheduled automations are not dispatched.</source>
         <target>Увімкнення функції Автоматизацій: планування сеансів агентів для виконання з певною періодичністю. Коли вимкнено, запис Автоматизацій у бічній панелі Налаштувань, розділ Автоматизацій у редакторі Налаштувань та опція Автоматизації в композиторі нових сеансів приховані, а заплановані автоматизації не виконуються.</target>
+      </trans-unit>
+      <trans-unit id="loadingAutomations">
+        <source xml:lang="en">Loading automations...</source>
+        <target>Завантаження автоматизацій...</target>
+      </trans-unit>
+      <trans-unit id="noRunnableAutomations">
+        <source xml:lang="en">No automations are currently available to run.</source>
+        <target>Наразі немає доступних автоматизацій для виконання.</target>
+      </trans-unit>
+      <trans-unit id="openAutomationRun">
+        <source xml:lang="en">Open Run</source>
+        <target>Відкрити виконання</target>
+      </trans-unit>
+      <trans-unit id="runAutomation">
+        <source xml:lang="en">Run Automation...</source>
+        <target>Запустити автоматизацію...</target>
+      </trans-unit>
+      <trans-unit id="runAutomationTitle">
+        <source xml:lang="en">Run Automation</source>
+        <target>Запустити автоматизацію</target>
+      </trans-unit>
+      <trans-unit id="selectAutomationToRun">
+        <source xml:lang="en">Select an automation to run</source>
+        <target>Виберіть автоматизацію для виконання</target>
+      </trans-unit>
+      <trans-unit id="showAutomations">
+        <source xml:lang="en">Show Automations</source>
+        <target>Показати автоматизації</target>
       </trans-unit>
     </body>
   </file>
@@ -825,6 +961,14 @@
       <trans-unit id="automationUnavailable">
         <source xml:lang="en">Automation '{0}' is unavailable. Its Agent Host may be disconnected or the automation may have been deleted.</source>
         <target>Автоматизація '{0}' недоступна. Її агент-хост може бути відключений або автоматизацію могли видалити.</target>
+      </trans-unit>
+      <trans-unit id="automations.deleteHistoryUnsupported">
+        <source xml:lang="en">This automation's provider does not support choosing whether to delete run history.</source>
+        <target>Цей постачальник автоматизації не підтримує вибір, чи видаляти історію виконання.</target>
+      </trans-unit>
+      <trans-unit id="automations.deleteRetainedHistoryUnavailable">
+        <source xml:lang="en">This automation's retained run history cannot currently be deleted.</source>
+        <target>Історію виконання цієї автоматизації наразі не можна видалити.</target>
       </trans-unit>
     </body>
   </file>

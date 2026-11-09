@@ -18,14 +18,6 @@
         <source xml:lang="en">Sign in to GitHub to use more agents</source>
         <target>Увійдіть до GitHub, щоб використовувати більше агентів</target>
       </trans-unit>
-      <trans-unit id="agentsSignedOut">
-        <source xml:lang="en">Agents Signed Out</source>
-        <target>Агенти вийшли</target>
-      </trans-unit>
-      <trans-unit id="agentsSignedOutAria">
-        <source xml:lang="en">Agents is signed out</source>
-        <target>Агенти вийшли з системи</target>
-      </trans-unit>
       <trans-unit id="copilotAllQuotaReachedAria">
         <source xml:lang="en">GitHub Copilot chat and inline suggestion quota reached</source>
         <target>Досягнуто ліміту на чат GitHub Copilot та вбудовані пропозиції</target>
@@ -118,9 +110,9 @@
         <source xml:lang="en">Hide Panel</source>
         <target>Сховати панель</target>
       </trans-unit>
-      <trans-unit id="hideSessionActivityBar">
-        <source xml:lang="en">Hide Session Activity Bar</source>
-        <target>Сховати панель активності сесії</target>
+      <trans-unit id="hideSessionActivityBarShort">
+        <source xml:lang="en">Hide</source>
+        <target>Сховати</target>
       </trans-unit>
       <trans-unit id="layoutDensity">
         <source xml:lang="en">Layout Density</source>
@@ -154,6 +146,30 @@
         <source xml:lang="en">Screen Reader Optimized</source>
         <target>Оптимізовано для екранних рідерів</target>
       </trans-unit>
+      <trans-unit id="sessionActivityBarPosition">
+        <source xml:lang="en">Position</source>
+        <target>Позиція</target>
+      </trans-unit>
+      <trans-unit id="sessionActivityBarPosition.docked">
+        <source xml:lang="en">Docked</source>
+        <target>Пришвартований</target>
+      </trans-unit>
+      <trans-unit id="sessionActivityBarPosition.floating">
+        <source xml:lang="en">Floating</source>
+        <target>Плаваючий</target>
+      </trans-unit>
+      <trans-unit id="sessionActivityBarSize">
+        <source xml:lang="en">Size</source>
+        <target>Розмір</target>
+      </trans-unit>
+      <trans-unit id="sessionActivityBarSize.compact">
+        <source xml:lang="en">Compact</source>
+        <target>Компактний</target>
+      </trans-unit>
+      <trans-unit id="sessionActivityBarSize.normal">
+        <source xml:lang="en">Normal</source>
+        <target>Нормальний</target>
+      </trans-unit>
       <trans-unit id="showPanel">
         <source xml:lang="en">Show Panel</source>
         <target>Показати панель</target>
@@ -174,6 +190,10 @@
         <source xml:lang="en">Toggle Session Activity Bar</source>
         <target>Перемкнути панель активності сеансу</target>
       </trans-unit>
+      <trans-unit id="toggleSessionActivityBarFixedColumn">
+        <source xml:lang="en">Toggle Session Activity Bar Docked or Floating</source>
+        <target>Перемикання панелі активності сеансу: закріплена або плаваюча</target>
+      </trans-unit>
       <trans-unit id="toggleSessionActivityBarLayoutActions">
         <source xml:lang="en">Toggle Layout Actions in Session Activity Bar</source>
         <target>Перемикання дій макета в панелі активності сесії</target>
@@ -188,91 +208,11 @@
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/sessions/browser/openInVSCodeUtils" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="devContainerSample.notPrepared">
-        <source xml:lang="en">Send the first prompt to prepare this Dev Container sample before opening it in the editor.</source>
-        <target>Надішліть перший запит, щоб підготувати цей зразок Dev Container перед його відкриттям в редакторі.</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/sessions/browser/parts/auxiliaryBarPart" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="auxiliaryBarAriaLabel">
         <source xml:lang="en">Session Details</source>
         <target>Деталі сесії</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/browser/parts/chatCompositeBar" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="chatTabAriaLabel">
-        <source xml:lang="en">{0}, {1}</source>
-        <target>{0}, {1}</target>
-      </trans-unit>
-      <trans-unit id="chatTabUnreadAriaLabel">
-        <source xml:lang="en">{0}, unread</source>
-        <target>{0}, непрочитано</target>
-      </trans-unit>
-      <trans-unit id="chatTabsAriaLabel">
-        <source xml:lang="en">Chats</source>
-        <target>Чати</target>
-      </trans-unit>
-      <trans-unit id="copyChatLink">
-        <source xml:lang="en">Copy Link</source>
-        <target>Скопіювати посилання</target>
-      </trans-unit>
-      <trans-unit id="deleteChat">
-        <source xml:lang="en">Delete Chat</source>
-        <target>Видалити чат</target>
-      </trans-unit>
-      <trans-unit id="renameChat">
-        <source xml:lang="en">Rename...</source>
-        <target>Перейменувати...</target>
-      </trans-unit>
-      <trans-unit id="renameChat.aria">
-        <source xml:lang="en">Rename chat</source>
-        <target>Перейменувати чат</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/browser/parts/chatGroupView" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="chatGroupAriaLabel">
-        <source xml:lang="en">Chat Group {0} of {1}</source>
-        <target>Чат-група {0} з {1}</target>
-      </trans-unit>
-      <trans-unit id="chatGroupTabsAriaLabel">
-        <source xml:lang="en">Chats, Group {0} of {1}</source>
-        <target>Чати, Група {0} з {1}</target>
-      </trans-unit>
-      <trans-unit id="chatTabsAriaLabel">
-        <source xml:lang="en">Chats</source>
-        <target>Чати</target>
-      </trans-unit>
-      <trans-unit id="sessionHistoryStatus.archived">
-        <source xml:lang="en">{0} {1}</source>
-        <target>{0} {1}</target>
-      </trans-unit>
-      <trans-unit id="sessionReadOnlyBanner.message">
-        <source xml:lang="en">This chat is read-only</source>
-        <target>Цей чат тільки для читання</target>
-      </trans-unit>
-      <trans-unit id="sessionReadOnlyBanner.preparing">
-        <source xml:lang="en">Preparing the session...</source>
-        <target>Підготовка сесії...</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/browser/parts/emptyEditorGroupAddTab" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="addTabWatermark">
-        <source xml:lang="en">Add Tab</source>
-        <target>Додати вкладку</target>
-      </trans-unit>
-      <trans-unit id="addTabWatermarkEntryAriaLabel">
-        <source xml:lang="en">{0} ({1})</source>
-        <target>{0} ({1})</target>
       </trans-unit>
     </body>
   </file>
@@ -406,6 +346,10 @@
         <source xml:lang="en">Previous file</source>
         <target>Попередній файл</target>
       </trans-unit>
+      <trans-unit id="diffView.readError">
+        <source xml:lang="en">Unable to load changes: {0}</source>
+        <target>Не вдалося завантажити зміни: {0}</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/sessions/browser/parts/mobile/contributions/mobileMultiDiffView" source-language="en" datatype="plaintext" target-language="uk">
@@ -445,62 +389,6 @@
       <trans-unit id="multiDiffView.toggleFile">
         <source xml:lang="en">Toggle {0}</source>
         <target>Перемкнути {0}</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/browser/parts/mobile/mobilePickerSheet" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="mobilePickerSheet.done">
-        <source xml:lang="en">Done</source>
-        <target>Готово</target>
-      </trans-unit>
-      <trans-unit id="mobilePickerSheet.doneAriaLabel">
-        <source xml:lang="en">Close {0}</source>
-        <target>Закрити {0}</target>
-      </trans-unit>
-      <trans-unit id="mobilePickerSheet.itemAriaLabelWithBadge">
-        <source xml:lang="en">{0}, {1}</source>
-        <target>{0}, {1}</target>
-      </trans-unit>
-      <trans-unit id="mobilePickerSheet.itemAriaLabelWithBadgeAndDescription">
-        <source xml:lang="en">{0}, {1}, {2}</source>
-        <target>{0}, {1}, {2}</target>
-      </trans-unit>
-      <trans-unit id="mobilePickerSheet.noResults">
-        <source xml:lang="en">No results</source>
-        <target>Немає результатів</target>
-      </trans-unit>
-      <trans-unit id="mobilePickerSheet.searching">
-        <source xml:lang="en">Searching…</source>
-        <target>Шукаю…</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/browser/parts/mobile/mobileSessionFilterChips" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="findAriaLabel">
-        <source xml:lang="en">Find session</source>
-        <target>Знайти сесію</target>
-      </trans-unit>
-      <trans-unit id="sessionListActions">
-        <source xml:lang="en">Session list actions</source>
-        <target>Дії списку сесій</target>
-      </trans-unit>
-      <trans-unit id="sortGroup">
-        <source xml:lang="en">Sort</source>
-        <target>Сортувати</target>
-      </trans-unit>
-      <trans-unit id="sortGroupAriaLabel">
-        <source xml:lang="en">Sort and group options</source>
-        <target>Сортувати та групувати опції</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/browser/parts/mobile/mobileSortGroupSheet" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="sortGroupSheet.close">
-        <source xml:lang="en">Close</source>
-        <target>Закрити</target>
       </trans-unit>
     </body>
   </file>
@@ -573,170 +461,6 @@
       <trans-unit id="alignPanel">
         <source xml:lang="en">Align Panel</source>
         <target>Вирівняти панель</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/browser/parts/sessionActivityBar" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="sessionActivityBar">
-        <source xml:lang="en">Session Activity Bar</source>
-        <target>Панель активності сесії</target>
-      </trans-unit>
-      <trans-unit id="sessionActivityBar.dragHandle">
-        <source xml:lang="en">Drag to move. Double-click to reset the position.</source>
-        <target>Перетягніть, щоб перемістити. Двічі клацніть, щоб скинути позицію.</target>
-      </trans-unit>
-      <trans-unit id="sessionActivityBar.titleWithActivity">
-        <source xml:lang="en">{0} - {1}</source>
-        <target>{0} - {1}</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/browser/parts/sessionHeaderBar" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="chatHeaderLabel">
-        <source xml:lang="en">Chat: {0}</source>
-        <target>Чат: {0}</target>
-      </trans-unit>
-      <trans-unit id="newSessionDragArea">
-        <source xml:lang="en">New Session</source>
-        <target>Нова сесія</target>
-      </trans-unit>
-      <trans-unit id="renameChat.aria">
-        <source xml:lang="en">Rename chat</source>
-        <target>Перейменувати чат</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/browser/parts/sessionReadOnlyBanner" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="sessionReadOnlyBanner.archived">
-        <source xml:lang="en">Archived sessions are read-only.</source>
-        <target>Архівні сесії доступні тільки для читання.</target>
-      </trans-unit>
-      <trans-unit id="sessionReadOnlyBanner.message">
-        <source xml:lang="en">This chat is read-only</source>
-        <target>Цей чат тільки для читання</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/browser/parts/sessionRemoteConnection" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="sessionRemoteHost.connect">
-        <source xml:lang="en">Connect</source>
-        <target>Підключити</target>
-      </trans-unit>
-      <trans-unit id="sessionRemoteHost.connectingTitle">
-        <source xml:lang="en">Connecting to {0}</source>
-        <target>Підключення до {0}</target>
-      </trans-unit>
-      <trans-unit id="sessionRemoteHost.disconnected">
-        <source xml:lang="en">Cannot reach {0}.</source>
-        <target>Не вдається досягти {0}.</target>
-      </trans-unit>
-      <trans-unit id="sessionRemoteHost.disconnectedTitle">
-        <source xml:lang="en">Cannot Connect to {0}</source>
-        <target>Не вдалося підключитися до {0}</target>
-      </trans-unit>
-      <trans-unit id="sessionRemoteHost.incompatibleDescription">
-        <source xml:lang="en">{0} is incompatible with this version of Visual Studio Code.</source>
-        <target>{0} несумісний з цією версією Visual Studio Code.</target>
-      </trans-unit>
-      <trans-unit id="sessionRemoteHost.incompatibleTitle">
-        <source xml:lang="en">Cannot Connect to {0}</source>
-        <target>Не вдалося підключитися до {0}</target>
-      </trans-unit>
-      <trans-unit id="sessionRemoteHost.notRunning">
-        <source xml:lang="en">{0} is not running.</source>
-        <target>{0} не працює.</target>
-      </trans-unit>
-      <trans-unit id="sessionRemoteHost.notRunningTitle">
-        <source xml:lang="en">Unable to Connect to {0}</source>
-        <target>Неможливо підключитися до {0}</target>
-      </trans-unit>
-      <trans-unit id="sessionRemoteHost.reconnecting">
-        <source xml:lang="en">Reconnecting to {0}...</source>
-        <target>Відновлення з'єднання з {0}...</target>
-      </trans-unit>
-      <trans-unit id="sessionRemoteHost.reconnectingIn">
-        <source xml:lang="en">Reconnecting to {0} in {1}s</source>
-        <target>Відновлення з'єднання з {0} через {1}с</target>
-      </trans-unit>
-      <trans-unit id="sessionRemoteHost.retry">
-        <source xml:lang="en">Retry</source>
-        <target>Спробувати ще раз</target>
-      </trans-unit>
-      <trans-unit id="sessionRemoteHost.showLog">
-        <source xml:lang="en">Show Log</source>
-        <target>Показати журнал</target>
-      </trans-unit>
-      <trans-unit id="sessionRemoteHost.start">
-        <source xml:lang="en">Start {0}</source>
-        <target>Почати {0}</target>
-      </trans-unit>
-      <trans-unit id="sessionRemoteHost.startingDescription">
-        <source xml:lang="en">Starting {0}.</source>
-        <target>Починаючи {0}.</target>
-      </trans-unit>
-      <trans-unit id="sessionRemoteHost.tryNow">
-        <source xml:lang="en">Try Now</source>
-        <target>Спробуйте зараз</target>
-      </trans-unit>
-      <trans-unit id="sessionRemoteHost.unknown">
-        <source xml:lang="en">The remote host</source>
-        <target>Віддалений хост</target>
-      </trans-unit>
-      <trans-unit id="sessionRemoteHost.waitingForConnection">
-        <source xml:lang="en">Waiting for agent host connection...</source>
-        <target>Очікування з'єднання з агентом хоста...</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/browser/parts/sessionView" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="newSessionPane">
-        <source xml:lang="en">New Session</source>
-        <target>Нова сесія</target>
-      </trans-unit>
-      <trans-unit id="sessionPane">
-        <source xml:lang="en">Session: {0}</source>
-        <target>Сесія: {0}</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/browser/parts/sessionsPart" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="sessionsChatBackground.confetti">
-        <source xml:lang="en">Confetti!</source>
-        <target>Конфетті!</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/browser/sessionConversationGroups" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="sessionConversationStatus.ariaLabel">
-        <source xml:lang="en">State: {0}</source>
-        <target>Стан: {0}</target>
-      </trans-unit>
-      <trans-unit id="sessionConversationStatus.completed">
-        <source xml:lang="en">Completed</source>
-        <target>Завершено</target>
-      </trans-unit>
-      <trans-unit id="sessionConversationStatus.failed">
-        <source xml:lang="en">Failed</source>
-        <target>Не вдалося</target>
-      </trans-unit>
-      <trans-unit id="sessionConversationStatus.inProgress">
-        <source xml:lang="en">In Progress</source>
-        <target>В процесі</target>
-      </trans-unit>
-      <trans-unit id="sessionConversationStatus.needsInput">
-        <source xml:lang="en">Attention Needed</source>
-        <target>Увага потрібна</target>
-      </trans-unit>
-      <trans-unit id="sessionConversationStatus.new">
-        <source xml:lang="en">New</source>
-        <target>Новий</target>
       </trans-unit>
     </body>
   </file>
@@ -829,43 +553,15 @@
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/sessions/common/agentHostSessionsProvider" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/sessions/common/agentsWindowContextKeys" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="agentHost.connected">
-        <source xml:lang="en">Connected</source>
-        <target>Підключено</target>
-      </trans-unit>
-      <trans-unit id="agentHost.connecting">
-        <source xml:lang="en">Connecting</source>
-        <target>Підключення</target>
-      </trans-unit>
-      <trans-unit id="agentHost.disconnected">
-        <source xml:lang="en">Disconnected</source>
-        <target>Відключено</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/common/categories" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="agents">
-        <source xml:lang="en">Agents</source>
-        <target>Агенти</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/common/contextkeys" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="activeSessions">
-        <source xml:lang="en">The identifier of the active sessions panel</source>
-        <target>Ідентифікатор панелі активних сесій</target>
+      <trans-unit id="activeSessionCanvasReference">
+        <source xml:lang="en">The reference key of the active session Canvas editor</source>
+        <target>Ключ посилання активної сесії редактора Canvas</target>
       </trans-unit>
       <trans-unit id="agentHostSessionTypesAvailable">
         <source xml:lang="en">Whether at least one connected agent-host provider has advertised session types</source>
         <target>Чи принаймні один підключений постачальник агентів-хостів оголосив типи сесій</target>
-      </trans-unit>
-      <trans-unit id="agentSessionsDesktopChangesEditorTransition">
-        <source xml:lang="en">Whether the desktop Changes editor is being replaced during a session switch</source>
-        <target>Чи замінюється редактор змін на робочому столі під час перемикання сесій</target>
       </trans-unit>
       <trans-unit id="agentSessionsDesktopChangesTabAvailable">
         <source xml:lang="en">Whether the desktop session supports a Changes editor</source>
@@ -875,10 +571,6 @@
         <source xml:lang="en">Whether the desktop session supports a Changes editor but its tab is not currently open</source>
         <target>Чи підтримує сеанс робочого столу редактор змін, але його вкладка наразі не відкрита</target>
       </trans-unit>
-      <trans-unit id="agentSessionsDesktopDiffEditorInputActive">
-        <source xml:lang="en">Whether the active desktop editor input is a diff, independent of the editor used to render it</source>
-        <target>Чи є введення активного редактора робочого столу різницею, незалежно від редактора, який використовується для його відображення.</target>
-      </trans-unit>
       <trans-unit id="agentSessionsDesktopFilesTabAvailable">
         <source xml:lang="en">Whether the desktop session supports a Files editor</source>
         <target>Чи підтримує сеанс робочого столу редактор файлів</target>
@@ -887,17 +579,13 @@
         <source xml:lang="en">Whether the desktop session supports a Files tab but its tab is not currently open</source>
         <target>Чи підтримує сеанс робочого столу вкладку Файли, але ця вкладка наразі не відкрита</target>
       </trans-unit>
-      <trans-unit id="agentSessionsDesktopLayout">
-        <source xml:lang="en">Whether the Agents window is using the desktop layout</source>
-        <target>Чи використовує вікно Агентів настільний макет</target>
-      </trans-unit>
       <trans-unit id="agentSessionsHasDockedDetails">
         <source xml:lang="en">Whether the desktop active editor has a docked detail panel (a managed Changes/Files tab or a text file editor)</source>
-        <target>Чи має активний редактор на робочому столі закріплену панель деталей (управляється вкладка Зміни/Файли або редактор текстових файлів)</target>
+        <target>Чи має активний редактор на робочому столі закріплену панель деталей (керовану вкладку Зміни/Файли або редактор текстових файлів)</target>
       </trans-unit>
       <trans-unit id="automationsCustomViewFocus">
         <source xml:lang="en">Whether the Automations custom view has keyboard focus</source>
-        <target>Чи має користувацький вигляд Автоматизацій клавіатурний фокус</target>
+        <target>Чи має користувацький вигляд автоматизацій фокус клавіатури</target>
       </trans-unit>
       <trans-unit id="automationsHasItems">
         <source xml:lang="en">Whether there is at least one automation</source>
@@ -905,371 +593,27 @@
       </trans-unit>
       <trans-unit id="customViewVisible">
         <source xml:lang="en">Whether a custom view is shown in place of the sessions grid. The side panel and the panel are hidden while it is.</source>
-        <target>Чи відображається користувацький вигляд замість сесійної таблиці. Бічна панель та панель приховані, поки це так.</target>
+        <target>Чи відображається користувацький вигляд замість сесійної сітки. Бічна панель і панель приховані, поки це так.</target>
       </trans-unit>
       <trans-unit id="editorMaximized">
         <source xml:lang="en">Whether the editor area is maximized</source>
         <target>Чи максимізована область редактора</target>
       </trans-unit>
-      <trans-unit id="isQuickChatSession">
-        <source xml:lang="en">Whether the session in scope is a workspace-less quick chat</source>
-        <target>Чи є сесія в межах обговорення швидким чатом без робочого простору</target>
-      </trans-unit>
-      <trans-unit id="multipleSessionsVisible">
-        <source xml:lang="en">Whether more than one session is visible in the sessions part's grid</source>
-        <target>Чи більше ніж одна сесія видима в сітці частини сесій</target>
-      </trans-unit>
-      <trans-unit id="newSessionCreationProviderId">
-        <source xml:lang="en">The provider selected for new session creation before a draft exists</source>
-        <target>Постачальник, обраний для створення нової сесії до того, як існує чернетка</target>
-      </trans-unit>
-      <trans-unit id="sessionActiveChatCanArchive">
-        <source xml:lang="en">Whether the active chat can be archived or marked as done</source>
-        <target>Чи можна активний чат архівувати або позначити як завершений</target>
-      </trans-unit>
-      <trans-unit id="sessionActiveChatHasSideChats">
-        <source xml:lang="en">Whether the chat represented by the session or chat header has side chats</source>
-        <target>Чи має чат, представлений сесією або заголовком чату, бокові чати</target>
-      </trans-unit>
-      <trans-unit id="sessionActiveChatIsClosable">
-        <source xml:lang="en">Whether the active chat surface can be closed, either by hiding a non-main chat or by removing a side-by-side chat group</source>
-        <target>Чи можна закрити активну область чату, приховавши неосновний чат або видаливши групу чатів поруч?</target>
-      </trans-unit>
-      <trans-unit id="sessionActiveChatIsDeletable">
-        <source xml:lang="en">Whether the session's active chat can be permanently deleted from the tab strip, i.e. it is a real, user-created non-main chat (not the main chat and not a tool-spawned subagent chat, which are transient children). Used to scope the delete-chat keybinding</source>
-        <target>Чи може активний чат сесії бути назавжди видалений з панелі вкладок, тобто чи є це реальним, створеним користувачем неосновним чатом (не основним чатом і не чатом підагента, створеним інструментом, які є тимчасовими дочірніми). Використовується для визначення прив'язки клавіші видалення чату.</target>
-      </trans-unit>
-      <trans-unit id="sessionActiveChatIsUntitled">
-        <source xml:lang="en">Whether the active chat is an untitled nested session draft</source>
-        <target>Чи є активний чат чернеткою вкладеної сесії без назви</target>
-      </trans-unit>
-      <trans-unit id="sessionActiveChatResource">
-        <source xml:lang="en">The resource of the chat represented by the session or chat header</source>
-        <target>Ресурс чату, представлений заголовком сесії або чату</target>
-      </trans-unit>
-      <trans-unit id="sessionAgentMergeEnabled">
-        <source xml:lang="en">True when Agent Merge is enabled for the active agent session</source>
-        <target>Істина, коли злиття агентів увімкнено для активної сесії агента</target>
-      </trans-unit>
-      <trans-unit id="sessionBranchPickerVisible">
-        <source xml:lang="en">Whether the new-session view's branch picker is visible</source>
-        <target>Чи видимий вибір гілки у вигляді нової сесії</target>
-      </trans-unit>
-      <trans-unit id="sessionChatsPickerVisible">
-        <source xml:lang="en">Whether the chats picker (chats within the active session) is visible</source>
-        <target>Чи видимий вибір чатів (чати в активній сесії)</target>
-      </trans-unit>
-      <trans-unit id="sessionEnvironmentPickerVisible">
-        <source xml:lang="en">Whether the new-session view's environment picker is visible</source>
-        <target>Чи видимий вибір середовища у вигляді нової сесії</target>
-      </trans-unit>
-      <trans-unit id="sessionFocusedChatIsRenameTarget">
-        <source xml:lang="en">Whether the focused chat group's visible chat is a non-main chat that should receive the chat-specific rename command instead of the session rename command</source>
-        <target>Чи є видимий чат фокусованої групи чатом, що не є основним, який має отримати команду перейменування, специфічну для чату, замість команди перейменування сесії</target>
-      </trans-unit>
-      <trans-unit id="sessionHarnessPickerVisible">
-        <source xml:lang="en">Whether the new-session view's harness (session type) picker is visible — it is hidden when at most one harness can serve the selected workspace</source>
-        <target>Чи видимий вибірник (тип сесії) для системи нової сесії — він прихований, коли не більше одного пристрою може обслуговувати вибране робоче місце.</target>
-      </trans-unit>
-      <trans-unit id="sessionHasCachedChanges">
-        <source xml:lang="en">Whether the session view's session has remembered changes from the last time its changes pill was shown, while it has not reported its own changes yet. Used to render the changes pill optimistically when a session opens</source>
-        <target>Чи запам'ятала сесія перегляду зміни з останнього разу, коли її пігулка змін була показана, хоча вона ще не повідомила про свої власні зміни. Використовується для оптимістичного відображення пігулки змін, коли сесія відкривається.</target>
-      </trans-unit>
-      <trans-unit id="sessionHasChanges">
-        <source xml:lang="en">Whether the session view's session has pending changes (insertions or deletions)</source>
-        <target>Чи має сеанс перегляду сеансу незавершені зміни (додавання або видалення)</target>
-      </trans-unit>
-      <trans-unit id="sessionHasGitRepository">
-        <source xml:lang="en">Whether the session has a usable git repository</source>
-        <target>Чи має сесія використовуваний git-репозиторій</target>
-      </trans-unit>
-      <trans-unit id="sessionHasIssues">
-        <source xml:lang="en">Whether the session view's session references at least one GitHub issue</source>
-        <target>Чи посилається сесія перегляду на принаймні одну проблему GitHub</target>
-      </trans-unit>
-      <trans-unit id="sessionHasMultipleCommittedChats">
-        <source xml:lang="en">Whether the session view's session has more than one committed (non-draft) chat, which drives the Chats dropdown visibility</source>
-        <target>Чи має сесія в режимі перегляду сесії більше ніж один підтверджений (не чернетковий) чат, що визначає видимість випадаючого списку Чатів</target>
-      </trans-unit>
-      <trans-unit id="sessionHasMultipleOpenChats">
-        <source xml:lang="en">Whether the session view's session has more than one open chat (the tabs shown in the strip, including in-composer drafts). Used to scope chat-to-chat navigation (next/previous chat, the Ctrl+Tab chat switcher)</source>
-        <target>Чи має сесія у вигляді перегляду більше одного відкритого чату (вкладки, показані в смузі, включаючи чернетки в редакторі). Використовується для визначення навігації між чатами (наступний/попередній чат, перемикач чату Ctrl+Tab)</target>
-      </trans-unit>
-      <trans-unit id="sessionHasOpenPullRequest">
-        <source xml:lang="en">Whether the active session's branch has an open pull request</source>
-        <target>Чи має гілка активної сесії відкритий запит на злиття</target>
-      </trans-unit>
-      <trans-unit id="sessionHasPullRequest">
-        <source xml:lang="en">Whether the session view's session is associated with a GitHub pull request</source>
-        <target>Чи пов'язана сесія перегляду сесії з запитом на злиття GitHub</target>
-      </trans-unit>
-      <trans-unit id="sessionHasWorkspace">
-        <source xml:lang="en">Whether the session view's session has an associated workspace folder</source>
-        <target>Чи має сесія в режимі перегляду асоційовану папку робочого простору</target>
-      </trans-unit>
-      <trans-unit id="sessionHeaderActiveChatIsPinned">
-        <source xml:lang="en">Whether the chat represented by a side-by-side chat group header is pinned</source>
-        <target>Чи закріплено чат, представлений заголовком групи чатів поряд?</target>
-      </trans-unit>
-      <trans-unit id="sessionHeaderShowsChat">
-        <source xml:lang="en">Whether the session-style header represents one chat in a side-by-side chat group rather than the whole session</source>
-        <target>Чи представляє заголовок у стилі сесії один чат у групі чатів поруч, а не всю сесію</target>
-      </trans-unit>
-      <trans-unit id="sessionHeaderTargetsChat">
-        <source xml:lang="en">Whether nested-session lifecycle actions in the session-style header target the represented chat rather than the whole session</source>
-        <target>Чи цільові дії життєвого циклу вкладених сесій у заголовку стилю сесії націлені на представлений чат, а не на всю сесію</target>
-      </trans-unit>
-      <trans-unit id="sessionId">
-        <source xml:lang="en">The identifier of the session in scope (the active session globally, or a specific session within an isolated component such as the session view or a context menu overlay)</source>
-        <target>Ідентифікатор сесії в контексті (активна сесія глобально або конкретна сесія в межах ізольованого компонента, такого як вигляд сесії або накладка контекстного меню)</target>
-      </trans-unit>
-      <trans-unit id="sessionIsActive">
-        <source xml:lang="en">Whether the session in scope is in progress or needs attention</source>
-        <target>Чи сесія в межах обсягу триває, чи потребує уваги</target>
-      </trans-unit>
-      <trans-unit id="sessionIsArchived">
-        <source xml:lang="en">Whether the session in scope is archived/marked as done (the active session globally, or a specific session within an isolated component such as the session view or a context menu overlay)</source>
-        <target>Чи є сесія в обсязі архівованою/позначеною як завершену (активна сесія глобально або конкретна сесія в ізольованому компоненті, такому як перегляд сесії або накладка контекстного меню)</target>
-      </trans-unit>
-      <trans-unit id="sessionIsCreated">
-        <source xml:lang="en">Whether the session view's session has been created (chat view shown, not new-session view)</source>
-        <target>Чи була створена сесія перегляду сесії (показано перегляд чату, а не перегляд нової сесії)</target>
-      </trans-unit>
-      <trans-unit id="sessionIsMaximized">
-        <source xml:lang="en">Whether the session view is currently maximized in the sessions part's grid</source>
-        <target>Чи є перегляд сесії наразі розгорнутим у сітці частини сесій</target>
-      </trans-unit>
-      <trans-unit id="sessionIsRead">
-        <source xml:lang="en">Whether the session's main chat has been marked as read</source>
-        <target>Чи було основне повідомлення чату сесії позначено як прочитане</target>
-      </trans-unit>
-      <trans-unit id="sessionIsSticky">
-        <source xml:lang="en">Whether the session view's session is sticky in the grid</source>
-        <target>Чи є сесія перегляду сесії фіксованою в сітці</target>
-      </trans-unit>
-      <trans-unit id="sessionIsolationPickerVisible">
-        <source xml:lang="en">Whether the new-session view's isolation picker is visible — it is shown only when the isolation option is enabled and the workspace has a git repository</source>
-        <target>Чи видимий вибір ізоляції у вигляді нової сесії — він відображається лише тоді, коли опція ізоляції увімкнена, і робочий простір має git-репозиторій.</target>
-      </trans-unit>
-      <trans-unit id="sessionItem.isMultiSelection">
-        <source xml:lang="en">Whether multiple sessions are selected in the sessions list</source>
-        <target>Чи вибрано кілька сеансів у списку сеансів</target>
-      </trans-unit>
-      <trans-unit id="sessionPrimaryPullRequestOperation">
-        <source xml:lang="en">The id of the first pull request operation advertised for the active session, or empty when there is none</source>
-        <target>Ідентифікатор першої операції запиту на злиття, яка оголошена для активної сесії, або порожній, коли її немає.</target>
-      </trans-unit>
-      <trans-unit id="sessionProviderId">
-        <source xml:lang="en">The provider ID of the session in scope (the active session globally, or a specific session within an isolated component such as the session view or a context menu overlay)</source>
-        <target>Ідентифікатор постачальника сесії в межах (активна сесія глобально або конкретна сесія в ізольованому компоненті, такому як перегляд сесії або накладка контекстного меню)</target>
-      </trans-unit>
-      <trans-unit id="sessionShouldShowChatTabs">
-        <source xml:lang="en">Whether the session view's chat tab strip is shown, i.e. the session has more than one chat actually showing as a tab. A single visible tab always hides the strip</source>
-        <target>Чи показується смужка вкладок чату у вигляді сесії, тобто сесія має більше одного чату, який фактично відображається як вкладка. Одна видима вкладка завжди приховує смужку.</target>
-      </trans-unit>
-      <trans-unit id="sessionSupportsDelete">
-        <source xml:lang="en">Whether the session can be deleted</source>
-        <target>Чи може сесію бути видалено</target>
-      </trans-unit>
-      <trans-unit id="sessionSupportsFork">
-        <source xml:lang="en">Whether the session view's session supports forking a chat from a turn into a new peer chat</source>
-        <target>Чи підтримує перегляд сесії можливість розгалуження чату з черги в новий пір-чат.</target>
-      </trans-unit>
-      <trans-unit id="sessionSupportsMultipleChats">
-        <source xml:lang="en">Whether the session view's session supports multiple chats</source>
-        <target>Чи підтримує перегляд сесії кілька чатів</target>
-      </trans-unit>
-      <trans-unit id="sessionSupportsRename">
-        <source xml:lang="en">Whether the session can be renamed</source>
-        <target>Чи може сесію бути перейменовано</target>
-      </trans-unit>
-      <trans-unit id="sessionSupportsSideChat">
-        <source xml:lang="en">Whether the session view's session supports creating a side chat from a turn (via /btw)</source>
-        <target>Чи підтримує перегляд сесії створення бічного чату з обговорення (через /btw)</target>
-      </trans-unit>
-      <trans-unit id="sessionSyncActionVisible">
-        <source xml:lang="en">Whether the new-session view's sync action is visible</source>
-        <target>Чи видима дія синхронізації в режимі перегляду нової сесії</target>
-      </trans-unit>
-      <trans-unit id="sessionToolbarShowsSession">
-        <source xml:lang="en">Whether the session toolbar represents the whole session rather than a side-by-side chat group</source>
-        <target>Чи представляє панель інструментів сеансу весь сеанс, а не групу чату поруч?</target>
-      </trans-unit>
-      <trans-unit id="sessionType">
-        <source xml:lang="en">The session type of the session in scope (the active session globally, or a specific session within an isolated component such as the session view or a context menu overlay)</source>
-        <target>Тип сесії сесії в контексті (активна сесія глобально або конкретна сесія в ізольованому компоненті, такому як перегляд сесії або накладка контекстного меню)</target>
-      </trans-unit>
-      <trans-unit id="sessionUsesCombinedConfigPicker">
-        <source xml:lang="en">Whether the session's provider offers a combined mode and model configuration picker (used on phone layouts in place of the standalone pickers)</source>
-        <target>Чи пропонує постачальник сесії комбінований режим і вибір конфігурації моделі (використовується на телефонних макетах замість окремих вибірників)</target>
-      </trans-unit>
-      <trans-unit id="sessionUsesExperimentalComposerLayout">
-        <source xml:lang="en">Whether the session chat input uses the experimental composer layout</source>
-        <target>Чи використовує введення чату сесії експериментальне макет композера</target>
-      </trans-unit>
-      <trans-unit id="sessionWorkspaceIsVirtual">
-        <source xml:lang="en">Whether the session's workspace is virtual</source>
-        <target>Чи є робочий простір сесії віртуальним</target>
-      </trans-unit>
-      <trans-unit id="sessionWorkspacePickerGroup">
-        <source xml:lang="en">The currently active group tab in the session workspace picker</source>
-        <target>Вкладка групи, яка наразі активна, у вибірнику робочого простору сесії</target>
-      </trans-unit>
-      <trans-unit id="sessionWorkspacePickerVisible">
-        <source xml:lang="en">Whether the new-session view's workspace picker is rendered (as opposed to being replaced by the no-agent-host empty state)</source>
-        <target>Чи відображається вибір робочого простору у вигляді нової сесії (на відміну від заміни його порожнім станом без агента)</target>
-      </trans-unit>
-      <trans-unit id="sessionWorktreeCleanupEditorFocused">
-        <source xml:lang="en">Whether the Open worktree cleanup editor is focused</source>
-        <target>Чи сфокусований редактор очищення відкритого робочого дерева</target>
-      </trans-unit>
-      <trans-unit id="sessionWorktreePickerVisible">
-        <source xml:lang="en">Whether the new-session view's worktree picker is visible</source>
-        <target>Чи видимий вибірник робочого дерева нового сеансу</target>
+      <trans-unit id="inboxCanvasFocus">
+        <source xml:lang="en">Whether the Inbox canvas has keyboard focus</source>
+        <target>Чи має полотно Вхідних повідомлень фокус клавіатури</target>
       </trans-unit>
       <trans-unit id="sessionsAquariumActive">
         <source xml:lang="en">Whether the sessions aquarium overlay is active</source>
-        <target>Чи активний накладка акваріума сесій</target>
-      </trans-unit>
-      <trans-unit id="sessionsBlockedSessionsVisible">
-        <source xml:lang="en">Whether the blocked-sessions dropdown (surfacing sessions that require input) is open in the sessions titlebar</source>
-        <target>Чи відкритий випадаючий список заблокованих сесій (які потребують введення) у заголовку сесій</target>
-      </trans-unit>
-      <trans-unit id="sessionsCanGoBack">
-        <source xml:lang="en">Whether there is a previous session in the navigation history</source>
-        <target>Чи є попередня сесія в історії навігації</target>
-      </trans-unit>
-      <trans-unit id="sessionsCanGoForward">
-        <source xml:lang="en">Whether there is a next session in the navigation history</source>
-        <target>Чи є наступна сесія в історії навігації</target>
-      </trans-unit>
-      <trans-unit id="sessionsChatBackgroundAvailable">
-        <source xml:lang="en">Whether chat background customization is available for the current color theme</source>
-        <target>Чи доступна кастомізація фону чату для поточної кольорової теми</target>
-      </trans-unit>
-      <trans-unit id="sessionsChatBackgroundConfigured">
-        <source xml:lang="en">Whether a chat background is configured for the current color theme</source>
-        <target>Чи налаштовано фонове зображення чату для поточної кольорової теми</target>
-      </trans-unit>
-      <trans-unit id="sessionsChatBackgroundImageConfigured">
-        <source xml:lang="en">Whether a chat background image is configured for the current color theme</source>
-        <target>Чи налаштовано зображення фону чату для поточної кольорової теми</target>
-      </trans-unit>
-      <trans-unit id="sessionsFocus">
-        <source xml:lang="en">Whether the sessions part has keyboard focus</source>
-        <target>Чи має частина сесій фокус клавіатури</target>
-      </trans-unit>
-      <trans-unit id="sessionsHasClosedItem">
-        <source xml:lang="en">Whether a chat or session was closed recently and can be reopened with the Reopen Closed Chat or Session command</source>
-        <target>Чи був чат або сесія закриті нещодавно і можуть бути повторно відкриті за допомогою команди Відкрити закритий чат або сесію</target>
-      </trans-unit>
-      <trans-unit id="sessionsIsPhoneLayout">
-        <source xml:lang="en">Whether the current layout is the phone layout</source>
-        <target>Чи є поточне розташування розташуванням для телефону</target>
+        <target>Чи активний накладка акваріуму сесій</target>
       </trans-unit>
       <trans-unit id="sessionsKeyboardVisible">
         <source xml:lang="en">Whether the virtual keyboard is visible</source>
         <target>Чи видима віртуальна клавіатура</target>
       </trans-unit>
-      <trans-unit id="sessionsListPromoteNewChatAction">
-        <source xml:lang="en">Whether New Nested Session replaces Pin or Unpin as the primary action on session rows (A/B experiment)</source>
-        <target>Чи замінює нова вкладена сесія Pin або Unpin як основну дію на рядках сесії (експеримент A/B)</target>
-      </trans-unit>
-      <trans-unit id="sessionsListRearrange">
-        <source xml:lang="en">Whether the sessions list uses the experimental navigation arrangement</source>
-        <target>Чи використовує список сесій експериментальне розташування навігації</target>
-      </trans-unit>
-      <trans-unit id="sessionsPickerVisible">
-        <source xml:lang="en">Whether the sessions picker is visible</source>
-        <target>Чи видимий вибір сесій</target>
-      </trans-unit>
       <trans-unit id="sessionsTitleBarNewSessionEnabled">
         <source xml:lang="en">Whether the new-session button is shown in the titlebar when the sessions list is hidden (A/B experiment)</source>
-        <target>Чи відображається кнопка нової сесії в заголовку, коли список сесій прихований (експеримент A/B)</target>
-      </trans-unit>
-      <trans-unit id="sessionsVisible">
-        <source xml:lang="en">Whether the sessions part is visible</source>
-        <target>Чи видима частина сесій</target>
-      </trans-unit>
-      <trans-unit id="sessionsWelcomeVisible">
-        <source xml:lang="en">Whether the sessions welcome overlay is visible</source>
-        <target>Чи видимий накладний шар вітання сесій</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/common/sessionApplication" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="application.automations">
-        <source xml:lang="en">Automations</source>
-        <target>Автоматизації</target>
-      </trans-unit>
-      <trans-unit id="application.azureBoards">
-        <source xml:lang="en">Azure Boards</source>
-        <target>Azure Boards</target>
-      </trans-unit>
-      <trans-unit id="application.claude">
-        <source xml:lang="en">Claude</source>
-        <target>Клод</target>
-      </trans-unit>
-      <trans-unit id="application.codex">
-        <source xml:lang="en">Codex</source>
-        <target>Кодекс</target>
-      </trans-unit>
-      <trans-unit id="application.copilotApp">
-        <source xml:lang="en">Copilot App</source>
-        <target>Copilot App</target>
-      </trans-unit>
-      <trans-unit id="application.copilotCli">
-        <source xml:lang="en">Copilot CLI</source>
-        <target>Copilot CLI</target>
-      </trans-unit>
-      <trans-unit id="application.github">
-        <source xml:lang="en">GitHub</source>
-        <target>GitHub</target>
-      </trans-unit>
-      <trans-unit id="application.githubMcp">
-        <source xml:lang="en">GitHub MCP</source>
-        <target>GitHub MCP</target>
-      </trans-unit>
-      <trans-unit id="application.githubMobile">
-        <source xml:lang="en">GitHub Mobile</source>
-        <target>GitHub Mobile</target>
-      </trans-unit>
-      <trans-unit id="application.jetbrains">
-        <source xml:lang="en">JetBrains</source>
-        <target>JetBrains</target>
-      </trans-unit>
-      <trans-unit id="application.jira">
-        <source xml:lang="en">Jira</source>
-        <target>Jira</target>
-      </trans-unit>
-      <trans-unit id="application.linear">
-        <source xml:lang="en">Linear</source>
-        <target>Лінійний</target>
-      </trans-unit>
-      <trans-unit id="application.raycast">
-        <source xml:lang="en">Raycast</source>
-        <target>Raycast</target>
-      </trans-unit>
-      <trans-unit id="application.slack">
-        <source xml:lang="en">Slack</source>
-        <target>Slack</target>
-      </trans-unit>
-      <trans-unit id="application.teams">
-        <source xml:lang="en">Microsoft Teams</source>
-        <target>Microsoft Teams</target>
-      </trans-unit>
-      <trans-unit id="application.unknown">
-        <source xml:lang="en">Unknown</source>
-        <target>Невідомо</target>
-      </trans-unit>
-      <trans-unit id="application.visualStudio">
-        <source xml:lang="en">Visual Studio</source>
-        <target>Visual Studio</target>
-      </trans-unit>
-      <trans-unit id="application.vscode">
-        <source xml:lang="en">VS Code</source>
-        <target>VS Code</target>
+        <target>Чи відображається кнопка нової сесії в заголовку, коли список сесій приховано (експеримент A/B)</target>
       </trans-unit>
     </body>
   </file>
@@ -1309,289 +653,15 @@
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/sessions/services/artifactIntegrations/browser/clientArtifactRuntime" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/sessions/services/configuration/browser/configurationService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="artifactBackgroundSendUnavailable">
-        <source xml:lang="en">Background delivery is unavailable for this agent host.</source>
-        <target>Фонову доставку недоступно для цього хоста агента.</target>
+      <trans-unit id="errorInvalidConfiguration">
+        <source xml:lang="en">Unable to write into the settings file. Please open the file to correct errors/warnings in the file and try again.</source>
+        <target>Неможливо записати в файл налаштувань. Будь ласка, відкрийте файл, щоб виправити помилки/попередження у файлі та спробуйте ще раз.</target>
       </trans-unit>
-      <trans-unit id="artifactClientChatMoved">
-        <source xml:lang="en">The artifact's chat no longer belongs to this session.</source>
-        <target>Чат артефакту більше не належить цій сесії.</target>
-      </trans-unit>
-      <trans-unit id="artifactClientPaused">
-        <source xml:lang="en">Runs on this computer while connected. This runtime is currently paused.</source>
-        <target>Запускається на цьому комп'ютері під час підключення. Цей час виконання наразі призупинено.</target>
-      </trans-unit>
-      <trans-unit id="artifactNoticeUnavailable">
-        <source xml:lang="en">The agent host cannot receive this artifact automation notice.</source>
-        <target>Агент-хост не може отримати це повідомлення про автоматизацію артефакту.</target>
-      </trans-unit>
-      <trans-unit id="artifactNoticesUnsupported">
-        <source xml:lang="en">Automatic actions are paused because this agent host does not support the required chat notices. Manual actions remain available.</source>
-        <target>Автоматичні дії призупинені, оскільки цей хост агента не підтримує необхідні сповіщення чату. Ручні дії залишаються доступними.</target>
-      </trans-unit>
-      <trans-unit id="artifactRemoteWorkspaceUnavailable">
-        <source xml:lang="en">This client cannot reserve the agent host's workspace for an artifact action.</source>
-        <target>Цей клієнт не може зарезервувати робочий простір агента для дії з артефактом.</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/services/chatBackground/browser/chatBackgroundRenderer" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="sessionsChatBackground.confettiButton">
-        <source xml:lang="en">Celebrate</source>
-        <target>Святкувати</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/services/sessions/browser/sessionComparisonService" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="sessionComparison.additionalSynthesisInstructionsPrompt">
-        <source xml:lang="en">
-
-## Additional synthesis instructions
-{0}</source>
-        <target>## Додаткові інструкції з синтезу
-{0}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.attemptInterrupted">
-        <source xml:lang="en">The attempt was interrupted before it started.</source>
-        <target>Спроба була перервана до того, як почалася.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.attemptMissing">
-        <source xml:lang="en">The attempt session is no longer available.</source>
-        <target>Сесія спроби більше недоступна.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.harnessAndPermissions">
-        <source xml:lang="en">{0} · {1}</source>
-        <target>{0} · {1}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.insufficientSuccessfulAttempts">
-        <source xml:lang="en">Only {0} of {1} comparison attempts started. At least two must start successfully. Failed attempts: {2}</source>
-        <target>Тільки {0} з {1} спроб порівняння розпочато. Принаймні дві повинні успішно стартувати. Невдалі спроби: {2}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.judgeTitle">
-        <source xml:lang="en">Judge: {0}</source>
-        <target>Суддя: {0}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.judgeUnavailable">
-        <source xml:lang="en">The judge session did not start.</source>
-        <target>Сесія судді не розпочалася.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.launchCancelled">
-        <source xml:lang="en">The attempt was cancelled before it started.</source>
-        <target>Спроба була скасована до того, як почалася.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.launchUnavailable">
-        <source xml:lang="en">The session did not start.</source>
-        <target>Сесія не розпочалася.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.legacyAttemptTitle">
-        <source xml:lang="en">Attempt {0}: {1}</source>
-        <target>Спроба {0}: {1}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.noJudgeExplanation">
-        <source xml:lang="en">No Judge explanation is available; use the selected attempt as the base.</source>
-        <target>Немає пояснення судді; використовуйте вибрану спробу як основу.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.otherAttemptStrengthPrompt">
-        <source xml:lang="en">- **{0}**: {1}</source>
-        <target>- **{0}**: {1}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.otherAttemptStrengthsPrompt">
-        <source xml:lang="en">
-
-## Strong points from other attempts
-{0}</source>
-        <target>## Сильні сторони з інших спроб
-{0}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.rationale.codeQuality">
-        <source xml:lang="en">Code quality: {0}</source>
-        <target>Якість коду: {0}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.rationale.comparison">
-        <source xml:lang="en">Comparison: {0}</source>
-        <target>Порівняння: {0}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.rationale.solution">
-        <source xml:lang="en">Solution: {0}</source>
-        <target>Рішення: {0}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.rationale.validation">
-        <source xml:lang="en">Validation: {0}</source>
-        <target>Перевірка: {0}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.synthesisPrompt">
-        <source xml:lang="en">Synthesize the strongest parts of comparison `{0}` into a new implementation.
-
-## Process
-1. Call `#readAttemptComparison` exactly once with this comparison ID.
-2. Read implementation code only from the authoritative worktrees in the manifest. If `changedFilesStatus` is unavailable, read the Git diff from that worktree.
-3. Treat additional instructions below and in the manifest as explicit user requirements. Reconcile the strongest approaches coherently instead of copying hunks mechanically.
-4. When provided, consider the strong points from other attempts below and incorporate them when they improve the solution without conflicting with user requirements.
-5. Call `get_session_context` only with an exact `sessionContextTarget` returned by the manifest and only for rationale or validation evidence. Never recover implementation code or paths from a transcript.
-6. Do not inspect another checkout, discover sessions, or guess references. Preserve correct behavior and resolve the Judge's reported conflicts.
-
-## Judge recommendation
-{1}{2}{3}
-
-## Completion
-- Run the relevant validation.
-- Respond concisely with **Changes**, **Validation**, and **Remaining issues** sections using bullet points.</source>
-        <target>Синтезуйте найсильніші частини порівняння `{0}` у нову реалізацію.
-
-## Процес
-1. Викличте `#readAttemptComparison` точно один раз з цим ідентифікатором порівняння.
-2. Читайте код реалізації лише з авторитетних робочих дерев у маніфесті. Якщо `changedFilesStatus` недоступний, читайте Git diff з цього робочого дерева.
-3. Розглядайте додаткові інструкції нижче та в маніфесті як явні вимоги користувача. Узгоджуйте найсильніші підходи послідовно, а не копіюйте фрагменти механічно.
-4. Коли надано, враховуйте сильні сторони з інших спроб нижче та впроваджуйте їх, коли вони покращують рішення, не суперечачи вимогам користувача.
-5. Викликайте `get_session_context` лише з точним `sessionContextTarget`, повернутим маніфестом, і лише для обґрунтування або доказів валідації. Ніколи не відновлюйте код реалізації або шляхи з транскрипту.
-6. Не перевіряйте інший чекаут, не відкривайте сесії та не здогадуйтесь про посилання. Зберігайте правильну поведінку та вирішуйте конфлікти, про які повідомляє Суддя.
-
-## Рекомендація Судді
-{1}{2}{3}
-
-## Завершення
-- Виконайте відповідну валідацію.
-- Відповідайте лаконічно, використовуючи розділи **Зміни**, **Валідація** та **Залишкові проблеми** у вигляді маркованих пунктів.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.synthesisTitle">
-        <source xml:lang="en">Synthesis: {0}</source>
-        <target>Синтез: {0}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.synthesisUnavailable">
-        <source xml:lang="en">The synthesis session did not start.</source>
-        <target>Сесія синтезу не розпочалася.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.unknownWinningAttempt">
-        <source xml:lang="en">Winning attempt</source>
-        <target>Переможна спроба</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/services/sessions/browser/sessionsManagementService" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="automationProviderUnavailable">
-        <source xml:lang="en">The selected provider does not currently provide Automation configuration.</source>
-        <target>Вибраний постачальник наразі не надає конфігурацію автоматизації.</target>
-      </trans-unit>
-      <trans-unit id="newSession.sendFailed">
-        <source xml:lang="en">Failed to start session: {0}</source>
-        <target>Не вдалося розпочати сесію: {0}</target>
-      </trans-unit>
-      <trans-unit id="sessions.cancelCurrentRequest.loadFailed">
-        <source xml:lang="en">Failed to load chat session for cancellation.</source>
-        <target>Не вдалося завантажити чат-сесію для скасування.</target>
-      </trans-unit>
-      <trans-unit id="sessions.closeCanvas.unsupported">
-        <source xml:lang="en">Closing canvases is not supported for this session.</source>
-        <target>Закриття полотен не підтримується для цієї сесії.</target>
-      </trans-unit>
-      <trans-unit id="sessions.importSession.unsupported">
-        <source xml:lang="en">Importing is not supported for this session.</source>
-        <target>Імпорт не підтримується для цієї сесії.</target>
-      </trans-unit>
-      <trans-unit id="sessions.moveChat.unsupported">
-        <source xml:lang="en">This chat can't be moved there.</source>
-        <target>Цей чат не можна перемістити туди.</target>
-      </trans-unit>
-      <trans-unit id="sessions.moveSession.unsupported">
-        <source xml:lang="en">This session can't be moved there.</source>
-        <target>Цю сесію не можна перемістити туди.</target>
-      </trans-unit>
-      <trans-unit id="sessions.openCanvas.unsupported">
-        <source xml:lang="en">Opening canvases is not supported for this session.</source>
-        <target>Відкриття полотен не підтримується для цієї сесії.</target>
-      </trans-unit>
-      <trans-unit id="sessions.removeSessionArtifact.unsupported">
-        <source xml:lang="en">Removing artifacts is not supported for this session.</source>
-        <target>Видалення артефактів не підтримується для цієї сесії.</target>
-      </trans-unit>
-      <trans-unit id="sessions.worktreeCleanupUnavailable">
-        <source xml:lang="en">Retrying worktree cleanup is unavailable for this session.</source>
-        <target>Повторна спроба очищення робочого дерева недоступна для цієї сесії.</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/services/sessions/browser/sessionsService" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="sessionsService.trustFolderMessage">
-        <source xml:lang="en">An agent session will be able to read files, run commands, and make changes in this folder.</source>
-        <target>Сесія агента зможе читати файли, виконувати команди та вносити зміни в цю папку.</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/services/sessions/common/session" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="agentSessions.newChat">
-        <source xml:lang="en">New Chat</source>
-        <target>Новий чат</target>
-      </trans-unit>
-      <trans-unit id="agentSessions.newSession">
-        <source xml:lang="en">New Session</source>
-        <target>Нова сесія</target>
-      </trans-unit>
-      <trans-unit id="failed">
-        <source xml:lang="en">Failed</source>
-        <target>Не вдалося</target>
-      </trans-unit>
-      <trans-unit id="needsInput">
-        <source xml:lang="en">Attention needed</source>
-        <target>Увага потрібна</target>
-      </trans-unit>
-      <trans-unit id="sessionWorkspaceGroup.github">
-        <source xml:lang="en">GitHub</source>
-        <target>GitHub</target>
-      </trans-unit>
-      <trans-unit id="sessionWorkspaceGroup.local">
-        <source xml:lang="en">This Computer</source>
-        <target>Цей комп'ютер</target>
-      </trans-unit>
-      <trans-unit id="sessionWorkspaceGroup.remote">
-        <source xml:lang="en">Remote</source>
-        <target>Віддалений</target>
-      </trans-unit>
-      <trans-unit id="working">
-        <source xml:lang="en">Working...</source>
-        <target>Працює...</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/services/sessions/common/sessionComparison" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="sessionComparison.attemptLabel">
-        <source xml:lang="en">Attempt {0} ({1})</source>
-        <target>Спроба {0} ({1})</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.gitBranchRequired">
-        <source xml:lang="en">Comparisons require a Git repository with branch information.</source>
-        <target>Порівняння вимагають репозиторій Git з інформацією про гілки.</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.harnessAndModel">
-        <source xml:lang="en">{0} · {1}</source>
-        <target>{0} · {1}</target>
-      </trans-unit>
-      <trans-unit id="sessionComparison.harnessModelAndConfiguration">
-        <source xml:lang="en">{0} · {1}</source>
-        <target>{0} · {1}</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/sessions/services/sessions/common/sessionsProvider" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="nestedChatWorkspace.alreadyStarted">
-        <source xml:lang="en">The nested session already started, so its workspace can't change.</source>
-        <target>Вкладена сесія вже почалася, тому її робоче середовище не може змінитися.</target>
-      </trans-unit>
-      <trans-unit id="nestedChatWorkspace.notSupported">
-        <source xml:lang="en">This agent can't give a nested session its own folder.</source>
-        <target>Цей агент не може надати вкладеній сесії власну папку.</target>
-      </trans-unit>
-      <trans-unit id="nestedChatWorkspace.refused">
-        <source xml:lang="en">The nested session could not be created in {0}: {1}</source>
-        <target>Вкладену сесію не вдалося створити в {0}: {1}</target>
+      <trans-unit id="openSettings">
+        <source xml:lang="en">Open Settings</source>
+        <target>Відкрити Налаштування</target>
       </trans-unit>
     </body>
   </file>

@@ -46,9 +46,17 @@
   </file>
   <file original="src/vs/workbench/contrib/canvases/browser/editorCanvasActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="editorCanvas.available">
+        <source xml:lang="en">Available</source>
+        <target>Доступний</target>
+      </trans-unit>
       <trans-unit id="editorCanvas.openFailed">
         <source xml:lang="en">Could not open canvas {0}: {1}</source>
         <target>Не вдалося відкрити полотно {0}: {1}</target>
+      </trans-unit>
+      <trans-unit id="editorCanvas.running">
+        <source xml:lang="en">Running</source>
+        <target>Запуск</target>
       </trans-unit>
       <trans-unit id="editorCanvas.submenu">
         <source xml:lang="en">Canvas</source>
@@ -106,14 +114,6 @@
   </file>
   <file original="src/vs/workbench/contrib/canvases/electron-browser/canvasEditor" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="canvas.closed">
-        <source xml:lang="en">This canvas is no longer available.</source>
-        <target>Ця панель більше недоступна.</target>
-      </trans-unit>
-      <trans-unit id="canvas.content">
-        <source xml:lang="en">Canvas content. Use Accessibility Help for keyboard navigation.</source>
-        <target>Вміст полотна. Використовуйте Доступність для допомоги з навігацією за допомогою клавіатури.</target>
-      </trans-unit>
       <trans-unit id="canvas.help.close">
         <source xml:lang="en">Closing the tab hides this canvas. Use the Add Tab menu in the editor toolbar, then Canvas, to open any available canvas or reopen a hidden canvas.</source>
         <target>Закриття вкладки приховує цей канвас. Використайте меню Додати вкладку в панелі інструментів редактора, потім Канвас, щоб відкрити будь-який доступний канвас або повторно відкрити прихований канвас.</target>
@@ -138,61 +138,13 @@
         <source xml:lang="en">This canvas is a private page owned by its conversation. Its content is available while that conversation is shown.</source>
         <target>Ця панель є приватною сторінкою, що належить її розмові. Її вміст доступний, поки ця розмова відображається.</target>
       </trans-unit>
-      <trans-unit id="canvas.loadFailed">
-        <source xml:lang="en">The canvas could not be loaded.</source>
-        <target>Полотно не вдалося завантажити.</target>
-      </trans-unit>
-      <trans-unit id="canvas.loading">
-        <source xml:lang="en">Loading canvas…</source>
-        <target>Завантаження полотна…</target>
-      </trans-unit>
       <trans-unit id="canvas.mainWindowOnly">
         <source xml:lang="en">Canvases can only be shown in the main window beside their owning conversation.</source>
         <target>Полотна можуть бути показані лише в головному вікні поряд з їхньою власною розмовою.</target>
       </trans-unit>
-      <trans-unit id="canvas.noPage">
-        <source xml:lang="en">No canvas page is currently attached.</source>
-        <target>Наразі жодна сторінка полотна не прикріплена.</target>
-      </trans-unit>
-      <trans-unit id="canvas.noSemantics">
-        <source xml:lang="en">This canvas exposes no named accessible content.</source>
-        <target>Ця область не містить жодного іменованого доступного контенту.</target>
-      </trans-unit>
       <trans-unit id="canvas.ownerUnavailable">
         <source xml:lang="en">This canvas is only shown beside its owning conversation.</source>
         <target>Ця панель відображається лише поруч зі своїм власним обговоренням.</target>
-      </trans-unit>
-      <trans-unit id="canvas.pageFailed">
-        <source xml:lang="en">The canvas page failed to load.</source>
-        <target>Сторінка полотна не змогла завантажитися.</target>
-      </trans-unit>
-      <trans-unit id="canvas.pageLoading">
-        <source xml:lang="en">Loading canvas page…</source>
-        <target>Завантаження сторінки полотна…</target>
-      </trans-unit>
-      <trans-unit id="canvas.pending">
-        <source xml:lang="en">Waiting for this canvas to become available.</source>
-        <target>Очікування, поки цей канвас стане доступним.</target>
-      </trans-unit>
-      <trans-unit id="canvas.reading">
-        <source xml:lang="en">Reading accessible canvas content…</source>
-        <target>Читання доступного вмісту полотна…</target>
-      </trans-unit>
-      <trans-unit id="canvas.semanticChanged">
-        <source xml:lang="en">The canvas changed. Reopen Accessible View to read its current content.</source>
-        <target>Полотно змінилося. Відкрийте Доступний перегляд, щоб прочитати його поточний вміст.</target>
-      </trans-unit>
-      <trans-unit id="canvas.semanticError">
-        <source xml:lang="en">The canvas accessible content could not be read.</source>
-        <target>Вміст доступного полотна не вдалося прочитати.</target>
-      </trans-unit>
-      <trans-unit id="canvas.truncated">
-        <source xml:lang="en">The bounded accessible snapshot is incomplete.</source>
-        <target>Обмежений доступний знімок неповний.</target>
-      </trans-unit>
-      <trans-unit id="canvas.unavailable">
-        <source xml:lang="en">The canvas provider is temporarily unavailable.</source>
-        <target>Постачальник полотна тимчасово недоступний.</target>
       </trans-unit>
     </body>
   </file>
@@ -205,6 +157,78 @@
       <trans-unit id="canvas.openFailed">
         <source xml:lang="en">Canvas editor failed to open</source>
         <target>Не вдалося відкрити редактор Canvas.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/canvases/electron-browser/canvasView" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="canvas.closed">
+        <source xml:lang="en">This canvas is no longer available.</source>
+        <target>Ця панель більше недоступна.</target>
+      </trans-unit>
+      <trans-unit id="canvas.content">
+        <source xml:lang="en">Canvas content. Use Accessibility Help for keyboard navigation.</source>
+        <target>Зміст Canvas. Використовуйте Довідку з доступності для навігації з клавіатури.</target>
+      </trans-unit>
+      <trans-unit id="canvas.loadFailed">
+        <source xml:lang="en">The canvas could not be loaded.</source>
+        <target>Полотно не вдалося завантажити.</target>
+      </trans-unit>
+      <trans-unit id="canvas.loading">
+        <source xml:lang="en">Loading canvas…</source>
+        <target>Завантаження полотна…</target>
+      </trans-unit>
+      <trans-unit id="canvas.noPage">
+        <source xml:lang="en">No canvas page is currently attached.</source>
+        <target>Наразі жодна сторінка полотна не прикріплена.</target>
+      </trans-unit>
+      <trans-unit id="canvas.noSemantics">
+        <source xml:lang="en">This canvas exposes no named accessible content.</source>
+        <target>Ця область не містить жодного іменованого доступного контенту.</target>
+      </trans-unit>
+      <trans-unit id="canvas.pageFailed">
+        <source xml:lang="en">The canvas page failed to load.</source>
+        <target>Сторінка полотна не змогла завантажитися.</target>
+      </trans-unit>
+      <trans-unit id="canvas.pageLoading">
+        <source xml:lang="en">Loading canvas page…</source>
+        <target>Завантаження сторінки полотна…</target>
+      </trans-unit>
+      <trans-unit id="canvas.pending">
+        <source xml:lang="en">Waiting for this canvas to become available.</source>
+        <target>Очікування, поки цей полотно стане доступним.</target>
+      </trans-unit>
+      <trans-unit id="canvas.providerUnavailable">
+        <source xml:lang="en">The canvas provider is unavailable.</source>
+        <target>Постачальник полотна недоступний.</target>
+      </trans-unit>
+      <trans-unit id="canvas.reading">
+        <source xml:lang="en">Reading accessible canvas content…</source>
+        <target>Читання доступного вмісту полотна…</target>
+      </trans-unit>
+      <trans-unit id="canvas.reconnecting">
+        <source xml:lang="en">Reconnecting to the canvas provider…</source>
+        <target>Відновлення з'єднання з постачальником полотна…</target>
+      </trans-unit>
+      <trans-unit id="canvas.semanticChanged">
+        <source xml:lang="en">The canvas changed. Reopen Accessible View to read its current content.</source>
+        <target>Полотно змінилося. Відкрийте Доступний перегляд, щоб прочитати його поточний вміст.</target>
+      </trans-unit>
+      <trans-unit id="canvas.semanticError">
+        <source xml:lang="en">The canvas accessible content could not be read.</source>
+        <target>Вміст доступного полотна не вдалося прочитати.</target>
+      </trans-unit>
+      <trans-unit id="canvas.shownElsewhere">
+        <source xml:lang="en">This canvas is shown in another view.</source>
+        <target>Ця панель відображається в іншому вигляді.</target>
+      </trans-unit>
+      <trans-unit id="canvas.truncated">
+        <source xml:lang="en">The bounded accessible snapshot is incomplete.</source>
+        <target>Обмежений доступний знімок неповний.</target>
+      </trans-unit>
+      <trans-unit id="canvas.unavailable">
+        <source xml:lang="en">The canvas provider is temporarily unavailable.</source>
+        <target>Постачальник полотна тимчасово недоступний.</target>
       </trans-unit>
     </body>
   </file>

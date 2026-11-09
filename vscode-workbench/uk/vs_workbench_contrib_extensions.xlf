@@ -614,10 +614,6 @@
         <source xml:lang="en">Configure the Marketplace service URL to connect to</source>
         <target>Налаштуйте URL-адресу служби Marketplace для підключення до</target>
       </trans-unit>
-      <trans-unit id="extensions.supportAgentsWindow">
-        <source xml:lang="en">Override the Agents window support of an extension. Extensions using `true` will be enabled in the Agents window even when they would otherwise be disabled.</source>
-        <target>Перезаписати підтримку вікна Агентів розширення. Розширення, які використовують `true`, будуть активовані у вікні Агентів, навіть коли інакше вони були б вимкнені.</target>
-      </trans-unit>
       <trans-unit id="extensions.supportUntrustedWorkspaces">
         <source xml:lang="en">Override the untrusted workspace support of an extension. Extensions using `true` will always be enabled. Extensions using `limited` will always be enabled, and the extension will hide functionality that requires trust. Extensions using `false` will only be enabled only when the workspace is trusted.</source>
         <target>Перезаписати підтримку ненадійного робочого простору розширення. Розширення, що використовують `true`, завжди будуть увімкнені. Розширення, що використовують `limited`, завжди будуть увімкнені, і розширення приховає функціональність, яка потребує довіри. Розширення, що використовують `false`, будуть увімкнені лише тоді, коли робочий простір є надійним.</target>
@@ -1444,6 +1440,10 @@
         <source xml:lang="en">Installing extension {0} started. An editor is now open with more details on this extension</source>
         <target>Встановлення розширення {0} розпочато. Тепер відкрито редактор з додатковими деталями про це розширення.</target>
       </trans-unit>
+      <trans-unit id="installExtensionStartWithoutEditor">
+        <source xml:lang="en">Installing extension {0} started.</source>
+        <target>Встановлення розширення {0} розпочато.</target>
+      </trans-unit>
       <trans-unit id="installRecommendedExtension">
         <source xml:lang="en">Install Recommended Extension</source>
         <target>Встановити рекомендоване розширення</target>
@@ -1455,6 +1455,14 @@
       <trans-unit id="installed">
         <source xml:lang="en">Installed</source>
         <target>Встановлено</target>
+      </trans-unit>
+      <trans-unit id="installed version blocked by marketplace">
+        <source xml:lang="en">The installed version has been blocked by the Extension Marketplace. Switch to a permitted version.</source>
+        <target>Встановлена версія була заблокована Маркетплейсом розширень. Перейдіть на дозволену версію.</target>
+      </trans-unit>
+      <trans-unit id="installed version blocked by organization policy">
+        <source xml:lang="en">The installed version is blocked by your organization's policy. Switch to a permitted version.</source>
+        <target>Встановлена версія заблокована політикою вашої організації. Перейдіть на дозволену версію.</target>
       </trans-unit>
       <trans-unit id="installing">
         <source xml:lang="en">Installing</source>
@@ -1694,6 +1702,14 @@ Would you like to update the extension?</source>
       <trans-unit id="updated">
         <source xml:lang="en">Updated</source>
         <target>Оновлено</target>
+      </trans-unit>
+      <trans-unit id="updates blocked by marketplace">
+        <source xml:lang="en">Updates for this extension have been blocked by the Extension Marketplace.</source>
+        <target>Оновлення для цього розширення були заблоковані Ринком розширень.</target>
+      </trans-unit>
+      <trans-unit id="updates blocked by organization policy">
+        <source xml:lang="en">Updates for this extension are blocked by your organization's policy.</source>
+        <target>Оновлення для цього розширення заблоковані політикою вашої організації.</target>
       </trans-unit>
       <trans-unit id="verification failed">
         <source xml:lang="en">Cannot install '{0}' extension because {1} cannot verify the extension signature</source>
@@ -1939,6 +1955,10 @@ Would you like to update the extension?</source>
         <source xml:lang="en">Available Updates</source>
         <target>Доступні оновлення</target>
       </trans-unit>
+      <trans-unit id="browseMcpServers">
+        <source xml:lang="en">Browse MCP Servers</source>
+        <target>Перегляд серверів MCP</target>
+      </trans-unit>
       <trans-unit id="builtInThemesExtensions">
         <source xml:lang="en">Themes</source>
         <target>Теми</target>
@@ -2034,6 +2054,10 @@ Would you like to update the extension?</source>
       <trans-unit id="marketPlace">
         <source xml:lang="en">Marketplace</source>
         <target>Ринок</target>
+      </trans-unit>
+      <trans-unit id="mcpSearchNotification">
+        <source xml:lang="en">Showing extension results containing 'mcp'. Browse and install MCP servers from the Customizations marketplace.</source>
+        <target>Показано результати розширення, що містять 'mcp'. Перегляньте та встановіть сервери MCP з ринку налаштувань.</target>
       </trans-unit>
       <trans-unit id="open user settings">
         <source xml:lang="en">Open User Settings</source>
