@@ -14,6 +14,10 @@
         <source xml:lang="en">Color of background for comment ranges.</source>
         <target>Колір фону для діапазонів коментарів.</target>
       </trans-unit>
+      <trans-unit id="commentThreadRangeBorder">
+        <source xml:lang="en">Color of the outline around the code that a floating comment thread is about, and of the line connecting the thread to that code, when the thread is neither resolved nor unresolved.</source>
+        <target>Колір контуру навколо коду, про який йдеться у спливаючому коментарі, та лінії, що з'єднує потік коментарів з цим кодом, коли потік не є ні вирішеним, ні невирішеним.</target>
+      </trans-unit>
       <trans-unit id="resolvedCommentBorder">
         <source xml:lang="en">Color of borders and arrow for resolved comments.</source>
         <target>Колір меж і стрілки для вирішених коментарів.</target>
@@ -124,6 +128,34 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/comments/browser/commentThreadEditorWidget" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="confirmCollapse">
+        <source xml:lang="en">Collapsing this comment thread will discard unsubmitted comments. Are you sure you want to discard these comments?</source>
+        <target>Згорнення цього коментарного потоку призведе до втрати незаявлених коментарів. Ви впевнені, що хочете відкинути ці коментарі?</target>
+      </trans-unit>
+      <trans-unit id="discard">
+        <source xml:lang="en">Discard</source>
+        <target>Видалити</target>
+      </trans-unit>
+      <trans-unit id="neverAskAgain">
+        <source xml:lang="en">Never ask me again</source>
+        <target>Ніколи більше не питай мене.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/comments/browser/commentThreadFloatingWidget" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="closeIcon">
+        <source xml:lang="en">Icon to close a floating review comment.</source>
+        <target>Іконка для закриття плаваючого коментаря відгуку.</target>
+      </trans-unit>
+      <trans-unit id="label.close">
+        <source xml:lang="en">Close</source>
+        <target>Закрити</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/comments/browser/commentThreadHeader" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="collapseIcon">
@@ -153,22 +185,6 @@
       <trans-unit id="commentLabelWithKeybindingNoKeybinding">
         <source xml:lang="en">{0}, run the command Open Accessibility Help which is currently not triggerable via keybinding.</source>
         <target>{0}, виконайте команду Відкрити довідку з доступності, яка наразі не може бути викликана за допомогою комбінації клавіш.</target>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="src/vs/workbench/contrib/comments/browser/commentThreadZoneWidget" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="confirmCollapse">
-        <source xml:lang="en">Collapsing this comment thread will discard unsubmitted comments. Are you sure you want to discard these comments?</source>
-        <target>Згортання цього коментарного потоку призведе до скасування не надісланих коментарів. Ви впевнені, що хочете скасувати ці коментарі?</target>
-      </trans-unit>
-      <trans-unit id="discard">
-        <source xml:lang="en">Discard</source>
-        <target>Видалити</target>
-      </trans-unit>
-      <trans-unit id="neverAskAgain">
-        <source xml:lang="en">Never ask me again</source>
-        <target>Ніколи більше не питай мене</target>
       </trans-unit>
     </body>
   </file>
@@ -209,6 +225,18 @@
       <trans-unit id="comments.openView.never">
         <source xml:lang="en">The comments view will never be opened.</source>
         <target>Перегляд коментарів ніколи не буде відкрито.</target>
+      </trans-unit>
+      <trans-unit id="comments.thread.experimental.style">
+        <source xml:lang="en">Controls how comment threads are shown in the editor.</source>
+        <target>Контролює, як коментарі відображаються в редакторі.</target>
+      </trans-unit>
+      <trans-unit id="comments.thread.experimental.style.floating">
+        <source xml:lang="en">Show comment threads in floating windows above the code they are about. The windows can be moved by dragging their title and resized by dragging their edges.</source>
+        <target>Показуйте коментарі в плаваючих вікнах над кодом, до якого вони відносяться. Вікна можна переміщати, перетягуючи їх заголовок, і змінювати їх розмір, перетягуючи їх краї.</target>
+      </trans-unit>
+      <trans-unit id="comments.thread.experimental.style.inline">
+        <source xml:lang="en">Show comment threads between the lines of code they are about.</source>
+        <target>Показати коментарі між рядками коду, до яких вони відносяться.</target>
       </trans-unit>
       <trans-unit id="comments.visible">
         <source xml:lang="en">Controls the visibility of the comments bar and comment threads in editors that have commenting ranges and comments. Comments are still accessible via the Comments view and will cause commenting to be toggled on in the same way running the command "Comments: Toggle Editor Commenting" toggles comments.</source>

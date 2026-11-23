@@ -192,18 +192,6 @@
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/sessions/contrib/providers/copilotChatSessions/browser/copilotChatSessionsActions" source-language="en" datatype="plaintext" target-language="uk">
-    <body>
-      <trans-unit id="sandbox.approvalPicker">
-        <source xml:lang="en">Approvals</source>
-        <target>Схвалення</target>
-      </trans-unit>
-      <trans-unit id="sandbox.modePicker">
-        <source xml:lang="en">Agent Mode</source>
-        <target>Режим агента</target>
-      </trans-unit>
-    </body>
-  </file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/connectionDiagnostics.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="connectionDiagnostics.captureFailed">
@@ -218,6 +206,10 @@
         <source xml:lang="en">Escape or Close dismisses diagnostics. Closing this accessible view returns to the diagnostics snapshot.</source>
         <target>Escape або Close закриває діагностику. Закриття цього доступного вигляду повертає до знімка діагностики.</target>
       </trans-unit>
+      <trans-unit id="connectionDiagnostics.help.connectionLogs">
+        <source xml:lang="en">Snapshots include recorded connection stages and a bounded excerpt of connection lines from the local Window log and, on desktop, the Shared log, which records SSH, WSL, Dev Tunnel, and Dev Container connection setup. Copy and Download use the captured text without collecting new logs. Known credentials and your home folder are redacted; review messages before sharing.</source>
+        <target>Снімки включають зафіксовані етапи з'єднання та обмежений витяг з'єднувальних рядків з локального журналу Windows та, на робочому столі, спільного журналу, який фіксує налаштування з'єднання SSH, WSL, Dev Tunnel та Dev Container. Копіювання та завантаження використовують захоплений текст без збору нових журналів. Відомі облікові дані та ваша домашня папка приховані; перегляньте повідомлення перед тим, як ділитися.</target>
+      </trans-unit>
       <trans-unit id="connectionDiagnostics.help.copy">
         <source xml:lang="en">Copy Diagnostics and Download Diagnostics include the entire displayed snapshot, including collapsed sections. Review host names and addresses before sharing. Refresh reads current local state without discovery, authentication, or connection changes.</source>
         <target>Копіювання діагностики та завантаження діагностики включає весь відображений знімок, включаючи згорнуті секції. Перегляньте імена та адреси хостів перед тим, як ділитися. Оновлення читає поточний локальний стан без змін у виявленні, автентифікації або з'єднаннях.</target>
@@ -225,10 +217,6 @@
       <trans-unit id="connectionDiagnostics.help.hostPicker">
         <source xml:lang="en">On phones, Open Connection Information beside the Hosts sheet title closes the picker and opens this report. Closing the report returns focus to the host picker control, or its toolbar if that control was replaced.</source>
         <target>На телефонах, відкриття Інформації про з'єднання поруч із заголовком аркуша Хостів закриває вибірник і відкриває цей звіт. Закриття звіту повертає фокус на контроль вибору хостів або на його панель інструментів, якщо цей контроль був замінений.</target>
-      </trans-unit>
-      <trans-unit id="connectionDiagnostics.help.logs">
-        <source xml:lang="en">Snapshots include recorded connection stages and a bounded excerpt of the local Window log. Copy and Download use the captured text without collecting new logs. Known credentials are redacted; review messages before sharing.</source>
-        <target>Снапшоти включають зафіксовані етапи з'єднання та обмежений уривок локального журналу Windows. Копіювання та завантаження використовують захоплений текст без збору нових журналів. Відомі облікові дані приховані; перегляньте повідомлення перед тим, як ділитися.</target>
       </trans-unit>
       <trans-unit id="connectionDiagnostics.help.navigation">
         <source xml:lang="en">Use Tab and Shift+Tab to move between the header actions, report, and collapsed sections. Use arrow keys to scroll the focused report. Use Enter or Space to expand client details.</source>
@@ -264,11 +252,95 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/createDevContainerTool" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="createDevContainer.approvedHostUnavailable">
+        <source xml:lang="en">The Dev Container was not created: the approved host {0} can no longer run Dev Containers. Available hosts: {1}</source>
+        <target>Контейнер розробника не був створений: затверджений хост {0} більше не може запускати контейнери розробника. Доступні хости: {1}</target>
+      </trans-unit>
+      <trans-unit id="createDevContainer.confirmation">
+        <source xml:lang="en">Create a Dev Container from the Ubuntu base image on {0}? It keeps its files in a Docker volume until you delete it in Remote Environments.</source>
+        <target>Створити Dev Container з базового образу Ubuntu на {0}? Він зберігає свої файли в Docker-обсязі, поки ви не видалите його в Remote Environments.</target>
+      </trans-unit>
+      <trans-unit id="createDevContainer.confirmationTitle">
+        <source xml:lang="en">Create Dev Container?</source>
+        <target>Створити контейнер розробника?</target>
+      </trans-unit>
+      <trans-unit id="createDevContainer.disabled">
+        <source xml:lang="en">Creating Dev Containers is disabled.</source>
+        <target>Створення Dev контейнерів вимкнено.</target>
+      </trans-unit>
+      <trans-unit id="createDevContainer.displayName">
+        <source xml:lang="en">Create Dev Container</source>
+        <target>Створити контейнер розробника</target>
+      </trans-unit>
+      <trans-unit id="createDevContainer.hostRequired">
+        <source xml:lang="en">Docker is not available on this computer. Choose a host: {0}</source>
+        <target>Docker недоступний на цьому комп'ютері. Виберіть хост: {0}</target>
+      </trans-unit>
+      <trans-unit id="createDevContainer.invalidHost">
+        <source xml:lang="en">{0} must be a non-empty string.</source>
+        <target>{0} повинен бути непорожнім рядком.</target>
+      </trans-unit>
+      <trans-unit id="createDevContainer.invalidInput">
+        <source xml:lang="en">The input must be an object with an optional {0} string.</source>
+        <target>Вхідні дані повинні бути об'єктом з необов'язковим рядком {0}.</target>
+      </trans-unit>
+      <trans-unit id="createDevContainer.invocation">
+        <source xml:lang="en">Creating Dev Container on {0}</source>
+        <target>Створення контейнера розробника на {0}</target>
+      </trans-unit>
+      <trans-unit id="createDevContainer.noHosts">
+        <source xml:lang="en">No Docker host is available. Start Docker on this computer, or connect to an SSH, Tunnel, or WSL host that has Docker.</source>
+        <target>Немає доступного хоста Docker. Запустіть Docker на цьому комп'ютері або підключіться до хоста SSH, Tunnel або WSL, на якому є Docker.</target>
+      </trans-unit>
+      <trans-unit id="createDevContainer.notPrepared">
+        <source xml:lang="en">The Dev Container was not created because the host of its confirmation is no longer known. Call the tool again.</source>
+        <target>Контейнер розробника не був створений, оскільки хост його підтвердження більше не відомий. Викличте інструмент знову.</target>
+      </trans-unit>
+      <trans-unit id="createDevContainer.notReady">
+        <source xml:lang="en">Created {0} on {1}, not yet ready for sessions</source>
+        <target>Створено {0} на {1}, ще не готовий до сесій</target>
+      </trans-unit>
+      <trans-unit id="createDevContainer.past">
+        <source xml:lang="en">Created Dev Container on {0}</source>
+        <target>Створено Dev Container на {0}</target>
+      </trans-unit>
+      <trans-unit id="createDevContainer.result">
+        <source xml:lang="en">Created {0} on {1}</source>
+        <target>Створено {0} на {1}</target>
+      </trans-unit>
+      <trans-unit id="createDevContainer.showLog">
+        <source xml:lang="en">Show Dev Container Log</source>
+        <target>Показати журнал контейнера розробника</target>
+      </trans-unit>
+      <trans-unit id="createDevContainer.thisComputer">
+        <source xml:lang="en">This Computer</source>
+        <target>Цей комп'ютер</target>
+      </trans-unit>
+      <trans-unit id="createDevContainer.unknownHost">
+        <source xml:lang="en">Dev Containers cannot be created on {0} now. Available hosts: {1}</source>
+        <target>Контейнери розробки не можуть бути створені на {0} зараз. Доступні хости: {1}</target>
+      </trans-unit>
+      <trans-unit id="createDevContainer.userDescription">
+        <source xml:lang="en">Create a Dev Container with an agent host running inside</source>
+        <target>Створіть Dev Container з агентом, що працює всередині.</target>
+      </trans-unit>
+      <trans-unit id="createDevContainer.workspaceUnavailable">
+        <source xml:lang="en">The Dev Container was created, but its workspace folder is not available. It is listed in Remote Environments.</source>
+        <target>Контейнер розробника був створений, але його папка робочого простору недоступна. Вона вказана в віддалених середовищах.</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/browser/missionControlAgentHost.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="connectMissionControlHost">
         <source xml:lang="en">GitHub Environments...</source>
         <target>GitHub Середовища...</target>
+      </trans-unit>
+      <trans-unit id="connectMissionControlHostTooltip">
+        <source xml:lang="en">Connect to a computer shared through GitHub Environments</source>
+        <target>Підключитися до комп'ютера, спільного через GitHub Environments</target>
       </trans-unit>
     </body>
   </file>
@@ -378,6 +450,10 @@
         <source xml:lang="en">SSH...</source>
         <target>SSH...</target>
       </trans-unit>
+      <trans-unit id="connectViaSSHTooltip">
+        <source xml:lang="en">Connect to a computer over SSH</source>
+        <target>Підключитися до комп'ютера через SSH</target>
+      </trans-unit>
       <trans-unit id="connectViaTunnel">
         <source xml:lang="en">Connect to Remote Agent Host via Dev Tunnel</source>
         <target>Підключитися до віддаленого агента через Dev Tunnel</target>
@@ -386,6 +462,10 @@
         <source xml:lang="en">Dev Tunnels...</source>
         <target>Dev Tunnels...</target>
       </trans-unit>
+      <trans-unit id="connectViaTunnelTooltip">
+        <source xml:lang="en">Connect to a computer shared through a dev tunnel</source>
+        <target>Підключитися до комп'ютера, спільно використовуваного через dev tunnel</target>
+      </trans-unit>
       <trans-unit id="connectViaWSL">
         <source xml:lang="en">Connect to Remote Agent Host via WSL</source>
         <target>Підключитися до віддаленого агента хоста через WSL</target>
@@ -393,6 +473,10 @@
       <trans-unit id="connectViaWSLShort">
         <source xml:lang="en">WSL...</source>
         <target>WSL...</target>
+      </trans-unit>
+      <trans-unit id="connectViaWSLTooltip">
+        <source xml:lang="en">Run sessions in a WSL distribution on this computer</source>
+        <target>Запускайте сесії в дистрибутиві WSL на цьому комп'ютері</target>
       </trans-unit>
       <trans-unit id="nameRemotePlaceholder">
         <source xml:lang="en">My Remote</source>
@@ -622,6 +706,10 @@
         <source xml:lang="en">Connect via Dev Tunnel</source>
         <target>Підключитися через Dev Tunnel</target>
       </trans-unit>
+      <trans-unit id="tunnelPickUnknown">
+        <source xml:lang="en">{0} · Status unknown</source>
+        <target>{0} · Статус невідомий</target>
+      </trans-unit>
       <trans-unit id="tunnelRefreshAfterDeleteFailed">
         <source xml:lang="en">Deleted dev tunnel '{0}', but failed to refresh dev tunnels: {1}</source>
         <target>Видалено dev тунель '{0}', але не вдалося оновити dev тунелі: {1}</target>
@@ -631,8 +719,8 @@
         <target>Оновити сервер хосту віддаленого агента...</target>
       </trans-unit>
       <trans-unit id="updateRemoteAgentHost.none">
-        <source xml:lang="en">No remote agent hosts need updating.</source>
-        <target>Не потрібно оновлювати хости віддалених агентів.</target>
+        <source xml:lang="en">No remote agent hosts can be updated from here.</source>
+        <target>Звідси не можна оновити жоден хост віддаленого агента.</target>
       </trans-unit>
       <trans-unit id="updateRemoteAgentHost.noneUpgradable">
         <source xml:lang="en">No remote agent hosts can be updated from here. Incompatible hosts must be updated manually, then reconnected.</source>
@@ -770,6 +858,14 @@
         <source xml:lang="en">Enable running Agent Host sessions in Dev Containers.</source>
         <target>Увімкніть запуск сесій Agent Host у контейнерах розробки.</target>
       </trans-unit>
+      <trans-unit id="chat.agentHost.devContainer.environments.enabled">
+        <source xml:lang="en">Enable creating Dev Container environments on this computer and on SSH, Tunnel, and WSL hosts that have Docker, from Remote Environments in the Agents window. An environment is a container from a base Linux image that keeps its files in a Docker volume and can be chosen in the Environment picker. One on a remote host connects and disconnects with that host. One on this computer starts when you first use it. Requires Dev Container Agent Host sessions to be enabled.</source>
+        <target>Увімкніть створення середовищ Dev Container на цьому комп'ютері та на хостах SSH, Tunnel і WSL, які мають Docker, з Remote Environments у вікні Agents. Середовище - це контейнер з базового образу Linux, який зберігає свої файли у Docker-обсязі і може бути обрано в вибірнику середовищ. Середовище на віддаленому хості підключається та відключається від цього хоста. Середовище на цьому комп'ютері запускається, коли ви вперше його використовуєте. Потрібно, щоб сеанси Dev Container Agent Host були увімкнені.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.devContainer.handoff.enabled">
+        <source xml:lang="en">Let agents in the Agents window create Dev Container environments and continue a task in a new session inside one, guided by the built-in `dev-container-handoff` skill. Also enables the remote session tools, as {0} does. Requires {1}.</source>
+        <target>Нехай агенти у вікні Агенти створюють середовища Dev Container та продовжують завдання в новій сесії всередині одного з них, керуючись вбудованим навиком `dev-container-handoff`. Також активує інструменти віддаленої сесії, як це робить {0}. Вимагає {1}.</target>
+      </trans-unit>
       <trans-unit id="chat.agentHost.devContainer.idleTimeout">
         <source xml:lang="en">Number of seconds with no Agent Host sessions actively working, waiting for input, or holding unsent drafts before automatically stopping a Dev Container. Set to 0 to disable automatic shutdown. Archiving or deleting sessions can still remove the container.</source>
         <target>Кількість секунд без активних сесій Agent Host, які працюють, чекають на введення або утримують не надіслані чернетки, перед автоматичним зупиненням Dev Container. Встановіть 0, щоб вимкнути автоматичне завершення роботи. Архівування або видалення сесій все ще може видалити контейнер.</target>
@@ -777,6 +873,10 @@
       <trans-unit id="chat.agentHost.devContainer.samples.enabled">
         <source xml:lang="en">Show Dev Container samples in the Agents window workspace picker. The sample is cloned into a Docker volume and started when you send the first prompt. Requires Dev Container Agent Host sessions to be enabled.</source>
         <target>Показати зразки Dev Container у виборі робочого простору вікна Агентів. Зразок клонується в об'єм Docker і запускається, коли ви надсилаєте перший запит. Потрібно, щоб сесії Dev Container Agent Host були увімкнені.</target>
+      </trans-unit>
+      <trans-unit id="chat.agentHost.devContainer.stateVolume.enabled">
+        <source xml:lang="en">Keep user and agent state of new Dev Containers, including agent sessions and worktrees, on a per-container volume across rebuilds.</source>
+        <target>Зберігайте стан користувача та агента нових Dev Containers, включаючи сесії агента та worktrees, на обсязі кожного контейнера під час перебудов.</target>
       </trans-unit>
       <trans-unit id="chat.agentHost.devContainer.worktree.enabled">
         <source xml:lang="en">Enable running Dev Container Agent Host sessions in new worktrees.</source>
@@ -801,6 +901,30 @@
       <trans-unit id="devContainerAgentHost.workspaceRequired">
         <source xml:lang="en">Dev Container Agent Hosts require a local, SSH, Tunnel, or WSL workspace.</source>
         <target>Сесії Dev Container вимагають робочого простору.</target>
+      </trans-unit>
+      <trans-unit id="devContainerEnvironment.connectionName">
+        <source xml:lang="en">Dev Container on {0}</source>
+        <target>Dev Container на {0}</target>
+      </trans-unit>
+      <trans-unit id="devContainerEnvironment.disabled">
+        <source xml:lang="en">Dev Container environments are not enabled.</source>
+        <target>Середовища Dev Container не активовані.</target>
+      </trans-unit>
+      <trans-unit id="devContainerEnvironment.hostDisconnected">
+        <source xml:lang="en">The host of this Dev Container is not connected.</source>
+        <target>Хост цього Dev Container не підключений.</target>
+      </trans-unit>
+      <trans-unit id="devContainerEnvironment.localConnectionName">
+        <source xml:lang="en">Dev Container on This Computer</source>
+        <target>Контейнер розробника на цьому комп'ютері</target>
+      </trans-unit>
+      <trans-unit id="devContainerEnvironment.thisComputer">
+        <source xml:lang="en">This Computer</source>
+        <target>Цей комп'ютер</target>
+      </trans-unit>
+      <trans-unit id="devContainerEnvironment.unsupportedHost">
+        <source xml:lang="en">This remote Agent Host does not support Dev Container environments. Update VS Code on the remote machine.</source>
+        <target>Цей віддалений хост агента не підтримує середовища Dev Container. Оновіть VS Code на віддаленій машині.</target>
       </trans-unit>
       <trans-unit id="devContainerOutputChannel">
         <source xml:lang="en">Dev Container ({0})</source>
@@ -841,8 +965,8 @@
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/electron-browser/remoteAgentHostLocationPreferenceCommand" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="changeRemoteAgentHostLocationPreference">
-        <source xml:lang="en">Change Preferred Remote Agent Location</source>
-        <target>Змінити бажане місце розташування віддаленого агента</target>
+        <source xml:lang="en">Configure Remote Agent Run Behavior</source>
+        <target>Налаштувати поведінку запуску віддаленого агента</target>
       </trans-unit>
       <trans-unit id="remoteAgentHostLocation.noHosts">
         <source xml:lang="en">No remote agent hosts are configured yet. Connect to one first, then change its preferred agent run location.</source>
@@ -856,6 +980,14 @@
   </file>
   <file original="src/vs/sessions/contrib/providers/remoteAgentHost/electron-browser/remotes.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="remotes.closeDetails">
+        <source xml:lang="en">Close Environment Details</source>
+        <target>Закрити деталі середовища</target>
+      </trans-unit>
+      <trans-unit id="remotes.collapseSharing">
+        <source xml:lang="en">Collapse Sharing Options</source>
+        <target>Сховати параметри спільного доступу</target>
+      </trans-unit>
       <trans-unit id="remotes.editorDisabled">
         <source xml:lang="en">Remote agent hosts are disabled.</source>
         <target>Віддалені хости агентів вимкнені.</target>
@@ -865,44 +997,88 @@
         <target>Віддалені середовища</target>
       </trans-unit>
       <trans-unit id="remotes.environmentPickerDisabled">
-        <source xml:lang="en">The Environment picker is disabled.</source>
+        <source xml:lang="en">The environment picker is disabled.</source>
         <target>Вибір середовища вимкнено.</target>
       </trans-unit>
+      <trans-unit id="remotes.help.configureSSH">
+        <source xml:lang="en">To add or correct an SSH host, select Open SSH Configuration. Add or edit the Host entry, save it, then refresh Remote Environments.</source>
+        <target>Щоб додати або виправити SSH-хост, виберіть Відкрити конфігурацію SSH. Додайте або відредагуйте запис Host, збережіть його, а потім оновіть Віддалені середовища.</target>
+      </trans-unit>
       <trans-unit id="remotes.help.connection">
-        <source xml:lang="en">Status labels include Connected, Connecting, and Disconnected. A warning indicates that a connection you requested failed. Hover the warning or open the Accessible View to read the error. Automatic connection failures do not create a warning, but automatic retries retain an existing warning until they finish. A failed retry updates the error; a successful retry clears it. GitHub environments whose owning application is not online show Offline. Use Connect or Disconnect to manage the connection. Connection actions are unavailable while connecting or reconnecting. Disconnect follows the existing remote behavior and may remove it from the picker.</source>
-        <target>Мітки статусу включають Підключено, Підключається та Відключено. Попередження вказує на те, що запитане вами з'єднання не вдалося. Наведіть курсор на попередження або відкрийте Доступний вигляд, щоб прочитати помилку. Автоматичні збої з'єднання не створюють попередження, але автоматичні повторні спроби зберігають існуюче попередження, поки не завершаться. Невдала повторна спроба оновлює помилку; успішна повторна спроба очищає її. Середовища GitHub, власний додаток яких не в мережі, показують Офлайн. Використовуйте Підключити або Відключити для управління з'єднанням. Дії зі з'єднанням недоступні під час підключення або повторного підключення. Відключення слідує за існуючою поведінкою віддаленого з'єднання і може видалити його з вибору.</target>
+        <source xml:lang="en">If Connect fails, a notification shows the error with a Troubleshoot action, and the environment's Connect action shows a warning until a later attempt succeeds. Hover the warning or open the Accessible View to read the error, then select Connect to try again. Environments that need a server update show Update required. When the server can be updated from here, Connect asks to update it first, and Update Server in More Actions updates it too. When a newer server version is available for a connected environment, its row says so and More Actions offers Update Server. It asks first, because installing the newer version restarts the server and interrupts sessions running on it. New Session opens the composer with a connected environment selected. It isn't offered for environments that the environment picker can't select, such as GitHub Environments. Sessions may continue running on the remote computer after disconnecting; this depends on their run behavior and the remote computer staying awake and online.</source>
+        <target>Якщо підключення не вдається, сповіщення показує помилку з дією Виправити, а дія підключення середовища показує попередження, поки пізніша спроба не буде успішною. Наведіть курсор на попередження або відкрийте Доступний перегляд, щоб прочитати помилку, а потім виберіть Підключити, щоб спробувати ще раз. Середовища, які потребують оновлення сервера, показують Оновлення потрібне. Коли сервер можна оновити звідси, Підключення просить спочатку оновити його, а Оновити сервер у Додаткових діях також оновлює його. Коли доступна новіша версія сервера для підключеного середовища, його рядок про це повідомляє, а Додаткові дії пропонують Оновити сервер. Він запитує спочатку, оскільки встановлення новішої версії перезапускає сервер і перериває сесії, що на ньому працюють. Нова сесія відкриває композитор з вибраним підключеним середовищем. Вона не пропонується для середовищ, які не може вибрати вибір середовища, такі як середовища GitHub. Сесії можуть продовжувати працювати на віддаленому комп'ютері після відключення; це залежить від їхньої поведінки під час виконання та від того, чи залишається віддалений комп'ютер активним і підключеним до Інтернету.</target>
+      </trans-unit>
+      <trans-unit id="remotes.help.devContainers">
+        <source xml:lang="en">Dev Containers are containers from a base Linux image that keep their files in a Docker volume. The Dev Containers group appears while one exists or while this computer or a connected host has Docker. Its header offers Create Dev Container, which asks whether to create it on this computer or on a connected host when there is more than one choice. Connected SSH, WSL, and tunnel rows whose host has Docker also offer Create Dev Container for that host. A new Dev Container appears in the group right away and shows Connecting until its container has started, and you can create more in the meantime. While the group is empty, it describes Dev Containers and offers a Create Dev Container link. The group names each Dev Container with its host, and each can be chosen in the Environment picker. A Dev Container on a remote host connects and disconnects together with its host. One on this computer starts when you first use it, such as when you choose it in the Environment picker, and its row offers Connect and Disconnect. Every Dev Container row offers Rename and Delete. Delete asks for confirmation before removing the container and its files.</source>
+        <target>Dev Containers — це контейнери з базового образу Linux, які зберігають свої файли в обсязі Docker. Група Dev Containers з'являється, коли один з них існує або коли цей комп'ютер чи підключений хост має Docker. Її заголовок пропонує Create Dev Container, що запитує, чи створити його на цьому комп'ютері чи на підключеному хості, коли є більше ніж один вибір. Підключені рядки SSH, WSL та тунелів, хост яких має Docker, також пропонують Create Dev Container для цього хоста. Новий Dev Container з'являється в групі відразу і показує Connecting, поки його контейнер не запуститься, а ви можете створити більше в цей час. Поки група порожня, вона описує Dev Containers і пропонує посилання Create Dev Container. Група називає кожен Dev Container його хостом, і кожен з них можна вибрати в перемикачі Environment. Dev Container на віддаленому хості підключається і відключається разом зі своїм хостом. Той, що на цьому комп'ютері, запускається, коли ви вперше його використовуєте, наприклад, коли ви вибираєте його в перемикачі Environment, а його рядок пропонує Connect і Disconnect. Кожен рядок Dev Container пропонує Rename і Delete. Delete запитує підтвердження перед видаленням контейнера та його файлів.</target>
       </trans-unit>
       <trans-unit id="remotes.help.discovery">
-        <source xml:lang="en">Refresh looks for remotes without connecting. Its icon spins while discovery is running. Each group also shows a spinner after its count while that group's discovery is running. A failed group immediately shows a warning instead of its spinner, even if other groups are still loading. The tooltip and group label explain the problem; the Window log contains diagnostic details. If tunnel sign-in permissions are missing, a Sign In action appears instead of an error. Focus that row and press Tab, then Enter or Space to sign in and grant access to your tunnels. Sign In is disabled with a spinner while sign-in is in progress. This refreshes the list without connecting to a remote. Known locations remain available, and Refresh retries discovery.</source>
-        <target>Оновлення шукає віддалені з'єднання без підключення. Його значок обертається, поки триває пошук. Кожна група також показує обертовий значок після свого рахунку, поки триває пошук цієї групи. Група, що не вдалася, відразу ж показує попередження замість свого обертового значка, навіть якщо інші групи ще завантажуються. Підказка та мітка групи пояснюють проблему; журнал вікна містить діагностичні деталі. Якщо відсутні дозволи на вхід у тунель, замість помилки з'являється дія Увійти. Сфокусуйтеся на цьому рядку і натисніть Tab, потім Enter або Space, щоб увійти та надати доступ до ваших тунелів. Увійти вимкнено з обертовим значком, поки триває вхід. Це оновлює список без підключення до віддаленого з'єднання. Відомі місця залишаються доступними, а Оновлення повторно намагається знайти.</target>
+        <source xml:lang="en">Select Refresh to find environments and check their online status. Dev Tunnels report whether the host is running, GitHub Environments report sharing status, and WSL reports installed distributions that are running. SSH hosts are read from your SSH configuration without contacting them, so they remain eligible for a connection attempt without a confirmed availability status. Discovery doesn't verify sign-in or agent compatibility, start remote agents, or start WSL distributions. With method grouping enabled, empty method groups remain visible and start collapsed. Expand one for its setup instructions and documentation. For Dev Tunnels, sign in with the GitHub or Microsoft account used on the remote computer. Known environments stay listed if a refresh fails. Without method grouping, partial discovery warnings and sign-in actions appear below the list rather than replacing environment rows. A failed method does not block connecting through another method. General setup guidance appears after discovery completes with no environments, not during initial discovery or in place of a discovery error. When Search has no matches, select Clear Filter to clear it. Use Tab to reach actions and links, or Down Arrow from Search to enter the environments.</source>
+        <target>Виберіть Оновити, щоб знайти середовища та перевірити їхній онлайн-статус. Dev Tunnels повідомляють, чи працює хост, GitHub Environments повідомляють про статус спільного використання, а WSL повідомляє про встановлені дистрибутиви, які працюють. SSH-хости читаються з вашої конфігурації SSH без їхнього контакту, тому вони залишаються придатними для спроби підключення без підтвердженого статусу доступності. Відкриття не перевіряє вхід або сумісність агентів, не запускає віддалені агенти та не запускає дистрибутиви WSL. При ввімкненій групуванні методів порожні групи методів залишаються видимими та починають згорнутими. Розгорніть одну для отримання інструкцій з налаштування та документації. Для Dev Tunnels увійдіть за допомогою облікового запису GitHub або Microsoft, використаного на віддаленому комп'ютері. Відомі середовища залишаються в списку, якщо оновлення не вдалося. Без групування методів попередження про часткове виявлення та дії входу з'являються під списком, а не замінюють рядки середовищ. Невдалий метод не блокує підключення через інший метод. Загальні рекомендації з налаштування з'являються після завершення виявлення без середовищ, а не під час початкового виявлення або замість помилки виявлення. Коли Пошук не має збігів, виберіть Очистити фільтр, щоб його очистити. Використовуйте Tab, щоб дістатися до дій та посилань, або стрілку вниз з Пошуку, щоб увійти в середовища.</target>
+      </trans-unit>
+      <trans-unit id="remotes.help.emptySetup">
+        <source xml:lang="en">If discovery finds no environments, the table temporarily groups by Type and shows setup instructions and links. Your grouping choice applies again when environments are found. Search with no matches offers Clear Filter instead of setup guidance.</source>
+        <target>Якщо під час виявлення не знайдено середовищ, таблиця тимчасово групується за Типом і показує інструкції з налаштування та посилання. Ваш вибір групування знову застосовується, коли середовища знайдено. Пошук без збігів пропонує Очистити фільтр замість інструкцій з налаштування.</target>
       </trans-unit>
       <trans-unit id="remotes.help.environments">
-        <source xml:lang="en">For GitHub Environments, Connect is disabled when the owning application is offline. Disconnect retains the environment and follows its existing reconnection preferences. Rename applies only to the current account and profile. Delete asks for confirmation before removing the user-shared environment registration and disconnecting this client. It does not delete files on the machine. The environment can reappear if its owning application registers it again. The GitHub Environments gear opens its settings.</source>
-        <target>Для середовищ GitHub з'єднання вимкнено, коли власний додаток офлайн. Відключення зберігає середовище і дотримується його існуючих налаштувань повторного з'єднання. Перейменування застосовується лише до поточного облікового запису та профілю. Видалення запитує підтвердження перед видаленням реєстрації середовища, що спільно використовується користувачем, і відключення цього клієнта. Це не видаляє файли на машині. Середовище може знову з'явитися, якщо його власний додаток зареєструє його знову. Налаштування середовищ GitHub відкриває свої налаштування.</target>
+        <source xml:lang="en">Connect to an online GitHub Environment. Disconnecting keeps the environment and its tasks running. Rename changes its display name in this profile. Remove Environment clears the registration and disconnects this client. The remote computer and its files stay available; the entry returns when sharing resumes.</source>
+        <target>Підключитися до онлайн-середовища GitHub. Відключення зберігає середовище та його завдання в активному стані. Перейменувати змінює його відображуване ім'я в цьому профілі. Видалити середовище очищає реєстрацію та відключає цього клієнта. Віддалений комп'ютер та його файли залишаються доступними; запис повертається, коли спільний доступ відновлюється.</target>
+      </trans-unit>
+      <trans-unit id="remotes.help.gitHubEnvironment">
+        <source xml:lang="en">When GitHub Environments are enabled and available, connected SSH, WSL, and Dev Tunnel environments whose agent host supports it offer Share as GitHub Environment in More Actions. This registers the remote's agent host for other applications signed in with your GitHub account. The environment keeps its original connection type and shows a GitHub icon beside its name; hover it or open the Accessible View for its sharing state. Sharing continues while this client is disconnected and is restored when the remote's agent host restarts and this client reconnects. Use Stop Sharing in More Actions to stop, including sharing started by another client with the same GitHub account. If another account or the remote itself shares it, the action is unavailable and its label explains why. Removing the environment also stops sharing it.</source>
+        <target>Коли середовища GitHub увімкнені та доступні, підключені середовища SSH, WSL та Dev Tunnel, які підтримує хост агента, пропонують "Поділитися як середовищем GitHub" у "Більше дій". Це реєструє хост агента віддаленого з'єднання для інших додатків, увійшли з вашим обліковим записом GitHub. Середовище зберігає свій початковий тип з'єднання та показує іконку GitHub поруч із його назвою; наведіть курсор на неї або відкрийте Доступний перегляд для його стану спільного використання. Спільний доступ триває, поки цей клієнт відключений, і відновлюється, коли хост агента віддаленого з'єднання перезапускається, а цей клієнт повторно підключається. Використовуйте "Зупинити спільний доступ" у "Більше дій", щоб зупинити, включаючи спільний доступ, розпочатий іншим клієнтом з тим самим обліковим записом GitHub. Якщо інший обліковий запис або сам віддалений об'єкт ділиться ним, дія недоступна, і її мітка пояснює чому. Видалення середовища також зупиняє його спільний доступ.</target>
       </trans-unit>
       <trans-unit id="remotes.help.manage">
-        <source xml:lang="en">Rename changes the remote's display name in this client. Leave the name empty to restore its default. Copy Address copies a remote's connection address without connecting, including while it is offline or busy. SSH and tunnel rows offer Change Preferred Agent Location, which uses the existing choice of a dedicated process or remote editor window and reconnects after saving. Cancelling leaves the preference unchanged. Incompatible hosts offer Update Server when they advertise an update method. This reports progress and reconnects after the server restarts. Environment and supported tunnel rows also offer Delete with confirmation. Deleting a tunnel removes its service-side registration and disconnects its clients, without deleting remote files. A tunnel currently hosted by this application must be stopped before it can be deleted. A deleted tunnel may reappear if a machine starts hosting it again. Saved SSH connections offer Delete only after discovery confirms the host is absent from SSH configuration. Deleting one asks for confirmation, forgets the saved connection, and disconnects this client without editing SSH configuration or remote files. Use the arrow keys to reach these row actions. WSL distributions must be managed at the source.</source>
-        <target>Перейменування змінює відображуване ім'я віддаленого з'єднання в цьому клієнті. Залиште ім'я порожнім, щоб відновити його значення за замовчуванням. Копіювати адресу копіює адресу з'єднання віддаленого з'єднання без підключення, включаючи випадки, коли воно офлайн або зайняте. Рядки SSH та тунелю пропонують Змінити уподобання агента, що використовує існуючий вибір виділеного процесу або вікна віддаленого редактора та повторно підключається після збереження. Скасування залишає уподобання незмінним. Несумісні хости пропонують Оновити сервер, коли вони рекламують метод оновлення. Це повідомляє про прогрес і повторно підключається після перезапуску сервера. Рядки середовища та підтримуваних тунелів також пропонують Видалити з підтвердженням. Видалення тунелю усуває його реєстрацію на стороні служби та відключає його клієнтів, не видаляючи віддалені файли. Тунель, який в даний час хоститься цим додатком, повинен бути зупинений перед його видаленням. Видалений тунель може знову з'явитися, якщо машина почне його хостити знову. Збережені SSH з'єднання пропонують Видалити лише після підтвердження, що хост відсутній у конфігурації SSH. Видалення одного запитує підтвердження, забуває збережене з'єднання та відключає цього клієнта без редагування конфігурації SSH або віддалених файлів. Використовуйте клавіші зі стрілками, щоб дістатися до цих дій з рядками. Дистрибутиви WSL повинні управлятися на джерелі.</target>
+        <source xml:lang="en">Rename changes the environment's display name in this client. Clear the name to restore the default. Copy Address copies the SSH host for use with Connect via SSH. Update Server appears when supported. Remove Environment clears the GitHub Environment registration and disconnects this client. Forget SSH Connection removes the saved connection; your SSH configuration stays unchanged. Delete Dev Tunnel removes the tunnel registration and disconnects all its clients. Confirm each removal. The remote computer and its files stay available. Manage WSL distributions in WSL.</source>
+        <target>Перейменувати змінює відображуване ім'я середовища в цьому клієнті. Очистіть ім'я, щоб відновити значення за замовчуванням. Скопіювати адресу копіює SSH-хост для використання з Підключитися через SSH. Оновити сервер з'являється, коли підтримується. Видалити середовище очищає реєстрацію середовища GitHub і відключає цей клієнт. Забути SSH-з'єднання видаляє збережене з'єднання; ваша конфігурація SSH залишається незмінною. Видалити Dev Tunnel видаляє реєстрацію тунелю та відключає всіх його клієнтів. Підтвердіть кожне видалення. Віддалений комп'ютер і його файли залишаються доступними. Керуйте дистрибутивами WSL у WSL.</target>
       </trans-unit>
       <trans-unit id="remotes.help.navigation">
-        <source xml:lang="en">Type in Search to filter remotes by name, address, or connection type. Clear Search and Collapse All are at the right of the search field; use Tab to reach these actions and Left and Right Arrow to move between them. Clear Search returns focus to the input. Collapse All preserves the search text. Groups without matches are hidden while searching. Use Down Arrow from Search to enter the table. Use Up and Down Arrow to navigate rows. On a group, use Left and Right Arrow to collapse or expand it, or press Enter to toggle it. Visibility icons are always shown; other row actions appear on hover or keyboard focus. On a remote, press Tab to reach its actions and use Left and Right Arrow to move between Connect or Disconnect and Rename. Use Enter or Space to activate an action. Resize columns by dragging their boundaries. Narrow windows scroll horizontally.</source>
-        <target>Введіть у поле пошуку, щоб фільтрувати пульти за назвою, адресою або типом з'єднання. Очистити пошук та згорнути все знаходяться праворуч від поля пошуку; використовуйте Tab, щоб дістатися до цих дій, а стрілки вліво та вправо, щоб переміщатися між ними. Очистити пошук повертає фокус до поля введення. Згорнути все зберігає текст пошуку. Групи без збігів приховані під час пошуку. Використовуйте стрілку вниз з поля пошуку, щоб увійти в таблицю. Використовуйте стрілки вгору та вниз, щоб переміщатися між рядками. На групі використовуйте стрілки вліво та вправо, щоб згорнути або розгорнути її, або натисніть Enter, щоб перемкнути її. Іконки видимості завжди відображаються; інші дії рядка з'являються при наведенні курсора або фокусі клавіатури. На пульті натисніть Tab, щоб дістатися до його дій, і використовуйте стрілки вліво та вправо, щоб переміщатися між Підключити або Відключити та Перейменувати. Використовуйте Enter або Space, щоб активувати дію. Змінюйте розмір стовпців, перетягуючи їх межі. Вузькі вікна прокручуються горизонтально.</target>
+        <source xml:lang="en">Enter a name, address, or connection type in Search to filter environments. Reset Filter in the Filter menu clears Search and restores the default ordering and grouping. An empty search result also offers Clear Filter to clear only the typed search. Search shows groups with matching environments. Use Down Arrow from Search to enter the table, and Up and Down Arrow to navigate rows. Use Left and Right Arrow on a group to collapse or expand it, or press Enter to toggle it. New Session, Connect, Disconnect, and More Actions appear on hover or keyboard focus. On an environment, press Tab to reach these controls. More Actions lists session and connection actions first, then picker visibility, copying, and management. Use Up and Down Arrow to move in a menu and Enter to run an action. Press Escape to close the menu. Drag column boundaries to resize columns. Narrow layouts hide secondary columns and keep connection actions in More Actions without horizontal scrolling.</source>
+        <target>Введіть ім'я, адресу або тип з'єднання в полі Пошук, щоб відфільтрувати середовища. Скидання фільтра в меню Фільтр очищає Пошук і відновлює стандартне сортування та групування. Порожній результат пошуку також пропонує Очистити фільтр, щоб очистити лише введений пошук. Пошук показує групи з відповідними середовищами. Використовуйте стрілку вниз з Пошуку, щоб увійти в таблицю, а стрілки вгору та вниз для навігації по рядках. Використовуйте стрілки вліво та вправо на групі, щоб згорнути або розгорнути її, або натисніть Enter, щоб перемкнути її. Нове з'єднання, Підключитися, Відключитися та Більше дій з'являються при наведенні курсора або фокусі клавіатури. На середовищі натисніть Tab, щоб дістатися до цих елементів управління. Більше дій спочатку перераховує дії сесії та з'єднання, потім видимість вибірника, копіювання та управління. Використовуйте стрілки вгору та вниз, щоб переміщатися в меню, і натисніть Enter, щоб виконати дію. Натисніть Escape, щоб закрити меню. Перетягніть межі стовпців, щоб змінити розмір стовпців. Вузькі макети приховують вторинні стовпці та зберігають дії з'єднання в Більше дій без горизонтального прокручування.</target>
       </trans-unit>
       <trans-unit id="remotes.help.overview">
-        <source xml:lang="en">Remote Environments lists known SSH hosts and Dev Tunnels in a table grouped by connection type. Open it with Manage Remote Environments in the Command Palette, from the Sessions section's More Actions menu, from the Remote Connections menu in the title bar, or with Manage Remote Environments in the Environment picker. WSL distributions are also available on Windows. When enabled and available, GitHub Environments lists known user-shared machines, including offline machines. The columns are Name, Status, and Actions. This computer's own Dev Tunnel and GitHub environment are not listed, because this window already runs sessions on this computer.</source>
-        <target>Віддалені середовища містять відомі SSH-хости та Dev Tunnels у таблиці, згрупованій за типом з'єднання. Відкрийте його за допомогою Керування віддаленими середовищами в командній палітрі, з меню Додаткові дії розділу Сесії, з меню Віддалені з'єднання в заголовку вікна або за допомогою Керування віддаленими середовищами в селекторі середовищ. Дистрибутиви WSL також доступні на Windows. Коли це увімкнено та доступно, середовища GitHub містять відомі спільно використовувані машини, включаючи офлайн-мішини. Стовпці: Ім'я, Статус та Дії. Власний Dev Tunnel та середовище GitHub цього комп'ютера не відображаються, оскільки це вікно вже виконує сесії на цьому комп'ютері.</target>
+        <source xml:lang="en">Remote Environments lists connected and available environments first. Status groups environments under Connected, Available, or Offline. Available includes hosts you can try connecting to while a status check is pending or unavailable. Rows stay single-line at a fixed height. Name and Status lead, followed by Last Activity and System. Type is a secondary column at wider sizes; it hides before Last Activity and System as space decreases. At the narrowest sizes, Name, Status, and actions remain. Search and the Accessible View retain hidden details, including configured SSH addresses, not opaque registration IDs. Ambiguous names include their connection type when types differ, with stable numeric suffixes only for remaining collisions. Rename changes a display name; remove stale registrations only when you no longer need them. This computer's known registration is not repeated in Other environments. Select Connect to attempt a connection, or New Session on a connected environment to open the composer. Refresh updates discovery without connecting. The Refresh text button is disabled while discovery is running. Rows and metadata keep their previous values, or stay empty, until refresh finishes. System shows only the operating system. Its tooltip and the Accessible View show architecture, CPU count, and memory capacity on separate lines. WSL identifies Linux without starting a distribution. Last Activity shows a short age of the last observed activity, connection, or availability, and stays empty when no time is known. Session counts, including zero, appear only in its tooltip and the Accessible View. Hover the Last Activity cell for session details even when its time is empty. Offline or unconfirmed observations older than seven days show &gt;7 days ago. Last Activity tooltips and the Accessible View show session counts and labeled activity, connection, or last-seen times on separate lines. After a failed connection, the environment's Connect action shows a warning; hover it or open the Accessible View to read the error.</source>
+        <target>Віддалені середовища спочатку перераховують підключені та доступні середовища. Статус групує середовища за категоріями Підключено, Доступно або Офлайн. Доступні включають хости, до яких ви можете спробувати підключитися, поки перевірка статусу очікує або недоступна. Рядки залишаються однорядковими з фіксованою висотою. Ім'я та Статус ведуть, за ними йдуть Остання активність та Система. Тип є вторинною колонкою на більших розмірах; він ховається перед Останньою активністю та Системою, коли місця стає менше. На найвужчих розмірах залишаються Ім'я, Статус та дії. Пошук та Доступний перегляд зберігають приховані деталі, включаючи налаштовані SSH-адреси, а не непрозорі ідентифікатори реєстрації. Неоднозначні імена включають їх тип підключення, коли типи відрізняються, з стабільними числовими суфіксами лише для залишкових колізій. Перейменування змінює відображуване ім'я; видаляйте застарілі реєстрації лише тоді, коли вони більше не потрібні. Відоме ім'я реєстрації цього комп'ютера не повторюється в Інших середовищах. Виберіть Підключити, щоб спробувати підключення, або Нова сесія на підключеному середовищі, щоб відкрити композитор. Оновлення оновлює виявлення без підключення. Кнопка текстового оновлення вимкнена, поки триває виявлення. Рядки та метадані зберігають свої попередні значення або залишаються порожніми, поки оновлення не завершиться. Система показує лише операційну систему. Її підказка та Доступний перегляд показують архітектуру, кількість процесорів та обсяг пам'яті на окремих рядках. WSL ідентифікує Linux без запуску дистрибутива. Остання активність показує короткий вік останньої спостережуваної активності, підключення або доступності та залишається порожньою, коли час не відомий. Кількість сесій, включаючи нуль, з'являється лише в її підказці та Доступному перегляді. Наведіть курсор на клітинку Останньої активності для деталей сесії, навіть коли її час порожній. Офлайн або непідтверджені спостереження старші за сім днів показують &gt;7 днів тому. Підказки Останньої активності та Доступний перегляд показують кількість сесій та позначену активність, підключення або час останнього спостереження на окремих рядках. Після невдалого підключення дія Підключити середовище показує попередження; наведіть курсор на неї або відкрийте Доступний перегляд, щоб прочитати помилку.</target>
       </trans-unit>
-      <trans-unit id="remotes.help.setup">
-        <source xml:lang="en">Empty groups show setup guidance and a documentation link. Focus the placeholder row and press Tab to reach its link. Groups with documentation also have an info action that opens the same guide, even when they contain remotes or are collapsed. Focus the group and use Tab and the arrow keys to reach its actions. The SSH settings action opens your user SSH config in a modal editor and creates it if necessary. The Dev Tunnels group has an Open Dev Tunnels Settings action. After configuring a host, return to Remotes and choose Refresh.</source>
-        <target>Порожні групи показують вказівки з налаштування та посилання на документацію. Сфокусуйтеся на рядку плейсхолдера та натисніть Tab, щоб перейти до його посилання. Групи з документацією також мають дію інформації, яка відкриває ту ж саму інструкцію, навіть коли вони містять віддалені елементи або згорнуті. Сфокусуйтеся на групі та використовуйте Tab і стрілки, щоб дістатися до її дій. Дія налаштувань SSH відкриває конфігурацію SSH вашого користувача в модальному редакторі та створює її, якщо це необхідно. Група Dev Tunnels має дію Відкрити налаштування Dev Tunnels. Після налаштування хоста поверніться до Remotes і виберіть Оновити.</target>
+      <trans-unit id="remotes.help.rowActions">
+        <source xml:lang="en">Row actions are aligned to the right, with More Actions always in the trailing slot. Connecting or disconnecting does not resize the action column. At narrow widths, use More Actions for session and connection commands.</source>
+        <target>Дії рядка вирівняні праворуч, при цьому "Більше дій" завжди знаходиться в останньому слоті. Підключення або відключення не змінює розмір стовпця дій. На вузьких ширинах використовуйте "Більше дій" для команд сесії та підключення.</target>
+      </trans-unit>
+      <trans-unit id="remotes.help.runBehavior">
+        <source xml:lang="en">SSH and Dev Tunnel rows offer Configure Agent Run Behavior. Under Preferred run behavior, your saved choice is selected, or Run in the Background if no choice is saved. Run in the Background is for tasks you want to leave running. Choose Use Remote VS Code to use an open window on the remote computer when available. Agents in that window stop when it closes. Keep the remote computer awake and online while agents work. If a Dev Tunnel is shared by VS Code, keep that remote window open to stay connected. Saved preference marks the saved choice; the selected card shows your changes. Select Save to keep the choice for the next connection without connecting. For a connected environment, select Save and Reconnect to apply the choice immediately. Existing sessions are not moved. Save progress and completion are announced and shown by the action icon. Failures appear below the buttons. Select Cancel, Back, or Escape to discard changes and return to the overview.</source>
+        <target>Рядки SSH та Dev Tunnel пропонують Налаштування поведінки запуску агента. У розділі Улюблена поведінка запуску обрано ваше збережене значення або Запуск у фоновому режимі, якщо жоден вибір не збережено. Запуск у фоновому режимі призначений для завдань, які ви хочете залишити запущеними. Виберіть Використовувати віддалений VS Code, щоб використовувати відкрите вікно на віддаленому комп'ютері, коли це можливо. Агенти в цьому вікні зупиняються, коли воно закривається. Тримайте віддалений комп'ютер активним і в мережі, поки агенти працюють. Якщо Dev Tunnel ділиться VS Code, тримайте це віддалене вікно відкритим, щоб залишатися підключеним. Збережене уподобання позначає збережений вибір; обрана картка показує ваші зміни. Виберіть Зберегти, щоб зберегти вибір для наступного підключення без підключення. Для підключеного середовища виберіть Зберегти та Перепідключитися, щоб застосувати вибір негайно. Існуючі сесії не переміщуються. Прогрес збереження та завершення оголошується та відображається значком дії. Помилки з'являються під кнопками. Виберіть Скасувати, Назад або Escape, щоб скасувати зміни та повернутися до огляду.</target>
+      </trans-unit>
+      <trans-unit id="remotes.help.sandboxProfile">
+        <source xml:lang="en">In the Sandbox Profile column, choose which of your sandbox profiles a connected host uses for new sessions, or Default for the host's default sandbox settings. The host keeps a copy of the assigned profile, so every device connected to it sees the assignment. If another device assigned a profile you don't have, the column shows it as on host and offers Save to My Profiles. Connect to a host to see or change its sandbox profile. Create and edit profiles with Sandbox: Manage Sandbox Profiles; saving updates the connected hosts using the profile. A profile assigned to a connected remote environment cannot be deleted.</source>
+        <target>У стовпці Профіль пісочниці виберіть, який з ваших профілів пісочниці використовує підключений хост для нових сесій, або Взаємодіяти для стандартних налаштувань пісочниці хоста. Хост зберігає копію призначеного профілю, тому кожен пристрій, підключений до нього, бачить це призначення. Якщо інший пристрій призначив профіль, якого у вас немає, стовпець показує його як на хості та пропонує Зберегти в Мої профілі. Підключіться до хоста, щоб переглянути або змінити його профіль пісочниці. Створюйте та редагуйте профілі за допомогою Пісочниця: Керування профілями пісочниці; збереження оновлень для підключених хостів, які використовують профіль. Профіль, призначений підключеному віддаленому середовищу, не можна видалити.</target>
+      </trans-unit>
+      <trans-unit id="remotes.help.sections">
+        <source xml:lang="en">This computer appears above Other environments. Both sections remain visible while choosing how to share this computer.</source>
+        <target>Цей комп'ютер з'являється вище інших середовищ. Обидва розділи залишаються видимими під час вибору способу спільного використання цього комп'ютера.</target>
+      </trans-unit>
+      <trans-unit id="remotes.help.segmentedThisComputer">
+        <source xml:lang="en">This computer shows how it is shared with other devices. Its Allow Connections Here options are Off, GitHub Environments when available, and Dev Tunnels; they match the Remote Connections menu in the title bar. Use Tab to reach the options and the arrow keys to move between them, then press Enter or Space to choose one. Choosing an option starts or stops sharing; the status next to the options announces the result. Rename Sharing Name changes the name other devices see. Local sessions keep running directly on this computer whether sharing is on or off.</source>
+        <target>Цей комп'ютер показує, як він ділиться з іншими пристроями. Його параметри Дозволити з'єднання тут вимкнені, GitHub Environments, коли доступні, та Dev Tunnels; вони відповідають меню Віддалені з'єднання в рядку заголовка. Використовуйте Tab, щоб дістатися до параметрів, і стрілки, щоб переміщатися між ними, а потім натисніть Enter або Space, щоб вибрати один. Вибір параметра починає або зупиняє спільний доступ; статус поруч із параметрами оголошує результат. Перейменування Імені спільного доступу змінює ім'я, яке бачать інші пристрої. Локальні сесії продовжують працювати безпосередньо на цьому комп'ютері, незалежно від того, чи увімкнено спільний доступ.</target>
+      </trans-unit>
+      <trans-unit id="remotes.help.sorting">
+        <source xml:lang="en">Search and Filter are aligned to the right above the table, with Refresh beside them. The Filter button inside Search offers Sort By, Group By, and Reset Filter. Sort By uses Status, Name, Last Activity, System, or Type. Status is selected by default. Tab to a column header and press Enter or Space, or click it, to sort; activate it again to reverse the direction. Last Activity starts with recent observations first. Missing observations stay last in either direction. Group By offers None, selected by default, Type, or Status. Grouping replaces the corresponding column with group headings instead of repeating it in each row. Reset Filter restores Status ordering, no grouping, and an empty search. Search matches names, SSH addresses, connection types, status labels, system details, and activity text. Use arrow keys to navigate submenus and Enter to select an option.</source>
+        <target>Пошук і Фільтр вирівняні праворуч над таблицею, з Оновити поруч з ними. Кнопка Фільтр всередині Пошуку пропонує Сортувати за, Групувати за та Скинути фільтр. Сортувати за використовує Статус, Ім'я, Остання активність, Систему або Тип. Статус вибрано за замовчуванням. Перейдіть до заголовка стовпця та натисніть Enter або Space, або клацніть його, щоб відсортувати; активуйте його знову, щоб змінити напрямок. Остання активність починається з останніх спостережень. Відсутні спостереження залишаються останніми в обох напрямках. Групувати за пропонує Немає, вибрано за замовчуванням, Тип або Статус. Групування замінює відповідний стовпець заголовками груп замість повторення його в кожному рядку. Скинути фільтр відновлює порядок за Статусом, без групування та порожній пошук. Пошук співпадає з іменами, SSH-адресами, типами з'єднань, етикетками статусу, деталями системи та текстом активності. Використовуйте клавіші зі стрілками для навігації по підменю та Enter для вибору опції.</target>
       </trans-unit>
       <trans-unit id="remotes.help.thisComputer">
-        <source xml:lang="en">The This Computer section above the Other Environments table shows how this computer is shared with other clients. Its Remote Connections options are Off, GitHub Environments when available, and Dev Tunnels; they match the Remote Connections menu in the title bar. Use Tab to reach the options and the arrow keys to move between them, then press Enter or Space to choose one. Choosing an option starts or stops sharing; the status next to the options announces the result. Rename Sharing Name changes the name other clients see. Local sessions keep running directly on this computer whether sharing is on or off.</source>
-        <target>Розділ This Computer вище таблиці Other Environments показує, як цей комп'ютер ділиться з іншими клієнтами. Його параметри Remote Connections вимкнені, GitHub Environments, коли доступні, та Dev Tunnels; вони відповідають меню Remote Connections у рядку заголовка. Використовуйте Tab, щоб дістатися до параметрів, і стрілки для переміщення між ними, потім натисніть Enter або Space, щоб вибрати один. Вибір параметра починає або зупиняє спільний доступ; статус поруч із параметрами оголошує результат. Rename Sharing Name змінює ім'я, яке бачать інші клієнти. Локальні сеанси продовжують працювати безпосередньо на цьому комп'ютері, незалежно від того, чи увімкнено спільний доступ.</target>
+        <source xml:lang="en">This computer shows its sharing name, operating system, and sharing status. The pencil opens Rename in an input prompt. Select Share This Computer to show GitHub Environment (Preview) and Dev Tunnel choices directly below. Start Sharing and Cancel replace that button. The current method or first available method is selected. Use it as is or choose another with the arrow keys; the name updates to that method's sharing name and can be renamed with the pencil. GitHub Environment makes this computer discoverable through your GitHub account for supported Copilot clients. GitHub stores session actions for history; conversation content isn't end-to-end encrypted. Dev Tunnel supports VS Code and the browser-based Agents window. Keep VS Code open and this computer awake and online while sharing. Select Start Sharing to apply your choice. Progress is announced without moving the controls. Failures appear below the choices with access to the sharing log. Cancel or Escape closes the choices without starting sharing. Other environments remain available. Select Stop Sharing to end access from other devices. Select Change Connection Type to choose another type. Open Sharing Log to view sharing activity.</source>
+        <target>Цей комп'ютер показує своє ім'я для спільного використання, операційну систему та статус спільного використання. Олівець відкриває перейменування в запиті на введення. Виберіть Поділитися цим комп'ютером, щоб показати вибір GitHub Environment (Попередній перегляд) та Dev Tunnel безпосередньо нижче. Почати спільний доступ і Скасувати замінюють цю кнопку. Вибрано поточний метод або перший доступний метод. Використовуйте його як є або виберіть інший за допомогою стрілок; ім'я оновлюється до імені спільного доступу цього методу і може бути перейменоване за допомогою олівця. GitHub Environment робить цей комп'ютер видимим через ваш обліковий запис GitHub для підтримуваних клієнтів Copilot. GitHub зберігає дії сесії для історії; вміст розмови не зашифрований з кінця в кінець. Dev Tunnel підтримує VS Code і вікно Agents на базі браузера. Тримайте VS Code відкритим, а цей комп'ютер активним і онлайн під час спільного використання. Виберіть Почати спільний доступ, щоб застосувати свій вибір. Прогрес оголошується без переміщення елементів управління. Помилки з'являються нижче виборів з доступом до журналу спільного використання. Скасувати або Escape закриває вибір без початку спільного доступу. Інші середовища залишаються доступними. Виберіть Зупинити спільний доступ, щоб закінчити доступ з інших пристроїв. Виберіть Змінити тип з'єднання, щоб вибрати інший тип. Відкрити журнал спільного використання, щоб переглянути активність спільного використання.</target>
+      </trans-unit>
+      <trans-unit id="remotes.help.troubleshoot">
+        <source xml:lang="en">Every environment's More Actions menu offers Troubleshoot Connection, and the Troubleshoot action of a failed connection notification opens the same page. It shows the environment's status, the last connection step this window observed, the server's and this client's versions, and facts read on this computer without connecting, such as the resolved SSH host, a WSL distribution's state, a Dev Tunnel's account, or a Dev Container's host and Docker availability. A server that isn't connected shows the version from the last connection. It explains what likely went wrong and offers actions that may help, such as Retry Connection, Update Server, Forget Saved Host Key, Restart Distribution, Sign In, or Show Log. Some failures include a command to copy and run in a terminal. Collect diagnostics copies or opens a diagnostic report, or exports agent host debug logs. Action progress and results are announced, and failures appear above the actions. Use Tab to reach the actions. Select Back or press Escape to return to the overview.</source>
+        <target>Кожне меню Додаткові дії середовища пропонує усунення неполадок з підключенням, а дія усунення неполадок у сповіщенні про невдале підключення відкриває ту ж саму сторінку. Вона показує статус середовища, останній крок підключення, який спостерігало це вікно, версії сервера та цього клієнта, а також дані, зчитані на цьому комп'ютері без підключення, такі як вирішений SSH-хост, стан дистрибутива WSL, обліковий запис Dev Tunnel або хост Dev Container та доступність Docker. Сервер, який не підключений, показує версію з останнього підключення. Він пояснює, що, ймовірно, пішло не так, і пропонує дії, які можуть допомогти, такі як Спробувати підключення знову, Оновити сервер, Забути збережений ключ хоста, Перезапустити дистрибутив, Увійти або Показати журнал. Деякі невдачі включають команду для копіювання та виконання в терміналі. Зібрати копії діагностики або відкрити діагностичний звіт, або експортувати журнали налагодження хоста агента. Прогрес дій та результати оголошуються, а невдачі з'являються над діями. Використовуйте Tab, щоб дістатися до дій. Виберіть Назад або натисніть Escape, щоб повернутися до огляду.</target>
+      </trans-unit>
+      <trans-unit id="remotes.help.tunnelSignIn">
+        <source xml:lang="en">If a saved Dev Tunnel requires sign-in, its status is unconfirmed and its row offers Sign In. After signing in, the list refreshes without connecting.</source>
+        <target>Якщо збережений Dev Tunnel вимагає входу, його статус є непідтвердженим, і його рядок пропонує Вхід. Після входу список оновлюється без підключення.</target>
       </trans-unit>
       <trans-unit id="remotes.help.visibility">
-        <source xml:lang="en">Use the eye action at the start of an eligible remote row to show or hide it in the Environment and workspace pickers. Focus the row and press Tab, then Enter or Space to toggle it. Hidden remotes remain in this editor with a dimmed name and a Show action. Remotes that cannot currently appear have a disabled unavailable indicator instead of an eye; hover it or open the Accessible View for the reason. Newly discovered remotes must first be connected, and offline shared environments must come online. Your hidden preference is retained while a remote is unavailable. Choosing a folder through a remote subpicker shows that remote again. Hiding a remote does not prevent sending an existing draft when the remote is available and connected. This preference is local to your profile on this machine and does not connect, disconnect, or remove sessions.</source>
-        <target>Використовуйте дію ока на початку допустимого віддаленого рядка, щоб показати або приховати його у вибірниках середовища та робочого простору. Сфокусуйте рядок і натисніть Tab, потім Enter або Space, щоб перемкнути його. Приховані віддалені елементи залишаються в цьому редакторі з затемненим ім'ям та дією Показати. Віддалені елементи, які наразі не можуть з'явитися, мають індикатор недоступності, що вимкнений, замість ока; наведіть на нього курсор або відкрийте Доступний перегляд для отримання причини. Нововиявлені віддалені елементи спочатку повинні бути підключені, а офлайн спільні середовища повинні стати онлайн. Ваше приховане налаштування зберігається, поки віддалений елемент недоступний. Вибір папки через підвибірник віддалених елементів знову показує цей віддалений елемент. Приховування віддаленого елемента не заважає надсиланню існуючого чернетки, коли віддалений елемент доступний і підключений. Це налаштування є локальним для вашого профілю на цьому комп'ютері і не підключає, не відключає і не видаляє сесії.</target>
+        <source xml:lang="en">Use Show or Hide in an environment's More actions menu to control its visibility in the environment and workspace pickers, even while it is offline or disconnected. Hidden remotes stay in this editor and show a Show action. Showing an unavailable environment saves your preference without connecting it; it appears in pickers when available. Your choice is saved in this profile. Choose a folder through a remote subpicker to show that remote again.</source>
+        <target>Використовуйте Показати або Сховати в меню Додаткові дії середовища, щоб контролювати його видимість у вибірниках середовища та робочого простору, навіть коли воно офлайн або відключене. Сховані віддалені середовища залишаються в цьому редакторі та показують дію Показати. Показ доступного середовища зберігає ваші налаштування без підключення; воно з'являється у вибірниках, коли стає доступним. Ваш вибір зберігається в цьому профілі. Виберіть папку через підвибірник віддалених, щоб знову показати це віддалене середовище.</target>
       </trans-unit>
       <trans-unit id="remotes.managementDisabled">
         <source xml:lang="en">Remote Environments management is disabled.</source>

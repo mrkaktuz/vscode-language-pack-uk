@@ -477,6 +477,10 @@
         <source xml:lang="en">Repositories in the Source Control Repositories and Source Control views are sorted by repository path.</source>
         <target>Репозиторії в переглядах Системи контролю версій та Репозиторіїв Системи контролю версій відсортовані за шляхом репозиторія.</target>
       </trans-unit>
+      <trans-unit id="scm.structuralDiff.enabled">
+        <source xml:lang="en">Controls whether the Source Control view can show the symbols that changed in a file. When enabled and an extension provides structural diffs for the file, they are shown by default. Use "Show Structural Diff" in the "View &amp; Sort" menu to hide or show them.</source>
+        <target>Контролює, чи може вигляд Системи Контролю Версій показувати символи, які змінилися у файлі. Коли увімкнено, і розширення надає структурні відмінності для файлу, вони показуються за замовчуванням. Використовуйте "Показати структурну відмінність" у меню "Перегляд і сортування", щоб приховати або показати їх.</target>
+      </trans-unit>
       <trans-unit id="scm.workingSets.default">
         <source xml:lang="en">Controls the default working set to use when switching to a source control history item group that does not have a working set.</source>
         <target>Контролює набір робочих даних за замовчуванням, який використовується при переході до групи елементів історії контролю версій, що не має робочого набору.</target>
@@ -624,6 +628,34 @@
       <trans-unit id="scm-repositories-msg6">
         <source xml:lang="en"> - Use Shift + up/down keys to select multiple repositories.</source>
         <target>- Використовуйте Shift + клавіші вгору/вниз, щоб вибрати кілька репозиторіїв.</target>
+      </trans-unit>
+      <trans-unit id="scm-structural-annotations">
+        <source xml:lang="en"> - Modified symbols indicate whether their declaration, implementation, or both changed. These details are included in accessible labels.</source>
+        <target>- Модифіковані символи вказують, чи змінилися їхнє оголошення, реалізація, або обидва. Ці деталі включені в доступні мітки.</target>
+      </trans-unit>
+      <trans-unit id="scm-structural-msg1">
+        <source xml:lang="en"> - When "Show Structural Diff" is enabled, files with a structural diff provider can be expanded with the right arrow key to show changed symbols. Structural descendants expand automatically to reveal changed leaves. Use the left arrow key to collapse them.</source>
+        <target>- Коли увімкнено "Показати структурні відмінності", файли з провайдером структурних відмінностей можна розгорнути за допомогою правої стрілки, щоб показати змінені символи. Структурні нащадки автоматично розгортаються, щоб виявити змінені листя. Використовуйте ліву стрілку, щоб згорнути їх.</target>
+      </trans-unit>
+      <trans-unit id="scm-structural-msg2">
+        <source xml:lang="en"> - Press Enter on a changed symbol to open its file diff at that symbol. Deleted symbols open on the original side, or where they were deleted when the diff is shown inline. File-level actions continue to apply to file rows.</source>
+        <target>- Натисніть Enter на зміненому символі, щоб відкрити його файл-диф для цього символу. Видалені символи відкриваються на оригінальній стороні або там, де вони були видалені, коли диф показується в рядку. Дії на рівні файлу продовжують застосовуватися до рядків файлу.</target>
+      </trans-unit>
+      <trans-unit id="scm-structural-rename">
+        <source xml:lang="en"> - Detected renames appear with the new symbol name and an R status marker, without a change annotation. The original and new names are included in the hover and accessible label.</source>
+        <target>- Виявлені перейменування з'являються з новим ім'ям символу та маркером статусу R, без анотації зміни. Оригінальні та нові імена включені в підказку та доступну мітку.</target>
+      </trans-unit>
+      <trans-unit id="scm-structural-staged">
+        <source xml:lang="en"> - For Git, staged structural changes compare HEAD with the index, while unstaged structural changes compare the index with the working file. Both versions of the file and a provider that supports their document types are required.</source>
+        <target>- Для Git, стадійні структурні зміни порівнюють HEAD з індексом, тоді як нестадійні структурні зміни порівнюють індекс з робочим файлом. Обидві версії файлу та постачальник, який підтримує їх типи документів, є обов'язковими.</target>
+      </trans-unit>
+      <trans-unit id="scm-structural-status">
+        <source xml:lang="en"> - Changed symbols use A for additions, D for deletions, M for modifications, and R for renames. Their status is included in the accessible label. Unchanged containers have no status marker.</source>
+        <target>- Змінено символи: A для додавання, D для видалення, M для модифікацій та R для перейменувань. Їхній статус включено в доступну мітку. Невикористані контейнери не мають маркера статусу.</target>
+      </trans-unit>
+      <trans-unit id="scm-structural-toggle">
+        <source xml:lang="en"> - Toggle "Show Structural Diff" in the "View &amp; Sort" menu to show or hide changed symbols below files.</source>
+        <target>- Увімкніть "Показати структурні відмінності" у меню "Перегляд і сортування", щоб показати або приховати змінені символи під файлами.</target>
       </trans-unit>
       <trans-unit id="state-msg1">
         <source xml:lang="en">Visible repositories: {0}</source>
@@ -863,6 +895,26 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/scm/browser/scmStructuralDiffRenderer" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="structuralDiff.addedMarker">
+        <source xml:lang="en">A</source>
+        <target>A</target>
+      </trans-unit>
+      <trans-unit id="structuralDiff.deletedMarker">
+        <source xml:lang="en">D</source>
+        <target>D</target>
+      </trans-unit>
+      <trans-unit id="structuralDiff.modifiedMarker">
+        <source xml:lang="en">M</source>
+        <target>M</target>
+      </trans-unit>
+      <trans-unit id="structuralDiff.renamedMarker">
+        <source xml:lang="en">R</source>
+        <target>R</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/scm/browser/scmViewPane" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="collapse all">
@@ -924,6 +976,10 @@
       <trans-unit id="setTreeViewMode">
         <source xml:lang="en">View as Tree</source>
         <target>Переглянути як Дерево</target>
+      </trans-unit>
+      <trans-unit id="showStructuralDiff">
+        <source xml:lang="en">Show Structural Diff</source>
+        <target>Показати структурні відмінності</target>
       </trans-unit>
       <trans-unit id="sortAction">
         <source xml:lang="en">View &amp; Sort</source>
@@ -1008,6 +1064,73 @@
       <trans-unit id="overviewRulerModifiedForeground">
         <source xml:lang="en">Overview ruler marker color for modified content.</source>
         <target>Огляд кольору маркера лінійки для зміненого вмісту.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/scm/common/scmStructuralDiff" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="structuralDiff.added">
+        <source xml:lang="en">Added</source>
+        <target>Додано</target>
+      </trans-unit>
+      <trans-unit id="structuralDiff.ariaLabel">
+        <source xml:lang="en">{0}, {1}</source>
+        <target>{0}, {1}</target>
+      </trans-unit>
+      <trans-unit id="structuralDiff.ariaLabelWithDescription">
+        <source xml:lang="en">{0}, {1}, {2}</source>
+        <target>{0}, {1}, {2}</target>
+      </trans-unit>
+      <trans-unit id="structuralDiff.changed">
+        <source xml:lang="en">Changed</source>
+        <target>Змінено</target>
+      </trans-unit>
+      <trans-unit id="structuralDiff.declAnnotation">
+        <source xml:lang="en">decl</source>
+        <note>Short annotation: decl abbreviates declaration.</note>
+        <target>Коротка анотація: decl скорочує declaration.</target>
+      </trans-unit>
+      <trans-unit id="structuralDiff.declChanged">
+        <source xml:lang="en">Declaration changed</source>
+        <target>Заява змінена</target>
+      </trans-unit>
+      <trans-unit id="structuralDiff.declImplAnnotation">
+        <source xml:lang="en">decl+impl</source>
+        <note>Short annotation: declaration and implementation both changed.</note>
+        <target>Коротка анотація: декларація та реалізація обидві змінилися.</target>
+      </trans-unit>
+      <trans-unit id="structuralDiff.declImplChanged">
+        <source xml:lang="en">Declaration and implementation changed</source>
+        <target>Оголошення та реалізація змінені</target>
+      </trans-unit>
+      <trans-unit id="structuralDiff.deleted">
+        <source xml:lang="en">Deleted</source>
+        <target>Видалено</target>
+      </trans-unit>
+      <trans-unit id="structuralDiff.error">
+        <source xml:lang="en">Unable to load structural changes</source>
+        <target>Не вдалося завантажити структурні зміни</target>
+      </trans-unit>
+      <trans-unit id="structuralDiff.implAnnotation">
+        <source xml:lang="en">impl</source>
+        <note>Short annotation: impl abbreviates implementation.</note>
+        <target>Коротка анотація: impl скорочує implementation.</target>
+      </trans-unit>
+      <trans-unit id="structuralDiff.implChanged">
+        <source xml:lang="en">Implementation changed</source>
+        <target>Змінилася реалізація</target>
+      </trans-unit>
+      <trans-unit id="structuralDiff.incomplete">
+        <source xml:lang="en">Partial structural changes</source>
+        <target>Часткові структурні зміни</target>
+      </trans-unit>
+      <trans-unit id="structuralDiff.renamed">
+        <source xml:lang="en">Renamed from {0} to {1}</source>
+        <target>Перейменовано з {0} на {1}</target>
+      </trans-unit>
+      <trans-unit id="structuralDiff.timedOut">
+        <source xml:lang="en">Structural changes took too long to load</source>
+        <target>Структурні зміни завантажувалися занадто довго.</target>
       </trans-unit>
     </body>
   </file>

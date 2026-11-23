@@ -1,5 +1,409 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="src/vs/sessions/contrib/automations/browser/automationCommands" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="automation.duplicateEvents">
+        <source xml:lang="en">Duplicate event-triggered automations on GitHub to preserve their complete configuration.</source>
+        <target>Дублюйте автоматизації, що викликаються подіями, на GitHub, щоб зберегти їхню повну конфігурацію.</target>
+      </trans-unit>
+      <trans-unit id="automationAcceptedStatus">
+        <source xml:lang="en">Run requested for {0}. Its history will update when available.</source>
+        <target>Запит на виконання для {0}. Його історія буде оновлена, коли стане доступною.</target>
+      </trans-unit>
+      <trans-unit id="automationAlreadyRunningStatus">
+        <source xml:lang="en">Automation {0} is already running</source>
+        <target>Автоматизація {0} вже запущена</target>
+      </trans-unit>
+      <trans-unit id="automationBlueprint.invalidField">
+        <source xml:lang="en">The property '{0}' is missing or invalid.</source>
+        <target>Властивість '{0}' відсутня або недійсна.</target>
+      </trans-unit>
+      <trans-unit id="automationBlueprint.invalidFrontmatter">
+        <source xml:lang="en">The file must start with valid YAML frontmatter.</source>
+        <target>Файл повинен починатися з дійсного YAML frontmatter.</target>
+      </trans-unit>
+      <trans-unit id="automationBlueprint.invalidId">
+        <source xml:lang="en">The blueprint id '{0}' is invalid.</source>
+        <target>Ідентифікатор шаблону '{0}' є недійсним.</target>
+      </trans-unit>
+      <trans-unit id="automationBlueprint.missingPrompt">
+        <source xml:lang="en">The Automation prompt must follow the frontmatter.</source>
+        <target>Промт автоматизації повинен слідувати за frontmatter.</target>
+      </trans-unit>
+      <trans-unit id="automationBlueprint.unknownProperty">
+        <source xml:lang="en">The property '{0}' is not supported.</source>
+        <target>Властивість '{0}' не підтримується.</target>
+      </trans-unit>
+      <trans-unit id="automationBlueprint.unsupportedSchedule">
+        <source xml:lang="en">The cron expression '{0}' cannot be represented by the current Automation editor.</source>
+        <target>Cron-вираз '{0}' не може бути представлений поточним редактором автоматизації.</target>
+      </trans-unit>
+      <trans-unit id="automationBlueprint.unsupportedTimeZone">
+        <source xml:lang="en">The time zone '{0}' is not supported. Use 'local' so the schedule follows the importing user's time zone.</source>
+        <target>Часовий пояс '{0}' не підтримується. Використовуйте 'local', щоб розклад відповідав часовому поясу користувача, який імпортує.</target>
+      </trans-unit>
+      <trans-unit id="automationBlueprint.unsupportedVersion">
+        <source xml:lang="en">Automation blueprint version {0} is not supported.</source>
+        <target>Версія шаблону автоматизації {0} не підтримується.</target>
+      </trans-unit>
+      <trans-unit id="automationBlueprintFileFilter">
+        <source xml:lang="en">Automation Blueprint</source>
+        <target>Автоматизаційний план</target>
+      </trans-unit>
+      <trans-unit id="automationChangedBeforeRemoveEndDate">
+        <source xml:lang="en">This automation changed before its end date could be removed. Try again.</source>
+        <target>Ця автоматизація змінилася до того, як її кінцеву дату можна було видалити. Спробуйте ще раз.</target>
+      </trans-unit>
+      <trans-unit id="automationChangedDuringDisable">
+        <source xml:lang="en">This automation changed before it could be disabled. Try again.</source>
+        <target>Ця автоматизація змінилася, перш ніж її можна було відключити. Спробуйте ще раз.</target>
+      </trans-unit>
+      <trans-unit id="automationChangedDuringEdit">
+        <source xml:lang="en">This automation changed while the dialog was open. Reopen it to review the latest values.</source>
+        <target>Ця автоматизація змінилася, поки діалог був відкритий. Перезапустіть його, щоб переглянути останні значення.</target>
+      </trans-unit>
+      <trans-unit id="automationChangedDuringEnable">
+        <source xml:lang="en">This automation changed before it could be enabled. Try again.</source>
+        <target>Ця автоматизація змінилася до того, як її можна було активувати. Спробуйте ще раз.</target>
+      </trans-unit>
+      <trans-unit id="automationCopyName">
+        <source xml:lang="en">{0} Copy</source>
+        <target>{0} Копіювати</target>
+      </trans-unit>
+      <trans-unit id="automationDeleteFailed">
+        <source xml:lang="en">Failed to delete automation.</source>
+        <target>Не вдалося видалити автоматизацію.</target>
+      </trans-unit>
+      <trans-unit id="automationDeletedBeforeRemoveEndDate">
+        <source xml:lang="en">This automation was deleted before its end date could be removed.</source>
+        <target>Цю автоматизацію було видалено до того, як її дата закінчення могла бути видалена.</target>
+      </trans-unit>
+      <trans-unit id="automationDeletedDuringDisable">
+        <source xml:lang="en">This automation was deleted before it could be disabled.</source>
+        <target>Цю автоматизацію було видалено до того, як її можна було вимкнути.</target>
+      </trans-unit>
+      <trans-unit id="automationDeletedDuringEdit">
+        <source xml:lang="en">This automation was deleted while the dialog was open.</source>
+        <target>Цю автоматизацію було видалено, поки діалог був відкритий.</target>
+      </trans-unit>
+      <trans-unit id="automationDeletedDuringEnable">
+        <source xml:lang="en">This automation was deleted before it could be enabled.</source>
+        <target>Цю автоматизацію було видалено до того, як її можна було активувати.</target>
+      </trans-unit>
+      <trans-unit id="automationDeletedStatus">
+        <source xml:lang="en">Deleted automation {0}</source>
+        <target>Видалена автоматизація {0}</target>
+      </trans-unit>
+      <trans-unit id="automationDisableFailed">
+        <source xml:lang="en">Failed to disable automation.</source>
+        <target>Не вдалося вимкнути автоматизацію.</target>
+      </trans-unit>
+      <trans-unit id="automationDisabledStatus">
+        <source xml:lang="en">Disabled automation {0}</source>
+        <target>Вимкнена автоматизація {0}</target>
+      </trans-unit>
+      <trans-unit id="automationDispatchPending">
+        <source xml:lang="en">A run request for {0} is already pending.</source>
+        <target>Запит на виконання для {0} вже знаходиться в обробці.</target>
+      </trans-unit>
+      <trans-unit id="automationDropFailed">
+        <source xml:lang="en">Unable to import automation.</source>
+        <target>Неможливо імпортувати автоматизацію.</target>
+      </trans-unit>
+      <trans-unit id="automationDropUnsupported">
+        <source xml:lang="en">Only .automation.md files can be imported.</source>
+        <target>Тільки файли .automation.md можуть бути імпортовані.</target>
+      </trans-unit>
+      <trans-unit id="automationDuplicateFailed">
+        <source xml:lang="en">Failed to duplicate automation.</source>
+        <target>Не вдалося дублювати автоматизацію.</target>
+      </trans-unit>
+      <trans-unit id="automationDuplicatedStatus">
+        <source xml:lang="en">Created duplicate automation {0}</source>
+        <target>Створено дублікат автоматизації {0}</target>
+      </trans-unit>
+      <trans-unit id="automationEditUnavailable">
+        <source xml:lang="en">This automation is no longer available for editing.</source>
+        <target>Ця автоматизація більше не доступна для редагування.</target>
+      </trans-unit>
+      <trans-unit id="automationEnableFailed">
+        <source xml:lang="en">Failed to enable automation.</source>
+        <target>Не вдалося увімкнути автоматизацію.</target>
+      </trans-unit>
+      <trans-unit id="automationEnabledStatus">
+        <source xml:lang="en">Enabled automation {0}</source>
+        <target>Увімкнена автоматизація {0}</target>
+      </trans-unit>
+      <trans-unit id="automationEndDateRemoved">
+        <source xml:lang="en">Removed end date from automation {0}</source>
+        <target>Видалено дату завершення з автоматизації {0}</target>
+      </trans-unit>
+      <trans-unit id="automationExpired">
+        <source xml:lang="en">This automation has expired</source>
+        <target>Ця автоматизація вийшла з терміну дії.</target>
+      </trans-unit>
+      <trans-unit id="automationExpiredDetail">
+        <source xml:lang="en">The expiration date has passed for this automation. Ask in chat to change the date, or remove it to reenable it.</source>
+        <target>Термін дії цієї автоматизації закінчився. Запитайте в чаті, щоб змінити дату, або видаліть її, щоб повторно активувати.</target>
+      </trans-unit>
+      <trans-unit id="automationExportFailed">
+        <source xml:lang="en">Failed to export automation.</source>
+        <target>Не вдалося експортувати автоматизацію.</target>
+      </trans-unit>
+      <trans-unit id="automationExportInvalidFileName">
+        <source xml:lang="en">Use a file name ending in exactly one .automation.md suffix.</source>
+        <target>Використовуйте ім'я файлу, яке закінчується точно на один суфікс .automation.md.</target>
+      </trans-unit>
+      <trans-unit id="automationExportInvalidFileNameTitle">
+        <source xml:lang="en">Unable to export automation.</source>
+        <target>Неможливо експортувати автоматизацію.</target>
+      </trans-unit>
+      <trans-unit id="automationExportedStatus">
+        <source xml:lang="en">Exported automation {0}</source>
+        <target>Експортована автоматизація {0}</target>
+      </trans-unit>
+      <trans-unit id="automationExternalOpenFailed">
+        <source xml:lang="en">Failed to open the automation on GitHub.</source>
+        <target>Не вдалося відкрити автоматизацію на GitHub.</target>
+      </trans-unit>
+      <trans-unit id="automationExternalOpenRejected">
+        <source xml:lang="en">The link could not be opened.</source>
+        <target>Посилання не вдалося відкрити.</target>
+      </trans-unit>
+      <trans-unit id="automationExternalUnavailable">
+        <source xml:lang="en">This automation is no longer available on GitHub.</source>
+        <target>Ця автоматизація більше недоступна на GitHub.</target>
+      </trans-unit>
+      <trans-unit id="automationImportReadFailed">
+        <source xml:lang="en">Failed to import automation.</source>
+        <target>Не вдалося імпортувати автоматизацію.</target>
+      </trans-unit>
+      <trans-unit id="automationImportedStatus">
+        <source xml:lang="en">Imported automation {0}</source>
+        <target>Імпортована автоматизація {0}</target>
+      </trans-unit>
+      <trans-unit id="automationIndexedCopyName">
+        <source xml:lang="en">{0} Copy {1}</source>
+        <target>{0} Копіювати {1}</target>
+      </trans-unit>
+      <trans-unit id="automationNotStartedStatus">
+        <source xml:lang="en">Automation {0} did not start</source>
+        <target>Автоматизація {0} не розпочалася</target>
+      </trans-unit>
+      <trans-unit id="automationQueuedStatus">
+        <source xml:lang="en">Queued automation {0}</source>
+        <target>Черга автоматизації {0}</target>
+      </trans-unit>
+      <trans-unit id="automationRemainsDisabledStatus">
+        <source xml:lang="en">Automation {0} remains disabled.</source>
+        <target>Автоматизація {0} залишається вимкненою.</target>
+      </trans-unit>
+      <trans-unit id="automationRemoveEndDateFailed">
+        <source xml:lang="en">Failed to remove automation end date.</source>
+        <target>Не вдалося видалити дату закінчення автоматизації.</target>
+      </trans-unit>
+      <trans-unit id="automationRemoveExpirationAndEnable">
+        <source xml:lang="en">Remove expiration and enable</source>
+        <target>Видалити термін дії та увімкнути</target>
+      </trans-unit>
+      <trans-unit id="automationRunActionFailed">
+        <source xml:lang="en">Failed to run automation.</source>
+        <target>Не вдалося запустити автоматизацію.</target>
+      </trans-unit>
+      <trans-unit id="automationRunAiDisabled">
+        <source xml:lang="en">Enable AI features to run automations.</source>
+        <target>Увімкніть функції ШІ для запуску автоматизацій.</target>
+      </trans-unit>
+      <trans-unit id="automationRunUnavailable">
+        <source xml:lang="en">This automation is no longer available to run.</source>
+        <target>Ця автоматизація більше недоступна для виконання.</target>
+      </trans-unit>
+      <trans-unit id="automationStartedStatus">
+        <source xml:lang="en">Started automation {0}</source>
+        <target>Розпочато автоматизацію {0}</target>
+      </trans-unit>
+      <trans-unit id="automationUpdateFailed">
+        <source xml:lang="en">Failed to update automation.</source>
+        <target>Не вдалося оновити автоматизацію.</target>
+      </trans-unit>
+      <trans-unit id="automationUpdatedStatus">
+        <source xml:lang="en">Updated automation {0}</source>
+        <target>Оновлена автоматизація {0}</target>
+      </trans-unit>
+      <trans-unit id="automationsDisabledBeforeDelete">
+        <source xml:lang="en">Automations were disabled before the automation could be deleted.</source>
+        <target>Автоматизації були вимкнені перед тим, як автоматизацію можна було видалити.</target>
+      </trans-unit>
+      <trans-unit id="automationsDisabledBeforeDisable">
+        <source xml:lang="en">Automations were disabled before the automation could be updated.</source>
+        <target>Автоматизації були вимкнені перед тим, як автоматизацію можна було оновити.</target>
+      </trans-unit>
+      <trans-unit id="automationsDisabledBeforeDuplicate">
+        <source xml:lang="en">Automations were disabled before the duplicate could be saved.</source>
+        <target>Автоматизації були вимкнені перед тим, як дублікат міг бути збережений.</target>
+      </trans-unit>
+      <trans-unit id="automationsDisabledBeforeEnable">
+        <source xml:lang="en">Automations were disabled before the automation could be enabled.</source>
+        <target>Автоматизації були вимкнені перед тим, як автоматизацію можна було ввімкнути.</target>
+      </trans-unit>
+      <trans-unit id="automationsDisabledBeforeImport">
+        <source xml:lang="en">Automations were disabled before the imported automation could be saved.</source>
+        <target>Автоматизації були вимкнені перед тим, як імпортовану автоматизацію можна було зберегти.</target>
+      </trans-unit>
+      <trans-unit id="automationsDisabledBeforeRemoveEndDate">
+        <source xml:lang="en">Automations were disabled before the end date could be removed.</source>
+        <target>Автоматизації були вимкнені перед тим, як можна було видалити дату закінчення.</target>
+      </trans-unit>
+      <trans-unit id="automationsDisabledBeforeSave">
+        <source xml:lang="en">Automations were disabled before the change could be saved.</source>
+        <target>Автоматизації були вимкнені перед тим, як зміни могли бути збережені.</target>
+      </trans-unit>
+      <trans-unit id="automationsDisabledDetail">
+        <source xml:lang="en">Enable “{0}” to make changes.</source>
+        <target>Увімкніть “{0}”, щоб внести зміни.</target>
+      </trans-unit>
+      <trans-unit id="automationsDisabledTitle">
+        <source xml:lang="en">Automations are disabled.</source>
+        <target>Автоматизації вимкнені.</target>
+      </trans-unit>
+      <trans-unit id="automationsRefreshFailed">
+        <source xml:lang="en">Could not refresh automations: {0}</source>
+        <target>Не вдалося оновити автоматизації: {0}</target>
+      </trans-unit>
+      <trans-unit id="cloudAutomationsRefreshed">
+        <source xml:lang="en">Cloud automations refreshed.</source>
+        <target>Автоматизації хмари оновлено.</target>
+      </trans-unit>
+      <trans-unit id="confirmDeleteAutomation">
+        <source xml:lang="en">Delete automation "{0}"?</source>
+        <target>Видалити автоматизацію "{0}"?</target>
+      </trans-unit>
+      <trans-unit id="confirmDeleteDetail">
+        <source xml:lang="en">This will permanently delete the automation, its run history, and the associated sessions. This cannot be undone.</source>
+        <target>Це назавжди видалить автоматизацію, її історію виконання та пов'язані сесії. Це не можна скасувати.</target>
+      </trans-unit>
+      <trans-unit id="confirmDisableSharedAutomation">
+        <source xml:lang="en">Disable automation "{0}"?</source>
+        <target>Вимкнути автоматизацію "{0}"?</target>
+      </trans-unit>
+      <trans-unit id="createManually">
+        <source xml:lang="en">Create Manually</source>
+        <target>Створити вручну</target>
+      </trans-unit>
+      <trans-unit id="createWithAgent">
+        <source xml:lang="en">Create with Agent</source>
+        <target>Створити з Агентом</target>
+      </trans-unit>
+      <trans-unit id="delete">
+        <source xml:lang="en">Delete</source>
+        <target>Видалити</target>
+      </trans-unit>
+      <trans-unit id="deleteAutomationContextMenu">
+        <source xml:lang="en">Delete...</source>
+        <target>Видалити...</target>
+      </trans-unit>
+      <trans-unit id="deleteSharedAutomationWarning">
+        <source xml:lang="en">WARNING: This is a shared automation, this will delete it for everyone in this repository.</source>
+        <target>ПОПЕРЕЖЕННЯ: Це спільна автоматизація, це видалить її для всіх у цьому репозиторії.</target>
+      </trans-unit>
+      <trans-unit id="disable">
+        <source xml:lang="en">Disable</source>
+        <target>Вимкнути</target>
+      </trans-unit>
+      <trans-unit id="disableAutomationContextMenu">
+        <source xml:lang="en">Disable</source>
+        <target>Вимкнути</target>
+      </trans-unit>
+      <trans-unit id="disableSharedAutomationWarning">
+        <source xml:lang="en">WARNING: This is a shared automation, this will disable it for everyone in this repository.</source>
+        <target>ПОПЕРЕЖЕННЯ: Це спільна автоматизація, це вимкне її для всіх у цьому репозиторії.</target>
+      </trans-unit>
+      <trans-unit id="duplicateAutomation">
+        <source xml:lang="en">Duplicate...</source>
+        <target>Дублювати...</target>
+      </trans-unit>
+      <trans-unit id="editAutomation">
+        <source xml:lang="en">Edit...</source>
+        <target>Редагувати...</target>
+      </trans-unit>
+      <trans-unit id="enableAutomationContextMenu">
+        <source xml:lang="en">Enable</source>
+        <target>Увімкнути</target>
+      </trans-unit>
+      <trans-unit id="exportAutomation">
+        <source xml:lang="en">Export...</source>
+        <target>Експорт...</target>
+      </trans-unit>
+      <trans-unit id="exportAutomationDialogSave">
+        <source xml:lang="en">Export</source>
+        <target>Експорт</target>
+      </trans-unit>
+      <trans-unit id="exportAutomationDialogTitle">
+        <source xml:lang="en">Export Automation</source>
+        <target>Експортна автоматизація</target>
+      </trans-unit>
+      <trans-unit id="importAutomation">
+        <source xml:lang="en">Import Automation</source>
+        <target>Імпорт автоматизації</target>
+      </trans-unit>
+      <trans-unit id="importAutomationDialogOpen">
+        <source xml:lang="en">Import</source>
+        <target>Імпорт</target>
+      </trans-unit>
+      <trans-unit id="importAutomationDialogTitle">
+        <source xml:lang="en">Import Automation</source>
+        <target>Імпорт автоматизації</target>
+      </trans-unit>
+      <trans-unit id="openAutomationOnGitHub">
+        <source xml:lang="en">Open on GitHub</source>
+        <target>Відкрити на GitHub</target>
+      </trans-unit>
+      <trans-unit id="refreshAutomations">
+        <source xml:lang="en">Refresh cloud automations</source>
+        <target>Оновити автоматизації хмари</target>
+      </trans-unit>
+      <trans-unit id="refreshingCloudAutomations">
+        <source xml:lang="en">Refreshing cloud automations...</source>
+        <target>Оновлення хмарних автоматизацій...</target>
+      </trans-unit>
+      <trans-unit id="removeAutomationEndDate">
+        <source xml:lang="en">Remove end date</source>
+        <target>Видалити дату закінчення</target>
+      </trans-unit>
+      <trans-unit id="replaceAutomationDraft">
+        <source xml:lang="en">Replace your existing draft?</source>
+        <target>Замінити ваш існуючий чернетку?</target>
+      </trans-unit>
+      <trans-unit id="replaceAutomationDraftButton">
+        <source xml:lang="en">Replace Draft</source>
+        <target>Замінити чернетку</target>
+      </trans-unit>
+      <trans-unit id="replaceAutomationDraftDetail">
+        <source xml:lang="en">This action will overwrite the existing new session draft, it will not be recoverable.</source>
+        <target>Ця дія перезапише існуючий чернетку нової сесії, її не буде можливості відновити.</target>
+      </trans-unit>
+      <trans-unit id="runAutomationNow">
+        <source xml:lang="en">Run</source>
+        <target>Запустити</target>
+      </trans-unit>
+      <trans-unit id="sharedAutomationWarningDetail">
+        <source xml:lang="en">{0}
+
+{1}</source>
+        <target>{0}
+
+{1}</target>
+      </trans-unit>
+      <trans-unit id="showOtherSharedAutomations">
+        <source xml:lang="en">Show automations created by others</source>
+        <target>Показати автоматизації, створені іншими</target>
+      </trans-unit>
+      <trans-unit id="viewAutomationDraftButton">
+        <source xml:lang="en">View Draft</source>
+        <target>Переглянути чернетку</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/automations/browser/automationCronInput" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="cron.day">
@@ -79,8 +483,8 @@
   <file original="src/vs/sessions/contrib/automations/browser/automationDialog" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="automation.advanced">
-        <source xml:lang="en">Advanced</source>
-        <target>Розширений</target>
+        <source xml:lang="en">Advanced Settings</source>
+        <target>Розширені налаштування</target>
       </trans-unit>
       <trans-unit id="automation.allToolsAllowed">
         <source xml:lang="en">All tools allowed</source>
@@ -202,6 +606,10 @@
         <source xml:lang="en">A branch is required for Worktree isolation.</source>
         <target>Для ізоляції робочого дерева потрібна гілка.</target>
       </trans-unit>
+      <trans-unit id="automation.form.changeInvalidEndDate">
+        <source xml:lang="en">Change End Date...</source>
+        <target>Змінити дату закінчення...</target>
+      </trans-unit>
       <trans-unit id="automation.form.checkingRepository">
         <source xml:lang="en">Checking repository access...</source>
         <target>Перевірка доступу до репозиторію...</target>
@@ -210,6 +618,18 @@
         <source xml:lang="en">Checking target availability...</source>
         <target>Перевірка доступності цілі...</target>
       </trans-unit>
+      <trans-unit id="automation.form.chooseEndDate">
+        <source xml:lang="en">Select End Date</source>
+        <target>Виберіть дату завершення</target>
+      </trans-unit>
+      <trans-unit id="automation.form.clearEndDate">
+        <source xml:lang="en">Clear</source>
+        <target>Чистий</target>
+      </trans-unit>
+      <trans-unit id="automation.form.clearEndDateAria">
+        <source xml:lang="en">Clear End Date</source>
+        <target>Очистити дату закінчення</target>
+      </trans-unit>
       <trans-unit id="automation.form.cloudCron">
         <source xml:lang="en">Cron is only available for local automations. Choose a supported schedule for Cloud.</source>
         <target>Cron доступний лише для локальних автоматизацій. Виберіть підтримуваний графік для Cloud.</target>
@@ -217,6 +637,10 @@
       <trans-unit id="automation.form.cloudDisabled">
         <source xml:lang="en">Cloud automations are disabled. To create this automation, enable the {0} setting or turn off Run in the cloud.</source>
         <target>Автоматизації в хмарі вимкнені. Щоб створити цю автоматизацію, увімкніть налаштування {0} або вимкніть Запуск у хмарі.</target>
+      </trans-unit>
+      <trans-unit id="automation.form.cloudEndDate">
+        <source xml:lang="en">Cloud automations do not support end dates. Clear End date before switching to the cloud.</source>
+        <target>Автоматизації в хмарі не підтримують дати завершення. Очистіть дату завершення перед переходом до хмари.</target>
       </trans-unit>
       <trans-unit id="automation.form.cloudPreview">
         <source xml:lang="en">Preview</source>
@@ -246,17 +670,53 @@
         <source xml:lang="en">Connecting to cloud automations...</source>
         <target>Підключення до хмарних автоматизацій...</target>
       </trans-unit>
+      <trans-unit id="automation.form.continueSession">
+        <source xml:lang="en">Same Chat</source>
+        <target>Той самий чат</target>
+      </trans-unit>
+      <trans-unit id="automation.form.continueSessionCloud">
+        <source xml:lang="en">Not available in the cloud</source>
+        <target>Не доступно в хмарі</target>
+      </trans-unit>
+      <trans-unit id="automation.form.continueSessionDescription">
+        <source xml:lang="en">Each run continues the previous run's chat instead of starting a new one.</source>
+        <target>Кожен запуск продовжує чат попереднього запуску, а не починає новий.</target>
+      </trans-unit>
       <trans-unit id="automation.form.day">
         <source xml:lang="en">Day of week</source>
         <target>День тижня</target>
+      </trans-unit>
+      <trans-unit id="automation.form.disableAfter">
+        <source xml:lang="en">Disable after</source>
+        <target>Вимкнути після</target>
+      </trans-unit>
+      <trans-unit id="automation.form.disableAfterAria">
+        <source xml:lang="en">Disable after: {0}</source>
+        <target>Вимкнути після: {0}</target>
       </trans-unit>
       <trans-unit id="automation.form.disabledRepositoryAriaLabel">
         <source xml:lang="en">{0}, unavailable. {1}</source>
         <target>{0}, недоступно. {1}</target>
       </trans-unit>
+      <trans-unit id="automation.form.endDateHint">
+        <source xml:lang="en">Pick a day and time. Times use this device's time zone.</source>
+        <target>Виберіть день і час. Час використовує часовий пояс цього пристрою.</target>
+      </trans-unit>
+      <trans-unit id="automation.form.endDateSummary">
+        <source xml:lang="en">Ends {0}</source>
+        <target>Закінчується {0}</target>
+      </trans-unit>
+      <trans-unit id="automation.form.expiredDuration">
+        <source xml:lang="en">The end date has passed. Scheduling will stop immediately. Change or clear End date before re-enabling scheduling.</source>
+        <target>Дата закінчення минула. Планування зупиниться негайно. Змініть або очистіть дату закінчення перед повторним увімкненням планування.</target>
+      </trans-unit>
       <trans-unit id="automation.form.folderRequired">
         <source xml:lang="en">Workspace folder is required.</source>
         <target>Папка робочого простору є обов'язковою.</target>
+      </trans-unit>
+      <trans-unit id="automation.form.futureEndDate">
+        <source xml:lang="en">The end date has passed. In Advanced Settings, change or clear End date.</source>
+        <target>Дата закінчення минула. У Розширених налаштуваннях змініть або очистіть Дату закінчення.</target>
       </trans-unit>
       <trans-unit id="automation.form.githubRepositoryRequired">
         <source xml:lang="en">Cloud automations require a supported repository on GitHub.com.</source>
@@ -273,6 +733,10 @@
       <trans-unit id="automation.form.hostUnavailable">
         <source xml:lang="en">Choose an available Agent Host that supports automations.</source>
         <target>Виберіть доступний Агент Хост, який підтримує автоматизацію.</target>
+      </trans-unit>
+      <trans-unit id="automation.form.invalidEndDate">
+        <source xml:lang="en">The saved end date is invalid. In Advanced Settings, change or clear End date.</source>
+        <target>Збережена дата закінчення є недійсною. У Розширених налаштуваннях змініть або очистіть дату закінчення.</target>
       </trans-unit>
       <trans-unit id="automation.form.isolation.checkboxAriaLabel">
         <source xml:lang="en">Worktree isolation</source>
@@ -309,6 +773,10 @@
       <trans-unit id="automation.form.noWorkspace.description">
         <source xml:lang="en">Run without a backing workspace</source>
         <target>Запустити без робочого простору</target>
+      </trans-unit>
+      <trans-unit id="automation.form.pickEndDate">
+        <source xml:lang="en">End Date</source>
+        <target>Дата завершення</target>
       </trans-unit>
       <trans-unit id="automation.form.privateRepositoriesOnly">
         <source xml:lang="en">Cloud automations are only supported for private repositories.</source>
@@ -353,6 +821,10 @@
       <trans-unit id="automation.form.scheduleRequired">
         <source xml:lang="en">Choose a supported schedule.</source>
         <target>Виберіть підтримуваний графік.</target>
+      </trans-unit>
+      <trans-unit id="automation.form.selectEndDate">
+        <source xml:lang="en">Select</source>
+        <target>Вибрати</target>
       </trans-unit>
       <trans-unit id="automation.form.selectRepository">
         <source xml:lang="en">Select a repository</source>
@@ -554,6 +1026,10 @@
         <source xml:lang="en">The automation wasn't saved because its session configuration couldn't be captured. Check the provider connection and try again.</source>
         <target>Автоматизацію не було збережено, оскільки її конфігурацію сеансу не вдалося зафіксувати. Перевірте з'єднання з постачальником і спробуйте ще раз.</target>
       </trans-unit>
+      <trans-unit id="automation.dialog.close">
+        <source xml:lang="en">Close</source>
+        <target>Закрити</target>
+      </trans-unit>
       <trans-unit id="automation.dialog.create">
         <source xml:lang="en">Create</source>
         <target>Створити</target>
@@ -565,6 +1041,14 @@
       <trans-unit id="automation.dialog.editTitle">
         <source xml:lang="en">Edit automation</source>
         <target>Редагувати автоматизацію</target>
+      </trans-unit>
+      <trans-unit id="automation.dialog.oneTimeReadOnly">
+        <source xml:lang="en">This one-time automation preserves a captured request and cannot be edited or duplicated in this dialog. Use the available run or removal actions in Automations. Disabling a scheduled chat cancels it permanently.</source>
+        <target>Ця одноразова автоматизація зберігає захоплений запит і не може бути відредагована або дубльована в цьому діалозі. Використовуйте доступні дії запуску або видалення в Автоматизаціях. Вимкнення запланованого чату скасовує його назавжди.</target>
+      </trans-unit>
+      <trans-unit id="automation.dialog.oneTimeSchedule">
+        <source xml:lang="en">Scheduled for: {0}</source>
+        <target>Заплановано на: {0}</target>
       </trans-unit>
       <trans-unit id="automation.dialog.save">
         <source xml:lang="en">Save</source>
@@ -581,6 +1065,214 @@
       <trans-unit id="automation.owner.repositoryEditWarning">
         <source xml:lang="en">This automation is visible to everyone with repository access, and can be edited by anyone with write access.</source>
         <target>Ця автоматизація видима для всіх, хто має доступ до репозиторію, і може бути відредагована будь-ким, хто має доступ на запис.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/automations/browser/automationRunHistory" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="automationHistoryDeleteFailed">
+        <source xml:lang="en">Failed to delete run history.</source>
+        <target>Не вдалося видалити історію запусків.</target>
+      </trans-unit>
+      <trans-unit id="automationHistoryDeleteUnsupported">
+        <source xml:lang="en">This Automation provider does not support deleting retained run history.</source>
+        <target>Цей постачальник автоматизації не підтримує видалення збереженої історії виконання.</target>
+      </trans-unit>
+      <trans-unit id="automationHistoryDeletedStatus">
+        <source xml:lang="en">Deleted run history for {0}</source>
+        <target>Видалено історію запусків для {0}</target>
+      </trans-unit>
+      <trans-unit id="automationHistoryDeleting">
+        <source xml:lang="en">Deleting run history...</source>
+        <target>Видалення історії запусків...</target>
+      </trans-unit>
+      <trans-unit id="automationHistoryDeletionInterrupted">
+        <source xml:lang="en">Run history deletion was interrupted.</source>
+        <target>Видалення історії запусків було перервано.</target>
+      </trans-unit>
+      <trans-unit id="automationHistoryOwnerState">
+        <source xml:lang="en">{0}, {1}</source>
+        <target>{0}, {1}</target>
+      </trans-unit>
+      <trans-unit id="automationHistoryRetained">
+        <source xml:lang="en">Run history is retained.</source>
+        <target>Історія виконання зберігається.</target>
+      </trans-unit>
+      <trans-unit id="automationMarkAllReadFailed">
+        <source xml:lang="en">Failed to mark automation runs as read.</source>
+        <target>Не вдалося позначити запуски автоматизації як прочитані.</target>
+      </trans-unit>
+      <trans-unit id="automationOpenExternal">
+        <source xml:lang="en">Open on GitHub</source>
+        <target>Відкрити на GitHub</target>
+      </trans-unit>
+      <trans-unit id="automationOpenRunSession">
+        <source xml:lang="en">Open session: {0}, {1}</source>
+        <target>Відкрити сесію: {0}, {1}</target>
+      </trans-unit>
+      <trans-unit id="automationRunArchiveActive">
+        <source xml:lang="en">Wait for the cloud run to finish before marking it as done. Use Stop to cancel it.</source>
+        <target>Чекайте, поки виконання хмари завершиться, перш ніж позначити його як завершене. Використовуйте "Зупинити", щоб скасувати його.</target>
+      </trans-unit>
+      <trans-unit id="automationRunArchiveFailed">
+        <source xml:lang="en">Failed to archive the automation run.</source>
+        <target>Не вдалося заархівувати виконання автоматизації.</target>
+      </trans-unit>
+      <trans-unit id="automationRunCloudCompleted">
+        <source xml:lang="en">Completed on GitHub</source>
+        <target>Завершено на GitHub</target>
+      </trans-unit>
+      <trans-unit id="automationRunCloudFailed">
+        <source xml:lang="en">Failed on GitHub: {0}</source>
+        <target>Не вдалося на GitHub: {0}</target>
+      </trans-unit>
+      <trans-unit id="automationRunCloudRunning">
+        <source xml:lang="en">Running on GitHub</source>
+        <target>Запуск на GitHub</target>
+      </trans-unit>
+      <trans-unit id="automationRunDetails">
+        <source xml:lang="en">{0}, {1}, {2}</source>
+        <target>{0}, {1}, {2}</target>
+      </trans-unit>
+      <trans-unit id="automationRunExternalFailed">
+        <source xml:lang="en">Failed to open the run on GitHub.</source>
+        <target>Не вдалося відкрити запуск на GitHub.</target>
+      </trans-unit>
+      <trans-unit id="automationRunOpenFailed">
+        <source xml:lang="en">Failed to open automation run.</source>
+        <target>Не вдалося відкрити запуск автоматизації.</target>
+      </trans-unit>
+      <trans-unit id="automationRunOpenRejected">
+        <source xml:lang="en">The link could not be opened.</source>
+        <target>Посилання не вдалося відкрити.</target>
+      </trans-unit>
+      <trans-unit id="automationRunQueued">
+        <source xml:lang="en">Queued on GitHub</source>
+        <target>Став у чергу на GitHub</target>
+      </trans-unit>
+      <trans-unit id="automationRunSessionStopFailed">
+        <source xml:lang="en">Failed to stop the automation run session.</source>
+        <target>Не вдалося зупинити сесію виконання автоматизації.</target>
+      </trans-unit>
+      <trans-unit id="automationRunSessionStoppedStatus">
+        <source xml:lang="en">Stopped the session for {0}</source>
+        <target>Зупинено сеанс для {0}</target>
+      </trans-unit>
+      <trans-unit id="automationRunSessionUnavailable">
+        <source xml:lang="en">The cloud session is not available yet. Try again or open it on GitHub.</source>
+        <target>Хмарна сесія ще недоступна. Спробуйте ще раз або відкрийте її на GitHub.</target>
+      </trans-unit>
+      <trans-unit id="automationRunState">
+        <source xml:lang="en">{0}, {1}</source>
+        <target>{0}, {1}</target>
+      </trans-unit>
+      <trans-unit id="automationRunStopFailed">
+        <source xml:lang="en">Failed to stop the automation run.</source>
+        <target>Не вдалося зупинити виконання автоматизації.</target>
+      </trans-unit>
+      <trans-unit id="automationRunStopRequested">
+        <source xml:lang="en">Stop requested for {0}. History will update when available.</source>
+        <target>Запит на зупинку для {0}. Історія оновиться, коли буде доступна.</target>
+      </trans-unit>
+      <trans-unit id="automationRunStopUnavailable">
+        <source xml:lang="en">This automation run cannot be stopped from VS Code.</source>
+        <target>Цей запуск автоматизації не можна зупинити з VS Code.</target>
+      </trans-unit>
+      <trans-unit id="automationRunWorking">
+        <source xml:lang="en">Working...</source>
+        <target>Працює...</target>
+      </trans-unit>
+      <trans-unit id="confirmDeleteRetainedAutomationHistory">
+        <source xml:lang="en">Delete run history for "{0}"?</source>
+        <target>Видалити історію виконання для "{0}"?</target>
+      </trans-unit>
+      <trans-unit id="confirmDeleteRetainedAutomationHistoryDetail">
+        <source xml:lang="en">This permanently deletes every retained run for this automation.</source>
+        <target>Це назавжди видаляє всі збережені запуски для цієї автоматизації.</target>
+      </trans-unit>
+      <trans-unit id="confirmRetryDeleteAutomationHistory">
+        <source xml:lang="en">Retry deleting run history for "{0}"?</source>
+        <target>Спробувати видалити історію запуску для "{0}"?</target>
+      </trans-unit>
+      <trans-unit id="delete">
+        <source xml:lang="en">Delete</source>
+        <target>Видалити</target>
+      </trans-unit>
+      <trans-unit id="deleteHistory">
+        <source xml:lang="en">Delete Run History</source>
+        <target>Видалити історію виконання</target>
+      </trans-unit>
+      <trans-unit id="deleteRetainedAutomationHistoryAction">
+        <source xml:lang="en">Delete Run History...</source>
+        <target>Видалити історію запусків...</target>
+      </trans-unit>
+      <trans-unit id="deletingHistory">
+        <source xml:lang="en">Deleting...</source>
+        <target>Видалення...</target>
+      </trans-unit>
+      <trans-unit id="historyHeader">
+        <source xml:lang="en">History</source>
+        <target>Історія</target>
+      </trans-unit>
+      <trans-unit id="lastWeek">
+        <source xml:lang="en">Last week</source>
+        <target>Минулого тижня</target>
+      </trans-unit>
+      <trans-unit id="markAllRead">
+        <source xml:lang="en">Mark all as read</source>
+        <target>Позначити всі як прочитані</target>
+      </trans-unit>
+      <trans-unit id="markAutomationRunSessionReadAction">
+        <source xml:lang="en">Mark as Read</source>
+        <target>Позначити як прочитане</target>
+      </trans-unit>
+      <trans-unit id="markAutomationRunSessionUnreadAction">
+        <source xml:lang="en">Mark as Unread</source>
+        <target>Позначити як Непрочитане</target>
+      </trans-unit>
+      <trans-unit id="moreHistoryShown">
+        <source xml:lang="en">More run history shown.</source>
+        <target>Показано більше історії запусків.</target>
+      </trans-unit>
+      <trans-unit id="renameAutomationRunSessionAction">
+        <source xml:lang="en">Rename...</source>
+        <target>Перейменувати...</target>
+      </trans-unit>
+      <trans-unit id="retryDelete">
+        <source xml:lang="en">Retry Delete</source>
+        <target>Спробувати видалити</target>
+      </trans-unit>
+      <trans-unit id="retryDeleteHistory">
+        <source xml:lang="en">Retry Delete Run History</source>
+        <target>Спробувати видалити історію запусків</target>
+      </trans-unit>
+      <trans-unit id="retryDeleteRetainedAutomationHistoryAction">
+        <source xml:lang="en">Retry Delete Run History...</source>
+        <target>Спробуйте ще раз видалити історію запусків...</target>
+      </trans-unit>
+      <trans-unit id="showMoreHistory">
+        <source xml:lang="en">Show More</source>
+        <target>Показати більше</target>
+      </trans-unit>
+      <trans-unit id="showMoreHistoryLabel">
+        <source xml:lang="en">Show more run history, {0} remaining</source>
+        <target>Показати більше історії виконання, {0} залишилось</target>
+      </trans-unit>
+      <trans-unit id="stopAutomationRunSessionAction">
+        <source xml:lang="en">Stop</source>
+        <target>Зупинити</target>
+      </trans-unit>
+      <trans-unit id="today">
+        <source xml:lang="en">Today</source>
+        <target>Сьогодні</target>
+      </trans-unit>
+      <trans-unit id="unknownAutomation">
+        <source xml:lang="en">Unknown</source>
+        <target>Невідомо</target>
+      </trans-unit>
+      <trans-unit id="yesterday">
+        <source xml:lang="en">Yesterday</source>
+        <target>Вчора</target>
       </trans-unit>
     </body>
   </file>
@@ -628,7 +1320,7 @@
       </trans-unit>
       <trans-unit id="automationRunUnavailable">
         <source xml:lang="en">The automation's Agent Host is not ready to run it.</source>
-        <target>Агент-хост автоматизації не готовий до його виконання.</target>
+        <target>Ця автоматизація більше недоступна для виконання.</target>
       </trans-unit>
     </body>
   </file>
@@ -637,6 +1329,26 @@
       <trans-unit id="automation.tool.cancelled">
         <source xml:lang="en">Automation change cancelled</source>
         <target>Скасування зміни автоматизації</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.conditions.expired">
+        <source xml:lang="en">The final date has passed. The host will disable scheduling immediately. Change or remove the final date to resume scheduled runs.</source>
+        <target>Остаточна дата минула. Ведучий негайно вимкне планування. Змініть або видаліть остаточну дату, щоб відновити заплановані запуски.</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.conditions.finalDate">
+        <source xml:lang="en">Disable scheduling at {0}.</source>
+        <target>Вимкнути планування на {0}.</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.conditions.futureDate">
+        <source xml:lang="en">The final date must be in the future.</source>
+        <target>Остаточна дата повинна бути в майбутньому.</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.conditions.none">
+        <source xml:lang="en">No scheduling end date.</source>
+        <target>Немає дати закінчення розкладу.</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.configure.cancelRequest">
+        <source xml:lang="en">Cancel this scheduled request?</source>
+        <target>Скасувати цей запланований запит?</target>
       </trans-unit>
       <trans-unit id="automation.tool.configure.create.confirmationMessage">
         <source xml:lang="en">Create the automation **{0}**?</source>
@@ -661,6 +1373,42 @@
       <trans-unit id="automation.tool.configure.displayName">
         <source xml:lang="en">Configure Automation</source>
         <target>Налаштувати автоматизацію</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.configure.existingChat">
+        <source xml:lang="en">The original conversation</source>
+        <target>Оригінальна розмова</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.configure.newSession">
+        <source xml:lang="en">A new session</source>
+        <target>Нова сесія</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.configure.scheduleConfirmation">
+        <source xml:lang="en">{0}
+
+Send time: {1} ({2})
+
+Destination: {3}
+
+{4}
+
+The local agent host sends when available. This does not approve future tool actions.</source>
+        <target>{0}
+
+Час відправлення: {1} ({2})
+
+Призначення: {3}
+
+{4}
+
+Локальний агент хосту надсилає, коли доступно. Це не затверджує майбутні дії з інструментами.</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.configure.scheduleRequest">
+        <source xml:lang="en">Schedule this request once?</source>
+        <target>Запланувати цей запит один раз?</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.configure.scheduled">
+        <source xml:lang="en">Scheduled {0} for {1}</source>
+        <target>Заплановано {0} на {1}</target>
       </trans-unit>
       <trans-unit id="automation.tool.configure.update.confirmationMessage">
         <source xml:lang="en">Apply the proposed changes to **{0}** (`{1}`)?</source>
@@ -699,12 +1447,16 @@
         <target>Видалити</target>
       </trans-unit>
       <trans-unit id="automation.tool.delete.confirmationMessage">
-        <source xml:lang="en">Delete **{0}** (`{1}`)? Its saved configuration and run history will be permanently removed. Runs already in flight will continue.</source>
-        <target>Видалити **{0}** (`{1}`)? Його збережена конфігурація та історія виконання будуть назавжди видалені. Запуски, які вже виконуються, продовжать свою роботу.</target>
+        <source xml:lang="en">Delete **{0}** (`{1}`)? This will permanently delete the automation, its run history, and the associated sessions. This cannot be undone. Runs already in flight will continue.</source>
+        <target>Видалити **{0}** (`{1}`)? Це назавжди видалить автоматизацію, її історію виконання та пов'язані сесії. Це не можна скасувати. Запуски, які вже виконуються, продовжать працювати.</target>
       </trans-unit>
       <trans-unit id="automation.tool.delete.confirmationTitle">
         <source xml:lang="en">Delete Automation?</source>
         <target>Видалити автоматизацію?</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.delete.conversationConfirmation">
+        <source xml:lang="en">Delete **{0}** (`{1}`) and its scheduling history? This does not delete the original conversation or stop a request already queued there. To cancel a pending send without deleting its record, disable its schedule instead.</source>
+        <target>Видалити **{0}** (`{1}`) та його історію розкладу? Це не видаляє оригінальну розмову і не зупиняє запит, який вже знаходиться в черзі. Щоб скасувати очікуване відправлення без видалення його запису, замість цього вимкніть його розклад.</target>
       </trans-unit>
       <trans-unit id="automation.tool.delete.deleted">
         <source xml:lang="en">Deleted automation {0}</source>
@@ -717,10 +1469,6 @@
       <trans-unit id="automation.tool.delete.invocationMessage">
         <source xml:lang="en">Deleting automation {0}</source>
         <target>Видалення автоматизації {0}</target>
-      </trans-unit>
-      <trans-unit id="automation.tool.delete.keepHistoryConfirmation">
-        <source xml:lang="en">Delete **{0}** (`{1}`)? Its saved configuration will be permanently removed. Run history will be kept.</source>
-        <target>Видалити **{0}** (`{1}`)? Його збережена конфігурація буде назавжди видалена. Історія виконання буде збережена.</target>
       </trans-unit>
       <trans-unit id="automation.tool.delete.pastTenseMessage">
         <source xml:lang="en">Deleted automation {0}</source>
@@ -790,6 +1538,10 @@
         <source xml:lang="en">Run Automation?</source>
         <target>Запустити автоматизацію?</target>
       </trans-unit>
+      <trans-unit id="automation.tool.run.conversationConfirmation">
+        <source xml:lang="en">Send **{0}** (`{1}`) now? This queues the request in its original conversation without interrupting the current turn. Queue acceptance does not mean the requested work has completed.</source>
+        <target>Відправити **{0}** (`{1}`) зараз? Це ставить запит у чергу в його оригінальній розмові, не перериваючи поточний хід. Прийняття черги не означає, що запитувана робота завершена.</target>
+      </trans-unit>
       <trans-unit id="automation.tool.run.displayName">
         <source xml:lang="en">Run Automation</source>
         <target>Запустити автоматизацію</target>
@@ -802,6 +1554,10 @@
         <source xml:lang="en">Started automation {0}</source>
         <target>Почато автоматизацію {0}</target>
       </trans-unit>
+      <trans-unit id="automation.tool.run.queued">
+        <source xml:lang="en">Queued {0} in its original conversation. The requested work has not necessarily completed.</source>
+        <target>У черзі {0} у його оригінальній розмові. Запитувана робота не обов'язково завершена.</target>
+      </trans-unit>
       <trans-unit id="automation.tool.run.started">
         <source xml:lang="en">Started automation {0}</source>
         <target>Розпочато автоматизацію {0}</target>
@@ -813,6 +1569,10 @@
       <trans-unit id="automation.tool.run.wasAlreadyRunning">
         <source xml:lang="en">Automation {0} was already running</source>
         <target>Автоматизація {0} вже працює</target>
+      </trans-unit>
+      <trans-unit id="automation.tool.schedule.unknown">
+        <source xml:lang="en">Scheduling outcome unknown. Reconcile the saved request before submitting another.</source>
+        <target>Результат планування невідомий. Відновіть збережений запит перед поданням іншого.</target>
       </trans-unit>
       <trans-unit id="automation.tool.unknown">
         <source xml:lang="en">The request outcome is unknown. Refresh automations before submitting another request.</source>
@@ -904,7 +1664,7 @@
       </trans-unit>
       <trans-unit id="automationRunOpenFailed">
         <source xml:lang="en">Failed to open automation run: {0}</source>
-        <target>Не вдалося відкрити запуск автоматизації: {0}</target>
+        <target>Не вдалося відкрити запуск автоматизації.</target>
       </trans-unit>
       <trans-unit id="automationRunRequested">
         <source xml:lang="en">Run requested for automation '{0}'.</source>
@@ -917,6 +1677,10 @@
       <trans-unit id="chat.automations.enabled">
         <source xml:lang="en">Enables the Automations feature: scheduling agent sessions to run on a cadence. When disabled, the Automations entry in the Customizations sidebar, the Automations section in the Customizations editor, and the Automation option in the new-session composer are hidden, and scheduled automations are not dispatched.</source>
         <target>Увімкнення функції Автоматизацій: планування сеансів агентів для виконання з певною періодичністю. Коли вимкнено, запис Автоматизацій у бічній панелі Налаштувань, розділ Автоматизацій у редакторі Налаштувань та опція Автоматизації в композиторі нових сеансів приховані, а заплановані автоматизації не виконуються.</target>
+      </trans-unit>
+      <trans-unit id="chat.automations.modal">
+        <source xml:lang="en">Opens Automations in an alternative modal catalogue. The default cards and history view is unchanged when disabled.</source>
+        <target>Відкриває Автоматизації в альтернативному модальному каталозі. За замовчуванням картки та перегляд історії залишаються незмінними, коли вимкнено.</target>
       </trans-unit>
       <trans-unit id="loadingAutomations">
         <source xml:lang="en">Loading automations...</source>
@@ -948,11 +1712,339 @@
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/sessions/contrib/automations/browser/automationsEditor" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="automations.modal.help.actions">
+        <source xml:lang="en">Use Sort By to choose a column and sort direction. The On column contains enable checkboxes. Right-click a row or press Shift+F10 on the focused row to edit, run, enable, disable, or delete that automation. Edit opens the automation dialog with its saved values. Save applies your changes; Cancel or Escape leaves it unchanged and returns to the modal. Run requests execution from the automation's provider; Last run updates when the provider publishes progress. Delete asks for confirmation before removing the automation, its run history, and associated sessions. Escape dismisses the menu and returns focus to the table. Unavailable providers cannot be changed. Create with Agent starts a new draft. Create Manually opens a separate automation dialog; its dropdown offers Import Automation. Escape closes only the top dialog. View options offers Refresh cloud automations and, when available, Show automations created by others.</source>
+        <target>Використовуйте Сортувати за, щоб вибрати стовпець і напрямок сортування. Стовпець Увімкнено містить прапорці для активації. Клацніть правою кнопкою миші на рядок або натисніть Shift+F10 на виділеному рядку, щоб редагувати, виконувати, увімкнути, вимкнути або видалити цю автоматизацію. Редагувати відкриває діалог автоматизації з її збереженими значеннями. Зберегти застосовує ваші зміни; Скасувати або Escape залишає його незмінним і повертає до модального вікна. Виконати запитує виконання від постачальника автоматизації; Останнє виконання оновлюється, коли постачальник публікує прогрес. Видалити запитує підтвердження перед видаленням автоматизації, її історії виконань та пов'язаних сесій. Escape закриває меню і повертає фокус до таблиці. Непридатні постачальники не можуть бути змінені. Створити з Агентом починає новий проект. Створити вручну відкриває окремий діалог автоматизації; його випадаюче меню пропонує Імпортувати автоматизацію. Escape закриває лише верхнє діалогове вікно. Опції перегляду пропонують Оновити хмарні автоматизації і, коли доступно, Показати автоматизації, створені іншими.</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.help.history">
+        <source xml:lang="en">The details pane includes run history for only the selected automation. Tab into the sessions list, use Up and Down Arrow to navigate, and press Enter to open a run. Opening a run closes the modal and opens that exact session. History updates as providers publish runs and sessions become available. Loading and unavailable messages mean history may be incomplete. Closing details stops observing that history.</source>
+        <target>Панель деталей містить історію виконання лише для обраної автоматизації. Перейдіть до списку сесій, використовуйте клавіші зі стрілками вгору та вниз для навігації, і натисніть Enter, щоб відкрити виконання. Відкриття виконання закриває модальне вікно та відкриває цю конкретну сесію. Історія оновлюється, коли постачальники публікують виконання, і сесії стають доступними. Повідомлення про завантаження та недоступність означають, що історія може бути неповною. Закриття деталей припиняє спостереження за цією історією.</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.help.historyPages">
+        <source xml:lang="en">History initially shows the ten most recent entries, plus sessions that are running or need input. Activate Show More to reveal twenty more entries and focus the first newly shown entry. No history is deleted.</source>
+        <target>Історія спочатку показує десять найновіших записів, а також сесії, які зараз працюють або потребують введення. Активуйте Показати більше, щоб розкрити ще двадцять записів і зосередити увагу на першому новому показаному записі. Ніяка історія не видаляється.</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.help.moreActions">
+        <source xml:lang="en">The row context menu also offers Open on GitHub, Duplicate, Export, and Remove end date when applicable. Run remains unavailable while its request is pending or waiting for history. At narrow widths, categories, catalogue and details are stacked vertically; scroll to reach details.</source>
+        <target>Контекстне меню рядка також пропонує Відкрити на GitHub, Дублювати, Експортувати та Видалити дату завершення, коли це доречно. Запуск залишається недоступним, поки його запит перебуває в очікуванні або чекає на історію. На вузьких ширинах категорії, каталог і деталі розташовані вертикально; прокрутіть, щоб дістатися до деталей.</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.help.navigation">
+        <source xml:lang="en">Use Tab and Shift+Tab to reach categories, search, state filter, Sort By, creation controls, and the table. Use Down Arrow from Search to enter the table, then Up and Down Arrow to navigate. Enter opens the selected automation's details. Close Details returns focus to the table. Escape closes the modal and returns focus to its opener.</source>
+        <target>Використовуйте Tab та Shift+Tab, щоб перейти до категорій, пошуку, фільтру за станом, Сортувати за, елементів керування створенням та таблиці. Використовуйте стрілку вниз з Пошуку, щоб увійти в таблицю, а потім стрілки вгору та вниз для навігації. Enter відкриває деталі вибраної автоматизації. Закрити деталі повертає фокус до таблиці. Escape закриває модальне вікно і повертає фокус до його відкривача.</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.help.overview">
+        <source xml:lang="en">You are in the Automations modal. It uses the same provider-owned automations as the default view. Closing the modal does not stop automations.</source>
+        <target>Ви знаходитесь у модальному вікні Автоматизацій. Воно використовує ті ж автоматизації, що належать постачальнику, як і в режимі за замовчуванням. Закриття модального вікна не зупиняє автоматизації.</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.help.scope">
+        <source xml:lang="en">The default Automations view also offers history across all automations and templates. Turn off chat.automations.modal to return to that view.</source>
+        <target>За замовчуванням перегляд автоматизацій також пропонує історію всіх автоматизацій та шаблонів. Вимкніть chat.automations.modal, щоб повернутися до цього перегляду.</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.name">
+        <source xml:lang="en">Automations</source>
+        <target>Автоматизації</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/automations/browser/automationsEditorInput" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="automations.modal.name">
+        <source xml:lang="en">Automations</source>
+        <target>Автоматизації</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/automations/browser/automationsModalActions" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="automations.modal.hideSession">
+        <source xml:lang="en">Hide from Sessions List</source>
+        <target>Сховати з списку сесій</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.import">
+        <source xml:lang="en">Import Automation...</source>
+        <target>Імпорт автоматизації...</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.showSession">
+        <source xml:lang="en">Show in Sessions List</source>
+        <target>Показати в списку сесій</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.viewOptions">
+        <source xml:lang="en">View options</source>
+        <target>Переглянути параметри</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/automations/browser/automationsModalHistory" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="automations.modal.history">
+        <source xml:lang="en">Run history</source>
+        <target>Історія запусків</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.historyEmpty">
+        <source xml:lang="en">No runs yet.</source>
+        <target>Ще немає забитих м'ячів.</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.historyError">
+        <source xml:lang="en">Run history could not be refreshed. Showing available runs.</source>
+        <target>Історію виконання не вдалося оновити. Показуються доступні запуски.</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.historyFor">
+        <source xml:lang="en">Run history for {0}</source>
+        <target>Історія виконання для {0}</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.historyLoading">
+        <source xml:lang="en">Loading run history...</source>
+        <target>Завантаження історії запусків...</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.historyRun">
+        <source xml:lang="en">{0}. {1}. {2}.</source>
+        <target>{0}. {1}. {2}.</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.historySessionsUnavailable">
+        <source xml:lang="en">Run sessions are not available yet.</source>
+        <target>Сесії запуску ще недоступні.</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.historyUnavailable">
+        <source xml:lang="en">Some run history may be unavailable.</source>
+        <target>Деяка історія запусків може бути недоступною.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/automations/browser/automationsModalWidget" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="automations.modal.actions">
+        <source xml:lang="en">Automation actions</source>
+        <target>Автоматизаційні дії</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.all">
+        <source xml:lang="en">All automations</source>
+        <target>Усі автоматизації</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.anyState">
+        <source xml:lang="en">All States</source>
+        <target>Усі штати</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.categories">
+        <source xml:lang="en">Automation categories</source>
+        <target>Категорії автоматизації</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.categoryCount">
+        <source xml:lang="en">{0} ({1})</source>
+        <target>{0} ({1})</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.chat">
+        <source xml:lang="en">Chat</source>
+        <target>Чат</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.closeDetails">
+        <source xml:lang="en">Close Details</source>
+        <target>Закрити деталі</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.cloud">
+        <source xml:lang="en">Cloud</source>
+        <target>Хмара</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.cloudDisabled">
+        <source xml:lang="en">Cloud automations are disabled.</source>
+        <target>Автоматизації хмари вимкнені.</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.count">
+        <source xml:lang="en">{0} automations found</source>
+        <target>Знайдено {0} автоматизацій</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.description">
+        <source xml:lang="en">Agent sessions that run on a schedule or when something happens.</source>
+        <target>Сесії агентів, які виконуються за розкладом або коли щось трапляється.</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.details">
+        <source xml:lang="en">Automation details</source>
+        <target>Деталі автоматизації</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.disabled">
+        <source xml:lang="en">Disabled</source>
+        <target>Вимкнено</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.enabled">
+        <source xml:lang="en">Enabled</source>
+        <target>Увімкнено</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.error">
+        <source xml:lang="en">The catalogue could not be read completely. Use Refresh to try again.</source>
+        <target>Каталог не вдалося прочитати повністю. Використайте Оновити, щоб спробувати ще раз.</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.filter">
+        <source xml:lang="en">Filter automations by state</source>
+        <target>Фільтрувати автоматизації за станом</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.loading">
+        <source xml:lang="en">Loading automations...</source>
+        <target>Завантаження автоматизацій...</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.never">
+        <source xml:lang="en">Never</source>
+        <target>Ніколи</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.onlyDisabled">
+        <source xml:lang="en">Disabled</source>
+        <target>Вимкнено</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.onlyEnabled">
+        <source xml:lang="en">Enabled</source>
+        <target>Увімкнено</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.personal">
+        <source xml:lang="en">Personal</source>
+        <target>Особистий</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.refreshError">
+        <source xml:lang="en">Could not refresh automations. Use Refresh to try again.</source>
+        <target>Не вдалося оновити автоматизації. Використайте Оновити, щоб спробувати ще раз.</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.remotes">
+        <source xml:lang="en">{0}/{1} remotes connected</source>
+        <target>{0}/{1} підключених віддалених пристроїв</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.repository">
+        <source xml:lang="en">Repository</source>
+        <target>Репозиторій</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.rowSummary">
+        <source xml:lang="en">{0}. {1}. Runs on {2}. Last run: {3}. {4}.</source>
+        <target>{0}. {1}. Виконується на {2}. Останній запуск: {3}. {4}.</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.runAt">
+        <source xml:lang="en">{0} {1}</source>
+        <target>{0} {1}</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.search">
+        <source xml:lang="en">Search automations</source>
+        <target>Пошукові автоматизації</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.sortBy">
+        <source xml:lang="en">Sort By</source>
+        <target>Сортувати за</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.sortChanged">
+        <source xml:lang="en">Sorted by {0}.</source>
+        <target>Сортовано за {0}.</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.sortLabel">
+        <source xml:lang="en">Sort automations</source>
+        <target>Сортувати автоматизації</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.starting">
+        <source xml:lang="en">Starting run...</source>
+        <target>Початок виконання...</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.table">
+        <source xml:lang="en">Automations. Columns: Name, Schedule, Runs on, Last run, On.</source>
+        <target>Автоматизації. Стовпці: Ім'я, Розклад, Виконується в, Останнє виконання, У.</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.tableWithHelp">
+        <source xml:lang="en">{0} Use {1} for accessibility help.</source>
+        <target>{0} Використовуйте {1} для допомоги з доступністю.</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.unavailable">
+        <source xml:lang="en">Some providers are unavailable. Showing available automations.</source>
+        <target>Деякі постачальники недоступні. Показуються доступні автоматизації.</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.unknownRun">
+        <source xml:lang="en">Unknown</source>
+        <target>Невідомо</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/sessions/contrib/automations/browser/automationsTableRenderers" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="automations.modal.lastRun">
+        <source xml:lang="en">Last run</source>
+        <target>Останній запуск</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.name">
+        <source xml:lang="en">Name</source>
+        <target>Автоматизації</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.on">
+        <source xml:lang="en">On</source>
+        <target>На</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.providerUnavailable">
+        <source xml:lang="en">Its provider is unavailable.</source>
+        <target>Його постачальник недоступний.</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.readOnly">
+        <source xml:lang="en">Automation {0} cannot be changed. {1}</source>
+        <target>Автоматизацію {0} не можна змінити. {1}</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.schedule">
+        <source xml:lang="en">Schedule</source>
+        <target>Розклад</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.sort.disabled">
+        <source xml:lang="en">Disabled First</source>
+        <target>Вимкнено спочатку</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.sort.enabled">
+        <source xml:lang="en">Enabled First</source>
+        <target>Увімкнено перше</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.sort.nameAscending">
+        <source xml:lang="en">Name (A-Z)</source>
+        <target>Ім'я (А-Я)</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.sort.nameDescending">
+        <source xml:lang="en">Name (Z-A)</source>
+        <target>Ім'я (Z-А)</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.sort.newest">
+        <source xml:lang="en">Last Run (Newest First)</source>
+        <target>Останній запуск (новіший спочатку)</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.sort.oldest">
+        <source xml:lang="en">Last Run (Oldest First)</source>
+        <target>Останній запуск (найстаріший спочатку)</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.sort.scheduleAscending">
+        <source xml:lang="en">Schedule (A-Z)</source>
+        <target>Розклад (A-Z)</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.sort.scheduleDescending">
+        <source xml:lang="en">Schedule (Z-A)</source>
+        <target>Розклад (Z-А)</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.sort.targetAscending">
+        <source xml:lang="en">Runs on (A-Z)</source>
+        <target>Запускається на (A-Z)</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.sort.targetDescending">
+        <source xml:lang="en">Runs on (Z-A)</source>
+        <target>Запускається на (Z-A)</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.target">
+        <source xml:lang="en">Runs on</source>
+        <target>Запускається на</target>
+      </trans-unit>
+      <trans-unit id="automations.modal.toggle">
+        <source xml:lang="en">Enable automation {0}</source>
+        <target>Увімкнути автоматизацію {0}</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/sessions/contrib/automations/browser/providerAutomationService" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="automationCreateUnavailable">
         <source xml:lang="en">Connect to an Agent Host that supports automations before creating one.</source>
         <target>Підключіться до хоста агента, який підтримує автоматизації, перед створенням одного.</target>
+      </trans-unit>
+      <trans-unit id="automationExistingChatUnavailable">
+        <source xml:lang="en">The selected provider does not support scheduling follow-ups in an existing chat.</source>
+        <target>Вибраний постачальник не підтримує планування повторних звернень у вже існуючому чаті.</target>
+      </trans-unit>
+      <trans-unit id="automationOneTimeUnavailable">
+        <source xml:lang="en">The selected provider does not support captured one-time requests.</source>
+        <target>Вибраний постачальник не підтримує захоплені одноразові запити.</target>
       </trans-unit>
       <trans-unit id="automationStopUnavailable">
         <source xml:lang="en">This automation run cannot be stopped from VS Code.</source>

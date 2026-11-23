@@ -576,15 +576,83 @@
       </trans-unit>
     </body>
   </file>
-  <file original="src/vs/workbench/contrib/codeEditor/browser/emptyTextEditorHint/emptyTextEditorHint" source-language="en" datatype="plaintext" target-language="uk">
+  <file original="src/vs/workbench/contrib/codeEditor/browser/emptyTextEditorHint/emptyEditorHintActions" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="emptyEditorHintActions.ariaLabel">
+        <source xml:lang="en">Empty Editor Actions</source>
+        <target>Порожні дії редактора</target>
+      </trans-unit>
+      <trans-unit id="emptyEditorHintActions.close">
+        <source xml:lang="en">Hide for This Editor</source>
+        <target>Сховати для цього редактора</target>
+      </trans-unit>
+      <trans-unit id="emptyEditorHintActions.dontShowAgain">
+        <source xml:lang="en">Don't Show Again</source>
+        <target>Не показувати знову</target>
+      </trans-unit>
+      <trans-unit id="emptyEditorHintActions.dontShowAgainHover">
+        <source xml:lang="en">Disable the empty editor hint</source>
+        <target>Вимкнути підказку порожнього редактора</target>
+      </trans-unit>
+      <trans-unit id="emptyEditorHintActions.entryAriaLabel">
+        <source xml:lang="en">{0} ({1})</source>
+        <target>{0} ({1})</target>
+      </trans-unit>
+      <trans-unit id="emptyEditorHintActions.generateCode">
+        <source xml:lang="en">Generate Code</source>
+        <target>Згенерувати код</target>
+      </trans-unit>
+      <trans-unit id="emptyEditorHintActions.hintAriaLabel">
+        <source xml:lang="en">Empty editor actions: {0}. Start typing to dismiss. Toggle {1} in settings to disable this hint.</source>
+        <target>Порожні дії редактора: {0}. Почніть вводити текст, щоб закрити. Увімкніть {1} у налаштуваннях, щоб вимкнути це підказку.</target>
+      </trans-unit>
+      <trans-unit id="emptyEditorHintActions.newChatEditor">
+        <source xml:lang="en">New Chat Editor</source>
+        <target>Новий редактор чату</target>
+      </trans-unit>
+      <trans-unit id="emptyEditorHintActions.openInEditor">
+        <source xml:lang="en">Open in {0}</source>
+        <target>Відкрити в {0}</target>
+      </trans-unit>
+      <trans-unit id="emptyEditorHintActions.openWith">
+        <source xml:lang="en">Open With Another Editor...</source>
+        <target>Відкрити в іншому редакторі...</target>
+      </trans-unit>
+      <trans-unit id="emptyEditorHintActions.otherEditors">
+        <source xml:lang="en">Open With Another Editor...</source>
+        <target>Відкрити з іншим редактором...</target>
+      </trans-unit>
+      <trans-unit id="emptyEditorHintActions.selectLanguage">
+        <source xml:lang="en">Select a Language</source>
+        <target>Виберіть мову</target>
+      </trans-unit>
+      <trans-unit id="emptyEditorHintActions.startTyping">
+        <source xml:lang="en">Start typing to dismiss</source>
+        <target>Почніть вводити, щоб закрити</target>
+      </trans-unit>
+      <trans-unit id="emptyEditorHintActionsVisible">
+        <source xml:lang="en">Whether the empty editor hint shows its list of actions</source>
+        <target>Чи показує підказка порожнього редактора свій список дій</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/emptyTextEditorHint/emptyTextEditorHintController" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="defaultHintAriaLabelWithInlineChat">
         <source xml:lang="en">Execute {0} to ask a question, execute {1} to select a language and get started. Start typing to dismiss.</source>
         <target>Виконайте {0}, щоб задати питання, виконайте {1}, щоб вибрати мову та почати. Почніть вводити, щоб закрити.</target>
       </trans-unit>
+      <trans-unit id="defaultHintAriaLabelWithInlineChatAndMarkdownEditor">
+        <source xml:lang="en">Execute {0} to ask a question, execute {1} to select a language and get started, or open the file in the Markdown Editor. Start typing to dismiss.</source>
+        <target>Виконайте {0}, щоб задати питання, виконайте {1}, щоб вибрати мову та розпочати, або відкрийте файл у Markdown Editor. Почніть вводити, щоб закрити.</target>
+      </trans-unit>
+      <trans-unit id="defaultHintAriaLabelWithMarkdownEditor">
+        <source xml:lang="en">Execute {0} to select a language and get started, or open the file in the Markdown Editor. Start typing to dismiss.</source>
+        <target>Виконайте {0}, щоб вибрати мову та розпочати, або відкрийте файл у Markdown Editor. Почніть вводити, щоб закрити.</target>
+      </trans-unit>
       <trans-unit id="defaultHintAriaLabelWithoutInlineChat">
         <source xml:lang="en">Execute {0} to select a language and get started. Start typing to dismiss.</source>
-        <target>Виконайте {0}, щоб вибрати мову та розпочати. Почніть вводити, щоб закрити.</target>
+        <target>Виконайте {0}, щоб вибрати мову та почати. Почніть вводити, щоб закрити.</target>
       </trans-unit>
       <trans-unit id="disableEditorEmptyHint">
         <source xml:lang="en">Disable Empty Editor Hint</source>
@@ -592,7 +660,7 @@
       </trans-unit>
       <trans-unit id="disableHint">
         <source xml:lang="en"> Toggle {0} in settings to disable this hint.</source>
-        <target>Увімкніть {0} у налаштуваннях, щоб вимкнути це підказку.</target>
+        <target>Перемкніть {0} у налаштуваннях, щоб вимкнути це підказку.</target>
       </trans-unit>
       <trans-unit id="emptyTextEditorHintWithInlineChat">
         <source xml:lang="en">[[Generate code]] ({0}), or [[select a language]] ({1}). Start typing to dismiss or [[don't show]] this again.</source>
@@ -600,11 +668,25 @@
 language refers to a programming language</note>
         <target>[[Згенерувати код]] ({0}), або [[вибрати мову]] ({1}). Почніть вводити, щоб закрити, або [[не показувати]] це знову.</target>
       </trans-unit>
+      <trans-unit id="emptyTextEditorHintWithInlineChatAndMarkdownEditor">
+        <source xml:lang="en">[[Generate code]] ({0}), [[select a language]] ({1}), or [[open in Markdown Editor]]. Start typing to dismiss or [[don't show]] this again.</source>
+        <note>Preserve double-square brackets and their order&#xD;
+language refers to a programming language&#xD;
+Markdown Editor is the name of an editor</note>
+        <target>[[Згенерувати код]] ({0}), [[вибрати мову]] ({1}), або [[відкрити в Markdown Editor]]. Почніть вводити, щоб закрити, або [[не показувати]] це знову.</target>
+      </trans-unit>
+      <trans-unit id="emptyTextEditorHintWithMarkdownEditor">
+        <source xml:lang="en">[[Select a language]] ({0}) or [[open in Markdown Editor]] to get started. Start typing to dismiss or [[don't show]] this again.</source>
+        <note>Preserve double-square brackets and their order&#xD;
+language refers to a programming language&#xD;
+Markdown Editor is the name of an editor</note>
+        <target>[[Виберіть мову]] ({0}) або [[відкрийте в Markdown Editor]], щоб почати. Почніть вводити, щоб закрити, або [[не показувати]] це знову.</target>
+      </trans-unit>
       <trans-unit id="emptyTextEditorHintWithoutInlineChat">
         <source xml:lang="en">[[Select a language]] ({0}) to get started. Start typing to dismiss or [[don't show]] this again.</source>
         <note>Preserve double-square brackets and their order&#xD;
 language refers to a programming language</note>
-        <target>[[Виберіть мову]] ({0}), щоб почати. Почніть вводити, щоб закрити або [[не показувати]] це знову.</target>
+        <target>[[Виберіть мову]] ({0}), щоб почати. Почніть вводити, щоб закрити, або [[не показувати]] це знову.</target>
       </trans-unit>
     </body>
   </file>
@@ -613,6 +695,10 @@ language refers to a programming language</note>
       <trans-unit id="accessibilityHelpHintInLabel">
         <source xml:lang="en">Press {0} for accessibility help</source>
         <target>Натисніть {0} для отримання допомоги з доступністю</target>
+      </trans-unit>
+      <trans-unit id="ariaPartialSearchCount">
+        <source xml:lang="en">Match {0} of at least {1} for '{2}'</source>
+        <target>Збіг {0} щонайменше {1} для '{2}'</target>
       </trans-unit>
       <trans-unit id="ariaSearchNoInput">
         <source xml:lang="en">Enter search input</source>
@@ -694,6 +780,34 @@ language refers to a programming language</note>
       <trans-unit id="reopenFilePrompt">
         <source xml:lang="en">Please reopen file in order for this setting to take effect.</source>
         <target>Будь ласка, знову відкрийте файл, щоб ці налаштування набрали чинності.</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/contrib/codeEditor/browser/markdownEditorPromotion" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="markdownEditorNudge.dontShowAgain">
+        <source xml:lang="en">Don't Show Again</source>
+        <target>Не показувати знову</target>
+      </trans-unit>
+      <trans-unit id="markdownEditorNudge.preview.description">
+        <source xml:lang="en">The Markdown Editor shows formatted Markdown that you can edit directly, without a separate preview. You can switch editors here at any time.</source>
+        <target>Редактор Markdown показує відформатований Markdown, який ви можете редагувати безпосередньо, без окремого попереднього перегляду. Ви можете змінювати редактори тут у будь-який час.</target>
+      </trans-unit>
+      <trans-unit id="markdownEditorNudge.preview.title">
+        <source xml:lang="en">Edit While You Read</source>
+        <target>Редагуйте під час читання</target>
+      </trans-unit>
+      <trans-unit id="markdownEditorNudge.textEditor.description">
+        <source xml:lang="en">Edit Markdown files as formatted documents. You can switch back to the Text Editor here at any time.</source>
+        <target>Редагуйте файли Markdown як відформатовані документи. Ви можете в будь-який момент повернутися до текстового редактора тут.</target>
+      </trans-unit>
+      <trans-unit id="markdownEditorNudge.textEditor.title">
+        <source xml:lang="en">Try the new Markdown Editor</source>
+        <target>Спробуйте новий Markdown редактор</target>
+      </trans-unit>
+      <trans-unit id="markdownEditorNudge.tryEditor">
+        <source xml:lang="en">Try Editor</source>
+        <target>Спробуйте редактор</target>
       </trans-unit>
     </body>
   </file>
@@ -1044,8 +1158,8 @@ language refers to a programming language</note>
         <target>Шаблон RegExp для маркера кінця.</target>
       </trans-unit>
       <trans-unit id="schema.folding.markers.start">
-        <source xml:lang="en">The RegExp pattern for the start marker. The regexp must start with '^'.</source>
-        <target>Шаблон RegExp для маркера початку. Regexp повинен починатися з '^'.</target>
+        <source xml:lang="en">The RegExp pattern for the start marker. The regexp must start with '^'. A named group 'label' captures the region's name, e.g. in '&lt;!-- #region Name --&gt;'; otherwise the name is the text after the match.</source>
+        <target>Регулярний вираз для маркера початку. Регулярний вираз повинен починатися з '^'. Іменована група 'label' захоплює назву регіону, наприклад, у '&lt;!-- #region Name --&gt;'; в іншому випадку назва - це текст після збігу.</target>
       </trans-unit>
       <trans-unit id="schema.folding.markers.start.errorMessage">
         <source xml:lang="en">Must match the pattern `/^([gimuy]+)$/`.</source>

@@ -80,6 +80,51 @@ Open the page in a new tab to share it with agents.</source>
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/browserView/electron-browser/browserDialogs" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="browser.dialog.credentials">
+        <source xml:lang="en">This site requires a username and password.</source>
+        <target>Цей сайт вимагає ім'я користувача та пароль.</target>
+      </trans-unit>
+      <trans-unit id="browser.dialog.embedded">
+        <source xml:lang="en">An embedded page says</source>
+        <target>Вбудована сторінка говорить</target>
+      </trans-unit>
+      <trans-unit id="browser.dialog.insecureCredentials">
+        <source xml:lang="en">This site requires a username and password.
+Your connection to this site is not secure. Your credentials will be sent over an unencrypted connection.</source>
+        <target>Цей сайт вимагає ім'я користувача та пароль. Ваше з'єднання з цим сайтом не є безпечним. Ваші облікові дані будуть надіслані через незахищене з'єднання.</target>
+      </trans-unit>
+      <trans-unit id="browser.dialog.login">
+        <source xml:lang="en">Log In</source>
+        <target>Увійти</target>
+      </trans-unit>
+      <trans-unit id="browser.dialog.ok">
+        <source xml:lang="en">OK</source>
+        <target>Гаразд</target>
+      </trans-unit>
+      <trans-unit id="browser.dialog.password">
+        <source xml:lang="en">Password</source>
+        <target>Пароль</target>
+      </trans-unit>
+      <trans-unit id="browser.dialog.response">
+        <source xml:lang="en">Response</source>
+        <target>Відповідь</target>
+      </trans-unit>
+      <trans-unit id="browser.dialog.signIn">
+        <source xml:lang="en">Sign in to {0}</source>
+        <target>Увійдіть до {0}</target>
+      </trans-unit>
+      <trans-unit id="browser.dialog.username">
+        <source xml:lang="en">Username</source>
+        <target>Ім'я користувача</target>
+      </trans-unit>
+      <trans-unit id="browser.dialog.website">
+        <source xml:lang="en">{0} says</source>
+        <target>{0} каже</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/browserView/electron-browser/browserEditor" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="browser.editorFocused">
@@ -887,6 +932,10 @@ Ensure the URL is correct and the server is accessible from the remote machine.<
         <source xml:lang="en">{0} does not support browser proxying. Pages load from your local network. Update the agent host to reach its network.</source>
         <target>{0} не підтримує проксі-сервери браузера. Сторінки завантажуються з вашої локальної мережі. Оновіть хост агента, щоб отримати доступ до його мережі.</target>
       </trans-unit>
+      <trans-unit id="browser.localFile">
+        <source xml:lang="en">This file is local and served from this machine, not over the remote connection.</source>
+        <target>Цей файл є локальним і подається з цього комп'ютера, а не через віддалене з'єднання.</target>
+      </trans-unit>
     </body>
   </file>
   <file original="src/vs/workbench/contrib/browserView/electron-browser/features/browserSearchFeatures" source-language="en" datatype="plaintext" target-language="uk">
@@ -927,6 +976,11 @@ Ensure the URL is correct and the server is accessible from the remote machine.<
         <source xml:lang="en">Close</source>
         <target>Закрити</target>
       </trans-unit>
+      <trans-unit id="browser.dimOnOverlay">
+        <source xml:lang="en">Controls whether the Integrated Browser page is dimmed when a temporary element, such as a context menu or tooltip, overlaps it and causes it to pause. The page is paused regardless of this setting.</source>
+        <note>This is the description for a setting.</note>
+        <target>Контролює, чи затемнюється сторінка Інтегрованого браузера, коли тимчасовий елемент, такий як контекстне меню або підказка, перекриває її і призводить до паузи. Сторінка призупиняється незалежно від цього налаштування.</target>
+      </trans-unit>
       <trans-unit id="browser.editorOpen">
         <source xml:lang="en">Whether any browser editor is currently open</source>
         <target>Чи відкритий наразі будь-який редактор браузера</target>
@@ -934,6 +988,10 @@ Ensure the URL is correct and the server is accessible from the remote machine.<
       <trans-unit id="browser.externalUriOpener">
         <source xml:lang="en">Open in Integrated Browser</source>
         <target>Відкрити в інтегрованому браузері</target>
+      </trans-unit>
+      <trans-unit id="browser.externalUriOpener.description">
+        <source xml:lang="en">Open in the Integrated Browser.</source>
+        <target>Відкрити в інтегрованому браузері.</target>
       </trans-unit>
       <trans-unit id="browser.linkOpenedHint.ariaLabel">
         <source xml:lang="en">This link opened in the integrated browser</source>
@@ -991,6 +1049,10 @@ Localhost links automatically open in the integrated browser.</source>
         <source xml:lang="en">Open in Integrated Browser</source>
         <target>Відкрити в інтегрованому браузері</target>
       </trans-unit>
+      <trans-unit id="browser.openFromNewTabButton">
+        <source xml:lang="en">New Integrated Browser</source>
+        <target>Новий інтегрований браузер</target>
+      </trans-unit>
       <trans-unit id="browser.openLocalhostLinks">
         <source xml:lang="en">When enabled, localhost links (`localhost`, `127.0.0.1`, `[::1]`) and all-interfaces links (`0.0.0.0`, `[0:0:0:0:0:0:0:0]`, `[::]`) from the terminal, chat, and other sources will open in the Integrated Browser instead of the system browser.</source>
         <note>This is the description for a setting.</note>
@@ -1039,6 +1101,11 @@ Localhost links automatically open in the integrated browser.</source>
         <source xml:lang="en">The button is shown in the title bar when a browser editor is open.</source>
         <note>This is the description for a setting. Values surrounded by single quotes are not to be translated.</note>
         <target>Кнопка відображається в заголовку, коли відкрито редактор браузера.</target>
+      </trans-unit>
+      <trans-unit id="browser.userAgent">
+        <source xml:lang="en">The user agent used by the Integrated Browser. Device emulation overrides this value.</source>
+        <note>This is the description for a setting.</note>
+        <target>Користувацький агент, що використовується Інтегрованим Браузером. Емуляція пристрою переважає це значення.</target>
       </trans-unit>
       <trans-unit id="browserEntryAriaLabelWithGroup">
         <source xml:lang="en">{0}, {1}</source>
@@ -1173,6 +1240,22 @@ Localhost links automatically open in the integrated browser.</source>
   </file>
   <file original="src/vs/workbench/contrib/browserView/electron-browser/tools/handleDialogBrowserTool" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="browser.handleDialog.allowFolderSession">
+        <source xml:lang="en">Allow Uploads from This Folder in This Session</source>
+        <target>Дозволити завантаження з цієї папки в цій сесії</target>
+      </trans-unit>
+      <trans-unit id="browser.handleDialog.allowFolderSessionDetail">
+        <source xml:lang="en">Allow files from this folder to be uploaded to browser pages without further confirmation in this chat session.</source>
+        <target>Дозволити завантаження файлів з цієї папки на веб-сторінки без подальшого підтвердження в цій чат-сесії.</target>
+      </trans-unit>
+      <trans-unit id="browser.handleDialog.allowFoldersSession">
+        <source xml:lang="en">Allow Uploads from These Folders in This Session</source>
+        <target>Дозволити завантаження з цих папок у цій сесії</target>
+      </trans-unit>
+      <trans-unit id="browser.handleDialog.allowFoldersSessionDetail">
+        <source xml:lang="en">Allow files from these folders to be uploaded to browser pages without further confirmation in this chat session.</source>
+        <target>Дозволити завантаження файлів з цих папок на веб-сторінки без подальшого підтвердження в цій чат-сесії.</target>
+      </trans-unit>
       <trans-unit id="browser.handleDialog.invocation">
         <source xml:lang="en">Handling dialog in {0}</source>
         <target>Обробка діалогу в {0}</target>
@@ -1180,6 +1263,22 @@ Localhost links automatically open in the integrated browser.</source>
       <trans-unit id="browser.handleDialog.past">
         <source xml:lang="en">Handled dialog in {0}</source>
         <target>Оброблено діалог у {0}</target>
+      </trans-unit>
+      <trans-unit id="browser.handleDialog.uploadConfirmationMessage">
+        <source xml:lang="en">Allow this file to be uploaded to {0}?</source>
+        <target>Дозволити завантажити цей файл до {0}?</target>
+      </trans-unit>
+      <trans-unit id="browser.handleDialog.uploadConfirmationMessagePlural">
+        <source xml:lang="en">Allow these files to be uploaded to {0}?</source>
+        <target>Дозволити завантаження цих файлів до {0}?</target>
+      </trans-unit>
+      <trans-unit id="browser.handleDialog.uploadConfirmationTitle">
+        <source xml:lang="en">Upload File?</source>
+        <target>Завантажити файл?</target>
+      </trans-unit>
+      <trans-unit id="browser.handleDialog.uploadConfirmationTitlePlural">
+        <source xml:lang="en">Upload Files?</source>
+        <target>Завантажити файли?</target>
       </trans-unit>
       <trans-unit id="handleDialogBrowserTool.displayName">
         <source xml:lang="en">Handle Dialog</source>

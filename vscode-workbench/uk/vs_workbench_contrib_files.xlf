@@ -835,9 +835,17 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
         <source xml:lang="en">Choose Where to Download</source>
         <target>Виберіть, куди завантажити</target>
       </trans-unit>
+      <trans-unit id="confirmManyMerges">
+        <source xml:lang="en">The following {0} files and/or folders already exist in the destination folder. Do you want to merge or replace them?</source>
+        <target>Наступні {0} файли та/або папки вже існують у папці призначення. Чи хочете ви об'єднати їх або замінити?</target>
+      </trans-unit>
       <trans-unit id="confirmManyOverwrites">
         <source xml:lang="en">The following {0} files and/or folders already exist in the destination folder. Do you want to replace them?</source>
         <target>Наступні {0} файли та/або папки вже існують у папці призначення. Ви хочете їх замінити?</target>
+      </trans-unit>
+      <trans-unit id="confirmMerge">
+        <source xml:lang="en">A folder with the name '{0}' already exists in the destination folder. Do you want to merge or replace it?</source>
+        <target>Папка з іменем '{0}' вже існує в папці призначення. Ви хочете об'єднати її чи замінити?</target>
       </trans-unit>
       <trans-unit id="confirmOverwrite">
         <source xml:lang="en">A file or folder with the name '{0}' already exists in the destination folder. Do you want to replace it?</source>
@@ -926,6 +934,15 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
       <trans-unit id="irreversible">
         <source xml:lang="en">This action is irreversible!</source>
         <target>Цю дію неможливо скасувати!</target>
+      </trans-unit>
+      <trans-unit id="mergeButtonLabel">
+        <source xml:lang="en">&amp;&amp;Merge</source>
+        <note>&amp;&amp; denotes a mnemonic</note>
+        <target>&amp;&amp;Злиття</target>
+      </trans-unit>
+      <trans-unit id="mergeDetail">
+        <source xml:lang="en">Merging combines the contents of the folders and replaces files with the same name.</source>
+        <target>Злиття об'єднує вміст папок і замінює файли з однаковими іменами.</target>
       </trans-unit>
       <trans-unit id="overwrite">
         <source xml:lang="en">Overwrite {0}</source>
@@ -1445,6 +1462,18 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
       </trans-unit>
     </body>
   </file>
+  <file original="src/vs/workbench/contrib/files/browser/newTabButtonActions" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="newTabButton.markdown">
+        <source xml:lang="en">New Markdown Document</source>
+        <target>Новий документ Markdown</target>
+      </trans-unit>
+      <trans-unit id="newTabButton.untitledFile">
+        <source xml:lang="en">New Untitled Text File</source>
+        <target>Новий безіменний текстовий файл</target>
+      </trans-unit>
+    </body>
+  </file>
   <file original="src/vs/workbench/contrib/files/browser/views/emptyView" source-language="en" datatype="plaintext" target-language="uk">
     <body>
       <trans-unit id="noWorkspace">
@@ -1538,6 +1567,10 @@ Opening a folder will close all currently open editors. To keep them open, {1} i
       <trans-unit id="explorerHighlightFolderBadgeTitle">
         <source xml:lang="en">Directory contains {0} matches</source>
         <target>Каталог містить {0} збігів</target>
+      </trans-unit>
+      <trans-unit id="explorerRootAtLocation">
+        <source xml:lang="en">{0} ({1})</source>
+        <target>{0} ({1})</target>
       </trans-unit>
       <trans-unit id="fileInputAriaLabel">
         <source xml:lang="en">Type file name. Press Enter to confirm or Escape to cancel.</source>

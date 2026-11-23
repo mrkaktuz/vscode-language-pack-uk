@@ -58,6 +58,10 @@
         <source xml:lang="en">Needs attention alert ignored until this session needs attention again.</source>
         <target>Попередження про потребу уваги ігнорувалося, поки ця сесія знову не потребує уваги.</target>
       </trans-unit>
+      <trans-unit id="sessions">
+        <source xml:lang="en">Sessions</source>
+        <target>Сесії</target>
+      </trans-unit>
       <trans-unit id="sessionsRequiringInput">
         <source xml:lang="en">Sessions needing attention</source>
         <target>Сесії, що потребують уваги</target>
@@ -66,6 +70,18 @@
   </file>
   <file original="src/vs/sessions/contrib/sessions/browser/customizationsToolbar.contribution" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="customizationsEntryPoint">
+        <source xml:lang="en">Customizations</source>
+        <target>Налаштування</target>
+      </trans-unit>
+      <trans-unit id="lessCustomizations">
+        <source xml:lang="en">Less</source>
+        <target>Менше</target>
+      </trans-unit>
+      <trans-unit id="moreCustomizations">
+        <source xml:lang="en">More</source>
+        <target>Більше</target>
+      </trans-unit>
       <trans-unit id="overview">
         <source xml:lang="en">Overview</source>
         <target>Огляд</target>
@@ -115,81 +131,21 @@
         <note>&amp;&amp; denotes a mnemonic</note>
         <target>&amp;&amp;Сесії</target>
       </trans-unit>
+      <trans-unit id="sessions.drafts.enabled">
+        <source xml:lang="en">Save unsent new sessions in the Agents window's Drafts section when you navigate away. Disabling this setting keeps saved drafts without showing them or saving new drafts.</source>
+        <target>Зберігайте не надіслані нові сесії в розділі Чернетки вікна Агентів, коли ви переходите на іншу сторінку. Вимкнення цього налаштування зберігає чернетки без їх відображення або збереження нових чернеток.</target>
+      </trans-unit>
       <trans-unit id="sessions.list.agentTools.enabled">
         <source xml:lang="en">Controls whether agents can read and organize the Sessions list: create, nest, and reorder custom groups, move, pin, and archive sessions, and change the list's grouping, sorting, and filters. This only applies to the Sessions list of the Agents window.</source>
         <target>Контролює, чи можуть агенти читати та організовувати список Сесій: створювати, вкладати та змінювати порядок користувацьких груп, переміщати, закріплювати та архівувати сесії, а також змінювати групування, сортування та фільтри списку. Це стосується лише списку Сесій у вікні Агенти.</target>
       </trans-unit>
-      <trans-unit id="sessions.list.externalApplicationBadge">
-        <source xml:lang="en">Controls where sessions created in an application other than VS Code show the creating application.</source>
-        <target>Контролює, де сесії, створені в додатку, відмінному від VS Code, показують створюючий додаток.</target>
-      </trans-unit>
-      <trans-unit id="sessions.list.externalApplicationBadge.details">
-        <source xml:lang="en">Show the creating application first in the session details.</source>
-        <target>Показати створювальний додаток першим у деталях сесії.</target>
-      </trans-unit>
-      <trans-unit id="sessions.list.externalApplicationBadge.off">
-        <source xml:lang="en">Do not show the creating application.</source>
-        <target>Не показувати програму створення.</target>
-      </trans-unit>
-      <trans-unit id="sessions.list.externalApplicationBadge.title">
-        <source xml:lang="en">Show the creating application next to the session title.</source>
-        <target>Показати створювальний додаток поруч із заголовком сесії.</target>
-      </trans-unit>
-      <trans-unit id="sessions.list.externalApplicationBadgeShowFrom">
-        <source xml:lang="en">Controls whether session application badges include the word 'From'.</source>
-        <target>Контролює, чи включають значки додатків сеансу слово 'Від'.</target>
-      </trans-unit>
-      <trans-unit id="sessions.list.groupExternalSessions">
-        <source xml:lang="en">Controls whether external sessions are shown in a separate External section instead of workspace or time groups. Pinned sessions and custom groups keep their placement.</source>
-        <target>Контролює, чи зовнішні сесії відображаються в окремому розділі External замість робочого простору або часових груп. Закріплені сесії та користувацькі групи зберігають своє розташування.</target>
-      </trans-unit>
-      <trans-unit id="sessions.list.inboxEnabled">
-        <source xml:lang="en">Enables Inbox Mode in the Sessions list Grouping menu. Disabling it temporarily shows workspace grouping without clearing saved Inbox triage or grouping choices.</source>
-        <target>Увімкнення режиму "Вхідні" в меню групування списку сесій. Вимкнення тимчасово показує групування робочого простору без очищення збережених виборів тріажу або групування в "Вхідних".</target>
-      </trans-unit>
-      <trans-unit id="sessions.list.indentItems">
-        <source xml:lang="en">Controls whether sessions and other rows in the sessions list are indented below their section header to show the list's hierarchy.</source>
-        <target>Контролює, чи сесії та інші рядки в списку сесій відступають під заголовком секції, щоб показати ієрархію списку.</target>
-      </trans-unit>
-      <trans-unit id="sessions.list.inlineActions">
-        <source xml:lang="en">Show Fix Checks, Address Comments, or their combined action below eligible sessions and chats in the Sessions list. Actions run in the background. This does not enable Agent Merge or change action permissions.</source>
-        <target>Показати перевірки виправлень, адресувати коментарі або їх комбінацію нижче відповідних сесій та чатів у списку сесій. Дії виконуються у фоновому режимі. Це не активує злиття агентів і не змінює дозволи на дії.</target>
-      </trans-unit>
-      <trans-unit id="sessions.list.showArchivedByDefault">
-        <source xml:lang="en">Controls whether the Done or Archived section is shown by default in the sessions list. This default is ignored after the corresponding filter is changed.</source>
-        <target>Контролює, чи секція Завершено або Архівовано відображається за замовчуванням у списку сесій. Це значення за замовчуванням ігнорується після зміни відповідного фільтра.</target>
-      </trans-unit>
-      <trans-unit id="sessions.list.showAutomationSessions">
-        <source xml:lang="en">Controls when automation sessions automatically also appear in the sessions list. They always remain in Automations. Use Show in Sessions List or Hide from Sessions List in a session's context menu to override this for that session.</source>
-        <target>Контролює, коли автоматизаційні сесії автоматично також з'являються у списку сесій. Вони завжди залишаються в Автоматизаціях. Використовуйте Показати у списку сесій або Сховати зі списку сесій у контекстному меню сесії, щоб переважити це для цієї сесії.</target>
-      </trans-unit>
-      <trans-unit id="sessions.list.showAutomationSessions.afterReply">
-        <source xml:lang="en">Show an automation session in the sessions list once you send a message in it.</source>
-        <target>Показати сесію автоматизації в списку сесій, як тільки ви надішлете повідомлення в ній.</target>
-      </trans-unit>
-      <trans-unit id="sessions.list.showAutomationSessions.always">
-        <source xml:lang="en">Show every automation session in the sessions list.</source>
-        <target>Показати кожну сесію автоматизації в списку сесій.</target>
-      </trans-unit>
-      <trans-unit id="sessions.list.showAutomationSessions.never">
-        <source xml:lang="en">Show automation sessions only in Automations.</source>
-        <target>Показувати сесії автоматизації лише в Автоматизаціях.</target>
-      </trans-unit>
-      <trans-unit id="sessions.list.showEmptyDefaultGroups">
-        <source xml:lang="en">Controls whether the Chats group is shown in the sessions list even when it is empty.</source>
-        <target>Контролює, чи група Чатів відображається у списку сесій, навіть коли вона порожня.</target>
-      </trans-unit>
-      <trans-unit id="sessions.list.showUnreadInCollapsedSections">
-        <source xml:lang="en">Controls whether collapsed sections in the sessions list show needs-attention, CI-failure, or unread indicators for the unarchived sessions they contain.</source>
-        <target>Контролює, чи згорнуті секції у списку сесій показують індикатори потреби уваги, CI-помилки або непрочитані для неархівованих сесій, які вони містять.</target>
-      </trans-unit>
-      <trans-unit id="sessions.markAsDoneConfetti">
-        <source xml:lang="en">Controls whether a confetti animation is shown when marking a session or Inbox notification as done.</source>
-        <target>Контролює, чи показується анімація конфетті при позначенні сесії або сповіщення в Inbox як завершеного.</target>
-      </trans-unit>
       <trans-unit id="sessions.newSessionButton.style">
         <source xml:lang="en">Controls the visual style of the New Session button.</source>
         <target>Контролює візуальний стиль кнопки Нової сесії.</target>
+      </trans-unit>
+      <trans-unit id="sessions.sendLater.enabled">
+        <source xml:lang="en">Schedule requests from new-session and existing-chat inputs to be sent later in the Agents window. Requires Automations and a supported local agent host. Disabling this setting does not cancel scheduled requests; manage them in Automations.</source>
+        <target>Заплануйте запити з нових сесій та існуючих чатів для надсилання пізніше у вікні Агентів. Потрібні Автоматизації та підтримуваний локальний хост агента. Вимкнення цього налаштування не скасовує заплановані запити; керуйте ними в Автоматизаціях.</target>
       </trans-unit>
       <trans-unit id="sessions.showChatTabs">
         <source xml:lang="en">Controls whether chats in a session are shown as individual tabs or whether the active chat is shown as the session view.</source>
@@ -203,13 +159,25 @@
         <source xml:lang="en">The active chat is displayed as the session view.</source>
         <target>Активний чат відображається як вигляд сесії.</target>
       </trans-unit>
+      <trans-unit id="sessions.sidebar.customizationsAtBottom">
+        <source xml:lang="en">Controls whether Customizations remains a separate section below the Sessions list instead of joining the separate navigation list above the Sessions header. Only applies when `#sessions.sidebar.separateNavigation#` is enabled.</source>
+        <target>Контролює, чи залишаються Налаштування окремим розділом під списком Сесій, а не приєднуються до окремого навігаційного списку над заголовком Сесій. Застосовується лише тоді, коли увімкнено `#sessions.sidebar.separateNavigation#`.</target>
+      </trans-unit>
+      <trans-unit id="sessions.sidebar.customizationsCategories">
+        <source xml:lang="en">Controls which customization categories the Customizations section below the Sessions list shows.</source>
+        <target>Контролює, які категорії налаштувань відображаються в розділі Налаштування нижче списку Сесій.</target>
+      </trans-unit>
+      <trans-unit id="sessions.sidebar.customizationsCategories.all">
+        <source xml:lang="en">Show all customization categories.</source>
+        <target>Показати всі категорії налаштувань.</target>
+      </trans-unit>
+      <trans-unit id="sessions.sidebar.customizationsCategories.reduced">
+        <source xml:lang="en">Show Overview, Plugins, MCP Servers, Skills, and Instructions. More shows the other categories, and Less hides them again.</source>
+        <target>Показати огляд, плагіни, сервери MCP, навички та інструкції. Більше показує інші категорії, а Менше знову їх приховує.</target>
+      </trans-unit>
       <trans-unit id="sessions.sidebar.separateNavigation">
         <source xml:lang="en">Controls whether New Session, Automations, and Customizations are shown in a separate navigation list above the Sessions header. When disabled, Automations is shown inside the sessions tree, New Session remains a toolbar button, and Customizations remains a separate section.</source>
         <target>Контролює, чи відображаються Нові сесії, Автоматизації та Налаштування в окремому списку навігації над заголовком Сесії. Коли вимкнено, Автоматизації відображаються всередині дерева сесій, Нова сесія залишається кнопкою на панелі інструментів, а Налаштування залишаються окремим розділом.</target>
-      </trans-unit>
-      <trans-unit id="sessions.useWorktree">
-        <source xml:lang="en">Controls whether New Worktree is checked for a workspace that has not started a session before. Each workspace otherwise uses the choice from its last started session.</source>
-        <target>Контролює, чи перевіряється New Worktree для робочого простору, який раніше не розпочинав сесію. В іншому випадку, кожен робочий простір використовує вибір з останньої розпочатої сесії.</target>
       </trans-unit>
     </body>
   </file>
@@ -649,6 +617,10 @@
         <source xml:lang="en">Show Sessions</source>
         <target>Показати сесії</target>
       </trans-unit>
+      <trans-unit id="agentSessionsShowSessionsWithAttention">
+        <source xml:lang="en">{0}. {1}</source>
+        <target>{0}. {1}</target>
+      </trans-unit>
       <trans-unit id="agentSessionsShowSessionsWithTitle">
         <source xml:lang="en">Show Sessions: {0}</source>
         <target>Показати сесії: {0}</target>
@@ -657,9 +629,17 @@
         <source xml:lang="en">Close</source>
         <target>Закрити</target>
       </trans-unit>
+      <trans-unit id="closeCommandCenterSessions">
+        <source xml:lang="en">Close</source>
+        <target>Закрити</target>
+      </trans-unit>
       <trans-unit id="ignoreAllInputNeeded">
         <source xml:lang="en">Ignore All Needs Attention Alerts</source>
         <target>Ігнорувати всі сповіщення про потребу уваги</target>
+      </trans-unit>
+      <trans-unit id="nSessionAttentionReminders">
+        <source xml:lang="en">{0} sessions still require attention</source>
+        <target>{0} сесій все ще потребують уваги</target>
       </trans-unit>
       <trans-unit id="nSessionsApproved">
         <source xml:lang="en">Approved {0} sessions</source>
@@ -676,6 +656,14 @@
       <trans-unit id="oneSessionApproved">
         <source xml:lang="en">Approved 1 session</source>
         <target>Схвалено 1 сесію</target>
+      </trans-unit>
+      <trans-unit id="oneSessionAttentionReminder">
+        <source xml:lang="en">Another session still requires attention</source>
+        <target>Інша сесія все ще потребує уваги.</target>
+      </trans-unit>
+      <trans-unit id="sessionAttentionReminderIcon">
+        <source xml:lang="en">Icon reminding the user that another session still requires attention.</source>
+        <target>Іконка, що нагадує користувачу, що інша сесія все ще потребує уваги.</target>
       </trans-unit>
       <trans-unit id="showAllSessions">
         <source xml:lang="en">Show All Sessions</source>
@@ -757,6 +745,26 @@
         <source xml:lang="en">Your automations</source>
         <target>Ваші автоматизації</target>
       </trans-unit>
+      <trans-unit id="automationsAccessibleView.completed">
+        <source xml:lang="en">Completed</source>
+        <target>Завершено</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.failed">
+        <source xml:lang="en">Failed</source>
+        <target>Не вдалося</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.needsInput">
+        <source xml:lang="en">Needs input</source>
+        <target>Потрібен вхід</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.pending">
+        <source xml:lang="en">Pending</source>
+        <target>В очікуванні</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.running">
+        <source xml:lang="en">Running</source>
+        <target>Запуск</target>
+      </trans-unit>
       <trans-unit id="automationsPartialUnavailable">
         <source xml:lang="en">Some automations are unavailable.</source>
         <target>Деякі автоматизації недоступні.</target>
@@ -788,6 +796,38 @@
       <trans-unit id="automationsProvidersUnsupported">
         <source xml:lang="en">Automations are not supported on {0}.</source>
         <target>Автоматизації не підтримуються на {0}.</target>
+      </trans-unit>
+      <trans-unit id="scheduleCron">
+        <source xml:lang="en">Cron: {0}</source>
+        <target>Cron: {0}</target>
+      </trans-unit>
+      <trans-unit id="scheduleCustom">
+        <source xml:lang="en">Custom schedule</source>
+        <target>Індивідуальний графік</target>
+      </trans-unit>
+      <trans-unit id="scheduleDailyAt">
+        <source xml:lang="en">Daily at {0}</source>
+        <target>Щодня о {0}</target>
+      </trans-unit>
+      <trans-unit id="scheduleHourly">
+        <source xml:lang="en">Hourly</source>
+        <target>Погодинно</target>
+      </trans-unit>
+      <trans-unit id="scheduleManual">
+        <source xml:lang="en">Manual</source>
+        <target>Посібник</target>
+      </trans-unit>
+      <trans-unit id="scheduleOnceAt">
+        <source xml:lang="en">Once: {0}</source>
+        <target>Одного разу: {0}</target>
+      </trans-unit>
+      <trans-unit id="scheduleWeekdaysAt">
+        <source xml:lang="en">Weekdays at {0}</source>
+        <target>Будні дні о {0}</target>
+      </trans-unit>
+      <trans-unit id="scheduleWeeklyAt">
+        <source xml:lang="en">{0} at {1}</source>
+        <target>{0} о {1}</target>
       </trans-unit>
     </body>
   </file>
@@ -869,13 +909,17 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
         <source xml:lang="en">{0}, disabled</source>
         <target>{0}, вимкнено</target>
       </trans-unit>
+      <trans-unit id="automationsAccessibleView.automationDisabledRunning">
+        <source xml:lang="en">{0}, disabled, Running</source>
+        <target>{0}, вимкнено, Виконання</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.automationRunning">
+        <source xml:lang="en">{0}, enabled, Running</source>
+        <target>{0}, увімкнено, Виконується</target>
+      </trans-unit>
       <trans-unit id="automationsAccessibleView.builtInTemplates">
         <source xml:lang="en">Built-in Templates</source>
         <target>Вбудовані шаблони</target>
-      </trans-unit>
-      <trans-unit id="automationsAccessibleView.completed">
-        <source xml:lang="en">Completed</source>
-        <target>Завершено</target>
       </trans-unit>
       <trans-unit id="automationsAccessibleView.cron">
         <source xml:lang="en">Cron: {0}</source>
@@ -901,9 +945,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
         <source xml:lang="en">Open on GitHub: {0}</source>
         <target>Відкрити на GitHub: {0}</target>
       </trans-unit>
-      <trans-unit id="automationsAccessibleView.failed">
-        <source xml:lang="en">Failed</source>
-        <target>Не вдалося</target>
+      <trans-unit id="automationsAccessibleView.finalDate">
+        <source xml:lang="en">Final date: {0}</source>
+        <target>Остаточна дата: {0}</target>
       </trans-unit>
       <trans-unit id="automationsAccessibleView.history">
         <source xml:lang="en">Run history</source>
@@ -953,13 +997,13 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
         <source xml:lang="en">Manual</source>
         <target>Посібник</target>
       </trans-unit>
-      <trans-unit id="automationsAccessibleView.needsInput">
-        <source xml:lang="en">Needs input</source>
-        <target>Потрібен вхід</target>
-      </trans-unit>
       <trans-unit id="automationsAccessibleView.noRuns">
         <source xml:lang="en">No runs.</source>
         <target>Немає пробігів.</target>
+      </trans-unit>
+      <trans-unit id="automationsAccessibleView.once">
+        <source xml:lang="en">Once at {0}</source>
+        <target>Одного разу о {0}</target>
       </trans-unit>
       <trans-unit id="automationsAccessibleView.partialLoadError">
         <source xml:lang="en">Some automations could not be loaded.</source>
@@ -968,10 +1012,6 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <trans-unit id="automationsAccessibleView.partialLoading">
         <source xml:lang="en">Additional automations are loading.</source>
         <target>Завантажуються додаткові автоматизації.</target>
-      </trans-unit>
-      <trans-unit id="automationsAccessibleView.pending">
-        <source xml:lang="en">Pending</source>
-        <target>В очікуванні</target>
       </trans-unit>
       <trans-unit id="automationsAccessibleView.pluginTemplate">
         <source xml:lang="en">{0}, {1}. {2} From {3}.</source>
@@ -992,10 +1032,6 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <trans-unit id="automationsAccessibleView.runError">
         <source xml:lang="en">Error: {0}</source>
         <target>Помилка: {0}</target>
-      </trans-unit>
-      <trans-unit id="automationsAccessibleView.running">
-        <source xml:lang="en">Running</source>
-        <target>Запуск</target>
       </trans-unit>
       <trans-unit id="automationsAccessibleView.schedule">
         <source xml:lang="en">Schedule: {0}</source>
@@ -1041,17 +1077,17 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
         <source xml:lang="en">Automations run on their selected provider, not in this window. Creation and changes require an available provider that supports automations. Run now requests execution from that provider; a disconnected or unsupported provider never falls back to local execution. To use another provider, duplicate the automation. The original history stays with its provider, and an enabled original keeps scheduling until you disable it.</source>
         <target>Автоматизації виконуються на обраному постачальнику, а не в цьому вікні. Створення та зміни вимагають доступного постачальника, який підтримує автоматизації. Запуск зараз запитує виконання від цього постачальника; відключений або непідтримуваний постачальник ніколи не переходить на локальне виконання. Щоб використовувати іншого постачальника, дублюйте автоматизацію. Оригінальна історія залишається з її постачальником, а активований оригінал продовжує планування, поки ви його не вимкнете.</target>
       </trans-unit>
-      <trans-unit id="automationsCustomView.help.builtInTemplatesCollapsed">
-        <source xml:lang="en">The Built-in Templates section is collapsed by default because saved automations exist. Press Enter or Space on its disclosure control to expand it.</source>
-        <target>Розділ Вбудовані шаблони за замовчуванням згорнутий, оскільки існують збережені автоматизації. Натисніть Enter або Space на його елементі управління розкриттям, щоб розгорнути його.</target>
+      <trans-unit id="automationsCustomView.help.builtInTemplatesEmptyState">
+        <source xml:lang="en">The Built-in Templates section is available in the creation empty state. When Your automations is empty and Shared automations are shown, it appears between those sections. It starts expanded. Tab to a template and press Enter or Space to open a New automation dialog with an editable name, prompt, and schedule.</source>
+        <target>Розділ Вбудовані шаблони доступний у стані створення порожнього елемента. Коли Ваші автоматизації порожні, а Спільні автоматизації відображаються, він з'являється між цими розділами. Він починає з розгорнутого стану. Перейдіть до шаблону та натисніть Enter або Space, щоб відкрити діалогове вікно Нової автоматизації з редагованим ім'ям, підказкою та розкладом.</target>
       </trans-unit>
-      <trans-unit id="automationsCustomView.help.builtInTemplatesExpanded">
-        <source xml:lang="en">The Built-in Templates section is expanded by default while there are no saved automations. Tab to a template and press Enter or Space to open a New automation dialog with an editable name, prompt, and schedule.</source>
-        <target>Розділ Вбудовані шаблони за замовчуванням розгорнутий, коли немає збережених автоматизацій. Перейдіть до шаблону та натисніть Enter або Space, щоб відкрити діалогове вікно Нової автоматизації з редагованими назвою, підказкою та розкладом.</target>
+      <trans-unit id="automationsCustomView.help.cardLimits">
+        <source xml:lang="en">Enabled automation cards show the end date as part of the schedule text in the metadata row below the prompt. Disabled cards hide it but retain their saved end date.</source>
+        <target>Увімкнені картки автоматизації показують дату закінчення як частину тексту розкладу в рядку метаданих під підказкою. Вимкнені картки приховують її, але зберігають свою збережену дату закінчення.</target>
       </trans-unit>
       <trans-unit id="automationsCustomView.help.cards2">
-        <source xml:lang="en">For saved automations, Tab to a card's Edit control and action buttons. Use Left Arrow and Right Arrow to move between Run now and More Actions. Press Enter or Space to activate a control. Edit, or clicking anywhere else on the card, opens the automation dialog. More Actions opens the automation menu. Duplicate opens a prefilled New automation dialog for portable schedules and is unavailable for event-triggered automations. Disable prevents future runs, and Delete asks for confirmation. When the provider supports it, clear Delete Run History in that confirmation to keep previous runs. Run now requests execution from the selected provider when available.</source>
-        <target>Для збережених автоматизацій натискайте Tab, щоб перейти до елемента редагування картки та кнопок дій. Використовуйте стрілки вліво та вправо, щоб переміщатися між "Запустити зараз" та "Більше дій". Натисніть Enter або Space, щоб активувати елемент управління. Редагування або натискання в будь-якому іншому місці на картці відкриває діалог автоматизації. "Більше дій" відкриває меню автоматизації. "Дублювати" відкриває діалог "Нова автоматизація" з попередньо заповненими даними для портативних розкладів і недоступний для автоматизацій, що тригеряться подіями. "Вимкнути" запобігає майбутнім запускам, а "Видалити" запитує підтвердження. Коли постачальник це підтримує, зніміть позначку з "Видалити історію запусків" у цьому підтвердженні, щоб зберегти попередні запуски. "Запустити зараз" запитує виконання у вибраного постачальника, коли це можливо.</target>
+        <source xml:lang="en">For saved automations, Tab to a card's Edit control and action buttons. Use Left Arrow and Right Arrow to move between Run now and More Actions. Press Enter or Space to activate a control. Edit, or clicking anywhere else on the card, opens the automation dialog. More Actions opens the automation menu. Duplicate opens a prefilled New automation dialog for portable schedules and is unavailable for event-triggered automations. Disable prevents future runs. Delete asks for confirmation and warns that the automation, its run history, and associated sessions will be permanently deleted and that this cannot be undone. Run now requests execution from the selected provider when available.</source>
+        <target>Для збережених автоматизацій натисніть Tab на елемент управління редагуванням картки та кнопки дій. Використовуйте стрілки вліво та вправо, щоб переміщатися між "Запустити зараз" та "Більше дій". Натисніть Enter або Space, щоб активувати елемент управління. Редагування або натискання в будь-якому іншому місці на картці відкриває діалог автоматизації. "Більше дій" відкриває меню автоматизації. "Дублювати" відкриває заповнений діалог "Нова автоматизація" для портативних розкладів і недоступний для автоматизацій, що тригеряться подіями. "Вимкнути" запобігає майбутнім запускам. "Видалити" запитує підтвердження і попереджає, що автоматизація, її історія запусків і пов'язані сесії будуть безповоротно видалені, і це не можна скасувати. "Запустити зараз" запитує виконання від вибраного постачальника, коли це можливо.</target>
       </trans-unit>
       <trans-unit id="automationsCustomView.help.cloudDialog">
         <source xml:lang="en">When creating an automation and cloud automations are enabled, a Run in the cloud switch, described as Preview, follows the Name field; press Space to turn it on or off. If cloud automations cannot be reached when you turn it on, the switch turns back off and a message asks you to try again in a few moments. When it is on, Cloud is the agent and the workspace picker lists Git-backed workspaces. Only GitHub repositories that support cloud automation management can be selected; unavailable repositories are announced with the reason. Choose Add repository to search for a repository or paste its URL. A matching local folder is retained. If cloud automations become unavailable while the switch is on, Cloud stays selected and Create is unavailable until they return or, for a new automation, you turn the switch off. Turning the switch off restores the previous local workspace and agent, or otherwise selects Copilot when it is available. Cloud models are configured in the prompt section. In the Tools section, the button shows All tools allowed or the number of tools allowed. Activate it to open a searchable checklist of the tools GitHub offers, grouped by category. Categories start collapsed; use Right Arrow to expand one. Press Space to toggle a tool or category. Each change applies immediately to the dialog; Enter or Escape closes the checklist without discarding changes. Save or Create saves the automation. New automations start with every listed tool selected. While the list loads the button is unavailable, and if it cannot be loaded a Retry button appears. Trigger follows the tools controls. Scheduled triggers display local time; GitHub stores a fixed UTC schedule, so the local run time may shift when daylight saving time changes. When editing a cloud automation, the switch and workspace picker are disabled because changing the repository or provider requires duplication. Editing preserves enabled state; enable or disable an automation from its card.</source>
@@ -1060,6 +1096,14 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <trans-unit id="automationsCustomView.help.cloudHistory">
         <source xml:lang="en">Cloud history shows the repository, status, and last updated time even when no local session is available. When a cloud run has a session on GitHub that is not yet loaded in VS Code, click its row, or Tab to its title and press Enter or Space, to open that exact session. Tab to a row's toolbar and use Left Arrow and Right Arrow to reach Open on GitHub and Stop when supported. Archive or Mark as Done is unavailable until the cloud run and its conversation have finished. It changes local session state, not the task on GitHub. Stop requests remote cancellation; the status changes when GitHub reports it. Follow-up requests show conversation progress and restart bounded history discovery. Use Refresh in the view header to reload definitions and history. Active cloud runs refresh every 15 seconds without moving the history rows; idle definitions do not poll.</source>
         <target>Історія хмари показує репозиторій, статус і час останнього оновлення, навіть коли немає доступної локальної сесії. Коли хмарний запуск має сесію на GitHub, яка ще не завантажена у VS Code, клацніть на його рядок або натисніть Tab до його заголовка і натисніть Enter або Space, щоб відкрити цю конкретну сесію. Натисніть Tab на панелі інструментів рядка і використовуйте стрілки вліво і вправо, щоб дістатися до Open on GitHub і Stop, коли це підтримується. Архівувати або Позначити як завершене недоступно, поки хмарний запуск і його розмова не завершаться. Це змінює стан локальної сесії, а не завдання на GitHub. Stop запитує віддалене скасування; статус змінюється, коли GitHub повідомляє про це. Запити на продовження показують прогрес розмови і перезапускають обмежене виявлення історії. Використовуйте Refresh у заголовку перегляду, щоб перезавантажити визначення та історію. Активні хмарні запуски оновлюються кожні 15 секунд без переміщення рядків історії; неактивні визначення не опитують.</target>
+      </trans-unit>
+      <trans-unit id="automationsCustomView.help.conditions">
+        <source xml:lang="en">For Agent Host automations, expand Advanced Settings in the automation dialog with Enter or Space, then Tab to Disable after. Advanced Settings starts collapsed. Select End Date opens the shared calendar and time picker. A saved end date appears on that button; activate it to change the date, or choose Clear to remove it. You can also ask an agent in chat to set an end date and time. Manual runs remain available after the end date. Use Remove end date in a card's More menu to clear the end date. Removing the end date does not enable a disabled automation.</source>
+        <target>Для автоматизацій Agent Host розширте Розширені налаштування в діалоговому вікні автоматизації за допомогою Enter або Space, потім натисніть Tab, щоб вимкнути. Розширені налаштування спочатку згорнуті. Вибір Дата закінчення відкриває спільний календар і вибір часу. Збережена дата закінчення з'являється на цій кнопці; активуйте її, щоб змінити дату, або виберіть Очистити, щоб видалити її. Ви також можете попросити агента в чаті встановити дату та час закінчення. Ручні запуски залишаються доступними після дати закінчення. Використовуйте Видалити дату закінчення в меню Більше картки, щоб очистити дату закінчення. Видалення дати закінчення не активує вимкнену автоматизацію.</target>
+      </trans-unit>
+      <trans-unit id="automationsCustomView.help.creation">
+        <source xml:lang="en">Create with Agent opens a new session with /automate prefilled and the input focused. It is the only creation button in the empty state. When automation cards are visible, Create with Agent appears in the view header and is followed by a secondary Create Manually split button. Activate Create Manually to open the automation dialog, or use its adjacent More Actions dropdown to import an automation. Use Left Arrow and Right Arrow to move between header actions and the parts of the split button. Press Enter or Space to activate a control. Create Manually remains available while chat is not ready.</source>
+        <target>Create with Agent відкриває нову сесію з /automate, заповненою за замовчуванням, і з фокусом на введенні. Це єдиний кнопка створення в порожньому стані. Коли картки автоматизації видимі, Create with Agent з'являється в заголовку перегляду і супроводжується вторинною кнопкою Create Manually, що розділяється. Активуйте Create Manually, щоб відкрити діалог автоматизації, або використовуйте сусіднє меню More Actions, щоб імпортувати автоматизацію. Використовуйте клавіші Left Arrow і Right Arrow, щоб переміщатися між діями в заголовку та частинами розділеної кнопки. Натисніть Enter або Space, щоб активувати елемент управління. Create Manually залишається доступним, поки чат не готовий.</target>
       </trans-unit>
       <trans-unit id="automationsCustomView.help.cron">
         <source xml:lang="en">For Agent Host automations, choose cron to enter minute, hour, day of month, month, and day of week. Cron accepts wildcards, lists, ranges, and steps on wildcards or ranges only. For example, 20-59/15 selects minutes 20, 35, and 50 of each hour; shorthand such as 20/15 is not supported. A line below the schedule explains the current valid expression and updates while editing. Day of month and day of week are alternatives when both are restricted. Tab moves between the five parts. Focusing a part shows and describes its allowed values. Escape dismisses that guidance without leaving the field. Up and Down step simple numeric values. Select All then Copy copies the entire expression; pasting a full expression fills the parts. Blank parts mean every value. Entirely empty input has no error, but cannot be saved. Cron is not available for Cloud automations.</source>
@@ -1070,28 +1114,40 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
         <target>У діалозі автоматизації елементи управління Target знаходяться вище підказки. Вибірники агента та моделі розташовані всередині поля введення підказки, а елементи управління режимом виконання та дозволами знаходяться нижче. Використовуйте Tab та Shift+Tab для переміщення між полями та вибірниками. При створенні автоматизації вам потрібно лише ввести підказку. Порожнє ім'я отримується з підказки, а ціль за замовчуванням встановлюється на No workspace, якщо не вказано інше. Все ще потрібен доступний Agent Host, який підтримує ціль.</target>
       </trans-unit>
       <trans-unit id="automationsCustomView.help.disabled">
-        <source xml:lang="en">Disabled automations are grouped above templates in the Disabled automations section, which starts collapsed. Press Enter or Space on its heading to expand or collapse it. The expansion state is remembered on this machine. Run history and the Accessible View still include disabled automations.</source>
-        <target>Вимкнені автоматизації згруповані вище шаблонів у розділі Вимкнені автоматизації, який спочатку згорнутий. Натисніть Enter або Space на його заголовку, щоб розгорнути або згорнути його. Стан розгортання запам'ятовується на цьому пристрої. Історія виконання та Доступний вигляд все ще включають вимкнені автоматизації.</target>
+        <source xml:lang="en">Disabled automations are shown by default and sort last within Your automations or Shared automations. The View options menu always offers Show disabled automations, even when cloud automations are disabled. Activate it to show or hide disabled automations in both sections. Your choice is remembered on this machine. When disabled automations are hidden and no cards remain visible in a section, its empty state offers Show disabled at the end of the description. Tab to this text action and press Enter or Space to reveal them. The empty state and Built-in Templates are shown when no cards remain visible. Run history and the Accessible View are not filtered.</source>
+        <target>Вимкнені автоматизації за замовчуванням відображаються і сортуються останніми в розділах Ваші автоматизації або Спільні автоматизації. Меню параметрів перегляду завжди пропонує Показати вимкнені автоматизації, навіть коли хмарні автоматизації вимкнені. Активуйте його, щоб показати або приховати вимкнені автоматизації в обох розділах. Ваш вибір запам'ятовується на цьому комп'ютері. Коли вимкнені автоматизації приховані і в розділі не залишилося жодної картки, його порожній стан пропонує Показати вимкнені в кінці опису. Перейдіть до цієї текстової дії і натисніть Enter або Space, щоб їх відобразити. Порожній стан і Вбудовані шаблони відображаються, коли не залишилося жодної картки. Історія запусків і Доступний перегляд не фільтруються.</target>
+      </trans-unit>
+      <trans-unit id="automationsCustomView.help.endDatePicker">
+        <source xml:lang="en">In the end date calendar, Left and Right Arrow move by day, Up and Down Arrow move by week, Home and End move to the start or end of the week, and Page Up and Page Down change month. Enter or Space selects the focused day. Tab reaches the month buttons, time dropdown, Select, and Cancel. Exact Time allows a time outside the fifteen-minute steps. Select confirms a future date and time in this device's time zone. Cancel or Escape leaves the end date unchanged and returns focus to its button. Existing timestamps are preserved until changed. Cloud automations do not support end dates.</source>
+        <target>У календарі дати завершення стрілки вліво і вправо переміщують на день, стрілки вгору і вниз переміщують на тиждень, Home і End переміщують на початок або кінець тижня, а Page Up і Page Down змінюють місяць. Enter або Space вибирає виділений день. Tab переходить до кнопок місяця, випадаючого списку часу, Вибрати та Скасувати. Точний час дозволяє вибрати час поза п'ятнадцятихвилинними інтервалами. Вибрати підтверджує майбутню дату і час у часовому поясі цього пристрою. Скасувати або Escape залишає дату завершення незмінною і повертає фокус на її кнопку. Існуючі мітки часу зберігаються до зміни. Хмарні автоматизації не підтримують дати завершення.</target>
       </trans-unit>
       <trans-unit id="automationsCustomView.help.events">
-        <source xml:lang="en">For Cloud automations, the Trigger picker combines Weekly, Daily, Hourly, Issue, Pull Request, and Manual in one control. Issue and Pull Request are offered when their events are available to your account. Scheduled triggers show time and day controls as applicable. Event appears to the right of Trigger, in the same position as Time for a schedule. Issue uses one Event. For Pull Request, activate the Event button to open a searchable checklist. Use Up Arrow and Down Arrow to navigate and Space to select events; at least one stays selected. Enter or Escape closes the checklist. Required event fields appear directly below the Trigger and Event row. Create remains unavailable until they are completed, and its hover explains what is missing. Expand Advanced below them to configure optional filters and Include activity from users without write access to this repository. When selected events support the same filter, such as Query or Paths, it appears once and applies to each of those events. Labels, assignees and changed paths accept comma-separated values; paths use gitignore patterns. Query filters the target and Comment text filters a comment's body. Review states are checkboxes. Include activity from users without write access to this repository starts on; turn it off to require write access to trigger the automation. Unsupported or mixed triggers are read-only with Open on GitHub; editing other fields keeps the saved triggers. Event automations run from GitHub events rather than Run now.</source>
-        <target>Для автоматизацій у хмарі, вибір тригера об'єднує Щотижневі, Щоденні, Щогодинні, Проблеми, Запити на злиття та Ручні у одному контролі. Проблеми та Запити на злиття пропонуються, коли їхні події доступні для вашого облікового запису. Заплановані тригери показують елементи часу та дня, якщо це застосовно. Подія з'являється праворуч від Тригера, на тій же позиції, що й Час для розкладу. Проблема використовує одну Подію. Для Запиту на злиття активуйте кнопку Події, щоб відкрити список для пошуку. Використовуйте Стрілку вгору та Стрілку вниз для навігації та Пробіл для вибору подій; принаймні одна залишається вибраною. Введення або Escape закриває список. Обов'язкові поля подій з'являються безпосередньо під рядком Тригера та Події. Створити залишається недоступним, поки вони не будуть завершені, а його наведення пояснює, що не вистачає. Розширте Додаткові нижче них, щоб налаштувати необов'язкові фільтри та Включити активність від користувачів без прав на запис у цей репозиторій. Коли вибрані події підтримують один і той же фільтр, такий як Запит або Шляхи, він з'являється один раз і застосовується до кожної з цих подій. Мітки, відповідальні особи та змінені шляхи приймають значення, розділені комами; шляхи використовують шаблони gitignore. Запит фільтрує ціль, а текст коментаря фільтрує тіло коментаря. Стан перевірки є прапорцями. Включити активність від користувачів без прав на запис у цей репозиторій починається з; вимкніть його, щоб вимагати права на запис для активації автоматизації. Непідтримувані або змішані тригери є лише для читання з Відкрити на GitHub; редагування інших полів зберігає збережені тригери. Автоматизації подій виконуються з подій GitHub, а не з Запустити зараз.</target>
+        <source xml:lang="en">For Cloud automations, the Trigger picker combines Weekly, Daily, Hourly, Issue, Pull Request, and Manual in one control. Issue and Pull Request are offered when their events are available to your account. Scheduled triggers show time and day controls as applicable. Event appears to the right of Trigger, in the same position as Time for a schedule. Issue uses one Event. For Pull Request, activate the Event button to open a searchable checklist. Use Up Arrow and Down Arrow to navigate and Space to select events; at least one stays selected. Enter or Escape closes the checklist. Required event fields appear directly below the Trigger and Event row. Create remains unavailable until they are completed, and its hover explains what is missing. Expand Advanced Settings below them to configure optional filters and Include activity from users without write access to this repository. When selected events support the same filter, such as Query or Paths, it appears once and applies to each of those events. Labels, assignees and changed paths accept comma-separated values; paths use gitignore patterns. Query filters the target and Comment text filters a comment's body. Review states are checkboxes. Include activity from users without write access to this repository starts on; turn it off to require write access to trigger the automation. Unsupported or mixed triggers are read-only with Open on GitHub; editing other fields keeps the saved triggers. Event automations run from GitHub events rather than Run now.</source>
+        <target>Для автоматизацій у хмарі, вибір тригера поєднує Щотижневі, Щоденні, Щогодинні, Проблеми, Запити на злиття та Ручні в одному контролі. Проблеми та Запити на злиття пропонуються, коли їх події доступні для вашого облікового запису. Заплановані тригери показують контролі часу та дня, якщо це застосовно. Подія з'являється праворуч від Тригера, у тій же позиції, що й Час для розкладу. Проблема використовує одну Подію. Для Запиту на злиття активуйте кнопку Події, щоб відкрити список для пошуку. Використовуйте Стрілку вгору та Стрілку вниз для навігації та Пробіл для вибору подій; принаймні одна залишається вибраною. Введення або Escape закриває список. Обов'язкові поля подій з'являються безпосередньо під рядком Тригера та Події. Створити залишається недоступним, поки вони не будуть завершені, а його підказка пояснює, чого не вистачає. Розширте Додаткові налаштування нижче, щоб налаштувати необов'язкові фільтри та Включити активність від користувачів без прав на запис у цей репозиторій. Коли вибрані події підтримують один і той же фільтр, такий як Запит або Шляхи, він з'являється один раз і застосовується до кожної з цих подій. Мітки, відповідальні особи та змінені шляхи приймають значення, розділені комами; шляхи використовують шаблони gitignore. Запит фільтрує ціль, а текст коментаря фільтрує тіло коментаря. Стан огляду - це прапорці. Включити активність від користувачів без прав на запис у цей репозиторій починається з; вимкніть його, щоб вимагати права на запис для активації автоматизації. Непідтримувані або змішані тригери є лише для читання з Відкрити на GitHub; редагування інших полів зберігає збережені тригери. Автоматизації подій запускаються з подій GitHub, а не з Запустити зараз.</target>
       </trans-unit>
       <trans-unit id="automationsCustomView.help.eventsRepositorySettings">
         <source xml:lang="en">When repository settings disallow activity from users without write access, that option is turned off and unavailable, with the explanation Disabled by your repository settings.</source>
         <target>Коли налаштування репозиторію забороняють активність користувачів без прав на запис, ця опція вимкнена та недоступна з поясненням Вимкнено налаштуваннями вашого репозиторію.</target>
+      </trans-unit>
+      <trans-unit id="automationsCustomView.help.expired">
+        <source xml:lang="en">Enabling an expired automation opens a confirmation. Choose Remove expiration and enable to clear its end date and enable scheduling together, or cancel to leave it unchanged.</source>
+        <target>Увімкнення простроченої автоматизації відкриває підтвердження. Виберіть Видалити термін дії та увімкнути, щоб очистити дату закінчення та увімкнути планування разом, або скасуйте, щоб залишити без змін.</target>
       </trans-unit>
       <trans-unit id="automationsCustomView.help.externalDefinition">
         <source xml:lang="en">For cloud automation cards, More Actions also offers Open on GitHub to open the automation's details in your browser.</source>
         <target>Для карт автоматизації в хмарі, More Actions також пропонує Open on GitHub для відкриття деталей автоматизації у вашому браузері.</target>
       </trans-unit>
       <trans-unit id="automationsCustomView.help.history">
-        <source xml:lang="en">Run history is grouped by date. While a run is waiting for its session, a lightweight row shows the automation name with a Working... description. Once the session is available, use Up Arrow and Down Arrow to navigate the Sessions list, Enter to open, and Tab to reach Stop, the configured Archive or Mark as Done action, or Delete when available. Open a row's context menu, for example with Shift+F10, to rename it, change its active or read state, or delete it. Delete permanently deletes the session and removes it from run history after confirmation. When a removed automation retains history, the context menu also offers Delete Run History. The row says Deleting... while deletion is in progress. If deletion is interrupted, it offers Retry Delete Run History.</source>
-        <target>Історія запусків згрупована за датою. Поки запуск чекає на свою сесію, легкий рядок показує назву автоматизації з описом "Виконується...". Як тільки сесія стане доступною, використовуйте клавіші Стрілка вгору та Стрілка вниз для навігації списком Сесій, Enter для відкриття та Tab для переходу до дій Зупинити, налаштованого Архіву або Позначити як завершене, або Видалити, коли це можливо. Відкрийте контекстне меню рядка, наприклад, за допомогою Shift+F10, щоб перейменувати його, змінити його активний або прочитаний стан, або видалити його. Видалити назавжди видаляє сесію та прибирає її з історії запусків після підтвердження. Коли видалена автоматизація зберігає історію, контекстне меню також пропонує Видалити історію запусків. Рядок показує "Видалення..." під час процесу видалення. Якщо видалення переривається, воно пропонує Спробувати видалити історію запусків.</target>
+        <source xml:lang="en">Run history is grouped by date. While a run is waiting for its session, its automation card reports Running. Once the session is available, use Up Arrow and Down Arrow to navigate the Sessions list, Enter to open, and Tab to reach Stop, the configured Archive or Mark as Done action, or Delete when available. Open a row's context menu, for example with Shift+F10, to rename it, change its active or read state, or delete it. Delete permanently deletes the session and removes it from run history after confirmation. When a removed automation retains history, the context menu also offers Delete Run History. The row says Deleting... while deletion is in progress. If deletion is interrupted, it offers Retry Delete Run History.</source>
+        <target>Історія запусків згрупована за датою. Поки запуск чекає на свою сесію, його картка автоматизації відображає Виконання. Коли сесія стає доступною, використовуйте клавіші Стрілка вгору та Стрілка вниз для навігації списком Сесій, Enter для відкриття та Tab для досягнення дій Зупинити, налаштованого Архівувати або Позначити як Зроблено, або Видалити, коли це можливо. Відкрийте контекстне меню рядка, наприклад, за допомогою Shift+F10, щоб перейменувати його, змінити його активний або прочитаний стан, або видалити його. Видалити назавжди видаляє сесію та прибирає її з історії запусків після підтвердження. Коли видалена автоматизація зберігає історію, контекстне меню також пропонує Видалити історію запусків. Рядок показує Видалення... під час виконання видалення. Якщо видалення переривається, воно пропонує Спробувати видалити історію запусків.</target>
+      </trans-unit>
+      <trans-unit id="automationsCustomView.help.historyPages">
+        <source xml:lang="en">History initially shows the ten most recent entries, plus sessions that are running or need input. Tab to Show More and press Enter or Space to reveal twenty more entries and move focus to the first newly shown entry. Show More is unavailable while Mark all as read is in progress. Reopening Automations returns to recent history. No history is deleted. Mark all as read and the Accessible View still include older history.</source>
+        <target>Історія спочатку показує десять найновіших записів, а також сесії, які тривають або потребують введення. Натисніть Tab, щоб показати більше, і натисніть Enter або Space, щоб відкрити ще двадцять записів і перемістити фокус на перший новий запис. Показати більше недоступно, поки триває процес позначення всіх як прочитаних. Відкриття автоматизацій повертає до останньої історії. Ніяка історія не видаляється. Позначити всі як прочитані та Доступний перегляд все ще включають старішу історію.</target>
       </trans-unit>
       <trans-unit id="automationsCustomView.help.manageRemotes">
-        <source xml:lang="en">When a remote is disconnected and remote management is enabled, the unavailable message includes Manage Remotes. Tab to this link and press Enter or Space to open Remote Environments, where you can manage all remotes.</source>
-        <target>Коли пульт дистанційного керування відключено, а віддалене управління увімкнено, повідомлення про недоступність містить "Управління пультами". Перейдіть до цього посилання та натисніть Enter або Space, щоб відкрити Віддалені середовища, де ви можете керувати всіма пультами.</target>
+        <source xml:lang="en">When a dev tunnel is disconnected and remote management is enabled, the unavailable message shows how many dev tunnels are detected followed by Manage Remotes. Tab to this link and press Enter or Space to open Remote Environments, where you can manage dev tunnels. GitHub Environments do not appear in Automations warnings or this count.</source>
+        <target>Коли тунель розробника відключений і увімкнено віддалене управління, повідомлення про недоступність показує, скільки тунелів розробника виявлено, після чого йде "Управління віддаленими". Перейдіть до цього посилання та натисніть Enter або Space, щоб відкрити Віддалені середовища, де ви можете керувати тунелями розробника. Середовища GitHub не з'являються в попередженнях автоматизацій або в цьому підрахунку.</target>
       </trans-unit>
       <trans-unit id="automationsCustomView.help.overview">
         <source xml:lang="en">You are in the Automations view. It contains available automation cards followed by run history. Loading, unavailable, and error messages indicate that the catalogue may be incomplete.</source>
@@ -1109,13 +1165,25 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
         <source xml:lang="en">Completed and failed runs that have not been opened are announced as unread. Use Mark all as read in the history header, or focus the Automations sidebar shortcut and press Shift+F10 to choose Mark All as Read from its context menu. This marks available completed and failed runs as read, except cloud runs with an active follow-up.</source>
         <target>Завершені та невдалі запуски, які не були відкриті, оголошуються як непрочитані. Використайте "Позначити всі як прочитані" в заголовку історії, або зосередьтеся на ярлику бокової панелі Автоматизацій і натисніть Shift+F10, щоб вибрати "Позначити всі як прочитані" з контекстного меню. Це позначає доступні завершені та невдалі запуски як прочитані, за винятком хмарних запусків з активним подальшим спостереженням.</target>
       </trans-unit>
+      <trans-unit id="automationsCustomView.help.replaceDraft">
+        <source xml:lang="en">When saved drafts are disabled and your new-session draft contains text or attachments, Create with Agent asks before replacing its text with /automate. Existing attachments are kept. Choose View Draft to return to the new session page without changing the draft, or Cancel to stay in Automations. With saved drafts enabled, this warning is skipped.</source>
+        <target>Коли збережені чернетки вимкнені, а ваша чернетка нової сесії містить текст або вкладення, Create with Agent запитує перед тим, як замінити його текст на /automate. Існуючі вкладення зберігаються. Виберіть View Draft, щоб повернутися на сторінку нової сесії без зміни чернетки, або Cancel, щоб залишитися в Automations. Якщо збережені чернетки увімкнені, це попередження пропускається.</target>
+      </trans-unit>
       <trans-unit id="automationsCustomView.help.sessionsList">
         <source xml:lang="en">Run sessions are listed here rather than in the Sessions list. Open a run's context menu and choose Show in Sessions List to also list its session there, or Hide from Sessions List to list it only here again, even after later messages. The {0} setting controls when run sessions automatically also appear in the Sessions list: always, after you send a message in one, or never.</source>
         <target>Сесії запуску перелічені тут, а не в списку Сесій. Відкрийте контекстне меню запуску та виберіть Показати в списку Сесій, щоб також перелічити його сесію там, або Сховати з списку Сесій, щоб знову перелічити її тільки тут, навіть після пізніших повідомлень. Налаштування {0} контролює, коли сесії запуску автоматично також з'являються в списку Сесій: завжди, після того, як ви надішлете повідомлення в одній, або ніколи.</target>
       </trans-unit>
+      <trans-unit id="automationsCustomView.help.settings">
+        <source xml:lang="en">By default, Shared automations and run history only include shared automations you created. When cloud automations are enabled, the View options menu in the view header offers Refresh cloud automations to reload definitions and history. When shared automations created by others or with unknown creators are discovered, this menu also offers Show automations created by others to include their automations and runs. This preference is remembered on this machine. Use the arrow keys to reach View options, Enter or Space to open its menu, and Escape to close it.</source>
+        <target>За замовчуванням, спільні автоматизації та історія виконання включають лише спільні автоматизації, які ви створили. Коли хмарні автоматизації увімкнені, меню параметрів перегляду в заголовку перегляду пропонує оновити хмарні автоматизації для перезавантаження визначень та історії. Коли виявляються спільні автоматизації, створені іншими або з невідомими творцями, це меню також пропонує показати автоматизації, створені іншими, щоб включити їх автоматизації та виконання. Цей параметр запам'ятовується на цьому комп'ютері. Використовуйте клавіші зі стрілками, щоб досягти параметрів перегляду, Enter або Space, щоб відкрити його меню, і Escape, щоб закрити його.</target>
+      </trans-unit>
       <trans-unit id="automationsCustomView.help.sharing">
-        <source xml:lang="en">Use Import Automation in the view header, or drop one .automation.md file anywhere in the view, to review a shared Automation blueprint. Imported Automations start disabled. For Agent Host automations, open the context menu and choose Export to save a portable blueprint. Cloud automations do not currently offer Export.</source>
-        <target>Використовуйте імпорт автоматизації у заголовку перегляду або перетягніть один файл .automation.md будь-де в перегляді, щоб переглянути спільний шаблон автоматизації. Імпортовані автоматизації спочатку вимкнені. Для автоматизацій агентів відкрийте контекстне меню та виберіть "Експортувати", щоб зберегти портативний шаблон. Хмарні автоматизації наразі не пропонують експорт.</target>
+        <source xml:lang="en">Choose Import Automation from Create Manually's adjacent More Actions dropdown in the view header, or drop one .automation.md file anywhere in the view, to review a shared Automation blueprint. Imported Automations start disabled. For Agent Host automations, open the context menu and choose Export to save a portable blueprint. Cloud automations do not currently offer Export.</source>
+        <target>Виберіть Імпорт автоматизації з сусіднього випадаючого меню Більше дій у заголовку перегляду або перетягніть один файл .automation.md будь-де в перегляді, щоб переглянути спільний шаблон автоматизації. Імпортовані автоматизації спочатку вимкнені. Для автоматизацій Агентів відкрийте контекстне меню та виберіть Експортувати, щоб зберегти портативний шаблон. Хмарні автоматизації наразі не пропонують Експорт.</target>
+      </trans-unit>
+      <trans-unit id="automationsCustomView.help.spotlight">
+        <source xml:lang="en">The first time you activate Create with Agent, a spotlight explains what will happen, unless you have already seen the introduction. Activate Got It or the highlighted button to continue to the new session draft, or press Escape to dismiss it and stay in Automations. The introduction does not appear again.</source>
+        <target>Перший раз, коли ви активуєте Створити з Агентом, спалах пояснює, що відбудеться, якщо ви вже не бачили вступ. Активуйте Зрозуміло або виділену кнопку, щоб продовжити до нового чернетки сесії, або натисніть Escape, щоб закрити його і залишитися в Автоматизаціях. Вступ більше не з'являється.</target>
       </trans-unit>
       <trans-unit id="automationsCustomView.help.weekdays">
         <source xml:lang="en">For Agent Host automations, choose Weekdays to run Monday through Friday at the same local time, without choosing a day of the week. Weekdays is not available for Cloud automations.</source>
@@ -1125,10 +1193,6 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
   </file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/automationsView" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="automation.duplicateEvents">
-        <source xml:lang="en">Duplicate event-triggered automations on GitHub to preserve their complete configuration.</source>
-        <target>Дублюйте автоматизації, що запускаються подіями, на GitHub, щоб зберегти їхню повну конфігурацію.</target>
-      </trans-unit>
       <trans-unit id="automationAcceptedStatus">
         <source xml:lang="en">Run requested for {0}. Its history will update when available.</source>
         <target>Запит на виконання для {0}. Його історія оновиться, коли буде доступна.</target>
@@ -1140,42 +1204,6 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <trans-unit id="automationAlreadyRunningStatus">
         <source xml:lang="en">Automation {0} is already running</source>
         <target>Автоматизація {0} вже запущена</target>
-      </trans-unit>
-      <trans-unit id="automationBlueprint.invalidField">
-        <source xml:lang="en">The property '{0}' is missing or invalid.</source>
-        <target>Властивість '{0}' відсутня або недійсна.</target>
-      </trans-unit>
-      <trans-unit id="automationBlueprint.invalidFrontmatter">
-        <source xml:lang="en">The file must start with valid YAML frontmatter.</source>
-        <target>Файл повинен починатися з дійсного YAML frontmatter.</target>
-      </trans-unit>
-      <trans-unit id="automationBlueprint.invalidId">
-        <source xml:lang="en">The blueprint id '{0}' is invalid.</source>
-        <target>Ідентифікатор плану '{0}' є недійсним.</target>
-      </trans-unit>
-      <trans-unit id="automationBlueprint.missingPrompt">
-        <source xml:lang="en">The Automation prompt must follow the frontmatter.</source>
-        <target>Промт автоматизації повинен слідувати за frontmatter.</target>
-      </trans-unit>
-      <trans-unit id="automationBlueprint.unknownProperty">
-        <source xml:lang="en">The property '{0}' is not supported.</source>
-        <target>Властивість '{0}' не підтримується.</target>
-      </trans-unit>
-      <trans-unit id="automationBlueprint.unsupportedSchedule">
-        <source xml:lang="en">The cron expression '{0}' cannot be represented by the current Automation editor.</source>
-        <target>Вираз cron '{0}' не може бути представлений поточним редактором автоматизації.</target>
-      </trans-unit>
-      <trans-unit id="automationBlueprint.unsupportedTimeZone">
-        <source xml:lang="en">The time zone '{0}' is not supported. Use 'local' so the schedule follows the importing user's time zone.</source>
-        <target>Часовий пояс '{0}' не підтримується. Використовуйте 'local', щоб розклад відповідав часовому поясу користувача, який імпортує.</target>
-      </trans-unit>
-      <trans-unit id="automationBlueprint.unsupportedVersion">
-        <source xml:lang="en">Automation blueprint version {0} is not supported.</source>
-        <target>Версія шаблону автоматизації {0} не підтримується.</target>
-      </trans-unit>
-      <trans-unit id="automationBlueprintFileFilter">
-        <source xml:lang="en">Automation Blueprint</source>
-        <target>Автоматизаційний план</target>
       </trans-unit>
       <trans-unit id="automationBuiltInTemplatesDescription">
         <source xml:lang="en">Choose a starting point, then review and customize it before creating.</source>
@@ -1189,21 +1217,21 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
         <source xml:lang="en">{0} — {1}</source>
         <target>{0} — {1}</target>
       </trans-unit>
-      <trans-unit id="automationChangedDuringDisable">
-        <source xml:lang="en">This automation changed before it could be disabled. Try again.</source>
-        <target>Ця автоматизація змінилася, перш ніж її можна було відключити. Спробуйте ще раз.</target>
+      <trans-unit id="automationCardEndDate">
+        <source xml:lang="en">until {0} {1}</source>
+        <target>до {0} {1}</target>
       </trans-unit>
-      <trans-unit id="automationChangedDuringEdit">
-        <source xml:lang="en">This automation changed while the dialog was open. Reopen it to review the latest values.</source>
-        <target>Ця автоматизація змінилася, поки діалог було відкрито. Відкрийте його знову, щоб переглянути останні значення.</target>
+      <trans-unit id="automationCardEndDateDescription">
+        <source xml:lang="en">Stops scheduling at {0}.</source>
+        <target>Зупиняє планування о {0}.</target>
       </trans-unit>
-      <trans-unit id="automationChangedDuringEnable">
-        <source xml:lang="en">This automation changed before it could be enabled. Try again.</source>
-        <target>Ця автоматизація змінилася до того, як її можна було активувати. Спробуйте ще раз.</target>
+      <trans-unit id="automationCardEndDateToday">
+        <source xml:lang="en">until today at {0}</source>
+        <target>до сьогодні о {0}</target>
       </trans-unit>
-      <trans-unit id="automationCopyName">
-        <source xml:lang="en">{0} Copy</source>
-        <target>{0} Копіювати</target>
+      <trans-unit id="automationCardEndDateTomorrow">
+        <source xml:lang="en">until tomorrow at {0}</source>
+        <target>до завтра о {0}</target>
       </trans-unit>
       <trans-unit id="automationCreateFailed">
         <source xml:lang="en">Failed to create automation.</source>
@@ -1212,34 +1240,6 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <trans-unit id="automationCreatedStatus">
         <source xml:lang="en">Created automation {0}</source>
         <target>Створено автоматизацію {0}</target>
-      </trans-unit>
-      <trans-unit id="automationDeleteFailed">
-        <source xml:lang="en">Failed to delete automation.</source>
-        <target>Не вдалося видалити автоматизацію.</target>
-      </trans-unit>
-      <trans-unit id="automationDeletedDuringDisable">
-        <source xml:lang="en">This automation was deleted before it could be disabled.</source>
-        <target>Цю автоматизацію було видалено до того, як її можна було відключити.</target>
-      </trans-unit>
-      <trans-unit id="automationDeletedDuringEdit">
-        <source xml:lang="en">This automation was deleted while the dialog was open.</source>
-        <target>Цю автоматизацію було видалено, поки діалогове вікно було відкрито.</target>
-      </trans-unit>
-      <trans-unit id="automationDeletedDuringEnable">
-        <source xml:lang="en">This automation was deleted before it could be enabled.</source>
-        <target>Цю автоматизацію було видалено до того, як її можна було активувати.</target>
-      </trans-unit>
-      <trans-unit id="automationDeletedStatus">
-        <source xml:lang="en">Deleted automation {0}</source>
-        <target>Видалена автоматизація {0}</target>
-      </trans-unit>
-      <trans-unit id="automationDisableFailed">
-        <source xml:lang="en">Failed to disable automation.</source>
-        <target>Не вдалося вимкнути автоматизацію.</target>
-      </trans-unit>
-      <trans-unit id="automationDisabledStatus">
-        <source xml:lang="en">Disabled automation {0}</source>
-        <target>Вимкнена автоматизація {0}</target>
       </trans-unit>
       <trans-unit id="automationDropDescription">
         <source xml:lang="en">You can review the Automation before creating it.</source>
@@ -1261,105 +1261,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
         <source xml:lang="en">Only .automation.md files can be imported.</source>
         <target>Тільки файли .automation.md можуть бути імпортовані.</target>
       </trans-unit>
-      <trans-unit id="automationDuplicateFailed">
-        <source xml:lang="en">Failed to duplicate automation.</source>
-        <target>Не вдалося дублювати автоматизацію.</target>
-      </trans-unit>
-      <trans-unit id="automationDuplicatedStatus">
-        <source xml:lang="en">Created duplicate automation {0}</source>
-        <target>Створено дублікат автоматизації {0}</target>
-      </trans-unit>
-      <trans-unit id="automationEnableFailed">
-        <source xml:lang="en">Failed to enable automation.</source>
-        <target>Не вдалося увімкнути автоматизацію.</target>
-      </trans-unit>
-      <trans-unit id="automationEnabledStatus">
-        <source xml:lang="en">Enabled automation {0}</source>
-        <target>Увімкнена автоматизація {0}</target>
-      </trans-unit>
-      <trans-unit id="automationExportFailed">
-        <source xml:lang="en">Failed to export automation.</source>
-        <target>Не вдалося експортувати автоматизацію.</target>
-      </trans-unit>
-      <trans-unit id="automationExportInvalidFileName">
-        <source xml:lang="en">Use a file name ending in exactly one .automation.md suffix.</source>
-        <target>Використовуйте ім'я файлу, яке закінчується точно на один суфікс .automation.md.</target>
-      </trans-unit>
-      <trans-unit id="automationExportInvalidFileNameTitle">
-        <source xml:lang="en">Unable to export automation.</source>
-        <target>Неможливо експортувати автоматизацію.</target>
-      </trans-unit>
-      <trans-unit id="automationExportedStatus">
-        <source xml:lang="en">Exported automation {0}</source>
-        <target>Експортована автоматизація {0}</target>
-      </trans-unit>
-      <trans-unit id="automationExternalOpenFailed">
-        <source xml:lang="en">Failed to open the automation on GitHub.</source>
-        <target>Не вдалося відкрити автоматизацію на GitHub.</target>
-      </trans-unit>
-      <trans-unit id="automationExternalOpenRejected">
-        <source xml:lang="en">The link could not be opened.</source>
-        <target>Посилання не вдалося відкрити.</target>
-      </trans-unit>
-      <trans-unit id="automationExternalUnavailable">
-        <source xml:lang="en">This automation is no longer available on GitHub.</source>
-        <target>Ця автоматизація більше недоступна на GitHub.</target>
-      </trans-unit>
-      <trans-unit id="automationHistoryDeleteFailed">
-        <source xml:lang="en">Failed to delete run history.</source>
-        <target>Не вдалося видалити історію виконання.</target>
-      </trans-unit>
-      <trans-unit id="automationHistoryDeleteUnsupported">
-        <source xml:lang="en">This Automation provider does not support deleting retained run history.</source>
-        <target>Цей постачальник автоматизації не підтримує видалення збереженої історії виконання.</target>
-      </trans-unit>
-      <trans-unit id="automationHistoryDeletedStatus">
-        <source xml:lang="en">Deleted run history for {0}</source>
-        <target>Видалено історію виконання для {0}</target>
-      </trans-unit>
-      <trans-unit id="automationHistoryDeleting">
-        <source xml:lang="en">Deleting run history...</source>
-        <target>Видалення історії запуску...</target>
-      </trans-unit>
-      <trans-unit id="automationHistoryDeletionInterrupted">
-        <source xml:lang="en">Run history deletion was interrupted.</source>
-        <target>Видалення історії виконання було перервано.</target>
-      </trans-unit>
-      <trans-unit id="automationHistoryOwnerState">
-        <source xml:lang="en">{0}, {1}</source>
-        <target>{0}, {1}</target>
-      </trans-unit>
-      <trans-unit id="automationHistoryRetained">
-        <source xml:lang="en">Run history is retained.</source>
-        <target>Історія виконань зберігається.</target>
-      </trans-unit>
-      <trans-unit id="automationImportReadFailed">
-        <source xml:lang="en">Failed to import automation.</source>
-        <target>Не вдалося імпортувати автоматизацію.</target>
-      </trans-unit>
-      <trans-unit id="automationImportedStatus">
-        <source xml:lang="en">Imported automation {0}</source>
-        <target>Імпортована автоматизація {0}</target>
-      </trans-unit>
-      <trans-unit id="automationIndexedCopyName">
-        <source xml:lang="en">{0} Copy {1}</source>
-        <target>{0} Копіювати {1}</target>
-      </trans-unit>
-      <trans-unit id="automationMarkAllReadFailed">
-        <source xml:lang="en">Failed to mark automation runs as read.</source>
-        <target>Не вдалося позначити запуски автоматизації як прочитані.</target>
-      </trans-unit>
       <trans-unit id="automationNotStartedStatus">
         <source xml:lang="en">Automation {0} did not start</source>
         <target>Автоматизація {0} не розпочалася</target>
-      </trans-unit>
-      <trans-unit id="automationOpenExternal">
-        <source xml:lang="en">Open on GitHub</source>
-        <target>Відкрити на GitHub</target>
-      </trans-unit>
-      <trans-unit id="automationOpenRunSession">
-        <source xml:lang="en">Open session: {0}, {1}</source>
-        <target>Відкрити сесію: {0}, {1}</target>
       </trans-unit>
       <trans-unit id="automationPluginTemplateBadge">
         <source xml:lang="en">Plugin</source>
@@ -1385,77 +1289,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
         <source xml:lang="en">Failed to run automation.</source>
         <target>Не вдалося запустити автоматизацію.</target>
       </trans-unit>
-      <trans-unit id="automationRunArchiveActive">
-        <source xml:lang="en">Wait for the cloud run to finish before marking it as done. Use Stop to cancel it.</source>
-        <target>Чекайте, поки виконання хмари завершиться, перш ніж позначити його як завершене. Використовуйте Зупинити, щоб скасувати його.</target>
-      </trans-unit>
-      <trans-unit id="automationRunArchiveFailed">
-        <source xml:lang="en">Failed to archive the automation run.</source>
-        <target>Не вдалося заархівувати виконання автоматизації.</target>
-      </trans-unit>
-      <trans-unit id="automationRunCloudCompleted">
-        <source xml:lang="en">Completed on GitHub</source>
-        <target>Завершено на GitHub</target>
-      </trans-unit>
-      <trans-unit id="automationRunCloudFailed">
-        <source xml:lang="en">Failed on GitHub: {0}</source>
-        <target>Не вдалося на GitHub: {0}</target>
-      </trans-unit>
-      <trans-unit id="automationRunCloudRunning">
-        <source xml:lang="en">Running on GitHub</source>
-        <target>Запуск на GitHub</target>
-      </trans-unit>
-      <trans-unit id="automationRunDetails">
-        <source xml:lang="en">{0}, {1}, {2}</source>
-        <target>{0}, {1}, {2}</target>
-      </trans-unit>
-      <trans-unit id="automationRunExternalFailed">
-        <source xml:lang="en">Failed to open the run on GitHub.</source>
-        <target>Не вдалося відкрити запуск на GitHub.</target>
-      </trans-unit>
-      <trans-unit id="automationRunOpenFailed">
-        <source xml:lang="en">Failed to open automation run.</source>
-        <target>Не вдалося відкрити автоматизацію.</target>
-      </trans-unit>
-      <trans-unit id="automationRunOpenRejected">
-        <source xml:lang="en">The link could not be opened.</source>
-        <target>Посилання не вдалося відкрити.</target>
-      </trans-unit>
-      <trans-unit id="automationRunQueued">
-        <source xml:lang="en">Queued on GitHub</source>
-        <target>Став у чергу на GitHub</target>
-      </trans-unit>
-      <trans-unit id="automationRunSessionStopFailed">
-        <source xml:lang="en">Failed to stop the automation run session.</source>
-        <target>Не вдалося зупинити сесію автоматизації.</target>
-      </trans-unit>
-      <trans-unit id="automationRunSessionStoppedStatus">
-        <source xml:lang="en">Stopped the session for {0}</source>
-        <target>Зупинено сесію для {0}</target>
-      </trans-unit>
-      <trans-unit id="automationRunSessionUnavailable">
-        <source xml:lang="en">The cloud session is not available yet. Try again or open it on GitHub.</source>
-        <target>Хмарна сесія ще недоступна. Спробуйте ще раз або відкрийте її на GitHub.</target>
-      </trans-unit>
-      <trans-unit id="automationRunState">
-        <source xml:lang="en">{0}, {1}</source>
-        <target>{0}, {1}</target>
-      </trans-unit>
-      <trans-unit id="automationRunStopFailed">
-        <source xml:lang="en">Failed to stop the automation run.</source>
-        <target>Не вдалося зупинити виконання автоматизації.</target>
-      </trans-unit>
-      <trans-unit id="automationRunStopRequested">
-        <source xml:lang="en">Stop requested for {0}. History will update when available.</source>
-        <target>Зупинка запитана для {0}. Історія оновиться, коли буде доступна.</target>
-      </trans-unit>
-      <trans-unit id="automationRunStopUnavailable">
-        <source xml:lang="en">This automation run cannot be stopped from VS Code.</source>
-        <target>Цей запуск автоматизації не можна зупинити з VS Code.</target>
-      </trans-unit>
-      <trans-unit id="automationRunWorking">
-        <source xml:lang="en">Working...</source>
-        <target>Працює...</target>
+      <trans-unit id="automationScheduleWithEndDate">
+        <source xml:lang="en">{0} {1}</source>
+        <target>{0} {1}</target>
       </trans-unit>
       <trans-unit id="automationStartedStatus">
         <source xml:lang="en">Started automation {0}</source>
@@ -1489,41 +1325,21 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
         <source xml:lang="en">The automations view was closed before the automation could be saved.</source>
         <target>Перегляд автоматизацій був закритий до того, як автоматизацію вдалося зберегти.</target>
       </trans-unit>
+      <trans-unit id="automationsAgentCreationFailed">
+        <source xml:lang="en">Could not open a session to create an automation: {0}</source>
+        <target>Не вдалося відкрити сеанс для створення автоматизації: {0}</target>
+      </trans-unit>
       <trans-unit id="automationsDescription">
         <source xml:lang="en">Configure agent sessions to run automatically from events or on a schedule.</source>
         <target>Налаштуйте сесії агентів для автоматичного запуску за подіями або за розкладом.</target>
       </trans-unit>
-      <trans-unit id="automationsDisabledBeforeDelete">
-        <source xml:lang="en">Automations were disabled before the automation could be deleted.</source>
-        <target>Автоматизації були вимкнені перед тим, як автоматизацію можна було видалити.</target>
-      </trans-unit>
-      <trans-unit id="automationsDisabledBeforeDisable">
-        <source xml:lang="en">Automations were disabled before the automation could be updated.</source>
-        <target>Автоматизації були вимкнені перед тим, як автоматизацію можна було оновити.</target>
-      </trans-unit>
-      <trans-unit id="automationsDisabledBeforeDuplicate">
-        <source xml:lang="en">Automations were disabled before the duplicate could be saved.</source>
-        <target>Автоматизації були вимкнені перед тим, як дублікат міг бути збережений.</target>
-      </trans-unit>
-      <trans-unit id="automationsDisabledBeforeEnable">
-        <source xml:lang="en">Automations were disabled before the automation could be enabled.</source>
-        <target>Автоматизації були вимкнені до того, як автоматизацію можна було увімкнути.</target>
-      </trans-unit>
-      <trans-unit id="automationsDisabledBeforeImport">
-        <source xml:lang="en">Automations were disabled before the imported automation could be saved.</source>
-        <target>Автоматизації були вимкнені перед тим, як імпортовану автоматизацію можна було зберегти.</target>
+      <trans-unit id="automationsDetectedRemotes">
+        <source xml:lang="en">{0}/{1} remotes detected</source>
+        <target>{0}/{1} віддалених пристроїв виявлено</target>
       </trans-unit>
       <trans-unit id="automationsDisabledBeforeSave">
         <source xml:lang="en">Automations were disabled before the change could be saved.</source>
         <target>Автоматизації були вимкнені перед тим, як зміни могли бути збережені.</target>
-      </trans-unit>
-      <trans-unit id="automationsDisabledDetail">
-        <source xml:lang="en">Enable “{0}” to make changes.</source>
-        <target>Увімкніть “{0}”, щоб внести зміни.</target>
-      </trans-unit>
-      <trans-unit id="automationsDisabledTitle">
-        <source xml:lang="en">Automations are disabled.</source>
-        <target>Автоматизації вимкнено.</target>
       </trans-unit>
       <trans-unit id="automationsLoadError">
         <source xml:lang="en">Unable to load automations</source>
@@ -1537,6 +1353,10 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
         <source xml:lang="en">Manage Remotes</source>
         <target>Керувати віддаленими</target>
       </trans-unit>
+      <trans-unit id="automationsManageRemotesWithCount">
+        <source xml:lang="en">{0}, Manage Remotes</source>
+        <target>{0}, Керувати віддаленими підключеннями</target>
+      </trans-unit>
       <trans-unit id="automationsPartialLoadError">
         <source xml:lang="en">Some automations could not be loaded.</source>
         <target>Деякі автоматизації не вдалося завантажити.</target>
@@ -1545,117 +1365,41 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
         <source xml:lang="en">Some automations are unavailable.</source>
         <target>Деякі автоматизації недоступні.</target>
       </trans-unit>
-      <trans-unit id="automationsRefreshFailed">
-        <source xml:lang="en">Could not refresh automations: {0}</source>
-        <target>Не вдалося оновити автоматизації: {0}</target>
-      </trans-unit>
       <trans-unit id="automationsTitle">
         <source xml:lang="en">Automations</source>
         <target>Автоматизації</target>
-      </trans-unit>
-      <trans-unit id="automationsUnavailable">
-        <source xml:lang="en">Some automations are unavailable</source>
-        <target>Деякі автоматизації недоступні</target>
       </trans-unit>
       <trans-unit id="automationsUnavailableDescription">
         <source xml:lang="en">One or more providers are disconnected, disabled, or do not support automations.</source>
         <target>Один або кілька постачальників відключені, деактивовані або не підтримують автоматизацію.</target>
       </trans-unit>
-      <trans-unit id="confirmDeleteAutomation">
-        <source xml:lang="en">Delete automation "{0}"?</source>
-        <target>Видалити автоматизацію "{0}"?</target>
+      <trans-unit id="automationsViewOptions">
+        <source xml:lang="en">View options</source>
+        <target>Переглянути параметри</target>
       </trans-unit>
-      <trans-unit id="confirmDeleteDetail">
-        <source xml:lang="en">This will permanently delete the automation and its run history.</source>
-        <target>Це назавжди видалить автоматизацію та її історію виконання.</target>
-      </trans-unit>
-      <trans-unit id="confirmDeleteHistoryChoice">
-        <source xml:lang="en">This will permanently delete the automation. Clear the checkbox to keep its run history.</source>
-        <target>Це назавжди видалить автоматизацію. Зніміть позначку з чекбокса, щоб зберегти її історію виконання.</target>
-      </trans-unit>
-      <trans-unit id="confirmDeleteRetainedAutomationHistory">
-        <source xml:lang="en">Delete run history for "{0}"?</source>
-        <target>Видалити історію запусків для "{0}"?</target>
-      </trans-unit>
-      <trans-unit id="confirmDeleteRetainedAutomationHistoryDetail">
-        <source xml:lang="en">This permanently deletes every retained run for this automation.</source>
-        <target>Це назавжди видаляє всі збережені запуски для цієї автоматизації.</target>
-      </trans-unit>
-      <trans-unit id="confirmRetryDeleteAutomationHistory">
-        <source xml:lang="en">Retry deleting run history for "{0}"?</source>
-        <target>Спробувати видалити історію виконання для "{0}"?</target>
-      </trans-unit>
-      <trans-unit id="createAutomation">
-        <source xml:lang="en">Create Automation</source>
-        <target>Створити автоматизацію</target>
-      </trans-unit>
-      <trans-unit id="delete">
-        <source xml:lang="en">Delete</source>
-        <target>Видалити</target>
-      </trans-unit>
-      <trans-unit id="deleteAutomationContextMenu">
-        <source xml:lang="en">Delete...</source>
-        <target>Видалити...</target>
-      </trans-unit>
-      <trans-unit id="deleteAutomationHistory">
-        <source xml:lang="en">Delete Run History</source>
-        <target>Видалити історію запусків</target>
-      </trans-unit>
-      <trans-unit id="deleteHistory">
-        <source xml:lang="en">Delete Run History</source>
-        <target>Видалити історію виконання</target>
-      </trans-unit>
-      <trans-unit id="deleteRetainedAutomationHistoryAction">
-        <source xml:lang="en">Delete Run History...</source>
-        <target>Видалити історію виконання...</target>
-      </trans-unit>
-      <trans-unit id="deletingHistory">
-        <source xml:lang="en">Deleting...</source>
-        <target>Видалення...</target>
-      </trans-unit>
-      <trans-unit id="disableAutomationContextMenu">
-        <source xml:lang="en">Disable</source>
-        <target>Вимкнути</target>
+      <trans-unit id="createWithAgent">
+        <source xml:lang="en">Create with Agent</source>
+        <target>Створити з Агентом</target>
       </trans-unit>
       <trans-unit id="disabled">
         <source xml:lang="en">Disabled</source>
         <target>Вимкнено</target>
       </trans-unit>
-      <trans-unit id="disabledAutomations">
-        <source xml:lang="en">Disabled automations</source>
-        <target>Вимкнені автоматизації</target>
-      </trans-unit>
-      <trans-unit id="duplicateAutomation">
-        <source xml:lang="en">Duplicate...</source>
-        <target>Дублювати...</target>
+      <trans-unit id="disabledAutomationsHidden">
+        <source xml:lang="en">Your disabled automations are hidden.</source>
+        <target>Ваші вимкнені автоматизації приховані.</target>
       </trans-unit>
       <trans-unit id="editAutomationNamed">
         <source xml:lang="en">Edit automation {0}</source>
         <target>Редагувати автоматизацію {0}</target>
       </trans-unit>
-      <trans-unit id="enableAutomationContextMenu">
-        <source xml:lang="en">Enable</source>
-        <target>Увімкнути</target>
-      </trans-unit>
-      <trans-unit id="exportAutomation">
-        <source xml:lang="en">Export...</source>
-        <target>Експорт...</target>
-      </trans-unit>
-      <trans-unit id="exportAutomationDialogSave">
-        <source xml:lang="en">Export</source>
-        <target>Експорт</target>
-      </trans-unit>
-      <trans-unit id="exportAutomationDialogTitle">
-        <source xml:lang="en">Export Automation</source>
-        <target>Експортна автоматизація</target>
+      <trans-unit id="hiddenDisabledAutomations">
+        <source xml:lang="en">Disabled automations are hidden. Use View options, then Show disabled automations to reveal them.</source>
+        <target>Вимкнені автоматизації приховані. Використайте параметри перегляду, а потім виберіть Показати вимкнені автоматизації, щоб їх відобразити.</target>
       </trans-unit>
       <trans-unit id="historyEmpty">
         <source xml:lang="en">No runs yet. Wait for the automation's next trigger, or run it now when available.</source>
         <target>Ще немає запусків. Зачекайте на наступний тригер автоматизації або запустіть його зараз, коли це можливо.</target>
-      </trans-unit>
-      <trans-unit id="historyHeader">
-        <source xml:lang="en">History</source>
-        <target>Історія</target>
       </trans-unit>
       <trans-unit id="historyLoadFailed">
         <source xml:lang="en">Run history could not be loaded. Use Refresh to try again.</source>
@@ -1665,21 +1409,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
         <source xml:lang="en">Run history could not be refreshed. Showing the last available history. Use Refresh to try again.</source>
         <target>Історію запусків не вдалося оновити. Показується остання доступна історія. Використайте Оновити, щоб спробувати ще раз.</target>
       </trans-unit>
-      <trans-unit id="importAutomation">
-        <source xml:lang="en">Import Automation</source>
-        <target>Імпорт автоматизації</target>
-      </trans-unit>
-      <trans-unit id="importAutomationDialogOpen">
-        <source xml:lang="en">Import</source>
-        <target>Імпорт</target>
-      </trans-unit>
-      <trans-unit id="importAutomationDialogTitle">
-        <source xml:lang="en">Import Automation</source>
-        <target>Імпорт автоматизації</target>
-      </trans-unit>
-      <trans-unit id="lastWeek">
-        <source xml:lang="en">Last week</source>
-        <target>Минулого тижня</target>
+      <trans-unit id="importAutomationMenu">
+        <source xml:lang="en">Import Automation...</source>
+        <target>Імпорт автоматизації...</target>
       </trans-unit>
       <trans-unit id="loadingAutomations">
         <source xml:lang="en">Loading automations...</source>
@@ -1693,18 +1425,6 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
         <source xml:lang="en">Mark All as Read</source>
         <target>Позначити всі як прочитані</target>
       </trans-unit>
-      <trans-unit id="markAllRead">
-        <source xml:lang="en">Mark all as read</source>
-        <target>Позначити все як прочитане</target>
-      </trans-unit>
-      <trans-unit id="markAutomationRunSessionReadAction">
-        <source xml:lang="en">Mark as Read</source>
-        <target>Позначити як прочитане</target>
-      </trans-unit>
-      <trans-unit id="markAutomationRunSessionUnreadAction">
-        <source xml:lang="en">Mark as Unread</source>
-        <target>Позначити як Непрочитане</target>
-      </trans-unit>
       <trans-unit id="moreActions">
         <source xml:lang="en">More Actions...</source>
         <target>Більше дій...</target>
@@ -1712,10 +1432,6 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <trans-unit id="moreActionsForAutomation">
         <source xml:lang="en">More Actions for {0}</source>
         <target>Більше дій для {0}</target>
-      </trans-unit>
-      <trans-unit id="newAutomation">
-        <source xml:lang="en">New Automation</source>
-        <target>Нова автоматизація</target>
       </trans-unit>
       <trans-unit id="noAutomationsDesc">
         <source xml:lang="en">Describe what you want to automate, then choose when it runs.</source>
@@ -1725,29 +1441,9 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
         <source xml:lang="en">No automations yet</source>
         <target>Ще немає автоматизацій</target>
       </trans-unit>
-      <trans-unit id="openAutomationOnGitHub">
-        <source xml:lang="en">Open on GitHub</source>
-        <target>Відкрити на GitHub</target>
-      </trans-unit>
-      <trans-unit id="refreshAutomations">
-        <source xml:lang="en">Refresh</source>
-        <target>Оновити</target>
-      </trans-unit>
-      <trans-unit id="renameAutomationRunSessionAction">
-        <source xml:lang="en">Rename...</source>
-        <target>Перейменувати...</target>
-      </trans-unit>
-      <trans-unit id="retryDelete">
-        <source xml:lang="en">Retry Delete</source>
-        <target>Спробувати видалити</target>
-      </trans-unit>
-      <trans-unit id="retryDeleteHistory">
-        <source xml:lang="en">Retry Delete Run History</source>
-        <target>Спробувати видалити історію запусків</target>
-      </trans-unit>
-      <trans-unit id="retryDeleteRetainedAutomationHistoryAction">
-        <source xml:lang="en">Retry Delete Run History...</source>
-        <target>Спробуйте видалити історію запусків...</target>
+      <trans-unit id="noEnabledAutomations">
+        <source xml:lang="en">No enabled automations</source>
+        <target>Немає активованих автоматизацій</target>
       </trans-unit>
       <trans-unit id="runNow">
         <source xml:lang="en">Run now</source>
@@ -1757,45 +1453,13 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
         <source xml:lang="en">Running</source>
         <target>Запуск</target>
       </trans-unit>
-      <trans-unit id="scheduleCron">
-        <source xml:lang="en">Cron: {0}</source>
-        <target>Cron: {0}</target>
+      <trans-unit id="showDisabled">
+        <source xml:lang="en">Show disabled</source>
+        <target>Показати вимкнено</target>
       </trans-unit>
-      <trans-unit id="scheduleCustom">
-        <source xml:lang="en">Custom schedule</source>
-        <target>Індивідуальний графік</target>
-      </trans-unit>
-      <trans-unit id="scheduleDailyAt">
-        <source xml:lang="en">Daily at {0}</source>
-        <target>Щодня о {0}</target>
-      </trans-unit>
-      <trans-unit id="scheduleHourly">
-        <source xml:lang="en">Hourly</source>
-        <target>Годинний</target>
-      </trans-unit>
-      <trans-unit id="scheduleManual">
-        <source xml:lang="en">Manual</source>
-        <target>Посібник</target>
-      </trans-unit>
-      <trans-unit id="scheduleWeekdaysAt">
-        <source xml:lang="en">Weekdays at {0}</source>
-        <target>Будні дні о {0}</target>
-      </trans-unit>
-      <trans-unit id="scheduleWeeklyAt">
-        <source xml:lang="en">{0} at {1}</source>
-        <target>{0} о {1}</target>
-      </trans-unit>
-      <trans-unit id="stopAutomationRunSessionAction">
-        <source xml:lang="en">Stop</source>
-        <target>Зупинити</target>
-      </trans-unit>
-      <trans-unit id="today">
-        <source xml:lang="en">Today</source>
-        <target>Сьогодні</target>
-      </trans-unit>
-      <trans-unit id="unknownAutomation">
-        <source xml:lang="en">Unknown</source>
-        <target>Невідомо</target>
+      <trans-unit id="showDisabledAutomations">
+        <source xml:lang="en">Show disabled automations</source>
+        <target>Показати вимкнені автоматизації</target>
       </trans-unit>
       <trans-unit id="useAutomationTemplate">
         <source xml:lang="en">Use template: {0}, {1}</source>
@@ -1805,209 +1469,13 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
         <source xml:lang="en">Use template: {0}, {1}, from {2}</source>
         <target>Використовуйте шаблон: {0}, {1}, з {2}</target>
       </trans-unit>
-      <trans-unit id="yesterday">
-        <source xml:lang="en">Yesterday</source>
-        <target>Вчора</target>
-      </trans-unit>
     </body>
   </file>
   <file original="src/vs/sessions/contrib/sessions/browser/views/sessionsViewActions" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="all">
-        <source xml:lang="en">All</source>
-        <target>Усе</target>
-      </trans-unit>
-      <trans-unit id="archiveGroupSession.confirmSingle">
-        <source xml:lang="en">Are you sure you want to archive 1 session from '{0}'?</source>
-        <target>Ви впевнені, що хочете архівувати 1 сесію з '{0}'?</target>
-      </trans-unit>
-      <trans-unit id="archiveGroupSessions.confirm">
-        <source xml:lang="en">Are you sure you want to archive {0} sessions from '{1}'?</source>
-        <target>Ви впевнені, що хочете архівувати {0} сесій з '{1}'?</target>
-      </trans-unit>
-      <trans-unit id="archiveGroupSessions.detail">
-        <source xml:lang="en">You can unarchive sessions later if needed from the sessions view.</source>
-        <target>Ви можете розархівувати сесії пізніше, якщо потрібно, з перегляду сесій.</target>
-      </trans-unit>
-      <trans-unit id="archiveNoticeHelp">
-        <source xml:lang="en">This notice appears after marking sessions done or archiving them. Undo restores the sessions and their previous custom groups, if those groups still exist. It does not restart stopped requests.</source>
-        <target>Це повідомлення з'являється після позначення сесій як завершених або архівування їх. Відміна відновлює сесії та їх попередні користувацькі групи, якщо ці групи все ще існують. Це не перезапускає зупинені запити.</target>
-      </trans-unit>
-      <trans-unit id="archivePinnedSectionSession.confirmSingle">
-        <source xml:lang="en">Are you sure you want to archive 1 pinned session?</source>
-        <target>Ви впевнені, що хочете архівувати 1 закріплену сесію?</target>
-      </trans-unit>
-      <trans-unit id="archivePinnedSectionSessions.confirm">
-        <source xml:lang="en">Are you sure you want to archive {0} pinned sessions?</source>
-        <target>Ви впевнені, що хочете архівувати {0} закріплених сеансів?</target>
-      </trans-unit>
-      <trans-unit id="archiveSectionSession.confirmSingle">
-        <source xml:lang="en">Are you sure you want to archive 1 session from '{0}'?</source>
-        <target>Ви впевнені, що хочете архівувати 1 сесію з '{0}'?</target>
-      </trans-unit>
-      <trans-unit id="archiveSectionSessions.confirm">
-        <source xml:lang="en">Are you sure you want to archive {0} sessions from '{1}'?</source>
-        <target>Ви впевнені, що хочете архівувати {0} сесій з '{1}'?</target>
-      </trans-unit>
-      <trans-unit id="archiveSectionSessions.detail">
-        <source xml:lang="en">You can unarchive sessions later if needed from the sessions view.</source>
-        <target>Ви можете розархівувати сесії пізніше, якщо це потрібно, з перегляду сесій.</target>
-      </trans-unit>
-      <trans-unit id="automationSessionHiddenFromList">
-        <source xml:lang="en">{0} is now shown only in Automations.</source>
-        <target>{0} тепер відображається лише в Автоматизаціях.</target>
-      </trans-unit>
-      <trans-unit id="automationSessionShownInList">
-        <source xml:lang="en">{0} is now shown in the Sessions list.</source>
-        <target>{0} тепер відображається у списку Сесій.</target>
-      </trans-unit>
-      <trans-unit id="automationSessionsHiddenFromList">
-        <source xml:lang="en">{0} sessions are now shown only in Automations.</source>
-        <target>{0} сесій тепер показуються лише в Автоматизаціях.</target>
-      </trans-unit>
-      <trans-unit id="automationSessionsShownInList">
-        <source xml:lang="en">{0} sessions are now shown in the Sessions list.</source>
-        <target>{0} сесій зараз відображаються у списку сесій.</target>
-      </trans-unit>
       <trans-unit id="closeSession">
         <source xml:lang="en">Close Session</source>
         <target>Закрити сесію</target>
-      </trans-unit>
-      <trans-unit id="collapseAllGroups">
-        <source xml:lang="en">Collapse All Groups</source>
-        <target>Згорнути всі групи</target>
-      </trans-unit>
-      <trans-unit id="configureExternalSessions">
-        <source xml:lang="en">Configure External Sessions</source>
-        <target>Налаштувати зовнішні сесії</target>
-      </trans-unit>
-      <trans-unit id="created">
-        <source xml:lang="en">Created</source>
-        <target>Створено</target>
-      </trans-unit>
-      <trans-unit id="createdExternally">
-        <source xml:lang="en">Created Externally</source>
-        <target>Створено зовнішньо</target>
-      </trans-unit>
-      <trans-unit id="createdIn">
-        <source xml:lang="en">Created In</source>
-        <target>Створено в</target>
-      </trans-unit>
-      <trans-unit id="deleteEmptyGroup">
-        <source xml:lang="en">Delete Group</source>
-        <target>Видалити групу</target>
-      </trans-unit>
-      <trans-unit id="deleteGroupsNoticeHelp">
-        <source xml:lang="en">This notice appears after deleting a group that contains subgroups or nested sections. Undo restores the groups, their order, and their sessions and sections, except sessions that were marked done or items moved to another group since.</source>
-        <target>Це повідомлення з'являється після видалення групи, яка містить підгрупи або вкладені секції. Відміна відновлює групи, їх порядок, а також їх сесії та секції, за винятком сесій, які були позначені як завершені, або елементів, переміщених до іншої групи з того часу.</target>
-      </trans-unit>
-      <trans-unit id="deleteSession">
-        <source xml:lang="en">Delete...</source>
-        <target>Видалити...</target>
-      </trans-unit>
-      <trans-unit id="deleteSession.confirm">
-        <source xml:lang="en">Are you sure you want to delete this session?</source>
-        <target>Ви впевнені, що хочете видалити цю сесію?</target>
-      </trans-unit>
-      <trans-unit id="deleteSession.delete">
-        <source xml:lang="en">Delete</source>
-        <target>Видалити</target>
-      </trans-unit>
-      <trans-unit id="deleteSession.detail">
-        <source xml:lang="en">This action cannot be undone.</source>
-        <target>Цю дію не можна скасувати.</target>
-      </trans-unit>
-      <trans-unit id="deleteSession.error">
-        <source xml:lang="en">Failed to delete the session: {0}</source>
-        <target>Не вдалося видалити сесію: {0}</target>
-      </trans-unit>
-      <trans-unit id="deleteSessions.confirm">
-        <source xml:lang="en">Are you sure you want to delete {0} sessions?</source>
-        <target>Ви впевнені, що хочете видалити {0} сесій?</target>
-      </trans-unit>
-      <trans-unit id="deleteSessions.error">
-        <source xml:lang="en">Failed to delete the sessions: {0}</source>
-        <target>Не вдалося видалити сесії: {0}</target>
-      </trans-unit>
-      <trans-unit id="doNotAskAgain">
-        <source xml:lang="en">Do not ask me again</source>
-        <target>Не питай мене знову.</target>
-      </trans-unit>
-      <trans-unit id="filterSessions">
-        <source xml:lang="en">Filter Sessions</source>
-        <target>Фільтрувати сесії</target>
-      </trans-unit>
-      <trans-unit id="find">
-        <source xml:lang="en">Find Session</source>
-        <target>Знайти сесію</target>
-      </trans-unit>
-      <trans-unit id="groupByEnvironment">
-        <source xml:lang="en">Environment</source>
-        <target>Групувати за Середовищем</target>
-      </trans-unit>
-      <trans-unit id="grouping">
-        <source xml:lang="en">Grouping</source>
-        <target>Групування</target>
-      </trans-unit>
-      <trans-unit id="harness">
-        <source xml:lang="en">Harness</source>
-        <target>Упряж</target>
-      </trans-unit>
-      <trans-unit id="hideAutomationSessionFromList">
-        <source xml:lang="en">Hide from Sessions List</source>
-        <target>Сховати з списку сесій</target>
-      </trans-unit>
-      <trans-unit id="importSession">
-        <source xml:lang="en">Import</source>
-        <target>Імпорт</target>
-      </trans-unit>
-      <trans-unit id="inboxDismiss">
-        <source xml:lang="en">Dismiss from Inbox</source>
-        <target>Видалити з Вхідних повідомлень</target>
-      </trans-unit>
-      <trans-unit id="inboxDismissed">
-        <source xml:lang="en">{0} dismissed from inbox</source>
-        <target>{0} видалено з вхідних повідомлень</target>
-      </trans-unit>
-      <trans-unit id="inboxHeld">
-        <source xml:lang="en">{0} put on hold</source>
-        <target>{0} поставлено на утримання</target>
-      </trans-unit>
-      <trans-unit id="inboxHold">
-        <source xml:lang="en">Put on Hold</source>
-        <target>Поставити на паузу</target>
-      </trans-unit>
-      <trans-unit id="inboxMarkSessionDone">
-        <source xml:lang="en">Mark Session as Done</source>
-        <target>Позначити сесію як завершену</target>
-      </trans-unit>
-      <trans-unit id="inboxMode">
-        <source xml:lang="en">Inbox Mode</source>
-        <target>Режим Вхідних повідомлень</target>
-      </trans-unit>
-      <trans-unit id="inboxResume">
-        <source xml:lang="en">Return to Inbox</source>
-        <target>Повернутися до Вхідних повідомлень</target>
-      </trans-unit>
-      <trans-unit id="inboxResumed">
-        <source xml:lang="en">{0} returned to inbox</source>
-        <target>{0} повернувся до вхідних.</target>
-      </trans-unit>
-      <trans-unit id="inboxSnooze">
-        <source xml:lang="en">Snooze...</source>
-        <target>Снуз...</target>
-      </trans-unit>
-      <trans-unit id="inboxSnoozed">
-        <source xml:lang="en">{0} snoozed</source>
-        <target>{0} відклали</target>
-      </trans-unit>
-      <trans-unit id="inboxTriageHelp">
-        <source xml:lang="en">This changes only Inbox mode. It does not stop or archive sessions. Undo restores the previous triage state unless it has changed since.</source>
-        <target>Це змінює лише режим Вхідних повідомлень. Це не зупиняє і не архівує сесії. Відміна відновлює попередній стан тріажу, якщо він не змінився з тих пір.</target>
-      </trans-unit>
-      <trans-unit id="inboxTriageUndone">
-        <source xml:lang="en">Inbox change undone.</source>
-        <target>Зміни в папці "Вхідні" скасовано.</target>
       </trans-unit>
       <trans-unit id="manageAutomations">
         <source xml:lang="en">Manage Automations</source>
@@ -2016,58 +1484,6 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
       <trans-unit id="markAllAutomationRunsRead">
         <source xml:lang="en">Mark All as Read</source>
         <target>Позначити всі як прочитані</target>
-      </trans-unit>
-      <trans-unit id="markAllNestedRead">
-        <source xml:lang="en">Mark Nested Sessions as Read</source>
-        <target>Позначити вкладені сесії як прочитані</target>
-      </trans-unit>
-      <trans-unit id="markGroupSessionDone.confirmSingle">
-        <source xml:lang="en">Are you sure you want to mark 1 session from '{0}' as done?</source>
-        <target>Ви впевнені, що хочете позначити 1 сесію з '{0}' як завершену?</target>
-      </trans-unit>
-      <trans-unit id="markGroupSessionsDone.confirm">
-        <source xml:lang="en">Are you sure you want to mark {0} sessions from '{1}' as done?</source>
-        <target>Ви впевнені, що хочете позначити {0} сесій з '{1}' як завершені?</target>
-      </trans-unit>
-      <trans-unit id="markGroupSessionsDone.detail">
-        <source xml:lang="en">You can restore sessions later if needed from the sessions view.</source>
-        <target>Ви можете відновити сесії пізніше, якщо це необхідно, з перегляду сесій.</target>
-      </trans-unit>
-      <trans-unit id="markPinnedSectionSessionDone.confirmSingle">
-        <source xml:lang="en">Are you sure you want to mark 1 pinned session as done?</source>
-        <target>Ви впевнені, що хочете позначити 1 закріплену сесію як завершену?</target>
-      </trans-unit>
-      <trans-unit id="markPinnedSectionSessionsDone.confirm">
-        <source xml:lang="en">Are you sure you want to mark {0} pinned sessions as done?</source>
-        <target>Ви впевнені, що хочете позначити {0} закріплених сесій як завершені?</target>
-      </trans-unit>
-      <trans-unit id="markRead">
-        <source xml:lang="en">Mark as Read</source>
-        <target>Позначити як прочитане</target>
-      </trans-unit>
-      <trans-unit id="markSectionSessionDone.confirmSingle">
-        <source xml:lang="en">Are you sure you want to mark 1 session from '{0}' as done?</source>
-        <target>Ви впевнені, що хочете позначити 1 сесію з '{0}' як завершену?</target>
-      </trans-unit>
-      <trans-unit id="markSectionSessionsDone.confirm">
-        <source xml:lang="en">Are you sure you want to mark {0} sessions from '{1}' as done?</source>
-        <target>Ви впевнені, що хочете позначити {0} сесій з '{1}' як завершені?</target>
-      </trans-unit>
-      <trans-unit id="markSectionSessionsDone.detail">
-        <source xml:lang="en">You can restore sessions later if needed from the sessions view.</source>
-        <target>Ви можете відновити сесії пізніше, якщо це необхідно, з перегляду сесій.</target>
-      </trans-unit>
-      <trans-unit id="markUnread">
-        <source xml:lang="en">Mark as Unread</source>
-        <target>Позначити як Непрочитане</target>
-      </trans-unit>
-      <trans-unit id="moveChatDown">
-        <source xml:lang="en">Move Down</source>
-        <target>Перемістити вниз</target>
-      </trans-unit>
-      <trans-unit id="moveChatUp">
-        <source xml:lang="en">Move Up</source>
-        <target>Перемістити вгору</target>
       </trans-unit>
       <trans-unit id="navigateNextSession">
         <source xml:lang="en">Go to Next Session</source>
@@ -2097,149 +1513,17 @@ Compare the starting and ending HEAD and summarize only newly pulled commits, gr
         <source xml:lang="en">New Session</source>
         <target>Нова сесія</target>
       </trans-unit>
-      <trans-unit id="openIn">
-        <source xml:lang="en">Open in</source>
-        <target>Відкрити в</target>
+      <trans-unit id="openSessionCustomizations">
+        <source xml:lang="en">Open Customizations</source>
+        <target>Відкрити налаштування</target>
       </trans-unit>
-      <trans-unit id="openParentSession">
-        <source xml:lang="en">Open Parent Session</source>
-        <target>Відкрити сесію батьків</target>
-      </trans-unit>
-      <trans-unit id="ordering">
-        <source xml:lang="en">Ordering</source>
-        <target>Замовлення</target>
-      </trans-unit>
-      <trans-unit id="pinSession">
-        <source xml:lang="en">Pin</source>
-        <target>Пін</target>
-      </trans-unit>
-      <trans-unit id="recent">
-        <source xml:lang="en">Recent</source>
-        <target>Останній</target>
-      </trans-unit>
-      <trans-unit id="refresh">
-        <source xml:lang="en">Refresh Sessions</source>
-        <target>Оновити сесії</target>
-      </trans-unit>
-      <trans-unit id="renameSession">
-        <source xml:lang="en">Rename...</source>
-        <target>Перейменувати...</target>
-      </trans-unit>
-      <trans-unit id="renameSession.empty">
-        <source xml:lang="en">Title cannot be empty</source>
-        <target>Заголовок не може бути порожнім</target>
-      </trans-unit>
-      <trans-unit id="renameSession.prompt">
-        <source xml:lang="en">New agent session title</source>
-        <target>Новий заголовок сесії агента</target>
-      </trans-unit>
-      <trans-unit id="repository">
-        <source xml:lang="en">Repository</source>
-        <target>Репозиторій</target>
-      </trans-unit>
-      <trans-unit id="sessionGroupDeleted">
-        <source xml:lang="en">Group deleted</source>
-        <target>Групу видалено</target>
-      </trans-unit>
-      <trans-unit id="sessionGroupsDeleted">
-        <source xml:lang="en">{0} groups deleted</source>
-        <target>{0} груп видалено</target>
-      </trans-unit>
-      <trans-unit id="sessionGroupsRestored">
-        <source xml:lang="en">Groups restored.</source>
-        <target>Групи відновлено.</target>
-      </trans-unit>
-      <trans-unit id="sessionImported">
-        <source xml:lang="en">Imported {0}.</source>
-        <target>Імпортовано {0}.</target>
-      </trans-unit>
-      <trans-unit id="sessionsArchived">
-        <source xml:lang="en">{0} archived</source>
-        <target>{0} архівовано</target>
-      </trans-unit>
-      <trans-unit id="sessionsImported">
-        <source xml:lang="en">Imported {0} sessions.</source>
-        <target>Імпортовано {0} сесій.</target>
-      </trans-unit>
-      <trans-unit id="sessionsMarkedDone">
-        <source xml:lang="en">{0} marked done</source>
-        <target>{0} відмічено як виконане</target>
-      </trans-unit>
-      <trans-unit id="sessionsRestored">
-        <source xml:lang="en">Sessions restored.</source>
-        <target>Сесії відновлено.</target>
-      </trans-unit>
-      <trans-unit id="showApplicationFilters">
-        <source xml:lang="en">Filter Sessions by Application</source>
-        <target>Фільтрувати сесії за додатком</target>
-      </trans-unit>
-      <trans-unit id="showAutomationSessionInList">
-        <source xml:lang="en">Show in Sessions List</source>
-        <target>Показати в списку сесій</target>
-      </trans-unit>
-      <trans-unit id="showInExternalSection">
-        <source xml:lang="en">Show in External Section</source>
-        <target>Показати в зовнішньому розділі</target>
-      </trans-unit>
-      <trans-unit id="showSessions">
-        <source xml:lang="en">Show</source>
-        <target>Показати сесії</target>
-      </trans-unit>
-      <trans-unit id="snoozeActivity">
-        <source xml:lang="en">Until New Activity</source>
-        <target>До нової активності</target>
-      </trans-unit>
-      <trans-unit id="snoozeDate">
-        <source xml:lang="en">Pick a Date and Time...</source>
-        <target>Виберіть дату та час...</target>
-      </trans-unit>
-      <trans-unit id="snoozeDatePrompt">
-        <source xml:lang="en">Enter a future local date and time (YYYY-MM-DD HH:mm)</source>
-        <target>Введіть майбутню місцеву дату та час (YYYY-MM-DD HH:mm)</target>
-      </trans-unit>
-      <trans-unit id="snoozeHour">
-        <source xml:lang="en">In One Hour</source>
-        <target>За одну годину</target>
-      </trans-unit>
-      <trans-unit id="snoozeInvalidDate">
-        <source xml:lang="en">Enter a valid future date and time in YYYY-MM-DD HH:mm format.</source>
-        <target>Введіть дійсну дату та час у майбутньому в форматі YYYY-MM-DD HH:mm.</target>
-      </trans-unit>
-      <trans-unit id="snoozePlaceholder">
-        <source xml:lang="en">When should these sessions return?</source>
-        <target>Коли ці сесії повинні повернутися?</target>
-      </trans-unit>
-      <trans-unit id="snoozeTomorrow">
-        <source xml:lang="en">Tomorrow Morning</source>
-        <target>Завтра вранці</target>
-      </trans-unit>
-      <trans-unit id="snoozeWeek">
-        <source xml:lang="en">In One Week</source>
-        <target>За один тиждень</target>
+      <trans-unit id="openSessionCustomizations.selectSingleSession">
+        <source xml:lang="en">Select a single session to open its customizations.</source>
+        <target>Виберіть одну сесію, щоб відкрити її налаштування.</target>
       </trans-unit>
       <trans-unit id="splitView">
         <source xml:lang="en">Split View</source>
         <target>Розділений вигляд</target>
-      </trans-unit>
-      <trans-unit id="time">
-        <source xml:lang="en">Time</source>
-        <target>Час</target>
-      </trans-unit>
-      <trans-unit id="toggleCompactSessionsView">
-        <source xml:lang="en">Compact View</source>
-        <target>Компактний вигляд</target>
-      </trans-unit>
-      <trans-unit id="unpinSession">
-        <source xml:lang="en">Unpin</source>
-        <target>Відкріпити</target>
-      </trans-unit>
-      <trans-unit id="updated">
-        <source xml:lang="en">Updated</source>
-        <target>Оновлено</target>
-      </trans-unit>
-      <trans-unit id="workspace">
-        <source xml:lang="en">Workspace</source>
-        <target>Робоча область</target>
       </trans-unit>
     </body>
   </file>

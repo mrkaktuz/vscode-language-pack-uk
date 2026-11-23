@@ -343,10 +343,6 @@ To complete authentication, navigate to {1} and enter the code above.</source>
         <source xml:lang="en">The GitHub client has been disposed.</source>
         <target>Клієнт GitHub був звільнений.</target>
       </trans-unit>
-      <trans-unit id="github.createRequiresSession">
-        <source xml:lang="en">Creating a gist requires a client bound to a GitHub session.</source>
-        <target>Створення гіста вимагає клієнта, прив'язаного до сеансу GitHub.</target>
-      </trans-unit>
       <trans-unit id="github.invalidGist">
         <source xml:lang="en">Invalid gist request: {0}</source>
         <target>Неправильний запит на gist: {0}</target>
@@ -362,6 +358,22 @@ To complete authentication, navigate to {1} and enter the code above.</source>
       <trans-unit id="github.invalidHandle">
         <source xml:lang="en">The GitHub client could not be created.</source>
         <target>Клієнт GitHub не вдалося створити.</target>
+      </trans-unit>
+      <trans-unit id="github.invalidRequest">
+        <source xml:lang="en">Invalid GitHub request: {0}</source>
+        <target>Недійсний запит до GitHub: {0}</target>
+      </trans-unit>
+      <trans-unit id="github.invalidResponse">
+        <source xml:lang="en">The GitHub response was invalid.</source>
+        <target>Відповідь GitHub була недійсною.</target>
+      </trans-unit>
+      <trans-unit id="github.operationRequiresSession">
+        <source xml:lang="en">This operation requires a client bound to a GitHub session.</source>
+        <target>Ця операція вимагає клієнта, прив'язаного до сесії GitHub.</target>
+      </trans-unit>
+      <trans-unit id="github.paginationLimit">
+        <source xml:lang="en">GitHub pagination exceeded the limit of {0} pages.</source>
+        <target>Пагінація GitHub перевищила ліміт у {0} сторінок.</target>
       </trans-unit>
       <trans-unit id="github.sessionUnavailable">
         <source xml:lang="en">The selected GitHub session is not available to this extension.</source>
@@ -1770,6 +1782,10 @@ This action is irreversible and may result in data loss!</source>
       <trans-unit id="hideEditorActonsDescription">
         <source xml:lang="en">Hide Editor Actions in the tab and title bar</source>
         <target>Сховати дії редактора на вкладці та у заголовку</target>
+      </trans-unit>
+      <trans-unit id="hideEditorAreaForChat">
+        <source xml:lang="en">Hide Editor Area</source>
+        <target>Сховати область редактора</target>
       </trans-unit>
       <trans-unit id="hideEditorTabs">
         <source xml:lang="en">Hide Editor Tabs</source>
@@ -4592,6 +4608,10 @@ Browser: {3}</source>
         <source xml:lang="en">Add Tab</source>
         <target>Додати вкладку</target>
       </trans-unit>
+      <trans-unit id="addTabRecentlyUsed">
+        <source xml:lang="en">recently used</source>
+        <target>недавно використані</target>
+      </trans-unit>
       <trans-unit id="ariaLabelAddTab">
         <source xml:lang="en">Add Tab</source>
         <target>Додати вкладку</target>
@@ -6138,18 +6158,6 @@ Browser: {3}</source>
   </file>
   <file original="src/vs/workbench/browser/parts/titlebar/commandCenterControl" source-language="en" datatype="plaintext" target-language="uk">
     <body>
-      <trans-unit id="label.dfl">
-        <source xml:lang="en">Search</source>
-        <target>Пошук</target>
-      </trans-unit>
-      <trans-unit id="label1">
-        <source xml:lang="en">{0} {1}</source>
-        <target>{0} {1}</target>
-      </trans-unit>
-      <trans-unit id="label2">
-        <source xml:lang="en">{0} {1}</source>
-        <target>{0} {1}</target>
-      </trans-unit>
       <trans-unit id="title">
         <source xml:lang="en">Search {0} ({1}) — {2}</source>
         <target>Навігація за хлібними крихтами</target>
@@ -6161,6 +6169,14 @@ Browser: {3}</source>
       <trans-unit id="title3">
         <source xml:lang="en">Command Center</source>
         <target>Центр управління</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="src/vs/workbench/browser/parts/titlebar/commandCenterLabel" source-language="en" datatype="plaintext" target-language="uk">
+    <body>
+      <trans-unit id="label.withFolderLocationBranch">
+        <source xml:lang="en">{0}, branch {1}</source>
+        <target>{0}, філія {1}</target>
       </trans-unit>
     </body>
   </file>
@@ -6346,6 +6362,18 @@ Browser: {3}</source>
   </file>
   <file original="src/vs/workbench/browser/parts/titlebar/windowTitle" source-language="en" datatype="plaintext" target-language="uk">
     <body>
+      <trans-unit id="commandCenterLabel.prefix">
+        <source xml:lang="en">{0} {1}</source>
+        <target>{0} {1}</target>
+      </trans-unit>
+      <trans-unit id="commandCenterLabel.search">
+        <source xml:lang="en">Search</source>
+        <target>Пошук</target>
+      </trans-unit>
+      <trans-unit id="commandCenterLabel.suffix">
+        <source xml:lang="en">{0} {1}</source>
+        <target>{0} {1}</target>
+      </trans-unit>
       <trans-unit id="devExtensionWindowTitlePrefix">
         <source xml:lang="en">[Extension Development Host]</source>
         <target>[Хост для розробки розширень]</target>
@@ -6638,9 +6666,9 @@ If {1} did not launch, try again below.</source>
         <target>`${activeRepositoryName}`: назва активного репозиторію (наприклад, vscode).</target>
       </trans-unit>
       <trans-unit id="activityBarAutoHide">
-        <source xml:lang="en">Controls whether the Activity Bar is automatically hidden when there is only one view container to show. This applies to the Primary and Secondary Side Bars when {0} is set to {1} or {2}.</source>
+        <source xml:lang="en">Controls whether the Activity Bar is automatically hidden when there is only one view container to show. This applies to the Primary Side Bar when {0} is set to {1} or {2}, and to the Secondary Side Bar regardless of {0}.</source>
         <note>This is the description for a setting</note>
-        <target>Контролює, чи буде Панель активності автоматично прихована, коли є лише один контейнер перегляду для відображення. Це стосується Основної та Додаткової бічних панелей, коли {0} встановлено на {1} або {2}.</target>
+        <target>Контролює, чи буде панель активності автоматично прихована, коли є лише один контейнер перегляду для відображення. Це стосується основної бокової панелі, коли {0} встановлено на {1} або {2}, і до вторинної бокової панелі незалежно від {0}.</target>
       </trans-unit>
       <trans-unit id="activityBarCompact">
         <source xml:lang="en">Controls whether the Activity Bar uses a compact layout with smaller icons and reduced width. This setting only applies when {0} is set to {1}.</source>
@@ -6789,6 +6817,10 @@ If {1} did not launch, try again below.</source>
         <source xml:lang="en">`${focusedView}`: the name of the view that is currently focused.</source>
         <target>`${focusedView}`: назва виду, який наразі має фокус.</target>
       </trans-unit>
+      <trans-unit id="folderLocation">
+        <source xml:lang="en">`${folderLocation}`: the label of the alternate location the workspace folder is currently at (e.g. my-location). Empty while the folder is at its primary location.</source>
+        <target>`${folderLocation}`: мітка альтернативного місця, де наразі знаходиться папка робочого простору (наприклад, my-location). Порожня, поки папка знаходиться у своєму первинному місці.</target>
+      </trans-unit>
       <trans-unit id="folderName">
         <source xml:lang="en">`${folderName}`: name of the workspace folder the file is contained in (e.g. myFolder).</source>
         <target>`${folderName}`: назва папки робочого простору, в якій міститься файл (наприклад, myFolder).</target>
@@ -6915,6 +6947,10 @@ If {1} did not launch, try again below.</source>
       <trans-unit id="navigationScope">
         <source xml:lang="en">Controls the scope of history navigation in editors for commands such as 'Go Back' and 'Go Forward'.</source>
         <target>Контролює обсяг навігації історії в редакторах для команд, таких як 'Назад' та 'Вперед'.</target>
+      </trans-unit>
+      <trans-unit id="newTabButton">
+        <source xml:lang="en">Controls whether the editor tab bar shows a button to open a new tab, such as a new untitled file or a chat.</source>
+        <target>Контролює, чи панель вкладок редактора показує кнопку для відкриття нової вкладки, такої як новий неназваний файл або чат.</target>
       </trans-unit>
       <trans-unit id="notificationsButton">
         <source xml:lang="en">Controls the visibility of the Notifications button in the title bar. Only applies when notifications are positioned at the top right.</source>
@@ -7320,6 +7356,14 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="workbench.editor.empty.hint">
         <source xml:lang="en">Controls if the empty editor text hint should be visible in the editor.</source>
         <target>Контролює, чи має бути видимим підказка тексту порожнього редактора в редакторі.</target>
+      </trans-unit>
+      <trans-unit id="workbench.editor.experimental.emptyEditorHintActions">
+        <source xml:lang="en">Controls whether the empty editor hint of new untitled files shows a list of actions instead of a single line. Only applies when `#workbench.editor.empty.hint#` is `text`.</source>
+        <target>Контролює, чи порожній підказка редактора нових неназваних файлів показує список дій замість одного рядка. Застосовується лише тоді, коли `#workbench.editor.empty.hint#` є `text`.</target>
+      </trans-unit>
+      <trans-unit id="workbench.editor.experimental.emptyEditorHintOpenInMarkdownEditor">
+        <source xml:lang="en">Controls whether the single line empty editor hint of new untitled files also offers to open the file in the Markdown Editor. Only applies when `#workbench.editor.empty.hint#` is `text`. The list of actions of `#workbench.editor.experimental.emptyEditorHintActions#` takes precedence.</source>
+        <target>Контролює, чи однорядковий пустий підказка редактора нових неназваних файлів також пропонує відкрити файл у Markdown Editor. Застосовується лише коли `#workbench.editor.empty.hint#` є `text`. Список дій `#workbench.editor.experimental.emptyEditorHintActions#` має пріоритет.</target>
       </trans-unit>
       <trans-unit id="workbench.editor.historyBasedLanguageDetection">
         <source xml:lang="en">Enables use of editor history in language detection. This causes automatic language detection to favor languages that have been recently opened and allows for automatic language detection to operate with smaller inputs.</source>
@@ -7747,9 +7791,21 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Border color of the agent feedback input widget shown in the editor.</source>
         <target>Колір рамки віджета введення зворотного зв'язку агента, показаного в редакторі.</target>
       </trans-unit>
+      <trans-unit id="agentSessionNeedsInput.foreground">
+        <source xml:lang="en">Foreground color of agent session indicators that need input, including row markers in high contrast themes.</source>
+        <target>Колір переднього плану індикаторів сесії агента, які потребують введення, включаючи маркери рядків у темах з високим контрастом.</target>
+      </trans-unit>
       <trans-unit id="agents.background">
         <source xml:lang="en">Background color of the agent sessions window shell and gradient base.</source>
         <target>Колір фону вікна сеансів агента та градієнтна основа.</target>
+      </trans-unit>
+      <trans-unit id="agentsActivityBar.background">
+        <source xml:lang="en">Background color of the docked Session Activity Bar in the Agents window.</source>
+        <target>Колір фону закріпленої панелі активності сесії у вікні агентів.</target>
+      </trans-unit>
+      <trans-unit id="agentsActivityBar.border">
+        <source xml:lang="en">Border color of the docked Session Activity Bar in the Agents window.</source>
+        <target>Колір рамки закріпленої панелі активності сесії у вікні Агентів.</target>
       </trans-unit>
       <trans-unit id="agentsBadge.background">
         <source xml:lang="en">Background color of badges in the agent sessions window.</source>
@@ -8079,6 +8135,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Whether the auxiliary bar has keyboard focus</source>
         <target>Чи має допоміжна панель фокус клавіатури</target>
       </trans-unit>
+      <trans-unit id="auxiliaryBarMaximizeHidden">
+        <source xml:lang="en">Whether the active view container of the secondary side bar does not offer to maximize it</source>
+        <target>Чи активний контейнер перегляду вторинної бічної панелі не пропонує його розгорнути.</target>
+      </trans-unit>
       <trans-unit id="auxiliaryBarMaximized">
         <source xml:lang="en">Whether the auxiliary bar is maximized</source>
         <target>Чи максимізовано допоміжну панель</target>
@@ -8091,6 +8151,14 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Whether the banner has keyboard focus</source>
         <target>Чи має банер фокус клавіатури</target>
       </trans-unit>
+      <trans-unit id="chatPartEnabled">
+        <source xml:lang="en">Whether a feature enables the chat area of the window, shown or not</source>
+        <target>Чи функція активує область чату вікна, показану чи ні</target>
+      </trans-unit>
+      <trans-unit id="chatPartVisible">
+        <source xml:lang="en">Whether the chat area is visible</source>
+        <target>Чи видима область чату</target>
+      </trans-unit>
       <trans-unit id="dirtyWorkingCopies">
         <source xml:lang="en">Whether there are any working copies with unsaved changes</source>
         <target>Чи є якісь робочі копії з незбереженими змінами</target>
@@ -8098,6 +8166,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="editorAreaFocus">
         <source xml:lang="en">Whether the editor area (any editor part) has keyboard focus</source>
         <target>Чи має область редактора (будь-яка частина редактора) фокус клавіатури</target>
+      </trans-unit>
+      <trans-unit id="editorAreaHiddenByChat">
+        <source xml:lang="en">Whether the editor area is hidden so that the chat area takes its space</source>
+        <target>Чи прихована область редактора, щоб область чату займала її місце</target>
       </trans-unit>
       <trans-unit id="editorGroupLockActionsHidden">
         <source xml:lang="en">Whether the editor group hides the actions that lock and unlock it, as its owner keeps it locked</source>
@@ -8295,6 +8367,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <source xml:lang="en">Whether the layout surface representing the secondary side bar is visible</source>
         <target>Чи видима поверхня макета, що представляє вторинну бокову панель</target>
       </trans-unit>
+      <trans-unit id="sessionsIsPhoneLayout">
+        <source xml:lang="en">Whether the current layout is the phone layout</source>
+        <target>Чи є поточне розташування розташуванням для телефону</target>
+      </trans-unit>
       <trans-unit id="sideBarFocus">
         <source xml:lang="en">Whether the sidebar has keyboard focus</source>
         <target>Чи має бокова панель фокус клавіатури</target>
@@ -8362,6 +8438,10 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
       <trans-unit id="workspaceFolderCount">
         <source xml:lang="en">The number of root folders in the workspace</source>
         <target>Кількість кореневих папок у робочому просторі</target>
+      </trans-unit>
+      <trans-unit id="workspaceHasVirtualContent">
+        <source xml:lang="en">Whether the workspace contains any virtual folders, or has a virtual configuration and no folders.</source>
+        <target>Чи містить робочий простір будь-які віртуальні папки, або має віртуальну конфігурацію і не має папок.</target>
       </trans-unit>
     </body>
   </file>
@@ -9100,8 +9180,8 @@ Note that there can still be cases where this setting is ignored (e.g. when usin
         <target>Кордон навколо вкладок. Вкладки є контейнерами для редакторів у зоні редактора. У одній групі редакторів можна відкрити кілька вкладок. Може бути кілька груп редакторів.</target>
       </trans-unit>
       <trans-unit id="tabDivider">
-        <source xml:lang="en">Color of dividers between editor tabs.</source>
-        <target>Колір роздільників між вкладками редактора.</target>
+        <source xml:lang="en">Color of dividers between tabs.</source>
+        <target>Колір роздільників між вкладками.</target>
       </trans-unit>
       <trans-unit id="tabDragAndDropBorder">
         <source xml:lang="en">Border between tabs to indicate that a tab can be inserted between two tabs. Tabs are the containers for editors in the editor area. Multiple tabs can be opened in one editor group. There can be multiple editor groups.</source>
@@ -9793,6 +9873,10 @@ This option requires restart to take effect.</source>
       <trans-unit id="learnMore">
         <source xml:lang="en">Learn More</source>
         <target>Дізнатися більше</target>
+      </trans-unit>
+      <trans-unit id="linuxarm32eolmessage">
+        <source xml:lang="en">{0} on 32-bit ARM Linux will soon stop receiving updates. Consider using a 64-bit version of {0} and a 64-bit operating system.</source>
+        <target>{0} на 32-бітному ARM Linux незабаром перестане отримувати оновлення. Розгляньте можливість використання 64-бітної версії {0} та 64-бітної операційної системи.</target>
       </trans-unit>
       <trans-unit id="loginButton">
         <source xml:lang="en">&amp;&amp;Log In</source>
